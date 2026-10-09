@@ -34,10 +34,10 @@ Recommended execution order:
 | Template | [Component Plan Template](execution-plans/template-component-plan.md) | N/A | Ready | Required structure for shared component plans |
 | Template | [Page Plan Template](execution-plans/template-page-plan.md) | N/A | Ready | Required structure for page plans |
 | Log | [Execution Log](execution-plans/execution-log.md) | N/A | Active | Lightweight handoff/status log |
-| Shared | [Header](execution-plans/shared-header.md) | `images/supporting/logo.webp` | Ready V2 | Detailed global nav, Donate CTA, responsive hamburger rules |
-| Shared | [Footer](execution-plans/shared-footer.md) | `images/supporting/logo-white.webp` | Ready V2 | Detailed contact details, sitemap links, donation CTA |
+| Shared | [Header](execution-plans/shared-header.md) | `images/supporting/logo.webp` | Ready V3 | Build-ready global header rules for nav, Donate CTA, Shop text link, drawer behavior, and responsive validation |
+| Shared | [Footer](execution-plans/shared-footer.md) | `images/supporting/logo-white.webp` | Ready V3 | Build-ready global footer rules for contact details, sitemap links, donation CTA, mobile stacking, and responsive validation |
 | Shared | [Media And QA Rules](execution-plans/shared-media-and-qa.md) | `images/ASSET-MANIFEST.csv` | Ready | Asset naming, Wix upload foldering, breakpoint validation |
-| Page | [Home](execution-plans/page-home.md) | `images/heroes/desktop/hero-home-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
+| Page | [Home](execution-plans/page-home.md) | `images/heroes/desktop/hero-home-desktop.webp` | Ready V3 | Build-ready homepage plan with section order, copy, assets, responsive rules, links, and validation |
 | Page | [Our Mission](execution-plans/page-our-mission.md) | `images/heroes/desktop/hero-our-mission-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Page | [Services And Programs](execution-plans/page-services.md) | `images/heroes/desktop/hero-services-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Page | [Speech Language Therapy](execution-plans/page-speech-language-therapy.md) | `images/heroes/desktop/hero-speech-language-therapy-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |

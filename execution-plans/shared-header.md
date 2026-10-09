@@ -1,130 +1,179 @@
 # Header Execution Plan
 
+## Status
+
+Ready V3. This plan is the build-ready source of truth for rebuilding the global Wix header so it matches the v4 mock intent and behaves correctly on desktop, tablet, and mobile.
+
 ## Goal
 
-Replace the current Wix header with one global header that matches the v4 mock and the approved Faith Reins brand system. The result must look intentional, aligned, shallow, and responsive across desktop, tablet, and mobile.
+Replace the current Wix header with one global header that is shallow, aligned, brand-correct, and responsive. The header must not have the current oversized white band, tiny logo, floating nav, default blue Donate button, or Shop icon.
 
 ## Required Context
 
-- `brand/brand-tokens.md`
-- `execution-plans/wix-build-rules.md`
-- v4 mockup PDF root file: `Faith-Reins-Website-Design-Review-v4.pdf`
-- Current-problem reference: uploaded/editor screenshot showing oversized header whitespace, tiny logo, floating nav, and default blue Donate button
+Open only these files for the header build run:
+
+1. `README.md`
+2. `brand/brand-tokens.md`
+3. `execution-plans/wix-build-rules.md`
+4. `execution-plans/site-map-and-routes.md`
+5. This execution plan
+
+Open `Faith-Reins-Website-Design-Review-v4.pdf` only to resolve exact visual spacing or mock-specific alignment questions.
 
 ## Brand Requirements
 
 | Item | Required value |
 |---|---|
+| Header field | White or Cream `#F6F1E7`, matching v4 mock |
 | Primary color | Forest Green `#0B4F3A` |
 | Accent color | Warm Gold `#C9A96B`, restrained use only |
-| Light field | Cream `#F6F1E7` |
 | Text | Black `#111111` or Forest Green |
 | Nav/UI font | Noto Sans |
-| Formal heading font | Noto Serif SemiBold |
 | Logo | Primary Horizontal logo, locked artwork |
 | Public UI blue | Not allowed |
 
 ## Assets
 
-| Asset | Repo path | Wix folder | Required |
+| Asset | Repo path | Wix folder | Use |
 |---|---|---|---|
-| Primary horizontal logo | `images/supporting/logo.webp` | `Site Files / supporting` | Yes |
-| Reverse logo | `images/supporting/logo-white.webp` | `Site Files / supporting` | Optional for dark/mobile drawer |
+| Primary horizontal logo | `images/supporting/logo.webp` | `Site Files / supporting` | Required |
+| Reverse logo | `images/supporting/logo-white.webp` | `Site Files / supporting` | Optional only for a dark drawer/footer |
 
-## Copy And Links
+## Navigation Source Of Truth
 
-| Label | Destination | Desktop | Tablet | Mobile drawer |
-|---|---|---:|---:|---:|
-| Logo | Home | Yes | Yes | Yes |
-| Home | Home | Yes | Hide first if needed | Yes |
-| About | Our Mission | Yes | Yes | Yes |
-| Services & Programs | Services And Programs | Yes | Yes, shorten visually only if needed | Yes |
-| For Families | For Families | Yes | Yes | Yes |
-| Get Involved | Give | Yes | Move to More if needed | Yes |
-| Shop | Shop | Yes, text only | Move to More if needed | Yes, text only |
-| Donate | Give | Primary button | Keep visible if it fits | First action |
+| Label | Destination slug | Desktop | Tablet | Mobile drawer | Notes |
+|---|---|---:|---:|---:|---|
+| Logo | `/` | Yes | Yes | Yes | Logo always links home |
+| Home | `/` | Yes | Hide first if needed | Yes | Can hide on tablet because logo links home |
+| About | `/our-mission` | Yes | Yes | Yes | Header label stays `About` |
+| Services & Programs | `/services-programs` | Yes | Yes if it fits | Yes | Do not shorten unless forced by tablet fit |
+| For Families | `/for-families` | Yes | Yes if it fits | Yes | Family intake path |
+| Get Involved | `/give` | Yes | Move to menu if needed | Yes | May become dropdown later, not now |
+| Shop | `/shop` | Yes | Move to menu if needed | Yes | Plain text link only, no icon |
+| Donate | `/give` | Button | Button if it fits | First drawer CTA | Only button in desktop nav |
+
+## Build Structure
+
+Use one global Wix header made from structured strips/containers:
+
+1. **Outer header strip**: full width, white/cream background, no decorative border unless v4 shows one.
+2. **Inner content container**: centered to the same max width/grid as the v4 page content.
+3. **Logo zone**: left aligned, vertically centered.
+4. **Nav zone**: horizontal text links, centered vertically, allowed to shrink only until breakpoint rules take over.
+5. **CTA zone**: Donate button at far right on desktop.
+6. **Mobile menu control**: hamburger/menu button appears at mobile and when tablet nav can no longer fit.
+
+Do not build the header from loose floating elements. Alignment issues should be solved with container layout, not manual nudging.
 
 ## Desktop Layout
 
-- Breakpoint target: 1024 px and wider.
-- Header is global across all pages.
-- Header should be shallow, approximately 84-96 px tall. Do not allow the current oversized white band.
-- Use a centered content container aligned to the page grid/max width used by the v4 mock.
-- Logo sits left, vertically centered.
-- Logo must be legible and no smaller than 180 px wide.
-- Nav sits horizontally to the right of the logo and before Donate.
-- Donate button sits far right, vertically centered.
-- All header items share a single vertical centerline.
-- Nav font: Noto Sans, medium weight, approximately 15-16 px.
-- Nav color: `#111111` or `#0B4F3A`.
-- Active/hover state: Forest Green text and/or restrained Warm Gold underline. Do not use Wix blue.
-- Donate button:
-  - Background `#0B4F3A`.
-  - Text `#FFFFFF`.
-  - Border `#0B4F3A`.
-  - Radius should match v4/button system, preferably restrained and not pill-shaped unless v4 shows pills.
-  - Height approximately 44-48 px.
-  - Horizontal padding approximately 28-36 px.
+| Rule | Requirement |
+|---|---|
+| Target widths | 1440, 1280, 1024 |
+| Height | Approximately 84-96 px unless v4 mock requires otherwise |
+| Logo size | At least 180 px wide; never stretched, cropped, or retyped |
+| Alignment | Logo, nav, and Donate button share one vertical centerline |
+| Nav typography | Noto Sans, medium weight, approximately 15-16 px |
+| Nav color | `#111111` or `#0B4F3A` |
+| Nav spacing | Even spacing; no crowding or wrapping |
+| Active/hover | Forest Green text and/or restrained Warm Gold underline |
+| Donate button | Forest Green background, white text, Forest Green border |
+| Donate size | Approximately 44-48 px high, 28-36 px horizontal padding |
+
+Desktop must keep all primary nav links visible in one row if they fit cleanly. Do not use a desktop dropdown for this pass.
 
 ## Tablet Layout
 
-- Breakpoint target: 768-1023 px.
-- Header remains one row until items no longer fit.
-- Priority order:
-  1. Logo
-  2. Donate
-  3. Services & Programs
-  4. For Families
-  5. About
-  6. More/menu
-- Home can hide first because the logo links home.
-- Shop and Get Involved move into More/menu before nav wraps.
-- If Donate causes crowding, keep Donate in the opened menu as the first item and show the menu icon.
-- Never allow two-line nav.
+Target widths: 900, 834, 768.
+
+Tablet is fit-based, not opinion-based. If nav becomes crowded, move lower-priority links into the menu before text wraps or overlaps.
+
+Priority order:
+
+1. Logo
+2. Donate
+3. Services & Programs
+4. For Families
+5. About
+6. Menu
+
+Tablet behavior:
+
+- Hide `Home` first because the logo links home.
+- Move `Shop` and `Get Involved` into the menu before nav wraps.
+- If the Donate button causes crowding, move Donate into the menu as the first drawer action.
+- Never allow a two-line nav.
+- Never allow the nav to collide with the logo or Donate button.
 
 ## Mobile Layout
 
-- Breakpoint target: 767 px and below.
-- Header row:
-  - Logo left.
-  - Hamburger/menu icon right.
-  - Optional compact Donate button only if it fits cleanly at 390 px and wider.
-- Mobile drawer/dropdown order:
-  1. Donate
-  2. Home
-  3. About
-  4. Services & Programs
-  5. For Families
-  6. Get Involved
-  7. Shop
+Target widths: 430, 390, 375, 320.
+
+Mobile header row:
+
+1. Logo left.
+2. Hamburger/menu icon right.
+3. Optional compact Donate button only if it fits cleanly at 390 px and wider.
+
+Mobile drawer order:
+
+1. Donate
+2. Home
+3. About
+4. Services & Programs
+5. For Families
+6. Get Involved
+7. Shop
+8. Contact
+
+Mobile drawer rules:
+
 - Touch targets must be at least 44 px tall.
-- Drawer background should use Cream or White with Forest Green/Black text.
+- Drawer background should be White or Cream with Forest Green/Black text.
+- Donate must be styled as a CTA, not a plain blue link.
 - No hover-only behavior.
+- Menu open/close must be obvious and tappable.
+
+## States
+
+| State | Requirement |
+|---|---|
+| Default | Clean, shallow, aligned, brand colors only |
+| Hover/focus | Forest Green or Warm Gold accent; no blue |
+| Active page | Subtle underline or text treatment; no layout shift |
+| Drawer open | Body/content must not overlap drawer controls |
+| Small mobile | Logo remains legible and menu remains tappable |
 
 ## Wix Implementation Notes
 
-- Rebuild the header as structured containers/strips, not free-floating elements.
-- Pin/attach the header consistently across pages only after desktop/tablet/mobile passes.
-- Use global header behavior so updates apply site-wide.
-- Avoid default Wix menu/button styling when it introduces blue or inconsistent fonts.
-- If Wix font picker does not offer Noto Sans/Noto Serif, record the closest available substitute in `execution-log.md` before proceeding.
+- Rebuild as a global header only after testing in one page context.
+- Use Wix containers/strips with pinned alignment, not manual free-floating elements.
+- Avoid default Wix menu/button styles if they introduce blue, wrong fonts, or odd spacing.
+- If Wix does not offer Noto Sans/Noto Serif, record the closest substitute in `execution-plans/execution-log.md` before proceeding.
+- Save draft only. Do not publish unless Justin explicitly asks.
 
-## Validation
-
-Check these widths before marking complete:
+## Validation Checklist
 
 | Mode | Widths | Pass criteria |
 |---|---|---|
-| Desktop | 1440, 1280, 1024 | Header is shallow, logo/nav/button share one centerline, no blue button, no wrapping |
-| Tablet | 900, 768 | No overlap, no two-line nav, low-priority links move into More/menu |
-| Mobile | 430, 390, 375, 320 | Logo and hamburger align, drawer opens, Donate is first action, links are tappable |
+| Desktop | 1440, 1280, 1024 | Header is 84-96 px, logo/nav/button share one centerline, all visible links fit, Donate is green, Shop is text only |
+| Tablet | 900, 834, 768 | No wrapping or overlap, low-priority links move into menu, Donate visible only when it fits |
+| Mobile | 430, 390, 375, 320 | Logo and hamburger align, drawer opens/closes, Donate is first action, all links are tappable |
+
+## Fail Conditions
+
+- Header has oversized vertical whitespace.
+- Logo is too small, distorted, cropped, or retyped.
+- Donate button is Wix/default blue.
+- Shop appears as an icon.
+- Nav wraps to two lines.
+- Any header element floats out of alignment on tablet or mobile.
+- Drawer links do not match `site-map-and-routes.md`.
 
 ## Done Means
 
 - Header visually matches the v4 mock intent.
-- Logo is legible and correctly sized.
-- Nav is aligned and does not float in extra whitespace.
-- Donate is brand green, not Wix blue.
-- Shop is a text nav link, not an icon.
 - Header works globally on all pages.
+- Desktop, tablet, and mobile validation all pass.
 - Draft is saved.
+- `execution-plans/execution-log.md` is updated with completion notes or blockers.
