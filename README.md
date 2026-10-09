@@ -6,6 +6,13 @@ Source assets and execution plans for the Faith Reins Wix site build.
 
 Use this repository as the low-context source of truth for the Wix implementation. Each execution plan is intentionally small enough to run independently in a future session without reopening the full v4 mockup or reloading the whole project history.
 
+For each Wix build run, open only:
+
+1. `README.md`
+2. `brand/brand-tokens.md`
+3. `execution-plans/wix-build-rules.md`
+4. The one execution plan being executed
+
 Recommended execution order:
 
 1. Build shared components first: Header, Footer, global image/media rules.
@@ -19,8 +26,13 @@ Recommended execution order:
 
 | Area | Plan | Primary image | Status | Notes |
 |---|---|---|---|---|
-| Shared | [Header](execution-plans/shared-header.md) | `images/supporting/logo.webp` | Ready | Global nav, Donate CTA, responsive hamburger rules |
-| Shared | [Footer](execution-plans/shared-footer.md) | `images/supporting/logo-white.webp` | Ready | Contact details, sitemap links, donation CTA |
+| Brand | [Brand Tokens](brand/brand-tokens.md) | `brand/Faith_Reins_Brand_Guidelines_v1.6.pdf` | Ready | Fast implementation reference for colors, type, logo, buttons |
+| Build Rules | [Wix Build Rules](execution-plans/wix-build-rules.md) | `images/ASSET-MANIFEST.csv` | Ready | Context-loading rules, media rules, validation widths, pass/fail rules |
+| Template | [Component Plan Template](execution-plans/template-component-plan.md) | N/A | Ready | Required structure for shared component plans |
+| Template | [Page Plan Template](execution-plans/template-page-plan.md) | N/A | Ready | Required structure for page plans |
+| Log | [Execution Log](execution-plans/execution-log.md) | N/A | Active | Lightweight handoff/status log |
+| Shared | [Header](execution-plans/shared-header.md) | `images/supporting/logo.webp` | Ready V2 | Detailed global nav, Donate CTA, responsive hamburger rules |
+| Shared | [Footer](execution-plans/shared-footer.md) | `images/supporting/logo-white.webp` | Ready V2 | Detailed contact details, sitemap links, donation CTA |
 | Shared | [Media And QA Rules](execution-plans/shared-media-and-qa.md) | `images/ASSET-MANIFEST.csv` | Ready | Asset naming, Wix upload foldering, breakpoint validation |
 | Page | [Home](execution-plans/page-home.md) | `images/heroes/desktop/hero-home-desktop.webp` | Ready | Primary homepage build |
 | Page | [Our Mission](execution-plans/page-our-mission.md) | `images/heroes/desktop/hero-our-mission-desktop.webp` | Ready | About/mission page |
@@ -49,7 +61,10 @@ Recommended execution order:
 ## Working Rules
 
 - Open only the README and the single execution plan needed for the next work chunk.
+- Also open `brand/brand-tokens.md` and `execution-plans/wix-build-rules.md` for every Wix build chunk.
 - Do not reuse a hero image across pages.
 - Use the paired desktop/mobile hero images for each page.
 - Validate every page at desktop, tablet, and mobile before marking it complete.
+- Do not allow public Wix default blue buttons/links unless the v4 mock explicitly requires them.
+- If a plan lacks enough detail to match the v4 mock, upgrade the plan before building.
 - Save Wix draft after each completed chunk; publish only when explicitly requested.
