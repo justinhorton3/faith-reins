@@ -1,0 +1,1 @@
+Faith Reins V4 Wix asset pack. Hero images have separate desktop (max 2400px) and mobile (max 1000px) WebP files. Mobile variants are resized, not independently art-directed crops. Original hero masters are included. Page assignment and responsive loading must be verified in Wix Editor.
