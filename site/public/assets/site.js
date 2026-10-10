@@ -1,4 +1,5 @@
 // Faith Reins — browser behavior: mobile drawer, Wix forms, Wix donations.
+import { HEADER, FOOTER } from "../../src/shell.js";
 import { createFormStore } from "./wix/form-store.js";
 import { fetchCampaign } from "./wix/campaigns.js";
 import { createDonationStore } from "./wix/donation-store.js";
@@ -16,6 +17,27 @@ const el = (tag, attrs = {}, ...kids) => {
   for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(k));
   return n;
 };
+
+/* ---------- Shell (header + footer are injected so each page stays small) ---------- */
+(() => {
+  const h = $("#shell-header"), f = $("#shell-footer");
+  if (h) {
+    h.innerHTML = HEADER;
+    const path = location.pathname.replace(/\/+$/, "") || "/";
+    const groups = {
+      "/our-mission": ["/our-mission", "/our-team", "/our-horses"],
+      "/services-programs": ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"],
+      "/for-families": ["/for-families", "/book-online", "/payment-and-insurance", "/faq"],
+      "/give": ["/give", "/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"],
+      "/shop": ["/shop"], "/contact": ["/contact"], "/": ["/"],
+    };
+    for (const a of $$("a.nav-link, a.drawer-link", h)) {
+      const href = a.getAttribute("href");
+      if ((groups[href] || [href]).includes(path)) a.setAttribute("aria-current", "page");
+    }
+  }
+  if (f) f.innerHTML = FOOTER;
+})();
 
 /* ---------- Drawer ---------- */
 (() => {

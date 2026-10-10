@@ -321,3 +321,4 @@ body.drawer-open { overflow: hidden; }
 .center { text-align: center; }
 .muted { color: var(--muted); }
 .gold-rule { width: 64px; height: 2px; background: var(--gold); border: 0; margin: 4px 0; }
+#shell-header,#shell-footer{display:contents}

@@ -126,11 +126,11 @@ export function page({ route, title, description, body }) {
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@600&display=swap">
 <link rel="stylesheet" href="/assets/site.css"></head>
 <body>
-${header(route)}
+<div id="shell-header" data-route="${route}"><noscript><a href="/">Faith Reins</a> · <a href="/services-programs">Services</a> · <a href="/book-online">Book</a> · <a href="/give">Give</a> · <a href="/contact">Contact</a></noscript></div>
 <main id="main">
 ${body}
 </main>
-${footer()}
+<div id="shell-footer"></div>
 <script type="module" src="/assets/site.js"></script>
 </body></html>`;
 }
