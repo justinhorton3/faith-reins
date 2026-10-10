@@ -89,7 +89,7 @@ p { margin: 0; }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--cream); border-bottom: 1px solid var(--line); }
 .site-header__inner { height: var(--header); display: flex; align-items: center; gap: 24px; }
 .site-header__logo { flex: none; display: block; }
-.site-header__logo img { width: 210px; height: auto; }
+.site-header__logo img { width: 210px; height: auto; mix-blend-mode: multiply; }
 .site-nav { margin-left: auto; display: flex; align-items: center; gap: 24px; }
 .site-nav a.nav-link { font: 500 16px/1.2 var(--sans); color: var(--green); text-decoration: none; padding: 12px 0; border-bottom: 2px solid transparent; white-space: nowrap; }
 .site-nav a.nav-link:hover, .site-nav a.nav-link[aria-current="page"] { border-bottom-color: var(--gold); }
