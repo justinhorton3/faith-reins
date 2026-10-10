@@ -1,7 +1,7 @@
 // Shared HTML helpers for the Faith Reins static build.
-import fs from "node:fs";
+import media from "./src/media.json" with { type: "json" };
 
-export const media = JSON.parse(fs.readFileSync(new URL("./src/media.json", import.meta.url), "utf8"));
+export { media };
 export const FORMS = {
   contact: "23cf24ab-86ff-4595-8a3b-7535900f4a23",
   appointment: "31632052-e00f-473d-9edd-e64c699b83ef",
