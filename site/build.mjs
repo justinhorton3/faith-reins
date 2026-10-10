@@ -19,18 +19,17 @@ const related = (items) => section(head("Related services") + grid(items.length 
 /* ---------- Home ---------- */
 add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Faith Reins offers pediatric therapy, counseling and equine-assisted learning for children and families in Camden and South Arkansas.",
   hero({ key: "home", h1: "People. Horses. Brighter futures.", body: "Pediatric therapy and equine-assisted learning for children and families in South Arkansas.", ctas: [["Start with our team", "/book-online", "light"], ["Support a family", "/give", "accent"]] }) +
-  section(head("Care for every next step.", "Evidence-based pediatric therapy, counseling and equine-assisted learning for children and families in South Arkansas.") +
+  section(head("Services & Programs") +
     grid(5, [
-      card({ ic: "hand", title: "Occupational Therapy", text: "Skills for everyday life.", href: "/occupational-therapy", center: true }),
-      card({ ic: "users", title: "Physical Therapy", text: "Movement with purpose.", href: "/physical-therapy", center: true }),
-      card({ ic: "chat", title: "Speech-Language Therapy", text: "Helping every voice connect.", href: "/speech-language-therapy", center: true }),
-      card({ ic: "heart", title: "Counseling", text: "A caring space to grow.", href: "/counseling", center: true }),
-      card({ ic: "horse", title: "Equine-Assisted Learning (EAL)", text: "Learning through connection.", href: "/equine-assisted-learning", center: true }),
+      card({ ic: "hand", title: "Occupational Therapy", text: "Supporting daily activities, participation and independence.", href: "/occupational-therapy", center: true }),
+      card({ ic: "users", title: "Physical Therapy", text: "Building mobility, strength and balance.", href: "/physical-therapy", center: true }),
+      card({ ic: "chat", title: "Speech-Language Therapy", text: "Supporting speech, language and communication.", href: "/speech-language-therapy", center: true }),
+      card({ ic: "heart", title: "Counseling", text: "Supporting emotional well-being and coping skills.", href: "/counseling", center: true }),
+      card({ ic: "horse", title: "Equine-Assisted Learning (EAL)", text: "Experiential learning with horses to build confidence, connection and life skills.", href: "/equine-assisted-learning", center: true }),
     ])) +
-  section(split(`<div class="stack"><h2>Meet the people behind the care.</h2><p class="lead muted">Faith Reins pairs evidence-based care with the calm connection of horses to support children, teens and families.</p><div>${btn("Meet our team", "/our-team")}</div></div>`, img("home-clinical"), "A therapist working with a child"), "section--paper") +
-  section(split(`<div class="stack"><h2>Stronger together.</h2><p class="lead muted">Community and clinical connections supporting South Arkansas.</p><div>${btn("Our partners", "/our-partners", "secondary")}</div></div>`, img("horse-biscuit"), "Biscuit, one of our horses", true)) +
-  section(`<div class="center stack" style="justify-items:center"><h2>Rooted in faith. Guided by care.</h2><p class="lead muted">Helping children and families grow through care, connection and community.</p><div>${btn("Our mission", "/our-mission", "secondary")}</div></div>`, "section--paper") +
-  section(cta({ h2: "Help make care possible.", p: "Support families, horses and the Faith Reins mission. A gift of $100 a month helps a family keep coming back.", buttons: [btn("Give monthly", "/give", "accent"), btn("Request an appointment", "/book-online", "light")], green: true })));
+  section(split(`<div class="stack"><h2>Meet the people behind the care.</h2><p class="lead muted">A dedicated team of professionals, horse handlers and volunteers committed to brighter futures.</p><div>${btn("Meet our team", "/our-team")}</div></div>`, img("home-clinical"), "A therapist working with a child"), "section--paper") +
+  section(split(`<div class="stack"><h2>Stronger together.</h2><p class="lead muted">Community partners help expand access and create opportunities for more families in South Arkansas.</p><div>${btn("Our partners", "/our-partners", "secondary")}</div></div>`, img("horse-biscuit"), "Biscuit, one of our horses", true)) +
+  `<section class="section section--green"><div class="container"><div class="split"><div class="stack"><h2>Rooted in faith. Guided by care.</h2><p class="lead" style="color:var(--cream)">Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.</p><div>${btn("Our mission", "/our-mission", "light")}</div></div><div class="stack"><h2>Help make care possible.</h2><p class="lead" style="color:var(--cream)">Support families, horses and the Faith Reins mission. A gift of $100 a month helps a family keep coming back.</p><div>${btn("Give monthly", "/give", "accent")}</div></div></div></div></section>`);
 
 /* ---------- Mission ---------- */
 add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
