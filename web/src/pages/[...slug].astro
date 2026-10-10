@@ -1,0 +1,11 @@
+---
+// Phase 1 port: page bodies still come from the shared content in site/build.mjs.
+// Port groups of pages to native .astro files over time; Astro routes win over this catch-all.
+import Base from "../layouts/Base.astro";
+import { pages } from "../../../site/build.mjs";
+export function getStaticPaths() {
+  return pages.map((p) => ({ params: { slug: p.route === "/" ? undefined : p.route.slice(1) }, props: p }));
+}
+const { title, description, body } = Astro.props;
+---
+<Base title={title} description={description}><Fragment set:html={body} /></Base>

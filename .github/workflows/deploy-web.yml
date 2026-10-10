@@ -1,0 +1,19 @@
+# UNVERIFIED draft: builds the Astro site in web/ and releases it to Wix.
+# Needs: web/wix.config.json (run `npx wix init`/link once locally and commit it) and a repo secret for Wix CLI auth.
+# Check https://dev.wix.com/docs/wix-cli/guides/about-the-wix-cli for the exact CI auth variable before enabling.
+name: Deploy web
+on:
+  workflow_dispatch:
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: web } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm install
+      - run: npm run build
+      - run: npx wix release
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
