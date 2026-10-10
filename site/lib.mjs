@@ -56,7 +56,7 @@ export const head = (h2, p = "", left = false) => `<div class="section-head${lef
 export const grid = (n, items) => `<div class="grid grid--${n}">${items.join("")}</div>`;
 
 export function card({ ic, title, text, href, linkLabel = "Learn more", center = false }) {
-  return `<div class="card${center ? " card--center" : ""}">${ic ? `<span class="icon-badge icon-badge--sm">${icon(ic)}</span>` : ""}<h3>${esc(title)}</h3><p>${esc(text)}</p>${href ? link(linkLabel, href) : ""}</div>`;
+  return `<div class="card${center ? " card--center" : ""}">${ic ? `<span class="icon-badge${center ? "" : " icon-badge--sm"}">${icon(ic)}</span>` : ""}<h3>${esc(title)}</h3><p>${esc(text)}</p>${href ? link(linkLabel, href) : ""}</div>`;
 }
 export function steps(list, gold = false) {
   return `<div class="steps">${list.map(([t, p], i) => `<div class="step"><span class="step__num${gold ? " step__num--gold" : ""}">${i + 1}</span><div><h3>${esc(t)}</h3><p>${esc(p)}</p></div></div>`).join("")}</div>`;
@@ -90,14 +90,14 @@ export function header(route) {
   const cur = (m) => (m.includes(route) ? ' aria-current="page"' : "");
   return `<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="container site-header__inner">
-<a class="site-header__logo" href="/" aria-label="Faith Reins home"><img src="${img("logo")}" alt="Faith Reins" width="210" height="64"></a>
+<a class="site-header__logo" href="/" aria-label="Faith Reins home"><img src="${img("logo")}" alt="Faith Reins" width="152" height="53"></a>
 <nav class="site-nav" aria-label="Primary">
 ${NAV.map(([l, h, t, m]) => `<a class="nav-link"${t ? " data-tablet" : ""} href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
 ${btn("Donate", "/give")}
 <button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${icon("menu")}</button>
 </nav></div></header>
 <div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__scrim" data-drawer-close></div>
-<div class="drawer__panel"><div class="drawer__top"><img src="${img("logo")}" alt="Faith Reins" width="164" height="50"><button class="menu-btn" type="button" data-drawer-close aria-label="Close menu" style="display:inline-flex">${icon("close")}</button></div>
+<div class="drawer__panel"><div class="drawer__top"><img src="${img("logo")}" alt="Faith Reins" width="136" height="48"><button class="menu-btn" type="button" data-drawer-close aria-label="Close menu" style="display:inline-flex">${icon("close")}</button></div>
 ${btn("Donate", "/give")}
 ${DRAWER.map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
 </div></div>`;
@@ -107,7 +107,7 @@ export function footer() {
   const links = [["About", "/our-mission"], ["Services & Programs", "/services-programs"], ["For Families", "/for-families"], ["Shop", "/shop"], ["Give", "/give"], ["Volunteer & Careers", "/join-our-team"], ["FAQ", "/faq"]];
   return `<footer class="site-footer"><div class="container"><div class="site-footer__grid">
 <div class="site-footer__brand"><img src="${img("logo-white")}" alt="Faith Reins" width="210" height="64">
-<address><span>[Phone number]</span><span>[Email address]</span><span>[Street address]</span><span>Camden, AR</span><span>[Office hours]</span></address></div>
+<address><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address></div>
 <ul class="site-footer__links" aria-label="Footer">${links.map(([l, h]) => `<li><a href="${h}">${esc(l)}</a></li>`).join("")}</ul>
 <div class="site-footer__connect"><h2>Connect with us</h2>
 ${form("contact", { submit: "Send message", success: "Thank you. We received your message.", btnKind: "accent" })}
