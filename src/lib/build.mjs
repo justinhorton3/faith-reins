@@ -52,7 +52,7 @@ const SVC = [
   ["Equine-Assisted Learning", "Ground-based experiences with horses supporting confidence, connection and life skills.", "/equine-assisted-learning", "horse"],
 ];
 add("/services-programs", "Services & Programs", "Occupational therapy, physical therapy, speech-language therapy, counseling and equine-assisted learning in South Arkansas.",
-  hero({ key: "services", h1: "Care for every next step.", body: "Occupational therapy, physical therapy, speech-language therapy, counseling and EAL.", ctas: [["Request an appointment", "/book-online", "light"], ["For families", "/for-families", "accent"]] }) +
+  hero({ key: "services", h1: "Care for every next step.", body: "Occupational therapy, physical therapy, speech-language therapy, counseling and EAL.", ctas: [["Request an appointment", "/book-online", "light"], ["For families", "/for-families", "secondary"]] }) +
   section(head("Individualized, family-centered care", "Every plan starts with your child and your family.") + grid(3, SVC.map(([t, p, h, ic]) => card({ ic, title: t, text: p, href: h })))) +
   section(head("How to start") + steps([["Ask questions", "Call, email or send a message."], ["Request an appointment", "Or send a provider referral."], ["Meet the team", "We will talk through next steps and scheduling."]]), "section--paper") +
   section(grid(2, [
@@ -64,7 +64,7 @@ add("/services-programs", "Services & Programs", "Occupational therapy, physical
 function service({ route, key, name, h1, body, overview, areasTitle, areas, journeyTitle, journey, relatedList }) {
   add(route, name, body,
     hero({ key, h1, body, ctas: [["Request an appointment", "/book-online", "light"]] }) +
-    section(`<div class="prose"><h2>About ${esc(name.toLowerCase().replace("equine-assisted", "Equine-Assisted"))}</h2>${overview.map((p) => `<p>${p}</p>`).join("")}</div>`) +
+    section(`<div class="prose"><h2>About ${esc(name.toLowerCase())}</h2>${overview.map((p) => `<p>${p}</p>`).join("")}</div>`) +
     section(head(areasTitle) + grid(3, areas.map(([t, p]) => card({ title: t, text: p }))), "section--paper") +
     section(`<div class="split split--wide-text"><div class="stack"><h2>${esc(journeyTitle)}</h2></div><div>${steps(journey)}</div></div>`) +
     section(cta({ h2: "A clear first step.", p: "Send a request or talk with our team about coverage and next steps.", buttons: [btn("Request an appointment", "/book-online"), btn("Payment & Insurance", "/payment-and-insurance", "secondary"), btn("For families", "/for-families", "secondary")] }), "section--paper") +
@@ -97,7 +97,7 @@ service({ route: "/equine-assisted-learning", key: "equine-assisted-learning", n
   overview: ["Equine-assisted learning (EAL) offers ground-based experiences with horses, guided by our team.", "These learning experiences are not a substitute for clinical therapy, and activities are always supervised."],
   areasTitle: "What participants practice", areas: [["Confidence", "Trying new things with support."], ["Trust", "Building relationship with a calm partner."], ["Communication", "Clear, kind, non-verbal connection."], ["Responsibility", "Caring for another living being."], ["Regulation", "Staying calm and present."], ["Resilience", "Keeping going after challenges."]],
   journeyTitle: "What to expect", journey: [["Arrival", "A warm welcome and time to settle."], ["Safety orientation", "Clear expectations around horses."], ["Guided activities", "Supervised, ground-based experiences."], ["Reflection", "Talking about what was learned."]],
-  relatedList: [["Our Horses", "Meet Biscuit, Captain Carrot, Maple and Cowboy.", "/our-horses"], SV["/services-programs"] ? ["Services & Programs", "All of our care in one place.", "/services-programs"] : null, ["Contact", "Ask about EAL.", "/contact"]].filter(Boolean) });
+  relatedList: [["Our Horses", "Meet Biscuit, Captain Carrot, Maple and Cowboy.", "/our-horses"], ["Services & Programs", "All of our care in one place.", "/services-programs"], ["Contact", "Ask about EAL.", "/contact"]] });
 
 /* ---------- For Families ---------- */
 add("/for-families", "For Families", "What happens after you request an appointment at Faith Reins: a clear first step and a caring team.",
