@@ -184,7 +184,7 @@ body.drawer-open { overflow: hidden; }
 .card--note { background: var(--sage); border: 0; padding: 16px 20px; flex-direction: row; align-items: center; gap: 14px; }
 .card h3 { font-size: 20px; }
 @media (max-width: 767px) { .card { padding: 20px; } .card h3 { font-size: 18px; } }
-.icon-badge { width: 72px; height: 72px; border-radius: 50%; background: var(--sage); color: var(--green); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.icon-badge { width: 72px; height: 72px; border-radius: 50%; background: var(--cream); color: var(--green); display: inline-flex; align-items: center; justify-content: center; flex: none; }
 .icon-badge .ic { width: 34px; height: 34px; }
 .icon-badge--sm { width: 52px; height: 52px; }
 .icon-badge--sm .ic { width: 24px; height: 24px; }
@@ -318,28 +318,32 @@ body.drawer-open { overflow: hidden; }
 
 /* Home page: 4-column quad (Meet the people / Stronger together) */
 .home-quad { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--gap); align-items: center; }
-.home-quad img { width: 100%; height: 260px; object-fit: cover; border-radius: 6px; }
+.home-quad img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; }
 @media (max-width: 1023px) { .home-quad { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 767px) { .home-quad { grid-template-columns: 1fr; } .home-quad img { height: 220px; } }
 
-/* Home page: faith + giving split (Rooted in faith / Help make care possible) */
-.faith-giving { background: var(--paper); }
-.faith-giving__grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 440px; }
+/* Home page: faith + giving 3-col (Rooted in faith | image | Help make care possible) */
+.faith-giving { background: var(--paper); overflow: hidden; }
+.faith-giving__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 480px; gap: 0; }
 .faith-giving__left { padding: var(--section) var(--gap) var(--section) 0; display: flex; flex-direction: column; gap: 24px; justify-content: center; }
-.faith-giving__right { position: relative; overflow: hidden; }
-.faith-giving__right > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.faith-giving__overlay { position: relative; z-index: 1; padding: var(--section) 44px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; justify-content: center; color: var(--white); background: rgba(5, 25, 15, 0.52); }
-.faith-giving__overlay h2 { color: var(--white); }
-.faith-giving__overlay .lead { color: rgba(255,255,255,0.88); }
+.faith-giving__center { position: relative; overflow: hidden; }
+.faith-giving__center > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.faith-giving__right { background: var(--white); border-left: 1px solid var(--line); padding: var(--section) 0 var(--section) var(--gap); display: flex; flex-direction: column; gap: 20px; justify-content: center; }
 .faith-giving__price { display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
 .faith-giving__price-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: var(--gold); line-height: 1.1; }
 .faith-giving__price-num span { font-size: 1.25rem; font-weight: 400; }
-.faith-giving__price-desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); max-width: 190px; line-height: 1.5; padding-top: 4px; }
+.faith-giving__price-desc { font-size: 0.8125rem; color: var(--muted); max-width: 200px; line-height: 1.5; padding-top: 4px; }
+@media (max-width: 1023px) {
+  .faith-giving__grid { grid-template-columns: 1fr 1fr; }
+  .faith-giving__center { grid-column: 1 / -1; min-height: 320px; position: relative; }
+  .faith-giving__left { padding-right: 0; }
+  .faith-giving__right { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+}
 @media (max-width: 767px) {
   .faith-giving__grid { grid-template-columns: 1fr; }
-  .faith-giving__left { padding: var(--section) 0; }
-  .faith-giving__right { min-height: 380px; }
-  .faith-giving__overlay { padding: 40px 20px; }
+  .faith-giving__left { padding: var(--section) 0 0; }
+  .faith-giving__center { grid-column: auto; min-height: 260px; }
+  .faith-giving__right { padding: 0 0 var(--section); }
 }
 
 /* Utilities */

@@ -35,6 +35,8 @@ const P = {
   file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
   horse: '<path d="M4 20c0-6 2-10 6-12l2-4 2 3 4 1v3l-3 1c0 3 1 5 1 8M10 8l-3 2"/>',
+  leaf: '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
+  walk: '<circle cx="13" cy="4.5" r="2"/><path d="m9.5 22 2.5-7 1.5 2 1.5-2 2.5 7"/><path d="M10 11c-1-.5-2.5-.5-3.5 1M16 11c1-.5 2.5-.5 3.5 1"/><path d="M12 15V9"/>',
 };
 export const icon = (name) => `<i class="ic i-${P[name] ? name : "star"}"></i>`;
 export const iconCss = () => ".ic{display:inline-block;width:24px;height:24px;flex:none;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}" + Object.entries(P).map(([k, v]) => `.i-${k}{--m:url("data:image/svg+xml,${(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>${v.replace(/"/g, "'")}</svg>`).replace(/</g, "%3C").replace(/>/g, "%3E").replace(/#/g, "%23")}")}`).join("");
