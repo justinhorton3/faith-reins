@@ -45,3 +45,11 @@ Accepting real donations requires a Wix premium plan and a connected payment met
 - Donation impact wording for each amount, if wanted.
 - Shop products.
 - Delete the extra test branch `claude/connection-test` on GitHub (optional).
+
+## Static build (2026-10-10)
+- Sponsorship Inquiry form: `17fc908b-9d0d-4554-8b4f-f45d009b1721` (`/sponsorships`).
+- Donation campaign `fea961a8-acc5-428b-801c-b64f4c6603f4`: presets $50 / $100 / $250, one-time + monthly, custom min $5.
+- Source in `site/`; run `site/build-all.sh`, output in `site/dist/` (gitignored). Deploy = upload `dist` as a file bundle via Wix UploadHeadlessWebsiteFiles (replaces whole file set).
+- Live URL: https://headless-thikydrdrrl-justinhorton3-140d.wix-site-host.com
+- Dashboard: https://manage.wix.com/dashboard/2008223c-2538-4263-9893-6a9b391ded03
+- Astro migration deferred; a GitHub Action / Wix CLI deploy would avoid pasting bundles.
