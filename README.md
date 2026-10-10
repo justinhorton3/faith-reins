@@ -6,13 +6,16 @@ Source assets and execution plans for the Faith Reins Wix site build.
 
 Use this repository as the low-context source of truth for the Wix implementation. Each execution plan is intentionally small enough to run independently in a future session without reopening the full v4 mockup or reloading the whole project history.
 
+This is a **Wix Headless** build: pages are code in this repo, and Wix runs forms, donations, and the store. Site IDs, installed apps, and the deploy approach are in `execution-plans/headless-setup.md`.
+
 For each Wix build run, open only:
 
 1. `README.md`
-2. `brand/brand-tokens.md`
-3. `execution-plans/wix-build-rules.md`
-4. The one execution plan being executed
-5. `execution-plans/site-map-and-routes.md` when changing navigation, buttons, slugs, or menus
+2. `execution-plans/headless-setup.md`
+3. `brand/brand-tokens.md`
+4. `execution-plans/wix-build-rules.md`
+5. The one execution plan being executed
+6. `execution-plans/site-map-and-routes.md` when changing navigation, buttons, slugs, or menus
 
 Every plan also inherits `execution-plans/quality-gate.md`. Use `execution-plans/build-sequence.md` to select the next bounded task.
 Every plan also inherits `execution-plans/wix-implementation-spec.md` for exact Wix implementation values.
