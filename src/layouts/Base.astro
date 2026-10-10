@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+import { iconCss } from "../lib/lib.mjs";
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@600&display=swap" />
+    <Fragment set:html={`<style>${iconCss()}</style>`} />
+  </head>
+  <body>
+    <div id="shell-header"><noscript><a href="/">Home</a> <a href="/services-programs">Services</a> <a href="/book-online">Book</a> <a href="/give">Give</a> <a href="/contact">Contact</a></noscript></div>
+    <main id="main"><slot /></main>
+    <div id="shell-footer"></div>
+    <script>import "../scripts/site.js";</script>
+  </body>
+</html>
