@@ -1,249 +1,246 @@
-// Faith Reins — browser behavior: mobile drawer, Wix forms, Wix donations.
+// Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
 import { HEADER, FOOTER } from "../../src/shell.js";
-import { createFormStore } from "./wix/form-store.js";
-import { fetchCampaign } from "./wix/campaigns.js";
-import { createDonationStore } from "./wix/donation-store.js";
-
+const CLIENT = "578fbd9d-fb1f-4285-b7d1-7063b33ac62a";
+const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const el = (tag, attrs = {}, ...kids) => {
-  const n = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
+const h = (t, a = {}, ...k) => {
+  const n = document.createElement(t);
+  for (const [x, v] of Object.entries(a)) {
     if (v === false || v == null) continue;
-    if (k === "class") n.className = v;
-    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
-    else n.setAttribute(k, v === true ? "" : v);
+    if (x.startsWith("on")) n.addEventListener(x.slice(2), v);
+    else n.setAttribute(x, v === true ? "" : v);
   }
-  for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(k));
+  n.append(...k.flat().filter((c) => c != null));
   return n;
 };
 
-/* ---------- Shell (header + footer are injected so each page stays small) ---------- */
-(() => {
-  const h = $("#shell-header"), f = $("#shell-footer");
-  if (h) {
-    h.innerHTML = HEADER;
-    const path = location.pathname.replace(/\/+$/, "") || "/";
-    const groups = {
-      "/our-mission": ["/our-mission", "/our-team", "/our-horses"],
-      "/services-programs": ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"],
-      "/for-families": ["/for-families", "/book-online", "/payment-and-insurance", "/faq"],
-      "/give": ["/give", "/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"],
-      "/shop": ["/shop"], "/contact": ["/contact"], "/": ["/"],
-    };
-    for (const a of $$("a.nav-link, a.drawer-link", h)) {
-      const href = a.getAttribute("href");
-      if ((groups[href] || [href]).includes(path)) a.setAttribute("aria-current", "page");
-    }
-  }
-  if (f) f.innerHTML = FOOTER;
-})();
-
-/* ---------- Drawer ---------- */
-(() => {
-  const drawer = $("#drawer");
-  if (!drawer) return;
-  const opener = $("[data-drawer-open]");
-  const open = () => { drawer.hidden = false; document.body.classList.add("drawer-open"); opener?.setAttribute("aria-expanded", "true"); $("[data-drawer-close]", drawer)?.focus(); };
-  const close = () => { drawer.hidden = true; document.body.classList.remove("drawer-open"); opener?.setAttribute("aria-expanded", "false"); opener?.focus(); };
-  opener?.addEventListener("click", open);
-  $$("[data-drawer-close]", drawer).forEach((b) => b.addEventListener("click", close));
-  drawer.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
-  matchMedia("(min-width: 1024px)").addEventListener("change", (m) => { if (m.matches && !drawer.hidden) close(); });
-})();
-
-/* ---------- Forms ---------- */
-const FIELD_TYPE = { email: "email", phone: "tel", number: "number", url: "url", password: "password", date: "date", time: "time" };
-
-function fieldNode(store, f) {
-  const id = `f-${f.target}-${Math.random().toString(36).slice(2, 7)}`;
-  const wrap = el("div", { class: "field" + (f.control === "textarea" || f.wide ? " field--wide" : ""), "data-target": f.target });
-  const req = f.required ? el("span", { class: "req", "aria-hidden": "true" }, "*") : null;
-  const err = el("div", { class: "error", id: `${id}-err`, role: "alert" });
-  const describe = { "aria-describedby": `${id}-err` };
-  const value = () => store.getState().values[f.target];
-  const labelFor = el("label", { for: id }, f.label, req);
-  let control;
-  switch (f.control) {
-    case "textarea":
-      control = el("textarea", { id, name: f.target, rows: 5, placeholder: f.placeholder, "aria-required": f.required || null, ...describe });
-      control.addEventListener("input", () => store.setValue(f.target, control.value));
-      wrap.append(labelFor, control);
-      break;
-    case "select":
-      control = el("select", { id, name: f.target, "aria-required": f.required || null, ...describe },
-        el("option", { value: "" }, f.placeholder || "Select one"),
-        f.choices.map((c) => el("option", { value: c.value }, c.label)));
-      control.addEventListener("change", () => store.setValue(f.target, control.value));
-      wrap.append(labelFor, control);
-      break;
-    case "radio":
-    case "checkboxGroup": {
-      const multi = f.control === "checkboxGroup";
-      const set = el("fieldset", { ...describe }, el("legend", {}, f.label, req));
-      f.choices.forEach((c, i) => {
-        const input = el("input", { type: multi ? "checkbox" : "radio", name: `${f.target}${multi ? "" : "-r"}`, value: c.value, id: `${id}-${i}` });
-        input.addEventListener("change", () => {
-          if (multi) {
-            const cur = new Set(value() || []);
-            input.checked ? cur.add(c.value) : cur.delete(c.value);
-            store.setValue(f.target, [...cur]);
-          } else store.setValue(f.target, c.value);
-        });
-        set.append(el("label", { class: "choice", for: `${id}-${i}` }, input, c.label));
-      });
-      wrap.append(set);
-      break;
-    }
-    case "checkbox": {
-      control = el("input", { type: "checkbox", id, name: f.target, ...describe });
-      control.addEventListener("change", () => store.setValue(f.target, control.checked));
-      wrap.append(el("label", { class: "choice", for: id }, control, f.label, req));
-      break;
-    }
-    default:
-      control = el("input", { type: FIELD_TYPE[f.control] || "text", id, name: f.target, placeholder: f.placeholder, autocomplete: f.identifier === "email" ? "email" : null, "aria-required": f.required || null, ...describe });
-      control.addEventListener("input", () => store.setValue(f.target, control.value));
-      wrap.append(labelFor, control);
-  }
-  if (f.description) wrap.append(el("div", { class: "help" }, f.description));
-  control?.addEventListener("blur", () => store.validate(f.target));
-  wrap.append(err);
-  return wrap;
+/* Wix visitor token + REST helper */
+let tok = null;
+async function token() {
+  if (tok && tok.exp > Date.now() + 6e4) return tok.v;
+  const r = await fetch(API + "/oauth2/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ clientId: CLIENT, grantType: "anonymous" }) });
+  if (!r.ok) throw new Error("Could not reach the service. Please try again.");
+  const j = await r.json();
+  tok = { v: j.access_token, exp: Date.now() + j.expires_in * 1e3 };
+  return tok.v;
+}
+async function api(path, method = "POST", body) {
+  const r = await fetch(API + path, { method, headers: { Authorization: await token(), "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const e = new Error(j.message || "Request failed (" + r.status + ")"); e.details = j.details; throw e; }
+  return j;
 }
 
-function mountForm(host) {
-  const store = createFormStore({ formId: host.dataset.formId });
-  const submitLabel = host.dataset.submit || "Submit";
-  const successText = host.dataset.success || "Thank you. Our team will be in touch.";
-  const two = host.dataset.layout === "two";
-  const wide = new Set((host.dataset.wide || "").split(",").filter(Boolean));
+/* Shell */
+(() => {
+  const hd = $("#shell-header"), ft = $("#shell-footer");
+  if (hd) {
+    hd.innerHTML = HEADER;
+    const p = location.pathname.replace(/\/+$/, "") || "/";
+    const g = { "/our-mission": ["/our-team", "/our-horses"], "/services-programs": ["/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"], "/for-families": ["/book-online", "/payment-and-insurance", "/faq"], "/give": ["/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"] };
+    for (const a of $$("a.nav-link, a.drawer-link", hd)) {
+      const href = a.getAttribute("href");
+      if (href === p || (g[href] || []).includes(p)) a.setAttribute("aria-current", "page");
+    }
+  }
+  if (ft) ft.innerHTML = FOOTER;
+  const d = $("#drawer"), o = $("[data-drawer-open]");
+  if (!d) return;
+  const set = (open) => { d.hidden = !open; document.body.classList.toggle("drawer-open", open); o.setAttribute("aria-expanded", open); (open ? $("[data-drawer-close]", d) : o).focus(); };
+  o.addEventListener("click", () => set(true));
+  $$("[data-drawer-close]", d).forEach((b) => b.addEventListener("click", () => set(false)));
+  d.addEventListener("keydown", (e) => e.key === "Escape" && set(false));
+})();
+
+/* Forms */
+const text = (n) => (typeof n === "string" ? n : n && n.nodes ? n.nodes.map((c) => (c.textData ? c.textData.text : "") + text(c)).join("") : "");
+const phone = (v) => { const d = v.replace(/[^\d+]/g, ""); return d[0] === "+" ? d : d.length === 10 ? "+1" + d : d.length === 11 && d[0] === "1" ? "+" + d : d; };
+
+function parseForm(form) {
+  const order = new Map();
+  let i = 0;
+  for (const s of form.steps || []) for (const it of ((s.layout || {}).large || {}).items || []) order.set(it.fieldId, i++);
+  return (form.formFields || [])
+    .filter((f) => f.fieldType === "INPUT" && f.inputOptions && f.inputOptions.target && !f.hidden)
+    .sort((a, b) => (order.get(a.id || a._id) ?? 999) - (order.get(b.id || b._id) ?? 999))
+    .map((f) => {
+      const io = f.inputOptions;
+      const sub = Object.values(io).find((v) => v && typeof v === "object" && v.componentType) || {};
+      const comp = Object.entries(sub).find(([k, v]) => k.endsWith("Options") && v && typeof v === "object");
+      const c = comp ? comp[1] : {};
+      const fmt = (sub.validation || {}).format;
+      const ct = sub.componentType;
+      let kind = "text";
+      if (ct === "DROPDOWN") kind = "select";
+      else if (ct === "RADIO_GROUP") kind = "radio";
+      else if (ct === "CHECKBOX_GROUP") kind = "checks";
+      else if (ct === "CHECKBOX") kind = "check";
+      else if (ct === "PHONE_INPUT" || fmt === "PHONE") kind = "tel";
+      else if (fmt === "EMAIL") kind = "email";
+      else if (f.identifier === "TEXT_AREA") kind = "area";
+      return { target: io.target, required: !!io.required, kind, label: text(c.label) || io.target, ph: c.placeholder || "", opts: (c.options || []).map((o) => ({ v: String(o.value), l: String(o.label ?? o.value) })), id: f.identifier };
+    });
+}
+
+async function mountForm(host) {
+  const id = host.dataset.formId, wide = (host.dataset.wide || "").split(",");
   host.textContent = "";
-  const skeleton = el("div", { class: "form-skeleton", role: "status" }, "Loading form…");
-  host.append(skeleton);
-  let built = null;
-
-  const build = (state) => {
-    const fieldsBox = el("div", { class: "wix-form__fields" });
-    const nodes = {};
-    for (const f of state.form.fields) {
-      if (wide.has(f.identifier) || wide.has(f.target)) f.wide = true;
-      nodes[f.target] = fieldNode(store, f);
-      fieldsBox.append(nodes[f.target]);
+  const load = h("div", { class: "form-skeleton", role: "status" }, "Loading form…");
+  host.append(load);
+  let fields;
+  try { fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form); } catch (e) {
+    load.className = "form-status form-status--error";
+    load.textContent = "This form is unavailable right now. Please call or email us instead.";
+    return;
+  }
+  const vals = {}, nodes = {};
+  const box = h("div", { class: "wix-form__fields" });
+  for (const f of fields) {
+    const fid = "f" + Math.random().toString(36).slice(2, 8);
+    const err = h("div", { class: "error", role: "alert" });
+    const w = h("div", { class: "field" + (f.kind === "area" || wide.includes(f.target) ? " field--wide" : "") });
+    const lab = h("label", { for: fid }, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null);
+    const set = (v) => { vals[f.target] = v; };
+    if (f.kind === "select") {
+      const s = h("select", { id: fid, onchange: () => set(s.value) }, h("option", { value: "" }, f.ph || "Select one"), f.opts.map((o) => h("option", { value: o.v }, o.l)));
+      w.append(lab, s);
+    } else if (f.kind === "radio" || f.kind === "checks") {
+      const fs = h("fieldset", {}, h("legend", {}, f.label, f.required ? h("span", { class: "req" }, "*") : null));
+      f.opts.forEach((o, n) => {
+        const inp = h("input", { type: f.kind === "radio" ? "radio" : "checkbox", name: fid, value: o.v, id: fid + n, onchange: () => set(f.kind === "radio" ? o.v : $$("input:checked", fs).map((x) => x.value)) });
+        fs.append(h("label", { class: "choice", for: fid + n }, inp, o.l));
+      });
+      w.append(fs);
+    } else if (f.kind === "check") {
+      const inp = h("input", { type: "checkbox", id: fid, onchange: () => set(inp.checked) });
+      w.append(h("label", { class: "choice", for: fid }, inp, f.label));
+    } else {
+      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, oninput: () => set(el.value) });
+      w.append(lab, el);
     }
-    const status = el("div", { class: "form-status form-status--error", role: "alert", hidden: true });
-    const ok = el("div", { class: "form-status form-status--ok", role: "status", hidden: true });
-    const btn = el("button", { class: "btn" + (host.dataset.btn ? ` ${host.dataset.btn}` : ""), type: "submit" }, submitLabel);
-    const form = el("form", { class: "wix-form" + (two ? " wix-form--two" : ""), novalidate: true }, fieldsBox, status, ok, btn);
-    form.addEventListener("submit", (e) => store.submit(e));
-    host.textContent = "";
-    host.append(form);
-    built = { form, nodes, status, ok, btn };
-  };
-
-  const render = () => {
-    const s = store.getState();
-    if (s.loading && !s.form) return;
-    if (!s.form) {
-      skeleton.className = "form-status form-status--error";
-      skeleton.textContent = s.errors["@form"] || "This form is unavailable right now. Please call or email us instead.";
-      return;
+    w.append(err);
+    nodes[f.target] = [w, err];
+    box.append(w);
+  }
+  const bad = h("div", { class: "form-status form-status--error", role: "alert", hidden: true });
+  const ok = h("div", { class: "form-status form-status--ok", role: "status", hidden: true });
+  const label = host.dataset.submit || "Submit";
+  const btn = h("button", { class: "btn" + (host.dataset.btn ? " " + host.dataset.btn : ""), type: "submit" }, label);
+  const form = h("form", { class: "wix-form" + (host.dataset.layout === "two" ? " wix-form--two" : ""), novalidate: true }, box, bad, ok, btn);
+  host.textContent = "";
+  host.append(form);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    bad.hidden = true;
+    let first = null;
+    for (const f of fields) {
+      const v = vals[f.target], [w, err] = nodes[f.target];
+      const empty = v == null || v === "" || (Array.isArray(v) && !v.length) || (f.kind === "check" && !v);
+      let m = "";
+      if (f.required && empty) m = "This field is required.";
+      else if (f.kind === "email" && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) m = "Enter an email address like name@example.com.";
+      w.classList.toggle("is-invalid", !!m);
+      err.textContent = m;
+      if (m && !first) first = w;
     }
-    if (!built) build(s);
-    for (const [target, node] of Object.entries(built.nodes)) {
-      const msgs = Object.entries(s.errors).filter(([k]) => k.split("/")[0] === target).map(([, m]) => m);
-      node.classList.toggle("is-invalid", msgs.length > 0);
-      $(".error", node).textContent = msgs.join(" ");
-      const c = $("input,select,textarea", node);
-      if (c) c.setAttribute("aria-invalid", msgs.length ? "true" : "false");
+    if (first) { $("input,select,textarea", first)?.focus(); return; }
+    const out = {};
+    for (const f of fields) {
+      const v = vals[f.target];
+      if (v == null || v === "" || (Array.isArray(v) && !v.length) || v === false) continue;
+      out[f.target] = f.kind === "tel" ? phone(v) : typeof v === "string" ? v.trim() : v;
     }
-    const formErr = s.errors["@form"];
-    built.status.hidden = !formErr;
-    built.status.textContent = formErr || "";
-    built.btn.disabled = s.loading;
-    built.btn.textContent = s.loading ? "Sending…" : submitLabel;
-    if (s.outcome) {
-      built.form.reset();
-      built.ok.hidden = false;
-      built.ok.textContent = s.outcome.message || successText;
-      built.btn.hidden = true;
-      $$(".field", built.form).forEach((n) => (n.hidden = true));
-      if (s.outcome.action === "REDIRECT" && s.outcome.url && !s.outcome.newTab) location.href = s.outcome.url;
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    try {
+      const r = await api("/form-submission-service/v4/submissions", "POST", { submission: { formId: id, submissions: out } });
+      const s = r.submission || r;
+      if (!["CONFIRMED", "PENDING", "PAYMENT_WAITING"].includes(s.status)) throw new Error("Your message could not be sent. Please try again.");
+      form.reset();
+      $$(".field", form).forEach((n) => (n.hidden = true));
+      btn.hidden = true;
+      ok.hidden = false;
+      ok.textContent = host.dataset.success || "Thank you. Our team will be in touch.";
+    } catch (x) {
+      const v = (((x.details || {}).validationError || {}).fieldViolations || [])[0];
+      bad.hidden = false;
+      bad.textContent = v ? "Please check your entries and try again." : "We could not send this right now. Please try again, or contact us directly.";
+      btn.disabled = false;
+      btn.textContent = label;
     }
-  };
-  store.subscribe(render);
-  store.start();
-  render();
+  });
 }
 $$("[data-wix-form]").forEach(mountForm);
 
-/* ---------- Donations ---------- */
+/* Donations */
+const FREQ = { ONE_TIME: "One-time", WEEK: "Weekly", MONTH: "Monthly", YEAR: "Yearly" };
+const money = (n) => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
 async function mountGive(host) {
+  const cid = host.dataset.campaign;
   host.textContent = "";
-  host.append(el("div", { class: "form-skeleton", role: "status" }, "Loading giving options…"));
-  let campaign;
-  try { campaign = await fetchCampaign(host.dataset.campaign); } catch (e) { campaign = null; }
+  host.append(h("div", { class: "form-skeleton", role: "status" }, "Loading giving options…"));
+  let c;
+  try { c = (await api("/donation-campaigns/v2/donation-campaigns/" + cid, "GET")).donationCampaign; } catch (e) { c = null; }
   host.textContent = "";
-  if (!campaign) {
-    host.append(el("div", { class: "form-status form-status--error" }, "Online giving is unavailable right now. Please contact us and we will help you give."));
+  if (!c || c.archived || ["EXPIRED", "GOAL_REACHED"].includes(c.status)) {
+    host.append(h("div", { class: "form-status form-status--error" }, "Online giving is unavailable right now. Please contact us and we will help you give."));
     return;
   }
-  const store = createDonationStore(campaign, { origin: location.origin, paths: { thankYou: "/give/thank-you/", campaign: "/give/" } });
-  const o = campaign.options;
-  const freqBox = el("div", { class: "seg", role: "group", "aria-label": "Gift frequency" });
-  const amtBox = el("div", { class: "amounts", role: "group", "aria-label": "Gift amount" });
-  const customInput = el("input", { id: "give-custom", type: "text", inputmode: "decimal", placeholder: "Enter an amount", autocomplete: "off" });
-  const customErr = el("div", { class: "error", role: "alert" });
-  const customField = el("div", { class: "field", hidden: true }, el("label", { for: "give-custom" }, "Other amount (USD)"), customInput, customErr);
-  customInput.addEventListener("input", () => store.setCustomAmount(customInput.value));
-  const fee = el("input", { type: "checkbox", id: "give-fee" });
-  fee.addEventListener("change", () => store.setCoverFee(fee.checked));
-  const feeRow = o.askCoverFee ? el("label", { class: "choice field", for: "give-fee", style: "display:flex;gap:10px;align-items:center" }, fee, "Add the processing fee so more of my gift goes to care") : null;
-  const note = el("textarea", { id: "give-note", rows: 2, maxlength: o.commentMaxLength, placeholder: "Optional note" });
-  note.addEventListener("input", () => store.setNote(note.value));
-  const noteField = o.commentsEnabled ? el("div", { class: "field" }, el("label", { for: "give-note" }, "Add a note (optional)"), note) : null;
-  const total = el("p", { class: "give-total", "aria-live": "polite" });
-  const err = el("div", { class: "form-status form-status--error", role: "alert", hidden: true });
-  const btn = el("button", { class: "btn btn--block", type: "button" }, "Continue to secure donation");
-  btn.addEventListener("click", () => { store.donate().catch(() => {}); });
-  const freqBtns = o.frequencies.map((fq) => {
-    const b = el("button", { type: "button" }, fq.label);
-    b.addEventListener("click", () => store.setFrequency(fq.value));
-    freqBox.append(b);
-    return [fq.value, b];
-  });
-  const presetBtns = o.presets.map((p) => {
-    const b = el("button", { type: "button" }, p.label);
-    b.addEventListener("click", () => store.selectPreset(p.amount));
-    amtBox.append(b);
-    return [p.amount, b];
-  });
-  let customBtn = null;
-  if (o.customAmount.enabled) {
-    customBtn = el("button", { type: "button" }, "Custom");
-    customBtn.addEventListener("click", () => { store.selectCustom(); customInput.focus(); });
-    amtBox.append(customBtn);
+  const amt = (p) => Number((p && p.amount) || 0);
+  const presets = (c.predefinedDonationAmounts || []).map((p) => amt(p.price)).filter((n) => n > 0);
+  const freqs = (c.donationFrequencies || []).filter((f) => FREQ[f]);
+  if (!freqs.length) freqs.push("ONE_TIME");
+  const min = amt((c.customAmountOptions || {}).minimum) || 1;
+  const st = { freq: freqs[0], amount: presets[0] || null, custom: false, text: "", fee: !!c.askDonorCoverFee, note: "", busy: false };
+  const value = () => (st.custom ? Number(st.text.replace(/[\s,$]/g, "")) || null : st.amount);
+  const fb = h("div", { class: "seg", role: "group", "aria-label": "Gift frequency" });
+  const ab = h("div", { class: "amounts", role: "group", "aria-label": "Gift amount" });
+  const ci = h("input", { id: "give-custom", type: "text", inputmode: "decimal", placeholder: "Enter an amount", autocomplete: "off", oninput: () => { st.text = ci.value; draw(); } });
+  const ce = h("div", { class: "error", role: "alert" });
+  const cf = h("div", { class: "field", hidden: true }, h("label", { for: "give-custom" }, "Other amount (USD)"), ci, ce);
+  const fee = h("input", { type: "checkbox", id: "give-fee", onchange: () => { st.fee = fee.checked; draw(); } });
+  const feeRow = c.askDonorCoverFee ? h("label", { class: "choice", for: "give-fee" }, fee, "Add the processing fee so more of my gift goes to care") : null;
+  const note = h("textarea", { id: "give-note", rows: 2, maxlength: 100, placeholder: "Optional note", oninput: () => { st.note = note.value; } });
+  const noteRow = c.commentsEnabled ? h("div", { class: "field" }, h("label", { for: "give-note" }, "Add a note (optional)"), note) : null;
+  const tot = h("p", { class: "give-total", "aria-live": "polite" });
+  const bad = h("div", { class: "form-status form-status--error", role: "alert", hidden: true });
+  const go = h("button", { class: "btn btn--block", type: "button", onclick: donate }, "Continue to secure donation");
+  const fbtns = freqs.map((f) => { const b = h("button", { type: "button", onclick: () => { st.freq = f; draw(); } }, FREQ[f]); fb.append(b); return [f, b]; });
+  const pbtns = presets.map((n) => { const b = h("button", { type: "button", onclick: () => { st.amount = n; st.custom = false; draw(); } }, money(n)); ab.append(b); return [n, b]; });
+  let cb = null;
+  if (c.customAmountEnabled) { cb = h("button", { type: "button", onclick: () => { st.custom = true; draw(); ci.focus(); } }, "Custom"); ab.append(cb); }
+  host.append(h("div", { class: "give-box" }, freqs.length > 1 ? fb : null, ab, cf, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
+  function draw() {
+    fbtns.forEach(([f, b]) => b.setAttribute("aria-pressed", st.freq === f));
+    pbtns.forEach(([n, b]) => b.setAttribute("aria-pressed", !st.custom && st.amount === n));
+    cb && cb.setAttribute("aria-pressed", st.custom);
+    cf.hidden = !st.custom;
+    const v = value();
+    ce.textContent = st.custom && st.text && (!v || v < min) ? "The minimum donation is " + money(min) + "." : "";
+    const f = v && st.fee ? Math.round(v * 2.9) / 100 : 0;
+    tot.textContent = f ? "Total with fee: " + money(Math.round((v + f) * 100) / 100) : "";
+    go.disabled = st.busy;
+    go.textContent = st.busy ? "Opening checkout…" : v && v >= min ? "Donate " + money(v + f) + (st.freq === "ONE_TIME" ? "" : " " + FREQ[st.freq]) : "Continue to secure donation";
   }
-  if (!campaign.acceptsDonations) btn.disabled = true;
-  host.append(
-    el("div", { class: "give-box" },
-      o.frequencies.length > 1 ? freqBox : null, amtBox, customField, feeRow, noteField, total, err, btn,
-      el("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
-  const render = () => {
-    const s = store.getState();
-    freqBtns.forEach(([v, b]) => b.setAttribute("aria-pressed", String(s.frequency === v)));
-    presetBtns.forEach(([a, b]) => b.setAttribute("aria-pressed", String(!s.customMode && s.presetAmount === a)));
-    customBtn?.setAttribute("aria-pressed", String(s.customMode));
-    customField.hidden = !s.customMode;
-    customErr.textContent = s.showErrors && s.messages.customAmount ? s.messages.customAmount : "";
-    fee.checked = !!s.coverFee;
-    total.textContent = s.amount && s.fee ? `Total with fee: ${s.totalLabel}` : "";
-    btn.disabled = s.submitting || !campaign.acceptsDonations;
-    btn.textContent = s.submitting ? "Opening checkout…" : s.valid && s.amount ? s.buttonLabel : "Continue to secure donation";
-    err.hidden = !s.error;
-    err.textContent = s.error || "";
-  };
-  store.subscribe(render);
-  render();
+  async function donate() {
+    const v = value();
+    bad.hidden = true;
+    if (!v || v < min) { ce.textContent = "Enter an amount of " + money(min) + " or more."; return; }
+    st.busy = true; draw();
+    try {
+      const opt = { amount: v, frequency: st.freq };
+      if (st.fee && c.askDonorCoverFee) opt.donorCoveringFees = true;
+      const cart = await api("/ecom/v2/carts", "POST", { cart: { source: { channelType: "WEB" }, ...(st.note.trim() ? { note: st.note.trim() } : {}) }, catalogItems: [{ quantity: 1, catalogReference: { appId: "333b456e-dd48-4d6b-b32b-9fd48d74e163", catalogItemId: cid, options: opt } }] });
+      const id = cart._id || cart.id || (cart.cart && (cart.cart._id || cart.cart.id));
+      const s = await api("/headless/v1/redirect-session", "POST", { ecomCheckout: { checkoutId: id }, callbacks: { postFlowUrl: location.origin + "/give/", thankYouPageUrl: location.origin + "/give/thank-you/" } });
+      location.href = s.redirectSession.fullUrl;
+    } catch (e) {
+      st.busy = false; draw();
+      bad.hidden = false;
+      bad.textContent = /premium|payment/i.test(e.message) ? "Online giving is not switched on yet. Please contact us and we will help you give." : "We could not start the checkout. Please try again.";
+    }
+  }
+  draw();
 }
 $$("[data-give]").forEach(mountGive);

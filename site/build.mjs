@@ -216,6 +216,7 @@ for (const [route, t] of [["/privacy-policy", "Privacy Policy"], ["/accessibilit
   add(route, t, `${t} for Faith Reins.`, `<section class="section"><div class="container"><div class="prose"><h1>${t}</h1><p class="pending">This page is awaiting final approved policy text from Faith Reins.</p><p>Questions? <a href="/contact">Contact us</a>.</p></div></div></section>`);
 
 /* ---------- Write ---------- */
+fs.appendFileSync(path.join(here, "public/assets/site.css"), "");
 fs.mkdirSync(path.join(here, "src"), { recursive: true });
 fs.writeFileSync(path.join(here, "src/shell.js"), `export const HEADER=${JSON.stringify(L.header(""))};export const FOOTER=${JSON.stringify(L.footer())};\n`);
 fs.rmSync(dist, { recursive: true, force: true });

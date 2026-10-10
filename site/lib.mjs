@@ -36,21 +36,22 @@ const P = {
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
   horse: '<path d="M4 20c0-6 2-10 6-12l2-4 2 3 4 1v3l-3 1c0 3 1 5 1 8M10 8l-3 2"/>',
 };
-export const icon = (name) => `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${P[name] || P.star}</svg>`;
+export const icon = (name) => `<i class="ic i-${P[name] ? name : "star"}"></i>`;
+export const iconCss = () => ".ic{display:inline-block;width:24px;height:24px;flex:none;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}" + Object.entries(P).map(([k, v]) => `.i-${k}{--m:url("data:image/svg+xml,${(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>${v.replace(/"/g, "'")}</svg>`).replace(/</g, "%3C").replace(/>/g, "%3E").replace(/#/g, "%23")}")}`).join("");
 
 export const btn = (label, href, kind = "", arrow = false) =>
-  `<a class="btn${kind ? " btn--" + kind : ""}" href="${href}">${esc(label)}${arrow ? icon("arrow") : ""}</a>`;
-export const link = (label, href) => `<a class="text-link" href="${href}">${esc(label)}${icon("arrow")}</a>`;
+  `<a class="btn${kind ? " btn--" + kind : ""}" href="${href}">${esc(label)}</a>`;
+export const link = (label, href) => `<a class="text-link" href="${href}">${esc(label)}</a>`;
 
 export function hero({ key, h1, body, ctas = [], focus, short = false, mobileFocus }) {
   const d = img(`hero-${key}-desktop`), m = img(`hero-${key}-mobile`);
-  return `<section class="hero${short ? " hero--short" : ""}" style="${focus ? `--focus:${focus}` : ""}">
-  <picture><source media="(max-width: 767px)" srcset="${m}"><img src="${d}" alt="" width="1920" height="1000" fetchpriority="high"></picture>
+  return `<section class="hero${short ? " hero--short" : ""}"${focus ? ` style="--focus:${focus}"` : ""}>
+  <picture><source media="(max-width: 767px)" srcset="${m}"><img src="${d}" alt="" fetchpriority="high"></picture>
   <div class="container hero__content"><div class="hero__copy"><h1>${esc(h1)}</h1><p>${esc(body)}</p>
   ${ctas.length ? `<div class="btn-row">${ctas.map((c) => btn(c[0], c[1], c[2] || "light")).join("")}</div>` : ""}</div></div></section>`;
 }
 
-export const section = (inner, cls = "") => `<section class="section ${cls}"><div class="container">${inner}</div></section>`;
+export const section = (inner, cls = "") => `<section class="section${cls ? " " + cls : ""}"><div class="container">${inner}</div></section>`;
 export const head = (h2, p = "", left = false) => `<div class="section-head${left ? " section-head--left" : ""}"><h2>${esc(h2)}</h2>${p ? `<p>${esc(p)}</p>` : ""}</div>`;
 export const grid = (n, items) => `<div class="grid grid--${n}">${items.join("")}</div>`;
 
@@ -120,13 +121,10 @@ export function page({ route, title, description, body }) {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#0B4F3A">
-<link rel="icon" href="${img("logo")}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@600&display=swap">
 <link rel="stylesheet" href="/assets/site.css"></head>
 <body>
-<div id="shell-header" data-route="${route}"><noscript><a href="/">Faith Reins</a> · <a href="/services-programs">Services</a> · <a href="/book-online">Book</a> · <a href="/give">Give</a> · <a href="/contact">Contact</a></noscript></div>
+<div id="shell-header"><noscript><a href="/">Home</a> <a href="/services-programs">Services</a> <a href="/book-online">Book</a> <a href="/give">Give</a> <a href="/contact">Contact</a></noscript></div>
 <main id="main">
 ${body}
 </main>
