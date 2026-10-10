@@ -1,0 +1,41 @@
+// The campaigns listing as a framework-free store — the logic behind useCampaigns, usable from
+// React (useCampaigns wraps it with useSyncExternalStore), from a static page or Vue/Svelte
+// (subscribe and render), or as the specification for a port.
+//
+// SSR-friendly: seed with `initialCampaigns` and they render at once with no client fetch; without
+// a seed `start()` fetches the non-archived campaigns. A failed load leaves `campaigns: []` with the
+// message in `error`, so the surface renders its empty state and the message, never a skeleton
+// forever. One store per mounted listing: createCampaignsStore(), not a singleton.
+import { fetchCampaigns } from "./campaigns.js";
+export function createCampaignsStore({ initialCampaigns } = {}) {
+    let state = { campaigns: initialCampaigns ?? null, error: null };
+    let started = false;
+    const listeners = new Set();
+    function setState(patch) {
+        state = { ...state, ...patch };
+        for (const fn of listeners)
+            fn();
+    }
+    return {
+        getState: () => state,
+        subscribe(fn) {
+            listeners.add(fn);
+            return () => listeners.delete(fn);
+        },
+        start() {
+            if (started)
+                return;
+            started = true;
+            if (initialCampaigns)
+                return;
+            fetchCampaigns()
+                .then((campaigns) => { if (started)
+                setState({ campaigns }); })
+                .catch((e) => { if (started)
+                setState({ campaigns: [], error: e instanceof Error ? e.message : String(e) }); });
+        },
+        stop() {
+            started = false;
+        },
+    };
+}
