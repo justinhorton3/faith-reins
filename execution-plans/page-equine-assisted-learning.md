@@ -42,9 +42,9 @@ Program detail page explaining non-overstated horse-guided learning experiences,
 
 | Element | Copy |
 |---|---|
-| Hero headline | Equine-Assisted Learning |
-| Hero body | Guided experiences with horses that help participants build confidence, trust, communication, and resilience. |
-| Primary CTA | Learn more |
+| Hero headline | Learning through connection. |
+| Hero body | Ground-based experiences with horses supporting confidence, connection and life skills. |
+| Primary CTA | Ask about EAL |
 | Secondary CTA | Meet our horses |
 
 ## Layout Instructions

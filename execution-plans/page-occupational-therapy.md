@@ -42,8 +42,8 @@ Service detail page for practical skills, sensory support, motor planning, play,
 
 | Element | Copy |
 |---|---|
-| Hero headline | Occupational Therapy |
-| Hero body | Helping children build practical skills for play, learning, self-care, and daily routines. |
+| Hero headline | Skills for everyday life. |
+| Hero body | Individualized support for daily routines, participation and independence. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | View all services |
 

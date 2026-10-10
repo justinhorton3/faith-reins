@@ -70,15 +70,16 @@ Do not build the header from loose floating elements. Alignment issues should be
 | Rule | Requirement |
 |---|---|
 | Target widths | 1440, 1280, 1024 |
-| Height | Approximately 84-96 px unless v4 mock requires otherwise |
-| Logo size | At least 180 px wide; never stretched, cropped, or retyped |
+| Height | 92 px desktop/tablet; 72 px mobile |
+| Inner container | 1200 px max width; 32 px side padding desktop/tablet, 20 px mobile |
+| Logo size | 210 px wide desktop/tablet; 164 px mobile; never stretched, cropped, or retyped |
 | Alignment | Logo, nav, and Donate button share one vertical centerline |
-| Nav typography | Noto Sans, medium weight, approximately 15-16 px |
+| Nav typography | Noto Sans, 16 px desktop and 15 px tablet, 500 weight |
 | Nav color | `#111111` or `#0B4F3A` |
-| Nav spacing | Even spacing; no crowding or wrapping |
+| Nav spacing | 24 px gap desktop; 16 px gap tablet; no crowding or wrapping |
 | Active/hover | Forest Green text and/or restrained Warm Gold underline |
 | Donate button | Forest Green background, white text, Forest Green border |
-| Donate size | Approximately 44-48 px high, 28-36 px horizontal padding |
+| Donate size | 48 px high, 32 px horizontal padding, 8 px radius |
 
 Desktop must keep all primary nav links visible in one row if they fit cleanly. Do not use a desktop dropdown for this pass.
 
@@ -104,6 +105,8 @@ Tablet behavior:
 - If the Donate button causes crowding, move Donate into the menu as the first drawer action.
 - Never allow a two-line nav.
 - Never allow the nav to collide with the logo or Donate button.
+- At 900 px, show logo, Services & Programs, For Families, Donate, and menu; move all other links into the drawer.
+- At 834 px and 768 px, show logo, Donate, and menu only.
 
 ## Mobile Layout
 
@@ -114,6 +117,8 @@ Mobile header row:
 1. Logo left.
 2. Hamburger/menu icon right.
 3. Optional compact Donate button only if it fits cleanly at 390 px and wider.
+
+Use the 72 px row height, 44 px menu hit area, and 164 px maximum logo width. At 375 px and 320 px, place Donate in the drawer.
 
 Mobile drawer order:
 

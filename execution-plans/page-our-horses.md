@@ -46,9 +46,9 @@ Horse profile page introducing the equine partners and routing visitors to equin
 
 | Element | Copy |
 |---|---|
-| Hero headline | Our Horses |
-| Hero body | Meet the steady partners who help create a calm, welcoming environment for learning, growth, and care. |
-| Primary CTA | Learn about our programs |
+| Hero headline | Meet our equine partners. |
+| Hero body | Big personalities. Gentle connections. |
+| Primary CTA | Support |
 | Secondary CTA | Explore services |
 
 ## Layout Instructions

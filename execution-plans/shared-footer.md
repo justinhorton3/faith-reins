@@ -40,12 +40,7 @@ Open `Faith-Reins-Website-Design-Review-v4.pdf` only to resolve exact spacing, v
 
 ## Contact Copy
 
-Faith Reins Equestrian Center  
-123 County Road 45  
-Camden, AR 72711  
-Phone: (123) 836-8383  
-Email: info@faithreins.com  
-Hours: Mon-Fri, 8 AM-5 PM
+Use the confirmed business details already maintained in the Wix site settings. Do not publish the sample address, phone number, email, or hours from an earlier draft. If Wix settings are empty, leave the contact block as a clearly labeled draft placeholder and record the blocker in `execution-log.md`.
 
 ## Footer Link Groups
 
@@ -172,7 +167,7 @@ Mobile rules:
 ## Fail Conditions
 
 - Footer uses default Wix blue link or button styling.
-- Contact details are missing or differ from approved placeholder details.
+- Contact details are missing, unconfirmed, or differ from the approved Wix business details.
 - Links route to wrong pages.
 - Footer columns overlap, squeeze, or become unreadable.
 - Logo is stretched, cropped, or illegible.

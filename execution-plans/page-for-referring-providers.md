@@ -42,9 +42,9 @@ Operational referral page for providers needing service fit, documentation, and 
 
 | Element | Copy |
 |---|---|
-| Hero headline | For Referring Providers |
-| Hero body | A simple referral pathway for pediatric therapy, counseling, and equine-assisted services. |
-| Primary CTA | Start a referral |
+| Hero headline | A clear path from referral to care. |
+| Hero body | Connect children and families with the right next step. |
+| Primary CTA | Contact intake |
 | Secondary CTA | View services |
 
 ## Layout Instructions

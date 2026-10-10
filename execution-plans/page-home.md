@@ -72,11 +72,15 @@ Do not add a marketing splash page before the real homepage content. The first s
 
 ## Section Details
 
+## Layout Instructions
+
+Use the section order and responsive rules below as the page layout specification. Do not add extra sections during this build task.
+
 ### 1. Hero
 
 - Use full-bleed desktop hero at desktop/tablet and mobile hero at mobile.
 - Text sits over the image in a readable safe area.
-- Use subtle overlay only if needed for legibility; keep it natural and not dark/heavy unless v4 requires it.
+- Use the implementation-spec overlay `rgba(17,17,17,0.22)` when contrast testing requires it; otherwise use no overlay.
 - Primary CTA: Request an appointment -> `/book-online`.
 - Secondary CTA: Explore services -> `/services-programs`.
 - Header should sit above hero cleanly with no overlap unless v4 intentionally uses overlay navigation.

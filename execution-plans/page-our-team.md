@@ -42,16 +42,16 @@ Team page introducing staff/leadership and reinforcing clinical excellence and w
 
 | Element | Copy |
 |---|---|
-| Hero headline | Our Team |
-| Hero body | A caring team committed to clinical excellence, family support, and the healing connection between people and horses. |
-| Primary CTA | Meet the team |
+| Hero headline | People who care. A purpose we share. |
+| Hero body | A dedicated team supporting children, families and our equine programs. |
+| Primary CTA | Request an appointment |
 | Secondary CTA | Join our team |
 
 ## Layout Instructions
 
 1. **Hero**: Team-forward hero with internal anchor CTA.
 2. **Team intro**: Short values/care approach statement.
-3. **Staff/leadership grid**: Use approved headshots/bios if available; otherwise clean placeholders.
+3. **Staff/leadership grid**: Use approved headshots and bios. If they are unavailable, omit the grid and keep the team intro plus Contact CTA; do not publish placeholder profiles.
 4. **Care model**: How the team works with families and horses.
 5. **Careers link**: CTA to Join Our Team.
 6. **Contact CTA**: Route questions to Contact.
@@ -83,7 +83,7 @@ Team page introducing staff/leadership and reinforcing clinical excellence and w
 
 | Label | Destination |
 |---|---|
-| Meet the team | `team-section` |
+| Meet the team | Wix page anchor: `#team-profiles` |
 | Join our team | `/join-our-team` |
 | Join Our Team | `/join-our-team` |
 | Contact | `/contact` |

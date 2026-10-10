@@ -42,8 +42,8 @@ Family intake hub that explains how to start, what to expect, payment, referrals
 
 | Element | Copy |
 |---|---|
-| Hero headline | For Families |
-| Hero body | A clear path from first questions to care, with support at every step. |
+| Hero headline | A clear first step. A caring team. |
+| Hero body | Explore services and learn what happens after you request an appointment. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | Contact us |
 

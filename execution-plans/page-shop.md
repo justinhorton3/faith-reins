@@ -84,7 +84,7 @@ Merchandise/support page. Shop is secondary to care and giving, and remains a no
 
 | Label | Destination |
 |---|---|
-| Browse merchandise | `shop-section` |
+| Browse merchandise | Wix Stores product section: `#shop-products` |
 | Donate | `/give` |
 | Give | `/give` |
 | Contact | `/contact` |

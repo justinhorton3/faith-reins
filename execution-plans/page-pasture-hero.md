@@ -14,6 +14,8 @@ Open only these files if this candidate becomes an active page:
 4. `execution-plans/site-map-and-routes.md`
 5. This execution plan
 
+This candidate is excluded from the production build sequence. It has no route and must not be executed until a page brief is approved.
+
 ## Assets
 
 | Asset | Repo path | Wix folder | Use |
@@ -43,6 +45,12 @@ Hold this asset for a future general campus, ranch, facilities, or equestrian ce
 4. Route visitors to Contact, Services & Programs, and For Families.
 
 ## Validation
+
+This validation is applicable only after activation; the current plan status is Hold.
+
+## Links And CTAs
+
+No production links are approved while this candidate is on Hold.
 
 | Mode | Widths | Pass criteria |
 |---|---|---|

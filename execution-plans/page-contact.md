@@ -42,18 +42,18 @@ Contact/location page for general questions, referrals, appointment questions, d
 
 | Element | Copy |
 |---|---|
-| Hero headline | Contact Faith Reins |
-| Hero body | Reach out with questions, referrals, appointment requests, or partnership opportunities. |
-| Primary CTA | Send a message |
+| Hero headline | We're here to help. |
+| Hero body | Connect with our team about services, giving or getting involved. |
+| Primary CTA | Connect with us |
 | Secondary CTA | Request an appointment |
 
 ## Layout Instructions
 
 1. **Hero**: Contact hero with message CTA.
-2. **Contact details**: Faith Reins Equestrian Center; 123 County Road 45; Camden, AR 72711; Phone: (123) 836-8383; Email: info@faithreins.com; Hours: Mon-Fri, 8 AM-5 PM.
+2. **Contact details**: Pull the confirmed business name, address, phone, email, and hours from Wix business settings. Do not use sample values.
 3. **Inquiry form**: Name, phone, email, reason for inquiry, message.
 4. **Quick paths**: Appointment questions -> Book Online; referrals -> For Referring Providers; donors -> Give/Sponsorships.
-5. **Location/map placeholder**: Use a clean map/location block if available; otherwise address block.
+5. **Location**: Use a map block only when a confirmed address is configured in Wix; otherwise use the confirmed address block without a map.
 6. **Final CTA**: Contact and Book Online.
 
 ## Desktop Layout
@@ -83,7 +83,7 @@ Contact/location page for general questions, referrals, appointment questions, d
 
 | Label | Destination |
 |---|---|
-| Send a message | `form-submit` |
+| Send a message | Wix Form: Contact Inquiry |
 | Request an appointment | `/book-online` |
 | Book Online | `/book-online` |
 | For Referring Providers | `/for-referring-providers` |

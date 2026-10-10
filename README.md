@@ -14,6 +14,10 @@ For each Wix build run, open only:
 4. The one execution plan being executed
 5. `execution-plans/site-map-and-routes.md` when changing navigation, buttons, slugs, or menus
 
+Every plan also inherits `execution-plans/quality-gate.md`. Use `execution-plans/build-sequence.md` to select the next bounded task.
+Every plan also inherits `execution-plans/wix-implementation-spec.md` for exact Wix implementation values.
+Every page plan also follows `execution-plans/page-build-spec.md`; the v4 screen inventory is in `execution-plans/v4-mock-inventory.md`.
+
 Recommended execution order:
 
 1. Build shared components first: Header, Footer, global image/media rules.
@@ -31,6 +35,12 @@ Recommended execution order:
 | Build Rules | [Wix Build Rules](execution-plans/wix-build-rules.md) | `images/ASSET-MANIFEST.csv` | Ready | Context-loading rules, media rules, validation widths, pass/fail rules |
 | Build Rules | [Site Map And Routes](execution-plans/site-map-and-routes.md) | N/A | Ready | Canonical nav labels, slugs, CTA targets, dropdown/mobile drawer rules |
 | Build Rules | [Wix Editor Checklist](execution-plans/wix-editor-checklist.md) | N/A | Ready | Pre-build, responsive QA, link QA, and handoff checklist |
+| Build Rules | [Quality Gate](execution-plans/quality-gate.md) | N/A | Ready | Required pass/fail gate for every component and page |
+| Build Rules | [Build Sequence](execution-plans/build-sequence.md) | N/A | Ready | Bounded order for executing every plan |
+| Build Rules | [Readiness Matrix](execution-plans/readiness-matrix.md) | N/A | Active | Plan-by-plan prerequisites and execution status |
+| Build Rules | [Wix Implementation Spec](execution-plans/wix-implementation-spec.md) | N/A | Ready | Exact Wix geometry, typography, controls, and responsive rules |
+| Build Rules | [V4 Mock Inventory](execution-plans/v4-mock-inventory.md) | N/A | Reviewed | Complete screen inventory and V4 primary actions |
+| Build Rules | [Page Build Specification](execution-plans/page-build-spec.md) | N/A | Ready | Required page-specific implementation fields |
 | Template | [Component Plan Template](execution-plans/template-component-plan.md) | N/A | Ready | Required structure for shared component plans |
 | Template | [Page Plan Template](execution-plans/template-page-plan.md) | N/A | Ready | Required structure for page plans |
 | Log | [Execution Log](execution-plans/execution-log.md) | N/A | Active | Lightweight handoff/status log |
@@ -57,7 +67,7 @@ Recommended execution order:
 | Page | [Our Team](execution-plans/page-our-team.md) | `images/heroes/desktop/hero-our-team-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Page | [Our Horses](execution-plans/page-our-horses.md) | `images/heroes/desktop/hero-our-horses-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Page | [Join Our Team](execution-plans/page-join-our-team.md) | `images/heroes/desktop/hero-join-our-team-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
-| Page | [Shop](execution-plans/page-shop.md) | `images/heroes/desktop/hero-shop-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links; Shop is a text nav link |
+| Page extension | [Shop](execution-plans/page-shop.md) | `images/heroes/desktop/hero-shop-desktop.webp` | Conditional | Not represented in the v4 screen set; requires approved shop design/product content |
 | Page | [Contact](execution-plans/page-contact.md) | `images/heroes/desktop/hero-contact-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Asset/Page Candidate | [Pasture Hero](execution-plans/page-pasture-hero.md) | `images/heroes/desktop/pasture-hero-desktop.webp` | Hold | Use only if a future page needs a general campus/ranch hero |
 
