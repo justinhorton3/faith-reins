@@ -1,0 +1,48 @@
+{
+  "font": {
+    "family": "Noto Serif",
+    "weight": "SemiBold / 600",
+    "reason": "Shorter, restrained Q tail; closer to locked visual reference than EB Garamond."
+  },
+  "coordinate_system": {
+    "width": 1000,
+    "height": 1000,
+    "center": [
+      500,
+      500
+    ]
+  },
+  "gold_border": {
+    "radius": 414,
+    "stroke_pt": 6,
+    "stroke_px_at_96dpi": 8.0
+  },
+  "text_rules": {
+    "optical_centerline_radius": 336,
+    "max_allowed_text_radius": 392,
+    "rule": "No text glyph may touch or cross the gold border or side divider arcs.",
+    "minimum_clearance_to_gold_border_px": 18,
+    "title_measured_band": [
+      297.86,
+      374.14
+    ],
+    "descriptor_measured_band": [
+      303.84,
+      368.11
+    ]
+  },
+  "side_dividers": {
+    "radius": 336,
+    "stroke_pt": 6,
+    "alignment": "same optical radius as character midline"
+  },
+  "invariants": [
+    "All circles and arcs share center (500,500).",
+    "Gold ring and side divider arcs are exactly 6 pt.",
+    "No text may touch/cross any gold line.",
+    "Text circle diameter is reduced from prior version.",
+    "All text paths use true circles, never ellipses.",
+    "No non-uniform scaling.",
+    "Color variants change colors only; geometry remains identical."
+  ]
+}
