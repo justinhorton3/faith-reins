@@ -53,7 +53,7 @@ const SVC = [
 ];
 add("/services-programs", "Services & Programs", "Occupational therapy, physical therapy, speech-language therapy, counseling and equine-assisted learning in South Arkansas.",
   hero({ key: "services", h1: "Care for every next step.", body: "Occupational therapy, physical therapy, speech-language therapy, counseling and EAL.", ctas: [["Request an appointment", "/book-online", "light"], ["For families", "/for-families", "secondary"]] }) +
-  section(head("Individualized, family-centered care", "Every plan starts with your child and your family.") + grid(3, SVC.map(([t, p, h, ic]) => card({ ic, title: t, text: p, href: h })))) +
+  section(head("Individualized, family-centered care", "Every plan starts with your child and your family.") + grid(5, SVC.map(([t, p, h, ic]) => card({ ic, title: t, text: p, href: h })))) +
   section(head("How to start") + steps([["Ask questions", "Call, email or send a message."], ["Request an appointment", "Or send a provider referral."], ["Meet the team", "We will talk through next steps and scheduling."]]), "section--paper") +
   section(grid(2, [
     card({ ic: "home", title: "For families", text: "What to expect after you reach out.", href: "/for-families", linkLabel: "For families" }),
