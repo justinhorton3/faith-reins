@@ -43,9 +43,9 @@ About page for mission, story, values, and why Faith Reins combines clinical car
 | Element | Copy |
 |---|---|
 | Hero headline | Rooted in faith. Guided by care. |
-| Hero body | Faith Reins brings pediatric therapy, counseling and equine-assisted learning together in a peaceful South Arkansas setting. |
-| Primary CTA | Explore services |
-| Secondary CTA | Meet our team |
+| Hero body | Helping children and families grow through care, connection and community. |
+| Primary CTA | Meet our team |
+| Secondary CTA | Explore services |
 
 ## Layout Instructions
 

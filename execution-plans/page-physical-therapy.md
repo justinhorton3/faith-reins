@@ -42,8 +42,8 @@ Service detail page for strength, balance, coordination, mobility, and confidenc
 
 | Element | Copy |
 |---|---|
-| Hero headline | Physical Therapy |
-| Hero body | Building strength, balance, mobility, and confidence through child-centered care. |
+| Hero headline | Movement with purpose. |
+| Hero body | Supporting mobility, strength and confidence through individualized care. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | View all services |
 

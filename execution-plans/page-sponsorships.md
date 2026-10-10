@@ -42,17 +42,17 @@ Supporter page for sponsorship paths, recognition, impact, and sponsor inquiries
 
 | Element | Copy |
 |---|---|
-| Hero headline | Sponsorships |
-| Hero body | Partner with Faith Reins to support care, programs, horses, and family access. |
-| Primary CTA | Become a sponsor |
+| Hero headline | A partnership with purpose. |
+| Hero body | Support people, horses and the places where connection grows. |
+| Primary CTA | Discuss sponsorship |
 | Secondary CTA | Give now |
 
 ## Layout Instructions
 
 1. **Hero**: Sponsor-focused hero with inquiry CTA.
 2. **Why sponsor**: Explain mission support and community partnership.
-3. **Sponsorship options**: Tier cards or placeholder tiers; do not invent prices unless approved.
-4. **Recognition**: How sponsors may be recognized, using generic placeholders if details are not final.
+3. **Sponsorship options**: Use approved tier cards only. If prices or tiers are not approved, replace this section with an inquiry CTA and do not invent values.
+4. **Recognition**: Use approved recognition policy only. If it is not final, omit the section and keep the inquiry CTA.
 5. **Impact**: Link sponsorship to care access and program support.
 6. **Next steps**: Contact, Give, Impact & Stewardship.
 

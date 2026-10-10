@@ -42,8 +42,8 @@ Hub page that routes families and providers to every clinical service and equine
 
 | Element | Copy |
 |---|---|
-| Hero headline | Services & Programs |
-| Hero body | Evidence-based pediatric therapy, counseling and equine-assisted learning for children and families in South Arkansas. |
+| Hero headline | Care for every next step. |
+| Hero body | Occupational therapy, physical therapy, speech-language therapy, counseling and EAL. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | For families |
 

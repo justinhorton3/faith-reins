@@ -42,8 +42,8 @@ Service detail page for speech, language, communication, feeding, and confidence
 
 | Element | Copy |
 |---|---|
-| Hero headline | Speech-Language Therapy |
-| Hero body | Support for communication, language, feeding, and confidence in everyday life. |
+| Hero headline | Helping every voice connect. |
+| Hero body | Supporting speech, language and communication in everyday life. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | View all services |
 

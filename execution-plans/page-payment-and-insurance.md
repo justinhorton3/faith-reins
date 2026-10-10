@@ -42,9 +42,9 @@ Practical family page for payment, coverage questions, documentation, and contac
 
 | Element | Copy |
 |---|---|
-| Hero headline | Payment & Insurance |
-| Hero body | Practical information to help families understand coverage, private pay, and next steps. |
-| Primary CTA | Contact us |
+| Hero headline | Clear answers before care begins. |
+| Hero body | Start a conversation about coverage, payment and next steps. |
+| Primary CTA | Contact our team |
 | Secondary CTA | Request an appointment |
 
 ## Layout Instructions

@@ -9,6 +9,7 @@ State exactly what the page must accomplish and which v4 mock page it must match
 - `brand/brand-tokens.md`
 - `execution-plans/wix-build-rules.md`
 - This page plan
+- `execution-plans/quality-gate.md`
 
 ## Assets
 
@@ -63,6 +64,7 @@ List each section heading, body copy, cards, links, and CTAs.
 - Tablet widths: 900, 768.
 - Mobile widths: 430, 390, 375, 320.
 - Confirm correct hero crop, no overlap, readable copy, working CTAs, and saved draft.
+- Apply the shared quality gate and record widths, links, interactions, and blockers in `execution-log.md`.
 
 ## Done Means
 

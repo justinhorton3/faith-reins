@@ -42,16 +42,16 @@ Partner page recognizing relationships and routing future partners to inquiry pa
 
 | Element | Copy |
 |---|---|
-| Hero headline | Our Partners |
-| Hero body | Faith Reins grows through trusted relationships with families, providers, donors, and community partners. |
-| Primary CTA | Partner with us |
+| Hero headline | Stronger together. |
+| Hero body | Community and clinical connections supporting South Arkansas. |
+| Primary CTA | Become a partner |
 | Secondary CTA | View sponsorships |
 
 ## Layout Instructions
 
 1. **Hero**: Partnership hero with inquiry CTA.
 2. **Partner categories**: Families, providers, donors, community organizations, sponsors.
-3. **Logo/recognition grid**: Use logo placeholders if final logos are unavailable.
+3. **Logo/recognition grid**: Use approved partner logos only. If final logos are unavailable, omit the grid and retain the partner-category copy.
 4. **How partnership helps**: Short impact-focused content.
 5. **Become a partner**: CTA to Contact and Sponsorships.
 6. **Related trust link**: Impact & Stewardship.
@@ -62,7 +62,7 @@ Partner page recognizing relationships and routing future partners to inquiry pa
 - Use the global header and footer; do not rebuild or locally override them.
 - Hero should be the first visible page section below the header and must use the desktop hero image.
 - Keep content aligned to the v4 grid/max-width and avoid floating free-positioned elements.
-- Partner grid should be balanced and not look empty if logos are placeholders.
+- If logos are unavailable, the grid is omitted rather than filled with placeholders.
 
 ## Tablet Layout
 

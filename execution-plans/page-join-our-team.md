@@ -42,9 +42,9 @@ Careers/recruiting page for mission-aligned clinicians, staff, volunteers, or fu
 
 | Element | Copy |
 |---|---|
-| Hero headline | Join Our Team |
-| Hero body | Help children and families thrive through compassionate care, collaboration, and purpose-driven work. |
-| Primary CTA | Contact us about opportunities |
+| Hero headline | Bring your purpose to Faith Reins. |
+| Hero body | Explore career and volunteer opportunities supporting the mission. |
+| Primary CTA | Explore opportunities |
 | Secondary CTA | Meet our team |
 
 ## Layout Instructions

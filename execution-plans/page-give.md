@@ -42,9 +42,9 @@ Primary donation page focused on generosity, access to care, stewardship, and su
 
 | Element | Copy |
 |---|---|
-| Hero headline | Give children and families room to heal |
-| Hero body | Your generosity helps remove barriers to care and supports the work of Faith Reins. |
-| Primary CTA | Donate |
+| Hero headline | Help make care possible. |
+| Hero body | Support families, horses and the Faith Reins mission. |
+| Primary CTA | Give now |
 | Secondary CTA | View impact |
 
 ## Layout Instructions
@@ -83,7 +83,7 @@ Primary donation page focused on generosity, access to care, stewardship, and su
 
 | Label | Destination |
 |---|---|
-| Donate | `donation-action` |
+| Donate | Wix donation provider action configured in the Give section; record provider and success/failure behavior before build |
 | View impact | `/impact-and-stewardship` |
 | Impact & Stewardship | `/impact-and-stewardship` |
 | Sponsorships | `/sponsorships` |

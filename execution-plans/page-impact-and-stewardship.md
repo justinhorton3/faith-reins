@@ -42,9 +42,9 @@ Donor trust page for responsible care, transparency, impact stories, and steward
 
 | Element | Copy |
 |---|---|
-| Hero headline | Impact & Stewardship |
-| Hero body | Clear reporting, responsible care, and mission-focused use of every gift. |
-| Primary CTA | Give with confidence |
+| Hero headline | Your generosity. A stronger community. |
+| Hero body | See how support and the mission connect. |
+| Primary CTA | Explore giving |
 | Secondary CTA | Become a sponsor |
 
 ## Layout Instructions
@@ -52,8 +52,8 @@ Donor trust page for responsible care, transparency, impact stories, and steward
 1. **Hero**: Trust-centered hero with Give CTA.
 2. **Impact overview**: Explain how support helps children, families, programs, and horses.
 3. **Stewardship principles**: Cards for transparency, responsible care, mission focus, and accountability.
-4. **Impact stories**: Use placeholders unless approved stories are available.
-5. **Metrics area**: Use metrics only when confirmed; otherwise use qualitative impact cards.
+4. **Impact stories**: Use approved stories only. If none are approved, omit the stories section.
+5. **Metrics area**: Use confirmed metrics only; otherwise use the specified qualitative impact cards.
 6. **Next steps**: Give and Sponsorships CTAs.
 
 ## Desktop Layout

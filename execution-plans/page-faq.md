@@ -42,9 +42,9 @@ Question hub covering getting started, services, payment, equine programs, visit
 
 | Element | Copy |
 |---|---|
-| Hero headline | Frequently Asked Questions |
-| Hero body | Answers to common questions about services, appointments, referrals, payment, and what to expect. |
-| Primary CTA | Contact us |
+| Hero headline | A clear next step. |
+| Hero body | Answers for families, referring providers and supporters. |
+| Primary CTA | Contact our team |
 | Secondary CTA | Request an appointment |
 
 ## Layout Instructions

@@ -42,9 +42,9 @@ Appointment/inquiry request page that captures family needs and routes users to 
 
 | Element | Copy |
 |---|---|
-| Hero headline | Request an Appointment |
-| Hero body | Tell us a little about your needs and our team will follow up with next steps. |
-| Primary CTA | Submit request |
+| Hero headline | Let's find your next step. |
+| Hero body | Send a request. Our team will contact you about next steps and scheduling. |
+| Primary CTA | Request an appointment |
 | Secondary CTA | Contact us |
 
 ## Layout Instructions
@@ -83,7 +83,7 @@ Appointment/inquiry request page that captures family needs and routes users to 
 
 | Label | Destination |
 |---|---|
-| Submit request | `form-submit` |
+| Submit request | Wix Form: Appointment Request |
 | Contact us | `/contact` |
 | Contact | `/contact` |
 | FAQ | `/faq` |

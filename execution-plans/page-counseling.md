@@ -42,8 +42,8 @@ Service detail page for compassionate emotional, behavioral, child, teen, and fa
 
 | Element | Copy |
 |---|---|
-| Hero headline | Counseling |
-| Hero body | Compassionate support for children, teens, and families navigating emotional and behavioral challenges. |
+| Hero headline | A caring space to grow. |
+| Hero body | A supportive place for emotional well-being and personal growth. |
 | Primary CTA | Request an appointment |
 | Secondary CTA | Contact us |
 
