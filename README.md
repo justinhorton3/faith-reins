@@ -18,6 +18,8 @@ Every plan also inherits `execution-plans/quality-gate.md`. Use `execution-plans
 Every plan also inherits `execution-plans/wix-implementation-spec.md` for exact Wix implementation values.
 Every page plan also follows `execution-plans/page-build-spec.md`; the v4 screen inventory is in `execution-plans/v4-mock-inventory.md`.
 
+Run `python scripts/validate_execution_plans.py` before a Wix build session. GitHub Actions runs the same validation on pushes and pull requests via `.github/workflows/plan-validation.yml`. This pipeline validates the repository source of truth; it does not publish or visually test Wix.
+
 Recommended execution order:
 
 1. Build shared components first: Header, Footer, global image/media rules.

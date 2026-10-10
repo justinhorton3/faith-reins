@@ -1,0 +1,28 @@
+name: Validate Wix execution plans
+
+on:
+  push:
+    branches: [main, work]
+  pull_request:
+    branches: [main, work]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate execution plans and assets
+        run: python scripts/validate_execution_plans.py
+
+      - name: Check Markdown whitespace
+        run: git diff --check
