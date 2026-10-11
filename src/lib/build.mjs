@@ -392,7 +392,7 @@ add("/hipaa-notice", "HIPAA Notice of Privacy Practices", "How Faith Reins uses 
 <p>Faith Reins is required by law to maintain the privacy of your child's health information, provide this Notice, and follow the terms of the Notice currently in effect. We reserve the right to change this Notice and to make the new provisions effective for all information we hold. An updated Notice will be posted on our website and available at our facility.</p>
 <h2>Complaints</h2>
 <p>If you believe your privacy rights have been violated, you may file a complaint with Faith Reins or with the U.S. Department of Health and Human Services Office for Civil Rights. You will not be retaliated against for filing a complaint.</p>
-<p>To file a complaint with Faith Reins or to exercise any right described in this Notice, contact our Privacy Officer using the information below.</p>
+<p>To file a complaint with Faith Reins or to exercise any right described in this Notice, contact our Privacy Officer, <strong>Donna Horton</strong>, using the information below.</p>
 ${legalContact}</div></div></section>`);
 
 add("/cancellation-policy", "Cancellation Policy", "Appointment cancellation, rescheduling, and no-show policy for Faith Reins therapy services.",
