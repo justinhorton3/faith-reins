@@ -204,7 +204,7 @@ add("/shop", "Shop", "Faith Reins merchandise supports awareness and mission con
   section(cta({ h2: "Giving is the strongest way to help.", buttons: [btn("Donate", "/give"), btn("Contact us", "/contact", "secondary")] }), "section--paper"));
 
 /* ---------- Legal ---------- */
-const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> <a href="/contact">Contact us online</a> or visit us in Camden, Arkansas.</p></div>`;
+const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
 
 add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Reins website.",
   `<section class="section"><div class="container"><div class="prose">
@@ -392,7 +392,7 @@ add("/hipaa-notice", "HIPAA Notice of Privacy Practices", "How Faith Reins uses 
 <p>Faith Reins is required by law to maintain the privacy of your child's health information, provide this Notice, and follow the terms of the Notice currently in effect. We reserve the right to change this Notice and to make the new provisions effective for all information we hold. An updated Notice will be posted on our website and available at our facility.</p>
 <h2>Complaints</h2>
 <p>If you believe your privacy rights have been violated, you may file a complaint with Faith Reins or with the U.S. Department of Health and Human Services Office for Civil Rights. You will not be retaliated against for filing a complaint.</p>
-<p>To file a complaint with Faith Reins or to exercise any right described in this Notice, contact our Privacy Officer, <strong>Donna Horton</strong>, using the information below.</p>
+<p>To file a complaint with Faith Reins or to exercise any right described in this Notice, contact our Privacy Officer, <strong>Donna Horton</strong>, at <strong>info@faithreins.com</strong> or using the contact information below.</p>
 ${legalContact}</div></div></section>`);
 
 add("/cancellation-policy", "Cancellation Policy", "Appointment cancellation, rescheduling, and no-show policy for Faith Reins therapy services.",
