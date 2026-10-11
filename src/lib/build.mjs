@@ -3,7 +3,8 @@ import * as L from "./lib.mjs";
 const { hero, section, head, grid, card, steps, checks, faq, cta, split, notice, form, btn, link, icon, img, esc, CAMPAIGN } = L;
 
 const pages = [];
-const add = (route, title, description, body) => pages.push({ route, title: `${title} | Faith Reins`, description, body });
+const add = (route, title, description, body, jsonld) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld });
+const stripHtml = (s) => String(s).replace(/<[^>]+>/g, "").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
 
 const APPT = ["Request an appointment", "/book-online"];
 const startCta = (extra = []) =>
@@ -156,6 +157,22 @@ add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins
   section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", p: "Our team will walk through every option with you — no pressure, no obligation.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] })}</div>`, "section--paper"));
 
 /* ---------- FAQ ---------- */
+const FAQ_QA = [
+  ["How do I get started?", "Send an appointment request online or call or email us. Our team will follow up to learn about your child and walk through next steps."],
+  ["Do I need a referral?", "A referral is not required to contact us, but if a physician, school, or specialist has recommended therapy, please bring any notes or documentation — it helps us move quickly."],
+  ["Who can Faith Reins serve?", "We serve children and teens from birth through age 18 in South Arkansas. If you are unsure whether we are the right fit, contact us and we will guide you honestly."],
+  ["How long does it take to get an appointment?", "Wait times vary by service and availability. Contact our team for current scheduling. We do our best to move quickly for families with urgent needs."],
+  ["How long are sessions?", "Sessions are typically 30 to 60 minutes depending on the service, your child's age, and their individual plan. Your therapist will discuss the right length at intake."],
+  ["Do parents stay during sessions?", "Yes — we encourage it. Family involvement is a core part of how we work. Your therapist will tell you when it helps to observe, participate, or wait nearby."],
+  ["Do you accept insurance?", "We work with major commercial insurance plans and are committed to serving families enrolled in ARKids First and Arkansas Medicaid. Coverage depends on your specific plan."],
+  ["What if I cannot afford care?", "Cost should not be the reason a child goes without care. We offer need-based financial assistance funded by donor gifts and our scholarship program. The conversation is confidential — just ask."],
+  ["Is equine-assisted learning safe?", "Yes. All equine activities are led by trained staff, conducted in a supervised setting, and begin with a safety orientation. Helmets are required and provided."],
+  ["Is EAL the same as therapy?", "No. Equine-Assisted Learning is an experiential learning program, not a clinical therapy service. It complements clinical care by building confidence, emotional regulation, and communication skills."],
+  ["Does my child need horse experience?", "Not at all. Most children who come to EAL have never been near a horse. Our staff introduces every child to the horses at their own pace."],
+  ["Is my donation tax-deductible?", "Yes. Faith Reins is a 501(c)(3) nonprofit. All gifts are tax-deductible to the extent permitted by law."],
+];
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": FAQ_QA.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } })) };
+
 add("/faq", "FAQ", "Common questions from families, referring providers and supporters of Faith Reins.",
   hero({ key: "faq", h1: "A clear next step.", body: "Common questions from families, providers and supporters.", ctas: [["Contact our team", "/contact", "light"]] }) +
   section(grid(2, [
@@ -194,7 +211,8 @@ add("/faq", "FAQ", "Common questions from families, referring providers and supp
       ["Can I volunteer if I have no horse experience?", "Absolutely. Many of our volunteer roles do not involve horses at all. Those that do include full training. Visit <a href='/join-our-team'>Join Our Team</a> to learn more."],
     ])}</div>`,
   ])) +
-  section(cta({ h2: "Still have questions?", p: "Our team is glad to help — no question is too small.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] }), "section--paper"));
+  section(cta({ h2: "Still have questions?", p: "Our team is glad to help — no question is too small.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] }), "section--paper"),
+  faqJsonLd);
 
 /* ---------- Give ---------- */
 add("/give", "Give", "Support families, horses and the Faith Reins mission with a one-time or monthly gift.",
@@ -480,6 +498,25 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
   });
 })();
 </script>`;
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": name,
+    "description": desc,
+    "image": `https://faithreins.org${img(k)}`,
+    "brand": { "@type": "Brand", "name": "Faith Reins" },
+    "offers": {
+      "@type": "Offer",
+      "price": price,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "Organization", "name": "Faith Reins Equestrian Center" }
+    },
+    "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Shop", "item": "https://faithreins.org/shop" },
+      { "@type": "ListItem", "position": 2, "name": name, "item": `https://faithreins.org/shop/${slug}` }
+    ]}
+  };
   add(`/shop/${slug}`, `${name} | Shop | Faith Reins`, desc,
     `<section class="section"><div class="container">
 <p style="font-size:.875rem;color:#888;margin-bottom:2rem"><a href="/shop">← Shop</a> &nbsp;/&nbsp; ${esc(cat)}</p>
@@ -505,7 +542,8 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
 ${PROD_STYLE}
 </div></section>` +
     section(`<div class="section-head section-head--left"><h2>You might also like</h2></div><div class="grid grid--4">${MERCH.filter(m=>toSlug(m.name)!==slug).slice(0,4).map(merchCard).join("")}</div>` + SHOP_STYLE) +
-    addScript);
+    addScript,
+    productJsonLd);
 });
 
 /* ---------- Legal ---------- */
@@ -847,9 +885,10 @@ const POSTS = [
   },
 ];
 
-POSTS.forEach(({ slug, title, date, tag, summary, body }) =>
+POSTS.forEach(({ slug, title, date, tag, summary, body }) => {
+  const postSlug = slug.replace("/news/", "");
   add(slug, `${title} | Faith Reins News`, summary,
-    `<section class="section"><div class="container"><div class="prose">
+    `<section class="section"><div class="container"><div class="prose" data-wix-post data-slug="${postSlug}">
 <p class="post-meta"><a href="/news">← News &amp; Updates</a> &nbsp;·&nbsp; <span class="post-tag">${tag}</span> &nbsp;·&nbsp; ${date}</p>
 <h1>${title}</h1>
 <p class="lead muted">${summary}</p>
@@ -857,22 +896,26 @@ POSTS.forEach(({ slug, title, date, tag, summary, body }) =>
 ${body}
 <style>.post-meta{font-size:.85rem;color:#888;margin-bottom:1.5rem}.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}</style>
 </div></div></section>` +
-    section(cta({ h2: "Want to stay connected?", p: "Sign up for updates from Faith Reins.", buttons: [btn("Contact us", "/contact"), btn("Our programs", "/services-programs", "secondary")] }), "section--paper")));
+    section(cta({ h2: "Want to stay connected?", p: "Sign up for updates from Faith Reins.", buttons: [btn("Contact us", "/contact"), btn("Our programs", "/services-programs", "secondary")] }), "section--paper"));
+});
 
 add("/news", "News & Updates | Faith Reins", "Stories, program updates, and news from Faith Reins Equestrian Center in Camden, Arkansas.",
   hero({ key: "our-mission", h1: "News &amp; Updates", body: "Stories, program updates, and announcements from Faith Reins.", short: true }) +
-  section(grid(1, POSTS.map(({ slug, title, date, tag, summary }) =>
+  `<section class="section"><div class="container">
+  <div class="grid grid--1" id="news-grid" data-wix-blog>${POSTS.map(({ slug, title, date, tag, summary }) =>
     `<a class="post-card" href="${slug}"><div class="post-card__meta"><span class="post-tag">${tag}</span><span class="post-date">${date}</span></div><h2 class="post-card__title">${title}</h2><p class="post-card__summary">${summary}</p><span class="post-card__read">Read more →</span></a>`
-  )) + `<style>
-.post-card{display:block;background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem 2rem;text-decoration:none;color:inherit;transition:box-shadow .15s}
-.post-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
-.post-card__meta{display:flex;gap:.75rem;align-items:center;margin-bottom:.75rem}
-.post-date{font-size:.85rem;color:#888}
-.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.post-card__title{font-family:'Noto Serif',serif;font-size:1.35rem;margin:0 0 .6rem}
-.post-card__summary{color:#555;margin:0 0 1rem;line-height:1.6}
-.post-card__read{font-size:.875rem;color:#3a6642;font-weight:600}
-</style>`) +
+  ).join("")}</div>
+  <style>
+  .post-card{display:block;background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem 2rem;text-decoration:none;color:inherit;transition:box-shadow .15s}
+  .post-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+  .post-card__meta{display:flex;gap:.75rem;align-items:center;margin-bottom:.75rem}
+  .post-date{font-size:.85rem;color:#888}
+  .post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  .post-card__title{font-family:'Noto Serif',serif;font-size:1.35rem;margin:0 0 .6rem}
+  .post-card__summary{color:#555;margin:0 0 1rem;line-height:1.6}
+  .post-card__read{font-size:.875rem;color:#3a6642;font-weight:600}
+  </style>
+  </div></section>` +
   section(cta({ h2: "Subscribe for updates", p: "We share news a few times a year. No spam.", buttons: [btn("Contact us", "/contact")] }), "section--paper"));
 
 export { pages };

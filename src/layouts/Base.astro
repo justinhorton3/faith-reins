@@ -1,12 +1,42 @@
 ---
 import "../styles/global.css";
 import { iconCss } from "../lib/lib.mjs";
-const { title, description, route = "/" } = Astro.props;
+const { title, description, route = "/", jsonld } = Astro.props;
 const SITE = "https://faithreins.org";
 const canonical = SITE + (route === "/" ? "" : route);
 const ogImage = SITE + "/assets/hero-home-desktop.webp";
-// Strip " | Faith Reins" suffix for og:title
 const ogTitle = title.replace(/ \| Faith Reins$/, "");
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "MedicalBusiness"],
+  "@id": SITE + "/#organization",
+  "name": "Faith Reins Equestrian Center",
+  "description": "Faith-based pediatric therapy and equine-assisted learning center serving children and families in South Arkansas.",
+  "url": SITE,
+  "telephone": "+18708184087",
+  "email": "info@faithreins.com",
+  "logo": SITE + "/assets/logo.png",
+  "image": ogImage,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "226 Ouachita County Rd 45",
+    "addressLocality": "Camden",
+    "addressRegion": "AR",
+    "postalCode": "72711",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.5843, "longitude": -92.8343 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Credit Card, Insurance",
+  "nonprofitStatus": "Nonprofit501c3",
+  "medicalSpecialty": ["Pediatrics","PhysicalTherapy","SpeechTherapy","OccupationalTherapy"],
+  "areaServed": { "@type": "State", "name": "Arkansas" }
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -30,6 +60,8 @@ const ogTitle = title.replace(/ \| Faith Reins$/, "");
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/logo.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@600&display=swap" />

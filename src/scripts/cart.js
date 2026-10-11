@@ -139,18 +139,62 @@ function closeCart() {
   document.getElementById("cart-btn")?.focus();
 }
 
+// Wix ecom checkout — imported lazily so site.js token/api helpers are available.
+// Catalog item IDs come from the Wix Stores dashboard product settings.
+// Set window.WIX_CATALOG_IDS = { "heritage-hoodie": "<wix-product-id>", ... }
+// from a <script> tag in build.mjs once products are in the Wix catalog.
+async function wixCheckout(items) {
+  const catalogIds = window.WIX_CATALOG_IDS || {};
+  const catalogItems = items
+    .map((item) => {
+      const catalogItemId = catalogIds[item.id];
+      if (!catalogItemId) return null;
+      return {
+        quantity: item.qty,
+        catalogReference: {
+          appId: "215238eb-22a5-4c36-9e7b-e7c08025e04e", // Wix Stores app ID
+          catalogItemId,
+          options: item.size ? { variantId: item.size } : {},
+        },
+      };
+    })
+    .filter(Boolean);
+
+  if (!catalogItems.length) throw new Error("no_catalog");
+
+  // Use the same api() helper from site.js (loaded first, sets window.__frApi)
+  const apiFn = window.__frApi;
+  if (!apiFn) throw new Error("no_api");
+
+  const cartRes = await apiFn("/ecom/v2/carts", "POST", {
+    cart: { source: { channelType: "WEB" } },
+    catalogItems,
+  });
+  const cartId = (cartRes.cart || cartRes)._id || (cartRes.cart || cartRes).id;
+  const sessionRes = await apiFn("/headless/v1/redirect-session", "POST", {
+    ecomCheckout: { checkoutId: cartId },
+    callbacks: {
+      postFlowUrl: location.origin + "/shop/",
+      thankYouPageUrl: location.origin + "/shop/thank-you/",
+    },
+  });
+  location.href = sessionRes.redirectSession.fullUrl;
+}
+
 async function checkout() {
   const items = load();
   if (!items.length) return;
-  // TODO: when Wix ecom catalog is connected, replace this block with:
-  //   const cart = await api("/ecom/v2/carts", "POST", { ... catalogItems ... });
-  //   const session = await api("/headless/v1/redirect-session", "POST", { ecomCheckout: { checkoutId: cart._id }, ... });
-  //   location.href = session.redirectSession.fullUrl;
-  // For now, redirect to a pre-filled contact form.
-  const summary = items.map((i) => `${i.name}${i.size ? " (" + i.size + ")" : ""} ×${i.qty}`).join(", ");
-  const btn = $(".atb-btn", drawerEl);
-  if (btn) { btn.disabled = true; btn.textContent = "Redirecting…"; }
-  window.location.href = "/contact?order=" + encodeURIComponent(summary);
+  const checkoutBtn = $(".atb-btn", drawerEl);
+  if (checkoutBtn) { checkoutBtn.disabled = true; checkoutBtn.textContent = "Opening checkout…"; }
+
+  try {
+    await wixCheckout(items);
+  } catch (e) {
+    // Wix catalog not yet connected — fall back to contact form order
+    if (checkoutBtn) { checkoutBtn.disabled = false; checkoutBtn.textContent = "Check out"; }
+    const summary = items.map((i) => `${i.name}${i.size ? " (" + i.size + ")" : ""} ×${i.qty}`).join(", ");
+    window.location.href = "/contact?order=" + encodeURIComponent(summary);
+  }
 }
 
 /* ── Init ── */

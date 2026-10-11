@@ -4,6 +4,6 @@ import { pages } from "../lib/build.mjs";
 export function getStaticPaths() {
   return pages.map((p) => ({ params: { slug: p.route === "/" ? undefined : p.route.slice(1) }, props: p }));
 }
-const { title, description, body, route } = Astro.props;
+const { title, description, body, route, jsonld } = Astro.props;
 ---
-<Base title={title} description={description} route={route}><Fragment set:html={body} /></Base>
+<Base title={title} description={description} route={route} jsonld={jsonld}><Fragment set:html={body} /></Base>

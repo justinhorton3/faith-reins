@@ -32,6 +32,9 @@ async function api(path, method = "POST", body) {
   return j;
 }
 
+// Expose api for cart.js and other modules loaded after this script
+window.__frApi = api;
+
 /* Shell */
 (() => {
   const hd = $("#shell-header"), ft = $("#shell-footer");
@@ -244,3 +247,66 @@ async function mountGive(host) {
   draw();
 }
 $$("[data-give]").forEach(mountGive);
+
+/* Blog — mounts on [data-wix-blog].
+   When Wix Blog is connected, posts from the dashboard replace static HTML.
+   Wix Blog API v3: GET /blog/v3/posts?fieldsets=CONTENT_TEXT&sort=publishedDate:desc&limit=20
+   Each post: { id, title, slug, excerpt, coverImage { url }, publishedDate, tags[{label}] }
+*/
+async function mountBlog(host) {
+  let posts;
+  try {
+    const r = await api("/blog/v3/posts?fieldsets=CONTENT_TEXT&sort=publishedDate:desc&limit=20", "GET");
+    posts = (r.posts || []).filter((p) => p.status === "PUBLISHED" || !p.status);
+  } catch {
+    return; // keep static HTML intact when blog not yet connected
+  }
+  if (!posts.length) return;
+
+  const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
+
+  host.innerHTML = posts.map((p) => {
+    const img = p.coverImage && p.coverImage.url ? `<div class="post-card__cover"><img src="${p.coverImage.url}" alt="${p.title}" loading="lazy" width="800" height="450"></div>` : "";
+    const slug = "/news/" + (p.slug || p.id);
+    return `<a class="post-card" href="${slug}">
+      ${img}
+      <div class="post-card__inner">
+        <div class="post-card__meta"><span class="post-tag">${tag(p)}</span><span class="post-date">${fmt(p.publishedDate)}</span></div>
+        <h2 class="post-card__title">${p.title}</h2>
+        <p class="post-card__summary">${p.excerpt || ""}</p>
+        <span class="post-card__read">Read more →</span>
+      </div>
+    </a>`;
+  }).join("");
+}
+$$("[data-wix-blog]").forEach(mountBlog);
+
+/* Blog post — mounts on [data-wix-post] with data-slug.
+   Fetches full post content and replaces static body when connected.
+*/
+async function mountPost(host) {
+  const slug = host.dataset.slug;
+  if (!slug) return;
+  let post;
+  try {
+    const r = await api(`/blog/v3/posts/slugs/${slug}?fieldsets=CONTENT,CONTENT_TEXT,RICH_CONTENT`, "GET");
+    post = r.post;
+  } catch {
+    return; // keep static HTML intact
+  }
+  if (!post) return;
+
+  const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
+  const body = post.contentText || post.excerpt || "";
+
+  host.innerHTML = `
+    <p class="post-meta"><a href="/news">← News &amp; Updates</a> &nbsp;·&nbsp; <span class="post-tag">${tag(post)}</span> &nbsp;·&nbsp; ${fmt(post.publishedDate)}</p>
+    <h1>${post.title}</h1>
+    <p class="lead muted">${post.excerpt || ""}</p>
+    <hr style="border:none;border-top:1px solid #e0dbd4;margin:1.5rem 0">
+    <div class="post-body">${body}</div>
+  `;
+}
+$$("[data-wix-post]").forEach(mountPost);

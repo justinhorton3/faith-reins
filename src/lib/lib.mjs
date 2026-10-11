@@ -49,7 +49,7 @@ export const link = (label, href) => `<a class="text-link" href="${href}">${esc(
 export function hero({ key, h1, body, ctas = [], focus, short = false, mobileFocus }) {
   const d = img(`hero-${key}-desktop`), m = img(`hero-${key}-mobile`);
   return `<section class="hero${short ? " hero--short" : ""}"${focus ? ` style="--focus:${focus}"` : ""}>
-  <picture><source media="(max-width: 767px)" srcset="${m}"><img src="${d}" alt="" fetchpriority="high"></picture>
+  <picture><source media="(max-width: 767px)" srcset="${m}" width="767" height="500"><img src="${d}" alt="" fetchpriority="high" width="1440" height="700" sizes="100vw"></picture>
   <div class="container hero__content"><div class="hero__copy"><h1>${esc(h1)}</h1><p>${esc(body)}</p>
   ${ctas.length ? `<div class="btn-row">${ctas.map((c) => btn(c[0], c[1], c[2] || "light")).join("")}</div>` : ""}</div></div></section>`;
 }
