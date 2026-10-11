@@ -142,15 +142,45 @@ add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins
   section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", p: "Our team will walk through every option with you — no pressure, no obligation.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] })}</div>`, "section--paper"));
 
 /* ---------- FAQ ---------- */
-add("/faq", "FAQ", "Answers for families, referring providers and supporters of Faith Reins.",
-  hero({ key: "faq", h1: "A clear next step.", body: "Answers for families, referring providers and supporters.", ctas: [["Contact our team", "/contact", "light"]] }) +
+add("/faq", "FAQ", "Common questions from families, referring providers and supporters of Faith Reins.",
+  hero({ key: "faq", h1: "A clear next step.", body: "Common questions from families, providers and supporters.", ctas: [["Contact our team", "/contact", "light"]] }) +
   section(grid(2, [
-    `<div class="faq-group"><h2 class="h-card">Getting started</h2>${faq([["How do I get started?", "Send an appointment request on <a href='/book-online'>Book Online</a> or <a href='/contact'>contact us</a>."], ["Do I need a referral?", "Please contact our team about your situation. We will guide you."], ["Who can Faith Reins help?", "We serve children, teens and families in South Arkansas."]])}</div>`,
-    `<div class="faq-group"><h2 class="h-card">Services</h2>${faq([["What services do you offer?", "Occupational, physical and speech-language therapy, counseling and equine-assisted learning. See <a href='/services-programs'>Services &amp; Programs</a>."], ["Can my child receive more than one service?", "Often yes. Our team will help you find the right combination."]])}</div>`,
-    `<div class="faq-group"><h2 class="h-card">Insurance &amp; payment</h2>${faq([["Do you accept insurance?", "Coverage varies. Please see <a href='/payment-and-insurance'>Payment &amp; Insurance</a> or contact our team."]])}</div>`,
-    `<div class="faq-group"><h2 class="h-card">Equine programs</h2>${faq([["Is equine-assisted learning safe?", "Activities are ground-based and supervised, with a safety orientation."], ["Is EAL the same as therapy?", "No. EAL is a learning experience that complements clinical care."]])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">Getting started</h2>${faq([
+      ["How do I get started?", "Send an appointment request on <a href='/book-online'>Book Online</a> or <a href='/contact'>call or email us</a>. Our team will follow up to learn about your child and walk through next steps."],
+      ["Do I need a referral?", "A referral is not required to contact us, but if a physician, school, or specialist has recommended therapy, please bring any notes or documentation — it helps us move quickly."],
+      ["Who can Faith Reins serve?", "We serve children and teens from birth through age 18 in South Arkansas. If you are unsure whether we are the right fit, contact us and we will guide you honestly."],
+      ["How long does it take to get an appointment?", "Wait times vary by service and availability. Contact our team for current scheduling. We do our best to move quickly for families with urgent needs."],
+    ])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">Sessions &amp; care</h2>${faq([
+      ["How long are sessions?", "Sessions are typically 30 to 60 minutes depending on the service, your child's age, and their individual plan. Your therapist will discuss the right length for your child at intake."],
+      ["Do parents stay during sessions?", "Yes — we encourage it. Family involvement is a core part of how we work. Your therapist will tell you when it helps to observe, participate, or wait nearby."],
+      ["What should my child wear?", "Comfortable clothes they can move in. Closed-toe shoes are required for any activity around the horses. We will remind you of anything specific before your first visit."],
+      ["How often will my child be seen?", "Frequency depends on your child's goals and plan. Most children are seen once or twice a week. Your therapist will recommend a schedule and adjust it as your child progresses."],
+      ["Can my child receive more than one service?", "Often yes. Many children benefit from a combination of services. Our team will help identify the right mix and coordinate care across disciplines."],
+    ])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">Insurance &amp; payment</h2>${faq([
+      ["Do you accept insurance?", "We work with major commercial insurance plans and are committed to serving families enrolled in ARKids First and Arkansas Medicaid. Coverage depends on your specific plan. Contact us and we will help you verify your benefits before your first visit."],
+      ["What if I cannot afford care?", "Cost should not be the reason a child goes without care. We offer need-based financial assistance funded by donor gifts and our scholarship program. The conversation is confidential — just ask."],
+      ["What does a session cost?", "Costs vary by service and coverage. We will give you a clear estimate before care begins. See <a href='/payment-and-insurance'>Payment &amp; Insurance</a> for a full overview."],
+    ])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">Equine programs</h2>${faq([
+      ["Is equine-assisted learning safe?", "Yes. All equine activities are led by trained staff, conducted in a supervised setting, and begin with a safety orientation. Helmets are required and provided. See our <a href='/equine-safety'>Equine Safety notice</a> for full details."],
+      ["Is EAL the same as therapy?", "No. Equine-Assisted Learning is an experiential learning program — not a clinical therapy service. It complements clinical care by building confidence, emotional regulation, and communication skills in a relational, hands-on setting."],
+      ["Does my child need to have horse experience?", "Not at all. Most children who come to EAL have never been near a horse. Our staff introduces every child to the horses at their own pace."],
+      ["Can a child do both EAL and clinical therapy?", "Yes, and we often recommend it. EAL and clinical services are designed to complement each other. Your care team will help determine whether the combination makes sense for your child."],
+    ])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">For providers</h2>${faq([
+      ["How do I refer a patient?", "Contact our intake team through the <a href='/contact'>contact page</a> or visit <a href='/for-referring-providers'>For Referring Providers</a>. A brief note with the reason for referral and family contact details is all we need to get started."],
+      ["What information should I send?", "Reason for referral, relevant evaluations or progress notes if available, the child's age, and the family's preferred contact method. We will follow up with the family and confirm what else is needed."],
+      ["Do you collaborate with referring providers?", "Yes. With family consent, we communicate with referring physicians, schools, and other providers to coordinate care. Coordination is part of how we work, not an exception."],
+    ])}</div>`,
+    `<div class="faq-group"><h2 class="h-card">Giving &amp; volunteering</h2>${faq([
+      ["How can I support Faith Reins?", "The most direct way is a gift through our <a href='/give'>Give page</a>. You can also sponsor a horse, explore <a href='/sponsorships'>sponsorship opportunities</a>, or <a href='/join-our-team'>volunteer</a>."],
+      ["Is my donation tax-deductible?", "Yes. Faith Reins is a 501(c)(3) nonprofit. All gifts are tax-deductible to the extent permitted by law. See our <a href='/donation-policy'>Donation Policy</a> for details."],
+      ["Can I volunteer if I have no horse experience?", "Absolutely. Many of our volunteer roles do not involve horses at all. Those that do include full training. Visit <a href='/join-our-team'>Join Our Team</a> to learn more."],
+    ])}</div>`,
   ])) +
-  section(cta({ h2: "Still have questions?", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] }), "section--paper"));
+  section(cta({ h2: "Still have questions?", p: "Our team is glad to help — no question is too small.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] }), "section--paper"));
 
 /* ---------- Give ---------- */
 add("/give", "Give", "Support families, horses and the Faith Reins mission with a one-time or monthly gift.",
@@ -230,11 +260,61 @@ add("/our-horses", "Our Horses", "Meet the equine partners at Faith Reins: big p
   section(cta({ h2: "Learn through connection", buttons: [btn("Equine-Assisted Learning", "/equine-assisted-learning"), btn("Services & Programs", "/services-programs", "secondary"), btn("Contact", "/contact", "secondary")] })));
 
 /* ---------- Join ---------- */
-add("/join-our-team", "Join Our Team", "Explore career and volunteer opportunities supporting the Faith Reins mission.",
-  hero({ key: "join-our-team", h1: "Bring your purpose to Faith Reins.", body: "Explore career and volunteer opportunities supporting the mission.", ctas: [["Explore opportunities", "/contact", "light"]] }) +
-  section(head("Why work here") + grid(4, [card({ ic: "heart", title: "Mission", text: "Work that matters." }), card({ ic: "users", title: "Collaboration", text: "A team that supports each other." }), card({ ic: "home", title: "Family-centered care", text: "Families at the center." }), card({ ic: "horse", title: "A peaceful setting", text: "Care alongside horses." })])) +
-  section(head("Roles") + `<p class="center muted">We welcome interest in clinical, support and volunteer roles. Specific openings will be listed here when available.</p>` + `<div class="center mt-28">${btn("Express interest", "/contact")}</div>`, "section--paper") +
-  section(grid(2, [card({ title: "Our Team", text: "Meet the people behind the care.", href: "/our-team", linkLabel: "Our team" }), card({ title: "Our Mission", text: "Rooted in faith. Guided by care.", href: "/our-mission", linkLabel: "Our mission" })])));
+add("/join-our-team", "Join Our Team", "Career and volunteer opportunities at Faith Reins Equestrian Center in Camden, Arkansas.",
+  hero({ key: "join-our-team", h1: "Bring your purpose to Faith Reins.", body: "Build a career around meaningful work in a faith-rooted, team-driven setting in South Arkansas.", ctas: [["See open positions", "#openings", "light"], ["Volunteer with us", "#volunteer", "secondary"]] }) +
+  section(head("Why work here") + grid(4, [
+    card({ ic: "heart", title: "Mission-driven work", text: "Every session, every shift, every day — the work is real and the impact is visible." }),
+    card({ ic: "horse", title: "A setting like no other", text: "A clinic, an arena, and a herd. There is no other place quite like this to practice pediatric care." }),
+    card({ ic: "users", title: "A team that shows up", text: "Small enough to know each other, experienced enough to make each other better." }),
+    card({ ic: "star", title: "Faith-rooted culture", text: "Compassion guides how we treat each other and the families we serve." }),
+  ])) +
+  `<section class="section section--paper" id="openings"><div class="container">
+${head("Open Positions")}
+<div class="job-listing">
+  <div class="job-listing__header">
+    <div><h3>Speech-Language Pathologist</h3><p class="job-listing__meta">Full-time &nbsp;·&nbsp; Camden, AR &nbsp;·&nbsp; Salary negotiable</p></div>
+    <a class="btn btn--accent" href="/contact">Apply</a>
+  </div>
+  <p>We are looking for a licensed, ASHA-certified SLP to join our clinical team. You will work primarily with pediatric clients on articulation, language development, social communication, and feeding, within a collaborative, faith-rooted environment that includes equine-assisted learning alongside traditional clinic-based care.</p>
+  <h4>What we are looking for</h4>
+  <ul>
+    <li>M.S. in Speech-Language Pathology</li>
+    <li>Arkansas state licensure (or eligible)</li>
+    <li>ASHA Certificate of Clinical Competence (CCC-SLP)</li>
+    <li>Experience with pediatric populations preferred</li>
+    <li>Collaborative mindset and comfort working in a mission-driven, faith-rooted setting</li>
+  </ul>
+  <h4>What we offer</h4>
+  <ul>
+    <li>Full-time position with competitive salary negotiated based on experience</li>
+    <li>A small, supportive clinical team with strong peer collaboration</li>
+    <li>Exposure to equine-assisted learning as a complement to traditional therapy</li>
+    <li>A calm, relationship-centered work environment in South Arkansas</li>
+    <li>The chance to build something — we are a growing practice with real community need</li>
+  </ul>
+  <p class="muted" style="margin-top:1rem;font-size:.875rem">To apply, send a cover letter and résumé through our contact form or directly to <a href="mailto:info@faithreins.com">info@faithreins.com</a>.</p>
+</div>
+<style>
+.job-listing{background:var(--color-surface,#fff);border:1px solid #ddd;border-radius:8px;padding:1.75rem 2rem;max-width:740px;margin-top:1.5rem}
+.job-listing__header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.job-listing__meta{font-size:.85rem;color:#888;margin:.2rem 0 0}
+.job-listing h4{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#555;margin:1.25rem 0 .4rem}
+.job-listing ul{padding-left:1.2rem;margin-bottom:.5rem}
+.job-listing li{font-size:.9rem;margin-bottom:.3rem}
+.job-listing p{font-size:.9rem;line-height:1.6}
+</style>
+<p class="muted mt-28">More openings will be posted here as they become available. We also welcome general expressions of interest from OTs, PTs, and counselors.</p>
+</div></section>` +
+  `<section class="section" id="volunteer"><div class="container">
+${head("Volunteer with Us", "Volunteers are essential to what we do — from horse handling to event support.")}
+${grid(3, [
+  card({ ic: "horse", title: "Equine support", text: "Help with horse care, handling, and session support. Training provided." }),
+  card({ ic: "heart", title: "Program support", text: "Assist with activities, events, and family welcome." }),
+  card({ ic: "users", title: "Administrative & events", text: "Behind-the-scenes help that keeps things running." }),
+])}
+<div class="center mt-28">${btn("Learn about volunteering", "/volunteer-policy")} &nbsp; ${btn("Express interest", "/contact", "secondary")}</div>
+</div></section>` +
+  section(grid(2, [card({ title: "Our Team", text: "Meet the people behind the care.", href: "/our-team", linkLabel: "Meet the team" }), card({ title: "Our Mission", text: "Rooted in faith. Guided by care.", href: "/our-mission", linkLabel: "Our mission" })]), "section--paper"));
 
 /* ---------- Contact ---------- */
 add("/contact", "Contact", "Connect with Faith Reins about services, giving or getting involved.",
