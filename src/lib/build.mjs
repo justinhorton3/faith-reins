@@ -285,14 +285,61 @@ add("/returns-policy", "Returns & Shipping Policy", "Returns, exchanges, and shi
   `<section class="section"><div class="container"><div class="prose">
 <h1>Returns &amp; Shipping Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
-<p class="pending">Online store ordering is coming soon. Full returns and shipping terms will be published here before the store opens. Questions? <a href="/contact">Contact us</a>.</p>
+<h2>Returns &amp; Exchanges</h2>
+<p>We want you to be happy with your Faith Reins merchandise. If something isn't right, we'll make it right.</p>
+<p><strong>Eligible returns:</strong> Items may be returned or exchanged within <strong>30 days</strong> of the delivery date if they are unworn, unwashed, and in original condition with tags attached. We accept returns for:</p>
+<ul>
+  <li>Items received damaged or with a print defect.</li>
+  <li>Items shipped in the wrong size or style from what was ordered.</li>
+  <li>Size exchanges (subject to availability).</li>
+</ul>
+<p><strong>Non-returnable items:</strong> Final-sale items, customized or personalized items, and items that have been worn, washed, or altered are not eligible for return.</p>
+<h2>How to Start a Return</h2>
+<p>Contact us within 30 days of delivery with your order number, the item(s) you'd like to return or exchange, and a brief description of the issue. We will provide a return authorization and instructions. Items sent back without prior authorization may not be processed.</p>
+<p>For damaged or incorrect items, a photo of the issue helps us resolve it quickly.</p>
+<h2>Refunds</h2>
+<p>Once we receive and inspect your return, we will process a refund to your original payment method within <strong>5–10 business days</strong>. You will receive an email confirmation when the refund is issued. Original shipping charges are non-refundable unless the return is due to our error.</p>
+<h2>Shipping</h2>
+<p><strong>Processing time:</strong> Orders are processed within 3–5 business days. You will receive a shipping confirmation email with a tracking number once your order ships.</p>
+<p><strong>Domestic shipping:</strong> We ship to all 50 U.S. states via standard carriers (USPS, UPS, or FedEx). Estimated delivery is 5–10 business days after processing. Expedited options may be available at checkout.</p>
+<p><strong>International shipping:</strong> We do not currently ship outside the United States.</p>
+<p><strong>Lost or delayed packages:</strong> If your package has not arrived within the estimated window, contact us with your order number and we will investigate with the carrier.</p>
+<h2>Proceeds</h2>
+<p>Proceeds from Faith Reins merchandise support our mission of providing pediatric therapy and equine-assisted learning to children and families in South Arkansas. Thank you for wearing the mission.</p>
 ${legalContact}</div></div></section>`);
 
 add("/volunteer-policy", "Volunteer Policy", "Volunteer guidelines, conduct standards, and background check requirements for Faith Reins.",
   `<section class="section"><div class="container"><div class="prose">
 <h1>Volunteer Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
-<p class="pending">This page is awaiting final approved volunteer policy text from Faith Reins. Questions? <a href="/contact">Contact us</a> or visit the <a href="/join-our-team">Join Our Team</a> page.</p>
+<h2>Our Volunteers</h2>
+<p>Volunteers are an essential part of the Faith Reins community. From horse handling to event support, our volunteers help make it possible to serve more children and families. We are grateful for every hour given in service to our mission.</p>
+<h2>Who Can Volunteer</h2>
+<p>Volunteers must be at least 16 years of age. Volunteers under 18 require written parental or guardian consent. All volunteers who work directly with clients or horses must complete our onboarding process before their first shift, which includes an orientation, safety training, and a background check.</p>
+<h2>Background Checks</h2>
+<p>Because we serve children, <strong>all volunteers in direct contact with clients are required to pass a background check</strong> before beginning service. This includes criminal history and sex offender registry screening. Background checks are conducted through a vetted third-party provider at no cost to the volunteer. Results are kept confidential and reviewed only by authorized Faith Reins staff.</p>
+<p>Faith Reins reserves the right to decline or end a volunteer relationship based on background check results or other conduct concerns, at our sole discretion.</p>
+<h2>Orientation &amp; Training</h2>
+<p>New volunteers complete a Faith Reins orientation covering our mission, program overview, client confidentiality expectations, and facility safety rules. Volunteers assigned to equine activities receive additional horse-handling training from a qualified staff member before working with animals independently. No volunteer may work with a horse unsupervised until cleared by program staff.</p>
+<h2>Confidentiality</h2>
+<p>Volunteers may observe or interact with clients during sessions and activities. All client information—including names, diagnoses, and family details—is strictly confidential. Volunteers must not discuss, photograph, or share information about specific clients, families, or sessions with anyone outside of Faith Reins staff, including on social media. Volunteers sign a confidentiality agreement as part of onboarding.</p>
+<h2>Photography &amp; Social Media</h2>
+<p>Volunteers may not photograph, video, or record clients or their families without explicit written consent from the family and approval from a Faith Reins staff member. Approved photos shared publicly must not identify a client by name. When in doubt, ask a staff member before posting anything related to your volunteer experience.</p>
+<h2>Code of Conduct</h2>
+<p>Volunteers are expected to treat every child, family, staff member, and animal with dignity and respect. We ask that volunteers:</p>
+<ul>
+  <li>Arrive on time and notify us as early as possible when unable to make a scheduled shift.</li>
+  <li>Follow the direction of Faith Reins staff at all times.</li>
+  <li>Refrain from one-on-one, unsupervised contact with clients.</li>
+  <li>Dress appropriately for the activity (closed-toe shoes are required around horses).</li>
+  <li>Refrain from alcohol, tobacco, or drug use on Faith Reins property.</li>
+  <li>Report any safety concern, injury, or inappropriate behavior to a staff member immediately.</li>
+</ul>
+<p>Faith Reins may suspend or end a volunteer relationship for violations of this code of conduct.</p>
+<h2>Safety</h2>
+<p>The safety of our clients, horses, and volunteers is our highest priority. Helmets are required for all riders during equine activities and are provided by Faith Reins. Volunteers must follow all posted safety guidelines and staff instructions around horses. Any injury on site—however minor—must be reported to a staff member and documented before leaving the property.</p>
+<h2>How to Volunteer</h2>
+<p>Interested volunteers should begin by visiting our <a href="/join-our-team">Join Our Team</a> page to learn about current opportunities and submit an inquiry. Our team will follow up with next steps, including scheduling an orientation.</p>
 ${legalContact}</div></div></section>`);
 
 add("/accessibility", "Accessibility", "Accessibility commitment and accommodations for Faith Reins.",
