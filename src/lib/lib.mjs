@@ -24,6 +24,7 @@ const P = {
   chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>',
   heart: '<path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/>',
   hand: '<path d="M7 11V6a1.5 1.5 0 0 1 3 0v4M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L4 14a1.6 1.6 0 0 1 2.6-1.8L7 13"/>',
+  bag: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>',
   book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 7h6"/>',
   shield: '<path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/>',
   users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/>',
@@ -96,6 +97,7 @@ export function header(route) {
 <nav class="site-nav" aria-label="Primary">
 ${NAV.map(([l, h, t, m]) => `<a class="nav-link"${t ? " data-tablet" : ""} href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
 ${btn("Donate", "/give")}
+<button class="cart-btn" id="cart-btn" type="button" aria-label="Shopping bag" aria-haspopup="dialog"><span class="cart-btn__icon">${icon("bag")}</span><span class="cart-badge" id="cart-badge" hidden>0</span></button>
 <button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${icon("menu")}</button>
 </nav></div></header>
 <div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__scrim" data-drawer-close></div>
