@@ -346,7 +346,24 @@ add("/accessibility", "Accessibility", "Accessibility commitment and accommodati
   `<section class="section"><div class="container"><div class="prose">
 <h1>Accessibility</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
-<p class="pending">This page is awaiting final approved accessibility statement text from Faith Reins. Questions? <a href="/contact">Contact us</a>.</p>
+<h2>Our Commitment</h2>
+<p>Faith Reins Equestrian Center is committed to making our website and physical programs accessible to everyone, including people with disabilities. We believe every child, family, and community member deserves full access to our services and information.</p>
+<h2>Website Accessibility</h2>
+<p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA for our website. Our ongoing efforts include:</p>
+<ul>
+  <li>Sufficient color contrast between text and background throughout the site.</li>
+  <li>Descriptive alt text on images so screen readers can convey their meaning.</li>
+  <li>Keyboard-navigable page structure with logical heading hierarchy.</li>
+  <li>Readable font sizes and text that scales with browser zoom settings.</li>
+  <li>Forms with clearly labeled fields and error messages.</li>
+</ul>
+<p>We recognize that accessibility is an ongoing process. If you encounter a barrier on our website, please tell us—your feedback directly shapes our improvements.</p>
+<h2>Physical Accessibility</h2>
+<p>Our equestrian facility in Camden, Arkansas is designed to accommodate children and families with a wide range of physical needs. Many of the children we serve have mobility, sensory, or communication differences, and our programs and spaces are built with that in mind. If you have specific accessibility needs for an in-person visit or therapy session, please contact us in advance so we can prepare appropriately.</p>
+<h2>Communication Accommodations</h2>
+<p>We are happy to provide information in an alternative format upon request, including larger print. If you need a communication accommodation to access our services—such as assistance related to a hearing, vision, or language need—please let us know when you contact us or schedule an appointment.</p>
+<h2>Feedback &amp; Contact</h2>
+<p>If you experience difficulty accessing any part of our website or have a suggestion for improvement, please contact us. We will respond within 5 business days and work to address the issue promptly.</p>
 ${legalContact}</div></div></section>`);
 
 export { pages };
