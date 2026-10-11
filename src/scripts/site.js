@@ -1,6 +1,6 @@
 // Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
 import { HEADER, FOOTER } from "virtual:shell";
-const CLIENT = "578fbd9d-fb1f-4285-b7d1-7063b33ac62a";
+const CLIENT = "186d8418-21e0-44ac-8bad-ef95da411f9d";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
