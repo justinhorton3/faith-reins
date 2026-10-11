@@ -204,7 +204,102 @@ add("/shop", "Shop", "Faith Reins merchandise supports awareness and mission con
   section(cta({ h2: "Giving is the strongest way to help.", buttons: [btn("Donate", "/give"), btn("Contact us", "/contact", "secondary")] }), "section--paper"));
 
 /* ---------- Legal ---------- */
-for (const [route, t] of [["/privacy-policy", "Privacy Policy"], ["/accessibility", "Accessibility"], ["/donation-policy", "Donation Policy"]])
-  add(route, t, `${t} for Faith Reins.`, `<section class="section"><div class="container"><div class="prose"><h1>${t}</h1><p class="pending">This page is awaiting final approved policy text from Faith Reins.</p><p>Questions? <a href="/contact">Contact us</a>.</p></div></div></section>`);
+const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> <a href="/contact">Contact us online</a> or visit us in Camden, Arkansas.</p></div>`;
+
+add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Reins website.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Terms of Service</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<h2>1. Acceptance of Terms</h2>
+<p>By accessing or using the Faith Reins website ("the Site"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Site. Faith Reins Equestrian Center ("Faith Reins," "we," "us," or "our") may update these terms at any time; continued use of the Site after changes are posted constitutes acceptance.</p>
+<h2>2. Nature of Information</h2>
+<p>Content on this Site is provided for general informational purposes only. Nothing here constitutes professional medical, therapeutic, legal, or financial advice. No provider–patient or provider–client relationship is formed by visiting the Site or submitting an inquiry through it. If you have concerns about a child's health or development, consult a qualified healthcare professional directly.</p>
+<h2>3. Appointment Requests</h2>
+<p>Submitting an appointment or consultation request does not guarantee an appointment or create a care relationship. Our team will contact you to confirm availability and complete required intake procedures before any care relationship begins. Scheduled appointments are subject to the cancellation and rescheduling terms communicated to you at intake.</p>
+<h2>4. Intellectual Property</h2>
+<p>All text, photographs, graphics, logos, and other content on this Site are the property of Faith Reins Equestrian Center or its content providers and are protected by applicable copyright and trademark law. You may not reproduce, distribute, or create derivative works from Site content without our prior written permission. You may share links to our pages for personal, non-commercial purposes.</p>
+<h2>5. Online Store</h2>
+<p>Purchases made through the Faith Reins online store are subject to our <a href="/returns-policy">Returns &amp; Shipping Policy</a>. We reserve the right to cancel or refuse any order at our discretion.</p>
+<h2>6. Third-Party Links</h2>
+<p>The Site may link to third-party websites for your convenience. Faith Reins is not responsible for the content, privacy practices, or terms of any third-party site, and a link does not constitute an endorsement.</p>
+<h2>7. Disclaimer of Warranties</h2>
+<p>The Site and its content are provided on an "as is" and "as available" basis without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Site will be uninterrupted or error-free.</p>
+<h2>8. Limitation of Liability</h2>
+<p>To the fullest extent permitted by applicable law, Faith Reins Equestrian Center, its staff, volunteers, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, this Site or its content.</p>
+<h2>9. Children's Use</h2>
+<p>This Site is intended for parents, guardians, and referring professionals. We do not knowingly collect personal information directly from children under 13. If you are a minor, please have a parent or guardian review and submit any forms on your behalf.</p>
+<h2>10. Governing Law</h2>
+<p>These Terms are governed by the laws of the State of Arkansas. Any disputes shall be resolved in the courts of Ouachita County, Arkansas.</p>
+${legalContact}</div></div></section>`);
+
+add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins website.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Privacy Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<h2>1. Overview</h2>
+<p>Faith Reins Equestrian Center is committed to protecting the privacy of the children, families, and supporters who interact with us. This policy explains what information we collect through this website, how we use it, and your rights. It governs information collected through faithreins.org and related online forms only. Information collected during the delivery of clinical services is handled under a separate HIPAA Notice of Privacy Practices provided at intake.</p>
+<h2>2. Information We Collect</h2>
+<p><strong>Information you provide:</strong> contact and inquiry forms collect your name, email, and phone number; appointment requests collect contact details and service interest; online giving collects name, billing address, and email (payment card details are processed by our payment processor and not stored by Faith Reins); volunteer and employment inquiries collect the details you provide in your application.</p>
+<p><strong>Information collected automatically:</strong> our web host may log standard server data including IP address, browser type, and pages visited. We may use aggregate analytics to understand site traffic. We do not use this data to identify individuals.</p>
+<h2>3. How We Use Your Information</h2>
+<p>We use the information we collect to respond to inquiries and appointment requests; process donations and issue receipts; send program updates to those who have opted in; operate and improve the Site; and comply with legal obligations. We will not sell or rent your personal information.</p>
+<h2>4. HIPAA and Health Information</h2>
+<p>Faith Reins is a healthcare provider subject to HIPAA. Protected Health Information collected during intake and care is governed by our HIPAA Notice of Privacy Practices, provided to families at the start of a care relationship. Information submitted through website forms before intake is not yet PHI, but we treat it with the same discretion.</p>
+<h2>5. Children's Privacy</h2>
+<p>Our website is directed to parents, legal guardians, and referring professionals—not to children themselves. We do not knowingly collect personal information directly from children under 13. Any information about a child submitted through this Site should be provided by a parent or legal guardian. If you believe we have inadvertently collected information from a child under 13 without parental consent, contact us immediately and we will delete it.</p>
+<h2>6. Information Sharing</h2>
+<p>We do not sell, trade, or rent personal information. We share it only with service providers (payment processing, email delivery, web hosting) who are contractually obligated to protect it; when required by law or court order; or with your explicit consent.</p>
+<h2>7. Cookies</h2>
+<p>The Site may use cookies for essential functions and aggregate analytics. You may disable cookies in your browser settings. We do not use cookies for cross-site advertising or behavioral tracking.</p>
+<h2>8. Data Retention and Your Rights</h2>
+<p>We retain contact information as long as necessary to fulfill its purpose or comply with legal requirements. Donation records are retained per IRS guidelines. You may request access to, correction of, or deletion of your personal information at any time by contacting us. We will respond within a reasonable time.</p>
+<h2>9. Security</h2>
+<p>We use reasonable administrative, technical, and physical safeguards to protect your information. No internet transmission is completely secure; we cannot guarantee the absolute security of information transmitted to or from the Site.</p>
+<h2>10. Changes to This Policy</h2>
+<p>We may update this policy from time to time. The effective date above reflects the most recent revision.</p>
+${legalContact}</div></div></section>`);
+
+add("/donation-policy", "Donation Policy", "Donation policy and stewardship commitments for Faith Reins.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Donation Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<h2>Our Commitment to Stewardship</h2>
+<p>Faith Reins Equestrian Center is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code. Gifts to Faith Reins are tax-deductible to the extent permitted by law. Every gift is treated as a sacred responsibility and used faithfully to advance our mission.</p>
+<h2>How Gifts Are Used</h2>
+<p>Donations support direct care (therapy sessions, program materials, and family support), equine program costs (care, feed, veterinary services, and safety equipment), facility maintenance, scholarships for families who cannot afford the full cost of services, and organizational operations. Gifts designated for a specific purpose will be honored to the extent practicable; if a designated purpose becomes impractical or is fully funded, we will contact the donor to discuss an alternative.</p>
+<h2>Recurring Gifts</h2>
+<p>Monthly and recurring gifts may be established through our online giving portal. By authorizing a recurring gift, you consent to automatic charges at the selected interval. You may modify or cancel a recurring gift at any time by logging in to your donor account or by contacting us at least 5 business days before the next scheduled charge.</p>
+<h2>Refund Policy</h2>
+<p>Because donations directly fund ongoing program costs, we are generally unable to return completed gifts. We will issue a full refund within <strong>30 days</strong> for duplicate or erroneous transactions, unauthorized use of a payment method, or gifts made in an amount different from what was intended due to a technical error. To request a refund, contact us within 30 days of the transaction with your name, gift date, and amount. Refunds are processed to the original payment method within 5–10 business days.</p>
+<h2>In-Kind Donations</h2>
+<p>We gratefully accept in-kind gifts of goods and services that support our programs. Please contact us before delivering any in-kind gift so we can confirm our current needs. Faith Reins will provide written acknowledgment as required by the IRS but will not assign a fair market value; donors are responsible for determining and reporting the value of their contribution.</p>
+<h2>Matching Gifts &amp; Planned Giving</h2>
+<p>Many employers match charitable gifts—contact your HR department to inquire. We are happy to provide documentation for matching gift requests. If you are interested in including Faith Reins in your estate plan, please contact us; we are grateful for legacy gifts of any size.</p>
+<h2>Gift Acknowledgment</h2>
+<p>Gifts of $250 or more will receive a written acknowledgment letter as required by the IRS. All online donors receive an emailed receipt. Cumulative annual giving receipts are available upon request each January. Donors who prefer to give anonymously may indicate that preference in their gift notes; anonymous gifts will be honored without public recognition.</p>
+<h2>Payment Processing</h2>
+<p>Online gifts are processed through a secure third-party payment processor. Payment card information is encrypted and is not stored by Faith Reins. We accept major credit cards and ACH/bank transfer for online giving.</p>
+${legalContact}</div></div></section>`);
+
+add("/returns-policy", "Returns & Shipping Policy", "Returns, exchanges, and shipping policy for the Faith Reins online store.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Returns &amp; Shipping Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<p class="pending">Online store ordering is coming soon. Full returns and shipping terms will be published here before the store opens. Questions? <a href="/contact">Contact us</a>.</p>
+${legalContact}</div></div></section>`);
+
+add("/volunteer-policy", "Volunteer Policy", "Volunteer guidelines, conduct standards, and background check requirements for Faith Reins.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Volunteer Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<p class="pending">This page is awaiting final approved volunteer policy text from Faith Reins. Questions? <a href="/contact">Contact us</a> or visit the <a href="/join-our-team">Join Our Team</a> page.</p>
+${legalContact}</div></div></section>`);
+
+add("/accessibility", "Accessibility", "Accessibility commitment and accommodations for Faith Reins.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Accessibility</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<p class="pending">This page is awaiting final approved accessibility statement text from Faith Reins. Questions? <a href="/contact">Contact us</a>.</p>
+${legalContact}</div></div></section>`);
 
 export { pages };
