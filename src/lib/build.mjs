@@ -22,7 +22,21 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
       card({ ic: "horse", title: "Equine-Assisted Learning (EAL)", text: "Experiential learning with horses to build confidence, connection and life skills.", href: "/equine-assisted-learning", center: true }),
     ])) +
   `<section class="section section--paper"><div class="container"><div class="home-quad"><img src="${img("home-team")}" alt="Faith Reins care team" loading="lazy"><div class="stack"><h2>Meet the people behind the care.</h2><p class="lead muted">A dedicated team of professionals, horse handlers and volunteers committed to brighter futures.</p><div>${link("Meet our team →", "/our-team")}</div></div><img src="${img("farm-exterior")}" alt="Faith Reins equestrian facility" loading="lazy"><div class="stack"><h2>Stronger together.</h2><p class="lead muted">Community partners help expand access and create opportunities for more families in South Arkansas.</p><div>${link("Our partners →", "/our-partners")}</div></div></div></div></section>` +
-  `<section class="faith-giving"><div class="container"><div class="faith-giving__grid"><div class="faith-giving__left"><h2>Rooted in faith.<br>Guided by care.</h2><p class="lead muted">Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.</p><div>${btn("Our mission", "/our-mission", "secondary")}</div></div><div class="faith-giving__center"><img src="${img("pasture-hero")}" alt="Faith Reins farm" loading="lazy"></div><div class="faith-giving__right"><h2>Help make care possible.</h2><p class="lead muted">Your support helps bring therapeutic programs and children and families closer to brighter futures.</p><div class="faith-giving__price"><div class="faith-giving__price-num">$100<span>/month</span></div><div class="faith-giving__price-desc">Helps provide therapy sessions, program support, and essential care.</div></div><div>${btn("Give monthly ♡", "/give")}</div></div></div></div></section>`);
+  `<section class="faith-giving"><div class="container"><div class="faith-giving__grid"><div class="faith-giving__left"><h2>Rooted in faith.<br>Guided by care.</h2><p class="lead muted">Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.</p><div>${btn("Our mission", "/our-mission", "secondary")}</div></div><div class="faith-giving__center"><img src="${img("pasture-hero")}" alt="Faith Reins farm" loading="lazy"></div><div class="faith-giving__right"><h2>Help make care possible.</h2><p class="lead muted">Your support helps bring therapeutic programs and children and families closer to brighter futures.</p><div class="faith-giving__price"><div class="faith-giving__price-num">$100<span>/month</span></div><div class="faith-giving__price-desc">Helps provide therapy sessions, program support, and essential care.</div></div><div>${btn("Give monthly ♡", "/give")}</div></div></div></div></section>` +
+  `<section class="section"><div class="container">
+<div class="section-head"><h2>What families say</h2></div>
+<div class="grid grid--3">
+  <blockquote class="testimonial"><p class="testimonial__quote">"We had tried everything before coming to Faith Reins. Within a few months our son was communicating in ways we had never seen. The team here changed our family."</p><footer class="testimonial__attr">— A Camden family</footer></blockquote>
+  <blockquote class="testimonial"><p class="testimonial__quote">"Watching my daughter walk up to Jesse for the first time and not flinch — that moment alone was worth everything. She is a different kid on the days she has EAL."</p><footer class="testimonial__attr">— Parent of a 9-year-old</footer></blockquote>
+  <blockquote class="testimonial"><p class="testimonial__quote">"The therapists here actually listen. They adjusted the plan when something wasn't working and explained every step. I finally feel like we have a real team on our side."</p><footer class="testimonial__attr">— Mother of a 5-year-old</footer></blockquote>
+</div>
+<style>
+.testimonial{background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem;margin:0;display:flex;flex-direction:column;gap:1rem}
+.testimonial__quote{font-family:'Noto Serif',serif;font-size:1rem;line-height:1.7;color:#2a2520;margin:0;font-style:italic}
+.testimonial__attr{font-size:.85rem;color:#888;margin:0;font-style:normal}
+</style>
+</div></section>` +
+  section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected.</h2><p class="lead muted">Get updates on programs, events, and stories from Faith Reins delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", layout: "inline", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div><style>.newsletter-band{display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap}.newsletter-band__copy{flex:1 1 260px}.newsletter-band__form{flex:2 1 320px}</style>`, "section--paper"));
 
 /* ---------- Mission ---------- */
 add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
@@ -325,6 +339,7 @@ ${grid(3, [
 add("/contact", "Contact", "Connect with Faith Reins about services, giving or getting involved.",
   hero({ key: "contact", h1: "We're here to help.", body: "Connect with our team about services, giving or getting involved.", short: true }) +
   section(`<div class="split" style="align-items:start"><div class="stack"><h2>Get in touch</h2><address style="font-style:normal;display:grid;gap:8px"><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address><p class="form-note">Please do not include medical information in messages.</p></div><div class="panel">${form("contact", { submit: "Send message", success: "Thank you. We received your message." })}</div></div>`) +
+  `<section class="section section--paper"><div class="container"><h2 style="margin-bottom:1.25rem">Find us</h2><div class="map-wrap"><iframe title="Faith Reins location map" src="https://maps.google.com/maps?q=226+Ouachita+County+Rd+45,+Camden,+AR+72711&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="360" style="border:0;border-radius:8px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div style="margin-top:1rem"><a class="btn btn--secondary" href="https://maps.google.com/maps/dir/?api=1&destination=226+Ouachita+County+Rd+45,+Camden,+AR+72711" target="_blank" rel="noopener">Get directions</a></div><style>.map-wrap{overflow:hidden;border-radius:8px;border:1px solid #e0dbd4}</style></div></section>` +
   section(head("Quick paths") + grid(4, [card({ title: "Appointments", text: "Book online.", href: "/book-online", linkLabel: "Request" }), card({ title: "Referrals", text: "For providers.", href: "/for-referring-providers", linkLabel: "Learn more" }), card({ title: "Giving", text: "Support the mission.", href: "/give", linkLabel: "Give" }), card({ title: "Sponsorships", text: "Partner with us.", href: "/sponsorships", linkLabel: "Learn more" })]), "section--paper"));
 
 /* ---------- Shop ---------- */
@@ -629,5 +644,76 @@ add("/photo-consent", "Photo & Media Consent Policy", "How Faith Reins uses phot
 <h2>Questions</h2>
 <p>Questions about this policy or requests related to specific images should be directed to us at <strong>info@faithreins.com</strong>.</p>
 ${legalContact}</div></div></section>`);
+
+// ── Blog / News ───────────────────────────────────────────────────────────────
+
+const POSTS = [
+  {
+    slug: "/news/summer-eal-program-2026",
+    title: "A Season of Growth: Summer EAL Recap",
+    date: "August 20, 2026",
+    tag: "Programs",
+    summary: "This summer's equine-assisted learning program wrapped up with some of our biggest participant milestones yet. Here's a look at what our herd — and our kids — accomplished together.",
+    body: `<p>Every summer, our barn becomes a classroom. This year, twelve children and teens participated in Faith Reins' equine-assisted learning sessions over eight weeks. Each session was different — and each one was exactly what someone needed.</p>
+<p>One participant, a nine-year-old who had struggled to make eye contact in almost every setting, began holding eye contact with Banita Joe during grooming by the fourth week. By week seven, he was narrating what he was doing out loud — unprompted — while his therapist watched from a few steps back.</p>
+<p>"The horse does something we can't," said Donna Horton, our EAL Coordinator. "She waits without judgment. She doesn't rush. Kids feel that."</p>
+<p>Jesse and Jack both logged their highest number of session hours this summer. Cowboy, our steadiest team member, was the go-to partner for first-time participants who needed a little more time before approaching the fence.</p>
+<p>We're grateful to every family who trusted us with your child this summer, and to our incredible clinical team who made each session thoughtful, safe, and meaningful. Registration for fall EAL opens in September. Contact us if you'd like to be notified when spots open.</p>`,
+  },
+  {
+    slug: "/news/welcome-second-slp",
+    title: "Growing Our Clinical Team",
+    date: "September 5, 2026",
+    tag: "Team",
+    summary: "Faith Reins is actively recruiting a second Speech-Language Pathologist to meet growing demand for speech and language services in South Arkansas.",
+    body: `<p>We have more children who need speech and language services than we currently have capacity to serve. That's not a complaint — it's a call to action, and we're answering it.</p>
+<p>Faith Reins is currently hiring a second licensed Speech-Language Pathologist to join our clinical team in Camden, Arkansas. This is a full-time position serving children from infancy through age 18 across a wide range of communication and feeding needs.</p>
+<p>What makes this role different from a traditional clinical setting? Our SLPs work in collaboration with OT, PT, and our EAL program. Some sessions happen in the barn. Goals that can be addressed through equine-assisted methods often are — and the results speak for themselves.</p>
+<p>If you are a licensed SLP looking for meaningful work in a faith-centered, family-focused environment, we'd love to hear from you. More information is available on our <a href="/join-our-team">Join Our Team</a> page, or you can email your résumé directly to <a href="mailto:info@faithreins.com">info@faithreins.com</a>.</p>
+<p>Please share this with any SLP you know who might be interested. Referrals from our own community mean a great deal.</p>`,
+  },
+  {
+    slug: "/news/faith-reins-mission",
+    title: "Why We Do This: Faith, Horses, and Healing",
+    date: "October 1, 2026",
+    tag: "Mission",
+    summary: "A letter from our founder and EAL Coordinator, Donna Horton, on what drives Faith Reins and why South Arkansas families deserve this kind of care close to home.",
+    body: `<p>When I started Faith Reins, the question I heard most often was: why here? Why Camden? Why horses?</p>
+<p>The answer has never changed. The children who need this kind of care are already here. They are in our schools, our churches, and our neighborhoods. They deserve access to excellent, compassionate therapy without driving two hours each way.</p>
+<p>Horses have a way of cutting through the noise. They are present in a way that is hard to describe until you've seen a child who barely speaks find their voice while brushing a horse's flank. The clinical literature supports it, but the real evidence is in the barn on a Tuesday afternoon.</p>
+<p>Faith is the other part of this. It shapes how we treat every family — with dignity, with hope, and with the belief that every child has something to grow into. We do not require any particular faith from the families we serve. We simply bring ours to the work.</p>
+<p>We are still a young organization, and there is much ahead of us. More staff to hire, more horses to care for, more children to serve. Your support — in prayer, in giving, in sending a family our way — makes every part of this possible.</p>
+<p>Thank you for being part of this.</p>
+<p><em>— Donna Horton, Founder &amp; EAL Coordinator</em></p>`,
+  },
+];
+
+POSTS.forEach(({ slug, title, date, tag, summary, body }) =>
+  add(slug, `${title} | Faith Reins News`, summary,
+    `<section class="section"><div class="container"><div class="prose">
+<p class="post-meta"><a href="/news">← News &amp; Updates</a> &nbsp;·&nbsp; <span class="post-tag">${tag}</span> &nbsp;·&nbsp; ${date}</p>
+<h1>${title}</h1>
+<p class="lead muted">${summary}</p>
+<hr style="border:none;border-top:1px solid #e0dbd4;margin:1.5rem 0">
+${body}
+<style>.post-meta{font-size:.85rem;color:#888;margin-bottom:1.5rem}.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}</style>
+</div></div></section>` +
+    section(cta({ h2: "Want to stay connected?", p: "Sign up for updates from Faith Reins.", buttons: [btn("Contact us", "/contact"), btn("Our programs", "/services-programs", "secondary")] }), "section--paper")));
+
+add("/news", "News & Updates | Faith Reins", "Stories, program updates, and news from Faith Reins Equestrian Center in Camden, Arkansas.",
+  hero({ key: "our-mission", h1: "News &amp; Updates", body: "Stories, program updates, and announcements from Faith Reins.", short: true }) +
+  section(grid(1, POSTS.map(({ slug, title, date, tag, summary }) =>
+    `<a class="post-card" href="${slug}"><div class="post-card__meta"><span class="post-tag">${tag}</span><span class="post-date">${date}</span></div><h2 class="post-card__title">${title}</h2><p class="post-card__summary">${summary}</p><span class="post-card__read">Read more →</span></a>`
+  )) + `<style>
+.post-card{display:block;background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem 2rem;text-decoration:none;color:inherit;transition:box-shadow .15s}
+.post-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.post-card__meta{display:flex;gap:.75rem;align-items:center;margin-bottom:.75rem}
+.post-date{font-size:.85rem;color:#888}
+.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.post-card__title{font-family:'Noto Serif',serif;font-size:1.35rem;margin:0 0 .6rem}
+.post-card__summary{color:#555;margin:0 0 1rem;line-height:1.6}
+.post-card__read{font-size:.875rem;color:#3a6642;font-weight:600}
+</style>`) +
+  section(cta({ h2: "Subscribe for updates", p: "We share news a few times a year. No spam.", buttons: [btn("Contact us", "/contact")] }), "section--paper"));
 
 export { pages };
