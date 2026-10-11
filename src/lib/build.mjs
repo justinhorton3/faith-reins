@@ -220,7 +220,31 @@ add("/give", "Give", "Support families, horses and the Faith Reins mission with 
   `<section class="section" id="gift"><div class="container"><div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>Choose your gift</h2><p class="lead muted">Your gift helps children and families reach care, and helps us care for our horses.</p></div><div class="panel"><div data-give data-campaign="${CAMPAIGN}"><noscript>Please enable JavaScript to give online, or contact us.</noscript></div></div></div></div></section>` +
   section(head("Other ways to give") + grid(3, [card({ ic: "horse", title: "Sponsor a horse", text: "Monthly sponsorship of $500–$750 supports a horse's care.", href: "/sponsorships", linkLabel: "Discuss sponsorship" }), card({ ic: "heart", title: "Give where needed most", text: "Unrestricted gifts go where families and programs need them." }), card({ ic: "chat", title: "Questions about giving", text: "We are happy to help.", href: "/contact", linkLabel: "Contact us" })]), "section--paper") +
   section(cta({ h2: "Our promise", p: "We use every gift with care. Learn how support and the mission connect.", buttons: [btn("Impact & Stewardship", "/impact-and-stewardship", "secondary"), btn("Our partners", "/our-partners", "secondary")] })));
-add("/give/thank-you", "Thank You", "Thank you for supporting Faith Reins.", `<section class="section"><div class="container center stack" style="justify-items:center"><h1>Thank you.</h1><p class="lead muted">Your gift helps children and families reach care. We are grateful.</p><div class="btn-row">${btn("Back to home", "/")}${btn("Our impact", "/impact-and-stewardship", "secondary")}</div></div></section>`);
+add("/give/thank-you", "Thank You for Your Gift | Faith Reins", "Your gift supports pediatric therapy and equine-assisted learning for children and families in South Arkansas.",
+  `<section class="section"><div class="container"><div class="thankyou-wrap">
+  <div class="thankyou-icon" aria-hidden="true">♡</div>
+  <h1>Your gift is making a difference.</h1>
+  <p class="lead muted">Thank you for supporting Faith Reins. Your generosity helps children and families in South Arkansas reach the care they need — and helps us care for the horses that make it possible.</p>
+  <p class="muted">A receipt will arrive by email shortly. If you have questions about your gift, email <a href="mailto:info@faithreins.com">info@faithreins.com</a>.</p>
+  <div class="btn-row" style="justify-content:center;margin-top:2rem">
+    ${btn("Share Faith Reins", "/our-mission", "secondary")}
+    ${btn("See our impact", "/impact-and-stewardship", "secondary")}
+  </div>
+</div></div></section>
+<style>.thankyou-wrap{max-width:600px;margin:0 auto;text-align:center;padding:3rem 0}.thankyou-icon{font-size:3.5rem;line-height:1;margin-bottom:1.25rem;color:#3a6642}</style>`);
+
+add("/shop/thank-you", "Order Received | Faith Reins Shop", "Thank you for your Faith Reins order.",
+  `<section class="section"><div class="container"><div class="thankyou-wrap">
+  <div class="thankyou-icon" aria-hidden="true">✓</div>
+  <h1>Order received — thank you!</h1>
+  <p class="lead muted">Your Faith Reins order is confirmed. You'll receive an email confirmation shortly with your order details and tracking information once your items ship.</p>
+  <p class="muted">Questions? Email <a href="mailto:info@faithreins.com">info@faithreins.com</a> and include your order number.</p>
+  <div class="btn-row" style="justify-content:center;margin-top:2rem">
+    ${btn("Back to shop", "/shop")}
+    ${btn("Back to home", "/", "secondary")}
+  </div>
+</div></div></section>
+<style>.thankyou-wrap{max-width:600px;margin:0 auto;text-align:center;padding:3rem 0}.thankyou-icon{font-size:3.5rem;line-height:1;margin-bottom:1.25rem;color:#3a6642}</style>`);
 
 /* ---------- Sponsorships ---------- */
 add("/sponsorships", "Sponsorships", "A partnership with purpose. Support people, horses and the places where connection grows.",
@@ -493,6 +517,7 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
     var count=cart.reduce(function(s,i){return s+i.qty;},0);
     var badge=document.getElementById('cart-badge');
     if(badge){badge.textContent=count;badge.hidden=count===0;}
+    if(typeof gtag==='function')gtag('event','add_to_cart',{currency:'USD',value:${price}*qty,items:[{item_id:${JSON.stringify(slug)},item_name:${JSON.stringify(name)},price:${price},quantity:qty}]});
     conf.textContent='Added to bag!';
     setTimeout(function(){conf.textContent='';},2500);
   });

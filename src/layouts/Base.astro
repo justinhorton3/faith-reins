@@ -60,6 +60,15 @@ const orgSchema = {
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <!-- Analytics: replace GA_MEASUREMENT_ID with your GA4 ID (G-XXXXXXXXXX) -->
+    <!-- To use Wix Analytics instead, remove the GA block and paste your Wix Analytics embed here -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', { page_path: window.location.pathname });
+    </script>
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

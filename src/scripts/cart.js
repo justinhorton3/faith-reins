@@ -187,6 +187,7 @@ async function checkout() {
   const checkoutBtn = $(".atb-btn", drawerEl);
   if (checkoutBtn) { checkoutBtn.disabled = true; checkoutBtn.textContent = "Opening checkout…"; }
 
+  track("begin_checkout", { currency: "USD", value: subtotal(items), items: items.map((i) => ({ item_id: i.id, item_name: i.name, price: i.price, quantity: i.qty })) });
   try {
     await wixCheckout(items);
   } catch (e) {
@@ -196,6 +197,8 @@ async function checkout() {
     window.location.href = "/contact?order=" + encodeURIComponent(summary);
   }
 }
+
+const track = (e, p = {}) => { try { if (typeof gtag === "function") gtag("event", e, p); } catch {} };
 
 /* ── Init ── */
 document.addEventListener("DOMContentLoaded", () => {

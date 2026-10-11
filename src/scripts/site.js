@@ -35,6 +35,14 @@ async function api(path, method = "POST", body) {
 // Expose api for cart.js and other modules loaded after this script
 window.__frApi = api;
 
+/* Analytics — fires to GA4 (gtag) and Wix Analytics REST when connected */
+function track(event, params = {}) {
+  // GA4
+  if (typeof gtag === "function") gtag("event", event, params);
+  // Wix Analytics REST (no-op until Wix Analytics app is added to the dashboard)
+  // api("/analytics/v2/events", "POST", { event: { eventType: event, eventData: params } }).catch(() => {});
+}
+
 /* Shell */
 (() => {
   const hd = $("#shell-header"), ft = $("#shell-footer");
@@ -160,6 +168,7 @@ async function mountForm(host) {
       const r = await api("/form-submission-service/v4/submissions", "POST", { submission: { formId: id, submissions: out } });
       const s = r.submission || r;
       if (!["CONFIRMED", "PENDING", "PAYMENT_WAITING"].includes(s.status)) throw new Error("Your message could not be sent. Please try again.");
+      track("form_submit", { form_id: id, form_name: host.dataset.submit || "form" });
       form.reset();
       $$(".field", form).forEach((n) => (n.hidden = true));
       btn.hidden = true;
@@ -175,6 +184,25 @@ async function mountForm(host) {
   });
 }
 $$("[data-wix-form]").forEach(mountForm);
+
+/* Contact form pre-fill from URL params (?order=... passed by shop checkout fallback) */
+(function prefillContact() {
+  const params = new URLSearchParams(location.search);
+  const order = params.get("order");
+  if (!order || !location.pathname.includes("/contact")) return;
+  const host = $("[data-wix-form]");
+  if (!host) return;
+  const tryFill = () => {
+    const ta = $("textarea", host);
+    if (ta && !ta.value) {
+      ta.value = "Order inquiry: " + order;
+      ta.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  };
+  // Form loads asynchronously — poll until textarea appears
+  const iv = setInterval(() => { if ($("textarea", host)) { tryFill(); clearInterval(iv); } }, 200);
+  setTimeout(() => clearInterval(iv), 10000);
+}());
 
 /* Donations */
 const FREQ = { ONE_TIME: "One-time", WEEK: "Weekly", MONTH: "Monthly", YEAR: "Yearly" };
@@ -237,6 +265,7 @@ async function mountGive(host) {
       const cart = await api("/ecom/v2/carts", "POST", { cart: { source: { channelType: "WEB" }, ...(st.note.trim() ? { note: st.note.trim() } : {}) }, catalogItems: [{ quantity: 1, catalogReference: { appId: "333b456e-dd48-4d6b-b32b-9fd48d74e163", catalogItemId: cid, options: opt } }] });
       const id = cart._id || cart.id || (cart.cart && (cart.cart._id || cart.cart.id));
       const s = await api("/headless/v1/redirect-session", "POST", { ecomCheckout: { checkoutId: id }, callbacks: { postFlowUrl: location.origin + "/give/", thankYouPageUrl: location.origin + "/give/thank-you/" } });
+      track("begin_checkout", { currency: "USD", value: value() + (st.fee ? Math.round(value() * 2.9) / 100 : 0), items: [{ item_id: cid, item_name: "Donation" }] });
       location.href = s.redirectSession.fullUrl;
     } catch (e) {
       st.busy = false; draw();
