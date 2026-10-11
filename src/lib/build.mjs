@@ -348,6 +348,7 @@ ${grid(3, [
   card({ ic: "book", title: "Accessibility", text: "WCAG commitment, physical access, and communication accommodations.", href: "/accessibility", linkLabel: "Read" }),
   card({ ic: "clock", title: "Cancellation Policy", text: "Notice requirements, no-show handling, and illness exceptions.", href: "/cancellation-policy", linkLabel: "Read" }),
   card({ ic: "horse", title: "Equine Safety & Liability", text: "Arkansas Equine Liability Act notice and safety practices.", href: "/equine-safety", linkLabel: "Read" }),
+  card({ ic: "star", title: "Photo & Media Consent", text: "How we use photographs and videos of clients, families, and participants.", href: "/photo-consent", linkLabel: "Read" }),
 ])}</div></section>`);
 
 const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
@@ -594,6 +595,39 @@ add("/equine-safety", "Equine Safety & Liability Notice", "Safety guidelines and
 <p>Any injury, near-miss, or unsafe condition must be reported to a Faith Reins staff member immediately. All incidents are documented and reviewed. We take every report seriously as part of our commitment to continuous safety improvement.</p>
 <h2>Questions</h2>
 <p>If you have questions about our safety practices, our horses, or what to expect during an equine session, please ask your care coordinator or <a href="/contact">contact us</a> before your first visit.</p>
+${legalContact}</div></div></section>`);
+
+add("/photo-consent", "Photo & Media Consent Policy", "How Faith Reins uses photographs and videos of clients, families, and participants.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Photo &amp; Media Consent Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<h2>Our Commitment</h2>
+<p>Faith Reins Equestrian Center respects the privacy and dignity of every child, family, and participant in our programs. We take photographs and videos to share our mission, celebrate our community, and connect with supporters — and we do so only with explicit consent from the families involved.</p>
+<h2>When Photographs and Videos Are Taken</h2>
+<p>Faith Reins may photograph or video during therapy sessions, equine-assisted learning activities, events, and program activities. Images may be taken by Faith Reins staff or authorized volunteers. We do not photograph children during sensitive moments, and we always prioritize a child's comfort and dignity.</p>
+<h2>How Media May Be Used</h2>
+<p>With signed consent, images and video may be used for:</p>
+<ul>
+  <li>The Faith Reins website (faithreins.org)</li>
+  <li>Official Faith Reins social media accounts (Facebook, Instagram, and similar)</li>
+  <li>Print and digital materials including newsletters, brochures, and fundraising appeals</li>
+  <li>Grant applications and donor communications</li>
+  <li>Media coverage and press releases</li>
+</ul>
+<p>Images will never be sold, shared with unaffiliated third parties, or used in a way that could embarrass, identify, or harm a participant.</p>
+<h2>Consent Requirement</h2>
+<p>A signed Photo &amp; Media Consent form is required before any image of a child or family member may be used publicly. Consent forms are provided as part of the intake process. Consent is entirely voluntary — declining will have no effect on the services your child receives.</p>
+<p>Consent may be granted for some uses and withheld for others (for example, consenting to website use but not social media). We will honor any restrictions noted on the consent form.</p>
+<h2>Withdrawing Consent</h2>
+<p>You may withdraw consent at any time by contacting us in writing at <a href="mailto:info@faithreins.com">info@faithreins.com</a>. We will remove images from active use as promptly as reasonably possible. Please note that materials already in print or distributed prior to withdrawal cannot be recalled, but we will not use the images going forward.</p>
+<h2>Identification</h2>
+<p>By default, we do not use a child's full name alongside their photograph in public materials. If you consent to identification — for example, a first name in a caption — that preference should be noted on your consent form.</p>
+<h2>Volunteers and Staff</h2>
+<p>Team members and volunteers are also subject to this policy. Staff and volunteers grant implied consent to being photographed or filmed in the course of their work at Faith Reins events and activities, but may request that specific images not be used by contacting us.</p>
+<h2>Third Parties</h2>
+<p>Families, visitors, and community members may not photograph or record other participants, children, or clients without Faith Reins' permission and the consent of the individuals involved. This applies at all events and on all Faith Reins property.</p>
+<h2>Questions</h2>
+<p>Questions about this policy or requests related to specific images should be directed to us at <strong>info@faithreins.com</strong>.</p>
 ${legalContact}</div></div></section>`);
 
 export { pages };
