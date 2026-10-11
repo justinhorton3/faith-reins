@@ -1,0 +1,470 @@
+{
+  "version": "v6",
+  "note": "One Wix product per fit. Never put men’s, women’s, youth and toddler sizes in the same product; each fit has its own size run and size chart. Measurements are typical. Confirm them against the vendor’s blank before launch.",
+  "sizeCharts": {
+    "mens": {
+      "label": "Men’s / Unisex",
+      "unit": "in",
+      "measure": "Chest (body)",
+      "rows": [
+        [
+          "XS",
+          "31–34"
+        ],
+        [
+          "S",
+          "34–37"
+        ],
+        [
+          "M",
+          "38–41"
+        ],
+        [
+          "L",
+          "42–45"
+        ],
+        [
+          "XL",
+          "46–49"
+        ],
+        [
+          "2XL",
+          "50–53"
+        ],
+        [
+          "3XL",
+          "54–57"
+        ]
+      ]
+    },
+    "womens": {
+      "label": "Women’s",
+      "unit": "in",
+      "measure": "Bust (body) · US size",
+      "rows": [
+        [
+          "XS",
+          "31–32 · 0–2"
+        ],
+        [
+          "S",
+          "33–34 · 4–6"
+        ],
+        [
+          "M",
+          "35–36 · 8–10"
+        ],
+        [
+          "L",
+          "37–39 · 12–14"
+        ],
+        [
+          "XL",
+          "40–42 · 16"
+        ],
+        [
+          "2XL",
+          "43–45 · 18"
+        ]
+      ]
+    },
+    "youth": {
+      "label": "Youth",
+      "unit": "in",
+      "measure": "Chest · age",
+      "rows": [
+        [
+          "YXS",
+          "23–24 · 4–5"
+        ],
+        [
+          "YS",
+          "25–26 · 6–8"
+        ],
+        [
+          "YM",
+          "27–28 · 10–12"
+        ],
+        [
+          "YL",
+          "29–30 · 14–16"
+        ],
+        [
+          "YXL",
+          "31–32 · 18–20"
+        ]
+      ]
+    },
+    "toddler": {
+      "label": "Toddler",
+      "unit": "in / lb",
+      "measure": "Height · weight",
+      "rows": [
+        [
+          "2T",
+          "33–35 · 26–29"
+        ],
+        [
+          "3T",
+          "36–38 · 30–33"
+        ],
+        [
+          "4T",
+          "39–41 · 34–38"
+        ],
+        [
+          "5T",
+          "42–44 · 39–42"
+        ]
+      ]
+    }
+  },
+  "products": [
+    {
+      "slug": "mens-tee",
+      "name": "Men’s Tee",
+      "category": "apparel",
+      "fit": "Men’s",
+      "sizeChart": "mens",
+      "price": 25,
+      "options": {
+        "Size": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Left chest · horizontal lockup, cream",
+      "image": "assets/merch/mens-tee.png"
+    },
+    {
+      "slug": "womens-tee",
+      "name": "Women’s Tee",
+      "category": "apparel",
+      "fit": "Women’s",
+      "sizeChart": "womens",
+      "price": 25,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ]
+      },
+      "color": "Natural",
+      "print": "Full front · stacked lockup, green",
+      "image": "assets/merch/womens-tee.png"
+    },
+    {
+      "slug": "youth-tee",
+      "name": "Youth Tee",
+      "category": "youth",
+      "fit": "Youth",
+      "sizeChart": "youth",
+      "price": 18,
+      "options": {
+        "Size": [
+          "YXS",
+          "YS",
+          "YM",
+          "YL",
+          "YXL"
+        ]
+      },
+      "color": "Natural",
+      "print": "Chest · horse + wordmark, green",
+      "image": "assets/merch/youth-tee.png"
+    },
+    {
+      "slug": "toddler-tee",
+      "name": "Toddler Tee",
+      "category": "youth",
+      "fit": "Toddler",
+      "sizeChart": "toddler",
+      "price": 16,
+      "options": {
+        "Size": [
+          "2T",
+          "3T",
+          "4T",
+          "5T"
+        ]
+      },
+      "color": "Forest",
+      "print": "Center chest · horse, cream",
+      "image": "assets/merch/toddler-tee.png"
+    },
+    {
+      "slug": "crewneck",
+      "name": "Unisex Crewneck",
+      "category": "apparel",
+      "fit": "Unisex",
+      "sizeChart": "mens",
+      "price": 45,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Left chest · horizontal lockup, cream",
+      "image": "assets/merch/crewneck.png"
+    },
+    {
+      "slug": "heritage-hoodie",
+      "name": "Heritage Hoodie",
+      "category": "apparel",
+      "fit": "Unisex",
+      "sizeChart": "mens",
+      "price": 45,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Full front · stacked lockup, cream",
+      "image": "assets/merch/heritage-hoodie.png"
+    },
+    {
+      "slug": "womens-hoodie",
+      "name": "Women’s Hoodie",
+      "category": "apparel",
+      "fit": "Women’s",
+      "sizeChart": "womens",
+      "price": 50,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ]
+      },
+      "color": "Natural",
+      "print": "Left chest · horizontal lockup, green",
+      "image": "assets/merch/womens-hoodie.png"
+    },
+    {
+      "slug": "youth-hoodie",
+      "name": "Youth Hoodie",
+      "category": "youth",
+      "fit": "Youth",
+      "sizeChart": "youth",
+      "price": 35,
+      "options": {
+        "Size": [
+          "YXS",
+          "YS",
+          "YM",
+          "YL",
+          "YXL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Chest · horse + wordmark, cream",
+      "image": "assets/merch/youth-hoodie.png"
+    },
+    {
+      "slug": "long-sleeve",
+      "name": "Unisex Long-Sleeve Tee",
+      "category": "apparel",
+      "fit": "Unisex",
+      "sizeChart": "mens",
+      "price": 30,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Left chest · horizontal lockup, cream",
+      "image": "assets/merch/long-sleeve.png"
+    },
+    {
+      "slug": "mens-polo",
+      "name": "Men’s Polo",
+      "category": "apparel",
+      "fit": "Men’s",
+      "sizeChart": "mens",
+      "price": 40,
+      "options": {
+        "Size": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Embroidered left chest · horizontal lockup, cream",
+      "image": "assets/merch/mens-polo.png"
+    },
+    {
+      "slug": "womens-polo",
+      "name": "Women’s Polo",
+      "category": "apparel",
+      "fit": "Women’s",
+      "sizeChart": "womens",
+      "price": 40,
+      "options": {
+        "Size": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ]
+      },
+      "color": "Natural",
+      "print": "Embroidered left chest · horizontal lockup, green",
+      "image": "assets/merch/womens-polo.png"
+    },
+    {
+      "slug": "youth-polo",
+      "name": "Youth Polo",
+      "category": "youth",
+      "fit": "Youth",
+      "sizeChart": "youth",
+      "price": 30,
+      "options": {
+        "Size": [
+          "YXS",
+          "YS",
+          "YM",
+          "YL",
+          "YXL"
+        ]
+      },
+      "color": "Forest",
+      "print": "Embroidered left chest · horse, cream",
+      "image": "assets/merch/youth-polo.png"
+    },
+    {
+      "slug": "cap",
+      "name": "Cap — Adult",
+      "category": "accessories",
+      "fit": "Adult",
+      "sizeChart": null,
+      "price": 25,
+      "options": {
+        "Size": [
+          "One size (adjustable)"
+        ]
+      },
+      "color": "Forest",
+      "print": "Embroidered front · horse, cream",
+      "image": "assets/merch/cap.png"
+    },
+    {
+      "slug": "youth-cap",
+      "name": "Cap — Youth",
+      "category": "youth",
+      "fit": "Youth",
+      "sizeChart": "youth",
+      "price": 22,
+      "options": {
+        "Size": [
+          "Youth one size (adjustable)"
+        ]
+      },
+      "color": "Natural",
+      "print": "Embroidered front · horse, green",
+      "image": "assets/merch/youth-cap.png"
+    },
+    {
+      "slug": "beanie",
+      "name": "Cuffed Beanie",
+      "category": "accessories",
+      "fit": "Adult",
+      "sizeChart": null,
+      "price": 22,
+      "options": {
+        "Size": [
+          "One size"
+        ]
+      },
+      "color": "Forest",
+      "print": "Embroidered cuff · horse, cream",
+      "image": "assets/merch/beanie.png"
+    },
+    {
+      "slug": "mug",
+      "name": "Mug, 11 oz",
+      "category": "drinkware",
+      "fit": null,
+      "sizeChart": null,
+      "price": 16,
+      "options": {},
+      "color": "Natural",
+      "print": "Two-sided · horizontal lockup, green",
+      "image": "assets/merch/mug.png"
+    },
+    {
+      "slug": "travel-mug",
+      "name": "Travel Mug, 20 oz",
+      "category": "drinkware",
+      "fit": null,
+      "sizeChart": null,
+      "price": 28,
+      "options": {},
+      "color": "Natural",
+      "print": "One side · stacked lockup, green",
+      "image": "assets/merch/travel-mug.png"
+    },
+    {
+      "slug": "stickers",
+      "name": "Sticker Set",
+      "category": "accessories",
+      "fit": null,
+      "sizeChart": null,
+      "price": 6,
+      "options": {},
+      "color": "—",
+      "print": "3in round + 6 × 2in bumper",
+      "image": "assets/merch/stickers.png"
+    },
+    {
+      "slug": "keychain",
+      "name": "Leather Keychain",
+      "category": "accessories",
+      "fit": null,
+      "sizeChart": null,
+      "price": 8,
+      "options": {},
+      "color": "Saddle tan",
+      "print": "Debossed/foil · horse, gold",
+      "image": "assets/merch/keychain.png"
+    }
+  ]
+}

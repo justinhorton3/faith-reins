@@ -1,0 +1,31 @@
+:root {
+  --font-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+  --font-serif: "Libre Caslon Text", Georgia, serif;
+  --font-sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  /* Scale (desktop) */
+  --type-hero: 86px;      /* display, lh 1 */
+  --type-display: 46px;   /* section titles, lh 1.05–1.12 */
+  --type-feature: 50px;   /* serif text feature heading, lh 1.08 */
+  --type-row: 30px;       /* index row titles */
+  --type-card: 28px;      /* tile titles, lh 1.15 */
+  --type-callout: 24px;
+  --type-lead: 20px;      /* serif lead, lh 1.6 */
+  --type-body-lg: 17px;   /* lh 1.7 */
+  --type-body: 16px;      /* lh 1.65 */
+  --type-small: 14px;
+  --type-button: 12px;
+  --type-eyebrow: 11px;
+
+  /* Tracking (all-caps only) */
+  --track-wordmark: .28em;
+  --track-nav: .16em;
+  --track-button: .14em;
+  --track-eyebrow: .26em;
+  --track-tagline: .34em;
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.12;
+  --lh-body: 1.65;
+  --lh-body-lg: 1.7;
+}

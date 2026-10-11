@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x460" name="Forms" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="margin:0"><div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Lockup && v.Button) return v; } catch (e) {} } return {}; })();
+const { TextField, Select, Checkbox, Button } = NS;
+function App() {
+  return (
+    <div style={{ padding: 28, background: 'var(--fr-cream)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
+      <TextField label="Parent or guardian name" required placeholder="First and last" />
+      <TextField label="Email" type="email" defaultValue="parent@example" error="Enter a valid email address" />
+      <Select label="Therapy of interest" placeholder="Choose one" options={['Speech & Language', 'Occupational', 'Physical', 'Counseling', 'Equine-Assisted']} />
+      <TextField label="Phone" type="tel" help="We'll call within two business days." />
+      <TextField label="Tell us about your child" multiline rows={3} style={{ gridColumn: '1 / -1' }} />
+      <Checkbox label="I'd like to receive occasional updates" defaultChecked />
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}><Button type="submit">Send message</Button></div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

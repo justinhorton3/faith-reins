@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Navigation" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="margin:0"><div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Lockup && v.Button) return v; } catch (e) {} } return {}; })();
+const { SiteHeader, SiteFooter } = NS;
+const A = '../../assets/logo/';
+function App() {
+  return (
+    <div style={{ width: 1280, transform: 'scale(.546875)', transformOrigin: '0 0' }}>
+      <SiteHeader active="Therapies" sticky={false} assetBase={A} />
+      <div style={{ height: 24, background: 'var(--fr-sand)' }} />
+      <SiteHeader tone="dark" sticky={false} assetBase={A} />
+      <SiteFooter assetBase={A} />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

@@ -1,0 +1,57 @@
+<!-- @dsCard group="Website" viewport="1440x900" name="Website — all pages" -->
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Faith Reins</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+</head><body><div id="root"></div>
+<script>
+// Uses the compiled design-system bundle when present; otherwise loads component sources directly.
+window.findFR = function () { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Lockup && v.Button && v.SiteHeader) return v; } catch (e) {} } return null; };
+window.FR_FILES = ['core/responsive', 'core/Button', 'core/TextLink', 'core/Eyebrow', 'brand/HorseMark', 'brand/Lockup', 'layout/Section', 'layout/Split', 'forms/TextField', 'forms/Select', 'forms/Checkbox', 'content/PhotoSlot', 'content/PhotoBand', 'content/Testimonial', 'content/CredentialStrip', 'content/GiftCallout', 'content/Hero', 'content/SectionHeading', 'content/TherapyIndex', 'content/AudienceTiles', 'content/SplitFeature', 'content/FAQItem', 'content/InfoGrid', 'content/Steps', 'content/CheckList', 'content/CTABand', 'content/Prose', 'content/ProfileCard', 'commerce/ProductCard', 'commerce/GiveForm', 'navigation/SiteHeader', 'navigation/SiteFooter'];
+window.loadFR = async function () {
+  const found = findFR();
+  const NS = found ? Object.assign({}, found) : {};
+  const need = found ? (found.useBreakpoint ? [] : ['core/responsive']) : FR_FILES;
+  const srcs = await Promise.all(need.map((f) => fetch('../../components/' + f + '.jsx').then((r) => r.text())));
+  srcs.forEach((src) => {
+    const names = [...src.matchAll(/export (?:function|const) (\w+)/g)].map((m) => m[1]);
+    src = src.replace(/^import .*$/gm, '').replace(/export (function|const)/g, '$1');
+    const code = Babel.transform(src, { presets: ['react'] }).code;
+    Object.assign(NS, new Function('React', 'NS', 'with (NS) {' + code + '\nreturn {' + names.join(',') + '};}')(React, NS));
+  });
+  return NS;
+};
+</script>
+<script type="text/babel" src="pages/_shared.jsx"></script>
+<script type="text/babel" src="pages/Home.jsx"></script>
+<script type="text/babel" src="pages/Therapies.jsx"></script>
+<script type="text/babel" src="pages/Families.jsx"></script>
+<script type="text/babel" src="pages/About.jsx"></script>
+<script type="text/babel" src="pages/Giving.jsx"></script>
+<script type="text/babel" src="pages/Legal.jsx"></script>
+<script type="text/babel">
+const NAV = { Therapies: 'services-programs', 'For Families': 'for-families', 'For Providers': 'for-referring-providers', Families: 'for-families', Providers: 'for-referring-providers', 'Our Horses': 'our-horses', About: 'our-mission', Shop: 'shop',
+  'Speech & Language': 'speech-language-therapy', Occupational: 'occupational-therapy', Physical: 'physical-therapy', Counseling: 'counseling', 'Equine-Assisted': 'equine-assisted-learning',
+  'First visit': 'for-families', 'Payment & insurance': 'payment-and-insurance', FAQ: 'faq', 'Referring providers': 'for-referring-providers', Contact: 'contact',
+  'Our mission': 'our-mission', 'Our team': 'our-team', 'Our horses': 'our-horses', Partners: 'our-partners', Careers: 'join-our-team',
+  'Privacy policy': 'privacy', Accessibility: 'accessibility', 'Donation policy': 'donation-policy' };
+const slugFromHash = () => { const s = location.hash.replace(/^#\/?/, ''); return window.PAGES[s] ? s : 'home'; };
+function PageView({ page, FR, go }) { return page.render(FR, go); }
+function App({ FR }) {
+  const [slug, setSlug] = React.useState(slugFromHash);
+  React.useEffect(() => { const f = () => { setSlug(slugFromHash()); window.scrollTo(0, 0); }; window.addEventListener('hashchange', f); return () => window.removeEventListener('hashchange', f); }, []);
+  const go = (s) => { const t = window.PAGES[s] ? s : NAV[s]; if (t) location.hash = '/' + t; };
+  const page = window.PAGES[slug];
+  React.useEffect(() => { document.title = (slug === 'home' ? 'Faith Reins | Pediatric & Equine Therapy' : page.title + ' | Faith Reins'); }, [slug]);
+  const { SiteHeader, SiteFooter } = FR;
+  return (
+    <div style={{ background: 'var(--fr-cream)', minHeight: '100vh', overflowX: 'clip' }}>
+      <SiteHeader tone="light" active={page.nav} assetBase="../../assets/logo/" onLogo={() => go('home')} onNavigate={go} onCta={() => go('give')} />
+      <main><PageView key={slug} page={page} FR={FR} go={go} /></main>
+      <SiteFooter assetBase="../../assets/logo/" onNavigate={go} onGive={() => go('give')} />
+    </div>
+  );
+}
+loadFR().then((FR) => ReactDOM.createRoot(document.getElementById('root')).render(<App FR={FR} />));
+</script></body></html>

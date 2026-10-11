@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x640" name="Content" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="margin:0"><div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Lockup && v.Button) return v; } catch (e) {} } return {}; })();
+const { Hero, SectionHeading, TherapyIndex, AudienceTiles, SplitFeature, FAQItem, TextLink, Button } = NS;
+const I = '../../assets/heroes/desktop/';
+function App() {
+  return (
+    <div style={{ width: 1280, transform: 'scale(.546875)', transformOrigin: '0 0', background: 'var(--fr-cream)' }}>
+      <Hero height={520} image={I + 'hero-home-desktop.webp'} imagePosition="62% 40%" eyebrow="Pediatric & Equine Therapy" title={<>Patient work, <i style={{ fontFamily: 'var(--font-serif)', fontSize: '.9em' }}>gentle</i> horses, lasting change.</>} lead="Licensed speech, occupational and physical therapy for children, practiced in the clinic and the arena." primaryLabel="Contact us" secondaryLabel="Our therapies" />
+      <div style={{ padding: '72px var(--gutter)', display: 'grid', gridTemplateColumns: '320px 1fr', gap: 64 }}>
+        <SectionHeading eyebrow="Therapies" title="Five ways we help" body="Every plan begins with a licensed evaluation and measurable goals." linkLabel="How a first visit works" />
+        <TherapyIndex onSelect={() => {}} items={[
+          { title: 'Speech & Language', description: 'Articulation, language, feeding and swallowing.', image: I + 'hero-speech-language-therapy-desktop.webp' },
+          { title: 'Occupational', description: 'Fine motor skills, sensory processing and daily life.', image: I + 'hero-occupational-therapy-desktop.webp' },
+        ]} />
+      </div>
+      <AudienceTiles items={[{ eyebrow: 'For parents', title: 'What to expect at your first visit', linkLabel: 'Read the guide' }, { eyebrow: 'For providers', title: 'Referrals, orders and progress notes', linkLabel: 'Send a referral' }, { eyebrow: 'For donors', title: 'Open a spot for a child on the waiting list', linkLabel: 'Ways to support' }]} />
+      <SplitFeature variant="bleed" image={I + 'hero-give-desktop.webp'} eyebrow="Stewardship" title="Every session here is made possible by someone who gave." body="Gifts fund therapy sessions, feed and shoe our horses, and open spots on our waiting list." actions={<><Button>Support Faith Reins</Button><TextLink>Sponsorships</TextLink></>} />
+      <div style={{ padding: '56px var(--gutter)' }}><div style={{ borderTop: '1px solid var(--fr-green)' }}><FAQItem question="How do I know if my child needs therapy?" defaultOpen>Start with a free phone consult — we'll talk through what you're seeing and whether an evaluation makes sense.</FAQItem><FAQItem question="Do you accept insurance?">Details on the Payment &amp; insurance page.</FAQItem></div></div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>
