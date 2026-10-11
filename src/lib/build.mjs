@@ -366,4 +366,88 @@ add("/accessibility", "Accessibility", "Accessibility commitment and accommodati
 <p>If you experience difficulty accessing any part of our website or have a suggestion for improvement, please contact us. We will respond within 5 business days and work to address the issue promptly.</p>
 ${legalContact}</div></div></section>`);
 
+add("/hipaa-notice", "HIPAA Notice of Privacy Practices", "How Faith Reins uses and protects your health information under HIPAA.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Notice of Privacy Practices</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; THIS NOTICE DESCRIBES HOW HEALTH INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</p>
+<h2>Who We Are</h2>
+<p>Faith Reins Equestrian Center ("Faith Reins") is a covered healthcare entity under the Health Insurance Portability and Accountability Act of 1996 (HIPAA). This Notice of Privacy Practices describes how we may use and disclose your child's Protected Health Information (PHI) and explains your rights regarding that information.</p>
+<h2>How We May Use and Disclose Health Information</h2>
+<p><strong>Treatment:</strong> We use health information to provide, coordinate, and manage care. For example, therapists share relevant information with each other to coordinate your child's therapy plan.</p>
+<p><strong>Payment:</strong> We may use or disclose health information to bill and collect payment for services, including submitting claims to insurance carriers or communicating with payers about coverage.</p>
+<p><strong>Healthcare operations:</strong> We may use health information for internal quality improvement, staff training, compliance activities, and program evaluation.</p>
+<p><strong>Required by law:</strong> We will disclose health information when required by federal, state, or local law, including mandatory abuse reporting obligations under Arkansas law.</p>
+<p><strong>Public health and safety:</strong> We may disclose information to prevent a serious threat to the health or safety of a person or the public.</p>
+<p><strong>Research:</strong> We may use de-identified information for program research and outcome evaluation. Identifiable information will not be used for research without your written authorization.</p>
+<p><strong>All other uses and disclosures</strong> require your written authorization. You may revoke an authorization at any time in writing; revocation does not affect uses or disclosures already made in reliance on it.</p>
+<h2>Your Rights</h2>
+<p><strong>Right to access:</strong> You have the right to inspect and receive a copy of your child's health information held by Faith Reins. Requests should be made in writing. We will respond within 30 days.</p>
+<p><strong>Right to amend:</strong> You may request that we correct or add to your child's health record if you believe it is inaccurate or incomplete. We may deny the request in certain circumstances and will explain any denial in writing.</p>
+<p><strong>Right to an accounting:</strong> You may request a list of disclosures we have made of your child's health information, other than those for treatment, payment, or operations, for the prior six years.</p>
+<p><strong>Right to request restrictions:</strong> You may ask us to limit how we use or disclose your child's health information. We are not required to agree, except in limited circumstances required by law.</p>
+<p><strong>Right to confidential communications:</strong> You may request that we communicate with you in a specific way or at a specific location (e.g., by email only). We will accommodate reasonable requests.</p>
+<p><strong>Right to a paper copy:</strong> You may request a paper copy of this Notice at any time, even if you agreed to receive it electronically.</p>
+<p><strong>Right to be notified of a breach:</strong> You have the right to be notified if Faith Reins discovers a breach of your unsecured protected health information.</p>
+<h2>Our Responsibilities</h2>
+<p>Faith Reins is required by law to maintain the privacy of your child's health information, provide this Notice, and follow the terms of the Notice currently in effect. We reserve the right to change this Notice and to make the new provisions effective for all information we hold. An updated Notice will be posted on our website and available at our facility.</p>
+<h2>Complaints</h2>
+<p>If you believe your privacy rights have been violated, you may file a complaint with Faith Reins or with the U.S. Department of Health and Human Services Office for Civil Rights. You will not be retaliated against for filing a complaint.</p>
+<p>To file a complaint with Faith Reins or to exercise any right described in this Notice, contact our Privacy Officer using the information below.</p>
+${legalContact}</div></div></section>`);
+
+add("/cancellation-policy", "Cancellation Policy", "Appointment cancellation, rescheduling, and no-show policy for Faith Reins therapy services.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Cancellation Policy</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<h2>Why Consistent Attendance Matters</h2>
+<p>Research shows that consistent attendance is one of the strongest predictors of progress in pediatric therapy. Regular sessions allow our therapists to build on each visit and maintain momentum toward your child's goals. When a session is cancelled, that time cannot easily be filled on short notice, which affects both your child's progress and our ability to serve other families on our waitlist.</p>
+<p>We understand that life with children is unpredictable. This policy is not about penalties—it is about protecting your child's care and our capacity to serve our community.</p>
+<h2>Cancellation Notice</h2>
+<p>We ask for at least <strong>24 hours' notice</strong> for any cancellation or rescheduling. This gives us time to offer the slot to another family. To cancel or reschedule, contact us by phone or through your client portal.</p>
+<p><strong>Same-day cancellations</strong> (less than 24 hours before the appointment) will be documented. Repeated same-day cancellations may affect scheduling priority or continued enrollment in the program.</p>
+<h2>No-Shows</h2>
+<p>A no-show occurs when a scheduled appointment is missed without any prior notice. No-shows place a significant strain on our schedule and prevent other children from receiving timely care. <strong>Two consecutive no-shows</strong> without contact may result in removal from the schedule. We will attempt to reach you before taking that step.</p>
+<h2>Illness &amp; Emergencies</h2>
+<p>We ask that you keep your child home if they are acutely ill (fever, vomiting, or a contagious condition). Please call us as soon as possible so we can plan accordingly. Illness-related cancellations are noted separately and will not count against you when they are communicated promptly. Genuine emergencies are treated with the same understanding.</p>
+<h2>Therapist Cancellations</h2>
+<p>On rare occasions, Faith Reins may need to cancel or reschedule a session due to therapist illness, facility conditions, or other circumstances. We will notify you as early as possible and prioritize rescheduling at a time that works for your family.</p>
+<h2>Repeated Cancellations</h2>
+<p>If a pattern of cancellations develops that is affecting your child's progress or our scheduling, your care coordinator will reach out to discuss options. We want to find a schedule that works for your family and keep your child's treatment on track.</p>
+<h2>Questions</h2>
+<p>If you have questions about this policy or need help finding a schedule that works for your family, please talk with your care coordinator or contact us directly.</p>
+${legalContact}</div></div></section>`);
+
+add("/equine-safety", "Equine Safety & Liability Notice", "Safety guidelines and liability notice for equine-assisted activities at Faith Reins.",
+  `<section class="section"><div class="container"><div class="prose">
+<h1>Equine Safety &amp; Liability Notice</h1>
+<p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
+<div class="notice"><strong>Arkansas Equine Liability Act Notice:</strong> Under Arkansas law (Ark. Code § 16-120-201 et seq.), an equine activity sponsor or equine professional is not liable for an injury to or the death of a participant in equine activities resulting from the inherent risks of equine activities.</div>
+<h2>Inherent Risks of Equine Activities</h2>
+<p>Equine-assisted activities involve interaction with horses, which are large, unpredictable animals. Inherent risks include, but are not limited to:</p>
+<ul>
+  <li>Unpredictable behavior by a horse in response to sudden movement, sound, or other stimuli.</li>
+  <li>Hazards of the ground surface, including uneven terrain, mud, and natural obstacles.</li>
+  <li>Falls from a horse or from horse-related equipment.</li>
+  <li>Injury from contact with a horse, including biting, kicking, or crushing.</li>
+  <li>Failure of tack or equipment.</li>
+</ul>
+<p>Participation in any equine activity at Faith Reins requires a signed assumption-of-risk and informed consent form, which families complete as part of the intake process.</p>
+<h2>Safety Practices</h2>
+<p>Faith Reins takes the safety of every participant, volunteer, and staff member seriously. Our practices include:</p>
+<ul>
+  <li><strong>Helmets required:</strong> ASTM/SEI-certified helmets are required for all mounted activities and are provided by Faith Reins at no charge. Participants may bring their own properly fitted, certified helmet.</li>
+  <li><strong>Qualified staff:</strong> All equine activities are led or directly supervised by trained staff members who hold relevant equine-assisted services credentials.</li>
+  <li><strong>Horse evaluation:</strong> Our horses are selected and regularly evaluated for temperament, health, and suitability for therapeutic work.</li>
+  <li><strong>Ground rules:</strong> Participants and observers are briefed on safe behavior around horses before every session—no running, no sudden loud noises, and no approaching a horse from behind.</li>
+  <li><strong>Participant-to-staff ratios:</strong> Staffing ratios are maintained to ensure each participant receives appropriate supervision during equine activities.</li>
+  <li><strong>Medical information:</strong> We collect relevant medical and behavioral information during intake to ensure each child's safety plan is individualized.</li>
+</ul>
+<h2>Observer Safety</h2>
+<p>Family members and observers are welcome to watch sessions from designated viewing areas. Observers must remain in those areas during equine activities and follow staff directions at all times. Children who are not participants must be supervised by a parent or guardian and may not enter the horse areas without staff permission.</p>
+<h2>Incident Reporting</h2>
+<p>Any injury, near-miss, or unsafe condition must be reported to a Faith Reins staff member immediately. All incidents are documented and reviewed. We take every report seriously as part of our commitment to continuous safety improvement.</p>
+<h2>Questions</h2>
+<p>If you have questions about our safety practices, our horses, or what to expect during an equine session, please ask your care coordinator or <a href="/contact">contact us</a> before your first visit.</p>
+${legalContact}</div></div></section>`);
+
 export { pages };
