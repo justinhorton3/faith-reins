@@ -115,6 +115,6 @@ export function footer() {
 ${form("contact", { submit: "Send message", success: "Thank you. We received your message.", btnKind: "accent" })}
 <p class="form-note mt-16">Please do not include medical information.</p></div>
 </div>
-<div class="site-footer__bottom"><span>© ${new Date().getFullYear()} Faith Reins. All rights reserved.</span><nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/accessibility">Accessibility</a><a href="/donation-policy">Donation Policy</a></nav></div>
+<div class="site-footer__bottom"><span>© ${new Date().getFullYear()} Faith Reins. All rights reserved.</span><nav aria-label="Legal"><a href="/terms-of-service">Terms</a><a href="/privacy-policy">Privacy</a><a href="/hipaa-notice">HIPAA</a><a href="/accessibility">Accessibility</a><a href="/legal">All policies</a></nav></div>
 </div></footer>`;
 }

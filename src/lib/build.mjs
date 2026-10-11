@@ -122,12 +122,24 @@ add("/for-referring-providers", "For Referring Providers", "A clear path from re
   section(cta({ h2: "Provider contact", p: "Reach our intake team through the contact page.", buttons: [btn("Contact intake", "/contact"), btn("For families", "/for-families", "secondary")] }), "section--paper"));
 
 /* ---------- Payment ---------- */
-add("/payment-and-insurance", "Payment & Insurance", "Clear answers before care begins. Start a conversation with Faith Reins about coverage, payment and next steps.",
-  hero({ key: "payment-and-insurance", h1: "Clear answers before care begins.", body: "Start a conversation about coverage, payment and next steps.", ctas: [["Contact our team", "/contact", "light"]] }) +
-  section(`<div class="prose"><h2>Payment overview</h2><p>Payment and coverage details vary by service and family. Please contact our team for specifics, and we will walk through your options with you.</p></div>`) +
-  section(head("Common paths") + grid(4, [card({ ic: "shield", title: "Coverage questions", text: "Ask whether your plan may apply." }), card({ ic: "heart", title: "Private pay", text: "Talk with us about options." }), card({ ic: "file", title: "Referrals and documentation", text: "What providers can share." }), card({ ic: "clock", title: "Scheduling questions", text: "How payment fits with scheduling." })]), "section--paper") +
-  section(`<div class="split"><div class="stack"><h2>What to have ready</h2><p class="muted">These make a first conversation smoother. None are required to reach out.</p></div>${checks([["Insurance card", "If you have coverage."], ["Referral or provider notes", "If applicable."], ["Child and family contact details", ""]])}</div>`) +
-  section(notice("We do not guarantee coverage or specific costs on this page. Our team will confirm details with you.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] })}</div>`, "section--paper"));
+add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins therapy services — insurance, private pay, ARKids First, Medicaid, and financial assistance.",
+  hero({ key: "payment-and-insurance", h1: "Clear answers before care begins.", body: "We want cost to be the last reason a family waits.", ctas: [["Contact our team", "/contact", "light"], ["Request an appointment", "/book-online", "secondary"]] }) +
+  section(`<div class="prose">
+<h2>How payment works</h2>
+<p>We work with families to find a payment path that makes care accessible. The options below cover most situations. Our team will confirm what applies to your family during the intake conversation — nothing on this page is a guarantee of coverage or cost.</p>
+<h2>Insurance</h2>
+<p>We are working to accept major commercial insurance plans. Coverage depends on your specific plan, the services your child receives, and any referral or prior-authorization requirements your insurer has. We recommend calling the member services number on your insurance card and asking whether Faith Reins is an in-network provider before your first appointment.</p>
+<p>We are happy to provide you with the information you need to check your benefits or submit a claim. Contact our team and we will help.</p>
+<h2>ARKids First &amp; Medicaid</h2>
+<p>We are committed to serving families enrolled in ARKids First and Arkansas Medicaid. If your child is enrolled, please let us know during intake. Our team will verify coverage and walk through any authorization steps with you.</p>
+<h2>Private Pay</h2>
+<p>Families who pay out of pocket are welcome. We will provide you with a clear fee estimate before care begins. Payment is due at the time of service unless other arrangements are made in advance.</p>
+<h2>Financial Assistance</h2>
+<p>No family should go without care because of cost. We offer need-based financial assistance funded by donor gifts and our scholarship program. If cost is a barrier, please tell us — the conversation is confidential and there is no obligation. We will do our best to find a way.</p>
+<h2>What to have ready</h2>
+<p>These help a first conversation go smoothly. None are required to reach out.</p></div>`) +
+  section(checks([["Insurance card or plan information", "If you have coverage, the member ID and group number help us verify benefits quickly."], ["Referral or provider notes", "If a physician, school, or other provider referred your child, any notes or documentation they can share are helpful."], ["ARKids First or Medicaid ID", "If your child is enrolled."], ["Questions about cost", "Write them down — there are no wrong questions and we want you to feel informed before care begins."]])) +
+  section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", p: "Our team will walk through every option with you — no pressure, no obligation.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] })}</div>`, "section--paper"));
 
 /* ---------- FAQ ---------- */
 add("/faq", "FAQ", "Answers for families, referring providers and supporters of Faith Reins.",
@@ -166,7 +178,17 @@ add("/impact-and-stewardship", "Impact & Stewardship", "Your generosity, a stron
 add("/our-partners", "Our Partners", "Community and clinical connections supporting South Arkansas.",
   hero({ key: "our-partners", h1: "Stronger together.", body: "Community and clinical connections supporting South Arkansas.", ctas: [["Become a partner", "/contact", "light"]] }) +
   section(head("Who we work with") + grid(5, [card({ ic: "home", title: "Families", text: "Our reason for being." }), card({ ic: "file", title: "Providers", text: "Referring professionals." }), card({ ic: "heart", title: "Donors", text: "Supporters who give." }), card({ ic: "users", title: "Community organizations", text: "Neighbors in service." }), card({ ic: "star", title: "Sponsors", text: "Businesses and groups." })])) +
-  section(`<div class="center stack" style="justify-items:center"><div class="pending">Partner logos will appear here once approved.</div>${cta({ h2: "Become a partner", p: "Together we can support more children and families.", buttons: [btn("Contact us", "/contact"), btn("Sponsorships", "/sponsorships", "secondary")] })}</div>`, "section--paper"));
+  section(`<div class="stack"><div class="section-head"><h2>Our Sponsors</h2></div>
+<h3 class="h-card" style="margin-bottom:1rem">Platinum</h3>
+<div class="grid grid--3" style="margin-bottom:2.5rem">${[1,2,3].map(() => `<div class="card card--center"><img src="${img("sponsor-platinum")}" alt="Platinum Sponsor" style="max-width:200px;width:100%"></div>`).join("")}</div>
+<h3 class="h-card" style="margin-bottom:1rem">Gold</h3>
+<div class="grid grid--4" style="margin-bottom:2.5rem">${[1,2,3,4].map(() => `<div class="card card--center"><img src="${img("sponsor-gold")}" alt="Gold Sponsor" style="max-width:180px;width:100%"></div>`).join("")}</div>
+<h3 class="h-card" style="margin-bottom:1rem">Silver</h3>
+<div class="grid grid--5" style="margin-bottom:2.5rem">${[1,2,3,4,5].map(() => `<div class="card card--center"><img src="${img("sponsor-silver")}" alt="Silver Sponsor" style="max-width:160px;width:100%"></div>`).join("")}</div>
+<h3 class="h-card" style="margin-bottom:1rem">Bronze</h3>
+<div class="grid grid--5">${[1,2,3,4,5].map(() => `<div class="card card--center"><img src="${img("sponsor-bronze")}" alt="Bronze Sponsor" style="max-width:140px;width:100%"></div>`).join("")}</div>
+</div>`, "section--paper") +
+  section(cta({ h2: "Become a partner", p: "Together we can support more children and families.", buttons: [btn("Contact us", "/contact"), btn("Sponsorships", "/sponsorships", "secondary")] })));
 
 /* ---------- Team ---------- */
 add("/our-team", "Our Team", "A dedicated team supporting children, families and our equine programs.",
@@ -204,6 +226,21 @@ add("/shop", "Shop", "Faith Reins merchandise supports awareness and mission con
   section(cta({ h2: "Giving is the strongest way to help.", buttons: [btn("Donate", "/give"), btn("Contact us", "/contact", "secondary")] }), "section--paper"));
 
 /* ---------- Legal ---------- */
+add("/legal", "Legal & Policies", "All policies, notices, and terms for Faith Reins Equestrian Center.",
+  `<section class="section"><div class="container">
+<div class="prose" style="margin-bottom:2.5rem"><h1>Policies &amp; Legal Notices</h1><p class="lead muted">Everything in one place. For questions about any policy, email <a href="mailto:info@faithreins.com">info@faithreins.com</a> or <a href="/contact">contact us online</a>.</p></div>
+${grid(3, [
+  card({ ic: "file", title: "Terms of Service", text: "Website use, disclaimer, intellectual property, and governing law.", href: "/terms-of-service", linkLabel: "Read" }),
+  card({ ic: "shield", title: "Privacy Policy", text: "What we collect, how we use it, and your rights.", href: "/privacy-policy", linkLabel: "Read" }),
+  card({ ic: "shield", title: "HIPAA Notice of Privacy Practices", text: "How we use and protect your child's health information.", href: "/hipaa-notice", linkLabel: "Read" }),
+  card({ ic: "heart", title: "Donation Policy", text: "Stewardship, recurring gifts, refunds, and acknowledgment.", href: "/donation-policy", linkLabel: "Read" }),
+  card({ ic: "check", title: "Returns & Shipping", text: "Returns, exchanges, and shipping for the Faith Reins store.", href: "/returns-policy", linkLabel: "Read" }),
+  card({ ic: "users", title: "Volunteer Policy", text: "Background checks, conduct standards, and safety requirements.", href: "/volunteer-policy", linkLabel: "Read" }),
+  card({ ic: "book", title: "Accessibility", text: "WCAG commitment, physical access, and communication accommodations.", href: "/accessibility", linkLabel: "Read" }),
+  card({ ic: "clock", title: "Cancellation Policy", text: "Notice requirements, no-show handling, and illness exceptions.", href: "/cancellation-policy", linkLabel: "Read" }),
+  card({ ic: "horse", title: "Equine Safety & Liability", text: "Arkansas Equine Liability Act notice and safety practices.", href: "/equine-safety", linkLabel: "Read" }),
+])}</div></section>`);
+
 const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
 
 add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Reins website.",
