@@ -343,10 +343,65 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
   section(head("Quick paths") + grid(4, [card({ title: "Appointments", text: "Book online.", href: "/book-online", linkLabel: "Request" }), card({ title: "Referrals", text: "For providers.", href: "/for-referring-providers", linkLabel: "Learn more" }), card({ title: "Giving", text: "Support the mission.", href: "/give", linkLabel: "Give" }), card({ title: "Sponsorships", text: "Partner with us.", href: "/sponsorships", linkLabel: "Learn more" })]), "section--paper"));
 
 /* ---------- Shop ---------- */
-const MERCH = [["Heritage Hoodie", "merch-men-hoodie"], ["Women's Hoodie", "merch-women-hoodie"], ["Children's Hoodie", "merch-children-hoodie"], ["Crewneck", "merch-crewneck"], ["Long Sleeve", "merch-long-sleeve"], ["Men's Tee", "merch-men-tee"], ["Women's Tee", "merch-women-tee"], ["Children's Tee", "merch-children-tee"], ["Men's Polo", "merch-men-polo"], ["Women's Polo", "merch-women-polo"], ["Youth Polo", "merch-youth-polo"], ["Caps", "merch-caps"], ["Beanie", "merch-beanie"], ["Coffee Mug", "merch-mug"], ["Travel Mug", "merch-travel-mug"], ["Keychains", "merch-keychains"], ["Stickers", "merch-stickers"]];
-add("/shop", "Shop", "Faith Reins merchandise supports awareness and mission connection.",
-  hero({ key: "shop", h1: "Wear the mission.", body: "Merchandise that connects you to Faith Reins.", short: true }) +
-  `<section class="section" id="shop-products"><div class="container">${head("Merchandise", "Online ordering is coming soon. For now, please give or contact us with merchandise questions.")}${grid(4, MERCH.map(([n, k]) => `<div class="media-card media-card--square"><img src="${img(k)}" alt="${n}" loading="lazy"><h3 class="h-small">${n}</h3></div>`))}</div></section>` +
+// [name, imageKey, price, sizes?]
+const MERCH = [
+  ["Heritage Hoodie",    "merch-men-hoodie",      "$45", "XS–3XL"],
+  ["Women's Hoodie",     "merch-women-hoodie",     "$42", "XS–2XL"],
+  ["Children's Hoodie",  "merch-children-hoodie",  "$32", "2T–Youth XL"],
+  ["Crewneck",           "merch-crewneck",          "$38", "XS–3XL"],
+  ["Long Sleeve",        "merch-long-sleeve",       "$30", "XS–3XL"],
+  ["Men's Tee",          "merch-men-tee",           "$24", "XS–3XL"],
+  ["Women's Tee",        "merch-women-tee",         "$22", "XS–2XL"],
+  ["Children's Tee",     "merch-children-tee",      "$18", "2T–Youth XL"],
+  ["Men's Polo",         "merch-men-polo",          "$32", "XS–3XL"],
+  ["Women's Polo",       "merch-women-polo",        "$30", "XS–2XL"],
+  ["Youth Polo",         "merch-youth-polo",        "$24", "YS–YXL"],
+  ["Caps",               "merch-caps",              "$22", "Adjustable"],
+  ["Beanie",             "merch-beanie",            "$18", "One size"],
+  ["Coffee Mug",         "merch-mug",               "$16", "11 oz"],
+  ["Travel Mug",         "merch-travel-mug",        "$22", "20 oz"],
+  ["Keychains",          "merch-keychains",         "$8",  null],
+  ["Stickers",           "merch-stickers",          "$4",  "3-pack"],
+];
+
+const merchCard = ([n, k, price, sizes]) =>
+  `<a class="merch-card" href="/shop/order?item=${encodeURIComponent(n)}">
+    <div class="merch-card__img"><img src="${img(k)}" alt="${esc(n)}" loading="lazy"></div>
+    <div class="merch-card__body">
+      <h3 class="merch-card__name">${esc(n)}</h3>
+      ${sizes ? `<p class="merch-card__sizes">${esc(sizes)}</p>` : ""}
+      <p class="merch-card__price">${price}</p>
+      <span class="merch-card__cta">Order →</span>
+    </div>
+  </a>`;
+
+const MERCH_STYLE = `<style>
+.merch-card{display:flex;flex-direction:column;border:1px solid #e0dbd4;border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s}
+.merch-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.09);transform:translateY(-2px)}
+.merch-card__img img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.merch-card__body{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.merch-card__name{font-weight:700;font-size:.95rem;margin:0}
+.merch-card__sizes{font-size:.78rem;color:#888;margin:0}
+.merch-card__price{font-family:'Noto Serif',serif;font-size:1.1rem;color:#3a6642;font-weight:600;margin:0}
+.merch-card__cta{font-size:.8rem;font-weight:600;color:#3a6642;margin-top:auto;padding-top:.4rem}
+</style>`;
+
+add("/shop", "Shop | Faith Reins", "Faith Reins merchandise — hoodies, tees, polos, accessories, and more.",
+  hero({ key: "shop", h1: "Wear the mission.", body: "Every purchase supports pediatric therapy and equine-assisted learning in South Arkansas.", short: true }) +
+  `<section class="section" id="shop-products"><div class="container">
+    ${head("Merchandise", "Order by email — we'll confirm availability, size, and payment.")}
+    <div class="grid grid--4">${MERCH.map(merchCard).join("")}</div>
+    ${MERCH_STYLE}
+  </div></section>` +
+  section(`<div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>How to order</h2>
+    <ol style="padding-left:1.25rem;line-height:2">
+      <li>Click any item above or email <a href="mailto:info@faithreins.com">info@faithreins.com</a></li>
+      <li>Tell us the item, size, and quantity</li>
+      <li>We confirm availability and send a payment link</li>
+      <li>Ships within 5–7 business days of payment</li>
+    </ol>
+    <p class="muted" style="font-size:.875rem">Proceeds support our mission. See our <a href="/returns-policy">Returns &amp; Shipping Policy</a> for exchanges and returns.</p>
+  </div><div class="panel">${form("contact", { submit: "Send order inquiry", success: "Thanks! We will follow up within one business day.", layout: "two" })}</div></div>`) +
   section(cta({ h2: "Giving is the strongest way to help.", buttons: [btn("Donate", "/give"), btn("Contact us", "/contact", "secondary")] }), "section--paper"));
 
 /* ---------- Legal ---------- */
