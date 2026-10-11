@@ -382,14 +382,79 @@ body.drawer-open { overflow: hidden; }
 .cart-item__img{width:72px;height:72px;object-fit:cover;border-radius:6px;border:1px solid #e0dbd4}
 .cart-item__info{display:flex;flex-direction:column;gap:2px}
 .cart-item__name{font-size:.875rem;font-weight:600;margin:0}
-.cart-item__size{font-size:.78rem;color:#888;margin:0}
+.cart-item__size{font-size:.78rem;color:#666;margin:0}
 .cart-item__price{font-size:.875rem;color:#3a6642;font-weight:600;margin:0}
 .cart-item__right{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
-.cart-remove{background:none;border:none;cursor:pointer;font-size:.75rem;color:#999;text-decoration:underline;padding:0}
+.cart-remove{background:none;border:none;cursor:pointer;font-size:.75rem;color:#666;text-decoration:underline;padding:0}
 .cart-foot{padding:1.25rem 1.5rem;border-top:1px solid #e0dbd4;display:flex;flex-direction:column;gap:.75rem}
 .cart-subtotal{display:flex;justify-content:space-between;font-weight:700;font-size:1rem}
 .cart-subtotal__val{color:#3a6642}
-.cart-note{font-size:.78rem;color:#888;margin:0}
+.cart-note{font-size:.78rem;color:#666;margin:0}
 .cart-continue{text-align:center;font-size:.85rem;color:#3a6642;text-decoration:underline}
 .btn--block{display:block;width:100%;text-align:center}
 body.cart-open{overflow:hidden}
+
+/* ── Print styles ── */
+@media print {
+  /* Hide everything non-content */
+  .site-header, .site-footer, .hero, .btn-row, .btn,
+  .newsletter-band, .cta-band, .cart-drawer, .cart-btn,
+  .drawer, .skip-link, .shop-filters, .size-btns,
+  .qty-row, .atb-btn, .atb-confirm, .map-wrap,
+  [data-wix-form], [data-give], nav { display: none !important; }
+
+  /* Base */
+  body { background: #fff; color: #000; font-size: 12pt; font-family: Georgia, serif; }
+  .container { max-width: 100%; padding: 0; }
+  .section { padding: 1.5rem 0; }
+  .section--paper { background: #fff; }
+
+  /* Typography */
+  h1, h2, h3 { color: #000; page-break-after: avoid; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 15pt; margin-top: 1.5rem; }
+  h3 { font-size: 12pt; }
+  p, li { line-height: 1.6; orphans: 3; widows: 3; }
+
+  /* Links — show URL */
+  a[href]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  a[href^="#"]::after, a[href^="javascript"]::after { content: ""; }
+
+  /* Policy prose */
+  .prose { max-width: 100%; }
+  details { display: block; }
+  details summary::marker { display: none; }
+  details summary { font-weight: bold; margin-bottom: .25rem; }
+  details > div { display: block !important; }
+
+  /* Print header: show org name + page URL as footer */
+  body::before {
+    content: "Faith Reins Equestrian Center — faithreins.org";
+    display: block; font-size: 9pt; color: #555;
+    border-bottom: 1px solid #ccc; padding-bottom: .5rem; margin-bottom: 1rem;
+  }
+  body::after {
+    content: "Printed from " attr(data-url);
+    display: block; font-size: 8pt; color: #888;
+    border-top: 1px solid #ccc; padding-top: .5rem; margin-top: 2rem;
+  }
+}
+
+/* ── Sticky mobile appointment CTA ── */
+.sticky-appt { display: none; }
+@media (max-width: 767px) {
+  .sticky-appt {
+    display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
+    background: var(--green); padding: .9rem 1rem;
+    box-shadow: 0 -2px 12px rgba(0,0,0,.15);
+    transform: translateY(100%); transition: transform .25s ease;
+  }
+  .sticky-appt.is-visible { transform: translateY(0); }
+  .sticky-appt a {
+    display: block; text-align: center; color: #fff; font-weight: 700;
+    font-size: 1rem; text-decoration: none; letter-spacing: .02em;
+    padding: .1rem 0;
+  }
+  /* Prevent content from hiding behind bar */
+  body.has-sticky-appt { padding-bottom: 60px; }
+}

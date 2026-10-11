@@ -34,7 +34,7 @@ function updateBadge(items) {
 let drawerEl = null;
 
 function buildDrawer() {
-  drawerEl = h("div", { class: "cart-drawer", id: "cart-drawer", role: "dialog", "aria-modal": "true", "aria-label": "Shopping bag", hidden: true });
+  drawerEl = h("div", { class: "cart-drawer", id: "cart-drawer", role: "dialog", "aria-modal": "true", "aria-labelledby": "cart-drawer-title", hidden: true });
   document.body.append(drawerEl);
   renderDrawer();
 }
@@ -44,11 +44,11 @@ function renderDrawer() {
   const items = load();
   drawerEl.innerHTML = "";
 
-  const scrim = h("div", { class: "cart-scrim", onclick: closeCart });
+  const scrim = h("div", { class: "cart-scrim", onclick: closeCart, "aria-hidden": "true" });
   const panel = h("div", { class: "cart-panel" });
   const top = h("div", { class: "cart-panel__top" });
   top.append(
-    h("h2", { class: "cart-panel__title" }, `Bag (${count(items)})`),
+    h("h2", { class: "cart-panel__title", id: "cart-drawer-title" }, `Bag (${count(items)})`),
     h("button", { class: "cart-close", type: "button", "aria-label": "Close bag", onclick: closeCart }, "×")
   );
   panel.append(top);
@@ -123,19 +123,44 @@ function removeItem(item) {
   renderDrawer();
 }
 
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+let trapController = null;
+
+function trapFocus(container) {
+  if (trapController) trapController.abort();
+  trapController = new AbortController();
+  const { signal } = trapController;
+  container.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab") return;
+    const els = [...container.querySelectorAll(FOCUSABLE)].filter(
+      (el) => !el.closest("[hidden]") && el.offsetParent !== null
+    );
+    if (!els.length) return;
+    const first = els[0], last = els[els.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  }, { signal });
+}
+
 function openCart() {
   renderDrawer();
   if (!drawerEl) return;
   drawerEl.hidden = false;
   document.body.classList.add("cart-open");
+  const panel = $(".cart-panel", drawerEl);
   const close = $(".cart-close", drawerEl);
   if (close) close.focus();
+  if (panel) trapFocus(panel);
 }
 
 function closeCart() {
   if (!drawerEl) return;
   drawerEl.hidden = true;
   document.body.classList.remove("cart-open");
+  if (trapController) { trapController.abort(); trapController = null; }
   document.getElementById("cart-btn")?.focus();
 }
 

@@ -34,7 +34,7 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
 <style>
 .testimonial{background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem;margin:0;display:flex;flex-direction:column;gap:1rem}
 .testimonial__quote{font-family:'Noto Serif',serif;font-size:1rem;line-height:1.7;color:#2a2520;margin:0;font-style:italic}
-.testimonial__attr{font-size:.85rem;color:#888;margin:0;font-style:normal}
+.testimonial__attr{font-size:.85rem;color:#666;margin:0;font-style:normal}
 </style>
 </div></section>` +
   section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected.</h2><p class="lead muted">Get updates on programs, events, and stories from Faith Reins delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", layout: "inline", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div><style>.newsletter-band{display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap}.newsletter-band__copy{flex:1 1 260px}.newsletter-band__form{flex:2 1 320px}</style>`, "section--paper"));
@@ -76,6 +76,9 @@ add("/services-programs", "Services & Programs", "Occupational therapy, physical
   ])) + section(startCta(), "section--paper"));
 
 /* ---------- Service detail pages ---------- */
+const STICKY_APPT = `<div class="sticky-appt" id="sticky-appt" aria-label="Appointment CTA"><a href="/book-online">Request an appointment →</a></div>
+<script>(function(){var el=document.getElementById('sticky-appt');if(!el)return;document.body.classList.add('has-sticky-appt');var hero=document.querySelector('.hero');function check(){var heroBottom=hero?hero.getBoundingClientRect().bottom:0;el.classList.toggle('is-visible',heroBottom<0);}window.addEventListener('scroll',check,{passive:true});check();})();</script>`;
+
 function service({ route, key, name, h1, body, overview, areasTitle, areas, journeyTitle, journey, relatedList }) {
   add(route, name, body,
     hero({ key, h1, body, ctas: [["Request an appointment", "/book-online", "light"]] }) +
@@ -83,7 +86,8 @@ function service({ route, key, name, h1, body, overview, areasTitle, areas, jour
     section(head(areasTitle) + grid(3, areas.map(([t, p]) => card({ title: t, text: p }))), "section--paper") +
     section(`<div class="split split--wide-text"><div class="stack"><h2>${esc(journeyTitle)}</h2></div><div>${steps(journey)}</div></div>`) +
     section(cta({ h2: "A clear first step.", p: "Send a request or talk with our team about coverage and next steps.", buttons: [btn("Request an appointment", "/book-online"), btn("Payment & Insurance", "/payment-and-insurance", "secondary"), btn("For families", "/for-families", "secondary")] }), "section--paper") +
-    related(relatedList));
+    related(relatedList) +
+    STICKY_APPT);
 }
 const SV = Object.fromEntries(SVC.map(([t, p, h]) => [h, [t, p, h]]));
 const rel = (...hs) => hs.map((h) => SV[h]);
@@ -292,7 +296,7 @@ ${head("Leadership & Clinical Team")}
 .team-card__photo{width:100%;aspect-ratio:8/9;object-fit:cover}
 .team-card__body{padding:1.25rem 1.25rem 1.5rem}
 .team-card__title{font-weight:600;font-size:.9rem;color:var(--color-brand,#3a6642);margin:.15rem 0 .1rem}
-.team-card__creds{font-size:.8rem;color:#888;margin-bottom:.6rem}
+.team-card__creds{font-size:.8rem;color:#666;margin-bottom:.6rem}
 .team-card__bio{font-size:.875rem;line-height:1.55;color:#444}
 .team-card--hiring{border:2px dashed #c8a030;background:#fffdf0}
 .team-card__hiring-badge{background:#c8a030;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .75rem}
@@ -317,7 +321,7 @@ const HORSES = [
 add("/our-horses", "Our Horses", "Meet the equine partners at Faith Reins: big personalities and gentle connections.",
   hero({ key: "our-horses", h1: "Meet our equine partners.", body: "Big personalities. Gentle connections.", ctas: [["Support", "/give", "accent"]] }) +
   section(`<div class="prose"><h2>Calm partners in learning</h2><p>Horses give children a calm, honest partner. Our herd is selected and cared for with one question in mind: does this horse help a child feel safe enough to grow? Each one has a distinct personality, and part of the work is helping children and horses find their rhythm together.</p></div>`) +
-  `<section class="section section--paper"><div class="container">${grid(2, HORSES.map(([n, k, bio, note]) => `<div class="horse-card"><div class="horse-card__img"><img src="${img(k)}" alt="${n}" loading="lazy"></div><div class="horse-card__body"><h3>${n}</h3><p>${esc(bio)}</p>${note ? `<p class="horse-card__note">${esc(note)}</p>` : ""}</div></div>`))}<style>.horse-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #e0dbd4;border-radius:10px;overflow:hidden}.horse-card__img img{width:100%;height:100%;object-fit:cover;display:block}.horse-card__body{padding:1.5rem 1.75rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem}.horse-card__body h3{font-family:'Noto Serif',serif;font-size:1.25rem;margin:0}.horse-card__body p{font-size:.9rem;line-height:1.65;margin:0;color:#444}.horse-card__note{font-size:.8rem!important;color:#888!important;font-style:italic}@media(max-width:600px){.horse-card{grid-template-columns:1fr}.horse-card__img img{aspect-ratio:16/9}}</style></div></section>` +
+  `<section class="section section--paper"><div class="container">${grid(2, HORSES.map(([n, k, bio, note]) => `<div class="horse-card"><div class="horse-card__img"><img src="${img(k)}" alt="${n}" loading="lazy"></div><div class="horse-card__body"><h3>${n}</h3><p>${esc(bio)}</p>${note ? `<p class="horse-card__note">${esc(note)}</p>` : ""}</div></div>`))}<style>.horse-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #e0dbd4;border-radius:10px;overflow:hidden}.horse-card__img img{width:100%;height:100%;object-fit:cover;display:block}.horse-card__body{padding:1.5rem 1.75rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem}.horse-card__body h3{font-family:'Noto Serif',serif;font-size:1.25rem;margin:0}.horse-card__body p{font-size:.9rem;line-height:1.65;margin:0;color:#444}.horse-card__note{font-size:.8rem!important;color:#666!important;font-style:italic}@media(max-width:600px){.horse-card{grid-template-columns:1fr}.horse-card__img img{aspect-ratio:16/9}}</style></div></section>` +
   section(cta({ h2: "Learn through connection", buttons: [btn("Equine-Assisted Learning", "/equine-assisted-learning"), btn("Services & Programs", "/services-programs", "secondary"), btn("Contact", "/contact", "secondary")] })));
 
 /* ---------- Join ---------- */
@@ -358,8 +362,8 @@ ${head("Open Positions")}
 <style>
 .job-listing{background:var(--color-surface,#fff);border:1px solid #ddd;border-radius:8px;padding:1.75rem 2rem;max-width:740px;margin-top:1.5rem}
 .job-listing__header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
-.job-listing__meta{font-size:.85rem;color:#888;margin:.2rem 0 0}
-.job-listing h4{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#555;margin:1.25rem 0 .4rem}
+.job-listing__meta{font-size:.85rem;color:#666;margin:.2rem 0 0}
+.job-listing h4{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#444;margin:1.25rem 0 .4rem}
 .job-listing ul{padding-left:1.2rem;margin-bottom:.5rem}
 .job-listing li{font-size:.9rem;margin-bottom:.3rem}
 .job-listing p{font-size:.9rem;line-height:1.6}
@@ -417,7 +421,7 @@ const SHOP_STYLE = `<style>
 .merch-card__img img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
 .merch-card__body{padding:1rem 1.1rem 1.25rem;display:flex;flex-direction:column;gap:.25rem;flex:1}
 .merch-card__name{font-weight:700;font-size:.95rem;margin:0;color:#1a1a1a}
-.merch-card__cat{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#888;margin:0}
+.merch-card__cat{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#666;margin:0}
 .merch-card__price{font-family:'Noto Serif',serif;font-size:1.1rem;color:#3a6642;font-weight:600;margin:.25rem 0 0}
 .merch-card__cta{font-size:.8rem;font-weight:600;color:#3a6642;margin-top:auto;padding-top:.5rem}
 </style>`;
@@ -426,7 +430,7 @@ const PROD_STYLE = `<style>
 .product-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .product-img img{width:100%;border-radius:10px;aspect-ratio:1;object-fit:cover;display:block}
 .product-info{display:flex;flex-direction:column;gap:1rem}
-.product-cat{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:#888}
+.product-cat{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:#666}
 .product-name{font-family:'Noto Serif',serif;font-size:2rem;line-height:1.2;margin:0}
 .product-price{font-size:1.5rem;font-weight:700;color:#3a6642}
 .product-desc{color:#444;line-height:1.7;margin:0}
@@ -483,7 +487,7 @@ add("/shop", "Shop | Faith Reins", "Faith Reins merchandise — hoodies, tees, p
 MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
   const slug = toSlug(name);
   const sizeBlock = sizes
-    ? `<p class="size-label">Size <span id="size-display" style="font-weight:400;color:#888"></span></p>
+    ? `<p class="size-label">Size <span id="size-display" style="font-weight:400;color:#666"></span></p>
        <div class="size-btns" id="size-btns" role="group" aria-label="Select a size">
          ${sizes.map(s => `<button class="size-btn" type="button" data-size="${esc(s)}" aria-pressed="false">${esc(s)}</button>`).join("")}
        </div>`
@@ -544,7 +548,7 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
   };
   add(`/shop/${slug}`, `${name} | Shop | Faith Reins`, desc,
     `<section class="section"><div class="container">
-<p style="font-size:.875rem;color:#888;margin-bottom:2rem"><a href="/shop">← Shop</a> &nbsp;/&nbsp; ${esc(cat)}</p>
+<p style="font-size:.875rem;color:#666;margin-bottom:2rem"><a href="/shop">← Shop</a> &nbsp;/&nbsp; ${esc(cat)}</p>
 <div class="product-layout">
   <div class="product-img"><img src="${img(k)}" alt="${esc(name)}"></div>
   <div class="product-info">
@@ -561,7 +565,7 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
     </div>
     <button class="atb-btn" id="atb" type="button"${sizes ? " disabled" : ""}>Add to bag</button>
     <p class="atb-confirm" id="atb-conf" aria-live="polite"></p>
-    <p style="font-size:.8rem;color:#888">Ships within 5–7 business days. See <a href="/returns-policy">Returns &amp; Shipping Policy</a>.</p>
+    <p style="font-size:.8rem;color:#666">Ships within 5–7 business days. See <a href="/returns-policy">Returns &amp; Shipping Policy</a>.</p>
   </div>
 </div>
 ${PROD_STYLE}
@@ -589,9 +593,10 @@ ${grid(3, [
 ])}</div></section>`);
 
 const legalContact = `<div class="card" style="margin-top:2rem"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
+const printBtn = `<div class="print-btn-wrap"><button class="print-btn" type="button" onclick="window.print()">Print this page</button></div><style>.print-btn-wrap{display:flex;justify-content:flex-end;margin-bottom:1.5rem}@media print{.print-btn-wrap{display:none}}.print-btn{background:none;border:1px solid #ccc;border-radius:6px;padding:.4em 1em;font-size:.85rem;cursor:pointer;color:#444}.print-btn:hover{border-color:#3a6642;color:#3a6642}</style>`;
 
 add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Reins website.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Terms of Service</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>1. Acceptance of Terms</h2>
@@ -617,7 +622,7 @@ add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Rei
 ${legalContact}</div></div></section>`);
 
 add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins website.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Privacy Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>1. Overview</h2>
@@ -644,7 +649,7 @@ add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins web
 ${legalContact}</div></div></section>`);
 
 add("/donation-policy", "Donation Policy", "Donation policy and stewardship commitments for Faith Reins.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Donation Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Our Commitment to Stewardship</h2>
@@ -666,7 +671,7 @@ add("/donation-policy", "Donation Policy", "Donation policy and stewardship comm
 ${legalContact}</div></div></section>`);
 
 add("/returns-policy", "Returns & Shipping Policy", "Returns, exchanges, and shipping policy for the Faith Reins online store.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Returns &amp; Shipping Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Returns &amp; Exchanges</h2>
@@ -693,7 +698,7 @@ add("/returns-policy", "Returns & Shipping Policy", "Returns, exchanges, and shi
 ${legalContact}</div></div></section>`);
 
 add("/volunteer-policy", "Volunteer Policy", "Volunteer guidelines, conduct standards, and background check requirements for Faith Reins.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Volunteer Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Our Volunteers</h2>
@@ -727,7 +732,7 @@ add("/volunteer-policy", "Volunteer Policy", "Volunteer guidelines, conduct stan
 ${legalContact}</div></div></section>`);
 
 add("/accessibility", "Accessibility", "Accessibility commitment and accommodations for Faith Reins.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Accessibility</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Our Commitment</h2>
@@ -751,7 +756,7 @@ add("/accessibility", "Accessibility", "Accessibility commitment and accommodati
 ${legalContact}</div></div></section>`);
 
 add("/hipaa-notice", "HIPAA Notice of Privacy Practices", "How Faith Reins uses and protects your health information under HIPAA.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Notice of Privacy Practices</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; THIS NOTICE DESCRIBES HOW HEALTH INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</p>
 <h2>Who We Are</h2>
@@ -780,7 +785,7 @@ add("/hipaa-notice", "HIPAA Notice of Privacy Practices", "How Faith Reins uses 
 ${legalContact}</div></div></section>`);
 
 add("/cancellation-policy", "Cancellation Policy", "Appointment cancellation, rescheduling, and no-show policy for Faith Reins therapy services.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Cancellation Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Why Consistent Attendance Matters</h2>
@@ -802,7 +807,7 @@ add("/cancellation-policy", "Cancellation Policy", "Appointment cancellation, re
 ${legalContact}</div></div></section>`);
 
 add("/equine-safety", "Equine Safety & Liability Notice", "Safety guidelines and liability notice for equine-assisted activities at Faith Reins.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Equine Safety &amp; Liability Notice</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <div class="notice"><strong>Arkansas Equine Liability Act Notice:</strong> Under Arkansas law (Ark. Code § 16-120-201 et seq.), an equine activity sponsor or equine professional is not liable for an injury to or the death of a participant in equine activities resulting from the inherent risks of equine activities.</div>
@@ -835,7 +840,7 @@ add("/equine-safety", "Equine Safety & Liability Notice", "Safety guidelines and
 ${legalContact}</div></div></section>`);
 
 add("/photo-consent", "Photo & Media Consent Policy", "How Faith Reins uses photographs and videos of clients, families, and participants.",
-  `<section class="section"><div class="container"><div class="prose">
+  `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Photo &amp; Media Consent Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>Our Commitment</h2>
@@ -919,7 +924,7 @@ POSTS.forEach(({ slug, title, date, tag, summary, body }) => {
 <p class="lead muted">${summary}</p>
 <hr style="border:none;border-top:1px solid #e0dbd4;margin:1.5rem 0">
 ${body}
-<style>.post-meta{font-size:.85rem;color:#888;margin-bottom:1.5rem}.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}</style>
+<style>.post-meta{font-size:.85rem;color:#666;margin-bottom:1.5rem}.post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}</style>
 </div></div></section>` +
     section(cta({ h2: "Want to stay connected?", p: "Sign up for updates from Faith Reins.", buttons: [btn("Contact us", "/contact"), btn("Our programs", "/services-programs", "secondary")] }), "section--paper"));
 });
@@ -934,10 +939,10 @@ add("/news", "News & Updates | Faith Reins", "Stories, program updates, and news
   .post-card{display:block;background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem 2rem;text-decoration:none;color:inherit;transition:box-shadow .15s}
   .post-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
   .post-card__meta{display:flex;gap:.75rem;align-items:center;margin-bottom:.75rem}
-  .post-date{font-size:.85rem;color:#888}
+  .post-date{font-size:.85rem;color:#666}
   .post-tag{background:#e8f0e9;color:#3a6642;border-radius:4px;padding:.2em .55em;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
   .post-card__title{font-family:'Noto Serif',serif;font-size:1.35rem;margin:0 0 .6rem}
-  .post-card__summary{color:#555;margin:0 0 1rem;line-height:1.6}
+  .post-card__summary{color:#444;margin:0 0 1rem;line-height:1.6}
   .post-card__read{font-size:.875rem;color:#3a6642;font-weight:600}
   </style>
   </div></section>` +
