@@ -105,28 +105,3 @@ with open(os.path.join(DIST, "_wix", "pages.json"), "w") as f:
     json.dump(pages, f)
 
 print(f"Done — {len(pages)} routes, hrefs updated.")
-
-# Step 4 (stage only): keep the stage site out of search engines.
-# Canonical URLs still point at www.faithreins.com, so production keeps the SEO credit.
-if os.environ.get("DEPLOY_TARGET", "").lower() == "stage":
-    with open(os.path.join(DIST, "robots.txt"), "w") as f:
-        f.write("User-agent: *\nDisallow: /\n")
-    for name in ("sitemap-index.xml", "sitemap-0.xml"):
-        p = os.path.join(DIST, name)
-        if os.path.exists(p):
-            os.remove(p)
-    meta = '<meta name="robots" content="noindex, nofollow">'
-    tagged = 0
-    for root, dirs, files in os.walk(DIST):
-        for fname in files:
-            if not fname.endswith(".html"):
-                continue
-            fpath = os.path.join(root, fname)
-            with open(fpath, "r", encoding="utf-8") as f:
-                html = f.read()
-            if meta in html or "<head>" not in html:
-                continue
-            with open(fpath, "w", encoding="utf-8") as f:
-                f.write(html.replace("<head>", "<head>" + meta, 1))
-            tagged += 1
-    print(f"Stage: robots.txt disallows all, sitemaps removed, noindex added to {tagged} pages.")

@@ -1,55 +1,42 @@
 name: Deploy web
-# Builds the Astro site and releases it to a Wix Headless site.
+# Builds the Astro site and ships it to the Wix Headless site with the Wix CLI.
 #
-#   Pull request into main  -> stage       (stage.faithreins.com)
-#   Push / merge to main    -> stage       (stage.faithreins.com)
-#   GitHub release published -> production (www.faithreins.com)
-#   Manual run               -> whichever target you pick
+#   Pull request into main    -> `wix preview`; the preview link is posted on the PR
+#                                (one comment, updated on every push) and in the run summary
+#   GitHub release published  -> `wix release` to production (www.faithreins.com)
+#   Manual run (Actions tab)  -> `wix release` to production, e.g. to re-publish or clear the cache
 #
-# Setup (Settings > Environments):
-#   stage:      variable WIX_SITE_ID = the stage Wix site's ID (required)
-#   production: variable WIX_SITE_ID optional; defaults to 2d8c6050-5730-4bed-9c7a-266ca7bd00b4
-#               (add required reviewers here if you want a manual approval before going live)
-# Secrets (repo or per environment):
-#   WIX_API_KEY    Wix API key from the account that owns the site(s)
-#   WIX_ACCOUNT_ID Wix account ID (also read from ACCOUNT_ID / WIX_ACCOUNT, secret or variable)
+# Requires repo secret WIX_API_KEY: a Wix API key from the account that owns the site.
+# The site itself comes from wix.config.json.
 
 on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, ready_for_review]
-  push:
-    branches: [main]
   release:
     types: [published]
   workflow_dispatch:
-    inputs:
-      target:
-        description: Where to deploy
-        type: choice
-        options: [stage, production]
-        default: stage
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
+
+env:
+  WIX_CLI: "@wix/cli@latest"
 
 jobs:
-  build-release:
-    # Skip drafts and PRs from forks (they can't read secrets, and shouldn't deploy).
+  preview:
+    name: Preview build
+    # Skip drafts and PRs from forks (they can't read secrets and shouldn't upload to Wix).
     if: >-
-      github.event_name != 'pull_request' ||
-      (github.event.pull_request.head.repo.full_name == github.repository &&
-       !github.event.pull_request.draft)
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      !github.event.pull_request.draft
     runs-on: ubuntu-latest
-    environment:
-      name: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
-      url: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'https://www.faithreins.com' || 'https://stage.faithreins.com' }}
     concurrency:
-      # One deploy per target at a time; never cancel one mid-upload.
-      group: deploy-web-${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
-      cancel-in-progress: false
-    env:
-      DEPLOY_TARGET: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
+      # A newer push to the same PR supersedes an in-flight preview.
+      group: wix-preview-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -57,47 +44,129 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
 
-      - name: Resolve target site
+      - name: Build site
+        run: |
+          npm ci || npm install
+          npm run build
+          python scripts/wix-postbuild.py
+
+      - name: Log in to Wix
         env:
-          SITE_VAR: ${{ vars.WIX_SITE_ID }}
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-          C1: ${{ secrets.WIX_ACCOUNT_ID }}
-          C2: ${{ vars.WIX_ACCOUNT_ID }}
-          C3: ${{ secrets.ACCOUNT_ID }}
-          C4: ${{ vars.ACCOUNT_ID }}
-          C5: ${{ secrets.WIX_ACCOUNT }}
-          C6: ${{ vars.WIX_ACCOUNT }}
         run: |
           if [ -z "$WIX_API_KEY" ]; then
-            echo "::error::Secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
+            echo "::error::Repo secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
             exit 1
           fi
-          site=$(echo "$SITE_VAR" | tr -d '[:space:]')
-          if [ -z "$site" ] && [ "$DEPLOY_TARGET" = "production" ]; then
-            site=2d8c6050-5730-4bed-9c7a-266ca7bd00b4
-          fi
-          if [ -z "$site" ]; then
-            echo "::error::Variable WIX_SITE_ID is not set on the '$DEPLOY_TARGET' environment. Add it under Settings > Environments > $DEPLOY_TARGET."
-            exit 1
-          fi
-          if [ "$DEPLOY_TARGET" = "stage" ] && [ "$site" = "2d8c6050-5730-4bed-9c7a-266ca7bd00b4" ]; then
-            echo "::error::The stage environment points at the production Wix site. Give stage its own WIX_SITE_ID."
-            exit 1
-          fi
-          echo "WIX_SITE_ID=$site" >> "$GITHUB_ENV"
-          for n in 1 2 3 4 5 6; do
-            v=$(eval echo "\$C$n" | tr -d '[:space:]')
-            if [ -n "$v" ]; then echo "WIX_ACCOUNT_ID=$v" >> "$GITHUB_ENV"; break; fi
-          done
-          echo "::notice title=target::$DEPLOY_TARGET -> Wix site $site"
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
 
-      - run: npm ci || npm install
-      - run: npm run build
-      - name: Prepare output for Wix hosting
-        run: python scripts/wix-postbuild.py
+      - name: Create Wix preview
+        id: wix
+        run: |
+          set -o pipefail
+          npx --yes -p "$WIX_CLI" wix preview 2>&1 | tee preview.log
+          # Pick the preview link out of the CLI output (plain text or JSON).
+          urls=$(grep -oE 'https://[^"'"'"' )<>]+' preview.log | sed 's/[.,;]*$//' | grep -viE 'dev\.wix\.com/docs' | awk '!seen[$0]++')
+          url=$(echo "$urls" | grep -iE 'preview|wixsite|wix-?host|wixstudio' | head -1)
+          [ -z "$url" ] && url=$(echo "$urls" | head -1)
+          if [ -z "$url" ]; then
+            echo "::error::wix preview finished but no URL was found in its output (see log above)."
+            exit 1
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Wix preview"
+            echo
+            echo "**[$url]($url)**"
+            echo
+            echo "Built from \`${GITHUB_SHA::7}\` for PR #${{ github.event.pull_request.number }}."
+            if [ "$(echo "$urls" | wc -l)" -gt 1 ]; then
+              echo
+              echo "<details><summary>All links from the CLI</summary>"
+              echo
+              echo "$urls" | sed 's/^/- /'
+              echo
+              echo "</details>"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload build to Wix
+      - name: Post preview link on the PR
+        uses: actions/github-script@v7
+        env:
+          PREVIEW_URL: ${{ steps.wix.outputs.url }}
+        with:
+          script: |
+            const marker = '<!-- wix-preview-link -->';
+            const sha = context.payload.pull_request.head.sha.slice(0, 7);
+            const when = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', dateStyle: 'medium', timeStyle: 'short' });
+            const body = [
+              marker,
+              '### Preview this change',
+              '',
+              `**[Open the preview site](${process.env.PREVIEW_URL})**`,
+              '',
+              `Latest build: \`${sha}\` · ${when} (Central). This link is updated on every push to this PR, so it always shows the newest version.`,
+              '',
+              '<sub>Forms, donations and the store on the preview use the live Wix backend.</sub>',
+            ].join('\n');
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number, per_page: 100 });
+            const existing = comments.find(c => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
+
+  release:
+    name: Release to production
+    # Published releases (not pre-releases) and manual runs.
+    if: >-
+      (github.event_name == 'release' && !github.event.release.prerelease) ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: wix-release-production
+      cancel-in-progress: false
+    environment:
+      name: production
+      url: https://www.faithreins.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Build site
+        run: |
+          npm ci || npm install
+          npm run build
+          python scripts/wix-postbuild.py
+
+      - name: Log in to Wix
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-          DEPLOY_LABEL: ${{ env.DEPLOY_TARGET }}
-        run: bash scripts/wix-deploy.sh
+        run: |
+          if [ -z "$WIX_API_KEY" ]; then
+            echo "::error::Repo secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+
+      - name: Release to Wix
+        run: |
+          set -o pipefail
+          npx --yes -p "$WIX_CLI" wix release 2>&1 | tee release.log
+          {
+            echo "## Released to production"
+            echo
+            echo "Version \`${GITHUB_REF_NAME}\` (\`${GITHUB_SHA::7}\`) is live at https://www.faithreins.com"
+            echo
+            echo "<details><summary>Links from the CLI</summary>"
+            echo
+            grep -oE 'https://[^"'"'"' )<>]+' release.log | sed 's/[.,;]*$//' | awk '!seen[$0]++' | sed 's/^/- /'
+            echo
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"
