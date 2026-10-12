@@ -55,5 +55,5 @@ test("nav links are present on every page", async ({ page }) => {
 
 test("/book-online redirects to /contact", async ({ page }) => {
   await page.goto("/book-online");
-  await page.waitForURL("**/contact");
+  await page.waitForURL(/\/contact\/?$/);
 });

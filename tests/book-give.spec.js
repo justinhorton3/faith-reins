@@ -30,7 +30,7 @@ test.describe.skip("Staging-only manual checks (see comment above)", () => {});
 test.describe("Book Online (retired — redirects to /contact)", () => {
   test("redirects to /contact", async ({ page }) => {
     await page.goto("/book-online");
-    await page.waitForURL("**/contact");
+    await page.waitForURL(/\/contact\/?$/);
     await expect(page.locator("h1")).toContainText("We're here");
   });
 });
