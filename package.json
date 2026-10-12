@@ -9,7 +9,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@astrojs/node": "^9.5.5",
+    "@astrojs/node": "^11.1.7",
     "@astrojs/react": "^7.0.1",
     "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.1.7",

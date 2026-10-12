@@ -12,7 +12,10 @@ import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 
-const root = join(process.cwd(), "dist");
+// @astrojs/node's adapter splits output into dist/client (static) + dist/server (SSR entry).
+// This server only covers the static half, same as before — on-demand pages (account.astro,
+// API routes) need the real Node server or Wix's own hosting to actually respond.
+const root = join(process.cwd(), "dist", "client");
 const port = Number(process.argv[2] || 4321);
 
 const TYPES = {

@@ -7,5 +7,14 @@
     "dashboard": {
       "main": "https://manage.wix.com/dashboard/2008223c-2538-4263-9893-6a9b391ded03?apps-override=c3074e93-02c7-4ed3-b21b-01dc7aa234f5"
     }
+  },
+  "preview": {
+    "id": "6a4c1592-3f91-420f-9b6f-91042b53d147",
+    "site": {
+      "main": "https://dtdsrm-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com"
+    },
+    "dashboard": {
+      "main": "https://manage.wix.com/dashboard/2d8c6050-5730-4bed-9c7a-266ca7bd00b4?apps-override=6a4c1592-3f91-420f-9b6f-91042b53d147"
+    }
   }
 }

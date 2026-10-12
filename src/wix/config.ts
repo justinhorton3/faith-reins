@@ -12,4 +12,4 @@ export const WIX_CLIENT_ID: string | null = null;
 // custom credential form. In managed Astro it writes the resulting member
 // tokens into Astro's wixSession cookie, so subsequent ambient SDK calls use
 // that same member identity.
-export const WIX_MEMBERS_CLIENT_ID: string | null = "186d8418-21e0-44ac-8bad-ef95da411f9d";
+export const WIX_MEMBERS_CLIENT_ID: string | null = "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12";

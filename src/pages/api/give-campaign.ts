@@ -1,8 +1,7 @@
 // Validated endpoint serving the Give page's donation campaign details.
 //
-// Reading the campaign directly with the site's anonymous visitor token fails outright
-// (confirmed empirically — same class of problem as Wix Forms), so this is elevated
-// server-side instead. Read-only, no user input, nothing to validate.
+// Elevated server-side to read the campaign regardless of its visibility/permission
+// settings. Read-only, no user input, nothing to validate.
 import type { APIRoute } from "astro";
 import { auth } from "@wix/essentials";
 import { donationCampaigns } from "@wix/donations";

@@ -1,5 +1,5 @@
 // Faith Reins browser script: drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
-const CLIENT = "186d8418-21e0-44ac-8bad-ef95da411f9d";
+const CLIENT = "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
