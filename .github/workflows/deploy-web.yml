@@ -28,6 +28,36 @@ jobs:
       - run: npm run build
       - name: Prepare output for Wix hosting
         run: python scripts/wix-postbuild.py
+      - name: Find Wix account ID
+        env:
+          C1: ${{ secrets.WIX_ACCOUNT_ID }}
+          C2: ${{ vars.WIX_ACCOUNT_ID }}
+          C3: ${{ secrets.ACCOUNT_ID }}
+          C4: ${{ vars.ACCOUNT_ID }}
+          C5: ${{ secrets.WIX_ACCOUNT }}
+          C6: ${{ vars.WIX_ACCOUNT }}
+        run: |
+          for n in 1 2 3 4 5 6; do
+            v=$(eval echo "\$C$n" | tr -d '[:space:]')
+            if [ -n "$v" ]; then
+              echo "WIX_ACCOUNT_ID=$v" >> "$GITHUB_ENV"
+              echo "::notice title=account id::found in candidate $n (1/2=WIX_ACCOUNT_ID secret/var, 3/4=ACCOUNT_ID, 5/6=WIX_ACCOUNT), length ${#v}"
+              exit 0
+            fi
+          done
+          echo "::warning title=account id::No account ID found under WIX_ACCOUNT_ID, ACCOUNT_ID or WIX_ACCOUNT (secret or variable)"
+      - name: Check API key against Wix
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          [ -z "$WIX_ACCOUNT_ID" ] && { echo "::warning::skipping key check, no account ID"; exit 0; }
+          code=$(curl -sS -o sites.json -w '%{http_code}' -X POST https://www.wixapis.com/site-list/v2/sites/query \
+            -H "Authorization: $WIX_API_KEY" -H "wix-account-id: $WIX_ACCOUNT_ID" -H 'Content-Type: application/json' \
+            -d '{"query":{"filter":{"namespace":"HEADLESS"},"cursorPaging":{"limit":100}}}')
+          found=$(grep -c '2d8c6050-5730-4bed-9c7a-266ca7bd00b4' sites.json || true)
+          echo "::notice title=key check::sites query HTTP $code, live site visible: $found"
+          [ "$code" != "200" ] && echo "::error title=key check::$(head -c 300 sites.json)"
+          true
       - name: Log in to Wix
         run: npx --yes @wix/cli@latest login --api-key "$WIX_API_KEY"
         env:
@@ -36,6 +66,7 @@ jobs:
         env:
           CI: "true"
           COLUMNS: "400"
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
         run: |
           set -o pipefail
           npx --yes @wix/cli@latest release 2>&1 | tee release.log || {
