@@ -18,8 +18,8 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 | Website full horizontal | [approved/website-logo/faith-reins-v7-website-horizontal-green.svg](approved/website-logo/faith-reins-v7-website-horizontal-green.svg) | **Approved layout + exact V6 Hanken vector outlines completed** | same logo scaled desktop/tablet/mobile; no deployment |
 | Website inverse | [approved/website-logo/faith-reins-v7-website-horizontal-cream.svg](approved/website-logo/faith-reins-v7-website-horizontal-cream.svg) | **Approved layout + exact V6 Hanken vector outlines completed** | inverse footer; no deployment |
 | Website compact | approved/website-logo/website-compact-green.svg | Pending mobile sign-off | small mobile/header/drawer |
-| Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending rebuild/sign-off | letterhead/clinical/donor |
-| Document stacked | approved/document-logo/document-stacked-green.svg | Pending rebuild/sign-off | narrow formal applications |
+| Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending — not part of stacked approval | letterhead/clinical/donor |
+| Document stacked | candidates/document-logo/faith-reins-v7-document-stacked-green.svg | **Owner approved Candidate 01 (2026-10-12)** — pending promotion | narrow formal applications |
 | Document print black | approved/document-logo/document-black.svg | Pending | B&W office printing |
 | Official seal full | approved/seal/seal-full-green.svg | Pending reference audit | donor/certificates/merch |
 | Official seal ringless | approved/seal/seal-ringless-green.svg | Conditional approval | special layouts |
@@ -65,3 +65,8 @@ Two horizontal SVG logo candidates have been committed under `candidates/website
 - Artwork is independent of font installation at runtime; no embedded font files, raster images or text elements.
 - Responsive proof images for 580/430/290px widths are included in the folder. These are asset proofs only, not complete Playwright website screenshots.
 - Deployment remains blocked until separately requested. Keep current site untouched.
+
+
+## Document logo approval — October 12, 2026
+
+Owner approved the stacked document logo artwork in green/gold, cream/gold and monochrome black. Candidate SVGs exist in `candidates/document-logo/`. Promote unchanged to `approved/document-logo/` and retain matching geometry. Horizontal document format was **not** approved separately.
