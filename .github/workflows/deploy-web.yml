@@ -33,4 +33,16 @@ jobs:
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
       - name: Release to Wix
-        run: npx --yes @wix/cli@latest release
+        env:
+          CI: "true"
+        run: |
+          set -o pipefail
+          npx --yes @wix/cli@latest release 2>&1 | tee release.log || {
+            tail -n 40 release.log | sed 's/\x1b\[[0-9;]*m//g' | while IFS= read -r line; do
+              [ -n "$line" ] && echo "::error title=wix release::$line"
+            done
+            exit 1
+          }
+          tail -n 15 release.log | sed 's/\x1b\[[0-9;]*m//g' | while IFS= read -r line; do
+            [ -n "$line" ] && echo "::notice title=wix release::$line"
+          done
