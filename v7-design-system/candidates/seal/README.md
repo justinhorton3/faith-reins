@@ -1,6 +1,6 @@
 # V7 Official Seal — Candidate 01 (spacing correction)
 
-**Status:** Pending owner approval. Do not move to `approved/seal/` until the owner signs off.
+**Status:** Approved and promoted to `approved/seal/` on 2026-10-12. These files remain here as review history; use the approved masters for production.
 
 ## SVG candidates
 
@@ -22,7 +22,7 @@ The small horizontal gold rules flanking `EST. 2025` were overlapping the first 
 - `EST. 2025`
 - Cream field / reverse / monochrome colorways
 
-The website and live production assets remain unchanged.
+The website and live production assets remain unchanged. The approved SVG masters are now under `approved/seal/`.
 
 ## Latest spacing refinement — 2026-10-12
 
