@@ -435,7 +435,7 @@ body.cart-open{overflow:hidden}
   .newsletter-band, .cta-band, .cart-drawer, .cart-btn,
   .drawer, .skip-link, .shop-filters, .size-btns,
   .qty-row, .atb-btn, .atb-confirm, .map-wrap,
-  [data-wix-form], [data-give], nav { display: none !important; }
+  .wix-form, [data-give], nav { display: none !important; }
 
   /* Base */
   body { background: #fff; color: #000; font-size: 12pt; font-family: Georgia, serif; }

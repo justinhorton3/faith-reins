@@ -151,3 +151,4 @@ site/dist/
 dist/
 web/dist/
 .DS_Store
+test-results/

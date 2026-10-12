@@ -14,7 +14,6 @@ const PAGES = [
   ["/our-mission", "Our Mission"],
   ["/for-families", "For Families"],
   ["/for-referring-providers", "For Referring Providers"],
-  ["/book-online", "Request an Appointment"],
   ["/payment-and-insurance", "Payment & Insurance"],
   ["/faq", "FAQ"],
   ["/give", "Give"],
@@ -49,7 +48,12 @@ test("404 page is served for unknown routes", async ({ page }) => {
 
 test("nav links are present on every page", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator("a[href='/book-online']").first()).toBeVisible();
+  await expect(page.locator("a", { hasText: "Patient Portal" }).first()).toBeVisible();
   await expect(page.locator("a[href='/give']").first()).toBeVisible();
-  await expect(page.locator("a[href='/contact']").first()).toBeVisible();
+  await expect(page.locator("a[href='/contact']:visible").first()).toBeVisible();
+});
+
+test("/book-online redirects to /contact", async ({ page }) => {
+  await page.goto("/book-online");
+  await page.waitForURL("**/contact");
 });

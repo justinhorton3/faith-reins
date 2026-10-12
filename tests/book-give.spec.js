@@ -1,19 +1,11 @@
 // Booking and giving flow tests.
 import { test, expect } from "@playwright/test";
 
-test.describe("Book Online", () => {
-  test("page loads with form container", async ({ page }) => {
+test.describe("Book Online (retired — redirects to /contact)", () => {
+  test("redirects to /contact", async ({ page }) => {
     await page.goto("/book-online");
-    await expect(page.locator("h1")).toContainText("Let's find your next step");
-    await expect(page.locator("[data-wix-form]")).toBeAttached();
-  });
-
-  test("form loads fields from Wix", async ({ page }) => {
-    await page.goto("/book-online");
-    // Form mounts asynchronously — wait for an input or error state
-    await expect(
-      page.locator("form.wix-form, .form-status--error")
-    ).toBeVisible({ timeout: 10000 });
+    await page.waitForURL("**/contact");
+    await expect(page.locator("h1")).toContainText("We're here");
   });
 });
 
@@ -27,7 +19,7 @@ test.describe("Give page", () => {
   test("donation widget loads giving options", async ({ page }) => {
     await page.goto("/give");
     await expect(
-      page.locator(".give-box, .form-status--error")
+      page.locator("[data-give] .give-box, [data-give] .form-status--error")
     ).toBeVisible({ timeout: 10000 });
   });
 });
@@ -36,13 +28,12 @@ test.describe("Contact page", () => {
   test("page loads with contact form", async ({ page }) => {
     await page.goto("/contact");
     await expect(page.locator("h1")).toContainText("We're here");
-    await expect(page.locator("[data-wix-form]")).toBeAttached();
+    await expect(page.locator("form.wix-form").first()).toBeAttached();
   });
 
   test("?order= param pre-fills the form message", async ({ page }) => {
     await page.goto("/contact?order=Heritage+Hoodie+(M)+%C3%971");
-    // Wait for form to load
-    await expect(page.locator("form.wix-form, .form-status--error")).toBeVisible({ timeout: 10000 });
+    await expect(page.locator("form.wix-form").first()).toBeVisible({ timeout: 10000 });
     const textarea = page.locator("textarea").first();
     if (await textarea.isVisible()) {
       await expect(textarea).toHaveValue(/Heritage Hoodie/);
@@ -84,10 +75,17 @@ test.describe("Service pages — sticky CTA", () => {
   ];
 
   for (const route of SERVICES) {
-    test(`${route} has sticky appointment CTA element`, async ({ page }) => {
+    test(`${route} has sticky consultation CTA element`, async ({ page }) => {
       await page.goto(route);
       await expect(page.locator("#sticky-appt")).toBeAttached();
-      await expect(page.locator("#sticky-appt a")).toHaveAttribute("href", "/book-online");
+      await expect(page.locator("#sticky-appt a")).toHaveAttribute("href", "/contact");
     });
   }
+});
+
+test.describe("Account page", () => {
+  test("anonymous visitor sees a login prompt", async ({ page }) => {
+    await page.goto("/account");
+    await expect(page.locator("a", { hasText: "Log in" }).first()).toBeVisible({ timeout: 10000 });
+  });
 });

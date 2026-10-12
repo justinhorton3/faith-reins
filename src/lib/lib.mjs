@@ -3,9 +3,29 @@ import media from "./media.json" with { type: "json" };
 
 export { media };
 export const FORMS = {
-  contact: "23cf24ab-86ff-4595-8a3b-7535900f4a23",
-  appointment: "31632052-e00f-473d-9edd-e64c699b83ef",
-  sponsor: "17fc908b-9d0d-4554-8b4f-f45d009b1721",
+  contact: "2dcfa70f-a58e-4a15-8011-194ffa131a42",
+  sponsor: "811ee3c1-d782-4ce6-ac01-703ae9b47b1b",
+};
+
+// Wix Forms v4's GetForm/CreateSubmission require the business VIEW-FORM scope and reject the
+// site's own anonymous visitor identity outright (confirmed empirically: FORM_NOT_FOUND for
+// both reads and writes under the visitor token) — so the field list is rendered as real,
+// static HTML at build time instead of being fetched client-side, and submission goes through
+// the server (src/pages/api/submit-form.ts, elevated) instead of straight to Wix. Each `target`
+// below is that field's stable storage key in the live form schema — keep these in sync if the
+// form is edited in the Wix dashboard.
+export const FORM_FIELDS = {
+  contact: [
+    { target: "your_name_jc5yie", label: "Your name", type: "text", required: true },
+    { target: "email_inxptu", label: "Email", type: "email", required: true },
+    { target: "phone_i700qq", label: "Phone", type: "tel", required: false },
+    { target: "message_vn3gtt", label: "Message", type: "textarea", required: true },
+  ],
+  sponsor: [
+    { target: "name_org_sp01", label: "Your name & organization", type: "text", required: true },
+    { target: "email_sp03", label: "Email", type: "email", required: true },
+    { target: "message_sp04", label: "Tell us about your organization and where you'd like to help", type: "textarea", required: true },
+  ],
 };
 export const CAMPAIGN = "fea961a8-acc5-428b-801c-b64f4c6603f4";
 
@@ -76,14 +96,33 @@ export function cta({ h2, p, buttons, green = false }) {
 export const split = (text, image, alt = "", reverse = false) =>
   `<div class="split">${reverse ? `<img src="${image}" alt="${esc(alt)}" loading="lazy">${text}` : `${text}<img src="${image}" alt="${esc(alt)}" loading="lazy">`}</div>`;
 export const notice = (t) => `<div class="notice">${icon("info")}<p>${esc(t)}</p></div>`;
-export const form = (kind, { submit, success, layout = "", wide = "", btnKind = "" }) =>
-  `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="${btnKind}"` : ""}><noscript>Please enable JavaScript to use this form.</noscript></div>`;
+export function form(kind, { submit, success, btnKind = "" }) {
+  const fields = FORM_FIELDS[kind];
+  if (!fields) throw new Error("No static field list for form kind " + kind);
+  const fieldHtml = fields
+    .map((f, i) => {
+      const id = `f-${kind}-${f.target}`;
+      const [reqAttr, reqMark] = f.required ? [" required", `<span class="req" aria-hidden="true">*</span>`] : ["", ""];
+      const control =
+        f.type === "textarea"
+          ? `<textarea id="${id}" name="${f.target}" rows="5"${reqAttr}></textarea>`
+          : `<input id="${id}" name="${f.target}" type="${f.type}"${reqAttr}>`;
+      return `<div class="field"><label for="${id}">${esc(f.label)}${reqMark}</label>${control}</div>`;
+    })
+    .join("");
+  return `<form class="wix-form" data-submit-kind="${kind}" data-success="${esc(success)}">
+<div class="wix-form__fields">${fieldHtml}</div>
+<div class="form-status form-status--error" role="alert" hidden></div>
+<div class="form-status form-status--ok" role="status" hidden></div>
+<button class="btn${btnKind ? " btn--" + btnKind : ""}" type="submit">${esc(submit)}</button>
+</form>`;
+}
 
 /* ---------- Shell ---------- */
 const NAV = [
   ["About", "/our-mission", false, ["/our-mission", "/our-team", "/our-horses"]],
   ["Services & Programs", "/services-programs", true, ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"]],
-  ["For Families", "/for-families", true, ["/for-families", "/book-online", "/payment-and-insurance", "/faq"]],
+  ["For Families", "/for-families", true, ["/for-families", "/payment-and-insurance", "/faq"]],
   ["Get Involved", "/give", false, ["/give", "/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"]],
   ["Shop", "/shop", false, ["/shop"]],
 ];

@@ -1,10 +1,26 @@
 ---
-import SiteLayout from "../layouts/SiteLayout.astro";
+// Gated client-side (RequireAuth) rather than server-side — a true server redirect needs an
+// on-demand page, which needs a server adapter, which changes this static site's build output
+// shape (dist/client + dist/server) in a way that doesn't match what wix.config.json's
+// outputDirectory expects. That's a Wix-CLI/hosting decision, not one to guess at here, so this
+// stays static like every other page; RequireAuth's documented trade-off (a brief flash before
+// an anonymous visitor sees the login prompt) is the accepted cost.
+import Base from "../layouts/Base.astro";
 import AccountView from "../components/members/AccountView";
+import GivingPanel from "../components/account/GivingPanel";
+import BillingPanel from "../components/account/BillingPanel";
 import RequireAuth from "../components/members/RequireAuth";
 ---
 
-<SiteLayout title="My account">
-  <h1 class="mb-8 text-2xl font-semibold tracking-tight">My account</h1>
-  <RequireAuth client:only="react"><AccountView /></RequireAuth>
-</SiteLayout>
+<Base title="My account | Faith Reins" description="Manage your recurring giving and view your giving receipts." route="/account">
+  <section class="section">
+    <div class="container" style="max-width:720px">
+      <h1 class="mb-8 text-2xl font-semibold tracking-tight">My account</h1>
+      <RequireAuth client:only="react">
+        <AccountView />
+        <GivingPanel />
+        <BillingPanel />
+      </RequireAuth>
+    </div>
+  </section>
+</Base>

@@ -52,144 +52,54 @@ function track(event, params = {}) {
   d.addEventListener("keydown", (e) => e.key === "Escape" && set(false));
 })();
 
-/* Forms */
-const text = (n) => (typeof n === "string" ? n : n && n.nodes ? n.nodes.map((c) => (c.textData ? c.textData.text : "") + text(c)).join("") : "");
+/* Forms — fields render as real static HTML at build time (src/lib/lib.mjs's `form()`);
+   Wix Forms' GetForm/CreateSubmission reject the site's anonymous visitor identity outright,
+   so submission goes through this site's own /api/submit-form endpoint (elevated server-side)
+   instead of straight to Wix. */
 const phone = (v) => { const d = v.replace(/[^\d+]/g, ""); return d[0] === "+" ? d : d.length === 10 ? "+1" + d : d.length === 11 && d[0] === "1" ? "+" + d : d; };
 
-function parseForm(form) {
-  const order = new Map();
-  let i = 0;
-  for (const s of form.steps || []) for (const it of ((s.layout || {}).large || {}).items || []) order.set(it.fieldId, i++);
-  return (form.formFields || [])
-    .filter((f) => f.fieldType === "INPUT" && f.inputOptions && f.inputOptions.target && !f.hidden)
-    .sort((a, b) => (order.get(a.id || a._id) ?? 999) - (order.get(b.id || b._id) ?? 999))
-    .map((f) => {
-      const io = f.inputOptions;
-      const sub = Object.values(io).find((v) => v && typeof v === "object" && v.componentType) || {};
-      const comp = Object.entries(sub).find(([k, v]) => k.endsWith("Options") && v && typeof v === "object");
-      const c = comp ? comp[1] : {};
-      const fmt = (sub.validation || {}).format;
-      const ct = sub.componentType;
-      let kind = "text";
-      if (ct === "DROPDOWN") kind = "select";
-      else if (ct === "RADIO_GROUP") kind = "radio";
-      else if (ct === "CHECKBOX_GROUP") kind = "checks";
-      else if (ct === "CHECKBOX") kind = "check";
-      else if (ct === "PHONE_INPUT" || fmt === "PHONE") kind = "tel";
-      else if (fmt === "EMAIL") kind = "email";
-      else if (f.identifier === "TEXT_AREA") kind = "area";
-      return { target: io.target, required: !!io.required, kind, label: text(c.label) || io.target, ph: c.placeholder || "", opts: (c.options || []).map((o) => ({ v: String(o.value), l: String(o.label ?? o.value) })), id: f.identifier };
-    });
-}
-
-async function mountForm(host) {
-  const id = host.dataset.formId, wide = (host.dataset.wide || "").split(",");
-  host.textContent = "";
-  const load = h("div", { class: "form-skeleton", role: "status" }, "Loading form…");
-  host.append(load);
-  let fields;
-  try { fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form); } catch (e) {
-    load.className = "form-status form-status--error";
-    load.textContent = "This form is unavailable right now. Please call or email us instead.";
-    return;
-  }
-  const vals = {}, nodes = {};
-  const box = h("div", { class: "wix-form__fields" });
-  for (const f of fields) {
-    const fid = "f" + Math.random().toString(36).slice(2, 8);
-    const err = h("div", { class: "error", role: "alert" });
-    const w = h("div", { class: "field" + (f.kind === "area" || wide.includes(f.target) ? " field--wide" : "") });
-    const lab = h("label", { for: fid }, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null);
-    const set = (v) => { vals[f.target] = v; };
-    if (f.kind === "select") {
-      const s = h("select", { id: fid, onchange: () => set(s.value) }, h("option", { value: "" }, f.ph || "Select one"), f.opts.map((o) => h("option", { value: o.v }, o.l)));
-      w.append(lab, s);
-    } else if (f.kind === "radio" || f.kind === "checks") {
-      const fs = h("fieldset", {}, h("legend", {}, f.label, f.required ? h("span", { class: "req" }, "*") : null));
-      f.opts.forEach((o, n) => {
-        const inp = h("input", { type: f.kind === "radio" ? "radio" : "checkbox", name: fid, value: o.v, id: fid + n, onchange: () => set(f.kind === "radio" ? o.v : $$("input:checked", fs).map((x) => x.value)) });
-        fs.append(h("label", { class: "choice", for: fid + n }, inp, o.l));
-      });
-      w.append(fs);
-    } else if (f.kind === "check") {
-      const inp = h("input", { type: "checkbox", id: fid, onchange: () => set(inp.checked) });
-      w.append(h("label", { class: "choice", for: fid }, inp, f.label));
-    } else {
-      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, oninput: () => set(el.value) });
-      w.append(lab, el);
-    }
-    w.append(err);
-    nodes[f.target] = [w, err];
-    box.append(w);
-  }
-  const bad = h("div", { class: "form-status form-status--error", role: "alert", hidden: true });
-  const ok = h("div", { class: "form-status form-status--ok", role: "status", hidden: true });
-  const label = host.dataset.submit || "Submit";
-  const btn = h("button", { class: "btn" + (host.dataset.btn ? " " + host.dataset.btn : ""), type: "submit" }, label);
-  const form = h("form", { class: "wix-form" + (host.dataset.layout === "two" ? " wix-form--two" : ""), novalidate: true }, box, bad, ok, btn);
-  host.textContent = "";
-  host.append(form);
+function wireForm(form) {
+  const kind = form.dataset.submitKind;
+  const bad = $(".form-status--error", form), ok = $(".form-status--ok", form);
+  const btn = $("button[type=submit]", form);
+  const label = btn.textContent;
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     bad.hidden = true;
-    let first = null;
-    for (const f of fields) {
-      const v = vals[f.target], [w, err] = nodes[f.target];
-      const empty = v == null || v === "" || (Array.isArray(v) && !v.length) || (f.kind === "check" && !v);
-      let m = "";
-      if (f.required && empty) m = "This field is required.";
-      else if (f.kind === "email" && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) m = "Enter an email address like name@example.com.";
-      w.classList.toggle("is-invalid", !!m);
-      err.textContent = m;
-      if (m && !first) first = w;
-    }
-    if (first) { $("input,select,textarea", first)?.focus(); return; }
     const out = {};
-    for (const f of fields) {
-      const v = vals[f.target];
-      if (v == null || v === "" || (Array.isArray(v) && !v.length) || v === false) continue;
-      out[f.target] = f.kind === "tel" ? phone(v) : typeof v === "string" ? v.trim() : v;
+    for (const el of form.elements) {
+      if (!el.name || !el.value.trim()) continue;
+      out[el.name] = el.type === "tel" ? phone(el.value.trim()) : el.value.trim();
     }
     btn.disabled = true;
     btn.textContent = "Sending…";
     try {
-      const r = await api("/form-submission-service/v4/submissions", "POST", { submission: { formId: id, submissions: out } });
-      const s = r.submission || r;
-      if (!["CONFIRMED", "PENDING", "PAYMENT_WAITING"].includes(s.status)) throw new Error("Your message could not be sent. Please try again.");
-      track("form_submit", { form_id: id, form_name: host.dataset.submit || "form" });
+      const r = await fetch("/api/submit-form", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind, submissions: out }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error(j.error || "Request failed");
+      track("form_submit", { form_kind: kind });
       form.reset();
       $$(".field", form).forEach((n) => (n.hidden = true));
       btn.hidden = true;
       ok.hidden = false;
-      ok.textContent = host.dataset.success || "Thank you. Our team will be in touch.";
+      ok.textContent = form.dataset.success || "Thank you. Our team will be in touch.";
     } catch (x) {
-      const v = (((x.details || {}).validationError || {}).fieldViolations || [])[0];
       bad.hidden = false;
-      bad.textContent = v ? "Please check your entries and try again." : "We could not send this right now. Please try again, or contact us directly.";
+      bad.textContent = "We could not send this right now. Please try again, or contact us directly.";
       btn.disabled = false;
       btn.textContent = label;
     }
   });
 }
-$$("[data-wix-form]").forEach(mountForm);
+$$("form.wix-form[data-submit-kind]").forEach(wireForm);
 
 /* Contact form pre-fill from URL params (?order=... passed by shop checkout fallback) */
 (function prefillContact() {
   const params = new URLSearchParams(location.search);
   const order = params.get("order");
   if (!order || !location.pathname.includes("/contact")) return;
-  const host = $("[data-wix-form]");
-  if (!host) return;
-  const tryFill = () => {
-    const ta = $("textarea", host);
-    if (ta && !ta.value) {
-      ta.value = "Order inquiry: " + order;
-      ta.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-  };
-  // Form loads asynchronously — poll until textarea appears
-  const iv = setInterval(() => { if ($("textarea", host)) { tryFill(); clearInterval(iv); } }, 200);
-  setTimeout(() => clearInterval(iv), 10000);
+  const ta = $("form.wix-form[data-submit-kind='contact'] textarea");
+  if (ta && !ta.value) ta.value = "Order inquiry: " + order;
 }());
 
 /* Donations */

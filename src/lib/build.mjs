@@ -6,14 +6,14 @@ const pages = [];
 const add = (route, title, description, body, jsonld) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld });
 const stripHtml = (s) => String(s).replace(/<[^>]+>/g, "").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
 
-const APPT = ["Request an appointment", "/book-online"];
+const APPT = ["Request a consultation", "/contact"];
 const startCta = (extra = []) =>
-  cta({ h2: "Ready to take the next step?", p: "Send a request and our team will contact you about next steps and scheduling.", buttons: [btn(...APPT.slice(0, 1), APPT[1]), btn("Contact us", "/contact", "secondary"), ...extra] });
+  cta({ h2: "Ready to take the next step?", p: "Send a message and our team will contact you about next steps and scheduling.", buttons: [btn(...APPT.slice(0, 1), APPT[1]), ...extra] });
 const related = (items) => section(head("Related services") + grid(items.length > 3 ? 4 : 3, items.map(([t, p, h]) => card({ title: t, text: p, href: h }))), "section--paper");
 
 /* ---------- Home ---------- */
 add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Faith Reins offers pediatric therapy, counseling and equine-assisted learning for children and families in Camden and South Arkansas.",
-  hero({ key: "home", h1: "People. Horses. Brighter futures.", body: "Expert pediatric therapy and equine-assisted learning to help your child grow, heal and thrive in South Arkansas.", ctas: [["Request a consultation", "/book-online", "light"], ["Support a family", "/give", "accent"]] }) +
+  hero({ key: "home", h1: "People. Horses. Brighter futures.", body: "Expert pediatric therapy and equine-assisted learning to help your child grow, heal and thrive in South Arkansas.", ctas: [["Request a consultation", "/contact", "light"], ["Support a family", "/give", "accent"]] }) +
   section(head("Services & Programs") +
     grid(5, [
       card({ ic: "leaf", title: "Occupational Therapy", text: "Supporting daily activities, participation and independence.", href: "/occupational-therapy", center: true }),
@@ -37,7 +37,7 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
 .testimonial__attr{font-size:.85rem;color:#666;margin:0;font-style:normal}
 </style>
 </div></section>` +
-  section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected.</h2><p class="lead muted">Get updates on programs, events, and stories from Faith Reins delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", layout: "inline", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div><style>.newsletter-band{display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap}.newsletter-band__copy{flex:1 1 260px}.newsletter-band__form{flex:2 1 320px}</style>`, "section--paper"));
+  section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected.</h2><p class="lead muted">Get updates on programs, events, and stories from Faith Reins delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div><style>.newsletter-band{display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap}.newsletter-band__copy{flex:1 1 260px}.newsletter-band__form{flex:2 1 320px}</style>`, "section--paper"));
 
 /* ---------- Mission ---------- */
 add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
@@ -67,25 +67,25 @@ const SVC = [
   ["Equine-Assisted Learning", "Ground-based experiences with horses supporting confidence, connection and life skills.", "/equine-assisted-learning", "horse"],
 ];
 add("/services-programs", "Services & Programs", "Occupational therapy, physical therapy, speech-language therapy, counseling and equine-assisted learning in South Arkansas.",
-  hero({ key: "services", h1: "Care for every next step.", body: "Occupational therapy, physical therapy, speech-language therapy, counseling and EAL.", ctas: [["Request an appointment", "/book-online", "light"], ["For families", "/for-families", "secondary"]] }) +
+  hero({ key: "services", h1: "Care for every next step.", body: "Occupational therapy, physical therapy, speech-language therapy, counseling and EAL.", ctas: [["Request a consultation", "/contact", "light"], ["For families", "/for-families", "secondary"]] }) +
   section(head("Individualized, family-centered care", "Every plan starts with your child and your family.") + grid(5, SVC.map(([t, p, h, ic]) => card({ ic, title: t, text: p, href: h })))) +
-  section(head("How to start") + steps([["Ask questions", "Call, email or send a message."], ["Request an appointment", "Or send a provider referral."], ["Meet the team", "We will talk through next steps and scheduling."]]), "section--paper") +
+  section(head("How to start") + steps([["Ask questions", "Call, email or send a message."], ["Request a consultation", "Or have your child's provider send a referral."], ["Meet the team", "We will talk through next steps and scheduling."]]), "section--paper") +
   section(grid(2, [
     card({ ic: "home", title: "For families", text: "What to expect after you reach out.", href: "/for-families", linkLabel: "For families" }),
     card({ ic: "file", title: "For referring providers", text: "A clear path from referral to care.", href: "/for-referring-providers", linkLabel: "Referral pathway" }),
   ])) + section(startCta(), "section--paper"));
 
 /* ---------- Service detail pages ---------- */
-const STICKY_APPT = `<div class="sticky-appt" id="sticky-appt" aria-label="Appointment CTA"><a href="/book-online">Request an appointment →</a></div>
+const STICKY_APPT = `<div class="sticky-appt" id="sticky-appt" aria-label="Consultation CTA"><a href="/contact">Request a consultation →</a></div>
 <script>(function(){var el=document.getElementById('sticky-appt');if(!el)return;document.body.classList.add('has-sticky-appt');var hero=document.querySelector('.hero');function check(){var heroBottom=hero?hero.getBoundingClientRect().bottom:0;el.classList.toggle('is-visible',heroBottom<0);}window.addEventListener('scroll',check,{passive:true});check();})();</script>`;
 
 function service({ route, key, name, h1, body, overview, areasTitle, areas, journeyTitle, journey, relatedList }) {
   add(route, name, body,
-    hero({ key, h1, body, ctas: [["Request an appointment", "/book-online", "light"]] }) +
+    hero({ key, h1, body, ctas: [["Request a consultation", "/contact", "light"]] }) +
     section(`<div class="prose"><h2>About ${esc(name.toLowerCase())}</h2>${overview.map((p) => `<p>${p}</p>`).join("")}</div>`) +
     section(head(areasTitle) + grid(3, areas.map(([t, p]) => card({ title: t, text: p }))), "section--paper") +
     section(`<div class="split split--wide-text"><div class="stack"><h2>${esc(journeyTitle)}</h2></div><div>${steps(journey)}</div></div>`) +
-    section(cta({ h2: "A clear first step.", p: "Send a request or talk with our team about coverage and next steps.", buttons: [btn("Request an appointment", "/book-online"), btn("Payment & Insurance", "/payment-and-insurance", "secondary"), btn("For families", "/for-families", "secondary")] }), "section--paper") +
+    section(cta({ h2: "A clear first step.", p: "Send a request or talk with our team about coverage and next steps.", buttons: [btn("Request a consultation", "/contact"), btn("Payment & Insurance", "/payment-and-insurance", "secondary"), btn("For families", "/for-families", "secondary")] }), "section--paper") +
     related(relatedList) +
     STICKY_APPT);
 }
@@ -120,17 +120,16 @@ service({ route: "/equine-assisted-learning", key: "equine-assisted-learning", n
 
 /* ---------- For Families ---------- */
 add("/for-families", "For Families", "What happens after you request an appointment at Faith Reins: a clear first step and a caring team.",
-  hero({ key: "for-families", h1: "A clear first step. A caring team.", body: "Explore services and learn what happens after you request an appointment.", ctas: [["Request an appointment", "/book-online", "light"], ["Contact us", "/contact", "secondary"]] }) +
+  hero({ key: "for-families", h1: "A clear first step. A caring team.", body: "Explore services and learn what happens after you reach out.", ctas: [["Request a consultation", "/contact", "light"]] }) +
   section(head("Your path to care") + grid(4, [["Reach out", "Send a request or call our team."], ["Share needs or a referral", "Tell us about your child and goals."], ["Schedule a visit", "We find a time that works."], ["Begin a plan", "Your care plan starts with your family."]].map(([t, p], i) => `<div class="card"><span class="step__num">${i + 1}</span><h3>${t}</h3><p>${p}</p></div>`))) +
   section(head("What to expect") + checks([["The first conversation", "We listen and answer your questions."], ["Preparing for your visit", "We share what to bring and who to expect."], ["Arrival", "A welcoming, calm space."], ["Family involvement", "You are part of every step."]]), "section--paper") +
-  section(head("Helpful links") + grid(4, [card({ title: "Book Online", text: "Request an appointment.", href: "/book-online", linkLabel: "Request" }), card({ title: "Payment & Insurance", text: "Coverage and payment questions.", href: "/payment-and-insurance", linkLabel: "Learn more" }), card({ title: "FAQ", text: "Answers to common questions.", href: "/faq", linkLabel: "Read FAQ" }), card({ title: "Services & Programs", text: "See all of our care.", href: "/services-programs", linkLabel: "Explore" })])) +
-  section(cta({ h2: "Questions? We are glad to help.", buttons: [btn("Request an appointment", "/book-online"), btn("Contact", "/contact", "secondary")] }), "section--paper"));
+  section(head("Helpful links") + grid(4, [card({ title: "Talk With Us", text: "Start a conversation about care.", href: "/contact", linkLabel: "Contact" }), card({ title: "Payment & Insurance", text: "Coverage and payment questions.", href: "/payment-and-insurance", linkLabel: "Learn more" }), card({ title: "FAQ", text: "Answers to common questions.", href: "/faq", linkLabel: "Read FAQ" }), card({ title: "Services & Programs", text: "See all of our care.", href: "/services-programs", linkLabel: "Explore" })])) +
+  section(cta({ h2: "Questions? We are glad to help.", buttons: [btn("Request a consultation", "/contact")] }), "section--paper"));
 
-/* ---------- Book Online ---------- */
-add("/book-online", "Request an Appointment", "Send an appointment request to Faith Reins. Our team will contact you about next steps and scheduling.",
-  hero({ key: "book-online", h1: "Let's find your next step.", body: "Send a request. Our team will contact you about next steps and scheduling.", short: true }) +
-  section(`<div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>Request an appointment</h2><p class="muted">Please do not include urgent or emergency information in this form. If this is an emergency, call 911.</p><h3 class="h-small mt-28">What happens next</h3>${steps([["We review your request", "A team member reads every message."], ["We contact you", "By your preferred method."], ["We plan next steps", "Scheduling and what to bring."]], true)}</div><div class="panel">${form("appointment", { submit: "Submit request", success: "Thank you. Our team will contact you about next steps and scheduling.", layout: "two", wide: "service_interest_wmc0m7,message_nq34a3,preferred_contact_method_hzj8eh" })}</div></div>`) +
-  section(grid(3, [card({ title: "Contact", text: "Prefer to talk it through?", href: "/contact", linkLabel: "Contact us" }), card({ title: "FAQ", text: "Common questions answered.", href: "/faq", linkLabel: "Read FAQ" }), card({ title: "Payment & Insurance", text: "Coverage and payment.", href: "/payment-and-insurance", linkLabel: "Learn more" })]), "section--paper"));
+/* ---------- Book Online (retired — merged into /contact; kept as a redirect for old links) ---------- */
+add("/book-online", "Contact Us", "This page has moved. Please visit our Contact page.",
+  `<script>location.replace("/contact");</script>
+<section class="section"><div class="container"><noscript><p>This page has moved. <a href="/contact">Continue to Contact</a>.</p></noscript></div></section>`);
 
 /* ---------- Providers ---------- */
 add("/for-referring-providers", "For Referring Providers", "A clear path from referral to care. Connect children and families with the right next step at Faith Reins.",
@@ -142,7 +141,7 @@ add("/for-referring-providers", "For Referring Providers", "A clear path from re
 
 /* ---------- Payment ---------- */
 add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins therapy services — insurance, private pay, ARKids First, Medicaid, and financial assistance.",
-  hero({ key: "payment-and-insurance", h1: "Clear answers before care begins.", body: "We want cost to be the last reason a family waits.", ctas: [["Contact our team", "/contact", "light"], ["Request an appointment", "/book-online", "secondary"]] }) +
+  hero({ key: "payment-and-insurance", h1: "Clear answers before care begins.", body: "We want cost to be the last reason a family waits.", ctas: [["Contact our team", "/contact", "light"]] }) +
   section(`<div class="prose">
 <h2>How payment works</h2>
 <p>We work with families to find a payment path that makes care accessible. The options below cover most situations. Our team will confirm what applies to your family during the intake conversation — nothing on this page is a guarantee of coverage or cost.</p>
@@ -158,11 +157,11 @@ add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins
 <h2>What to have ready</h2>
 <p>These help a first conversation go smoothly. None are required to reach out.</p></div>`) +
   section(checks([["Insurance card or plan information", "If you have coverage, the member ID and group number help us verify benefits quickly."], ["Referral or provider notes", "If a physician, school, or other provider referred your child, any notes or documentation they can share are helpful."], ["ARKids First or Medicaid ID", "If your child is enrolled."], ["Questions about cost", "Write them down — there are no wrong questions and we want you to feel informed before care begins."]])) +
-  section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", p: "Our team will walk through every option with you — no pressure, no obligation.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] })}</div>`, "section--paper"));
+  section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation.") + `<div class="mt-28">${cta({ h2: "Questions about payment?", p: "Our team will walk through every option with you — no pressure, no obligation.", buttons: [btn("Contact our team", "/contact")] })}</div>`, "section--paper"));
 
 /* ---------- FAQ ---------- */
 const FAQ_QA = [
-  ["How do I get started?", "Send an appointment request online or call or email us. Our team will follow up to learn about your child and walk through next steps."],
+  ["How do I get started?", "<a href='/contact'>Contact us</a> for a consultation — most families start with a conversation, before a referral is in place. We'll answer your questions and explain what your child's physician's office needs to provide for a referral, then help you schedule once that's set."],
   ["Do I need a referral?", "A referral is not required to contact us, but if a physician, school, or specialist has recommended therapy, please bring any notes or documentation — it helps us move quickly."],
   ["Who can Faith Reins serve?", "We serve children and teens from birth through age 18 in South Arkansas. If you are unsure whether we are the right fit, contact us and we will guide you honestly."],
   ["How long does it take to get an appointment?", "Wait times vary by service and availability. Contact our team for current scheduling. We do our best to move quickly for families with urgent needs."],
@@ -181,7 +180,7 @@ add("/faq", "FAQ", "Common questions from families, referring providers and supp
   hero({ key: "faq", h1: "A clear next step.", body: "Common questions from families, providers and supporters.", ctas: [["Contact our team", "/contact", "light"]] }) +
   section(grid(2, [
     `<div class="faq-group"><h2 class="h-card">Getting started</h2>${faq([
-      ["How do I get started?", "Send an appointment request on <a href='/book-online'>Book Online</a> or <a href='/contact'>call or email us</a>. Our team will follow up to learn about your child and walk through next steps."],
+      ["How do I get started?", "<a href='/contact'>Contact us</a> for a consultation — most families start with a conversation, before a referral is in place. We'll answer your questions and explain what your child's physician's office needs to provide for a referral, then help you schedule once that's set."],
       ["Do I need a referral?", "A referral is not required to contact us, but if a physician, school, or specialist has recommended therapy, please bring any notes or documentation — it helps us move quickly."],
       ["Who can Faith Reins serve?", "We serve children and teens from birth through age 18 in South Arkansas. If you are unsure whether we are the right fit, contact us and we will guide you honestly."],
       ["How long does it take to get an appointment?", "Wait times vary by service and availability. Contact our team for current scheduling. We do our best to move quickly for families with urgent needs."],
@@ -215,7 +214,7 @@ add("/faq", "FAQ", "Common questions from families, referring providers and supp
       ["Can I volunteer if I have no horse experience?", "Absolutely. Many of our volunteer roles do not involve horses at all. Those that do include full training. Visit <a href='/join-our-team'>Join Our Team</a> to learn more."],
     ])}</div>`,
   ])) +
-  section(cta({ h2: "Still have questions?", p: "Our team is glad to help — no question is too small.", buttons: [btn("Contact our team", "/contact"), btn("Request an appointment", "/book-online", "secondary")] }), "section--paper"),
+  section(cta({ h2: "Still have questions?", p: "Our team is glad to help — no question is too small.", buttons: [btn("Contact our team", "/contact")] }), "section--paper"),
   faqJsonLd);
 
 /* ---------- Give ---------- */
@@ -287,7 +286,7 @@ const hiringCard = (title, creds, blurb) =>
   `<div class="card team-card team-card--hiring"><div class="team-card__hiring-badge">Now Hiring</div><div class="team-card__body" style="padding-top:1.25rem"><h3>${esc(title)}</h3>${creds ? `<p class="team-card__creds">${esc(creds)}</p>` : ""}<p class="team-card__bio">${esc(blurb)}</p><a class="btn btn--accent" href="/join-our-team" style="margin-top:1rem;display:inline-block">Apply now</a></div></div>`;
 
 add("/our-team", "Our Team", "A dedicated team supporting children, families and our equine programs.",
-  hero({ key: "our-team", h1: "People who care. A purpose we share.", body: "A dedicated team supporting children, families and our equine programs.", ctas: [["Request an appointment", "/book-online", "light"]] }) +
+  hero({ key: "our-team", h1: "People who care. A purpose we share.", body: "A dedicated team supporting children, families and our equine programs.", ctas: [["Request a consultation", "/contact", "light"]] }) +
   section(`<div class="prose"><h2>Our team</h2><p>Our clinicians, staff and volunteers share one purpose: to support children and families with skill, patience and faith. Each person brings specialized training and a genuine commitment to the children and families we serve.</p></div>`) +
   `<section class="section section--paper" id="team-profiles"><div class="container">
 ${head("Leadership & Clinical Team")}
@@ -382,11 +381,11 @@ ${grid(3, [
   section(grid(2, [card({ title: "Our Team", text: "Meet the people behind the care.", href: "/our-team", linkLabel: "Meet the team" }), card({ title: "Our Mission", text: "Rooted in faith. Guided by care.", href: "/our-mission", linkLabel: "Our mission" })]), "section--paper"));
 
 /* ---------- Contact ---------- */
-add("/contact", "Contact", "Connect with Faith Reins about services, giving or getting involved.",
+add("/contact", "Contact", "Connect with Faith Reins for a consultation about services, giving or getting involved.",
   hero({ key: "contact", h1: "We're here to help.", body: "Connect with our team about services, giving or getting involved.", short: true }) +
-  section(`<div class="split" style="align-items:start"><div class="stack"><h2>Get in touch</h2><address style="font-style:normal;display:grid;gap:8px"><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address><p class="form-note">Please do not include medical information in messages.</p></div><div class="panel">${form("contact", { submit: "Send message", success: "Thank you. We received your message." })}</div></div>`) +
+  section(`<div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>Get in touch</h2><address style="font-style:normal;display:grid;gap:8px"><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address><p class="muted">Please do not include urgent or emergency information in this form. If this is an emergency, call 911.</p><h3 class="h-small mt-28">What happens next</h3>${steps([["We review your message", "A team member reads every message."], ["We call to talk it through", "We answer your questions and, if you don't yet have a referral, explain what to ask your child's physician for."], ["We plan next steps", "Scheduling and what to bring, once a referral is in place."]], true)}</div><div class="panel">${form("contact", { submit: "Send message", success: "Thank you. We received your message." })}<p class="form-note mt-16">Please do not include medical information in messages.</p></div></div>`) +
   `<section class="section section--paper"><div class="container"><h2 style="margin-bottom:1.25rem">Find us</h2><div class="map-wrap"><iframe title="Faith Reins location map" src="https://maps.google.com/maps?q=226+Ouachita+County+Rd+45,+Camden,+AR+72711&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="360" style="border:0;border-radius:8px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div style="margin-top:1rem"><a class="btn btn--secondary" href="https://maps.google.com/maps/dir/?api=1&destination=226+Ouachita+County+Rd+45,+Camden,+AR+72711" target="_blank" rel="noopener">Get directions</a></div><style>.map-wrap{overflow:hidden;border-radius:8px;border:1px solid #e0dbd4}</style></div></section>` +
-  section(head("Quick paths") + grid(4, [card({ title: "Appointments", text: "Book online.", href: "/book-online", linkLabel: "Request" }), card({ title: "Referrals", text: "For providers.", href: "/for-referring-providers", linkLabel: "Learn more" }), card({ title: "Giving", text: "Support the mission.", href: "/give", linkLabel: "Give" }), card({ title: "Sponsorships", text: "Partner with us.", href: "/sponsorships", linkLabel: "Learn more" })]), "section--paper"));
+  section(head("Quick paths") + grid(4, [card({ title: "FAQ", text: "Common questions answered.", href: "/faq", linkLabel: "Read FAQ" }), card({ title: "Referrals", text: "For providers.", href: "/for-referring-providers", linkLabel: "Learn more" }), card({ title: "Giving", text: "Support the mission.", href: "/give", linkLabel: "Give" }), card({ title: "Sponsorships", text: "Partner with us.", href: "/sponsorships", linkLabel: "Learn more" })]), "section--paper"));
 
 /* ---------- Shop ---------- */
 const toSlug = (n) => n.toLowerCase().replace(/['']/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");

@@ -4,7 +4,9 @@
 // installed (the seed installs it). Copy as-is; extend by adding functions, not by editing
 // these.
 // docs: https://dev.wix.com/docs/api-reference/crm/members-contacts/members/members/get-my-member.md
+import { members } from "@wix/members";
 import { membersApi } from "./client";
+import { wixModule } from "../sdk";
 import { imgSrc } from "../media";
 import type { CurrentMember } from "./types";
 
@@ -42,6 +44,24 @@ function toCurrentMember(raw: Raw): CurrentMember {
 export async function fetchCurrentMember(): Promise<CurrentMember | null> {
   try {
     const res = await membersApi.getCurrentMember({ fieldsets: ["FULL"] });
+    const raw = res.member as Raw | undefined;
+    return raw?._id ? toCurrentMember(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Server-side equivalent of fetchCurrentMember, for Astro frontmatter and API routes.
+ * The browser-only client above reads the session from `document.cookie` directly (needed for
+ * the custom in-app login flow); on the server there's no `document`, so this goes through the
+ * ambient ../sdk seam instead — `@wix/astro` resolves the session from the request itself.
+ * Never trust a client-supplied member/contact id in place of calling this.
+ */
+export async function fetchCurrentMemberAmbient(): Promise<CurrentMember | null> {
+  try {
+    const membersModule = wixModule(members);
+    const res = await membersModule.getCurrentMember({ fieldsets: ["FULL"] });
     const raw = res.member as Raw | undefined;
     return raw?._id ? toCurrentMember(raw) : null;
   } catch {

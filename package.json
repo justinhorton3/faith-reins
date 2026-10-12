@@ -22,6 +22,7 @@
     "@wix/ecom": "^1.0.2451",
     "@wix/essentials": "^1.0.10",
     "@wix/forms": "^1.0.501",
+    "@wix/get-paid": "^1.0.632",
     "@wix/members": "^1.0.511",
     "@wix/pricing-plans": "^1.0.378",
     "@wix/redirects": "^1.0.125",
