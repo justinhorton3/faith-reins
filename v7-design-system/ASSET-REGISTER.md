@@ -6,7 +6,7 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 
 | Asset | Status | Source | Target |
 | --- | --- | --- | --- |
-| Refined masculine horse (approved appearance) | **Visual direction approved** | approved image/SVG from October 2026 conversation; verify exact SVG before ingest | approved/horse/horse-master-green.svg |
+| Refined masculine horse master | **Imported — owner approved design** | exact refined vector created in October 2026 conversation; committed to repository | [approved/horse/horse-master-green.svg](approved/horse/horse-master-green.svg) |
 | Green horse on white visual reference | Existing reference | approved image from design review | approved/horse/ reference PNG after import |
 | Green, cream, gold and optional white derived horses | Pending color export | path geometry of master | approved/horse/ |
 | V4/V6 logo direction and formal seal refs | Inventory needed | V4 approvals + ../brand/FaithReins_DesignSystem_v6/ | reference only until verified |
@@ -15,8 +15,8 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 
 | Family | Canonical target | Status | Usage |
 | --- | --- | --- | --- |
-| Website full horizontal | approved/website-logo/website-horizontal-green-on-cream.svg | Pending rebuild/sign-off | desktop/tablet header |
-| Website inverse | approved/website-logo/website-horizontal-cream-on-green.svg | Pending rebuild/sign-off | dark background/footer |
+| Website full horizontal | [candidates/website-logo/faith-reins-v7-website-horizontal-green.svg](candidates/website-logo/faith-reins-v7-website-horizontal-green.svg) | **Candidate 01 — owner review pending** | desktop/tablet header; no site deployment |
+| Website inverse | [candidates/website-logo/faith-reins-v7-website-horizontal-cream.svg](candidates/website-logo/faith-reins-v7-website-horizontal-cream.svg) | **Candidate 01 — owner review pending** | dark background/footer; no site deployment |
 | Website compact | approved/website-logo/website-compact-green.svg | Pending mobile sign-off | small mobile/header/drawer |
 | Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending rebuild/sign-off | letterhead/clinical/donor |
 | Document stacked | approved/document-logo/document-stacked-green.svg | Pending rebuild/sign-off | narrow formal applications |
@@ -44,3 +44,14 @@ Each approved SVG should have recorded:
 - The requested wording “Faith Reigns” conflicts with the current brand; do not change spelling without explicit authorization.
 - Current V6 website subtitle “Pediatric & Equine Therapy”; prior request mentions “Equestrian and Pediatric Therapy.” Confirm exact line before freezing logo exports.
 - Seal banner “Faith & Healing” and “EST. 2025” require comparison with approved reference before implementation.
+
+
+## Candidate 01 — 2026-10-12
+
+Two horizontal SVG logo candidates have been committed under `candidates/website-logo/` and their renders were presented in the design conversation. The new horse master is in `approved/horse/`.
+
+* SVG master candidates have transparent backgrounds and outlined vectors.
+* Wordmark uses Libre Caslon Text; tagline currently uses an outlined substitute (Lato Semibold), so exact Hanken text is a **release blocker pending approval/rebuild**.
+* Green and cream versions are staged; no source-code or published-site changes occurred.
+* Transparent PNG previews and compact mobile candidate are available as chat artifacts pending review, not yet committed as approved assets.
+* To mark as approved: verify final tagline wording, inspect render at breakpoints, then move accepted SVG and PNG exports into `approved/website-logo/`.
