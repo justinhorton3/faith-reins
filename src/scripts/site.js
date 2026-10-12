@@ -106,11 +106,15 @@ $$("form.wix-form[data-submit-kind]").forEach(wireForm);
 const FREQ = { ONE_TIME: "One-time", WEEK: "Weekly", MONTH: "Monthly", YEAR: "Yearly" };
 const money = (n) => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
 async function mountGive(host) {
-  const cid = host.dataset.campaign;
   host.textContent = "";
   host.append(h("div", { class: "form-skeleton", role: "status" }, "Loading giving options…"));
   let c;
-  try { c = (await api("/donation-campaigns/v2/donation-campaigns/" + cid, "GET")).donationCampaign; } catch (e) { c = null; }
+  try {
+    const r = await fetch("/api/give-campaign");
+    const j = await r.json();
+    if (!r.ok || !j.ok) throw new Error();
+    c = j.campaign;
+  } catch (e) { c = null; }
   host.textContent = "";
   if (!c || c.archived || ["EXPIRED", "GOAL_REACHED"].includes(c.status)) {
     host.append(h("div", { class: "form-status form-status--error" }, "Online giving is unavailable right now. Please contact us and we will help you give."));
@@ -121,13 +125,16 @@ async function mountGive(host) {
   const freqs = (c.donationFrequencies || []).filter((f) => FREQ[f]);
   if (!freqs.length) freqs.push("ONE_TIME");
   const min = amt((c.customAmountOptions || {}).minimum) || 1;
-  const st = { freq: freqs[0], amount: presets[0] || null, custom: false, text: "", fee: !!c.askDonorCoverFee, note: "", busy: false };
+  const st = { freq: freqs[0], amount: presets[0] || null, custom: false, text: "", fee: !!c.askDonorCoverFee, note: "", email: "", busy: false };
   const value = () => (st.custom ? Number(st.text.replace(/[\s,$]/g, "")) || null : st.amount);
   const fb = h("div", { class: "seg", role: "group", "aria-label": "Gift frequency" });
   const ab = h("div", { class: "amounts", role: "group", "aria-label": "Gift amount" });
   const ci = h("input", { id: "give-custom", type: "text", inputmode: "decimal", placeholder: "Enter an amount", autocomplete: "off", oninput: () => { st.text = ci.value; draw(); } });
   const ce = h("div", { class: "error", role: "alert" });
   const cf = h("div", { class: "field", hidden: true }, h("label", { for: "give-custom" }, "Other amount (USD)"), ci, ce);
+  const ei = h("input", { id: "give-email", type: "email", autocomplete: "email", required: true, oninput: () => { st.email = ei.value; draw(); } });
+  const ee = h("div", { class: "error", role: "alert" });
+  const emailRow = h("div", { class: "field" }, h("label", { for: "give-email" }, "Email", h("span", { class: "req", "aria-hidden": "true" }, "*")), ei, ee, h("p", { class: "form-note" }, "We'll email your giving receipt here."));
   const fee = h("input", { type: "checkbox", id: "give-fee", onchange: () => { st.fee = fee.checked; draw(); } });
   const feeRow = c.askDonorCoverFee ? h("label", { class: "choice", for: "give-fee" }, fee, "Add the processing fee so more of my gift goes to care") : null;
   const note = h("textarea", { id: "give-note", rows: 2, maxlength: 100, placeholder: "Optional note", oninput: () => { st.note = note.value; } });
@@ -139,7 +146,7 @@ async function mountGive(host) {
   const pbtns = presets.map((n) => { const b = h("button", { type: "button", onclick: () => { st.amount = n; st.custom = false; draw(); } }, money(n)); ab.append(b); return [n, b]; });
   let cb = null;
   if (c.customAmountEnabled) { cb = h("button", { type: "button", onclick: () => { st.custom = true; draw(); ci.focus(); } }, "Custom"); ab.append(cb); }
-  host.append(h("div", { class: "give-box" }, freqs.length > 1 ? fb : null, ab, cf, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
+  host.append(h("div", { class: "give-box" }, freqs.length > 1 ? fb : null, ab, cf, emailRow, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
   function draw() {
     fbtns.forEach(([f, b]) => b.setAttribute("aria-pressed", st.freq === f));
     pbtns.forEach(([n, b]) => b.setAttribute("aria-pressed", !st.custom && st.amount === n));
@@ -155,20 +162,24 @@ async function mountGive(host) {
   async function donate() {
     const v = value();
     bad.hidden = true;
+    ee.textContent = "";
     if (!v || v < min) { ce.textContent = "Enter an amount of " + money(min) + " or more."; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(st.email)) { ee.textContent = "Enter a valid email address."; ei.focus(); return; }
     st.busy = true; draw();
     try {
-      const opt = { amount: v, frequency: st.freq };
-      if (st.fee && c.askDonorCoverFee) opt.donorCoveringFees = true;
-      const cart = await api("/ecom/v2/carts", "POST", { cart: { source: { channelType: "WEB" }, ...(st.note.trim() ? { note: st.note.trim() } : {}) }, catalogItems: [{ quantity: 1, catalogReference: { appId: "333b456e-dd48-4d6b-b32b-9fd48d74e163", catalogItemId: cid, options: opt } }] });
-      const id = cart._id || cart.id || (cart.cart && (cart.cart._id || cart.cart.id));
-      const s = await api("/headless/v1/redirect-session", "POST", { ecomCheckout: { checkoutId: id }, callbacks: { postFlowUrl: location.origin + "/give/", thankYouPageUrl: location.origin + "/give/thank-you/" } });
-      track("begin_checkout", { currency: "USD", value: value() + (st.fee ? Math.round(value() * 2.9) / 100 : 0), items: [{ item_id: cid, item_name: "Donation" }] });
-      location.href = s.redirectSession.fullUrl;
+      const r = await fetch("/api/give-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: v, email: st.email, coverFee: st.fee && c.askDonorCoverFee, note: st.note.trim() }),
+      });
+      const j = await r.json();
+      if (!r.ok || !j.ok) throw new Error(j.error || "Request failed");
+      track("begin_checkout", { currency: "USD", value: v + (st.fee ? Math.round(v * 2.9) / 100 : 0), items: [{ item_name: "Donation" }] });
+      location.href = j.url;
     } catch (e) {
       st.busy = false; draw();
       bad.hidden = false;
-      bad.textContent = /premium|payment/i.test(e.message) ? "Online giving is not switched on yet. Please contact us and we will help you give." : "We could not start the checkout. Please try again.";
+      bad.textContent = "We could not start the checkout. Please try again, or contact us and we will help you give.";
     }
   }
   draw();

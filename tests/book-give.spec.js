@@ -19,7 +19,7 @@ test.describe("Give page", () => {
   test("donation widget loads giving options", async ({ page }) => {
     await page.goto("/give");
     await expect(
-      page.locator("[data-give] .give-box, [data-give] .form-status--error")
+      page.locator("[data-give] .give-box, [data-give] .form-status--error").first()
     ).toBeVisible({ timeout: 10000 });
   });
 });

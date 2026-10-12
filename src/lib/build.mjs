@@ -1,6 +1,6 @@
 // Page content registry — exports `pages` array consumed by Astro's [...slug].astro.
 import * as L from "./lib.mjs";
-const { hero, section, head, grid, card, steps, checks, faq, cta, split, notice, form, btn, link, icon, img, esc, CAMPAIGN } = L;
+const { hero, section, head, grid, card, steps, checks, faq, cta, split, notice, form, btn, link, icon, img, esc } = L;
 
 const pages = [];
 const add = (route, title, description, body, jsonld) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld });
@@ -220,7 +220,7 @@ add("/faq", "FAQ", "Common questions from families, referring providers and supp
 /* ---------- Give ---------- */
 add("/give", "Give", "Support families, horses and the Faith Reins mission with a one-time or monthly gift.",
   hero({ key: "give", h1: "Help make care possible.", body: "Support families, horses and the Faith Reins mission.", ctas: [["Give now", "#gift", "accent"], ["View impact", "/impact-and-stewardship", "light"]] }) +
-  `<section class="section" id="gift"><div class="container"><div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>Choose your gift</h2><p class="lead muted">Your gift helps children and families reach care, and helps us care for our horses.</p></div><div class="panel"><div data-give data-campaign="${CAMPAIGN}"><noscript>Please enable JavaScript to give online, or contact us.</noscript></div></div></div></div></section>` +
+  `<section class="section" id="gift"><div class="container"><div class="split split--wide-text" style="align-items:start"><div class="stack"><h2>Choose your gift</h2><p class="lead muted">Your gift helps children and families reach care, and helps us care for our horses.</p></div><div class="panel"><div data-give><noscript>Please enable JavaScript to give online, or contact us.</noscript></div></div></div></div></section>` +
   section(head("Other ways to give") + grid(3, [card({ ic: "horse", title: "Sponsor a horse", text: "Monthly sponsorship of $500–$750 supports a horse's care.", href: "/sponsorships", linkLabel: "Discuss sponsorship" }), card({ ic: "heart", title: "Give where needed most", text: "Unrestricted gifts go where families and programs need them." }), card({ ic: "chat", title: "Questions about giving", text: "We are happy to help.", href: "/contact", linkLabel: "Contact us" })]), "section--paper") +
   section(cta({ h2: "Our promise", p: "We use every gift with care. Learn how support and the mission connect.", buttons: [btn("Impact & Stewardship", "/impact-and-stewardship", "secondary"), btn("Our partners", "/our-partners", "secondary")] })));
 add("/give/thank-you", "Thank You for Your Gift | Faith Reins", "Your gift supports pediatric therapy and equine-assisted learning for children and families in South Arkansas.",
