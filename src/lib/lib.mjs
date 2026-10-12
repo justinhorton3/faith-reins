@@ -1,4 +1,5 @@
-// Shared HTML helpers for the Faith Reins static build.
+// Faith Reins v6 components for the static build. Markup only; styles live in src/styles/global.css.
+// Follows brand/FaithReins_DesignSystem_v6 (tokens, components, ui_kits/website).
 import media from "./media.json" with { type: "json" };
 
 export { media };
@@ -9,114 +10,150 @@ export const FORMS = {
 };
 export const CAMPAIGN = "6f213c29-26a1-478d-9461-40b5164c26e1";
 
+export const SITE = {
+  phone: "870-818-4087",
+  tel: "+18708184087",
+  email: "info@faithreins.com",
+  street: "226 Ouachita County Rd 45",
+  city: "Camden, AR 72711",
+  hours: "Clinic: M–F 8:00 AM – 5:00 PM",
+  appt: "Private sessions by appointment",
+};
+
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 export const img = (key) => {
   if (!media[key]) throw new Error("missing media key " + key);
   return media[key];
 };
+const cx = (...c) => c.filter(Boolean).join(" ");
+const attr = (k, v) => (v == null || v === false ? "" : ` ${k}="${esc(v)}"`);
 
-const P = {
-  check: '<path d="M20 6 9 17l-5-5"/>',
-  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
-  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
-  close: '<path d="M6 6l12 12M18 6 6 18"/>',
-  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
-  chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>',
-  heart: '<path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/>',
-  hand: '<path d="M7 11V6a1.5 1.5 0 0 1 3 0v4M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L4 14a1.6 1.6 0 0 1 2.6-1.8L7 13"/>',
-  bag: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>',
-  book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 7h6"/>',
-  shield: '<path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/>',
-  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/>',
-  star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
-  home: '<path d="M3 11 12 4l9 7M5 10v10h14V10"/>',
-  phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
-  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
-  pin: '<path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
-  file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"/>',
-  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-  horse: '<path d="M4 20c0-6 2-10 6-12l2-4 2 3 4 1v3l-3 1c0 3 1 5 1 8M10 8l-3 2"/>',
-  leaf: '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
-  walk: '<circle cx="13" cy="4.5" r="2"/><path d="m9.5 22 2.5-7 1.5 2 1.5-2 2.5 7"/><path d="M10 11c-1-.5-2.5-.5-3.5 1M16 11c1-.5 2.5-.5 3.5 1"/><path d="M12 15V9"/>',
-};
-export const icon = (name) => `<i class="ic i-${P[name] ? name : "star"}"></i>`;
-export const iconCss = () => ".ic{display:inline-block;width:24px;height:24px;flex:none;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}" + Object.entries(P).map(([k, v]) => `.i-${k}{--m:url("data:image/svg+xml,${(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>${v.replace(/"/g, "'")}</svg>`).replace(/</g, "%3C").replace(/>/g, "%3E").replace(/#/g, "%23")}")}`).join("");
+/* ---------- Core ---------- */
+// kind: "" (primary green) | "accent" (gold) | "outline" | "outline-inv"
+export const btn = (label, href, kind = "", { size, block } = {}) =>
+  `<a class="${cx("btn", kind && "btn--" + kind, size === "sm" && "btn--sm", block && "btn--block")}" href="${href}">${esc(label)}</a>`;
+export const tlink = (label, href, { inv = false, arrow = false, cls = "" } = {}) =>
+  `<a class="${cx("tlink", inv && "tlink--inv", cls)}" href="${href}">${esc(label)}${arrow ? '<span aria-hidden="true">→</span>' : ""}</a>`;
+export const eyebrow = (text, { inv = false, rule = false } = {}) =>
+  `<span class="${cx("eyebrow", inv && "eyebrow--inv", rule && "eyebrow--rule")}">${esc(text)}</span>`;
 
-export const btn = (label, href, kind = "", arrow = false) =>
-  `<a class="btn${kind ? " btn--" + kind : ""}" href="${href}">${esc(label)}</a>`;
-export const link = (label, href) => `<a class="text-link" href="${href}">${esc(label)}</a>`;
+/* ---------- Brand ---------- */
+// Lockup L1: horse mark, FAITH REINS, tagline between gold rules. Sizes xs | sm | md.
+export function lockup({ size = "sm", tone = "light", tag = true } = {}) {
+  const mark = img(tone === "light" ? "mark-green" : "mark-cream");
+  return `<span class="${cx("lockup", "lockup--" + size, tone === "dark" && "lockup--dark")}"><img class="lockup__mark" src="${mark}" alt="" width="60" height="44"><span class="lockup__text"><span class="lockup__title">FAITH REINS</span>${tag ? '<span class="lockup__tag"><i></i><span>Pediatric &amp; Equine Therapy</span><i></i></span>' : ""}</span></span>`;
+}
 
-export function hero({ key, h1, body, ctas = [], focus, short = false, mobileFocus }) {
+/* ---------- Layout ---------- */
+// tone: page | sand | paper | white | green ; pad: default | tight | none
+export const section = (inner, { tone = "page", pad = "", id = "", cls = "" } = {}) =>
+  `<section class="${cx("sec", tone !== "page" && "sec--" + tone, pad && "sec--" + pad, cls)}"${attr("id", id || null)}><div class="sec__in">${inner}</div></section>`;
+// stack: "tablet" (default, stacks below 1024) | "mobile"
+export const split = (left, right, { cols = "1fr 1fr", stack = "tablet", align = "start", gap } = {}) =>
+  `<div class="${cx("split", stack === "mobile" && "split--late")}" style="--cols:${cols};--align:${align}${gap ? ";--split-gap:" + gap + "px" : ""}"><div>${left}</div><div>${right}</div></div>`;
+export const stack = (...parts) => `<div class="stack">${parts.join("")}</div>`;
+export const panel = (inner) => `<div class="panel">${inner}</div>`;
+
+/* ---------- Content ---------- */
+export function sh({ eyebrow: eb, title, body, link: lk, face = "display", size = "md", center = false, inv = false, h = 2 }) {
+  return `<div class="${cx("sh", center && "sh--center", size === "sm" && "sh--sm", face === "serif" && "sh--serif", inv && "sh--inv")}">${eb ? eyebrow(eb, { inv }) : ""}<h${h} class="sh__title">${title}</h${h}>${body ? `<p class="sh__body">${body}</p>` : ""}${lk ? tlink(lk[0], lk[1], { inv }) : ""}</div>`;
+}
+
+const MOBILE_FOCUS = { "book-online": "12% 50%", contact: "22% 50%", counseling: "88% 50%", "for-families": "72% 50%", give: "82% 50%", "for-referring-providers": "58% 50%", "speech-language-therapy": "35% 50%" };
+export function hero({ key, eyebrow: eb, title, lead, primary, secondary, size = "page", pos = "50% 50%", mpos }) {
   const d = img(`hero-${key}-desktop`), m = img(`hero-${key}-mobile`);
-  return `<section class="hero${short ? " hero--short" : ""}"${focus ? ` style="--focus:${focus}"` : ""}>
-  <picture><source media="(max-width: 767px)" srcset="${m}" width="767" height="500"><img src="${d}" alt="" fetchpriority="high" width="1440" height="700" sizes="100vw"></picture>
-  <div class="container hero__content"><div class="hero__copy"><h1>${esc(h1)}</h1><p>${esc(body)}</p>
-  ${ctas.length ? `<div class="btn-row">${ctas.map((c) => btn(c[0], c[1], c[2] || "light")).join("")}</div>` : ""}</div></div></section>`;
+  const p = primary ? btn(primary[0], primary[1], primary[2] || "accent") : "";
+  const s = secondary ? tlink(secondary[0], secondary[1], { inv: true, cls: "hero__sec" }) : "";
+  return `<section class="hero hero--${size}" style="--pos:${pos};--mpos:${mpos || MOBILE_FOCUS[key] || "50% 50%"}">
+<picture><source media="(max-width: 767px)" srcset="${m}" width="767" height="900"><img class="hero__img" src="${d}" alt="" fetchpriority="high" width="1440" height="800"></picture>
+<div class="hero__scrim"></div>
+<div class="hero__body">${eb ? eyebrow(eb, { inv: true, rule: true }) : ""}<h1 class="hero__title">${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ""}${p || s ? `<div class="hero__actions">${p}${s}</div>` : ""}</div>
+</section>`;
 }
+// Sand title band for pages without a photo (legal, thank-you, news).
+export const titleBand = ({ eyebrow: eb, title, body }) => section(sh({ eyebrow: eb, title, body, h: 1 }), { tone: "sand", pad: "tight", cls: "sec--title" });
 
-export const section = (inner, cls = "") => `<section class="section${cls ? " " + cls : ""}"><div class="container">${inner}</div></section>`;
-export const head = (h2, p = "", left = false) => `<div class="section-head${left ? " section-head--left" : ""}"><h2>${esc(h2)}</h2>${p ? `<p>${esc(p)}</p>` : ""}</div>`;
-export const grid = (n, items) => `<div class="grid grid--${n}">${items.join("")}</div>`;
-
-export function card({ ic, title, text, href, linkLabel = "Learn more", center = false }) {
-  return `<div class="card${center ? " card--center" : ""}">${ic ? `<span class="icon-badge${center ? "" : " icon-badge--sm"}">${icon(ic)}</span>` : ""}<h3>${esc(title)}</h3><p>${esc(text)}</p>${href ? link(linkLabel, href) : ""}</div>`;
+export function therapyIndex(items) {
+  return `<div class="tix">${items.map((it, i) => `<a class="tix__row" href="${it.href}"><span class="tix__num">${String(i + 1).padStart(2, "0")}</span><span class="tix__text"><span class="tix__title">${esc(it.title)}</span><span class="tix__desc">${esc(it.desc)}</span></span><span class="tix__media">${it.image ? `<img src="${it.image}" alt="" loading="lazy" width="140" height="84" style="object-position:${it.pos || "50% 50%"}">` : ""}<span class="tix__arrow" aria-hidden="true">→</span></span></a>`).join("")}</div>`;
 }
-export function steps(list, gold = false) {
-  return `<div class="steps">${list.map(([t, p], i) => `<div class="step"><span class="step__num${gold ? " step__num--gold" : ""}">${i + 1}</span><div><h3>${esc(t)}</h3><p>${esc(p)}</p></div></div>`).join("")}</div>`;
+export function tiles(items, { bg = "white" } = {}) {
+  return `<div class="tiles tiles--${bg}"><div class="tiles__in">${items.map((it) => `<div class="tile">${eyebrow(it.eyebrow)}<span class="tile__title">${esc(it.title)}</span>${tlink(it.label, it.href)}</div>`).join("")}</div></div>`;
 }
-export function checks(list) {
-  return `<ul class="check-list">${list.map(([t, p]) => `<li>${icon("check")}<div><strong>${esc(t)}</strong>${p ? `<span>${esc(p)}</span>` : ""}</div></li>`).join("")}</ul>`;
+export function splitFeature({ image, pos = "50% 50%", alt = "", eyebrow: eb, title, body, actions = "", variant = "inset", reverse = false, bg = "" }) {
+  const text = `<div class="sf__text">${eb ? eyebrow(eb) : ""}<h2 class="sf__title">${title}</h2>${body ? `<p class="sf__body">${body}</p>` : ""}${actions ? `<div class="sf__actions">${actions}</div>` : ""}</div>`;
+  const pic = `<img class="sf__img" src="${image}" alt="${esc(alt)}" loading="lazy" style="object-position:${pos}">`;
+  return `<section class="${cx("sf", "sf--" + variant, reverse && "sf--reverse", bg && "sf--bg-" + bg)}">${pic}${text}</section>`;
 }
-export function faq(list) {
-  return `<div class="faq">${list.map(([q, a]) => `<details><summary>${esc(q)}</summary><div class="faq__a">${a}</div></details>`).join("")}</div>`;
+export const steps = (items) =>
+  `<ol class="steps steps--${Math.min(items.length, 4)}">${items.map(([t, p], i) => `<li class="step"><span class="step__num">${i + 1}</span><div class="step__text"><span class="step__title">${esc(t)}</span>${p ? `<span class="step__body">${esc(p)}</span>` : ""}</div></li>`).join("")}</ol>`;
+// items: "text" | [title, body]
+export const checks = (items, { cols = 1 } = {}) =>
+  `<ul class="checks${cols > 1 ? " checks--2" : ""}">${items.map((it) => {
+    const [t, b] = Array.isArray(it) ? it : [it, ""];
+    return `<li class="${b ? "check check--rich" : "check"}"><span class="check__dot" aria-hidden="true"></span><span class="check__text"><span class="check__title">${esc(t)}</span>${b ? `<span class="check__body">${esc(b)}</span>` : ""}</span></li>`;
+  }).join("")}</ul>`;
+// items: { eyebrow, meta, title, body, link: [label, href], strong, html }
+export const infoGrid = (items, { cols = 3 } = {}) =>
+  `<div class="info info--${cols}">${items.map((it) => `<div class="${cx("info__item", it.strong && "info__item--strong")}">${it.eyebrow ? eyebrow(it.eyebrow) : ""}${it.meta ? `<span class="info__meta">${esc(it.meta)}</span>` : ""}<span class="info__title">${esc(it.title)}</span>${it.body ? `<span class="info__body">${it.html ? it.body : esc(it.body)}</span>` : ""}${it.link ? tlink(it.link[0], it.link[1]) : ""}</div>`).join("")}</div>`;
+export const testimonial = ({ quote, name, context }) =>
+  `<figure class="quote"><span class="quote__mark" aria-hidden="true">“</span><blockquote class="quote__text">${esc(quote)}</blockquote><figcaption class="quote__cap"><span class="quote__name">${esc(name)}</span>${context ? `<span class="quote__ctx">${esc(context)}</span>` : ""}</figcaption></figure>`;
+// items: [question, answerHtml]
+export const faqList = (items, { openFirst = false } = {}) =>
+  `<div class="faq">${items.map(([q, a], i) => `<details${openFirst && i === 0 ? " open" : ""}><summary>${esc(q)}</summary><div class="faq__a">${a}</div></details>`).join("")}</div>`;
+export function ctaBand({ tone = "green", eyebrow: eb, title, body, primary, secondary }) {
+  const g = tone === "green";
+  return `<section class="cta cta--${tone}"><div class="cta__in"><div class="cta__copy">${eb ? eyebrow(eb, { inv: g }) : ""}<h2 class="cta__title">${esc(title)}</h2>${body ? `<p class="cta__body">${esc(body)}</p>` : ""}</div><div class="cta__actions">${primary ? btn(primary[0], primary[1], g ? "accent" : "") : ""}${secondary ? tlink(secondary[0], secondary[1], { inv: g, cls: "cta__sec" }) : ""}</div></div></section>`;
 }
-export function cta({ h2, p, buttons, green = false }) {
-  return `<div class="cta-band${green ? " cta-band--green" : ""}"><div class="cta-band__copy"><h2 class="h-card">${esc(h2)}</h2>${p ? `<p>${esc(p)}</p>` : ""}</div><div class="btn-row">${buttons.join("")}</div></div>`;
-}
-export const split = (text, image, alt = "", reverse = false) =>
-  `<div class="split">${reverse ? `<img src="${image}" alt="${esc(alt)}" loading="lazy">${text}` : `${text}<img src="${image}" alt="${esc(alt)}" loading="lazy">`}</div>`;
-export const notice = (t) => `<div class="notice">${icon("info")}<p>${esc(t)}</p></div>`;
+export const photoBand = ({ image, pos = "50% 50%", caption = "", alt = "" }) =>
+  `<figure class="band"><img src="${image}" alt="${esc(alt)}" loading="lazy" style="object-position:${pos}">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`;
+export const profile = ({ image, pos = "50% 50%", alt, eyebrow: eb, name, meta, body, note, ratio = "4 / 5" }) =>
+  `<div class="profile">${image ? `<img class="profile__img" src="${image}" alt="${esc(alt || name)}" loading="lazy" style="aspect-ratio:${ratio};object-position:${pos}">` : ""}<div class="profile__text">${eb ? eyebrow(eb) : ""}<span class="profile__name">${esc(name)}</span>${meta ? `<span class="profile__meta">${esc(meta)}</span>` : ""}${body ? `<span class="profile__body">${esc(body)}</span>` : ""}${note ? `<span class="profile__note">${esc(note)}</span>` : ""}</div></div>`;
+export const profileGrid = (cards, { cols = 4 } = {}) => `<div class="profiles profiles--${cols}">${cards.join("")}</div>`;
+export const notice = (t) => `<div class="note">${eyebrow("Please note")}<p>${esc(t)}</p></div>`;
+export const reach = (label, valueHtml, { big = false } = {}) =>
+  `<div class="reach">${eyebrow(label)}<span class="${big ? "reach__big" : "reach__val"}">${valueHtml}</span></div>`;
 export const form = (kind, { submit, success, layout = "", wide = "", btnKind = "" }) =>
-  `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="${btnKind}"` : ""}><noscript>Please enable JavaScript to use this form.</noscript></div>`;
+  `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="btn--${btnKind}"` : ""}><noscript>Please enable JavaScript to use this form, or call ${SITE.phone}.</noscript></div>`;
 
 /* ---------- Shell ---------- */
+const THERAPY_ROUTES = ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"];
 const NAV = [
-  ["About", "/our-mission", false, ["/our-mission", "/our-team", "/our-horses"]],
-  ["Services & Programs", "/services-programs", true, ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"]],
-  ["For Families", "/for-families", true, ["/for-families", "/book-online", "/payment-and-insurance", "/faq"]],
-  ["Get Involved", "/give", false, ["/give", "/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"]],
-  ["Shop", "/shop", false, ["/shop"]],
+  ["Therapies", "/services-programs", THERAPY_ROUTES],
+  ["For Families", "/for-families", ["/for-families", "/book-online", "/payment-and-insurance", "/faq"]],
+  ["For Providers", "/for-referring-providers", ["/for-referring-providers"]],
+  ["Our Horses", "/our-horses", ["/our-horses"]],
+  ["About", "/our-mission", ["/our-mission", "/our-team", "/our-partners", "/join-our-team", "/impact-and-stewardship", "/news"]],
+  ["Shop", "/shop", ["/shop"]],
 ];
-const DRAWER = [["Home", "/", ["/"]], ...NAV.map(([l, h, , m]) => [l, h, m]), ["Contact", "/contact", ["/contact"]]];
+const isCur = (route, m) => m.includes(route) || m.some((p) => p !== "/" && route.startsWith(p + "/"));
+const bars = `<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>`;
 
-export function header(route) {
-  const cur = (m) => (m.includes(route) ? ' aria-current="page"' : "");
+export function header(route = "") {
+  const cur = (m) => (isCur(route, m) ? ' aria-current="page"' : "");
   return `<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="container site-header__inner">
-<a class="site-header__logo" href="/" aria-label="Faith Reins home"><img src="${img("logo")}" alt="Faith Reins" width="152" height="53"></a>
-<nav class="site-nav" aria-label="Primary">
-${NAV.map(([l, h, t, m]) => `<a class="nav-link"${t ? " data-tablet" : ""} href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
-${btn("Donate", "/give")}
-<button class="cart-btn" id="cart-btn" type="button" aria-label="Shopping bag" aria-haspopup="dialog"><span class="cart-btn__icon">${icon("bag")}</span><span class="cart-badge" id="cart-badge" hidden>0</span></button>
-<button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${icon("menu")}</button>
-</nav></div></header>
-<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__scrim" data-drawer-close></div>
-<div class="drawer__panel"><div class="drawer__top"><img src="${img("logo")}" alt="Faith Reins" width="136" height="48"><button class="menu-btn" type="button" data-drawer-close aria-label="Close menu" style="display:inline-flex">${icon("close")}</button></div>
-${btn("Donate", "/give")}
-${DRAWER.map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
-</div></div>`;
+<div class="utility"><div class="utility__in"><span class="utility__tag">A non-profit serving South Arkansas families</span><span class="utility__links"><a href="tel:${SITE.tel}">${SITE.phone}</a><a class="utility__desk" href="/for-referring-providers">For Providers</a><a href="/contact">Contact</a><button class="cart-btn" id="cart-btn" type="button" aria-haspopup="dialog" aria-label="Shopping bag">Bag<span class="cart-badge" id="cart-badge" hidden>0</span></button></span></div></div>
+<header class="site-header"><div class="site-header__in">
+<a class="site-header__logo" href="/" aria-label="Faith Reins home">${lockup({ size: "sm" })}</a>
+<nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAV.map(([l, h, m]) => `<a class="nav-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("")}</div>${btn("Support", "/give", "", { size: "sm" })}</nav>
+<div class="site-header__compact"><span class="site-header__support">${btn("Support", "/give", "", { size: "sm" })}</span><button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${bars}</button></div>
+</div></header>
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: "xs" })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div>
+<nav aria-label="Menu">${[["Home", "/", ["/"]], ...NAV, ["Contact", "/contact", ["/contact"]]].map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}<span aria-hidden="true">→</span></a>`).join("")}</nav>
+<div class="drawer__foot">${btn("Support Faith Reins", "/give", "", { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
 }
 
 export function footer() {
-  const links = [["About", "/our-mission"], ["Services & Programs", "/services-programs"], ["For Families", "/for-families"], ["Shop", "/shop"], ["Give", "/give"], ["Volunteer & Careers", "/join-our-team"], ["FAQ", "/faq"]];
-  return `<footer class="site-footer"><div class="container"><div class="site-footer__grid">
-<div class="site-footer__brand"><img src="${img("logo-white")}" alt="Faith Reins" width="210" height="64">
-<address><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address></div>
-<ul class="site-footer__links" aria-label="Footer">${links.map(([l, h]) => `<li><a href="${h}">${esc(l)}</a></li>`).join("")}</ul>
-<div class="site-footer__connect"><h2>Connect with us</h2>
-${form("contact", { submit: "Send message", success: "Thank you. We received your message.", btnKind: "accent" })}
-<p class="form-note mt-16">Please do not include medical information.</p></div>
+  const cols = [
+    ["Therapies", [["Speech & Language", "/speech-language-therapy"], ["Occupational", "/occupational-therapy"], ["Physical", "/physical-therapy"], ["Counseling", "/counseling"], ["Equine-Assisted Learning", "/equine-assisted-learning"]]],
+    ["Families", [["Request an appointment", "/book-online"], ["Payment & insurance", "/payment-and-insurance"], ["FAQ", "/faq"], ["Referring providers", "/for-referring-providers"], ["Contact", "/contact"]]],
+    ["About", [["Our mission", "/our-mission"], ["Our team", "/our-team"], ["Our horses", "/our-horses"], ["Our partners", "/our-partners"], ["Join our team", "/join-our-team"], ["News", "/news"]]],
+  ];
+  const legal = [["Privacy policy", "/privacy-policy"], ["Terms", "/terms-of-service"], ["HIPAA notice", "/hipaa-notice"], ["Accessibility", "/accessibility"], ["All policies", "/legal"]];
+  return `<footer class="site-footer"><div class="site-footer__in"><div class="site-footer__grid">
+<div class="site-footer__brand">${lockup({ size: "sm", tone: "dark" })}<p>A non-profit pediatric and equine therapy practice serving the children and families of South Arkansas.</p><address><a href="tel:${SITE.tel}">${SITE.phone}</a><br><a href="mailto:${SITE.email}">${SITE.email}</a><br>${SITE.street}<br>${SITE.city}</address></div>
+${cols.map(([t, links]) => `<div class="site-footer__col"><span class="site-footer__head">${t}</span>${links.map(([l, h]) => `<a href="${h}">${esc(l)}</a>`).join("")}</div>`).join("")}
+<div class="gift"><span class="gift__title">Keep care close to home.</span><span class="gift__body">Your gift helps children and families in South Arkansas reach care, and helps us care for our horses.</span>${btn("Support", "/give", "accent", { size: "sm", block: true })}</div>
 </div>
-<div class="site-footer__bottom"><span>© ${new Date().getFullYear()} Faith Reins. All rights reserved.</span><nav aria-label="Legal"><a href="/terms-of-service">Terms</a><a href="/privacy-policy">Privacy</a><a href="/hipaa-notice">HIPAA</a><a href="/accessibility">Accessibility</a><a href="/legal">All policies</a></nav></div>
+<div class="site-footer__bottom"><span>501(c)(3) non-profit · Camden, Arkansas</span><nav aria-label="Legal">${legal.map(([l, h]) => `<a href="${h}">${esc(l)}</a>`).join("")}</nav><span>© ${new Date().getFullYear()} Faith Reins</span></div>
 </div></footer>`;
 }

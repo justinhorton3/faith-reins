@@ -1,5 +1,4 @@
 // Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
-import { HEADER, FOOTER } from "virtual:shell";
 const CLIENT = "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
@@ -43,21 +42,10 @@ function track(event, params = {}) {
   // api("/analytics/v2/events", "POST", { event: { eventType: event, eventData: params } }).catch(() => {});
 }
 
-/* Shell */
+/* Shell: header and footer are rendered in the page HTML; this wires the menu drawer. */
 (() => {
-  const hd = $("#shell-header"), ft = $("#shell-footer");
-  if (hd) {
-    hd.innerHTML = HEADER;
-    const p = location.pathname.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
-    const g = { "/our-mission": ["/our-team", "/our-horses"], "/services-programs": ["/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"], "/for-families": ["/book-online", "/payment-and-insurance", "/faq"], "/give": ["/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"] };
-    for (const a of $$("a.nav-link, a.drawer-link", hd)) {
-      const href = (a.getAttribute("href") || "").replace(/\.html$/, "");
-      if (href === p || (g[href] || []).includes(p)) a.setAttribute("aria-current", "page");
-    }
-  }
-  if (ft) ft.innerHTML = FOOTER;
   const d = $("#drawer"), o = $("[data-drawer-open]");
-  if (!d) return;
+  if (!d || !o) return;
   const set = (open) => { d.hidden = !open; document.body.classList.toggle("drawer-open", open); o.setAttribute("aria-expanded", open); (open ? $("[data-drawer-close]", d) : o).focus(); };
   o.addEventListener("click", () => set(true));
   $$("[data-drawer-close]", d).forEach((b) => b.addEventListener("click", () => set(false)));

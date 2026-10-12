@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { iconCss } from "../lib/lib.mjs";
+import { header, footer } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld } = Astro.props;
 const SITE = "https://www.faithreins.com";
 const canonical = SITE + (route === "/" ? "" : route);
@@ -16,7 +16,7 @@ const orgSchema = {
   "url": SITE,
   "telephone": "+18708184087",
   "email": "info@faithreins.com",
-  "logo": SITE + "/assets/logo.png",
+  "logo": SITE + "/assets/v6/horse-mark-green.png",
   "image": ogImage,
   "address": {
     "@type": "PostalAddress",
@@ -71,15 +71,17 @@ const orgSchema = {
     </script>
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/assets/logo.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@600&display=swap" />
-    <Fragment set:html={`<style>${iconCss()}</style>`} />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#173A2E" />
+    <link rel="preload" href="/fonts/hanken-grotesk.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/libre-caslon-display.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/libre-caslon-text.woff" as="font" type="font/woff" crossorigin />
   </head>
   <body>
-    <div id="shell-header"><noscript><a href="/">Home</a> <a href="/services-programs">Services</a> <a href="/book-online">Book</a> <a href="/give">Give</a> <a href="/contact">Contact</a></noscript></div>
+    <Fragment set:html={header(route)} />
     <main id="main"><slot /></main>
-    <div id="shell-footer"></div>
+    <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
     <script>import "../scripts/cart.js";</script>
   </body>
