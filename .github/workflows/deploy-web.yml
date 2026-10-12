@@ -63,24 +63,26 @@ jobs:
             -d '{"query":{}}')
           echo "::notice title=site-level check::HTTP $c2 :: $(tr -d '\n' < b.json | head -c 250)"
           true
-      - name: Log in to Wix
-        run: npx --yes @wix/cli@latest login --api-key "$WIX_API_KEY"
+      - name: Upload build to Wix (faithreins.com)
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-      - name: Release to Wix
-        env:
-          CI: "true"
-          COLUMNS: "400"
-          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          SITE: "2d8c6050-5730-4bed-9c7a-266ca7bd00b4"
         run: |
-          set -o pipefail
-          npx --yes @wix/cli@latest release 2>&1 | tee release.log || {
-            sed 's/\x1b\[[0-9;]*m//g' release.log | tr '\n' ' ' | tr -s ' ' > clean.log
-            grep -oE '"url": ?"[^"]{0,200}"' clean.log | sort -u | head -3 | while IFS= read -r l; do echo "::error title=url::$l"; done
-            grep -oE '"message": ?"[^"]{0,400}"' clean.log | sort -u | head -4 | while IFS= read -r l; do echo "::error title=message::$l"; done
-            grep -oiE '.{0,200}(error|denied)[^"]{0,200}' clean.log | grep -v '"message"' | head -2 | while IFS= read -r l; do echo "::error title=context::$l"; done
+          cd dist
+          files=$(find . -type f | sed 's#^\./##' | sort)
+          count=$(echo "$files" | wc -l)
+          echo "::notice title=upload::$count files, $(du -sh . | cut -f1) total"
+          big=$(find . -type f -size +3M)
+          [ -n "$big" ] && echo "::error title=upload::files over 3 MB: $big" && exit 1
+          args=()
+          while IFS= read -r f; do args+=(-F "files=@$f;filename=$f"); done <<< "$files"
+          code=$(curl -sS -o ../drop.json -w '%{http_code}' -X POST \
+            "https://www.wixapis.com/headless-business-setup/v1/headless-business/$SITE/drop?campaign=mcp&agent=claude-code" \
+            -H "Authorization: $WIX_API_KEY" -H "wix-account-id: $WIX_ACCOUNT_ID" "${args[@]}")
+          body=$(tr -d '\n' < ../drop.json | head -c 600)
+          if [ "$code" = "200" ]; then
+            echo "::notice title=deployed::$body"
+          else
+            echo "::error title=upload failed (HTTP $code)::$body"
             exit 1
-          }
-          tail -n 15 release.log | sed 's/\x1b\[[0-9;]*m//g' | while IFS= read -r line; do
-            [ -n "$line" ] && echo "::notice title=wix release::$line"
-          done
+          fi
