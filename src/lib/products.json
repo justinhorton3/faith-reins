@@ -1,0 +1,574 @@
+[
+ {
+  "slug": "mens-tee",
+  "name": "Men's Tee",
+  "fit": "Men's",
+  "group": "mens",
+  "cat": "apparel",
+  "price": 24,
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL",
+   "3XL"
+  ],
+  "chart": "mens",
+  "desc": "A classic tee in soft cotton, Faith Reins forest green. The horizontal lockup printed in cream on the left chest.",
+  "render": {
+   "kind": "top",
+   "style": "tee",
+   "cut": "mens",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-horizontal-cream",
+    "place": "left-chest",
+    "width": 170
+   }
+  }
+ },
+ {
+  "slug": "womens-tee",
+  "name": "Women's Tee",
+  "fit": "Women's",
+  "group": "womens",
+  "cat": "apparel",
+  "price": 22,
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL"
+  ],
+  "chart": "womens",
+  "desc": "A relaxed women's cut in natural cotton with the stacked Faith Reins lockup in green across the front. Soft, lightweight, and made to move.",
+  "render": {
+   "kind": "top",
+   "style": "tee",
+   "cut": "womens",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-stacked-green",
+    "place": "full-front",
+    "width": 270
+   }
+  }
+ },
+ {
+  "slug": "childrens-tee",
+  "name": "Youth Tee",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 18,
+  "sizes": [
+   "YXS",
+   "YS",
+   "YM",
+   "YL",
+   "YXL"
+  ],
+  "chart": "youth",
+  "desc": "A soft youth tee in natural cotton with the Faith Reins horse and name in green. Built for play.",
+  "render": {
+   "kind": "top",
+   "style": "tee",
+   "cut": "youth",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-stacked-green",
+    "place": "center-chest",
+    "width": 240
+   }
+  }
+ },
+ {
+  "slug": "toddler-tee",
+  "name": "Toddler Tee",
+  "fit": "Toddler",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 16,
+  "sizes": [
+   "2T",
+   "3T",
+   "4T",
+   "5T"
+  ],
+  "chart": "toddler",
+  "desc": "A little tee for the littlest supporters, in forest green with the Faith Reins horse in cream.",
+  "render": {
+   "kind": "top",
+   "style": "tee",
+   "cut": "toddler",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-mark-cream",
+    "place": "center-chest",
+    "width": 170
+   }
+  }
+ },
+ {
+  "slug": "long-sleeve-tee",
+  "name": "Men's Long Sleeve Tee",
+  "fit": "Men's",
+  "group": "mens",
+  "cat": "apparel",
+  "price": 30,
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL",
+   "3XL"
+  ],
+  "chart": "mens",
+  "desc": "A soft cotton-blend long sleeve in forest green with the horizontal lockup in cream on the left chest. Layerable and comfortable across all seasons.",
+  "render": {
+   "kind": "top",
+   "style": "longsleeve",
+   "cut": "mens",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-horizontal-cream",
+    "place": "left-chest",
+    "width": 170
+   }
+  }
+ },
+ {
+  "slug": "womens-long-sleeve-tee",
+  "name": "Women's Long Sleeve Tee",
+  "fit": "Women's",
+  "group": "womens",
+  "cat": "apparel",
+  "price": 30,
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL"
+  ],
+  "chart": "womens",
+  "desc": "A women's cut long sleeve in natural cotton blend with the horizontal lockup in green on the left chest.",
+  "render": {
+   "kind": "top",
+   "style": "longsleeve",
+   "cut": "womens",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-horizontal-green",
+    "place": "left-chest",
+    "width": 158
+   }
+  }
+ },
+ {
+  "slug": "youth-long-sleeve-tee",
+  "name": "Youth Long Sleeve Tee",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 22,
+  "sizes": [
+   "YXS",
+   "YS",
+   "YM",
+   "YL",
+   "YXL"
+  ],
+  "chart": "youth",
+  "desc": "A youth long sleeve in forest green with the Faith Reins horse and name in cream. Good for cool mornings at the barn.",
+  "render": {
+   "kind": "top",
+   "style": "longsleeve",
+   "cut": "youth",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-stacked-cream",
+    "place": "center-chest",
+    "width": 230
+   }
+  }
+ },
+ {
+  "slug": "crewneck",
+  "name": "Men's Crewneck",
+  "fit": "Men's",
+  "group": "mens",
+  "cat": "apparel",
+  "price": 38,
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL",
+   "3XL"
+  ],
+  "chart": "mens",
+  "desc": "A classic midweight crewneck sweatshirt in forest green with the stacked Faith Reins lockup in cream. Perfect for fall afternoons.",
+  "render": {
+   "kind": "top",
+   "style": "crewneck",
+   "cut": "mens",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-stacked-cream",
+    "place": "center-chest",
+    "width": 260
+   }
+  }
+ },
+ {
+  "slug": "womens-crewneck",
+  "name": "Women's Crewneck",
+  "fit": "Women's",
+  "group": "womens",
+  "cat": "apparel",
+  "price": 38,
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL"
+  ],
+  "chart": "womens",
+  "desc": "A women's cut midweight crewneck in natural with the stacked Faith Reins lockup in green.",
+  "render": {
+   "kind": "top",
+   "style": "crewneck",
+   "cut": "womens",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-stacked-green",
+    "place": "center-chest",
+    "width": 240
+   }
+  }
+ },
+ {
+  "slug": "youth-crewneck",
+  "name": "Youth Crewneck",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 28,
+  "sizes": [
+   "YXS",
+   "YS",
+   "YM",
+   "YL",
+   "YXL"
+  ],
+  "chart": "youth",
+  "desc": "A cozy youth crewneck in forest green with the stacked Faith Reins lockup in cream.",
+  "render": {
+   "kind": "top",
+   "style": "crewneck",
+   "cut": "youth",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-stacked-cream",
+    "place": "center-chest",
+    "width": 230
+   }
+  }
+ },
+ {
+  "slug": "heritage-hoodie",
+  "name": "Men's Heritage Hoodie",
+  "fit": "Men's",
+  "group": "mens",
+  "cat": "apparel",
+  "price": 45,
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL",
+   "3XL"
+  ],
+  "chart": "mens",
+  "desc": "A heavyweight pullover hoodie in Faith Reins forest green. Soft brushed interior, kangaroo pocket, and the stacked lockup in cream across the chest.",
+  "render": {
+   "kind": "top",
+   "style": "hoodie",
+   "cut": "mens",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-stacked-cream",
+    "place": "full-front",
+    "width": 270
+   }
+  }
+ },
+ {
+  "slug": "womens-hoodie",
+  "name": "Women's Hoodie",
+  "fit": "Women's",
+  "group": "womens",
+  "cat": "apparel",
+  "price": 42,
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL"
+  ],
+  "chart": "womens",
+  "desc": "A fitted pullover hoodie in natural with a relaxed silhouette, soft fleece interior, and the horizontal lockup in green on the left chest.",
+  "render": {
+   "kind": "top",
+   "style": "hoodie",
+   "cut": "womens",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-horizontal-green",
+    "place": "left-chest",
+    "width": 158
+   }
+  }
+ },
+ {
+  "slug": "childrens-hoodie",
+  "name": "Youth Hoodie",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 32,
+  "sizes": [
+   "YXS",
+   "YS",
+   "YM",
+   "YL",
+   "YXL"
+  ],
+  "chart": "youth",
+  "desc": "A cozy hoodie built for the barn, in forest green with the Faith Reins horse and name in cream. Soft, durable, and easy to layer.",
+  "render": {
+   "kind": "top",
+   "style": "hoodie",
+   "cut": "youth",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-stacked-cream",
+    "place": "full-front",
+    "width": 230
+   }
+  }
+ },
+ {
+  "slug": "mens-polo",
+  "name": "Men's Polo",
+  "fit": "Men's",
+  "group": "mens",
+  "cat": "apparel",
+  "price": 32,
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL",
+   "3XL"
+  ],
+  "chart": "mens",
+  "desc": "A piqu\u00e9 polo in forest green with the horizontal lockup embroidered in cream on the left chest. Classic fit, great for events.",
+  "render": {
+   "kind": "top",
+   "style": "polo",
+   "cut": "mens",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-horizontal-cream",
+    "place": "left-chest",
+    "width": 170
+   }
+  }
+ },
+ {
+  "slug": "womens-polo",
+  "name": "Women's Polo",
+  "fit": "Women's",
+  "group": "womens",
+  "cat": "apparel",
+  "price": 30,
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "2XL"
+  ],
+  "chart": "womens",
+  "desc": "A women's piqu\u00e9 polo in natural with the horizontal lockup embroidered in green. Fitted cut, professional and polished.",
+  "render": {
+   "kind": "top",
+   "style": "polo",
+   "cut": "womens",
+   "fabric": "natural",
+   "print": {
+    "art": "fr-horizontal-green",
+    "place": "left-chest",
+    "width": 158
+   }
+  }
+ },
+ {
+  "slug": "youth-polo",
+  "name": "Youth Polo",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "apparel",
+  "price": 24,
+  "sizes": [
+   "YXS",
+   "YS",
+   "YM",
+   "YL",
+   "YXL"
+  ],
+  "chart": "youth",
+  "desc": "A youth polo in forest green with the Faith Reins horse embroidered in cream on the left chest.",
+  "render": {
+   "kind": "top",
+   "style": "polo",
+   "cut": "youth",
+   "fabric": "forest",
+   "print": {
+    "art": "fr-mark-cream",
+    "place": "left-chest",
+    "width": 80
+   }
+  }
+ },
+ {
+  "slug": "caps",
+  "name": "Cap",
+  "fit": "Adult",
+  "group": "accessories",
+  "cat": "headwear",
+  "price": 22,
+  "sizes": [
+   "Adjustable"
+  ],
+  "chart": null,
+  "desc": "A structured six-panel cap in forest green with the Faith Reins horse embroidered in cream on the front. Adjustable strap fits most adults.",
+  "render": {
+   "kind": "cap",
+   "fabric": "forest",
+   "art": "fr-mark-cream"
+  }
+ },
+ {
+  "slug": "youth-cap",
+  "name": "Youth Cap",
+  "fit": "Youth",
+  "group": "youth",
+  "cat": "headwear",
+  "price": 20,
+  "sizes": [
+   "Youth adjustable"
+  ],
+  "chart": null,
+  "desc": "A youth-sized six-panel cap in natural with the Faith Reins horse embroidered in green. Adjustable strap.",
+  "render": {
+   "kind": "cap",
+   "fabric": "natural",
+   "art": "fr-mark-green",
+   "youth": true
+  }
+ },
+ {
+  "slug": "beanie",
+  "name": "Beanie",
+  "fit": "Adult",
+  "group": "accessories",
+  "cat": "headwear",
+  "price": 18,
+  "sizes": [
+   "One size"
+  ],
+  "chart": null,
+  "desc": "A ribbed knit cuffed beanie in forest green with the Faith Reins horse embroidered in cream on the cuff. Warm enough for Arkansas winters.",
+  "render": {
+   "kind": "beanie",
+   "fabric": "forest",
+   "art": "fr-mark-cream"
+  }
+ },
+ {
+  "slug": "coffee-mug",
+  "name": "Coffee Mug",
+  "fit": null,
+  "group": "home",
+  "cat": "drinkware",
+  "price": 16,
+  "sizes": null,
+  "chart": null,
+  "desc": "An 11 oz ceramic mug with the horizontal Faith Reins lockup in green. Microwave and dishwasher safe.",
+  "render": {
+   "kind": "mug",
+   "art": "fr-horizontal-green"
+  }
+ },
+ {
+  "slug": "travel-mug",
+  "name": "Travel Mug",
+  "fit": null,
+  "group": "home",
+  "cat": "drinkware",
+  "price": 22,
+  "sizes": null,
+  "chart": null,
+  "desc": "A 20 oz stainless steel travel mug with a secure lid and the stacked Faith Reins lockup in green. Keeps drinks hot for 6 hours, cold for 12.",
+  "render": {
+   "kind": "mug",
+   "travel": true,
+   "art": "fr-stacked-green"
+  }
+ },
+ {
+  "slug": "keychains",
+  "name": "Leather Keychain",
+  "fit": null,
+  "group": "home",
+  "cat": "accessories",
+  "price": 8,
+  "sizes": null,
+  "chart": null,
+  "desc": "A saddle-tan leather keychain with the Faith Reins horse in gold. A small gift that carries the mission.",
+  "render": {
+   "kind": "keychain",
+   "art": "fr-mark-gold"
+  }
+ },
+ {
+  "slug": "stickers",
+  "name": "Sticker Set",
+  "fit": null,
+  "group": "home",
+  "cat": "accessories",
+  "price": 4,
+  "sizes": null,
+  "chart": null,
+  "desc": "A set of vinyl stickers featuring the Faith Reins horse and lockup. Weatherproof and UV-resistant.",
+  "render": {
+   "kind": "stickers"
+  }
+ }
+]

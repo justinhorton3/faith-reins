@@ -1,3 +1,4 @@
+import PRODUCTS from "./products.json" with { type: "json" };
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
 const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeature, steps, checks, infoGrid, testimonial, faqList, ctaBand, photoBand, profile, profileGrid, notice, reach, form, btn, tlink, eyebrow, img, esc, titleBand, SITE, CAMPAIGN } = L;
@@ -381,51 +382,44 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
   ], { cols: 4 }), { pad: "tight" }));
 
 /* ---------- Shop ---------- */
-const toSlug = (n) => n.toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const MERCH = [
-  { name: "Heritage Hoodie", key: "v6-merch-heritage-hoodie", price: 45, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"], desc: "A heavyweight pullover hoodie in Faith Reins forest green. Soft brushed interior, kangaroo pocket, and the FR logo embroidered on the chest." },
-  { name: "Women's Hoodie", key: "v6-merch-womens-hoodie", price: 42, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL"], desc: "A fitted pullover hoodie with a relaxed silhouette. Soft fleece interior and embroidered FR logo on the left chest." },
-  { name: "Children's Hoodie", key: "v6-merch-youth-hoodie", price: 32, cat: "apparel", sizes: ["2T", "3T", "4", "5", "6", "7", "8", "10", "12", "14/16"], desc: "A cozy zip-up hoodie built for the barn. Soft, durable, and easy to layer on cool mornings." },
-  { name: "Crewneck", key: "v6-merch-crewneck", price: 38, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"], desc: "A classic midweight crewneck with the Faith Reins name across the chest. Perfect for fall afternoons." },
-  { name: "Long Sleeve Tee", key: "v6-merch-long-sleeve", price: 30, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"], desc: "A soft cotton-blend long sleeve with the FR logo. Layerable and comfortable across all seasons." },
-  { name: "Men's Tee", key: "v6-merch-mens-tee", price: 24, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"], desc: "A classic unisex tee in soft cotton. FR logo on the left chest, Faith Reins name on the back." },
-  { name: "Women's Tee", key: "v6-merch-womens-tee", price: 22, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL"], desc: "A relaxed-fit women's tee with the FR logo. Soft, lightweight, and made to move." },
-  { name: "Children's Tee", key: "v6-merch-youth-tee", price: 18, cat: "apparel", sizes: ["2T", "3T", "4", "5", "6", "7", "8", "10", "12", "14/16"], desc: "A soft children's tee with the Faith Reins horse and name. Built for play." },
-  { name: "Men's Polo", key: "v6-merch-mens-polo", price: 32, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"], desc: "A piqué polo with the FR emblem embroidered on the left chest. Classic fit, great for events." },
-  { name: "Women's Polo", key: "v6-merch-womens-polo", price: 30, cat: "apparel", sizes: ["XS", "S", "M", "L", "XL", "2XL"], desc: "A women's piqué polo with FR emblem. Fitted cut, professional and polished." },
-  { name: "Youth Polo", key: "v6-merch-youth-polo", price: 24, cat: "apparel", sizes: ["YS", "YM", "YL", "YXL"], desc: "A youth polo for the little supporters. Same embroidered FR emblem as the adult styles." },
-  { name: "Caps", key: "v6-merch-cap", price: 22, cat: "headwear", sizes: ["Adjustable"], desc: "A structured six-panel cap with FR embroidered on the front. Adjustable strap fits most." },
-  { name: "Beanie", key: "v6-merch-beanie", price: 18, cat: "headwear", sizes: ["One size"], desc: "A ribbed knit beanie with the Faith Reins name on a woven label. Warm enough for Arkansas winters." },
-  { name: "Coffee Mug", key: "v6-merch-mug", price: 16, cat: "drinkware", sizes: null, desc: "An 11 oz ceramic mug with the FR logo. Microwave and dishwasher safe." },
-  { name: "Travel Mug", key: "v6-merch-travel-mug", price: 22, cat: "drinkware", sizes: null, desc: "A 20 oz stainless steel travel mug with a secure lid. Keeps drinks hot for 6 hours, cold for 12." },
-  { name: "Keychains", key: "v6-merch-keychain", price: 8, cat: "accessories", sizes: null, desc: "A laser-engraved hardwood keychain with the Faith Reins logo. A small gift that carries the mission." },
-  { name: "Stickers", key: "v6-merch-stickers", price: 4, cat: "accessories", sizes: null, desc: "A 3-pack of vinyl stickers featuring the FR logo and horse illustration. Weatherproof and UV-resistant." },
-];
-const CATS = [["all", "All"], ["apparel", "Apparel"], ["headwear", "Headwear"], ["drinkware", "Drinkware"], ["accessories", "Accessories"]];
-const merchCard = ({ name, key: k, price, cat }) =>
-  `<a class="merch-card" href="/shop/${toSlug(name)}" data-cat="${cat}"><span class="merch-card__img"><img src="${img(k)}" alt="${esc(name)}" loading="lazy" width="600" height="600"></span><span class="merch-card__cat">${esc(cat)}</span><span class="merch-card__row"><span class="merch-card__name">${esc(name)}</span><span class="merch-card__price">$${price}</span></span></a>`;
+/* Shop catalog: src/lib/products.json (images rendered by scripts/merch/render_merch.py). */
+const shopImg = (slug) => `/assets/shop/${slug}.webp`;
+const FILTERS = [["all", "All"], ["mens", "Men's"], ["womens", "Women's"], ["youth", "Youth & toddler"], ["accessories", "Hats"], ["home", "Drinkware & gifts"]];
+const CAT_LABEL = { apparel: "Apparel", headwear: "Headwear", drinkware: "Drinkware", accessories: "Accessories" };
+const SIZE_CHARTS = {
+  mens: { label: "Men's / unisex", measure: "Chest (body), inches", rows: [["XS", "31–34"], ["S", "34–37"], ["M", "38–41"], ["L", "42–45"], ["XL", "46–49"], ["2XL", "50–53"], ["3XL", "54–57"]] },
+  womens: { label: "Women's", measure: "Bust (body), inches · US size", rows: [["XS", "31–32 · 0–2"], ["S", "33–34 · 4–6"], ["M", "35–36 · 8–10"], ["L", "37–39 · 12–14"], ["XL", "40–42 · 16"], ["2XL", "43–45 · 18"]] },
+  youth: { label: "Youth", measure: "Chest, inches · age", rows: [["YXS", "23–24 · 4–5"], ["YS", "25–26 · 6–8"], ["YM", "27–28 · 10–12"], ["YL", "29–30 · 14–16"], ["YXL", "31–32 · 18–20"]] },
+  toddler: { label: "Toddler", measure: "Height in · weight lb", rows: [["2T", "33–35 · 26–29"], ["3T", "36–38 · 30–33"], ["4T", "39–41 · 34–38"], ["5T", "42–44 · 39–42"]] },
+};
+const sizeChart = (k) => { const c = SIZE_CHARTS[k]; return `<div class="size-chart"><span class="size-chart__title">${esc(c.label)}</span><span class="size-chart__measure">${esc(c.measure)}</span><div class="size-chart__rows">${c.rows.map(([a, b]) => `<div class="size-chart__row"><b>${a}</b><span>${b}</span></div>`).join("")}</div></div>`; };
+const label = (p) => p.fit || CAT_LABEL[p.cat];
+const merchCard = (p) =>
+  `<a class="merch-card" href="/shop/${p.slug}" data-group="${p.group}"><span class="merch-card__img"><img src="${shopImg(p.slug)}" alt="${esc(p.name)}" loading="lazy" width="600" height="600"></span><span class="merch-card__cat">${esc(label(p))}</span><span class="merch-card__row"><span class="merch-card__name">${esc(p.name)}</span><span class="merch-card__price">$${p.price}</span></span></a>`;
 
-add("/shop", "Shop", "Faith Reins merchandise — hoodies, tees, polos, accessories, and more.",
+add("/shop", "Shop", "Faith Reins merchandise — tees, hoodies, crewnecks and polos in men's, women's and youth sizes, plus hats, mugs and gifts.",
   hero({ key: "shop", eyebrow: "Shop", title: "Wear the mission.", lead: "Every purchase supports pediatric therapy and equine-assisted learning in South Arkansas." }) +
-  section(`<div class="shop-bar">${sh({ eyebrow: MERCH.length + " items", title: "Faith Reins merch", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter by category">${CATS.map(([v, l]) => `<button class="shop-filter" type="button" data-filter="${v}" aria-pressed="${v === "all"}">${esc(l)}</button>`).join("")}</div></div>
-<div class="merch-grid" id="merch-grid">${MERCH.map(merchCard).join("")}</div>
-<script>(function(){var btns=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var f=b.dataset.filter;cards.forEach(function(c){c.style.display=(f==='all'||c.dataset.cat===f)?'':'none'})})})})();</script>`, { id: "shop-products" }) +
+  section(`<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " items", title: "Faith Reins merch", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([v, l]) => `<button class="shop-filter" type="button" data-filter="${v}" aria-pressed="${v === "all"}">${esc(l)}</button>`).join("")}</div></div>
+<div class="merch-grid" id="merch-grid">${PRODUCTS.map(merchCard).join("")}</div>
+<script>(function(){var btns=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var f=b.dataset.filter;cards.forEach(function(c){c.style.display=(f==='all'||c.dataset.group===f)?'':'none'})})})})();</script>`, { id: "shop-products" }) +
+  section(sh({ eyebrow: "Size guide", title: "Find the right fit", size: "sm", body: "Men's, women's, youth and toddler items are cut differently, so each has its own sizes. Measure the body, not the garment. Between sizes? Size up." }) + `<div class="size-charts">${Object.keys(SIZE_CHARTS).map(sizeChart).join("")}</div>`, { tone: "paper", id: "size-guide" }) +
   ctaBand({ tone: "sand", title: "Proceeds support the mission.", body: "Every purchase helps fund pediatric therapy and equine-assisted learning.", primary: ["Give instead", "/give"] }));
 
-MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
-  const slug = toSlug(name);
+PRODUCTS.forEach((p) => {
+  const { slug, name, price, sizes, desc, chart } = p;
+  const image = shopImg(slug);
   const sizeBlock = sizes
-    ? `<div class="stack" style="gap:10px"><p class="size-label">Size <span id="size-display"></span></p><div class="size-btns" id="size-btns" role="group" aria-label="Select a size">${sizes.map((s) => `<button class="size-btn" type="button" data-size="${esc(s)}" aria-pressed="false">${esc(s)}</button>`).join("")}</div></div>`
+    ? `<div class="stack" style="gap:10px"><p class="size-label">Size <span id="size-display"></span></p><div class="size-btns" id="size-btns" role="group" aria-label="Select a size">${sizes.map((s) => `<button class="size-btn" type="button" data-size="${esc(s)}" aria-pressed="false">${esc(s)}</button>`).join("")}</div>${chart ? `<a class="ship-note" href="/shop#size-guide">${esc(SIZE_CHARTS[chart].label)} size guide</a>` : ""}</div>`
     : "";
   const addScript = `<script>
 (function(){
-  var size=null, qty=1;
+  var size=${sizes && sizes.length === 1 ? JSON.stringify(sizes[0]) : "null"}, qty=1;
   var sizeBtns=[].slice.call(document.querySelectorAll('.size-btn'));
   var qtyVal=document.getElementById('qty-val');
   var atb=document.getElementById('atb');
   var conf=document.getElementById('atb-conf');
   var sizeDisplay=document.getElementById('size-display');
-  sizeBtns.forEach(function(b){b.addEventListener('click',function(){
+  sizeBtns.forEach(function(b){if(size&&b.dataset.size===size)b.setAttribute('aria-pressed','true');b.addEventListener('click',function(){
     sizeBtns.forEach(function(x){x.setAttribute('aria-pressed','false')});
     b.setAttribute('aria-pressed','true');
     size=b.dataset.size;
@@ -434,14 +428,14 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
   })});
   document.getElementById('qty-dec').addEventListener('click',function(){if(qty>1){qty--;qtyVal.textContent=qty;}});
   document.getElementById('qty-inc').addEventListener('click',function(){if(qty<9){qty++;qtyVal.textContent=qty;}});
-  function check(){atb.disabled=${sizes ? "!size" : "false"};atb.textContent=${sizes ? "size?'Add to bag':'Choose a size'" : "'Add to bag'"};}
+  function check(){var need=${sizes ? "!size" : "false"};atb.disabled=need;atb.textContent=need?'Choose a size':'Add to bag';}
   check();
   atb.addEventListener('click',function(){
     ${sizes ? "if(!size)return;" : ""}
     var cart=[];
     try{cart=JSON.parse(localStorage.getItem('fr-cart')||'[]');}catch(e){}
     var existing=cart.find(function(i){return i.id===${JSON.stringify(slug)}&&i.size===size;});
-    if(existing){existing.qty+=qty;}else{cart.push({id:${JSON.stringify(slug)},name:${JSON.stringify(name)},price:${price},size:size,qty:qty,img:${JSON.stringify(img(k))}});}
+    if(existing){existing.qty+=qty;}else{cart.push({id:${JSON.stringify(slug)},name:${JSON.stringify(name)},price:${price},size:size,qty:qty,img:${JSON.stringify(image)}});}
     try{localStorage.setItem('fr-cart',JSON.stringify(cart));}catch(e){}
     var count=cart.reduce(function(s,i){return s+i.qty;},0);
     var badge=document.getElementById('cart-badge');
@@ -454,22 +448,19 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
 </script>`;
   const productJsonLd = {
     "@context": "https://schema.org", "@type": "Product", "name": name, "description": desc,
-    "image": `https://www.faithreins.com${img(k)}`, "brand": { "@type": "Brand", "name": "Faith Reins" },
+    "image": `https://www.faithreins.com${image}`, "brand": { "@type": "Brand", "name": "Faith Reins" },
     "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Faith Reins Equestrian Center" } },
-    "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Shop", "item": "https://www.faithreins.com/shop" },
-      { "@type": "ListItem", "position": 2, "name": name, "item": `https://www.faithreins.com/shop/${slug}` },
-    ] },
   };
+  const related = PRODUCTS.filter((m) => m.slug !== slug && m.group === p.group).concat(PRODUCTS.filter((m) => m.slug !== slug && m.group !== p.group)).slice(0, 4);
   add(`/shop/${slug}`, `${name} | Shop`, desc,
-    section(`<p class="crumbs"><a href="/shop">Shop</a><span aria-hidden="true">/</span><span>${esc(cat)}</span></p>
-<div class="product"><div class="product__img"><img src="${img(k)}" alt="${esc(name)}" width="800" height="800"></div>
-<div class="product__info">${eyebrow(cat)}<h1 class="product__name">${esc(name)}</h1><p class="product__price">$${price}</p><p class="product__desc">${esc(desc)}</p>${sizeBlock}
+    section(`<p class="crumbs"><a href="/shop">Shop</a><span aria-hidden="true">/</span><span>${esc(label(p))}</span></p>
+<div class="product"><div class="product__img"><img src="${image}" alt="${esc(name)}" width="1200" height="1200"></div>
+<div class="product__info">${eyebrow(label(p))}<h1 class="product__name">${esc(name)}</h1><p class="product__price">$${price}</p><p class="product__desc">${esc(desc)}</p>${sizeBlock}
 <div class="qty-row"><span>Qty</span><button class="qty-btn" id="qty-dec" type="button" aria-label="Decrease quantity">−</button><span class="qty-val" id="qty-val">1</span><button class="qty-btn" id="qty-inc" type="button" aria-label="Increase quantity">+</button></div>
-<button class="btn btn--block" id="atb" type="button"${sizes ? " disabled" : ""}>Add to bag</button>
+<button class="btn btn--block" id="atb" type="button"${sizes && sizes.length > 1 ? " disabled" : ""}>Add to bag</button>
 <p class="atb-confirm" id="atb-conf" aria-live="polite"></p>
 <p class="ship-note">Ships within 5–7 business days. See the <a href="/returns-policy">Returns &amp; Shipping Policy</a>.</p></div></div>`) +
-    section(sh({ eyebrow: "More from the shop", title: "You might also like", size: "sm" }) + `<div class="merch-grid">${MERCH.filter((m) => toSlug(m.name) !== slug).slice(0, 4).map(merchCard).join("")}</div>`, { tone: "paper" }) +
+    section(sh({ eyebrow: "More from the shop", title: "You might also like", size: "sm" }) + `<div class="merch-grid">${related.map(merchCard).join("")}</div>`, { tone: "paper" }) +
     addScript,
     productJsonLd);
 });
