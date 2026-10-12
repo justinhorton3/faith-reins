@@ -40,6 +40,12 @@ export default function GivingPanel() {
           </li>
         ))}
       </ul>
+      {!loading && !error && orders.length > 0 && (
+        <p className="mt-4 text-sm text-muted-foreground">
+          You'll get a receipt by email for your first gift. After that, every charge shows here —
+          check back anytime to see your giving history, or cancel above.
+        </p>
+      )}
     </div>
   );
 }
