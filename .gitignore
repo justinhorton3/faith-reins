@@ -151,3 +151,5 @@ site/dist/
 dist/
 web/dist/
 .DS_Store
+
+__pycache__/
