@@ -1,6 +1,29 @@
 // Booking and giving flow tests.
 import { test, expect } from "@playwright/test";
 
+// `auth.elevate()` depends on Wix's hosting-injected private-app credentials, which don't
+// exist under local `astro build`/`preview` — confirmed empirically: /api/give-campaign
+// returns a silent empty success locally instead of real data or an error. Everything below
+// is verified correct against Wix's documented API contracts, but not confirmed working
+// end-to-end until deployed. Run these manually against stage.faithreins.com after each
+// deploy that touches an elevated endpoint:
+//   - Give page: pick an amount, enter a real email, confirm the campaign's real suggested
+//     amounts/description render (not empty), and that "Continue to secure donation" actually
+//     redirects to a live Wix checkout page (not a 502/"could not start checkout").
+//   - Contact/Sponsor forms: submit for real, confirm the submission appears in the Wix CRM
+//     dashboard (Contacts / Forms submissions), not just that the client-side success message
+//     shows.
+//   - Donor /account page, logged in as a real donor: confirm Giving shows the real recurring
+//     plan and Cancel actually works; confirm Billing shows real invoices with working links.
+//   - Donation-receipt automations (both built and VALID per the API, but never fired for
+//     real): make a real $1 one-time donation and confirm a Wix Invoice is created and
+//     emailed; separately purchase a $25 recurring plan and confirm the same. Note the
+//     recurring automation only fires on the FIRST payment — Pricing Plans doesn't expose a
+//     per-cycle payment trigger in the Automations catalog, so months 2+ won't auto-receipt
+//     this way; that gap is real and still needs a decision (manual, scheduled job, or
+//     year-end-only statements as originally scoped).
+test.describe.skip("Staging-only manual checks (see comment above)", () => {});
+
 test.describe("Book Online (retired — redirects to /contact)", () => {
   test("redirects to /contact", async ({ page }) => {
     await page.goto("/book-online");
