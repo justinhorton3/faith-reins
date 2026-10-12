@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import { iconCss } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld } = Astro.props;
-const SITE = "https://faithreins.org";
+const SITE = "https://www.faithreins.com";
 const canonical = SITE + (route === "/" ? "" : route);
 const ogImage = SITE + "/assets/hero-home-desktop.webp";
 const ogTitle = title.replace(/ \| Faith Reins$/, "");

@@ -5,7 +5,7 @@ import { header, footer } from "./src/lib/lib.mjs";
 const SHELL = `export const HEADER=${JSON.stringify(header(""))};export const FOOTER=${JSON.stringify(footer())};`;
 
 export default defineConfig({
-  site: "https://faithreins.org",
+  site: "https://www.faithreins.com",
   output: "static",
   trailingSlash: "ignore",
   integrations: [sitemap()],

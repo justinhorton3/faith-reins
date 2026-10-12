@@ -532,7 +532,7 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
     "@type": "Product",
     "name": name,
     "description": desc,
-    "image": `https://faithreins.org${img(k)}`,
+    "image": `https://www.faithreins.com${img(k)}`,
     "brand": { "@type": "Brand", "name": "Faith Reins" },
     "offers": {
       "@type": "Offer",
@@ -542,8 +542,8 @@ MERCH.forEach(({ name, key: k, price, cat, sizes, desc }) => {
       "seller": { "@type": "Organization", "name": "Faith Reins Equestrian Center" }
     },
     "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Shop", "item": "https://faithreins.org/shop" },
-      { "@type": "ListItem", "position": 2, "name": name, "item": `https://faithreins.org/shop/${slug}` }
+      { "@type": "ListItem", "position": 1, "name": "Shop", "item": "https://www.faithreins.com/shop" },
+      { "@type": "ListItem", "position": 2, "name": name, "item": `https://www.faithreins.com/shop/${slug}` }
     ]}
   };
   add(`/shop/${slug}`, `${name} | Shop | Faith Reins`, desc,
@@ -626,7 +626,7 @@ add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins web
 <h1>Privacy Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
 <h2>1. Overview</h2>
-<p>Faith Reins Equestrian Center is committed to protecting the privacy of the children, families, and supporters who interact with us. This policy explains what information we collect through this website, how we use it, and your rights. It governs information collected through faithreins.org and related online forms only. Information collected during the delivery of clinical services is handled under a separate HIPAA Notice of Privacy Practices provided at intake.</p>
+<p>Faith Reins Equestrian Center is committed to protecting the privacy of the children, families, and supporters who interact with us. This policy explains what information we collect through this website, how we use it, and your rights. It governs information collected through faithreins.com and related online forms only. Information collected during the delivery of clinical services is handled under a separate HIPAA Notice of Privacy Practices provided at intake.</p>
 <h2>2. Information We Collect</h2>
 <p><strong>Information you provide:</strong> contact and inquiry forms collect your name, email, and phone number; appointment requests collect contact details and service interest; online giving collects name, billing address, and email (payment card details are processed by our payment processor and not stored by Faith Reins); volunteer and employment inquiries collect the details you provide in your application.</p>
 <p><strong>Information collected automatically:</strong> our web host may log standard server data including IP address, browser type, and pages visited. We may use aggregate analytics to understand site traffic. We do not use this data to identify individuals.</p>
@@ -850,7 +850,7 @@ add("/photo-consent", "Photo & Media Consent Policy", "How Faith Reins uses phot
 <h2>How Media May Be Used</h2>
 <p>With signed consent, images and video may be used for:</p>
 <ul>
-  <li>The Faith Reins website (faithreins.org)</li>
+  <li>The Faith Reins website (faithreins.com)</li>
   <li>Official Faith Reins social media accounts (Facebook, Instagram, and similar)</li>
   <li>Print and digital materials including newsletters, brochures, and fundraising appeals</li>
   <li>Grant applications and donor communications</li>

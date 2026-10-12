@@ -3,11 +3,11 @@ import media from "./media.json" with { type: "json" };
 
 export { media };
 export const FORMS = {
-  contact: "23cf24ab-86ff-4595-8a3b-7535900f4a23",
-  appointment: "31632052-e00f-473d-9edd-e64c699b83ef",
-  sponsor: "17fc908b-9d0d-4554-8b4f-f45d009b1721",
+  contact: "2dcfa70f-a58e-4a15-8011-194ffa131a42",
+  appointment: "c0fdca58-8027-46af-998d-a1feaaed2493",
+  sponsor: "811ee3c1-d782-4ce6-ac01-703ae9b47b1b",
 };
-export const CAMPAIGN = "fea961a8-acc5-428b-801c-b64f4c6603f4";
+export const CAMPAIGN = "6f213c29-26a1-478d-9461-40b5164c26e1";
 
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 export const img = (key) => {

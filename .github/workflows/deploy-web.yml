@@ -1,6 +1,12 @@
 name: Deploy web
+# Builds the Astro site and releases it to the live Wix Headless site
+# (faithreins.com, metasite 2d8c6050-5730-4bed-9c7a-266ca7bd00b4 per wix.config.json).
+# Requires repo secret WIX_API_KEY: a Wix API key from the account that owns the site.
 on:
   workflow_dispatch:
+concurrency:
+  group: deploy-web
+  cancel-in-progress: false
 jobs:
   build-release:
     runs-on: ubuntu-latest
@@ -8,8 +14,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: npm install
-      - run: npm run build
-      - run: npx wix release
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Check Wix API key is set
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          if [ -z "$WIX_API_KEY" ]; then
+            echo "::error::Repo secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+      - run: npm ci || npm install
+      - run: npm run build
+      - name: Prepare output for Wix hosting
+        run: python scripts/wix-postbuild.py
+      - name: Log in to Wix
+        run: npx --yes @wix/cli@latest login --api-key "$WIX_API_KEY"
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+      - name: Release to Wix
+        run: npx --yes @wix/cli@latest release
