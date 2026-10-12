@@ -12,7 +12,7 @@ from fontTools.pens.transformPen import TransformPen
 from PIL import Image, ImageDraw
 import cairosvg
 
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[1]
 V7=ROOT/"v7-design-system"
 FONT=ROOT/"public/fonts/hanken-grotesk.woff"
 CAND=V7/"candidates/website-logo"
