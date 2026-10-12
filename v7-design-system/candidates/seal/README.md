@@ -23,3 +23,7 @@ The small horizontal gold rules flanking `EST. 2025` were overlapping the first 
 - Cream field / reverse / monochrome colorways
 
 The website and live production assets remain unchanged.
+
+## Latest spacing refinement — 2026-10-12
+
+On the original seal (no rope variant), the `EST. 2025` line-and-type group was raised by 18 SVG units to reduce the vertical gap beneath the approved horse. The two short gold rules were raised with the lettering and remain symmetric. Horse artwork, curved headings, rings, and overall seal geometry were not changed. Green, reverse, and monochrome candidates were updated consistently.
