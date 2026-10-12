@@ -38,8 +38,11 @@ jobs:
         run: |
           set -o pipefail
           npx --yes @wix/cli@latest release 2>&1 | tee release.log || {
-            tail -n 40 release.log | sed 's/\x1b\[[0-9;]*m//g' | while IFS= read -r line; do
-              [ -n "$line" ] && echo "::error title=wix release::$line"
+            sed 's/\x1b\[[0-9;]*m//g' release.log > clean.log
+            { grep -oiE '"(message|code|description|applicationError|errorCode|status)":"?[^",}]{0,180}' clean.log
+              grep -iE 'error|fail|denied|forbidden|not found|[0-9]{3} ' clean.log | grep -v '"hash"' | cut -c1-250
+            } | sort -u | head -30 | while IFS= read -r line; do
+              echo "::error title=wix release::$line"
             done
             exit 1
           }
