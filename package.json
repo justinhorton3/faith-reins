@@ -10,8 +10,29 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.5.5",
+    "@astrojs/react": "^6.0.6",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^5.0.0"
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@wix/auto_sdk_ecom_cart-v-2": "^1.0.192",
+    "@wix/blog": "^1.0.645",
+    "@wix/bookings": "^1.0.1650",
+    "@wix/categories": "^1.0.220",
+    "@wix/ecom": "^1.0.2451",
+    "@wix/essentials": "^1.0.10",
+    "@wix/forms": "^1.0.501",
+    "@wix/members": "^1.0.511",
+    "@wix/pricing-plans": "^1.0.378",
+    "@wix/redirects": "^1.0.125",
+    "@wix/ricos": "^11.12.0",
+    "@wix/sdk": "^1.21.5",
+    "@wix/seo": "^1.0.79",
+    "@wix/stores": "^1.0.888",
+    "astro": "^5.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.0"

@@ -1,0 +1,61 @@
+{
+  "forms": [
+    {
+      "name": "Contact",
+      "submitText": "Send message",
+      "fields": [
+        { "label": "Your name", "kind": "text", "required": true },
+        { "label": "Email", "kind": "email", "required": true },
+        { "label": "Phone", "kind": "phone" },
+        { "label": "Message", "kind": "textarea", "required": true }
+      ]
+    }
+  ],
+  "categories": ["Stories", "Programs"],
+  "posts": [
+    {
+      "title": "Meet the herd: Biscuit, Maple, Cowboy and Captain Carrot",
+      "category": "Stories",
+      "tags": ["horses"],
+      "coverImagePath": "images/horses/herd-portrait.webp",
+      "content": [
+        { "type": "paragraph", "text": "Every horse in our therapy herd is chosen for temperament, then trained for therapy. Children quickly learn their names, moods and favorite treats." },
+        { "type": "heading", "text": "Four horses, four personalities", "level": 2 },
+        { "type": "paragraph", "text": "Biscuit is steady and patient, often paired with a child's first session. Maple is gentle and attentive. Cowboy brings a calm confidence to the arena, and Captain Carrot is endlessly food-motivated — which makes him an excellent teacher of routine and responsibility." },
+        { "type": "quote", "text": "Children quickly learn their names, moods and favorite treats." }
+      ]
+    },
+    {
+      "title": "What a session in the arena actually looks like",
+      "category": "Programs",
+      "tags": ["equine-assisted learning"],
+      "coverImagePath": "images/imagery/home-clinical.webp",
+      "content": [
+        { "type": "paragraph", "text": "Sessions happen in the clinic and in the arena with our small therapy herd. For many families, the arena is the part they picture least clearly before their first visit." },
+        { "type": "heading", "text": "Clinical goals, not just a horse ride", "level": 2 },
+        { "type": "paragraph", "text": "A session is built around the same clinical goals as any other therapy visit — gait, sensory processing, communication, confidence — with the horse as the motivating partner, not the point of the visit." },
+        { "type": "bulleted", "items": [
+          "A licensed therapist leads every session",
+          "Goals are set and tracked the same as in-clinic care",
+          "Horses are matched to each child's needs and comfort level"
+        ] }
+      ]
+    },
+    {
+      "title": "Five ways equine-assisted learning helps kids build confidence",
+      "category": "Programs",
+      "tags": ["equine-assisted learning", "families"],
+      "coverImagePath": "images/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+      "content": [
+        { "type": "paragraph", "text": "Equine-assisted learning asks a child to communicate clearly, stay calm, and build trust with a thousand-pound animal that responds honestly to how they show up. That combination teaches things a worksheet cannot." },
+        { "type": "ordered", "items": [
+          "Clear, calm communication",
+          "Reading and responding to nonverbal cues",
+          "Patience and self-regulation",
+          "Follow-through on a task from start to finish",
+          "Confidence that carries over outside the arena"
+        ] }
+      ]
+    }
+  ]
+}

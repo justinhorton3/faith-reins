@@ -1,0 +1,54 @@
+{
+  "products": [
+    { "name": "Beanie", "description": "A warm knit beanie with the Faith Reins mark.",
+      "price": 25, "inStock": true, "imagePath": "images/merch/beanie.png" },
+
+    { "name": "Cap", "description": "An adjustable cap with the Faith Reins mark.",
+      "price": 30, "inStock": true, "imagePath": "images/merch/cap.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S/M" }, { "name": "L/XL" }] }] },
+    { "name": "Youth Cap", "description": "An adjustable cap, sized for kids.",
+      "price": 27, "inStock": true, "imagePath": "images/merch/youth-cap.png" },
+
+    { "name": "Crewneck", "description": "A classic crewneck sweatshirt with the Faith Reins mark.",
+      "price": 35, "inStock": true, "imagePath": "images/merch/crewneck.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S" }, { "name": "M" }, { "name": "L" }, { "name": "XL" }] }] },
+
+    { "name": "Heritage Hoodie", "description": "A heavyweight hoodie with the Faith Reins mark.",
+      "price": 60, "inStock": true, "imagePath": "images/merch/heritage-hoodie.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S" }, { "name": "M" }, { "name": "L" }, { "name": "XL" }] }] },
+    { "name": "Youth Hoodie", "description": "A heavyweight hoodie, sized for kids.",
+      "price": 57, "inStock": true, "imagePath": "images/merch/youth-hoodie.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "XS" }, { "name": "S" }, { "name": "M" }, { "name": "L" }] }] },
+
+    { "name": "Polo", "description": "A classic polo shirt with the Faith Reins mark.",
+      "price": 40, "inStock": true, "imagePath": "images/merch/mens-polo.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S" }, { "name": "M" }, { "name": "L" }, { "name": "XL" }] }] },
+    { "name": "Youth Polo", "description": "A classic polo shirt, sized for kids.",
+      "price": 37, "inStock": true, "imagePath": "images/merch/youth-polo.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "XS" }, { "name": "S" }, { "name": "M" }, { "name": "L" }] }] },
+
+    { "name": "Tee", "description": "A soft cotton tee with the Faith Reins mark.",
+      "price": 30, "inStock": true, "imagePath": "images/merch/mens-tee.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S" }, { "name": "M" }, { "name": "L" }, { "name": "XL" }] }] },
+    { "name": "Youth Tee", "description": "A soft cotton tee, sized for kids.",
+      "price": 27, "inStock": true, "imagePath": "images/merch/youth-tee.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "XS" }, { "name": "S" }, { "name": "M" }, { "name": "L" }] }] },
+
+    { "name": "Mug", "description": "A ceramic mug with the Faith Reins mark.",
+      "price": 25, "inStock": true, "imagePath": "images/merch/mug.png" },
+    { "name": "Travel Mug", "description": "An insulated travel mug with the Faith Reins mark.",
+      "price": 30, "inStock": true, "imagePath": "images/merch/travel-mug.png" },
+    { "name": "Stickers", "description": "A set of Faith Reins stickers.",
+      "price": 5, "inStock": true, "imagePath": "images/merch/stickers.png" },
+    { "name": "Keychain", "description": "A Faith Reins keychain.",
+      "price": 9, "inStock": true, "imagePath": "images/merch/keychain.png" },
+
+    { "name": "Long Sleeve", "description": "A long sleeve tee with the Faith Reins mark.",
+      "price": 40, "inStock": true, "imagePath": "images/merch/long-sleeve.png",
+      "options": [{ "name": "Size", "type": "text", "choices": [{ "name": "S" }, { "name": "M" }, { "name": "L" }, { "name": "XL" }] }] }
+  ],
+  "categories": {
+    "Apparel": ["Beanie", "Cap", "Youth Cap", "Crewneck", "Heritage Hoodie", "Youth Hoodie", "Polo", "Youth Polo", "Tee", "Youth Tee", "Long Sleeve"],
+    "Accessories": ["Mug", "Travel Mug", "Stickers", "Keychain"]
+  }
+}

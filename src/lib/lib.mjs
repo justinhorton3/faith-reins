@@ -89,6 +89,11 @@ const NAV = [
 ];
 const DRAWER = [["Home", "/", ["/"]], ...NAV.map(([l, h, , m]) => [l, h, m]), ["Contact", "/contact", ["/contact"]]];
 
+// Patient billing/scheduling lives in Fusion by Ensora Health, not Wix — swap this for the
+// practice's actual Fusion portal login URL once Donna/Ensora have it provisioned.
+const PORTAL_URL = "https://ensorahealth.com";
+const portalLink = (cls) => `<a class="${cls}" href="${PORTAL_URL}" target="_blank" rel="noopener noreferrer">Patient Portal</a>`;
+
 export function header(route) {
   const cur = (m) => (m.includes(route) ? ' aria-current="page"' : "");
   return `<a class="skip-link" href="#main">Skip to content</a>
@@ -96,6 +101,7 @@ export function header(route) {
 <a class="site-header__logo" href="/" aria-label="Faith Reins home"><img src="${img("logo")}" alt="Faith Reins" width="152" height="53"></a>
 <nav class="site-nav" aria-label="Primary">
 ${NAV.map(([l, h, t, m]) => `<a class="nav-link"${t ? " data-tablet" : ""} href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
+${portalLink("nav-link")}
 ${btn("Donate", "/give")}
 <button class="cart-btn" id="cart-btn" type="button" aria-label="Shopping bag" aria-haspopup="dialog"><span class="cart-btn__icon">${icon("bag")}</span><span class="cart-badge" id="cart-badge" hidden>0</span></button>
 <button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${icon("menu")}</button>
@@ -103,6 +109,7 @@ ${btn("Donate", "/give")}
 <div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__scrim" data-drawer-close></div>
 <div class="drawer__panel"><div class="drawer__top"><img src="${img("logo")}" alt="Faith Reins" width="136" height="48"><button class="menu-btn" type="button" data-drawer-close aria-label="Close menu" style="display:inline-flex">${icon("close")}</button></div>
 ${btn("Donate", "/give")}
+${portalLink("drawer-link")}
 ${DRAWER.map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("\n")}
 </div></div>`;
 }
@@ -112,11 +119,11 @@ export function footer() {
   return `<footer class="site-footer"><div class="container"><div class="site-footer__grid">
 <div class="site-footer__brand"><img src="${img("logo-white")}" alt="Faith Reins" width="210" height="64">
 <address><span><a href="tel:+18708184087">870-818-4087</a></span><span><a href="mailto:info@faithreins.com">info@faithreins.com</a></span><span>226 Ouachita County Rd 45</span><span>Camden, AR 72711</span><span>Clinic: M–F 8:00 AM – 5:00 PM</span><span>Private sessions by appointment</span></address></div>
-<ul class="site-footer__links" aria-label="Footer">${links.map(([l, h]) => `<li><a href="${h}">${esc(l)}</a></li>`).join("")}</ul>
+<ul class="site-footer__links" aria-label="Footer">${links.map(([l, h]) => `<li><a href="${h}"${h.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : ""}>${esc(l)}</a></li>`).join("")}</ul>
 <div class="site-footer__connect"><h2>Connect with us</h2>
 ${form("contact", { submit: "Send message", success: "Thank you. We received your message.", btnKind: "accent" })}
 <p class="form-note mt-16">Please do not include medical information.</p></div>
 </div>
-<div class="site-footer__bottom"><span>© ${new Date().getFullYear()} Faith Reins. All rights reserved.</span><nav aria-label="Legal"><a href="/terms-of-service">Terms</a><a href="/privacy-policy">Privacy</a><a href="/hipaa-notice">HIPAA</a><a href="/accessibility">Accessibility</a><a href="/legal">All policies</a></nav></div>
+<div class="site-footer__bottom"><span>© ${new Date().getFullYear()} Faith Reins. All rights reserved.</span><span class="footer-account-slot">@@DONOR_ACCOUNT@@</span><nav aria-label="Legal"><a href="/terms-of-service">Terms</a><a href="/privacy-policy">Privacy</a><a href="/hipaa-notice">HIPAA</a><a href="/accessibility">Accessibility</a><a href="/legal">All policies</a></nav></div>
 </div></footer>`;
 }

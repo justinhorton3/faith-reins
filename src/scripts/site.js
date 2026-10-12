@@ -1,5 +1,4 @@
-// Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
-import { HEADER, FOOTER } from "virtual:shell";
+// Faith Reins browser script: drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
 const CLIENT = "186d8418-21e0-44ac-8bad-ef95da411f9d";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
@@ -43,19 +42,8 @@ function track(event, params = {}) {
   // api("/analytics/v2/events", "POST", { event: { eventType: event, eventData: params } }).catch(() => {});
 }
 
-/* Shell */
+/* Drawer */
 (() => {
-  const hd = $("#shell-header"), ft = $("#shell-footer");
-  if (hd) {
-    hd.innerHTML = HEADER;
-    const p = location.pathname.replace(/\/+$/, "") || "/";
-    const g = { "/our-mission": ["/our-team", "/our-horses"], "/services-programs": ["/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"], "/for-families": ["/book-online", "/payment-and-insurance", "/faq"], "/give": ["/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"] };
-    for (const a of $$("a.nav-link, a.drawer-link", hd)) {
-      const href = a.getAttribute("href");
-      if (href === p || (g[href] || []).includes(p)) a.setAttribute("aria-current", "page");
-    }
-  }
-  if (ft) ft.innerHTML = FOOTER;
   const d = $("#drawer"), o = $("[data-drawer-open]");
   if (!d) return;
   const set = (open) => { d.hidden = !open; document.body.classList.toggle("drawer-open", open); o.setAttribute("aria-expanded", open); (open ? $("[data-drawer-close]", d) : o).focus(); };

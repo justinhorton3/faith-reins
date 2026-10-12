@@ -1,0 +1,20 @@
+{
+  "plans": [
+    { "name": "Monthly Giving — $25", "price": "25.00",
+      "type": "recurring", "billingCycle": { "period": "MONTH", "count": 1 },
+      "description": "A recurring monthly gift to Faith Reins.",
+      "perks": ["Helps fund therapy sessions", "Manage or cancel anytime from your account"] },
+    { "name": "Monthly Giving — $50", "price": "50.00",
+      "type": "recurring", "billingCycle": { "period": "MONTH", "count": 1 },
+      "description": "A recurring monthly gift to Faith Reins.",
+      "perks": ["Helps fund therapy sessions", "Manage or cancel anytime from your account"] },
+    { "name": "Monthly Giving — $100", "price": "100.00",
+      "type": "recurring", "billingCycle": { "period": "MONTH", "count": 1 },
+      "description": "A recurring monthly gift to Faith Reins.",
+      "perks": ["Helps fund therapy sessions", "Manage or cancel anytime from your account"] },
+    { "name": "Monthly Giving — $250", "price": "250.00",
+      "type": "recurring", "billingCycle": { "period": "MONTH", "count": 1 },
+      "description": "A recurring monthly gift to Faith Reins.",
+      "perks": ["Helps fund therapy sessions", "Manage or cancel anytime from your account"] }
+  ]
+}

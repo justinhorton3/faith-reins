@@ -1,7 +1,10 @@
 ---
 import "../styles/global.css";
-import { iconCss } from "../lib/lib.mjs";
+import { iconCss, header, footer } from "../lib/lib.mjs";
+import MemberMenu from "../components/members/MemberMenu";
 const { title, description, route = "/", jsonld } = Astro.props;
+const headerHtml = header(route);
+const [footerStart, footerEnd] = footer().split("@@DONOR_ACCOUNT@@");
 const SITE = "https://faithreins.org";
 const canonical = SITE + (route === "/" ? "" : route);
 const ogImage = SITE + "/assets/hero-home-desktop.webp";
@@ -77,9 +80,12 @@ const orgSchema = {
     <Fragment set:html={`<style>${iconCss()}</style>`} />
   </head>
   <body>
-    <div id="shell-header"><noscript><a href="/">Home</a> <a href="/services-programs">Services</a> <a href="/book-online">Book</a> <a href="/give">Give</a> <a href="/contact">Contact</a></noscript></div>
+    <Fragment set:html={headerHtml} />
+    <noscript><a href="/">Home</a> <a href="/services-programs">Services</a> <a href="/contact">Contact</a> <a href="/give">Give</a></noscript>
     <main id="main"><slot /></main>
-    <div id="shell-footer"></div>
+    <Fragment set:html={footerStart} />
+    <MemberMenu client:only="react" accountHref="/account" />
+    <Fragment set:html={footerEnd} />
     <script>import "../scripts/site.js";</script>
     <script>import "../scripts/cart.js";</script>
   </body>
