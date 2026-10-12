@@ -21,9 +21,9 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 | Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending — not part of stacked approval | letterhead/clinical/donor |
 | Document stacked | [approved/document-logo/faith-reins-v7-document-stacked-green.svg](approved/document-logo/faith-reins-v7-document-stacked-green.svg) | **Approved and promoted 2026-10-12** | narrow formal applications |
 | Document print black | [approved/document-logo/faith-reins-v7-document-stacked-black.svg](approved/document-logo/faith-reins-v7-document-stacked-black.svg) | **Approved and promoted 2026-10-12** | B&W office printing |
-| Official seal full | approved/seal/seal-full-green.svg | Pending reference audit | donor/certificates/merch |
-| Official seal ringless | approved/seal/seal-ringless-green.svg | Conditional approval | special layouts |
-| Print-safe seal | approved/seal/seal-black.svg | Pending | B&W/emboss-ready |
+| Official seal — green/gold | [approved/seal/faith-reins-v7-seal-green.svg](approved/seal/faith-reins-v7-seal-green.svg) | **Owner approved and promoted 2026-10-12** | primary seal; donor/certificates/merch |
+| Official seal — cream/green | [approved/seal/faith-reins-v7-seal-cream.svg](approved/seal/faith-reins-v7-seal-cream.svg) | **Owner approved and promoted 2026-10-12** | inverse seal on dark grounds |
+| Official seal — monochrome | [approved/seal/faith-reins-v7-seal-black.svg](approved/seal/faith-reins-v7-seal-black.svg) | **Owner approved and promoted 2026-10-12** | single-color print applications |
 
 ## Naming and metadata requirement
 
@@ -43,7 +43,7 @@ Each approved SVG should have recorded:
 - Official public wordmark: FAITH REINS (current site and V6).
 - The requested wording “Faith Reigns” conflicts with the current brand; do not change spelling without explicit authorization.
 - Current V6 website subtitle “Pediatric & Equine Therapy”; prior request mentions “Equestrian and Pediatric Therapy.” Confirm exact line before freezing logo exports.
-- Seal banner “Faith & Healing” and “EST. 2025” require comparison with approved reference before implementation.
+- Seal wording and spacing: owner approved the original V7 seal with `FAITH REINS`, `EQUESTRIAN CENTER`, and `EST. 2025`; the date line and flanking rules were tightened on 2026-10-12. The experimental rope-border tangent was not adopted.
 
 
 ## Candidate 01 — 2026-10-12
