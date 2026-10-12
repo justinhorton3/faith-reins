@@ -19,8 +19,8 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 | Website inverse | [approved/website-logo/faith-reins-v7-website-horizontal-cream.svg](approved/website-logo/faith-reins-v7-website-horizontal-cream.svg) | **Approved layout + exact V6 Hanken vector outlines completed** | inverse footer; no deployment |
 | Website compact | approved/website-logo/website-compact-green.svg | Pending mobile sign-off | small mobile/header/drawer |
 | Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending — not part of stacked approval | letterhead/clinical/donor |
-| Document stacked | candidates/document-logo/faith-reins-v7-document-stacked-green.svg | **Owner approved Candidate 01 (2026-10-12)** — pending promotion | narrow formal applications |
-| Document print black | approved/document-logo/document-black.svg | Pending | B&W office printing |
+| Document stacked | [approved/document-logo/faith-reins-v7-document-stacked-green.svg](approved/document-logo/faith-reins-v7-document-stacked-green.svg) | **Approved and promoted 2026-10-12** | narrow formal applications |
+| Document print black | [approved/document-logo/faith-reins-v7-document-stacked-black.svg](approved/document-logo/faith-reins-v7-document-stacked-black.svg) | **Approved and promoted 2026-10-12** | B&W office printing |
 | Official seal full | approved/seal/seal-full-green.svg | Pending reference audit | donor/certificates/merch |
 | Official seal ringless | approved/seal/seal-ringless-green.svg | Conditional approval | special layouts |
 | Print-safe seal | approved/seal/seal-black.svg | Pending | B&W/emboss-ready |
@@ -70,3 +70,8 @@ Two horizontal SVG logo candidates have been committed under `candidates/website
 ## Document logo approval — October 12, 2026
 
 Owner approved the stacked document logo artwork in green/gold, cream/gold and monochrome black. Candidate SVGs exist in `candidates/document-logo/`. Promote unchanged to `approved/document-logo/` and retain matching geometry. Horizontal document format was **not** approved separately.
+
+
+## Seal — first V7 candidate, not yet approved
+
+Using the most recently approved circular seal specification: thick forest-green perimeter ring, 6-point gold inner ring and mirrored divider arcs, mathematically circular curved FAITH REINS / EQUESTRIAN CENTER text, centered new approved v7 horse, EST. 2025 and warm cream field. This supersedes the older ribbon-banner study. Three color treatments (green/cream, inverse and black) were generated for review on 2026-10-12. Do not promote to approved/seal until owner signs off. The review SVGs and proofboard are attached to the design conversation; repository candidate import remains pending.
