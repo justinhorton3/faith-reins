@@ -5,6 +5,7 @@ export default defineConfig({
   site: "https://www.faithreins.com",
   output: "static",
   trailingSlash: "ignore",
-  integrations: [sitemap()],
+  // /news/post is a template page filled by ?slug=, so it stays out of the sitemap.
+  integrations: [sitemap({ filter: (page) => !page.includes("/news/post") })],
   build: { format: "directory", inlineStylesheets: "never" },
 });

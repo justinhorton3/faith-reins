@@ -283,47 +283,62 @@ async function mountBlog(host) {
   const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
 
-  host.innerHTML = posts.map((p) => {
-    const img = p.coverImage && p.coverImage.url ? `<div class="post-card__cover"><img src="${p.coverImage.url}" alt="${p.title}" loading="lazy" width="800" height="450"></div>` : "";
-    const slug = "/news/" + (p.slug || p.id);
+  // Keep the static posts (they have their own pages) and add Wix posts in front of them.
+  // Wix posts have no static page, so they open the shared /news/post page by slug.
+  const staticHrefs = new Set($$("a.post-card", host).map((a) => a.getAttribute("href").replace(/\.html$/, "")));
+  posts = posts.filter((p) => !staticHrefs.has("/news/" + (p.slug || p.id)));
+  if (!posts.length) return;
+
+  host.insertAdjacentHTML("afterbegin", posts.map((p) => {
+    const cover = (p.media && p.media.wixMedia && p.media.wixMedia.image && p.media.wixMedia.image.url) || (p.coverImage && p.coverImage.url);
+    const img = cover ? `<div class="post-card__cover"><img src="${cover}" alt="${p.title}" loading="lazy" width="800" height="450"></div>` : "";
+    const slug = "/news/post?slug=" + encodeURIComponent(p.slug || p.id);
     return `<a class="post-card" href="${slug}">
       ${img}
       <div class="post-card__inner">
-        <div class="post-card__meta"><span class="post-tag">${tag(p)}</span><span class="post-date">${fmt(p.publishedDate)}</span></div>
+        <div class="post-card__meta"><span class="post-tag">${tag(p)}</span><span class="post-date">${fmt(p.firstPublishedDate || p.publishedDate)}</span></div>
         <h2 class="post-card__title">${p.title}</h2>
         <p class="post-card__summary">${p.excerpt || ""}</p>
         <span class="post-card__read">Read more →</span>
       </div>
     </a>`;
-  }).join("");
+  }).join(""));
 }
 $$("[data-wix-blog]").forEach(mountBlog);
 
-/* Blog post — mounts on [data-wix-post] with data-slug.
-   Fetches full post content and replaces static body when connected.
+/* Blog post — mounts on [data-wix-post].
+   Static post pages pass data-slug and keep their own HTML unless Wix has a post with that slug.
+   The shared /news/post page passes data-slug-param and reads the slug from the URL (?slug=).
 */
 async function mountPost(host) {
-  const slug = host.dataset.slug;
-  if (!slug) return;
+  const fromUrl = !!host.dataset.slugParam;
+  const slug = fromUrl ? new URLSearchParams(location.search).get(host.dataset.slugParam) : host.dataset.slug;
+  const notFound = () => {
+    if (fromUrl) host.innerHTML = `<p class="post-meta"><a href="/news">← News &amp; Updates</a></p><h1>Post not found</h1><p>This post may have moved or been removed. <a href="/news">See all news &amp; updates</a>.</p>`;
+  };
+  if (!slug) return notFound();
   let post;
   try {
-    const r = await api(`/blog/v3/posts/slugs/${slug}?fieldsets=CONTENT,CONTENT_TEXT,RICH_CONTENT`, "GET");
+    const r = await api(`/blog/v3/posts/slugs/${encodeURIComponent(slug)}?fieldsets=CONTENT_TEXT`, "GET");
     post = r.post;
   } catch {
-    return; // keep static HTML intact
+    return notFound(); // static pages keep their HTML intact
   }
-  if (!post) return;
+  if (!post) return notFound();
 
+  const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
-  const body = post.contentText || post.excerpt || "";
+  const paras = (post.contentText || post.excerpt || "").split(/\n+/).filter(Boolean).map((t) => `<p>${esc(t)}</p>`).join("");
+  const cover = post.media && post.media.wixMedia && post.media.wixMedia.image && post.media.wixMedia.image.url;
 
+  if (fromUrl) document.title = `${post.title} | News | Faith Reins`;
   host.innerHTML = `
-    <p class="post-meta"><a href="/news">← News &amp; Updates</a> &nbsp;·&nbsp; <span class="post-tag">${tag(post)}</span> &nbsp;·&nbsp; ${fmt(post.publishedDate)}</p>
-    <h1>${post.title}</h1>
-    <p class="lead muted">${post.excerpt || ""}</p>
+    <p class="post-meta"><a href="/news">← News &amp; Updates</a> &nbsp;·&nbsp; <span class="post-tag">${esc(tag(post))}</span> &nbsp;·&nbsp; ${fmt(post.firstPublishedDate || post.publishedDate)}</p>
+    <h1>${esc(post.title)}</h1>
+    ${cover ? `<img src="${esc(cover)}" alt="" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin:1rem 0">` : ""}
     <hr style="border:none;border-top:1px solid #e0dbd4;margin:1.5rem 0">
-    <div class="post-body">${body}</div>
+    <div class="post-body">${paras}</div>
   `;
 }
 $$("[data-wix-post]").forEach(mountPost);

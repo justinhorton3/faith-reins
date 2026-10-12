@@ -326,6 +326,12 @@ POSTS.forEach(({ slug, title, date, tag, summary, body }) => {
     ctaBand({ title: "Want to stay connected?", body: "Sign up for updates from Faith Reins.", primary: ["Contact us", "/contact"], secondary: ["Our programs", "/services-programs"] }));
 });
 
+// Wix Blog posts have no static page; this one page renders any of them by ?slug=.
+// site.js links Wix post cards here and fills the body from the Blog API.
+add("/news/post", "News", "News and updates from Faith Reins Equestrian Center in Camden, Arkansas.",
+  section(`<div class="prose" data-wix-post data-slug-param="slug"><p class="post-meta"><a href="/news">← News &amp; updates</a></p><p>Loading post…</p></div>`) +
+  ctaBand({ title: "Want to stay connected?", body: "Sign up for updates from Faith Reins.", primary: ["Contact us", "/contact"], secondary: ["Our programs", "/services-programs"] }));
+
 add("/news", "News & Updates", "Stories, program updates, and news from Faith Reins Equestrian Center in Camden, Arkansas.",
   titleBand({ eyebrow: "News", title: "News &amp; updates", body: "Stories, program updates, and announcements from Faith Reins." }) +
   section(`<div class="posts" id="news-grid" data-wix-blog>${POSTS.map(({ slug, title, date, tag, summary }) =>
