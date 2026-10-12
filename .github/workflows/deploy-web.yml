@@ -39,12 +39,10 @@ jobs:
         run: |
           set -o pipefail
           npx --yes @wix/cli@latest release 2>&1 | tee release.log || {
-            sed 's/\x1b\[[0-9;]*m//g' release.log > clean.log
-            { grep -oiE '"(message|description|url|method)": ?"[^"]{0,300}' clean.log
-              grep -iE -A3 'denied|forbidden|not found|"url"' clean.log | grep -v '"hash"' | cut -c1-400
-            } | sort -u | head -30 | while IFS= read -r line; do
-              echo "::error title=wix release::$line"
-            done
+            sed 's/\x1b\[[0-9;]*m//g' release.log | tr '\n' ' ' | tr -s ' ' > clean.log
+            grep -oE '"url": ?"[^"]{0,200}"' clean.log | sort -u | head -3 | while IFS= read -r l; do echo "::error title=url::$l"; done
+            grep -oE '"message": ?"[^"]{0,400}"' clean.log | sort -u | head -4 | while IFS= read -r l; do echo "::error title=message::$l"; done
+            grep -oiE '.{0,200}(error|denied)[^"]{0,200}' clean.log | grep -v '"message"' | head -2 | while IFS= read -r l; do echo "::error title=context::$l"; done
             exit 1
           }
           tail -n 15 release.log | sed 's/\x1b\[[0-9;]*m//g' | while IFS= read -r line; do
