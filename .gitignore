@@ -1,3 +1,6 @@
+# Wix CLI local cache
+.wix/
+
 # Logs
 logs
 *.log
