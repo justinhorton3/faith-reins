@@ -61,14 +61,14 @@ for root, dirs, files in os.walk(DIST):
 
 # A quoted root-relative path (optionally with a trailing slash, query or hash),
 # quotes may be JSON-escaped inside JS bundles: "/x", '/x', \"/x\"
-LINK = re.compile(r'(\\?["\'])(/[A-Za-z0-9_\-/]*[A-Za-z0-9_\-])/?([?#][^"\'\\]*)?(\\?["\'])')
+LINK = re.compile(r'(\\?["\'>]|<loc>)((?:https://www\.faithreins\.com)?)(/[A-Za-z0-9_\-/]*[A-Za-z0-9_\-])/?([?#][^"\'\\<]*)?(\\?["\']|</loc>)')
 
 def rewrite_links(text):
     def sub(m):
-        q1, path, tail, q2 = m.group(1), m.group(2), m.group(3) or "", m.group(4)
+        q1, origin, path, tail, q2 = m.group(1), m.group(2), m.group(3), m.group(4) or "", m.group(5)
         if path not in ROUTES:
             return m.group(0)
-        return f"{q1}{path}.html{tail}{q2}"
+        return f"{q1}{origin}{path}.html{tail}{q2}"
     return LINK.sub(sub, text)
 
 changed = 0
@@ -77,7 +77,7 @@ for root, dirs, files in os.walk(DIST):
     if rel_top in ("assets", "_wix"):
         continue
     for fname in files:
-        if not fname.endswith((".html", ".js", ".mjs")):
+        if not fname.endswith((".html", ".js", ".mjs", ".xml")):
             continue
         fpath = os.path.join(root, fname)
         with open(fpath, "r", encoding="utf-8") as f:
