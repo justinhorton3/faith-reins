@@ -16,6 +16,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@wix/astro": "^3.0.1",
+    "@wix/astro-wix-hosting-adapter": "^3.0.1",
     "@wix/auto_sdk_ecom_cart-v-2": "^1.0.192",
     "@wix/blog": "^1.0.645",
     "@wix/bookings": "^1.0.1650",

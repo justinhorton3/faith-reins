@@ -1,6 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
 import { pages } from "../lib/build.mjs";
+// Under output: "server" (required by Wix's hosting adapter), pages are dynamic by default
+// and getStaticPaths() is ignored unless prerender is explicitly opted into here.
+export const prerender = true;
 export function getStaticPaths() {
   return pages.map((p) => ({ params: { slug: p.route === "/" ? undefined : p.route.slice(1) }, props: p }));
 }

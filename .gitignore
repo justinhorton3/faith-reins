@@ -1,5 +1,6 @@
 # Wix CLI local cache
 .wix/
+.wrangler/
 
 # Logs
 logs
@@ -72,6 +73,9 @@ web_modules/
 .env
 .env.*
 !.env.example
+
+# Wrangler (Cloudflare adapter) local secrets, read by `npm run preview`
+.dev.vars
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

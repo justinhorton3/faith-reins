@@ -1,3 +1,6 @@
+// Explicit React import: @astrojs/react's SSR bundle for this page compiles JSX to
+// React.createElement without it in scope otherwise.
+import React from "react";
 import { useInvoices } from "../../hooks/account/useInvoices";
 
 const STATUS_LABEL: Record<string, string> = {

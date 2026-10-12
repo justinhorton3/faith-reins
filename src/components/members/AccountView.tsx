@@ -1,6 +1,9 @@
 // REFERENCE account surface: profile card + log-out on the @theme tokens. Correct and
 // complete; per the skill's model you design your own on useMember. On Astro the page
 // passes the SSR-resolved member as initialMember; a SPA mounts it inside <RequireAuth>.
+// Explicit React import: @astrojs/react's SSR bundle for this page compiles JSX to
+// React.createElement without it in scope otherwise.
+import React from "react";
 import { useMember } from "../../hooks/members/useMember";
 import type { CurrentMember } from "../../wix/members/types";
 

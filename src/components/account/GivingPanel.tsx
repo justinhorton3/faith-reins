@@ -1,3 +1,6 @@
+// Explicit React import: @astrojs/react's SSR bundle for this page compiles JSX to
+// React.createElement without it in scope otherwise.
+import React from "react";
 import { useGiving } from "../../hooks/pricing-plans/useGiving";
 
 export default function GivingPanel() {

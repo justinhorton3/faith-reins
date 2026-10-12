@@ -23,21 +23,14 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
       card({ ic: "horse", title: "Equine-Assisted Learning (EAL)", text: "Experiential learning with horses to build confidence, connection and life skills.", href: "/equine-assisted-learning", center: true }),
     ])) +
   `<section class="section section--paper"><div class="container"><div class="home-quad"><img src="${img("home-team")}" alt="Faith Reins care team" loading="lazy"><div class="stack"><h2>Meet the people behind the care.</h2><p class="lead muted">A dedicated team of professionals, horse handlers and volunteers committed to brighter futures.</p><div>${link("Meet our team →", "/our-team")}</div></div><img src="${img("farm-exterior")}" alt="Faith Reins equestrian facility" loading="lazy"><div class="stack"><h2>Stronger together.</h2><p class="lead muted">Community partners help expand access and create opportunities for more families in South Arkansas.</p><div>${link("Our partners →", "/our-partners")}</div></div></div></div></section>` +
-  `<section class="faith-giving"><div class="container"><div class="faith-giving__grid"><div class="faith-giving__left"><h2>Rooted in faith.<br>Guided by care.</h2><p class="lead muted">Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.</p><div>${btn("Our mission", "/our-mission", "secondary")}</div></div><div class="faith-giving__center"><img src="${img("pasture-hero")}" alt="Faith Reins farm" loading="lazy"></div><div class="faith-giving__right"><h2>Help make care possible.</h2><p class="lead muted">Your support helps bring therapeutic programs and children and families closer to brighter futures.</p><div class="faith-giving__price"><div class="faith-giving__price-num">$100<span>/month</span></div><div class="faith-giving__price-desc">Helps provide therapy sessions, program support, and essential care.</div></div><div>${btn("Give monthly ♡", "/give?mode=monthly")}</div></div></div></div></section>` +
-  `<section class="section"><div class="container">
-<div class="section-head"><h2>What families say</h2></div>
-<div class="grid grid--3">
-  <blockquote class="testimonial"><p class="testimonial__quote">"We had tried everything before coming to Faith Reins. Within a few months our son was communicating in ways we had never seen. The team here changed our family."</p><footer class="testimonial__attr">— A Camden family</footer></blockquote>
-  <blockquote class="testimonial"><p class="testimonial__quote">"Watching my daughter walk up to Jesse for the first time and not flinch — that moment alone was worth everything. She is a different kid on the days she has EAL."</p><footer class="testimonial__attr">— Parent of a 9-year-old</footer></blockquote>
-  <blockquote class="testimonial"><p class="testimonial__quote">"The therapists here actually listen. They adjusted the plan when something wasn't working and explained every step. I finally feel like we have a real team on our side."</p><footer class="testimonial__attr">— Mother of a 5-year-old</footer></blockquote>
-</div>
-<style>
-.testimonial{background:var(--color-paper,#f7f5f0);border-radius:10px;padding:1.75rem;margin:0;display:flex;flex-direction:column;gap:1rem}
-.testimonial__quote{font-family:'Noto Serif',serif;font-size:1rem;line-height:1.7;color:#2a2520;margin:0;font-style:italic}
-.testimonial__attr{font-size:.85rem;color:#666;margin:0;font-style:normal}
-</style>
-</div></section>` +
-  section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected.</h2><p class="lead muted">Get updates on programs, events, and stories from Faith Reins delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div><style>.newsletter-band{display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap}.newsletter-band__copy{flex:1 1 260px}.newsletter-band__form{flex:2 1 320px}</style>`, "section--paper"));
+  `<section class="faith-giving"><div class="container"><div class="faith-giving__grid"><div class="faith-giving__left"><h2>Rooted in faith.<br>Guided by care.</h2><p class="lead muted">Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.</p><div>${btn("Our mission", "/our-mission", "secondary")}</div></div><div class="faith-giving__center"><img src="${img("pasture-hero")}" alt="Faith Reins farm" loading="lazy"></div><div class="faith-giving__right"><h2>Help make care possible.</h2><p class="lead muted">Your support helps bring therapeutic programs and children and families closer to brighter futures.</p><div class="faith-giving__price"><div class="faith-giving__price-num">$100<span>/month</span></div><div class="faith-giving__price-desc">Helps provide therapy sessions, program support, and essential care.</div></div><div>${btn("Give monthly", "/give?mode=monthly")}</div></div></div></div></section>` +
+  section(head("What families say", "These quotes are illustrative placeholders while we gather real stories with families' permission.") +
+    `<div class="grid grid--3">
+  <blockquote class="testimonial testimonial--placeholder"><span class="testimonial__flag">Illustrative — awaiting permission</span><p class="testimonial__quote">We had tried everything before coming to Faith Reins. Within a few months our son was communicating in ways we had never seen.</p><footer class="testimonial__attr">A Camden family</footer></blockquote>
+  <blockquote class="testimonial testimonial--placeholder"><span class="testimonial__flag">Illustrative — awaiting permission</span><p class="testimonial__quote">She is a different kid on the days she has equine-assisted learning. Watching her walk up to the horses without flinching was worth everything.</p><footer class="testimonial__attr">Parent of a 9-year-old</footer></blockquote>
+  <blockquote class="testimonial testimonial--placeholder"><span class="testimonial__flag">Illustrative — awaiting permission</span><p class="testimonial__quote">The therapists here actually listen. They adjusted the plan when something was not working and explained every step.</p><footer class="testimonial__attr">Mother of a 5-year-old</footer></blockquote>
+</div>`) +
+  section(`<div class="newsletter-band"><div class="newsletter-band__copy"><h2>Stay connected</h2><p class="lead muted">Get updates on programs and stories from Faith Reins, delivered to your inbox.</p></div><div class="newsletter-band__form">${form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch.", btnKind: "accent" })}<p class="form-note">We respect your privacy. Unsubscribe any time.</p></div></div>`, "section--paper"));
 
 /* ---------- Mission ---------- */
 add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
@@ -239,7 +232,7 @@ add("/give/thank-you", "Thank You for Your Gift | Faith Reins", "Your gift suppo
 add("/shop/thank-you", "Order Received | Faith Reins Shop", "Thank you for your Faith Reins order.",
   `<section class="section"><div class="container"><div class="thankyou-wrap">
   <div class="thankyou-icon" aria-hidden="true">✓</div>
-  <h1>Order received — thank you!</h1>
+  <h1>Order received — thank you</h1>
   <p class="lead muted">Your Faith Reins order is confirmed. You'll receive an email confirmation shortly with your order details and tracking information once your items ship.</p>
   <p class="muted">Questions? Email <a href="mailto:info@faithreins.com">info@faithreins.com</a> and include your order number.</p>
   <div class="btn-row" style="justify-content:center;margin-top:2rem">
@@ -620,7 +613,7 @@ add("/terms-of-service", "Terms of Service", "Terms of Service for the Faith Rei
 <p>These Terms are governed by the laws of the State of Arkansas. Any disputes shall be resolved in the courts of Ouachita County, Arkansas.</p>
 ${legalContact}</div></div></section>`);
 
-add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins website.",
+const PRIVACY_BODY =
   `<section class="section"><div class="container"><div class="prose">${printBtn}
 <h1>Privacy Policy</h1>
 <p class="lead muted">Effective October 10, 2026 &nbsp;·&nbsp; Camden, Arkansas</p>
@@ -645,7 +638,13 @@ add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins web
 <p>We use reasonable administrative, technical, and physical safeguards to protect your information. No internet transmission is completely secure; we cannot guarantee the absolute security of information transmitted to or from the Site.</p>
 <h2>10. Changes to This Policy</h2>
 <p>We may update this policy from time to time. The effective date above reflects the most recent revision.</p>
-${legalContact}</div></div></section>`);
+${legalContact}</div></div></section>`;
+// v6's route table lists this page as /privacy; the live site's existing URL is /privacy-policy.
+// Both are published with the same content rather than renaming the existing URL outright — see
+// the build report for a redirect recommendation (/privacy-policy -> /privacy), which is out of
+// scope for this content-only file.
+add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins website.", PRIVACY_BODY);
+add("/privacy", "Privacy Policy", "Privacy Policy for the Faith Reins website.", PRIVACY_BODY);
 
 add("/donation-policy", "Donation Policy", "Donation policy and stewardship commitments for Faith Reins.",
   `<section class="section"><div class="container"><div class="prose">${printBtn}
