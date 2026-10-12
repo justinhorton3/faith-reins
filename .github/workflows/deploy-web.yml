@@ -1,35 +1,66 @@
 name: Deploy web
-# Builds the Astro site and releases it to the live Wix Headless site
-# (faithreins.com, metasite 2d8c6050-5730-4bed-9c7a-266ca7bd00b4 per wix.config.json).
-# Requires repo secret WIX_API_KEY: a Wix API key from the account that owns the site.
+# Builds the Astro site and releases it to a Wix Headless site.
+#
+#   Pull request into main  -> stage       (stage.faithreins.com)
+#   Push / merge to main    -> stage       (stage.faithreins.com)
+#   GitHub release published -> production (www.faithreins.com)
+#   Manual run               -> whichever target you pick
+#
+# Setup (Settings > Environments):
+#   stage:      variable WIX_SITE_ID = the stage Wix site's ID (required)
+#   production: variable WIX_SITE_ID optional; defaults to 2d8c6050-5730-4bed-9c7a-266ca7bd00b4
+#               (add required reviewers here if you want a manual approval before going live)
+# Secrets (repo or per environment):
+#   WIX_API_KEY    Wix API key from the account that owns the site(s)
+#   WIX_ACCOUNT_ID Wix account ID (also read from ACCOUNT_ID / WIX_ACCOUNT, secret or variable)
+
 on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+  release:
+    types: [published]
   workflow_dispatch:
-concurrency:
-  group: deploy-web
-  cancel-in-progress: false
+    inputs:
+      target:
+        description: Where to deploy
+        type: choice
+        options: [stage, production]
+        default: stage
+
+permissions:
+  contents: read
+
 jobs:
   build-release:
+    # Skip drafts and PRs from forks (they can't read secrets, and shouldn't deploy).
+    if: >-
+      github.event_name != 'pull_request' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+       !github.event.pull_request.draft)
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
+      url: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'https://www.faithreins.com' || 'https://stage.faithreins.com' }}
+    concurrency:
+      # One deploy per target at a time; never cancel one mid-upload.
+      group: deploy-web-${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
+      cancel-in-progress: false
+    env:
+      DEPLOY_TARGET: ${{ (github.event_name == 'release' || inputs.target == 'production') && 'production' || 'stage' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 22 }
+        with: { node-version: 22, cache: npm }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - name: Check Wix API key is set
+
+      - name: Resolve target site
         env:
+          SITE_VAR: ${{ vars.WIX_SITE_ID }}
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-        run: |
-          if [ -z "$WIX_API_KEY" ]; then
-            echo "::error::Repo secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-      - run: npm ci || npm install
-      - run: npm run build
-      - name: Prepare output for Wix hosting
-        run: python scripts/wix-postbuild.py
-      - name: Find Wix account ID
-        env:
           C1: ${{ secrets.WIX_ACCOUNT_ID }}
           C2: ${{ vars.WIX_ACCOUNT_ID }}
           C3: ${{ secrets.ACCOUNT_ID }}
@@ -37,52 +68,36 @@ jobs:
           C5: ${{ secrets.WIX_ACCOUNT }}
           C6: ${{ vars.WIX_ACCOUNT }}
         run: |
-          for n in 1 2 3 4 5 6; do
-            v=$(eval echo "\$C$n" | tr -d '[:space:]')
-            if [ -n "$v" ]; then
-              echo "WIX_ACCOUNT_ID=$v" >> "$GITHUB_ENV"
-              echo "::notice title=account id::found in candidate $n (1/2=WIX_ACCOUNT_ID secret/var, 3/4=ACCOUNT_ID, 5/6=WIX_ACCOUNT), length ${#v}"
-              exit 0
-            fi
-          done
-          echo "::warning title=account id::No account ID found under WIX_ACCOUNT_ID, ACCOUNT_ID or WIX_ACCOUNT (secret or variable)"
-      - name: Check API key against Wix
-        env:
-          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-        run: |
-          SITE=2d8c6050-5730-4bed-9c7a-266ca7bd00b4
-          OWNER=1cbf6ffa-737e-40fa-a82f-e347faa75e65
-          echo "::notice title=account id::account ${WIX_ACCOUNT_ID:-none} (site owner user is $OWNER, match: $([ "$WIX_ACCOUNT_ID" = "$OWNER" ] && echo yes || echo no))"
-          echo "::notice title=key shape::length ${#WIX_API_KEY}, starts with ${WIX_API_KEY:0:6}"
-          c1=$(curl -sS -o a.json -w '%{http_code}' -X POST https://www.wixapis.com/site-list/v2/sites/query \
-            -H "Authorization: $WIX_API_KEY" -H "wix-account-id: $WIX_ACCOUNT_ID" -H 'Content-Type: application/json' \
-            -d '{"query":{"cursorPaging":{"limit":100}}}')
-          echo "::notice title=account-level check::HTTP $c1 :: $(tr -d '\n' < a.json | head -c 250)"
-          c2=$(curl -sS -o b.json -w '%{http_code}' -X POST https://www.wixapis.com/oauth-app/v1/oauth-apps/query \
-            -H "Authorization: $WIX_API_KEY" -H "wix-site-id: $SITE" -H 'Content-Type: application/json' \
-            -d '{"query":{}}')
-          echo "::notice title=site-level check::HTTP $c2 :: $(tr -d '\n' < b.json | head -c 250)"
-          true
-      - name: Upload build to Wix (faithreins.com)
-        env:
-          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-          SITE: "2d8c6050-5730-4bed-9c7a-266ca7bd00b4"
-        run: |
-          cd dist
-          files=$(find . -type f | sed 's#^\./##' | sort)
-          count=$(echo "$files" | wc -l)
-          echo "::notice title=upload::$count files, $(du -sh . | cut -f1) total"
-          big=$(find . -type f -size +3M)
-          [ -n "$big" ] && echo "::error title=upload::files over 3 MB: $big" && exit 1
-          args=()
-          while IFS= read -r f; do args+=(-F "files=@$f;filename=$f"); done <<< "$files"
-          code=$(curl -sS -o ../drop.json -w '%{http_code}' -X POST \
-            "https://www.wixapis.com/headless-business-setup/v1/headless-business/$SITE/drop?campaign=mcp&agent=claude-code" \
-            -H "Authorization: $WIX_API_KEY" -H "wix-account-id: $WIX_ACCOUNT_ID" "${args[@]}")
-          body=$(tr -d '\n' < ../drop.json | head -c 600)
-          if [ "$code" = "200" ]; then
-            echo "::notice title=deployed::$body"
-          else
-            echo "::error title=upload failed (HTTP $code)::$body"
+          if [ -z "$WIX_API_KEY" ]; then
+            echo "::error::Secret WIX_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
             exit 1
           fi
+          site=$(echo "$SITE_VAR" | tr -d '[:space:]')
+          if [ -z "$site" ] && [ "$DEPLOY_TARGET" = "production" ]; then
+            site=2d8c6050-5730-4bed-9c7a-266ca7bd00b4
+          fi
+          if [ -z "$site" ]; then
+            echo "::error::Variable WIX_SITE_ID is not set on the '$DEPLOY_TARGET' environment. Add it under Settings > Environments > $DEPLOY_TARGET."
+            exit 1
+          fi
+          if [ "$DEPLOY_TARGET" = "stage" ] && [ "$site" = "2d8c6050-5730-4bed-9c7a-266ca7bd00b4" ]; then
+            echo "::error::The stage environment points at the production Wix site. Give stage its own WIX_SITE_ID."
+            exit 1
+          fi
+          echo "WIX_SITE_ID=$site" >> "$GITHUB_ENV"
+          for n in 1 2 3 4 5 6; do
+            v=$(eval echo "\$C$n" | tr -d '[:space:]')
+            if [ -n "$v" ]; then echo "WIX_ACCOUNT_ID=$v" >> "$GITHUB_ENV"; break; fi
+          done
+          echo "::notice title=target::$DEPLOY_TARGET -> Wix site $site"
+
+      - run: npm ci || npm install
+      - run: npm run build
+      - name: Prepare output for Wix hosting
+        run: python scripts/wix-postbuild.py
+
+      - name: Upload build to Wix
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          DEPLOY_LABEL: ${{ env.DEPLOY_TARGET }}
+        run: bash scripts/wix-deploy.sh
