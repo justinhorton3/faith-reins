@@ -50,19 +50,44 @@ for root, dirs, files in os.walk(DIST, topdown=False):
     if not os.listdir(root):
         os.rmdir(root)
 
-# Step 2: rewrite hrefs
+# Step 2: rewrite links to pages that now live at /<route>.html
+ROUTES = set()
 for root, dirs, files in os.walk(DIST):
     dirs[:] = [d for d in dirs if d not in KEEP_DIRS]
     for fname in files:
-        if not fname.endswith(".html"):
+        if fname.endswith(".html") and fname not in ("index.html", "404.html"):
+            rel = os.path.relpath(os.path.join(root, fname), DIST).replace(os.sep, "/")
+            ROUTES.add("/" + rel[:-5])
+
+# A quoted root-relative path (optionally with a trailing slash, query or hash),
+# quotes may be JSON-escaped inside JS bundles: "/x", '/x', \"/x\"
+LINK = re.compile(r'(\\?["\'])(/[A-Za-z0-9_\-/]*[A-Za-z0-9_\-])/?([?#][^"\'\\]*)?(\\?["\'])')
+
+def rewrite_links(text):
+    def sub(m):
+        q1, path, tail, q2 = m.group(1), m.group(2), m.group(3) or "", m.group(4)
+        if path not in ROUTES:
+            return m.group(0)
+        return f"{q1}{path}.html{tail}{q2}"
+    return LINK.sub(sub, text)
+
+changed = 0
+for root, dirs, files in os.walk(DIST):
+    rel_top = os.path.relpath(root, DIST).split(os.sep)[0]
+    if rel_top in ("assets", "_wix"):
+        continue
+    for fname in files:
+        if not fname.endswith((".html", ".js", ".mjs")):
             continue
         fpath = os.path.join(root, fname)
         with open(fpath, "r", encoding="utf-8") as f:
-            html = f.read()
-        new_html = rewrite_hrefs(html)
-        if new_html != html:
+            text = f.read()
+        new_text = rewrite_links(text)
+        if new_text != text:
+            changed += 1
             with open(fpath, "w", encoding="utf-8") as f:
-                f.write(new_html)
+                f.write(new_text)
+print(f"Rewrote page links in {changed} files ({len(ROUTES)} page routes).")
 
 # Step 3: write _wix/pages.json
 os.makedirs(os.path.join(DIST, "_wix"), exist_ok=True)

@@ -48,10 +48,10 @@ function track(event, params = {}) {
   const hd = $("#shell-header"), ft = $("#shell-footer");
   if (hd) {
     hd.innerHTML = HEADER;
-    const p = location.pathname.replace(/\/+$/, "") || "/";
+    const p = location.pathname.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
     const g = { "/our-mission": ["/our-team", "/our-horses"], "/services-programs": ["/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"], "/for-families": ["/book-online", "/payment-and-insurance", "/faq"], "/give": ["/sponsorships", "/impact-and-stewardship", "/our-partners", "/join-our-team"] };
     for (const a of $$("a.nav-link, a.drawer-link", hd)) {
-      const href = a.getAttribute("href");
+      const href = (a.getAttribute("href") || "").replace(/\.html$/, "");
       if (href === p || (g[href] || []).includes(p)) a.setAttribute("aria-current", "page");
     }
   }
