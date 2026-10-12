@@ -7,9 +7,12 @@ import { test, expect } from "@playwright/test";
 // is verified correct against Wix's documented API contracts, but not confirmed working
 // end-to-end until deployed. Run these manually against stage.faithreins.com after each
 // deploy that touches an elevated endpoint:
-//   - Give page: pick an amount, enter a real email, confirm the campaign's real suggested
-//     amounts/description render (not empty), and that "Continue to secure donation" actually
-//     redirects to a live Wix checkout page (not a 502/"could not start checkout").
+//   - Give page, "Give once": pick an amount, enter a real email, confirm the campaign's real
+//     suggested amounts/description render (not empty), and that "Continue to secure donation"
+//     actually redirects to a live Wix checkout page (not a 502/"could not start checkout").
+//   - Give page, "Give monthly": confirm the real 4 plan tiers render (not empty/error), pick
+//     one, confirm "Continue to secure checkout" redirects to Wix's hosted Pricing Plans
+//     checkout and actually prompts login/signup there.
 //   - Contact/Sponsor forms: submit for real, confirm the submission appears in the Wix CRM
 //     dashboard (Contacts / Forms submissions), not just that the client-side success message
 //     shows.

@@ -105,7 +105,35 @@ $$("form.wix-form[data-submit-kind]").forEach(wireForm);
 /* Donations */
 const FREQ = { ONE_TIME: "One-time", WEEK: "Weekly", MONTH: "Monthly", YEAR: "Yearly" };
 const money = (n) => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
+
 async function mountGive(host) {
+  host.textContent = "";
+  const seg = h("div", { class: "seg", role: "group", "aria-label": "Gift type" });
+  const body = h("div", { class: "give-box__body" });
+  host.append(h("div", { class: "give-box" }, seg, body));
+  const modes = [
+    ["once", "Give once", renderOnce],
+    ["monthly", "Give monthly", renderMonthly],
+  ];
+  const btns = modes.map(([key, label, render]) => {
+    const b = h("button", { type: "button", onclick: () => setMode(key) }, label);
+    seg.append(b);
+    return [key, b, render];
+  });
+  function setMode(key) {
+    btns.forEach(([k, b]) => b.setAttribute("aria-pressed", k === key));
+    body.textContent = "";
+    body.append(h("div", { class: "form-skeleton", role: "status" }, "Loading…"));
+    const entry = btns.find(([k]) => k === key);
+    entry[2](body);
+  }
+  const requested = new URLSearchParams(location.search).get("mode");
+  setMode(modes.some(([k]) => k === requested) ? requested : "once");
+}
+$$("[data-give]").forEach(mountGive);
+
+/* Give once — one-time, no login required (Wix Donations). */
+async function renderOnce(host) {
   host.textContent = "";
   host.append(h("div", { class: "form-skeleton", role: "status" }, "Loading giving options…"));
   let c;
@@ -146,7 +174,7 @@ async function mountGive(host) {
   const pbtns = presets.map((n) => { const b = h("button", { type: "button", onclick: () => { st.amount = n; st.custom = false; draw(); } }, money(n)); ab.append(b); return [n, b]; });
   let cb = null;
   if (c.customAmountEnabled) { cb = h("button", { type: "button", onclick: () => { st.custom = true; draw(); ci.focus(); } }, "Custom"); ab.append(cb); }
-  host.append(h("div", { class: "give-box" }, freqs.length > 1 ? fb : null, ab, cf, emailRow, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
+  host.append(...[freqs.length > 1 ? fb : null, ab, cf, emailRow, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")].filter((n) => n != null));
   function draw() {
     fbtns.forEach(([f, b]) => b.setAttribute("aria-pressed", st.freq === f));
     pbtns.forEach(([n, b]) => b.setAttribute("aria-pressed", !st.custom && st.amount === n));
@@ -175,6 +203,62 @@ async function mountGive(host) {
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.error || "Request failed");
       track("begin_checkout", { currency: "USD", value: v + (st.fee ? Math.round(v * 2.9) / 100 : 0), items: [{ item_name: "Donation" }] });
+      location.href = j.url;
+    } catch (e) {
+      st.busy = false; draw();
+      bad.hidden = false;
+      bad.textContent = "We could not start the checkout. Please try again, or contact us and we will help you give.";
+    }
+  }
+  draw();
+}
+
+/* Give monthly — recurring, requires a login to manage/cancel (Wix Pricing Plans). Wix's
+   hosted checkout prompts for that login/signup itself; we only need to start the flow. */
+async function renderMonthly(host) {
+  host.textContent = "";
+  host.append(h("div", { class: "form-skeleton", role: "status" }, "Loading giving plans…"));
+  let plans;
+  try {
+    const r = await fetch("/api/giving-plans");
+    const j = await r.json();
+    if (!r.ok || !j.ok) throw new Error();
+    plans = j.plans;
+  } catch (e) { plans = null; }
+  host.textContent = "";
+  if (!plans || !plans.length) {
+    host.append(h("div", { class: "form-status form-status--error" }, "Monthly giving is unavailable right now. Please contact us and we will help you give."));
+    return;
+  }
+  const st = { planId: plans[0].id, busy: false };
+  const ab = h("div", { class: "amounts", role: "group", "aria-label": "Monthly gift amount" });
+  const bad = h("div", { class: "form-status form-status--error", role: "alert", hidden: true });
+  const go = h("button", { class: "btn btn--block", type: "button", onclick: start }, "Continue to secure checkout");
+  const note = h("p", { class: "form-note" }, "You'll sign in or create an account on a secure Wix checkout page — this is how you'll manage or cancel the gift later.");
+  const pbtns = plans.map((p) => {
+    const b = h("button", { type: "button", onclick: () => { st.planId = p.id; draw(); } }, money(p.amount) + "/mo");
+    ab.append(b);
+    return [p.id, b];
+  });
+  host.append(ab, bad, go, note);
+  function draw() {
+    pbtns.forEach(([id, b]) => b.setAttribute("aria-pressed", st.planId === id));
+    go.disabled = st.busy;
+    go.textContent = st.busy ? "Opening checkout…" : "Continue to secure checkout";
+  }
+  async function start() {
+    bad.hidden = true;
+    st.busy = true; draw();
+    try {
+      const r = await fetch("/api/give-monthly-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ planId: st.planId }),
+      });
+      const j = await r.json();
+      if (!r.ok || !j.ok) throw new Error(j.error || "Request failed");
+      const plan = plans.find((p) => p.id === st.planId);
+      track("begin_checkout", { currency: "USD", value: plan ? plan.amount : 0, items: [{ item_name: "Monthly giving" }] });
       location.href = j.url;
     } catch (e) {
       st.busy = false; draw();
