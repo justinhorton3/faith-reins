@@ -143,9 +143,9 @@ Cream product/model pair APPROVED & LOCKED; owner: "Approved, Go for next". New 
 
 ## Women's green/cream approval and tonal pair — October 13, 2026
 
-Women's forest-green/cream product/model pair APPROVED & LOCKED; owner: "Beautiful! Lock it in! Go for next set". New tonal dark-green-on-forest-green product/model pair created for review using the approved smaller left-chest emblem standard. Originals are 1086 × 1448 PNG (3:4). Prior versions retained unchanged. Women's four colorways now have product/model images; latest tonal pair awaits approval. No binary import, supplier-specific validation or live store publishing claimed.
+Women's forest-green/cream product/model pair APPROVED & LOCKED; owner: "Beautiful! Lock it in! Go for next set". New tonal dark-green-on-forest-green product/model pair created for review using the approved smaller left-chest emblem standard. Originals are 1086 × 1448 PNG (3:4). Prior versions retained unchanged. Women's four colorways now have product/model images; latest tonal pair is APPROVED & LOCKED; owner: "Approved! Lock it in!" on October 13, 2026. No binary import, supplier-specific validation or live store publishing claimed.
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Women forest green / dark-green horse — product | REVIEW PENDING | `exec-a705253b-5cee-4968-8cf0-bb8dc1af1099.png` | `d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f` |
-| Women forest green / dark-green horse — model | REVIEW PENDING | `exec-60e56e9d-9efa-464a-9044-4a1b4e8ff8ac.png` | `26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67` |
+| Women forest green / dark-green horse — product | APPROVED & LOCKED | `exec-a705253b-5cee-4968-8cf0-bb8dc1af1099.png` | `d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f` |
+| Women forest green / dark-green horse — model | APPROVED & LOCKED | `exec-60e56e9d-9efa-464a-9044-4a1b4e8ff8ac.png` | `26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67` |
