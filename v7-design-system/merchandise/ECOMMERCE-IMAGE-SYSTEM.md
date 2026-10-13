@@ -132,3 +132,10 @@ Keep Shop as a normal desktop navigation item and within the mobile hamburger me
 - Product prices and inventory/fulfillment mapping
 - Existing V4 product mockups and their approved placement/color decisions
 - Whether each garment supports screen print, DTG, heat transfer or embroidery
+
+
+## Approved one-color merchandising rule — 2026-10-12
+
+All **core merchandise** mockups, product photographs and catalog renderings must display a **single-ink logo treatment**. Use exact approved SVG vector artwork composited after product imagery is created: `approved/seal/faith-reins-v7-seal-solid-green.svg` on light products, `approved/seal/faith-reins-v7-seal-solid-white.svg` on dark products, or the approved horse icon alone where an understated accent works better. The standard line excludes gold from decorative marks. Only approved formal, donor, or explicitly special-edition products may use the two-color green/gold seal.
+
+Model apparel with natural left-chest placements where relevant; validate fabric texture, mark scale and visual legibility before moving from mockups to actual supplier proofs. Do not treat AI-rendered logo approximations from previous concept boards as production source files.
