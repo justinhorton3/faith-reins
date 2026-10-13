@@ -77,3 +77,8 @@ Preferred canonical masters: 2400×3200 3:4 with responsive WebP derivatives; pr
 **Not yet approved:** Any specific Printful blank, Printful product SKU, manufacture-ready embroidery file, physical sample, finished image set, retail price, inventory/account billing setup, new Wix product listing or publication.
 
 This sourcing choice does not authorize modifying the live website.
+
+
+## V7 merchandise concept imagery — accepted October 13, 2026
+
+The owner accepted the apparel and accessories concept direction. See [MERCHANDISE-CONCEPT-BOARDS.md](MERCHANDISE-CONCEPT-BOARDS.md) for two named PNG concept files, SHA-256 checksums, expanded accessories assortment (**coffee mug, notebook, keychain, insulated water bottle and tumbler**), Printful sourcing notes, and V7 brand quality gates. **Image binaries were bundled as conversation downloadable ZIP but have NOT yet been pushed into the GitHub repository**. Approval concerns the retail concept direction, not the exact AI-drawn logo art or product print files; only locked V7 SVG assets may be used on final products. No live site changes.
