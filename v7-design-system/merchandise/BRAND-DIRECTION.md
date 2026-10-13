@@ -103,3 +103,8 @@ This document records brand direction only. It does not approve a supplier, fina
 ## Approved fulfillment decision — Printful
 
 **Printful is the primary on-demand manufacturer and fulfillment provider** for the Wix store (owner decision, October 2026). Consult [PRINTFUL-SOURCING-PLAN.md](PRINTFUL-SOURCING-PLAN.md) for locked HAT-001, QZIP-001, VEST-001, TEE-HORSE-001, TEE-SEAL-001 and POLO-001 concepts, catalog-matching gates, photographic QA and sample validation. **Vendor selection does not change or replace approved concepts.** No Printful product SKU, sample or store listing has yet been approved. No live publishing authorized.
+
+
+## V7 merchandise concept imagery — accepted October 13, 2026
+
+The owner accepted the apparel and accessories concept direction. See [MERCHANDISE-CONCEPT-BOARDS.md](MERCHANDISE-CONCEPT-BOARDS.md) for two named PNG concept files, SHA-256 checksums, expanded accessories assortment (**coffee mug, notebook, keychain, insulated water bottle and tumbler**), Printful sourcing notes, and V7 brand quality gates. **Image binaries were bundled as conversation downloadable ZIP but have NOT yet been pushed into the GitHub repository**. Approval concerns the retail concept direction, not the exact AI-drawn logo art or product print files; only locked V7 SVG assets may be used on final products. No live site changes.
