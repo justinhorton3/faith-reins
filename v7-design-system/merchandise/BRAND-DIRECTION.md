@@ -85,3 +85,16 @@ Before production, validate:
 Create a visual concept board for the collection before building product listings. Include a small but representative cross-section: men's vest on a model, women's and youth apparel, a polo or hoodie, a hat, a water bottle/thermos, a throw blanket, and a notebook/pen or keychain. Show a few thoughtful colorways. Use the board to align on the overall feel, then shortlist real products and suppliers.
 
 This document records brand direction only. It does not approve a supplier, final assortment, price, store build, or live-site change.
+
+
+## Approved merchandise logo treatment — 2026-10-12
+
+**Owner-approved decision: Standard merchandise is one-color; NO gold in the core collection.** Use the existing locked one-color V7 assets, never AI-generated approximations.
+
+- **Light substrates:** approved solid forest-green transparent seal (shirts, cream hoodies, mugs, notebooks, thermoses, packaging as appropriate).
+- **Dark substrates:** approved solid white transparent seal (forest-green vests, polos, hats and dark apparel). Cream-colored physical thread/ink is an optional production match only after sampling; do not relabel or recolor the locked SVG.
+- **Premium understated placement:** use the approved horse icon alone, particularly small left-chest embroidery on vests/polos and embroidery on caps. Placement and viable minimum size remain subject to vendor proof.
+- **Full seal:** use selectively on graphic tees, hoodies and gift goods where size supports legible lettering and rope.
+- **Gold:** reserve the approved two-color seal for formal communications, certificates, donor gifts or deliberately designated limited/special editions. It is *not* the default everyday merchandise decoration.
+
+**This is an approved branding rule, not authorization to launch SKUs, order production, or publish the shop.** All supplier sew-outs, print proofs, and pricing remain pending.
