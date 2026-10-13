@@ -137,3 +137,8 @@ The owner accepted the apparel and accessories concept direction. See [MERCHANDI
 ## Locked hero merchandise photography — October 13, 2026
 
 The owner explicitly approved six individual forest-green product/model concept images covering HAT-001, QZIP-001 and VEST-001. Their exact filenames, SHA-256 hashes, placement/visual notes, archive packaging, and status are maintained in [APPROVED-HERO-PRODUCT-IMAGES.md](merchandise/APPROVED-HERO-PRODUCT-IMAGES.md). **Status: concept photos LOCKED.** Exact source image PNGs are delivered in a conversation ZIP but **have not been committed as binaries to GitHub**. Printful product blanks and original V7 vector-safe final production imagery still require validation. No live site changes.
+
+
+## Cream and white hero photography — approved October 13, 2026
+
+Owner instruction: **"Approved! Lock them in"**. The 12 cream/white cap, quarter-zip and quilted-vest product/model images are **APPROVED & LOCKED VISUAL PLACEHOLDERS**, bringing the hero collection to 18 images across forest green, cream and white. Exact existing image titles, persistent identifiers and byte counts are recorded in [APPROVED-HERO-PRODUCT-IMAGES.md](merchandise/APPROVED-HERO-PRODUCT-IMAGES.md). Preserve these image originals without regeneration or overwrite. Image binaries remain in their existing saved artifacts; binary GitHub import and supplier-specific validation are separate outstanding steps. No live store changes.
