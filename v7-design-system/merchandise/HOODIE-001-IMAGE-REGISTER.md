@@ -37,11 +37,11 @@ Women's forest-green/cream product/model pilot created for review, comfortable r
 
 ## Women's approval and youth forest-green pilot — October 13, 2026
 
-Women's forest-green/cream pair APPROVED & LOCKED; owner: "Excellent. Let's move on to boys and girls." No further women's colors created after this steering. Four new Boys/Girls forest-green/cream product/model placeholder images created for review. True youth fits with drawcord-free hoods (no neck cords, toggles or eyelets), soft fleece, kangaroo pocket and rib cuffs/hem; diverse child models consistent with polo series. Original PNGs are 1086 × 1448 (3:4). Prior approved images retained unchanged. No binary GitHub import, supplier validation or live store publishing claimed.
+Women's forest-green/cream pair APPROVED & LOCKED; owner: "Excellent. Let's move on to boys and girls." No further women's colors created after this steering. All four Boys/Girls forest-green/cream product/model placeholder images are **APPROVED & LOCKED**; owner: "Approved" on October 13, 2026. True youth fits with drawcord-free hoods (no neck cords, toggles or eyelets), soft fleece, kangaroo pocket and rib cuffs/hem; diverse child models consistent with polo series. Original PNGs are 1086 × 1448 (3:4). Prior approved images retained unchanged. No binary GitHub import, supplier validation or live store publishing claimed.
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Boys forest green / cream horse — product | REVIEW PENDING | `exec-ad441da0-427f-44b4-b38a-291ab5382852.png` | `45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff` |
-| Boys forest green / cream horse — model | REVIEW PENDING | `exec-749922e8-799e-40c2-8a1e-3eb15e771116.png` | `e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c` |
-| Girls forest green / cream horse — product | REVIEW PENDING | `exec-1b6c98b0-5572-4fff-b60a-0a71df1717c2.png` | `8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da` |
-| Girls forest green / cream horse — model | REVIEW PENDING | `exec-a449a146-64a6-4d9c-99a8-843588a3d460.png` | `ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65` |
+| Boys forest green / cream horse — product | APPROVED & LOCKED | `exec-ad441da0-427f-44b4-b38a-291ab5382852.png` | `45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff` |
+| Boys forest green / cream horse — model | APPROVED & LOCKED | `exec-749922e8-799e-40c2-8a1e-3eb15e771116.png` | `e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c` |
+| Girls forest green / cream horse — product | APPROVED & LOCKED | `exec-1b6c98b0-5572-4fff-b60a-0a71df1717c2.png` | `8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da` |
+| Girls forest green / cream horse — model | APPROVED & LOCKED | `exec-a449a146-64a6-4d9c-99a8-843588a3d460.png` | `ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65` |
