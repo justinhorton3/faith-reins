@@ -159,3 +159,12 @@ The owner approved a **one-color default for all standard Faith Reins merchandis
 | Formal/certificate/donor/special-edition applications | Approved two-color green/gold seal when appropriate | `approved/seal/faith-reins-v7-seal-green.svg` |
 
 **No gold on core merchandise**, including ordinary vest, polo, cap, tee, drinkware and stationery decorations. Small left-chest marks are preferred for premium menswear and polos; full one-color seals should be reserved for appropriately sized placements. Vendors must sample embroiderability at real size. Never silently replace approved color-source geometry, or approximate it with generated visuals.
+
+
+## Polo emblem size — owner-approved October 13, 2026
+
+Owner requested: "can we reduce the horse icon by 50%" and approved: "Yes, lock this in as an approved size for the icon/ emblem on polos."
+
+**APPROVED & LOCKED DESIGN STANDARD:** Small, understated left-chest V7 horse-head emblem on polos, nominally **50% of the previous women's pilot width and height**, uniformly scaled. The displayed reduced women's model image is the visual size reference. Maintain artwork proportions and wearer-left placement; use proportionate youth sizing. Apply this standard to subsequent Men/Women/Girls/Boys polo images and colorways. Earlier approved images remain preserved as historical versions; no retroactive batch edit or overwrite was performed.
+
+This is owner approval of visual emblem scale, not a validated physical embroidery minimum. Generated photographs are visual approximations; set final production dimensions using the approved SVG and supplier embroidery proof rather than inferring millimeters from pixels.
