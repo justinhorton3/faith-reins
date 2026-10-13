@@ -84,11 +84,11 @@ All four forest-green/cream Girls and Boys product/model placeholder images are 
 
 ## Youth tonal forest-green polo set — October 13, 2026
 
-Four new product/model placeholder images created for Girls and Boys, pending owner review. Dark-green embroidery on forest-green fabric is an additional colorway; existing approved white, cream and green/cream images remain locked unchanged. Each new original is 1086 × 1448 PNG (3:4). Youth photography now contains 16 individual images across four colorways, with 12 approved and these four pending. Women's collection remains to be created. No binary import, supplier-specific validation or live store publication is claimed.
+All four tonal Girls and Boys product/model placeholder images are **APPROVED & LOCKED**; owner: "Approved!" on October 13, 2026. Dark-green embroidery on forest-green fabric is an additional colorway; existing approved white, cream and green/cream images remain locked unchanged. Each new original is 1086 × 1448 PNG (3:4). Youth photography now contains 16 individual images across four colorways, all 16 approved and locked. Women's collection remains to be created. No binary import, supplier-specific validation or live store publication is claimed.
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Girls forest green / dark-green horse — product | REVIEW PENDING | `exec-989eb8d6-1fb8-4301-bb4c-b0363ed32bb0.png` | `f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59` |
-| Girls forest green / dark-green horse — model | REVIEW PENDING | `exec-0636de57-c742-48a3-919a-edddea026b73.png` | `9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064` |
-| Boys forest green / dark-green horse — product | REVIEW PENDING | `exec-c59c3a7c-d921-4814-ba9f-7f4dea5ceea9.png` | `299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4` |
-| Boys forest green / dark-green horse — model | REVIEW PENDING | `exec-5d07e3e8-66d5-4a66-913c-77d71410b08b.png` | `ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4` |
+| Girls forest green / dark-green horse — product | APPROVED & LOCKED | `exec-989eb8d6-1fb8-4301-bb4c-b0363ed32bb0.png` | `f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59` |
+| Girls forest green / dark-green horse — model | APPROVED & LOCKED | `exec-0636de57-c742-48a3-919a-edddea026b73.png` | `9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064` |
+| Boys forest green / dark-green horse — product | APPROVED & LOCKED | `exec-c59c3a7c-d921-4814-ba9f-7f4dea5ceea9.png` | `299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4` |
+| Boys forest green / dark-green horse — model | APPROVED & LOCKED | `exec-5d07e3e8-66d5-4a66-913c-77d71410b08b.png` | `ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4` |
