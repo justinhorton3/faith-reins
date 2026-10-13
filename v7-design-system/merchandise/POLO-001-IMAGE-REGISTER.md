@@ -127,5 +127,15 @@ Product/model pair created for review using the approved smaller left-chest embl
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Women cream / dark-green horse — product | REVIEW PENDING | `exec-a88ed378-7553-4ecb-94eb-325070c60348.png` | `ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb` |
-| Women cream / dark-green horse — model | REVIEW PENDING | `exec-876d6e70-953f-4587-9819-374809d43fb5.png` | `b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d` |
+| Women cream / dark-green horse — product | APPROVED & LOCKED | `exec-a88ed378-7553-4ecb-94eb-325070c60348.png` | `ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb` |
+| Women cream / dark-green horse — model | APPROVED & LOCKED | `exec-876d6e70-953f-4587-9819-374809d43fb5.png` | `b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d` |
+
+
+## Women's cream approval and green/cream pair — October 13, 2026
+
+Cream product/model pair APPROVED & LOCKED; owner: "Approved, Go for next". New women's forest-green/cream pair created for review using approved smaller emblem visual scale, same women's garment and adult model. Originals are 1086 × 1448 PNG (3:4). Previous images retained unchanged. Women's tonal green remains to be created. No binary GitHub import, supplier-specific validation or store publication is claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Women forest green / cream horse — product | REVIEW PENDING | `exec-473e09da-d051-49db-8d6c-d56851731020.png` | `ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121` |
+| Women forest green / cream horse — model | REVIEW PENDING | `exec-adf3d91f-2156-4dc0-972d-6e8ecb9d37c5.png` | `7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5` |
