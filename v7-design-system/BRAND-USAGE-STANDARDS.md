@@ -1,6 +1,6 @@
 # Faith Reins V7 — Brand Asset Usage Standards
 
-**Status:** Proposed usage rules for owner review; logo artwork itself is already approved.  
+**Status:** APPROVED starting rules (owner decision, 2026-10-12). Exact production minimums and manufacturing limits still require proofing.  
 **Scope:** Website, documents, print, signage, merchandise, and embroidery.  
 **Authority:** [Asset Register](ASSET-REGISTER.md) and the exact SVG masters in `approved/`.  
 **Implementation:** Documentation only. No changes to the published website are authorized.
@@ -44,7 +44,7 @@ Single-color variants must have one opaque fill color and no background rectangl
 - Seal lettering: **approved converted vector shapes**. The approved traced seal is the source of truth; do not substitute a live font or assume its appearance is the same as the website lockup.
 - All supplied production SVGs should remain self-contained and independent of locally installed fonts.
 
-## 4. Clear-space system — proposed review values
+## 4. Clear-space system — approved starting values
 
 Measure spacing using the overall visible artwork bounds, not the SVG canvas edge.
 
@@ -55,9 +55,9 @@ Measure spacing using the overall visible artwork bounds, not the SVG canvas edg
 | Round seal | **0.08 × seal outside diameter** | From the outermost green ring |
 | Horse alone | **0.15 × horse mark height** | From the silhouette bounds |
 
-These are **proposed layout rules**, not dimensions already signed off. When applied to a product, no seams, stitching, zipper, pocket, copy, or crop may enter the clear space. Clear-space distances may be increased freely, not reduced without a specific exception.
+These are **owner-approved initial layout rules**, pending use-case QA. When applied to a product, no seams, stitching, zipper, pocket, copy, or crop may enter the clear space. Clear-space distances may be increased freely, not reduced without a specific exception.
 
-## 5. Minimum sizes — initial targets for testing, NOT validated production limits
+## 5. Minimum sizes — approved test targets, NOT validated production limits
 
 | Asset | Digital first-pass target | Print first-pass target | Additional rule |
 | --- | --- | --- | --- |
@@ -119,8 +119,10 @@ Do not stretch, skew, rotate to fit a curved object, recolor by CSS filter, swap
 
 ## 11. Acceptance checklist to complete standards
 
-- [ ] Owner approves the proposed clear-space factors.
-- [ ] Owner approves target minimum-size guidance after legibility proofboard.
+- [x] Owner approves starting clear-space factors (approved for trial, not physical QA).
+- [x] Owner approves initial minimum-size test targets (not verified limits).
+- [x] Visual SVG proofboards prepared using source master artwork.
+- [ ] Owner reviews proofboards for legibility and background behavior.
 - [ ] Print proofs on white/ivory and dark substrates completed.
 - [ ] Green/white one-color artwork rendered on contrasting sample grounds.
 - [ ] Supplier/embroiderer confirms minimum viable mark size with sew-out.
@@ -131,5 +133,15 @@ Do not stretch, skew, rotate to fit a curved object, recolor by CSS filter, swap
 ## 12. Version control / status
 
 **Artwork:** four approved seal SVGs and existing horse, website and document logos are locked.  
-**Usage standards:** **PROPOSED — review pending**.  
+**Usage standards:** **APPROVED starting values; final physical/digital QA pending**.  
 **Merchandise production, website integration and deployment:** **NOT approved as part of this document**.
+
+
+## 13. Owner decision and visual proofboards — 2026-10-12
+
+Owner approved the initial brand usage standards and requested visual proofboards. **The starting rules are approved; actual logo minimum-size performance remains untested.**
+
+- [Proofboard 01 — light/dark logo and seal usage](proofboards/PROOFBOARD-01-LOGO-USAGE.svg)
+- [Proofboard 02 — digital size, seal size and clear space](proofboards/PROOFBOARD-02-SIZE-AND-CLEARSPACE.svg)
+
+Both are composed from embedded path geometry in the **exact approved repository SVGs**, rather than generated image approximations. They are illustrative static SVGs only: no real-site screenshots, physical print tests, machine embroidery sew-outs, measured readability studies, or merch supplier sign-offs have yet been performed. Review evidence of any such tests before changing the above numeric targets to production guarantees.
