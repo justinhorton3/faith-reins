@@ -42,3 +42,31 @@ The six originals and a machine-readable `faith-reins-v7-hero-products-approved-
 **Not yet approved or completed:** Printful garment-specific SKU matches, fabric and physical color verification, original image-to-SVG vector identity of rendered stitches, embroidery digitization, supplier samples, pricing, image rights review, actual Wix upload, or live store publishing.
 
 All subsequent image sets for Men/Women/Girls/Boys and other colorways are separate creative work and require their own review.
+
+
+## Cream and white variants — approved October 13, 2026
+
+**Owner instruction:** "Approved! Lock them in"
+
+**Status: APPROVED & LOCKED VISUAL PLACEHOLDERS.** All 12 cream/white cap, quarter-zip and quilted-vest product/model images presented immediately before this approval are locked alongside the six forest-green references. Dark-green horse embroidery and the existing premium white-background photographic direction are retained.
+
+The exact existing image objects are preserved without regeneration, repainting or replacement. Library identifiers below disambiguate generic image titles; byte counts are metadata, not cryptographic checksums. No new checksum or garment-specific supplier validation is claimed.
+
+| Exact image title | Persistent image identifier | Original bytes |
+| --- | --- | ---: |
+| White Faith Reins garment with green logo.png | `libfile_9b6dc9fcd0548191a04ed60143555b77` | 1915963 |
+| White Garment with Green Horse Logo.png | `libfile_f4dbb54c5cd88191b2712adab9b3fe6f` | 1886406 |
+| Faith Reins bright white horse-logo portrait.png | `libfile_61558b619c2081918c90937d89fe1ac6` | 1839210 |
+| White garment, green horse logo.png | `libfile_c890ec7261e88191bc2d620263272fc3` | 1854049 |
+| White Faith Reins apparel with green logo.png | `libfile_fb403653412c8191ab4e1327ee1e7084` | 2197011 |
+| Bright white Faith Reins equestrian apparel.png | `libfile_c3214bd6e1148191924c60f053c0a06f` | 1877023 |
+| Warm Ivory Garment with Green Horse Logo.png | `libfile_5a0382b9195c8191b7073018dfe2614b` | 1962931 |
+| Warm ivory horsehead logo cap.png | `libfile_1ad5a692173481918804b2d542ece41a` | 1940836 |
+| Warm ivory cap with forest-green horse logo.png | `libfile_8ce02fbbd640819191fab4390308f0ba` | 1885393 |
+| Warm ivory apparel with forest-green horse logo.png | `libfile_045fba880c24819189c60dc85d80f58d` | 2081728 |
+| Warm ivory equestrian garment with green logo.png | `libfile_7da767f36c808191b58fa9d89d3c949d` | 2240431 |
+| Warm ivory garment, green horse logo.png | `libfile_96ab769dfb308191ad0b7cbfbd214e0a` | 2052529 |
+
+**Source grouping:** The six white images were saved October 13, 2026 at 11:52:27–11:52:32 UTC; the six cream images at 11:52:22–11:52:26 UTC. These are the selected cream/white references, distinct from older generated boards.
+
+**Lock scope:** Approved website placeholder imagery and visual references only. Keep the original green references unchanged. Production decoration continues to use the approved V7 SVG masters. This approval does not publish listings, order products, or authorize substitution of supplier garments. Image binaries remain preserved as existing image artifacts; this document does not claim binary import to GitHub.
