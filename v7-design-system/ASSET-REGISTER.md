@@ -127,3 +127,8 @@ No website code or production deployment was authorized by this seal approval.
 ## Brand usage proofboards — 2026-10-12
 
 Owner approved initial clearance and size test rules. Two [V7 proofboards](proofboards/) have been committed from exact approved path geometry: `PROOFBOARD-01-LOGO-USAGE.svg` and `PROOFBOARD-02-SIZE-AND-CLEARSPACE.svg`. **Standard starting values APPROVED; minimum sizes and print/embroidery production validation pending.** No published site changes.
+
+
+## V7 merchandise concept imagery — accepted October 13, 2026
+
+The owner accepted the apparel and accessories concept direction. See [MERCHANDISE-CONCEPT-BOARDS.md](merchandise/MERCHANDISE-CONCEPT-BOARDS.md) for two named PNG concept files, SHA-256 checksums, expanded accessories assortment (**coffee mug, notebook, keychain, insulated water bottle and tumbler**), Printful sourcing notes, and V7 brand quality gates. **Image binaries were bundled as conversation downloadable ZIP but have NOT yet been pushed into the GitHub repository**. Approval concerns the retail concept direction, not the exact AI-drawn logo art or product print files; only locked V7 SVG assets may be used on final products. No live site changes.
