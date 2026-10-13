@@ -117,3 +117,8 @@ No website code or production deployment was authorized by this seal approval.
 **Ink note:** The owner-approved traced master uses forest green `#003321` and gold `#C58C29` as sampled from the locked visual. These are seal-artwork source colors and are not a change to the global V7 CSS token palette. The single-color green variant retains `#003321` to match that master; it should not be silently recolored to another green without approval.
 
 **Old seals:** archived in `v7-design-system/legacy/seal/`, for rollback only. Do not use old `seal-cream.svg` or `seal-black.svg` art from prior revisions as current production masters.
+
+
+## Brand usage standards — drafted for review
+
+[BRAND-USAGE-STANDARDS.md](BRAND-USAGE-STANDARDS.md) is committed on `feat/v7-merchandise-system`. **Status: proposed**, not owner-approved. It documents approved logo family selection, original color source values, typography, proposed clear-space and minimum-size guidance, and embroidery/manufacturing proof requirements. The existing four-seal asset family remains **complete and approved**. Final minimum sizes and vendor sew-outs still require testing. No website code was changed.
