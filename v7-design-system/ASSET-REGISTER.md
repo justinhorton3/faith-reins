@@ -121,4 +121,9 @@ No website code or production deployment was authorized by this seal approval.
 
 ## Brand usage standards — drafted for review
 
-[BRAND-USAGE-STANDARDS.md](BRAND-USAGE-STANDARDS.md) is committed on `feat/v7-merchandise-system`. **Status: proposed**, not owner-approved. It documents approved logo family selection, original color source values, typography, proposed clear-space and minimum-size guidance, and embroidery/manufacturing proof requirements. The existing four-seal asset family remains **complete and approved**. Final minimum sizes and vendor sew-outs still require testing. No website code was changed.
+[BRAND-USAGE-STANDARDS.md](BRAND-USAGE-STANDARDS.md) is committed on `feat/v7-merchandise-system`. **Status: owner-approved starting standards; production proofing pending**. It documents approved logo family selection, original color source values, typography, proposed clear-space and minimum-size guidance, and embroidery/manufacturing proof requirements. The existing four-seal asset family remains **complete and approved**. Final minimum sizes and vendor sew-outs still require testing. No website code was changed.
+
+
+## Brand usage proofboards — 2026-10-12
+
+Owner approved initial clearance and size test rules. Two [V7 proofboards](proofboards/) have been committed from exact approved path geometry: `PROOFBOARD-01-LOGO-USAGE.svg` and `PROOFBOARD-02-SIZE-AND-CLEARSPACE.svg`. **Standard starting values APPROVED; minimum sizes and print/embroidery production validation pending.** No published site changes.
