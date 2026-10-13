@@ -102,3 +102,20 @@ Two individual product/model placeholder images created for review. Adult women'
 | --- | --- | --- | --- |
 | Women white / dark-green horse — product | REVIEW PENDING | `exec-7cfa8400-b861-4afb-a83f-3368a0003007.png` | `3494bfadff94f49eb67a7026f11c7449fafd719cfd66f9b9d83f584fb3fd8c1f` |
 | Women white / dark-green horse — model | REVIEW PENDING | `exec-15f5ca0f-1a20-416c-8b24-3e7b106776f9.png` | `df3cad9cc06ede074c3440976f691b2d351e1e96caaf09a32ae88ed660b94794` |
+
+
+## Polo emblem size — owner-approved October 13, 2026
+
+Owner requested: "can we reduce the horse icon by 50%" and approved: "Yes, lock this in as an approved size for the icon/ emblem on polos."
+
+**APPROVED & LOCKED DESIGN STANDARD:** Small, understated left-chest V7 horse-head emblem on polos, nominally **50% of the previous women's pilot width and height**, uniformly scaled. The displayed reduced women's model image is the visual size reference. Maintain artwork proportions and wearer-left placement; use proportionate youth sizing. Apply this standard to subsequent Men/Women/Girls/Boys polo images and colorways. Earlier approved images remain preserved as historical versions; no retroactive batch edit or overwrite was performed.
+
+This is owner approval of visual emblem scale, not a validated physical embroidery minimum. Generated photographs are visual approximations; set final production dimensions using the approved SVG and supplier embroidery proof rather than inferring millimeters from pixels.
+
+| Image | Exact original filename | SHA-256 |
+| --- | --- | --- |
+| Reduced product shown before size approval — retained reference | `exec-c5e8150d-8a7c-4340-9b78-250006302c14.png` | `dcad6b741c6c585012c5037966ac80181de5fc5114c1013998ef5f4e41097cda` |
+| Reduced model — owner-approved visual size reference | `exec-8a868db8-83b9-47fd-9419-960dfb01a641.png` | `18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4` |
+| Further-refined product after size approval — derived preview | `exec-01b4c5ec-3035-4247-bc90-6048e5328ff7.png` | `f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369` |
+
+All three retained originals are 1086 × 1448 PNG. This size approval does not imply that the subsequently completed refined product image received a separate image approval. The original larger women's pilot remains retained and is superseded for emblem-scale guidance.
