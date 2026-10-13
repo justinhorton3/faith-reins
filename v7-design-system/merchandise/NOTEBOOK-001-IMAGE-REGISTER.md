@@ -66,9 +66,9 @@ Keep approved horse-only and document-logo layouts as separate forest-green/crea
 
 ## Document-logo print integration reopened — October 13, 2026
 
-Owner: "Um the logo doesn’t look natural on the book. Please review". Earlier document-logo image approval is superseded by this correction request; horse-only imagery remains approved. Two revisions created with flatter matte printed appearance, reduced raised/shadow cues and consistent whole-lockup alignment to the rigid cover plane. Preserve original V7 artwork references and prior photos without overwrite. New 1086 × 1448 PNG previews await owner review; no claim of deterministic SVG composite or production-verified exact typography/perspective.
+Owner: "Um the logo doesn’t look natural on the book. Please review". Earlier document-logo image approval is superseded by this correction request; horse-only imagery remains approved. Two revisions created with flatter matte printed appearance, reduced raised/shadow cues and consistent whole-lockup alignment to the rigid cover plane. Preserve original V7 artwork references and prior photos without overwrite. Both new 1086 × 1448 PNG revisions are **APPROVED & LOCKED**; owner: "Ok approved" on October 13, 2026; no claim of deterministic SVG composite or production-verified exact typography/perspective.
 
 | Revision and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Document-logo print integration revision — styled | REVIEW PENDING | `exec-07081d9f-9c91-490c-bde3-3e4846f7fe5f.png` | `659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573` |
-| Document-logo print integration revision — product | REVIEW PENDING | `exec-9a234d7a-5aad-41fe-9a26-e63205b5c6c9.png` | `6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb` |
+| Document-logo print integration revision — styled | APPROVED & LOCKED | `exec-07081d9f-9c91-490c-bde3-3e4846f7fe5f.png` | `659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573` |
+| Document-logo print integration revision — product | APPROVED & LOCKED | `exec-9a234d7a-5aad-41fe-9a26-e63205b5c6c9.png` | `6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb` |
