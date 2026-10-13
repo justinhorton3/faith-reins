@@ -119,3 +119,13 @@ This is owner approval of visual emblem scale, not a validated physical embroide
 | Further-refined product after size approval — derived preview | `exec-01b4c5ec-3035-4247-bc90-6048e5328ff7.png` | `f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369` |
 
 All three retained originals are 1086 × 1448 PNG. This size approval does not imply that the subsequently completed refined product image received a separate image approval. The original larger women's pilot remains retained and is superseded for emblem-scale guidance.
+
+
+## Women's cream polo — reduced emblem standard, October 13, 2026
+
+Product/model pair created for review using the approved smaller left-chest emblem visual scale. Cream cotton-pique fabric with dark-green horse-head embroidery. Same women's garment and adult model as the reduced white references. Original PNGs are 1086 × 1448 (3:4). Existing originals remain unchanged. Forest-green/cream and tonal-green women's pairs remain to be created. No binary GitHub image import or supplier-specific validation claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Women cream / dark-green horse — product | REVIEW PENDING | `exec-a88ed378-7553-4ecb-94eb-325070c60348.png` | `ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb` |
+| Women cream / dark-green horse — model | REVIEW PENDING | `exec-876d6e70-953f-4587-9819-374809d43fb5.png` | `b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d` |
