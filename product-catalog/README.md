@@ -1,123 +1,110 @@
 # Faith Reins V7 Product Catalog
 
-This catalog records the **approved visual designs** for the future website store. Product photos are concept images. Prices, stock, final garment measurements, and ordering are deferred until supplier setup. The image binaries are currently held as generated assets and are **not committed to this repository**. Each linked image record identifies the exact approved filename and checksum; direct repository image URLs can be added once those binaries are imported.
+42 product designs now have individual detail files. Each file groups all proposed sizes, describes the product, and identifies its exact image sources. Printful integration is deferred.
 
-## Size information
+**Image import is unfinished.** The original image binaries are not committed under `product-catalog/images/` or `images/products/`. Approval-record links are available; intended paths are recorded without presenting them as working image links.
 
-| Product family | Planned sizes / format | Confirmation |
-|---|---|---|
-| Caps | Adjustable | Final blank and head circumference pending |
-| Adult quarter zips | S–3XL | Proposed range; match to supplier chart |
-| Adult quilted vests | XS–2XL | Proposed range; matching Printful vest not confirmed |
-| Men's polos and hoodies | S–3XL | Proposed range; match to supplier chart |
-| Women's polos and hoodies | XS–2XL | Proposed range; match to supplier chart |
-| Girls' and boys' polos and hoodies | Youth XS–XL | Proposed range; match to supplier chart |
-| Mugs | One size | Capacity pending |
-| Water bottles | One size | Capacity, material and lid details pending |
-| Matte hardcover journals | 5.75 × 8 in, 150 lined pages | Printful Hardcover Journal Matte format; verify current listing |
-| Embroidered sherpa throws | 50 × 60 in | Printful BP40 format; color/thread match pending |
-
-**Apparel size labels are planning ranges only.** No body measurement chart is asserted until the exact garment blank is selected. Youth hoodies use a drawcord-free design. Polo embroidery follows the approved smaller left-chest emblem standard; some earlier photographs predate that size change.
+[Image import manifest](IMAGE-IMPORT-MANIFEST.json) maps 84 expected image slots to both destinations. It includes 72 recorded source checksums; the remaining 12 cream/white hero sources require identity validation. Two slots are derived companion views, as identified in the original registers.
 
 ## Headwear
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Forest Green Horse Cap**<br>Forest green / Cream horse head | A forest green everyday cap with the Faith Reins horse head placed quietly at the front. A simple finishing piece for the barn, errands, and days outdoors. | Adjustable fit; final range to confirm | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>forest_green_cap_with_embroidered_horse_logo.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>smiling_woman_in_forest_green_logo_cap.png</code> |
-| **Cream Horse Cap**<br>Cream / Forest green horse head | A warm cream cap with a forest green horse head on the crown. The light color gives the familiar Faith Reins mark an easy, everyday look. | Adjustable fit; final range to confirm | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-00a1ea18-026c-4edb-a3ef-e54238bbdc44.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-4bf36317-b727-499b-89df-c308ccfa22ab.png</code> |
-| **White Horse Cap**<br>White / Forest green horse head | A crisp white cap finished with the forest green horse head. Clean and understated with an easy, casual shape. | Adjustable fit; final range to confirm | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-039f2565-01e6-4762-832d-bea6fa6ce369.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-a35223a2-b28a-46f9-a535-8da25c829d55.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Forest Green Horse Cap](forest-green-horse-cap.md) | Forest green / Cream horse head | Adjustable fit; final range to confirm |
+| [Cream Horse Cap](cream-horse-cap.md) | Cream / Forest green horse head | Adjustable fit; final range to confirm |
+| [White Horse Cap](white-horse-cap.md) | White / Forest green horse head | Adjustable fit; final range to confirm |
 
 ## Quarter zips
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Forest Green Quarter Zip**<br>Forest green / Cream horse head | A polished forest green layer with a small cream horse head at the left chest. Wear it over a tee for cooler mornings and easy everyday layering. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>forest_green_quarter_zip_with_horse_logo.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>smiling_model_in_forest_green_quarter_zip.png</code> |
-| **Cream Quarter Zip**<br>Cream / Forest green horse head | A warm cream quarter zip with a small forest green horse head. The clean neckline and quiet emblem make it an easy layer from work to weekend. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-6431bd2f-4245-4374-b6be-e077896ff901.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-c1e0237e-d206-4927-b16f-2e25063dee88.png</code> |
-| **White Quarter Zip**<br>White / Forest green horse head | A bright white quarter zip with the forest green horse head at the chest. A fresh companion to the deeper colors in the collection. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-39b2e683-2e7a-4fb5-98a4-5edb12662ff3.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-6581b909-b35e-4422-9cd8-1279c327dc8d.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Forest Green Quarter Zip](forest-green-quarter-zip.md) | Forest green / Cream horse head | S–3XL proposed; supplier chart pending |
+| [Cream Quarter Zip](cream-quarter-zip.md) | Cream / Forest green horse head | S–3XL proposed; supplier chart pending |
+| [White Quarter Zip](white-quarter-zip.md) | White / Forest green horse head | S–3XL proposed; supplier chart pending |
 
 ## Quilted vests
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Forest Green Quilted Vest**<br>Forest green / Cream horse head | A forest green diamond quilted vest with a small cream horse head at the left chest. An equestrian inspired layer with a tailored look. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>forest_green_quilted_vest_with_horse_logo.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>forest_green_equestrian_quilted_vest_portrait.png</code> |
-| **Cream Quilted Vest**<br>Cream / Forest green horse head | A warm cream diamond quilted vest with a forest green horse head. The light palette keeps the tailored silhouette soft and versatile. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-d6f0eba8-53d2-4abf-880c-db664e87696f.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-192b2d07-b89b-40f5-9f85-b2dea8fc8c53.png</code> |
-| **White Quilted Vest**<br>White / Forest green horse head | A bright white quilted vest marked with the forest green horse head. A clean, easy layer for the collection. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-fcb41402-83a6-4ca2-a54a-d50950e09ad0.png</code> | [Asset record](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md)<br><code>exec-eda70bcc-2e2d-405d-b277-af2104f2ddef.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Forest Green Quilted Vest](forest-green-quilted-vest.md) | Forest green / Cream horse head | XS–2XL proposed; supplier chart pending |
+| [Cream Quilted Vest](cream-quilted-vest.md) | Cream / Forest green horse head | XS–2XL proposed; supplier chart pending |
+| [White Quilted Vest](white-quilted-vest.md) | White / Forest green horse head | XS–2XL proposed; supplier chart pending |
 
 ## Polos
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Men's White Polo**<br>White / Dark green horse head | A white men's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-0d6feb5f-e7a2-4a93-8c43-4c2afb07b17e.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-b9f4e177-d241-42d7-8455-64a6b4b206b5.png</code> |
-| **Men's Cream Polo**<br>Cream / Dark green horse head | A cream men's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-7e3dc806-9937-4d98-bf7e-0f36bb19713f.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-87e8aee4-13fd-40ae-98c5-f03b439dc018.png</code> |
-| **Men's Forest Green Polo**<br>Forest green / Cream horse head | A forest green men's polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-ea61e5da-26f1-4a1f-9b66-72f6901b614f.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-f34c95c5-76b4-4ef3-9642-98e7b24d89c7.png</code> |
-| **Men's Tonal Forest Green Polo**<br>Forest green / Dark green tonal horse head | A forest green men's polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-d221ba36-114d-4775-8acb-1f9c9dc77d71.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-4efcf44f-2120-4612-bda5-c5c44c4cd1f0.png</code> |
-| **Women's White Polo**<br>White / Dark green horse head | A white women's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-01b4c5ec-3035-4247-bc90-6048e5328ff7.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-8a868db8-83b9-47fd-9419-960dfb01a641.png</code> |
-| **Women's Cream Polo**<br>Cream / Dark green horse head | A cream women's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-a88ed378-7553-4ecb-94eb-325070c60348.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-876d6e70-953f-4587-9819-374809d43fb5.png</code> |
-| **Women's Forest Green Polo**<br>Forest green / Cream horse head | A forest green women's polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-473e09da-d051-49db-8d6c-d56851731020.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-adf3d91f-2156-4dc0-972d-6e8ecb9d37c5.png</code> |
-| **Women's Tonal Forest Green Polo**<br>Forest green / Dark green tonal horse head | A forest green women's polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-a705253b-5cee-4968-8cf0-bb8dc1af1099.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-60e56e9d-9efa-464a-9044-4a1b4e8ff8ac.png</code> |
-| **Girls' White Polo**<br>White / Dark green horse head | A white girls' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-5aae00c4-c760-428d-90f8-9bb447ef2839.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-ff742e59-219f-4a43-a725-6c820abd674c.png</code> |
-| **Girls' Cream Polo**<br>Cream / Dark green horse head | A cream girls' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-a5712cc8-3cb1-42c7-a832-6afc30944c53.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-e30f0d94-a8d8-4482-b471-725d045ec626.png</code> |
-| **Girls' Forest Green Polo**<br>Forest green / Cream horse head | A forest green girls' polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-36eacdcb-ea57-4923-9362-7bbb63588721.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-d09e1729-0f1e-4ac3-b268-77e440e0ec7c.png</code> |
-| **Girls' Tonal Forest Green Polo**<br>Forest green / Dark green tonal horse head | A forest green girls' polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-989eb8d6-1fb8-4301-bb4c-b0363ed32bb0.png</code> | — |
-| **Boys' White Polo**<br>White / Dark green horse head | A white boys' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-90fd0282-1641-42a6-bc76-5f9ea2b6413c.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-25062910-d3b8-4d4e-9b9e-f07bf6abd590.png</code> |
-| **Boys' Cream Polo**<br>Cream / Dark green horse head | A cream boys' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-d55d9c85-012d-4bbc-b6c6-f9c652864d4e.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-37452ff1-8659-4e05-a611-ac2493acbe1a.png</code> |
-| **Boys' Forest Green Polo**<br>Forest green / Cream horse head | A forest green boys' polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-5fd636e5-5b71-4255-833e-fcee68e25935.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-a5ff046a-528c-4d96-8edd-d367c6b89263.png</code> |
-| **Boys' Tonal Forest Green Polo**<br>Forest green / Dark green tonal horse head | A forest green boys' polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-c59c3a7c-d921-4814-ba9f-7f4dea5ceea9.png</code> | [Asset record](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md)<br><code>exec-5d07e3e8-66d5-4a66-913c-77d71410b08b.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Men's White Polo](mens-white-polo.md) | White / Dark green horse head | S–3XL proposed; supplier chart pending |
+| [Men's Cream Polo](mens-cream-polo.md) | Cream / Dark green horse head | S–3XL proposed; supplier chart pending |
+| [Men's Forest Green Polo](mens-forest-green-polo.md) | Forest green / Cream horse head | S–3XL proposed; supplier chart pending |
+| [Men's Tonal Forest Green Polo](mens-tonal-forest-green-polo.md) | Forest green / Dark green tonal horse head | S–3XL proposed; supplier chart pending |
+| [Women's White Polo](womens-white-polo.md) | White / Dark green horse head | XS–2XL proposed; supplier chart pending |
+| [Women's Cream Polo](womens-cream-polo.md) | Cream / Dark green horse head | XS–2XL proposed; supplier chart pending |
+| [Women's Forest Green Polo](womens-forest-green-polo.md) | Forest green / Cream horse head | XS–2XL proposed; supplier chart pending |
+| [Women's Tonal Forest Green Polo](womens-tonal-forest-green-polo.md) | Forest green / Dark green tonal horse head | XS–2XL proposed; supplier chart pending |
+| [Girls' White Polo](girls-white-polo.md) | White / Dark green horse head | Youth XS–XL proposed; supplier chart pending |
+| [Girls' Cream Polo](girls-cream-polo.md) | Cream / Dark green horse head | Youth XS–XL proposed; supplier chart pending |
+| [Girls' Forest Green Polo](girls-forest-green-polo.md) | Forest green / Cream horse head | Youth XS–XL proposed; supplier chart pending |
+| [Girls' Tonal Forest Green Polo](girls-tonal-forest-green-polo.md) | Forest green / Dark green tonal horse head | Youth XS–XL proposed; supplier chart pending |
+| [Boys' White Polo](boys-white-polo.md) | White / Dark green horse head | Youth XS–XL proposed; supplier chart pending |
+| [Boys' Cream Polo](boys-cream-polo.md) | Cream / Dark green horse head | Youth XS–XL proposed; supplier chart pending |
+| [Boys' Forest Green Polo](boys-forest-green-polo.md) | Forest green / Cream horse head | Youth XS–XL proposed; supplier chart pending |
+| [Boys' Tonal Forest Green Polo](boys-tonal-forest-green-polo.md) | Forest green / Dark green tonal horse head | Youth XS–XL proposed; supplier chart pending |
 
 ## Hoodies
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Men's Forest green Hoodie**<br>Forest green / Cream horse head | A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-671fe23b-5a96-46b7-8009-b5fd06426b97.png</code> | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-851cde20-45f3-4e52-8b83-c7334f860b74.png</code> |
-| **Men's Cream Hoodie**<br>Cream / Dark green horse head | A comfortable cream pullover hoodie with the Faith Reins horse head in dark green at the chest. Made for easy layering on cooler days. | S–3XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-ce43ba74-5990-4501-9a8a-27ba45ff311c.png</code> | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-54b753e1-ad45-4678-abe5-f836f8f6ec1c.png</code> |
-| **Women's Forest green Hoodie**<br>Forest green / Cream horse head | A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days. | XS–2XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-1e9ea50e-df49-4990-9872-3dfbabf439ff.png</code> | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-0c52cb6a-44e4-4fd9-aa14-21ae52ea7224.png</code> |
-| **Boys' Forest green Hoodie**<br>Forest green / Cream horse head | A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-ad441da0-427f-44b4-b38a-291ab5382852.png</code> | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-749922e8-799e-40c2-8a1e-3eb15e771116.png</code> |
-| **Girls' Forest green Hoodie**<br>Forest green / Cream horse head | A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days. | Youth XS–XL proposed; supplier chart pending | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-1b6c98b0-5572-4fff-b60a-0a71df1717c2.png</code> | [Asset record](../v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md)<br><code>exec-a449a146-64a6-4d9c-99a8-843588a3d460.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Men's Forest Green Hoodie](mens-forest-green-hoodie.md) | Forest green / Cream horse head | S–3XL proposed; supplier chart pending |
+| [Men's Cream Hoodie](mens-cream-hoodie.md) | Cream / Dark green horse head | S–3XL proposed; supplier chart pending |
+| [Women's Forest Green Hoodie](womens-forest-green-hoodie.md) | Forest green / Cream horse head | XS–2XL proposed; supplier chart pending |
+| [Boys' Forest Green Hoodie](boys-forest-green-hoodie.md) | Forest green / Cream horse head | Youth XS–XL proposed; supplier chart pending |
+| [Girls' Forest Green Hoodie](girls-forest-green-hoodie.md) | Forest green / Cream horse head | Youth XS–XL proposed; supplier chart pending |
 
 ## Mugs
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Cream Horse Mug**<br>Cream / Green horse head | A ceramic mug in cream with the Faith Reins horse head in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-8eaa90f4-9522-439e-96f7-04c1a1f8babc.png</code> | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-ba36bb05-9061-432d-be3b-8ca340983440.png</code> |
-| **Forest green Horse Mug**<br>Forest green / Cream horse head | A ceramic mug in forest green with the Faith Reins horse head in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-8793b489-4227-45d0-bb94-25e856d800d5.png</code> | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-664c0f3f-3f8c-4656-90d9-a9ac8df08fae.png</code> |
-| **Cream Document Logo Mug**<br>Cream / Green document logo | A ceramic mug in cream with the full Faith Reins document logo in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-1b851dd7-f2ff-42f0-bc0d-7ea6c75bf312.png</code> | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-6984cda6-ad72-46d4-9f5d-e130a4c0a437.png</code> |
-| **Forest green Document Logo Mug**<br>Forest green / Cream document logo | A ceramic mug in forest green with the full Faith Reins document logo in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-8336d4f6-31c8-4be8-a382-9dd2027ea900.png</code> | [Asset record](../v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md)<br><code>exec-1b40a3f6-06d3-4ed4-929b-127ed11eb658.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Cream Horse Mug](cream-horse-mug.md) | Cream / Green horse head | Capacity to confirm |
+| [Forest Green Horse Mug](forest-green-horse-mug.md) | Forest green / Cream horse head | Capacity to confirm |
+| [Cream Document Logo Mug](cream-document-logo-mug.md) | Cream / Green document logo | Capacity to confirm |
+| [Forest Green Document Logo Mug](forest-green-document-logo-mug.md) | Forest green / Cream document logo | Capacity to confirm |
 
 ## Water bottles
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Cream Horse Water Bottle**<br>Cream / Green horse head | A slim reusable water bottle in cream with the horse head in contrasting one-color artwork. Carry the mark from the barn to everyday errands. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-891b3a61-ff1f-4221-894f-30100b3fc32a.png</code> | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-cc754e6a-3509-40eb-9580-a30c84f6fad3.png</code> |
-| **Forest green Horse Water Bottle**<br>Forest green / Cream horse head | A slim reusable water bottle in forest green with the horse head in contrasting one-color artwork. Carry the mark from the barn to everyday errands. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-30c352a8-f5d9-4d86-ba28-80d6dd6d3e0b.png</code> | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-59c04b05-f891-43f7-b4e7-a064a4fc6940.png</code> |
-| **Cream Document Logo Water Bottle**<br>Cream / Green document logo | A slim reusable water bottle in cream with the Faith Reins document logo in contrasting one-color artwork. Carry the mark from the barn to everyday errands. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-ec8ffc80-c94b-4e07-85db-c74cee21f5f9.png</code> | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-530fbabb-f4b5-441f-8958-66f24f9a0944.png</code> |
-| **Forest green Document Logo Water Bottle**<br>Forest green / Cream document logo | A slim reusable water bottle in forest green with the Faith Reins document logo in contrasting one-color artwork. Carry the mark from the barn to everyday errands. | Capacity to confirm | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-35bcca52-a57b-4bac-a776-7e1909aa0740.png</code> | [Asset record](../v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md)<br><code>exec-bdccbdce-a33d-4fbe-9d51-d6b85e07c75b.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Cream Horse Water Bottle](cream-horse-water-bottle.md) | Cream / Green horse head | Capacity to confirm |
+| [Forest Green Horse Water Bottle](forest-green-horse-water-bottle.md) | Forest green / Cream horse head | Capacity to confirm |
+| [Cream Document Logo Water Bottle](cream-document-logo-water-bottle.md) | Cream / Green document logo | Capacity to confirm |
+| [Forest Green Document Logo Water Bottle](forest-green-document-logo-water-bottle.md) | Forest green / Cream document logo | Capacity to confirm |
 
 ## Journals
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Forest Green Horse Journal**<br>Forest green / Cream horse head | A forest green matte hardcover journal with the Faith Reins horse head printed in cream. A place for notes, plans, and small moments worth keeping. | 5.75 × 8 in; 150 lined pages | [Asset record](../v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md)<br><code>exec-65239cf9-4f6b-4b9d-ad84-3c02c482ffc1.png</code> | [Asset record](../v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md)<br><code>exec-76bf466a-adca-4a74-88c8-dc8a0d6fa6d2.png</code> |
-| **Forest Green Document Logo Journal**<br>Forest green / Cream document logo | A forest green matte hardcover journal carrying the complete Faith Reins document logo in cream. Its flat printed mark sits naturally on the cover. | 5.75 × 8 in; 150 lined pages | [Asset record](../v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md)<br><code>exec-9a234d7a-5aad-41fe-9a26-e63205b5c6c9.png</code> | [Asset record](../v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md)<br><code>exec-07081d9f-9c91-490c-bde3-3e4846f7fe5f.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Forest Green Horse Journal](forest-green-horse-journal.md) | Forest green / Cream horse head | 5.75 × 8 in; 150 lined pages |
+| [Forest Green Document Logo Journal](forest-green-document-logo-journal.md) | Forest green / Cream document logo | 5.75 × 8 in; 150 lined pages |
 
 ## Embroidered throws
 
-| Product | Description | Sizes / format | Product image | Styled image |
-|---|---|---|---|---|
-| **Cream Embroidered Throw**<br>Cream / Forest green horse head | A soft cream throw with a small forest green horse head embroidered at one corner. Quiet branding and a cozy look for the sofa or reading nook. | 50 × 60 in concept | [Asset record](../v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md)<br><code>exec-5919da54-8f67-4bd1-9e59-8c995332b190.png</code> | [Asset record](../v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md)<br><code>exec-0d807583-3f39-4187-9c01-736a020081da.png</code> |
-| **Forest Green Embroidered Throw**<br>Forest green / Cream horse head | A deep forest green throw with a small cream horse head embroidered at one corner. The restrained emblem keeps the focus on color and texture. | 50 × 60 in concept | [Asset record](../v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md)<br><code>exec-b0578822-debc-41f8-b3f1-3eff8b67ca23.png</code> | [Asset record](../v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md)<br><code>exec-c3b6c64b-4681-4678-823f-c01a641bc23b.png</code> |
+| Product detail | Color / artwork | Planned sizes or format |
+|---|---|---|
+| [Cream Embroidered Throw](cream-embroidered-throw.md) | Cream / Forest green horse head | 50 × 60 in concept |
+| [Forest Green Embroidered Throw](forest-green-embroidered-throw.md) | Forest green / Cream horse head | 50 × 60 in concept |
 
-## Product and artwork notes
+## Catalog rules
 
-- These descriptions describe the approved *visual design*. Exact fabric, capacity, insulation, care, fit and shipping claims require the chosen Printful product listing and a sample.
-- The [hero image register](../v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md) records the original green cap, quarter zip and vest files and the separately approved cream/white variants. The cream/white source filenames above correspond to the recorded persistent image objects, identified by byte size and review set.
-- The quilted vest remains a sourcing gap: no matching Printful blank was established. Do not substitute a different vest silently.
-- The water bottle silhouette and thermos features are concept visuals; SKU and specifications are unverified.
-- The journal is the Printful matte hardcover full-wrap candidate, **printed** in green and cream. Rejected cream linen and brown leather/deboss concepts are excluded.
-- The embroidered throw keeps a small corner horse. The requested green/cream blanket base colors and exact thread colors have not been confirmed at Printful. The forest-green styled image was completed just after the approval and is a derived companion view.
-- The girls' tonal green polo modeled file listed in the [polo register](../v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md) is omitted here because its workspace copy did not pass file validation; recover the checksum-matching original before linking it.
-- Older website placeholder items without approved V7 photography—T-shirts, crewnecks, beanies, travel mugs, keychains and stickers—are outside this approved image catalog.
-- Production artwork is the approved V7 [horse-head master](../v7-design-system/approved/horse/horse-master-green.svg) and [document-logo masters](../v7-design-system/approved/document-logo/). The photographed artwork is an approximation; use vector paths for production.
+- Size ranges are proposed. Do not publish measurement charts until the exact blank is selected.
+- Preserve approved originals; production artwork uses the approved V7 vector masters.
+- Polos use the approved smaller emblem standard. Earlier men's and youth photographs predate that standard.
+- Youth hoodies remain drawcord-free.
+- Journal images use the forest-green matte cover and corrected document-logo print views. Rejected cream cloth and leather concepts are excluded.
+- Throws use corner embroidery; large printed alternatives are superseded.
+- Matching Printful quilted-vest sourcing and blanket base/thread colors remain unresolved.
+- The girls' tonal polo model filename and checksum are recovered from its approval record; its original bytes still need validation.
+- T-shirts, crewnecks, beanies, keychains and stickers lack approved individual V7 photography in this catalog and are excluded.
 
-## Image link convention
+## Remaining image work
 
-Each image cell links to the relevant **approval register** and names the exact original PNG. This is a resolvable repository link to the asset's provenance, not a claim that the PNG itself is hosted in GitHub. When images are imported later, replace these register links with direct image paths while retaining the original filenames and approval records.
+Recover exact source files, validate recorded checksums, and commit unchanged originals to `product-catalog/images/` with identical copies under `images/products/`. Add direct image links to the detail files only after their destination files exist. The manifest is an import checklist, not evidence that image bytes were recovered or committed.
