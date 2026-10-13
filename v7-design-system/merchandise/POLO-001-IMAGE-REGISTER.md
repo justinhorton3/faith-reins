@@ -92,3 +92,13 @@ All four tonal Girls and Boys product/model placeholder images are **APPROVED & 
 | Girls forest green / dark-green horse — model | APPROVED & LOCKED | `exec-0636de57-c742-48a3-919a-edddea026b73.png` | `9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064` |
 | Boys forest green / dark-green horse — product | APPROVED & LOCKED | `exec-c59c3a7c-d921-4814-ba9f-7f4dea5ceea9.png` | `299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4` |
 | Boys forest green / dark-green horse — model | APPROVED & LOCKED | `exec-5d07e3e8-66d5-4a66-913c-77d71410b08b.png` | `ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4` |
+
+
+## Women's white polo pilot — October 13, 2026
+
+Two individual product/model placeholder images created for review. Adult women's softly tailored comfortable regular fit, standard hip length, white cotton-pique fabric, three-button placket, small dark-green horse-head left-chest branding, consistent white-background premium retail photography. Each original is 1086 × 1448 PNG (3:4). Women's cream, forest-green/cream, and tonal green remain to be created. No supplier-specific garment validation, binary GitHub import or live store publication is claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Women white / dark-green horse — product | REVIEW PENDING | `exec-7cfa8400-b861-4afb-a83f-3368a0003007.png` | `3494bfadff94f49eb67a7026f11c7449fafd719cfd66f9b9d83f584fb3fd8c1f` |
+| Women white / dark-green horse — model | REVIEW PENDING | `exec-15f5ca0f-1a20-416c-8b24-3e7b106776f9.png` | `df3cad9cc06ede074c3440976f691b2d351e1e96caaf09a32ae88ed660b94794` |
