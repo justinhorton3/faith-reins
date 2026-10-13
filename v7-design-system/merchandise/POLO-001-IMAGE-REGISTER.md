@@ -137,5 +137,15 @@ Cream product/model pair APPROVED & LOCKED; owner: "Approved, Go for next". New 
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Women forest green / cream horse — product | REVIEW PENDING | `exec-473e09da-d051-49db-8d6c-d56851731020.png` | `ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121` |
-| Women forest green / cream horse — model | REVIEW PENDING | `exec-adf3d91f-2156-4dc0-972d-6e8ecb9d37c5.png` | `7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5` |
+| Women forest green / cream horse — product | APPROVED & LOCKED | `exec-473e09da-d051-49db-8d6c-d56851731020.png` | `ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121` |
+| Women forest green / cream horse — model | APPROVED & LOCKED | `exec-adf3d91f-2156-4dc0-972d-6e8ecb9d37c5.png` | `7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5` |
+
+
+## Women's green/cream approval and tonal pair — October 13, 2026
+
+Women's forest-green/cream product/model pair APPROVED & LOCKED; owner: "Beautiful! Lock it in! Go for next set". New tonal dark-green-on-forest-green product/model pair created for review using the approved smaller left-chest emblem standard. Originals are 1086 × 1448 PNG (3:4). Prior versions retained unchanged. Women's four colorways now have product/model images; latest tonal pair awaits approval. No binary import, supplier-specific validation or live store publishing claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Women forest green / dark-green horse — product | REVIEW PENDING | `exec-a705253b-5cee-4968-8cf0-bb8dc1af1099.png` | `d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f` |
+| Women forest green / dark-green horse — model | REVIEW PENDING | `exec-60e56e9d-9efa-464a-9044-4a1b4e8ff8ac.png` | `26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67` |
