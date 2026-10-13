@@ -21,9 +21,11 @@ Only **approved** production masters/exports belong under approved/. Drafts shou
 | Document horizontal | approved/document-logo/document-horizontal-green.svg | Pending — not part of stacked approval | letterhead/clinical/donor |
 | Document stacked | [approved/document-logo/faith-reins-v7-document-stacked-green.svg](approved/document-logo/faith-reins-v7-document-stacked-green.svg) | **Approved and promoted 2026-10-12** | narrow formal applications |
 | Document print black | [approved/document-logo/faith-reins-v7-document-stacked-black.svg](approved/document-logo/faith-reins-v7-document-stacked-black.svg) | **Approved and promoted 2026-10-12** | B&W office printing |
-| Official seal — green/gold | [approved/seal/faith-reins-v7-seal-green.svg](approved/seal/faith-reins-v7-seal-green.svg) | **Owner approved and promoted 2026-10-12** | primary seal; donor/certificates/merch |
-| Official seal — cream/green | [approved/seal/faith-reins-v7-seal-cream.svg](approved/seal/faith-reins-v7-seal-cream.svg) | **Owner approved and promoted 2026-10-12** | inverse seal on dark grounds |
-| Official seal — monochrome | [approved/seal/faith-reins-v7-seal-black.svg](approved/seal/faith-reins-v7-seal-black.svg) | **Owner approved and promoted 2026-10-12** | single-color print applications |
+| Official seal — locked two-color transparent | [approved/seal/faith-reins-v7-seal-green.svg](approved/seal/faith-reins-v7-seal-green.svg) | **APPROVED — final rope seal, committed** | primary two-color SVG; dark green/gold ink, transparent |
+| Official seal — two-color ivory field | [approved/seal/faith-reins-v7-seal-ivory.svg](approved/seal/faith-reins-v7-seal-ivory.svg) | **APPROVED — committed** | approved seal with ivory background |
+| Official seal — solid green transparent | [approved/seal/faith-reins-v7-seal-solid-green.svg](approved/seal/faith-reins-v7-seal-solid-green.svg) | **APPROVED — committed** | one-color for light shirts, embroidery and print |
+| Official seal — solid white transparent | [approved/seal/faith-reins-v7-seal-solid-white.svg](approved/seal/faith-reins-v7-seal-solid-white.svg) | **APPROVED — committed** | one-color for dark shirts and fabric |
+| Pre-rope seals (green, cream, black) | [legacy/seal/](legacy/seal/) | **SUPERSEDED — archived** | historical reference only; NOT for new merchandise |
 
 ## Naming and metadata requirement
 
@@ -43,7 +45,7 @@ Each approved SVG should have recorded:
 - Official public wordmark: FAITH REINS (current site and V6).
 - The requested wording “Faith Reigns” conflicts with the current brand; do not change spelling without explicit authorization.
 - Current V6 website subtitle “Pediatric & Equine Therapy”; prior request mentions “Equestrian and Pediatric Therapy.” Confirm exact line before freezing logo exports.
-- Seal wording and spacing: owner approved the original V7 seal with `FAITH REINS`, `EQUESTRIAN CENTER`, and `EST. 2025`; the date line and flanking rules were tightened on 2026-10-12. The experimental rope-border tangent was not adopted.
+- Seal wording and spacing: owner approved the original V7 seal with `FAITH REINS`, `EQUESTRIAN CENTER`, and `EST. 2025`; the date line and flanking rules were tightened on 2026-10-12. **Superseded by final owner-approved rope seal**; use the four locked assets above.
 
 
 ## Candidate 01 — 2026-10-12
@@ -95,6 +97,23 @@ The owner-approved files were produced as conversation artifacts:
 - `faith-reins-v7-seal-locked-proof.png` (visual approval proof)
 - `faith-reins-v7-seal-locked-preview-3000.png` (large preview)
 
-**Production-import gate:** The approved SVGs are currently conversation artifacts, **not yet committed to this GitHub branch**. Do not substitute the previously committed `approved/seal/faith-reins-v7-seal-green.svg` (older, solid-gold-ring seal). Import the actual approved artifact bytes as a new revision, compare against the proof and check vector fidelity before updating canonical paths; preserve the older seal for rollback. Do not label any new AI-generated seal as the approved master.
+**Production import COMPLETE (2026-10-12):** Exact conversation-artifact SVG text was imported to the four canonical assets under `approved/seal/` on branch `feat/v7-merchandise-system`. The original pre-rope green/cream/black files were archived under `legacy/seal/` and removed from the approved directory. SVG XML parsing and color-layer checks were completed locally for the four source files. This does not represent a live website deployment or supplier embroidery test.
 
 No website code or production deployment was authorized by this seal approval.
+
+
+## Seal family — COMPLETE (final owner approval)
+
+**Approval:** Owner explicitly approved the locked two-color seal, then separately approved the transparent forest-green and solid-white one-color variants and instructed that all seals be committed to GitHub and marked complete.
+
+**Deliverable status:** **COMPLETE — four production SVG masters committed**. Geometry is derived from the same locked traced vector (1254 × 1254 viewBox). Color is the only intentional difference between transparent two-color and its green/white monochrome variations; ivory SVG adds a background field. Transparent versions contain no embedded raster images or font dependencies. The final traced SVG has been viewed at its original size and as a large PNG proof. Embroidery/physical sampling and website integration remain separate implementation-stage QA, not blockers to completion of the approved vector family.
+
+**Current source-of-truth paths:**
+- `approved/seal/faith-reins-v7-seal-green.svg` — green/gold, transparent
+- `approved/seal/faith-reins-v7-seal-ivory.svg` — green/gold on ivory
+- `approved/seal/faith-reins-v7-seal-solid-green.svg` — 1-color green, transparent
+- `approved/seal/faith-reins-v7-seal-solid-white.svg` — 1-color white, transparent
+
+**Ink note:** The owner-approved traced master uses forest green `#003321` and gold `#C58C29` as sampled from the locked visual. These are seal-artwork source colors and are not a change to the global V7 CSS token palette. The single-color green variant retains `#003321` to match that master; it should not be silently recolored to another green without approval.
+
+**Old seals:** archived in `v7-design-system/legacy/seal/`, for rollback only. Do not use old `seal-cream.svg` or `seal-black.svg` art from prior revisions as current production masters.
