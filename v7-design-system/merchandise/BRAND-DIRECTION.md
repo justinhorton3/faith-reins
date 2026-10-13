@@ -98,3 +98,8 @@ This document records brand direction only. It does not approve a supplier, fina
 - **Gold:** reserve the approved two-color seal for formal communications, certificates, donor gifts or deliberately designated limited/special editions. It is *not* the default everyday merchandise decoration.
 
 **This is an approved branding rule, not authorization to launch SKUs, order production, or publish the shop.** All supplier sew-outs, print proofs, and pricing remain pending.
+
+
+## Approved fulfillment decision — Printful
+
+**Printful is the primary on-demand manufacturer and fulfillment provider** for the Wix store (owner decision, October 2026). Consult [PRINTFUL-SOURCING-PLAN.md](PRINTFUL-SOURCING-PLAN.md) for locked HAT-001, QZIP-001, VEST-001, TEE-HORSE-001, TEE-SEAL-001 and POLO-001 concepts, catalog-matching gates, photographic QA and sample validation. **Vendor selection does not change or replace approved concepts.** No Printful product SKU, sample or store listing has yet been approved. No live publishing authorized.
