@@ -72,11 +72,11 @@ Four cream/dark-green placeholder images APPROVED & LOCKED; owner: "Very nice! N
 
 ## Youth forest green / cream polo set — October 13, 2026
 
-Four new individual product/model placeholder images created for Girls and Boys, pending owner review. Same approved youth fits and model identities, white-background photography. Original PNGs are 1086 × 1448 (3:4). Youth tonal dark-green-on-green and women's collection remain to be created. No binary import, supplier-specific validation or store publication is claimed.
+All four forest-green/cream Girls and Boys product/model placeholder images are **APPROVED & LOCKED**. Owner instruction: "Beautiful! Lock it in!" (October 13, 2026). Same approved youth fits and model identities, white-background photography. Original PNGs are 1086 × 1448 (3:4). Youth tonal dark-green-on-green and women's collection remain to be created. No binary import, supplier-specific validation or store publication is claimed.
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Girls forest green / cream horse — product | REVIEW PENDING | `exec-36eacdcb-ea57-4923-9362-7bbb63588721.png` | `093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7` |
-| Girls forest green / cream horse — model | REVIEW PENDING | `exec-d09e1729-0f1e-4ac3-b268-77e440e0ec7c.png` | `4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e` |
-| Boys forest green / cream horse — product | REVIEW PENDING | `exec-5fd636e5-5b71-4255-833e-fcee68e25935.png` | `f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7` |
-| Boys forest green / cream horse — model | REVIEW PENDING | `exec-a5ff046a-528c-4d96-8edd-d367c6b89263.png` | `33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264` |
+| Girls forest green / cream horse — product | APPROVED & LOCKED | `exec-36eacdcb-ea57-4923-9362-7bbb63588721.png` | `093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7` |
+| Girls forest green / cream horse — model | APPROVED & LOCKED | `exec-d09e1729-0f1e-4ac3-b268-77e440e0ec7c.png` | `4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e` |
+| Boys forest green / cream horse — product | APPROVED & LOCKED | `exec-5fd636e5-5b71-4255-833e-fcee68e25935.png` | `f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7` |
+| Boys forest green / cream horse — model | APPROVED & LOCKED | `exec-a5ff046a-528c-4d96-8edd-d367c6b89263.png` | `33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264` |
