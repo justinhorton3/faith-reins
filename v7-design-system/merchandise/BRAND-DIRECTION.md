@@ -108,3 +108,8 @@ This document records brand direction only. It does not approve a supplier, fina
 ## V7 merchandise concept imagery — accepted October 13, 2026
 
 The owner accepted the apparel and accessories concept direction. See [MERCHANDISE-CONCEPT-BOARDS.md](MERCHANDISE-CONCEPT-BOARDS.md) for two named PNG concept files, SHA-256 checksums, expanded accessories assortment (**coffee mug, notebook, keychain, insulated water bottle and tumbler**), Printful sourcing notes, and V7 brand quality gates. **Image binaries were bundled as conversation downloadable ZIP but have NOT yet been pushed into the GitHub repository**. Approval concerns the retail concept direction, not the exact AI-drawn logo art or product print files; only locked V7 SVG assets may be used on final products. No live site changes.
+
+
+## Locked hero merchandise photography — October 13, 2026
+
+The owner explicitly approved six individual forest-green product/model concept images covering HAT-001, QZIP-001 and VEST-001. Their exact filenames, SHA-256 hashes, placement/visual notes, archive packaging, and status are maintained in [APPROVED-HERO-PRODUCT-IMAGES.md](APPROVED-HERO-PRODUCT-IMAGES.md). **Status: concept photos LOCKED.** Exact source image PNGs are delivered in a conversation ZIP but **have not been committed as binaries to GitHub**. Printful product blanks and original V7 vector-safe final production imagery still require validation. No live site changes.
