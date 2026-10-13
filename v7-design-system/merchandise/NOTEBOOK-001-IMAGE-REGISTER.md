@@ -30,3 +30,13 @@ Printful Hardcover Bound Notebook / JournalBook official page lists UltraHyde ha
 Next viable direction for owner review: black UltraHyde with small cream V7 horse UV print, based on the actual blank. No new preview made before cover choice.
 
 Images are AI visual placeholders using actual V7 horse PNG rendered from source SVG as reference, not exact vector composites or supplier mockups. Production stamp/die must derive from approved `approved/horse/horse-master-green.svg`; exact leather grain, deboss depth and detail retention require sample proofing. No supplier change, purchase or store publication performed. No binary GitHub image import claimed.
+
+
+## Printful dark-green cover route — October 13, 2026
+
+Owner suggested "Or dark green" after reaffirming Printful only. Verified additional product: Printful **Hardcover Journal Matte**, 5.75 × 8 inches, matte laminated customizable front/back, 150 lined white pages, casewrap binding, digitally printed cover, US sourced/fulfilled. Printful's custom-notebooks page describes its fully printable wraparound cover.
+
+This supports a proposed forest-green full-cover printed design with cream V7 horse or document logo. It is a different product from JournalBook's fixed-color UltraHyde blank. Keep a smooth matte laminated cover appearance; do not show leather grain, embossing, elastic closure or ribbon that have not been verified for this journal. Actual printed green needs sample confirmation. Dark-green matte journal is proposed; no image or final product approval yet.
+
+- https://www.printful.com/custom/stationery/personalized/hardcover-journal-matte
+- https://www.printful.com/ca/custom-notebooks
