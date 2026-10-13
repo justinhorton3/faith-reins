@@ -37,6 +37,7 @@ const orgSchema = {
   "medicalSpecialty": ["Pediatrics","PhysicalTherapy","SpeechTherapy","OccupationalTherapy"],
   "areaServed": { "@type": "State", "name": "Arkansas" }
 };
+const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
 ---
 <!doctype html>
 <html lang="en">
@@ -60,15 +61,15 @@ const orgSchema = {
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <!-- Analytics: replace GA_MEASUREMENT_ID with your GA4 ID (G-XXXXXXXXXX) -->
-    <!-- To use Wix Analytics instead, remove the GA block and paste your Wix Analytics embed here -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
+    <!-- Analytics: loads only when PUBLIC_GA_ID (G-XXXXXXXXXX) is set at build time. -->
+    {GA_ID && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>}
+    {GA_ID && <script is:inline define:vars={{ GA_ID }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID', { page_path: window.location.pathname });
-    </script>
+      gtag('config', GA_ID, { page_path: window.location.pathname });
+    </script>}
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
     <link rel="icon" href="/favicon.png" type="image/png" />
@@ -84,5 +85,6 @@ const orgSchema = {
     <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
     <script>import "../scripts/cart.js";</script>
+    <script>import "../scripts/cms.js";</script>
   </body>
 </html>

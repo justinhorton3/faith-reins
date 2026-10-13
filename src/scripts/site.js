@@ -280,6 +280,7 @@ async function mountBlog(host) {
   }
   if (!posts.length) return;
 
+  const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
 
@@ -291,14 +292,14 @@ async function mountBlog(host) {
 
   host.insertAdjacentHTML("afterbegin", posts.map((p) => {
     const cover = (p.media && p.media.wixMedia && p.media.wixMedia.image && p.media.wixMedia.image.url) || (p.coverImage && p.coverImage.url);
-    const img = cover ? `<div class="post-card__cover"><img src="${cover}" alt="${p.title}" loading="lazy" width="800" height="450"></div>` : "";
+    const img = cover ? `<div class="post-card__cover"><img src="${esc(cover)}" alt="${esc(p.title)}" loading="lazy" width="800" height="450"></div>` : "";
     const slug = "/news/post?slug=" + encodeURIComponent(p.slug || p.id);
     return `<a class="post-card" href="${slug}">
       ${img}
       <div class="post-card__inner">
-        <div class="post-card__meta"><span class="post-tag">${tag(p)}</span><span class="post-date">${fmt(p.firstPublishedDate || p.publishedDate)}</span></div>
-        <h2 class="post-card__title">${p.title}</h2>
-        <p class="post-card__summary">${p.excerpt || ""}</p>
+        <div class="post-card__meta"><span class="post-tag">${esc(tag(p))}</span><span class="post-date">${fmt(p.firstPublishedDate || p.publishedDate)}</span></div>
+        <h2 class="post-card__title">${esc(p.title)}</h2>
+        <p class="post-card__summary">${esc(p.excerpt)}</p>
         <span class="post-card__read">Read more →</span>
       </div>
     </a>`;
