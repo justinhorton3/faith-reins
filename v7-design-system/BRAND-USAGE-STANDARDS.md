@@ -145,3 +145,17 @@ Owner approved the initial brand usage standards and requested visual proofboard
 - [Proofboard 02 — digital size, seal size and clear space](proofboards/PROOFBOARD-02-SIZE-AND-CLEARSPACE.svg)
 
 Both are composed from embedded path geometry in the **exact approved repository SVGs**, rather than generated image approximations. They are illustrative static SVGs only: no real-site screenshots, physical print tests, machine embroidery sew-outs, measured readability studies, or merch supplier sign-offs have yet been performed. Review evidence of any such tests before changing the above numeric targets to production guarantees.
+
+
+## 14. Merchandise one-color rule — APPROVED 2026-10-12
+
+The owner approved a **one-color default for all standard Faith Reins merchandise**. This narrows the options above specifically for merchandise and **does not supersede the formal two-color seal master**.
+
+| Application | Default mark | Approved source |
+| --- | --- | --- |
+| Cream/light apparel and objects | Solid forest-green rope seal | `approved/seal/faith-reins-v7-seal-solid-green.svg` |
+| Forest-green/dark apparel and objects | Solid white rope seal | `approved/seal/faith-reins-v7-seal-solid-white.svg` |
+| Small premium embroidered placement | Approved horse icon alone where full seal would be too dense | `approved/horse/horse-master-green.svg`; inverse/white horse asset must be separately derived and approved before sending to a vendor |
+| Formal/certificate/donor/special-edition applications | Approved two-color green/gold seal when appropriate | `approved/seal/faith-reins-v7-seal-green.svg` |
+
+**No gold on core merchandise**, including ordinary vest, polo, cap, tee, drinkware and stationery decorations. Small left-chest marks are preferred for premium menswear and polos; full one-color seals should be reserved for appropriately sized placements. Vendors must sample embroiderability at real size. Never silently replace approved color-source geometry, or approximate it with generated visuals.
