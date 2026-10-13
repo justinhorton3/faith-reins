@@ -48,5 +48,17 @@ Owner authorized creation: "Go" after dark-green full-wrap matte journal proposa
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Forest-green matte / cream horse — product | REVIEW PENDING | `exec-65239cf9-4f6b-4b9d-ad84-3c02c482ffc1.png` | `a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46` |
-| Forest-green matte / cream horse — styled | REVIEW PENDING | `exec-76bf466a-adca-4a74-88c8-dc8a0d6fa6d2.png` | `8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09` |
+| Forest-green matte / cream horse — product | APPROVED & LOCKED | `exec-65239cf9-4f6b-4b9d-ad84-3c02c482ffc1.png` | `a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46` |
+| Forest-green matte / cream horse — styled | APPROVED & LOCKED | `exec-76bf466a-adca-4a74-88c8-dc8a0d6fa6d2.png` | `8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09` |
+
+
+## Matte journal approval and document-logo design — October 13, 2026
+
+Horse-only product/styled pair APPROVED & LOCKED; owner: "Fine by me can we do one with the document logo". Owner approved displayed document-logo product and design: "Cool! Approved, next". Matching styled view was already rendering and completed afterward, recorded separately as a derived view rather than independently reviewed before approval.
+
+Keep approved horse-only and document-logo layouts as separate forest-green/cream designs on Printful Hardcover Journal Matte. Preserve exact image originals and SVG artwork; do not use rejected cloth/leather notebook concepts. Two new original PNGs are 1086 × 1448 (3:4).
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Forest-green matte / cream document logo — product | APPROVED & LOCKED | `exec-ca6b53ad-07dd-467b-a73a-10f6532f621a.png` | `651432bca1fc4b072ad7dd1df023b1627349bff88cd971c1ffe0ad1b84478f1c` |
+| Forest-green matte / cream document logo — styled | DERIVED VIEW — completed after design approval | `exec-ae84157e-c744-4114-ac41-ae40d0079e94.png` | `3b1f7ff16640e723c80daddb4bf90ef72ae6a50acb76321c62e4d1e53621c2b7` |
