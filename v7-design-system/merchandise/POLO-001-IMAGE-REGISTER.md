@@ -30,7 +30,7 @@ These are AI-generated visual placeholders, using the actual V7 horse PNG render
 
 ## Remaining men's colorways — October 13, 2026
 
-Owner approved the displayed cream product/model pair and forest-green/cream product shot with "Approved" during generation. These three originals are locked. The forest-green/cream modeled view was generated afterward and remains pending review.
+Owner approved the displayed cream product/model pair and forest-green/cream product shot with "Approved" during generation. These three originals are locked. The forest-green/cream modeled view was subsequently approved by the owner: "Approved, Go for girls and boys".
 
 All new originals are 1086 × 1448 PNG (3:4). Preserve approved originals; do not overwrite them.
 
@@ -39,6 +39,20 @@ All new originals are 1086 × 1448 PNG (3:4). Preserve approved originals; do no
 | Cream / dark-green horse — product | APPROVED & LOCKED | `exec-7e3dc806-9937-4d98-bf7e-0f36bb19713f.png` | `5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b` |
 | Cream / dark-green horse — model | APPROVED & LOCKED | `exec-87e8aee4-13fd-40ae-98c5-f03b439dc018.png` | `e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306` |
 | Forest green / cream horse — product | APPROVED & LOCKED | `exec-ea61e5da-26f1-4a1f-9b66-72f6901b614f.png` | `4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52` |
-| Forest green / cream horse — model | REVIEW PENDING | `exec-f34c95c5-76b4-4ef3-9642-98e7b24d89c7.png` | `f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4` |
+| Forest green / cream horse — model | APPROVED & LOCKED | `exec-f34c95c5-76b4-4ef3-9642-98e7b24d89c7.png` | `f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4` |
 
-Men's polo photography now contains eight individual images across four colorways; seven are approved and one is awaiting review. Women/Girls/Boys photography is still to be created.
+Men's polo photography now contains eight individual images across four colorways; all eight are approved and locked. Women/Girls/Boys photography is still to be created.
+
+
+## Youth white polo pilot — October 13, 2026
+
+Owner authorized Girls/Boys next. Four individual white/dark-green placeholder images were created with youth proportions, separate product-only and modeled shots, and diverse child models. These new image outputs await owner review. Cream and both forest-green treatments remain to be created for youth; women's photography remains pending.
+
+Each original is 1086 × 1448 PNG (3:4). No binary image import or supplier-specific validation is claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Girls white / dark-green horse — product | REVIEW PENDING | `exec-5aae00c4-c760-428d-90f8-9bb447ef2839.png` | `10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304` |
+| Girls white / dark-green horse — model | REVIEW PENDING | `exec-ff742e59-219f-4a43-a725-6c820abd674c.png` | `3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159` |
+| Boys white / dark-green horse — product | REVIEW PENDING | `exec-90fd0282-1641-42a6-bc76-5f9ea2b6413c.png` | `1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185` |
+| Boys white / dark-green horse — model | REVIEW PENDING | `exec-25062910-d3b8-4d4e-9b9e-f07bf6abd590.png` | `ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b` |
