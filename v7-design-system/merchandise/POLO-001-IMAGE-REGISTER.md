@@ -60,11 +60,23 @@ Each original is 1086 × 1448 PNG (3:4). No binary image import or supplier-spec
 
 ## Youth cream polo set — October 13, 2026
 
-Four new cream/dark-green placeholder images created, pending review. Same youth garments and model identities as approved white set. All are individual 1086 × 1448 PNGs (3:4); approved source images were retained unchanged. Remaining youth green/cream and tonal green images, plus women's collection, are still pending creation.
+Four cream/dark-green placeholder images APPROVED & LOCKED; owner: "Very nice! Next set!". Same youth garments and model identities as approved white set. All are individual 1086 × 1448 PNGs (3:4); approved source images were retained unchanged. Remaining youth green/cream and tonal green images, plus women's collection, are still pending creation.
 
 | Variant and shot | Status | Original generated filename | SHA-256 |
 | --- | --- | --- | --- |
-| Girls cream / dark-green horse — product | REVIEW PENDING | `exec-a5712cc8-3cb1-42c7-a832-6afc30944c53.png` | `a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018` |
-| Girls cream / dark-green horse — model | REVIEW PENDING | `exec-e30f0d94-a8d8-4482-b471-725d045ec626.png` | `fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a` |
-| Boys cream / dark-green horse — product | REVIEW PENDING | `exec-d55d9c85-012d-4bbc-b6c6-f9c652864d4e.png` | `6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834` |
-| Boys cream / dark-green horse — model | REVIEW PENDING | `exec-37452ff1-8659-4e05-a611-ac2493acbe1a.png` | `1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c` |
+| Girls cream / dark-green horse — product | APPROVED & LOCKED | `exec-a5712cc8-3cb1-42c7-a832-6afc30944c53.png` | `a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018` |
+| Girls cream / dark-green horse — model | APPROVED & LOCKED | `exec-e30f0d94-a8d8-4482-b471-725d045ec626.png` | `fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a` |
+| Boys cream / dark-green horse — product | APPROVED & LOCKED | `exec-d55d9c85-012d-4bbc-b6c6-f9c652864d4e.png` | `6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834` |
+| Boys cream / dark-green horse — model | APPROVED & LOCKED | `exec-37452ff1-8659-4e05-a611-ac2493acbe1a.png` | `1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c` |
+
+
+## Youth forest green / cream polo set — October 13, 2026
+
+Four new individual product/model placeholder images created for Girls and Boys, pending owner review. Same approved youth fits and model identities, white-background photography. Original PNGs are 1086 × 1448 (3:4). Youth tonal dark-green-on-green and women's collection remain to be created. No binary import, supplier-specific validation or store publication is claimed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Girls forest green / cream horse — product | REVIEW PENDING | `exec-36eacdcb-ea57-4923-9362-7bbb63588721.png` | `093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7` |
+| Girls forest green / cream horse — model | REVIEW PENDING | `exec-d09e1729-0f1e-4ac3-b268-77e440e0ec7c.png` | `4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e` |
+| Boys forest green / cream horse — product | REVIEW PENDING | `exec-5fd636e5-5b71-4255-833e-fcee68e25935.png` | `f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7` |
+| Boys forest green / cream horse — model | REVIEW PENDING | `exec-a5ff046a-528c-4d96-8edd-d367c6b89263.png` | `33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264` |
