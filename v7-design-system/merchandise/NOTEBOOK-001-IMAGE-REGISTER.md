@@ -40,3 +40,13 @@ This supports a proposed forest-green full-cover printed design with cream V7 ho
 
 - https://www.printful.com/custom/stationery/personalized/hardcover-journal-matte
 - https://www.printful.com/ca/custom-notebooks
+
+
+## Printful-format forest-green matte journal pilot — October 13, 2026
+
+Owner authorized creation: "Go" after dark-green full-wrap matte journal proposal. Two individual 1086 × 1448 PNGs created for review, product-only white background and styled oak desk. Smooth matte laminated cover, solid forest-green full-cover design, cream flat-printed horse head, white page block, casewrap journal proportions. No embossing/leather/linen/stitching/elastic/ribbon features. Based on verified Printful Hardcover Journal Matte product description; AI-created visual placeholders, not official supplier mockups. Exact artwork identity, physical print color and supplier template fit need production verification. No purchase or publishing performed.
+
+| Variant and shot | Status | Original generated filename | SHA-256 |
+| --- | --- | --- | --- |
+| Forest-green matte / cream horse — product | REVIEW PENDING | `exec-65239cf9-4f6b-4b9d-ad84-3c02c482ffc1.png` | `a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46` |
+| Forest-green matte / cream horse — styled | REVIEW PENDING | `exec-76bf466a-adca-4a74-88c8-dc8a0d6fa6d2.png` | `8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09` |
