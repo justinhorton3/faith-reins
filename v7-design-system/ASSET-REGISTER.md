@@ -75,3 +75,26 @@ Owner approved the stacked document logo artwork in green/gold, cream/gold and m
 ## Seal — first V7 candidate, not yet approved
 
 Using the most recently approved circular seal specification: thick forest-green perimeter ring, 6-point gold inner ring and mirrored divider arcs, mathematically circular curved FAITH REINS / EQUESTRIAN CENTER text, centered new approved v7 horse, EST. 2025 and warm cream field. This supersedes the older ribbon-banner study. Three color treatments (green/cream, inverse and black) were generated for review on 2026-10-12. Do not promote to approved/seal until owner signs off. The review SVGs and proofboard are attached to the design conversation; repository candidate import remains pending.
+
+
+## Seal visual approval — 2026-10-12 (latest locked rope seal)
+
+**Owner decision: APPROVED.** The owner approved the vector reconstruction shown in the ChatGPT conversation after explicitly rejecting further changes to the artwork. This supersedes the earlier original V7 seal as the intended production seal design.
+
+Approved visual specification:
+- Preserve the exact approved seal composition from the locked proof (not newly generated approximations).
+- Forest-green approved horse silhouette and curved “FAITH REINS” / “EQUESTRIAN CENTER” lettering.
+- Thin double outer green border; outer band's thickness as in the locked proof.
+- Dark-green rope circle inside the lettering band, bordered by thin concentric green lines.
+- Cream/ivory field, symmetrical gold side arcs, and “EST. 2025” with short gold flanking rules.
+- No gold dots, no banner, no changed horse proportions or alternative ring layout.
+
+The owner-approved files were produced as conversation artifacts:
+- `faith-reins-v7-seal-locked-vector.svg` (transparent SVG, 1254×1254 viewBox)
+- `faith-reins-v7-seal-locked-ivory.svg` (ivory-ground SVG, 1254×1254 viewBox)
+- `faith-reins-v7-seal-locked-proof.png` (visual approval proof)
+- `faith-reins-v7-seal-locked-preview-3000.png` (large preview)
+
+**Production-import gate:** The approved SVGs are currently conversation artifacts, **not yet committed to this GitHub branch**. Do not substitute the previously committed `approved/seal/faith-reins-v7-seal-green.svg` (older, solid-gold-ring seal). Import the actual approved artifact bytes as a new revision, compare against the proof and check vector fidelity before updating canonical paths; preserve the older seal for rollback. Do not label any new AI-generated seal as the approved master.
+
+No website code or production deployment was authorized by this seal approval.
