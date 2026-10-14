@@ -76,6 +76,20 @@ Recommended execution order:
 | Page | [Contact](execution-plans/page-contact.md) | `images/heroes/desktop/hero-contact-desktop.webp` | Ready V2 | Detailed page-level copy, assets, layout, responsive rules, links, and validation |
 | Asset/Page Candidate | [Pasture Hero](execution-plans/page-pasture-hero.md) | `images/heroes/desktop/pasture-hero-desktop.webp` | Hold | Use only if a future page needs a general campus/ranch hero |
 
+## Editing content in Wix CMS
+
+These blocks read from Wix CMS collections (Wix dashboard → CMS), so edits there go live without a redeploy:
+
+| Collection | Page | Notes |
+|---|---|---|
+| Team | Our Team | Blank photo keeps the current placeholder. The "Now hiring" card stays in code. |
+| Horses | Our Horses | Blank photo keeps the current horse photo for that name. |
+| Testimonials | Home | |
+| FAQ | FAQ | `Group` sets the heading; groups appear in the order of their first question. |
+| Sponsors | Our Partners | Empty collection shows the placeholder tiers. |
+
+`Sort order` controls order (lowest first). The built HTML carries the copy in `src/lib/content.mjs` as a fallback, and `src/scripts/cms.js` swaps in the CMS items in the browser. The FAQ's search-engine data (JSON-LD) still comes from `content.mjs`, so update both when an FAQ answer changes materially.
+
 ## Working Rules
 
 - Open only the README and the single execution plan needed for the next work chunk.
