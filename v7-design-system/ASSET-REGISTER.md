@@ -75,3 +75,20 @@ Owner approved the stacked document logo artwork in green/gold, cream/gold and m
 ## Seal — first V7 candidate, not yet approved
 
 Using the most recently approved circular seal specification: thick forest-green perimeter ring, 6-point gold inner ring and mirrored divider arcs, mathematically circular curved FAITH REINS / EQUESTRIAN CENTER text, centered new approved v7 horse, EST. 2025 and warm cream field. This supersedes the older ribbon-banner study. Three color treatments (green/cream, inverse and black) were generated for review on 2026-10-12. Do not promote to approved/seal until owner signs off. The review SVGs and proofboard are attached to the design conversation; repository candidate import remains pending.
+
+
+## Reconciliation note — 2026-10-14 (supersedes stale pending statements above)
+
+This is an additive audit note. Historical candidate/review notes above are preserved as a decision trail, **not** current release blockers.
+
+- The approved public website subtitle is **Pediatric & Equine Therapy**. The earlier wording-confirmation note is resolved; do not substitute alternate phrasing.
+- The horizontal green and cream website masters, the stacked document masters, the horse master and the seal variants are already present under `approved/` on `main`. Existing approved SVGs should be verified by exact content hash before any re-import, not overwritten.
+- The October 12 seal approval supersedes the earlier “first V7 candidate, not yet approved” section. The experimental rope-border tangent was discarded. The approved seal artwork must remain unchanged.
+- The compact captionless mobile logo remains **not approved**; scale the complete horizontal lockup instead.
+- A separate horizontal document logo remains **not approved**.
+- Existing assets are **not automatically deployed** to the Wix site by inclusion in this repository.
+- SVG availability and owner approval are distinct from final small-size, print, embroidery and supplier proof validation. Do not mark those checks completed without actual evidence.
+
+### Asset-register maintenance
+
+For each master, record the exact Git blob SHA, approval evidence, intended usage, and proof status before marking any future export production-validated. Do not infer approval from a candidate folder or from the mere presence of a file.
