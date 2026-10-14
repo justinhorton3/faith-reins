@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import wix from "@wix/astro";
+import wixPages from "@wix/astro-pages";
 import wixHostingAdapter from "@wix/astro-wix-hosting-adapter";
 
 // Wix's hosted preview/release pipeline requires its own adapter — `@wix/astro-wix-hosting-adapter`,
@@ -14,8 +15,9 @@ export default defineConfig({
   site: "https://faithreins.com",
   output: "server",
   adapter: wixHostingAdapter(),
+  security: { checkOrigin: false },
   trailingSlash: "ignore",
-  integrations: [sitemap(), react(), ...wix()],
+  integrations: [sitemap(), react(), wixPages(), ...wix()],
   build: { format: "directory", inlineStylesheets: "never" },
   vite: { plugins: [tailwindcss()] },
 });

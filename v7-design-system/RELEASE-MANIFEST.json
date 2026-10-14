@@ -1,0 +1,76 @@
+{
+  "version": "7.0.0-local-review.1",
+  "date": "2026-10-13",
+  "release_state": "local_package_for_owner_review",
+  "website_modified": false,
+  "github_modified": false,
+  "approved_master_count": 10,
+  "product_count": 42,
+  "image_count": 84,
+  "approved_image_count": 82,
+  "derived_companion_count": 2,
+  "assets": [
+    {
+      "id": "faith-reins-v7-document-stacked-black",
+      "path": "approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "sha256": "0cffc4d938402df52882608183318689ad95f1e79f5363648d53450b50c4817f",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-document-stacked-cream",
+      "path": "approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "sha256": "6bad71017d73a4554ca7aa9d98dfed77d8717121a423c68751cfa6a4aeea1249",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-document-stacked-green",
+      "path": "approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "sha256": "ed30d157630127962552f480f7634bb86ef65510c20d403a5c1f25d2374c54e5",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "horse-master-green",
+      "path": "approved/horse/horse-master-green.svg",
+      "sha256": "cb7edf2ea7f2dd7ef2808910d01585f8703c745c357912d1714014d738223c5a",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-seal-green",
+      "path": "approved/seal/faith-reins-v7-seal-green.svg",
+      "sha256": "61e44013eb9085b09a10c457a5de2626e88a94c7bc9c12b5c817d20f6c42d79a",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-seal-ivory",
+      "path": "approved/seal/faith-reins-v7-seal-ivory.svg",
+      "sha256": "cd97befe7af891a8e95a24128bbed7634c77b413a4a91d442586c1463e89141f",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-seal-solid-green",
+      "path": "approved/seal/faith-reins-v7-seal-solid-green.svg",
+      "sha256": "8539d98569d6b1991d8ffbf105758712ddb32c98ba3ef434f3a551e8ceac3753",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-seal-solid-white",
+      "path": "approved/seal/faith-reins-v7-seal-solid-white.svg",
+      "sha256": "efcea341505b0c0d08edfdc0c46c67a618710506d303193fb8dd26ab44a819e5",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-website-horizontal-cream",
+      "path": "approved/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "sha256": "13b3a6c8d03047ed9b49868d4d9021338313082ad4c93d1794450c854a965a51",
+      "status": "previously_approved_master"
+    },
+    {
+      "id": "faith-reins-v7-website-horizontal-green",
+      "path": "approved/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "sha256": "489f66ac3ee9c53dec982dc57b963e44f94b2dcf8606091ea0445bf58d86e1b6",
+      "status": "previously_approved_master"
+    }
+  ],
+  "new_system_material_status": "authored_from_V6_and_existing_V7_rules; owner_review_pending",
+  "image_preservation": "All image originals copied byte-for-byte. No crop, resize, retouch or recompression delivered."
+}

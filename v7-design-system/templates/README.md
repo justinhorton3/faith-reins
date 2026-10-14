@@ -1,0 +1,3 @@
+# Application templates
+
+Editable SVG compositions: `letterhead.svg`, `presentation-title.svg`, `social-announcement.svg`, `building-sign.svg`. Open them in a vector editor; all logo geometry is embedded from the exact approved master. Template text remains editable and requires local Caslon/Hanken fonts. `letterhead.html` uses bundled WOFF files and prints on US Letter. These are reference templates, not approved sign fabrication or clinical forms. Replace clearly marked content fields before use; preserve exact logo geometry. Print colors, font sizes, viewing distances and material proofs must be validated for each job.

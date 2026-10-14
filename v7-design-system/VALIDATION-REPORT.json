@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "master_count": 10,
+  "products": 42,
+  "images": 84,
+  "approved_images": 82,
+  "companion_images": 2,
+  "repository_source_assets": 87,
+  "image_policy": "original bytes unchanged",
+  "checks": [
+    "master hashes",
+    "product hashes",
+    "unchanged repository source assets",
+    "SVG parsing and outlined masters",
+    "active HTML links",
+    "CSS imports and font paths",
+    "active package and catalog Markdown links"
+  ],
+  "not_checked": [
+    "actual browser responsive behavior",
+    "physical print and embroidery",
+    "supplier availability and measurement charts",
+    "website integration and deployment"
+  ],
+  "errors": []
+}

@@ -1,0 +1,1486 @@
+{
+  "schema_version": 1,
+  "branch": "feat/v7-merchandise-system",
+  "binary_import_status": "included_in_local_package_not_committed_or_deployed",
+  "product_count": 42,
+  "expected_image_slots": 84,
+  "notes": [
+    "All 84 originals recovered without retouching. 72 match previously recorded SHA-256 checksums; 12 match the explicit approved persistent IDs and visually inspected product/view assignments.",
+    "82 approved visual references and 2 derived companion views remain distinct.",
+    "Photos are concept references. Supplier availability, final size charts, pricing and manufacturing proofs remain pending."
+  ],
+  "products": [
+    {
+      "id": "forest-green-horse-cap",
+      "title": "Forest Green Horse Cap",
+      "detail_path": "merchandise/product-catalog/forest-green-horse-cap.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "forest_green_cap_with_embroidered_horse_logo.png",
+          "sha256": "ac16bd4295f4ff8e1e0f278ebb37d84bea01cc07ef60c9eb612660a6382a2190",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-cap-product.png",
+          "website_path": "images/products/forest-green-horse-cap-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ac16bd4295f4ff8e1e0f278ebb37d84bea01cc07ef60c9eb612660a6382a2190",
+          "package_path": "approved/product-images/forest-green-horse-cap-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "smiling_woman_in_forest_green_logo_cap.png",
+          "sha256": "228bd0a393dce4e0083aec36a00dbe3ebdf768c2c6624647e91d55d203e4b366",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-cap-styled.png",
+          "website_path": "images/products/forest-green-horse-cap-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "228bd0a393dce4e0083aec36a00dbe3ebdf768c2c6624647e91d55d203e4b366",
+          "package_path": "approved/product-images/forest-green-horse-cap-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-horse-cap",
+      "title": "Cream Horse Cap",
+      "detail_path": "merchandise/product-catalog/cream-horse-cap.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-00a1ea18-026c-4edb-a3ef-e54238bbdc44.png",
+          "sha256": "e394e6f538c5b0b898797c6e61898096a0a20d4a47785d75fa0944cbd0fff642",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-cap-product.png",
+          "website_path": "images/products/cream-horse-cap-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-horse-cap-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_96ab769dfb308191ad0b7cbfbd214e0a"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-4bf36317-b727-499b-89df-c308ccfa22ab.png",
+          "sha256": "8d4455cc6dce128e156ee9898a186812332cd4648764856a8288e2ccea0bd7a3",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-cap-styled.png",
+          "website_path": "images/products/cream-horse-cap-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-horse-cap-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_7da767f36c808191b58fa9d89d3c949d"
+        }
+      ]
+    },
+    {
+      "id": "white-horse-cap",
+      "title": "White Horse Cap",
+      "detail_path": "merchandise/product-catalog/white-horse-cap.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-039f2565-01e6-4762-832d-bea6fa6ce369.png",
+          "sha256": "79064d46251da9123d298d0ee3220b49c663e75b967bdfb2e0b93bbd76555094",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-horse-cap-product.png",
+          "website_path": "images/products/white-horse-cap-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-horse-cap-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_c3214bd6e1148191924c60f053c0a06f"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-a35223a2-b28a-46f9-a535-8da25c829d55.png",
+          "sha256": "d6e4a501f3c660b740d9b6e8dbfd67ce509849f4bd9b090845f260bbaf12f90a",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-horse-cap-styled.png",
+          "website_path": "images/products/white-horse-cap-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-horse-cap-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_fb403653412c8191ab4e1327ee1e7084"
+        }
+      ]
+    },
+    {
+      "id": "forest-green-quarter-zip",
+      "title": "Forest Green Quarter Zip",
+      "detail_path": "merchandise/product-catalog/forest-green-quarter-zip.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "forest_green_quarter_zip_with_horse_logo.png",
+          "sha256": "92d8efa72ea1dab4187e7985c3fc09375d40cbefe864d0094625c835e48c5f89",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-quarter-zip-product.png",
+          "website_path": "images/products/forest-green-quarter-zip-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "92d8efa72ea1dab4187e7985c3fc09375d40cbefe864d0094625c835e48c5f89",
+          "package_path": "approved/product-images/forest-green-quarter-zip-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "smiling_model_in_forest_green_quarter_zip.png",
+          "sha256": "78dc1bab535cda6744bfc963a692efada5a7f00b6cd126a5210cd272aad951a0",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-quarter-zip-styled.png",
+          "website_path": "images/products/forest-green-quarter-zip-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "78dc1bab535cda6744bfc963a692efada5a7f00b6cd126a5210cd272aad951a0",
+          "package_path": "approved/product-images/forest-green-quarter-zip-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-quarter-zip",
+      "title": "Cream Quarter Zip",
+      "detail_path": "merchandise/product-catalog/cream-quarter-zip.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-6431bd2f-4245-4374-b6be-e077896ff901.png",
+          "sha256": "34dddb98051a44fef19a289cf4b962ce7dd0305dd4cafb71b3ac2e2a962ed901",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-quarter-zip-product.png",
+          "website_path": "images/products/cream-quarter-zip-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-quarter-zip-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_045fba880c24819189c60dc85d80f58d"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-c1e0237e-d206-4927-b16f-2e25063dee88.png",
+          "sha256": "a90203f34523a559c7e09963b62900136c016b5082aea26549c45083373a45b4",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-quarter-zip-styled.png",
+          "website_path": "images/products/cream-quarter-zip-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-quarter-zip-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_8ce02fbbd640819191fab4390308f0ba"
+        }
+      ]
+    },
+    {
+      "id": "white-quarter-zip",
+      "title": "White Quarter Zip",
+      "detail_path": "merchandise/product-catalog/white-quarter-zip.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-39b2e683-2e7a-4fb5-98a4-5edb12662ff3.png",
+          "sha256": "647e532b8bdddd4ad5aa5ef93b47c622fd18210a9f749a8b85c7243a185e8b2f",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-quarter-zip-product.png",
+          "website_path": "images/products/white-quarter-zip-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-quarter-zip-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_c890ec7261e88191bc2d620263272fc3"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-6581b909-b35e-4422-9cd8-1279c327dc8d.png",
+          "sha256": "bf9c7b7269c7d8378fce97a81e606afd57370f58b910667906b1d72f02ef0214",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-quarter-zip-styled.png",
+          "website_path": "images/products/white-quarter-zip-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-quarter-zip-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_61558b619c2081918c90937d89fe1ac6"
+        }
+      ]
+    },
+    {
+      "id": "forest-green-quilted-vest",
+      "title": "Forest Green Quilted Vest",
+      "detail_path": "merchandise/product-catalog/forest-green-quilted-vest.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "forest_green_quilted_vest_with_horse_logo.png",
+          "sha256": "15f41cba2c17494c261f96a2fb6c5c24570aa5b2213d97f00e04cf0e173799cd",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-quilted-vest-product.png",
+          "website_path": "images/products/forest-green-quilted-vest-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "15f41cba2c17494c261f96a2fb6c5c24570aa5b2213d97f00e04cf0e173799cd",
+          "package_path": "approved/product-images/forest-green-quilted-vest-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "forest_green_equestrian_quilted_vest_portrait.png",
+          "sha256": "9741a9d48cd920dc7ee0b6dfb2dafb449f9701a7d9e84b1a9ca11a4c75e5451d",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-quilted-vest-styled.png",
+          "website_path": "images/products/forest-green-quilted-vest-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "9741a9d48cd920dc7ee0b6dfb2dafb449f9701a7d9e84b1a9ca11a4c75e5451d",
+          "package_path": "approved/product-images/forest-green-quilted-vest-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-quilted-vest",
+      "title": "Cream Quilted Vest",
+      "detail_path": "merchandise/product-catalog/cream-quilted-vest.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-d6f0eba8-53d2-4abf-880c-db664e87696f.png",
+          "sha256": "bbd6bc365a705a12069a170d4da3c86fc96b2ac15164b0b5ed34530884e9081a",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-quilted-vest-product.png",
+          "website_path": "images/products/cream-quilted-vest-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-quilted-vest-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_1ad5a692173481918804b2d542ece41a"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-192b2d07-b89b-40f5-9f85-b2dea8fc8c53.png",
+          "sha256": "ff6bda3dab63d0fc9beb22b687a86d4a0ff0143da94b7932a8d16de339042c8f",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-quilted-vest-styled.png",
+          "website_path": "images/products/cream-quilted-vest-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/cream-quilted-vest-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_5a0382b9195c8191b7073018dfe2614b"
+        }
+      ]
+    },
+    {
+      "id": "white-quilted-vest",
+      "title": "White Quilted Vest",
+      "detail_path": "merchandise/product-catalog/white-quilted-vest.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-fcb41402-83a6-4ca2-a54a-d50950e09ad0.png",
+          "sha256": "42f2735d1ef536917650d01efd382ee861594b21c7fce4adb23cc83c5fb86ebd",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-quilted-vest-product.png",
+          "website_path": "images/products/white-quilted-vest-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-quilted-vest-product.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_f4dbb54c5cd88191b2712adab9b3fe6f"
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-eda70bcc-2e2d-405d-b277-af2104f2ddef.png",
+          "sha256": "3b1ca352950623b8b3ca7a54a8a4cc9441040341f0fcda08d7ca2f259a375ed4",
+          "approval_record": "v7-design-system/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+          "catalog_path": "merchandise/product-catalog/images/white-quilted-vest-styled.png",
+          "website_path": "images/products/white-quilted-vest-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": null,
+          "package_path": "approved/product-images/white-quilted-vest-styled.png",
+          "identity_method": "approved_persistent_id_and_visual_assignment",
+          "library_file_id": "libfile_9b6dc9fcd0548191a04ed60143555b77"
+        }
+      ]
+    },
+    {
+      "id": "mens-white-polo",
+      "title": "Men's White Polo",
+      "detail_path": "merchandise/product-catalog/mens-white-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-0d6feb5f-e7a2-4a93-8c43-4c2afb07b17e.png",
+          "sha256": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-white-polo-product.png",
+          "website_path": "images/products/mens-white-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56",
+          "package_path": "approved/product-images/mens-white-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-b9f4e177-d241-42d7-8455-64a6b4b206b5.png",
+          "sha256": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-white-polo-styled.png",
+          "website_path": "images/products/mens-white-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63",
+          "package_path": "approved/product-images/mens-white-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "mens-cream-polo",
+      "title": "Men's Cream Polo",
+      "detail_path": "merchandise/product-catalog/mens-cream-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-7e3dc806-9937-4d98-bf7e-0f36bb19713f.png",
+          "sha256": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-cream-polo-product.png",
+          "website_path": "images/products/mens-cream-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b",
+          "package_path": "approved/product-images/mens-cream-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-87e8aee4-13fd-40ae-98c5-f03b439dc018.png",
+          "sha256": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-cream-polo-styled.png",
+          "website_path": "images/products/mens-cream-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306",
+          "package_path": "approved/product-images/mens-cream-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "mens-forest-green-polo",
+      "title": "Men's Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/mens-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-ea61e5da-26f1-4a1f-9b66-72f6901b614f.png",
+          "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-forest-green-polo-product.png",
+          "website_path": "images/products/mens-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52",
+          "package_path": "approved/product-images/mens-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-f34c95c5-76b4-4ef3-9642-98e7b24d89c7.png",
+          "sha256": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-forest-green-polo-styled.png",
+          "website_path": "images/products/mens-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4",
+          "package_path": "approved/product-images/mens-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "mens-tonal-forest-green-polo",
+      "title": "Men's Tonal Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/mens-tonal-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-d221ba36-114d-4775-8acb-1f9c9dc77d71.png",
+          "sha256": "74d5f9ac42edb9bef7d47c04bd33f89e911f675fca3572adcfa8b76a78c6eeab",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-tonal-forest-green-polo-product.png",
+          "website_path": "images/products/mens-tonal-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "74d5f9ac42edb9bef7d47c04bd33f89e911f675fca3572adcfa8b76a78c6eeab",
+          "package_path": "approved/product-images/mens-tonal-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-4efcf44f-2120-4612-bda5-c5c44c4cd1f0.png",
+          "sha256": "dc5228370e93dde081d44118c8b5b9cd30e21d0b0a83c2138a5488b76555f93a",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-tonal-forest-green-polo-styled.png",
+          "website_path": "images/products/mens-tonal-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "dc5228370e93dde081d44118c8b5b9cd30e21d0b0a83c2138a5488b76555f93a",
+          "package_path": "approved/product-images/mens-tonal-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "womens-white-polo",
+      "title": "Women's White Polo",
+      "detail_path": "merchandise/product-catalog/womens-white-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-01b4c5ec-3035-4247-bc90-6048e5328ff7.png",
+          "sha256": "f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-white-polo-product.png",
+          "website_path": "images/products/womens-white-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "derived_companion_view",
+          "original_recorded_sha256": "f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369",
+          "package_path": "approved/product-images/womens-white-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-8a868db8-83b9-47fd-9419-960dfb01a641.png",
+          "sha256": "18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-white-polo-styled.png",
+          "website_path": "images/products/womens-white-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4",
+          "package_path": "approved/product-images/womens-white-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "womens-cream-polo",
+      "title": "Women's Cream Polo",
+      "detail_path": "merchandise/product-catalog/womens-cream-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-a88ed378-7553-4ecb-94eb-325070c60348.png",
+          "sha256": "ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-cream-polo-product.png",
+          "website_path": "images/products/womens-cream-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb",
+          "package_path": "approved/product-images/womens-cream-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-876d6e70-953f-4587-9819-374809d43fb5.png",
+          "sha256": "b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-cream-polo-styled.png",
+          "website_path": "images/products/womens-cream-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d",
+          "package_path": "approved/product-images/womens-cream-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "womens-forest-green-polo",
+      "title": "Women's Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/womens-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-473e09da-d051-49db-8d6c-d56851731020.png",
+          "sha256": "ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-forest-green-polo-product.png",
+          "website_path": "images/products/womens-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121",
+          "package_path": "approved/product-images/womens-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-adf3d91f-2156-4dc0-972d-6e8ecb9d37c5.png",
+          "sha256": "7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-forest-green-polo-styled.png",
+          "website_path": "images/products/womens-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5",
+          "package_path": "approved/product-images/womens-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "womens-tonal-forest-green-polo",
+      "title": "Women's Tonal Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/womens-tonal-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-a705253b-5cee-4968-8cf0-bb8dc1af1099.png",
+          "sha256": "d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-tonal-forest-green-polo-product.png",
+          "website_path": "images/products/womens-tonal-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f",
+          "package_path": "approved/product-images/womens-tonal-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-60e56e9d-9efa-464a-9044-4a1b4e8ff8ac.png",
+          "sha256": "26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-tonal-forest-green-polo-styled.png",
+          "website_path": "images/products/womens-tonal-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67",
+          "package_path": "approved/product-images/womens-tonal-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "girls-white-polo",
+      "title": "Girls' White Polo",
+      "detail_path": "merchandise/product-catalog/girls-white-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-5aae00c4-c760-428d-90f8-9bb447ef2839.png",
+          "sha256": "10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-white-polo-product.png",
+          "website_path": "images/products/girls-white-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304",
+          "package_path": "approved/product-images/girls-white-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-ff742e59-219f-4a43-a725-6c820abd674c.png",
+          "sha256": "3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-white-polo-styled.png",
+          "website_path": "images/products/girls-white-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159",
+          "package_path": "approved/product-images/girls-white-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "girls-cream-polo",
+      "title": "Girls' Cream Polo",
+      "detail_path": "merchandise/product-catalog/girls-cream-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-a5712cc8-3cb1-42c7-a832-6afc30944c53.png",
+          "sha256": "a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-cream-polo-product.png",
+          "website_path": "images/products/girls-cream-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018",
+          "package_path": "approved/product-images/girls-cream-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-e30f0d94-a8d8-4482-b471-725d045ec626.png",
+          "sha256": "fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-cream-polo-styled.png",
+          "website_path": "images/products/girls-cream-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a",
+          "package_path": "approved/product-images/girls-cream-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "girls-forest-green-polo",
+      "title": "Girls' Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/girls-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-36eacdcb-ea57-4923-9362-7bbb63588721.png",
+          "sha256": "093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-forest-green-polo-product.png",
+          "website_path": "images/products/girls-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7",
+          "package_path": "approved/product-images/girls-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-d09e1729-0f1e-4ac3-b268-77e440e0ec7c.png",
+          "sha256": "4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-forest-green-polo-styled.png",
+          "website_path": "images/products/girls-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e",
+          "package_path": "approved/product-images/girls-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "girls-tonal-forest-green-polo",
+      "title": "Girls' Tonal Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/girls-tonal-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-989eb8d6-1fb8-4301-bb4c-b0363ed32bb0.png",
+          "sha256": "f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-tonal-forest-green-polo-product.png",
+          "website_path": "images/products/girls-tonal-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59",
+          "package_path": "approved/product-images/girls-tonal-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-0636de57-c742-48a3-919a-edddea026b73.png",
+          "sha256": "9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-tonal-forest-green-polo-styled.png",
+          "website_path": "images/products/girls-tonal-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064",
+          "package_path": "approved/product-images/girls-tonal-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "boys-white-polo",
+      "title": "Boys' White Polo",
+      "detail_path": "merchandise/product-catalog/boys-white-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-90fd0282-1641-42a6-bc76-5f9ea2b6413c.png",
+          "sha256": "1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-white-polo-product.png",
+          "website_path": "images/products/boys-white-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185",
+          "package_path": "approved/product-images/boys-white-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-25062910-d3b8-4d4e-9b9e-f07bf6abd590.png",
+          "sha256": "ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-white-polo-styled.png",
+          "website_path": "images/products/boys-white-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b",
+          "package_path": "approved/product-images/boys-white-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "boys-cream-polo",
+      "title": "Boys' Cream Polo",
+      "detail_path": "merchandise/product-catalog/boys-cream-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-d55d9c85-012d-4bbc-b6c6-f9c652864d4e.png",
+          "sha256": "6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-cream-polo-product.png",
+          "website_path": "images/products/boys-cream-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834",
+          "package_path": "approved/product-images/boys-cream-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-37452ff1-8659-4e05-a611-ac2493acbe1a.png",
+          "sha256": "1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-cream-polo-styled.png",
+          "website_path": "images/products/boys-cream-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c",
+          "package_path": "approved/product-images/boys-cream-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "boys-forest-green-polo",
+      "title": "Boys' Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/boys-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-5fd636e5-5b71-4255-833e-fcee68e25935.png",
+          "sha256": "f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-forest-green-polo-product.png",
+          "website_path": "images/products/boys-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7",
+          "package_path": "approved/product-images/boys-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-a5ff046a-528c-4d96-8edd-d367c6b89263.png",
+          "sha256": "33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-forest-green-polo-styled.png",
+          "website_path": "images/products/boys-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264",
+          "package_path": "approved/product-images/boys-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "boys-tonal-forest-green-polo",
+      "title": "Boys' Tonal Forest Green Polo",
+      "detail_path": "merchandise/product-catalog/boys-tonal-forest-green-polo.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-c59c3a7c-d921-4814-ba9f-7f4dea5ceea9.png",
+          "sha256": "299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-tonal-forest-green-polo-product.png",
+          "website_path": "images/products/boys-tonal-forest-green-polo-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4",
+          "package_path": "approved/product-images/boys-tonal-forest-green-polo-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-5d07e3e8-66d5-4a66-913c-77d71410b08b.png",
+          "sha256": "ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4",
+          "approval_record": "v7-design-system/merchandise/POLO-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-tonal-forest-green-polo-styled.png",
+          "website_path": "images/products/boys-tonal-forest-green-polo-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4",
+          "package_path": "approved/product-images/boys-tonal-forest-green-polo-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "mens-forest-green-hoodie",
+      "title": "Men's Forest Green Hoodie",
+      "detail_path": "merchandise/product-catalog/mens-forest-green-hoodie.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-671fe23b-5a96-46b7-8009-b5fd06426b97.png",
+          "sha256": "e06ba7171f36e98a4f59cafae677483bcf4a3400fb08be05346b92b1bf3eab66",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-forest-green-hoodie-product.png",
+          "website_path": "images/products/mens-forest-green-hoodie-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e06ba7171f36e98a4f59cafae677483bcf4a3400fb08be05346b92b1bf3eab66",
+          "package_path": "approved/product-images/mens-forest-green-hoodie-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-851cde20-45f3-4e52-8b83-c7334f860b74.png",
+          "sha256": "efc18d4786567037dd254a848d50765caf5cb228f6c2f9b6385128d839f487c3",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-forest-green-hoodie-styled.png",
+          "website_path": "images/products/mens-forest-green-hoodie-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "efc18d4786567037dd254a848d50765caf5cb228f6c2f9b6385128d839f487c3",
+          "package_path": "approved/product-images/mens-forest-green-hoodie-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "mens-cream-hoodie",
+      "title": "Men's Cream Hoodie",
+      "detail_path": "merchandise/product-catalog/mens-cream-hoodie.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-ce43ba74-5990-4501-9a8a-27ba45ff311c.png",
+          "sha256": "b23d180cf98f82a668203fcd2630f5adc9ece7f33f5658efeb9e352d45ef2ccc",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-cream-hoodie-product.png",
+          "website_path": "images/products/mens-cream-hoodie-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "b23d180cf98f82a668203fcd2630f5adc9ece7f33f5658efeb9e352d45ef2ccc",
+          "package_path": "approved/product-images/mens-cream-hoodie-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-54b753e1-ad45-4678-abe5-f836f8f6ec1c.png",
+          "sha256": "e1173f9f57a89a03f6c6804630d86ce83124e985cad6b39c2eeb68f6753b4161",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/mens-cream-hoodie-styled.png",
+          "website_path": "images/products/mens-cream-hoodie-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e1173f9f57a89a03f6c6804630d86ce83124e985cad6b39c2eeb68f6753b4161",
+          "package_path": "approved/product-images/mens-cream-hoodie-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "womens-forest-green-hoodie",
+      "title": "Women's Forest Green Hoodie",
+      "detail_path": "merchandise/product-catalog/womens-forest-green-hoodie.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-1e9ea50e-df49-4990-9872-3dfbabf439ff.png",
+          "sha256": "0c1c873acdc142636cb88d514bd395d0f11ca218c8889fed6d4b7f3e2ba0a8bd",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-forest-green-hoodie-product.png",
+          "website_path": "images/products/womens-forest-green-hoodie-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "0c1c873acdc142636cb88d514bd395d0f11ca218c8889fed6d4b7f3e2ba0a8bd",
+          "package_path": "approved/product-images/womens-forest-green-hoodie-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-0c52cb6a-44e4-4fd9-aa14-21ae52ea7224.png",
+          "sha256": "4e517af80635a5149425243f4d800ca52f8fc96786b0e23ab48d4da2917cdc4c",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/womens-forest-green-hoodie-styled.png",
+          "website_path": "images/products/womens-forest-green-hoodie-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "4e517af80635a5149425243f4d800ca52f8fc96786b0e23ab48d4da2917cdc4c",
+          "package_path": "approved/product-images/womens-forest-green-hoodie-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "boys-forest-green-hoodie",
+      "title": "Boys' Forest Green Hoodie",
+      "detail_path": "merchandise/product-catalog/boys-forest-green-hoodie.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-ad441da0-427f-44b4-b38a-291ab5382852.png",
+          "sha256": "45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-forest-green-hoodie-product.png",
+          "website_path": "images/products/boys-forest-green-hoodie-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff",
+          "package_path": "approved/product-images/boys-forest-green-hoodie-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-749922e8-799e-40c2-8a1e-3eb15e771116.png",
+          "sha256": "e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/boys-forest-green-hoodie-styled.png",
+          "website_path": "images/products/boys-forest-green-hoodie-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c",
+          "package_path": "approved/product-images/boys-forest-green-hoodie-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "girls-forest-green-hoodie",
+      "title": "Girls' Forest Green Hoodie",
+      "detail_path": "merchandise/product-catalog/girls-forest-green-hoodie.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-1b6c98b0-5572-4fff-b60a-0a71df1717c2.png",
+          "sha256": "8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-forest-green-hoodie-product.png",
+          "website_path": "images/products/girls-forest-green-hoodie-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da",
+          "package_path": "approved/product-images/girls-forest-green-hoodie-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-a449a146-64a6-4d9c-99a8-843588a3d460.png",
+          "sha256": "ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65",
+          "approval_record": "v7-design-system/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/girls-forest-green-hoodie-styled.png",
+          "website_path": "images/products/girls-forest-green-hoodie-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65",
+          "package_path": "approved/product-images/girls-forest-green-hoodie-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-horse-mug",
+      "title": "Cream Horse Mug",
+      "detail_path": "merchandise/product-catalog/cream-horse-mug.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-8eaa90f4-9522-439e-96f7-04c1a1f8babc.png",
+          "sha256": "652a3ad302c01f48bb6065fd235bcf3a2743b4c40d243e52fd26bde8be6063ca",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-mug-product.png",
+          "website_path": "images/products/cream-horse-mug-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "652a3ad302c01f48bb6065fd235bcf3a2743b4c40d243e52fd26bde8be6063ca",
+          "package_path": "approved/product-images/cream-horse-mug-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-ba36bb05-9061-432d-be3b-8ca340983440.png",
+          "sha256": "e3134dbc2d73dd6d3c438ea33181ad61fefc62dfa3df69d33ec4e34a411c51fe",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-mug-styled.png",
+          "website_path": "images/products/cream-horse-mug-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e3134dbc2d73dd6d3c438ea33181ad61fefc62dfa3df69d33ec4e34a411c51fe",
+          "package_path": "approved/product-images/cream-horse-mug-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-horse-mug",
+      "title": "Forest Green Horse Mug",
+      "detail_path": "merchandise/product-catalog/forest-green-horse-mug.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-8793b489-4227-45d0-bb94-25e856d800d5.png",
+          "sha256": "2c50ab7afb0d40496af5af804fd61d05e92396811854eb8ad2404cb32fa783aa",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-mug-product.png",
+          "website_path": "images/products/forest-green-horse-mug-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "2c50ab7afb0d40496af5af804fd61d05e92396811854eb8ad2404cb32fa783aa",
+          "package_path": "approved/product-images/forest-green-horse-mug-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-664c0f3f-3f8c-4656-90d9-a9ac8df08fae.png",
+          "sha256": "c3c9e28207c225a0e2a31bc319e8e2d4977becc6de27dd035249545d9368bde8",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-mug-styled.png",
+          "website_path": "images/products/forest-green-horse-mug-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "c3c9e28207c225a0e2a31bc319e8e2d4977becc6de27dd035249545d9368bde8",
+          "package_path": "approved/product-images/forest-green-horse-mug-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-document-logo-mug",
+      "title": "Cream Document Logo Mug",
+      "detail_path": "merchandise/product-catalog/cream-document-logo-mug.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-1b851dd7-f2ff-42f0-bc0d-7ea6c75bf312.png",
+          "sha256": "b0b68c346463b40a98e2759df4438f02c35b48bffcf161a046cab9e7c01defe6",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-document-logo-mug-product.png",
+          "website_path": "images/products/cream-document-logo-mug-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "b0b68c346463b40a98e2759df4438f02c35b48bffcf161a046cab9e7c01defe6",
+          "package_path": "approved/product-images/cream-document-logo-mug-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-6984cda6-ad72-46d4-9f5d-e130a4c0a437.png",
+          "sha256": "8afab07033164790206ca8ec289d322a1c24cd8d158f7921b0c65d2d8a0cdebc",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-document-logo-mug-styled.png",
+          "website_path": "images/products/cream-document-logo-mug-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "8afab07033164790206ca8ec289d322a1c24cd8d158f7921b0c65d2d8a0cdebc",
+          "package_path": "approved/product-images/cream-document-logo-mug-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-document-logo-mug",
+      "title": "Forest Green Document Logo Mug",
+      "detail_path": "merchandise/product-catalog/forest-green-document-logo-mug.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-8336d4f6-31c8-4be8-a382-9dd2027ea900.png",
+          "sha256": "3cd1f124fe2b5ff80f3143222532dc5fd600689cc206ac8b8d841d1c5e20b0c1",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-mug-product.png",
+          "website_path": "images/products/forest-green-document-logo-mug-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "3cd1f124fe2b5ff80f3143222532dc5fd600689cc206ac8b8d841d1c5e20b0c1",
+          "package_path": "approved/product-images/forest-green-document-logo-mug-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-1b40a3f6-06d3-4ed4-929b-127ed11eb658.png",
+          "sha256": "39758adf371a65e85c3a16fece518786d177bd9c56d0fcc3e0b9b093fd6073c0",
+          "approval_record": "v7-design-system/merchandise/MUG-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-mug-styled.png",
+          "website_path": "images/products/forest-green-document-logo-mug-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "39758adf371a65e85c3a16fece518786d177bd9c56d0fcc3e0b9b093fd6073c0",
+          "package_path": "approved/product-images/forest-green-document-logo-mug-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-horse-water-bottle",
+      "title": "Cream Horse Water Bottle",
+      "detail_path": "merchandise/product-catalog/cream-horse-water-bottle.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-891b3a61-ff1f-4221-894f-30100b3fc32a.png",
+          "sha256": "b0adbcdb77ef967ea4d217ac4891b5a8c77c93330e9235634160deee82a40b6b",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-water-bottle-product.png",
+          "website_path": "images/products/cream-horse-water-bottle-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "b0adbcdb77ef967ea4d217ac4891b5a8c77c93330e9235634160deee82a40b6b",
+          "package_path": "approved/product-images/cream-horse-water-bottle-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-cc754e6a-3509-40eb-9580-a30c84f6fad3.png",
+          "sha256": "c5de89354560b8bf2f39b4d960b3e23fad1262c814a502768a3db16c2f32cec2",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-horse-water-bottle-styled.png",
+          "website_path": "images/products/cream-horse-water-bottle-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "c5de89354560b8bf2f39b4d960b3e23fad1262c814a502768a3db16c2f32cec2",
+          "package_path": "approved/product-images/cream-horse-water-bottle-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-horse-water-bottle",
+      "title": "Forest Green Horse Water Bottle",
+      "detail_path": "merchandise/product-catalog/forest-green-horse-water-bottle.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-30c352a8-f5d9-4d86-ba28-80d6dd6d3e0b.png",
+          "sha256": "9d27c7d2710ed8d39799c1a2b150fc1bc7dcabd213a2ac9d891183e70cbd603f",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-water-bottle-product.png",
+          "website_path": "images/products/forest-green-horse-water-bottle-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "9d27c7d2710ed8d39799c1a2b150fc1bc7dcabd213a2ac9d891183e70cbd603f",
+          "package_path": "approved/product-images/forest-green-horse-water-bottle-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-59c04b05-f891-43f7-b4e7-a064a4fc6940.png",
+          "sha256": "19b9ed0035df6e8569131b414c2c77c609b33ad4e8a4f6f2f0cf0996a930d02c",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-water-bottle-styled.png",
+          "website_path": "images/products/forest-green-horse-water-bottle-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "19b9ed0035df6e8569131b414c2c77c609b33ad4e8a4f6f2f0cf0996a930d02c",
+          "package_path": "approved/product-images/forest-green-horse-water-bottle-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-document-logo-water-bottle",
+      "title": "Cream Document Logo Water Bottle",
+      "detail_path": "merchandise/product-catalog/cream-document-logo-water-bottle.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-ec8ffc80-c94b-4e07-85db-c74cee21f5f9.png",
+          "sha256": "08790e2f24977ca78857011137581ddf958883f9ce7c72aea43d718604cc2e0b",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-document-logo-water-bottle-product.png",
+          "website_path": "images/products/cream-document-logo-water-bottle-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "08790e2f24977ca78857011137581ddf958883f9ce7c72aea43d718604cc2e0b",
+          "package_path": "approved/product-images/cream-document-logo-water-bottle-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-530fbabb-f4b5-441f-8958-66f24f9a0944.png",
+          "sha256": "e6e6044dfb6ed0f2b6ea5f442a47988745eb498ec9517f001eb2555e52ae5f9c",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-document-logo-water-bottle-styled.png",
+          "website_path": "images/products/cream-document-logo-water-bottle-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "e6e6044dfb6ed0f2b6ea5f442a47988745eb498ec9517f001eb2555e52ae5f9c",
+          "package_path": "approved/product-images/cream-document-logo-water-bottle-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-document-logo-water-bottle",
+      "title": "Forest Green Document Logo Water Bottle",
+      "detail_path": "merchandise/product-catalog/forest-green-document-logo-water-bottle.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-35bcca52-a57b-4bac-a776-7e1909aa0740.png",
+          "sha256": "30a45b1d3a6586d8a332e081d83fdc47da87bc89822b7a178735e0bc7b6f7189",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-water-bottle-product.png",
+          "website_path": "images/products/forest-green-document-logo-water-bottle-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "30a45b1d3a6586d8a332e081d83fdc47da87bc89822b7a178735e0bc7b6f7189",
+          "package_path": "approved/product-images/forest-green-document-logo-water-bottle-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-bdccbdce-a33d-4fbe-9d51-d6b85e07c75b.png",
+          "sha256": "9b1782878f1f5cdb2fac5af2c45a627c62225c37767ca9f58a34f227c1075905",
+          "approval_record": "v7-design-system/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-water-bottle-styled.png",
+          "website_path": "images/products/forest-green-document-logo-water-bottle-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "9b1782878f1f5cdb2fac5af2c45a627c62225c37767ca9f58a34f227c1075905",
+          "package_path": "approved/product-images/forest-green-document-logo-water-bottle-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-horse-journal",
+      "title": "Forest Green Horse Journal",
+      "detail_path": "merchandise/product-catalog/forest-green-horse-journal.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-65239cf9-4f6b-4b9d-ad84-3c02c482ffc1.png",
+          "sha256": "a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46",
+          "approval_record": "v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-journal-product.png",
+          "website_path": "images/products/forest-green-horse-journal-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46",
+          "package_path": "approved/product-images/forest-green-horse-journal-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-76bf466a-adca-4a74-88c8-dc8a0d6fa6d2.png",
+          "sha256": "8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09",
+          "approval_record": "v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-horse-journal-styled.png",
+          "website_path": "images/products/forest-green-horse-journal-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09",
+          "package_path": "approved/product-images/forest-green-horse-journal-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-document-logo-journal",
+      "title": "Forest Green Document Logo Journal",
+      "detail_path": "merchandise/product-catalog/forest-green-document-logo-journal.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-9a234d7a-5aad-41fe-9a26-e63205b5c6c9.png",
+          "sha256": "6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb",
+          "approval_record": "v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-journal-product.png",
+          "website_path": "images/products/forest-green-document-logo-journal-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb",
+          "package_path": "approved/product-images/forest-green-document-logo-journal-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-07081d9f-9c91-490c-bde3-3e4846f7fe5f.png",
+          "sha256": "659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573",
+          "approval_record": "v7-design-system/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-document-logo-journal-styled.png",
+          "website_path": "images/products/forest-green-document-logo-journal-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573",
+          "package_path": "approved/product-images/forest-green-document-logo-journal-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "cream-embroidered-throw",
+      "title": "Cream Embroidered Throw",
+      "detail_path": "merchandise/product-catalog/cream-embroidered-throw.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-5919da54-8f67-4bd1-9e59-8c995332b190.png",
+          "sha256": "a4d423e27abba190f6658165b4511f5c7a2311daad738d0fefcd90109a393ce3",
+          "approval_record": "v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-embroidered-throw-product.png",
+          "website_path": "images/products/cream-embroidered-throw-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "a4d423e27abba190f6658165b4511f5c7a2311daad738d0fefcd90109a393ce3",
+          "package_path": "approved/product-images/cream-embroidered-throw-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-0d807583-3f39-4187-9c01-736a020081da.png",
+          "sha256": "a6c55a31ea91e16daa32162af73302e1a966d193c8e9f6ba6758e494500c29d9",
+          "approval_record": "v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/cream-embroidered-throw-styled.png",
+          "website_path": "images/products/cream-embroidered-throw-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "a6c55a31ea91e16daa32162af73302e1a966d193c8e9f6ba6758e494500c29d9",
+          "package_path": "approved/product-images/cream-embroidered-throw-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    },
+    {
+      "id": "forest-green-embroidered-throw",
+      "title": "Forest Green Embroidered Throw",
+      "detail_path": "merchandise/product-catalog/forest-green-embroidered-throw.md",
+      "images": [
+        {
+          "view": "product",
+          "source_filename": "exec-b0578822-debc-41f8-b3f1-3eff8b67ca23.png",
+          "sha256": "858ae46e5775cf5c4c030c79971cfd143f9b67363148f3696894c5a65ae4b4a7",
+          "approval_record": "v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-embroidered-throw-product.png",
+          "website_path": "images/products/forest-green-embroidered-throw-product.png",
+          "binary_status": "included_in_package",
+          "review_status": "approved_visual_reference",
+          "original_recorded_sha256": "858ae46e5775cf5c4c030c79971cfd143f9b67363148f3696894c5a65ae4b4a7",
+          "package_path": "approved/product-images/forest-green-embroidered-throw-product.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        },
+        {
+          "view": "styled",
+          "source_filename": "exec-c3b6c64b-4681-4678-823f-c01a641bc23b.png",
+          "sha256": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48",
+          "approval_record": "v7-design-system/merchandise/THROW-001-IMAGE-REGISTER.md",
+          "catalog_path": "merchandise/product-catalog/images/forest-green-embroidered-throw-styled.png",
+          "website_path": "images/products/forest-green-embroidered-throw-styled.png",
+          "binary_status": "included_in_package",
+          "review_status": "derived_companion_view",
+          "original_recorded_sha256": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48",
+          "package_path": "approved/product-images/forest-green-embroidered-throw-styled.png",
+          "identity_method": "recorded_sha256",
+          "library_file_id": null
+        }
+      ]
+    }
+  ],
+  "package_version": "7.0.0-local-review.1",
+  "source_tree": "92eea891560b7b41f7339e14b5af6937efa935d2"
+}

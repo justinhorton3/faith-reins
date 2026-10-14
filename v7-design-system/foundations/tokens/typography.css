@@ -1,0 +1,3 @@
+:root{--font-display:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;--font-serif:"Libre Caslon Text",Georgia,serif;--font-sans:"Hanken Grotesk",Arial,sans-serif;--type-hero:86px;--type-display:46px;--type-body:16px;--type-lead:20px;--type-label:12px;--track-label:.14em;--lh-body:1.65}
+@media(max-width:1023px){:root{--type-hero:64px;--type-display:40px}}
+@media(max-width:767px){:root{--type-hero:44px;--type-display:32px}}
