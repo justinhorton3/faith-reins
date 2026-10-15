@@ -6,7 +6,10 @@
       "Bash(gh pr merge *)",
       "Bash(gh pr *)",
       "Bash(git fetch *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git reset *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
