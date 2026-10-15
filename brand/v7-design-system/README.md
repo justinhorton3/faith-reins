@@ -33,3 +33,5 @@ Run `python3 scripts/validate.py --check` from this directory; only Python's sta
 Read [MIGRATION.md](MIGRATION.md) before handoff. The exporter takes `--output /new/external/staging-directory`, refuses to write inside a repository and never updates the website. No generator is needed to browse or use the package.
 
 Print/embroidery proofs, supplier measurements, pricing, fulfillment and website publication remain separate work. [QA-CHECKLIST.md](QA-CHECKLIST.md) distinguishes completed and pending checks.
+
+Hero photography: [page-by-page reference and crop rules](foundations/photography/README.md), [offline gallery](foundations/photography/index.html) and [exact asset register](foundations/photography/HERO-REGISTER.json).
