@@ -66,8 +66,11 @@ test('gallery zoom, keyboard, focus return and swipe work', async ({ page }) => 
   await expect(page.locator('#pdp-zoom-image')).toHaveAttribute('src', /cream-horse-mug-product.png$/);
   await page.keyboard.press('Escape');
   await expect(page.locator('#pdp-image-open')).toBeFocused();
-  await page.locator('#pdp-stage').dispatchEvent('touchstart', { changedTouches: [{ clientX: 280, clientY: 100 }] });
-  await page.locator('#pdp-stage').dispatchEvent('touchend', { changedTouches: [{ clientX: 100, clientY: 105 }] });
+  await page.locator('#pdp-stage').evaluate(element => {
+    const touch = (x, y) => new Touch({ identifier: 0, target: element, clientX: x, clientY: y });
+    element.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, changedTouches: [touch(280, 100)] }));
+    element.dispatchEvent(new TouchEvent('touchend', { bubbles: true, changedTouches: [touch(100, 105)] }));
+  });
   await expect(page.locator('#pdp-main-image')).toHaveAttribute('src', /cream-horse-mug-styled.png$/);
 });
 
