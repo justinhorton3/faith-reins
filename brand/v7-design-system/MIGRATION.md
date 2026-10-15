@@ -2,7 +2,7 @@
 
 ## Move to another project
 
-Copy the entire `v7-design-system` directory, keeping its structure intact. Open `index.html` and run `python3 scripts/validate.py --check`. Fonts, licenses, imagery, icons, masters, catalogs, templates and examples are local. No V6 or original website folder is needed. The PDF is deferred; HTML and Markdown guidance remains available.
+Copy the entire `v7-design-system` directory, keeping its structure intact. Open `index.html` and run `python3 scripts/validate.py --check`. Fonts, licenses, imagery, icons, masters, catalogs, templates and examples are local. No V6 or original website folder is needed. The original 18-page PDF is included in six lossless volumes; see [guidelines/README.md](guidelines/README.md). This migration guide supersedes historical handoff and export instructions inside the original PDF.
 
 ## Deliberate website update
 

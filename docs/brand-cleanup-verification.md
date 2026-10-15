@@ -15,7 +15,7 @@ Baseline: `6e848fa72c775a98fd098b533e7090ecd47d5824`.
 - The 42 product descriptions and size qualifications are retained. Ownership metadata now describes canonical package links and separate website copies.
 - The consolidation ledger records preserved source paths, hashes and historical status. Legacy and WIP references are not promoted to approved imagery.
 - Standalone package validation checks original hashes, preserved sources, full package checksums, local HTML/Markdown/CSS targets, SVG structure and absence of symlinks. The same checks run on an isolated copy outside the repository.
-- PDF upload is deferred by owner instruction because the original exceeded the 100 MB limit. Available HTML and Markdown guidance remains usable; there is no active broken PDF link.
+- The PDF follow-up branch restores all 18 original pages as six lossless volumes. The complete edition is 84,343,199 bytes, below 100 MB. All 18 page renders and text match the source; all 43 embedded images retain their dimensions and decoded pixels. Each split page also matches the complete guide. No approved source imagery changed.
 - The old automatic artwork-commit workflow now validates without writing artwork. The obsolete execution-plan workflow now checks directory ownership instead of invoking an already-missing script.
 
 ## Existing environment limitations
@@ -26,4 +26,6 @@ Baseline: `6e848fa72c775a98fd098b533e7090ecd47d5824`.
 
 ## Branch retirement
 
-The package's `BRANCH-RETIREMENT.json` records the audited heads and proposed actions for all 17 non-main branches. Fifteen are retirement candidates after consolidation/preservation; two contain unmerged website/workflow work and remain for separate review. The six PR #12 transfer-manifest entries exactly match original sizes and SHA-256 values in the canonical package. Branch deletions and archival refs must be confirmed separately in the retirement record; this verification does not claim they have occurred.
+The package's `BRANCH-RETIREMENT.json` records 14 deleted branches, verified through GitHub UI and API after cleanup PR #14 merged. Four branches remain because they contain unmerged work: `claude/session-2026-10-12`, `fix/wix-headless-deploy-config`, `feat/v7-merchandise-system` and `wip/shop-photo-logo-swap`. Their audited heads are recorded for separate review. No archival tags were created. The local symbolic `origin` alias was not a real branch.
+
+The six PR #12 transfer-manifest entries exactly match original sizes and SHA-256 values in the canonical package; PR #12 was closed as superseded. The PDF is being delivered on its own `docs/v7-brand-guide-pdf` branch after cleanup.

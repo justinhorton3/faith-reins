@@ -74,6 +74,80 @@
   "new_system_material_status": "authored_from_V6_and_existing_V7_rules; owner_review_pending",
   "image_preservation": "All image originals copied byte-for-byte. No crop, resize, retouch or recompression delivered.",
   "repository_layout": "canonical self-contained package; independent website snapshot",
-  "pdf_status": "deferred: original PDF exceeded 100 MB upload limit",
-  "cleanup_date": "2026-10-15"
+  "pdf_status": "available: original 18 pages in six lossless local volumes",
+  "cleanup_date": "2026-10-15",
+  "pdf_files": [
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-01.pdf",
+      "original_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bytes": 2559139,
+      "sha256": "0a5d1efceea524b5b0f495ff19bda9349124486ca05f0f77295daeba005dfd98",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-02.pdf",
+      "original_pages": [
+        13
+      ],
+      "bytes": 17336269,
+      "sha256": "14883ef5dd0b6adc7ac90f496f197c34b5edccbbc208e3ba3f2673d4e70f252d",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-03.pdf",
+      "original_pages": [
+        14
+      ],
+      "bytes": 17788145,
+      "sha256": "ff1b4c2d492e2ff88b139bb81c18cdb2ca7f4aab8551705ff9fa140c9efa79f0",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-04.pdf",
+      "original_pages": [
+        15
+      ],
+      "bytes": 17819037,
+      "sha256": "32339d0ba66d55d1d5df3374c2fa77d68a58873369fdf126a27a496129e0ebc1",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-05.pdf",
+      "original_pages": [
+        16
+      ],
+      "bytes": 16511285,
+      "sha256": "27f638a6f668219e5c84f4a39377263c4ccc8dbd4d1a175ea7b6fdfef2ea27c2",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-06.pdf",
+      "original_pages": [
+        17,
+        18
+      ],
+      "bytes": 12570590,
+      "sha256": "d65f33e1251a595f30011accc556ffce0526f23ee5b25db57f6b44bdcce24b6e",
+      "render_preserved": true
+    }
+  ],
+  "complete_pdf": {
+    "complete_pdf_bytes": 84343199,
+    "complete_pdf_sha256": "6a670d9e0cfea69d6aa20454575716d39212dea97e4e2a0d078c8242df41bd74",
+    "complete_pdf_under_100_MB": true
+  },
+  "pdf_validation": "guidelines/PDF-VALIDATION.json"
 }

@@ -13,6 +13,25 @@ def check(ok,message):
     if not ok:errors.append(message)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 release=json.loads((R/'RELEASE-MANIFEST.json').read_text())
+pdf=json.loads((R/release['pdf_validation']).read_text())
+check(release['pdf_files']==pdf['repository_parts'],'PDF manifest differs from verification record')
+pdf_pages=[]
+check(len(release['pdf_files'])==6,'Expected six PDF volumes')
+for volume in release['pdf_files']:
+    p=R/volume['path'];check(p.is_file(),'Missing PDF '+volume['path'])
+    check(p.resolve().is_relative_to(R),'PDF path escapes package')
+    if p.is_file():
+        check(p.stat().st_size==volume['bytes']<25_000_000,'PDF size mismatch or upload limit exceeded: '+volume['path'])
+        check(sha(p)==volume['sha256'],'PDF hash changed: '+volume['path'])
+        with p.open('rb') as f:check(f.read(5)==b'%PDF-','Invalid PDF header: '+volume['path'])
+    pdf_pages.extend(volume['original_pages'])
+    check(volume['render_preserved'],'PDF split render verification missing: '+volume['path'])
+check(pdf_pages==list(range(1,19)),'PDF volumes must cover all 18 pages once in order')
+check([p['original_page'] for p in pdf['pages']]==pdf_pages,'PDF page verification inventory differs')
+check(all(p['pixel_identical'] and p['text_identical'] for p in pdf['pages']),'Original PDF page comparison failed')
+check(pdf['unique_embedded_images']==43 and pdf['all_image_dimensions_and_decoded_pixels_unchanged'],'Original PDF image comparison failed')
+check(release['complete_pdf']=={k:pdf[k] for k in release['complete_pdf']},'Complete PDF metadata differs')
+check(pdf['complete_pdf_bytes']<100_000_000,'Complete PDF exceeds 100 MB')
 man=json.loads((R/'merchandise/product-catalog/IMAGE-IMPORT-MANIFEST.json').read_text())
 check(len(release['assets'])==10,'Expected 10 exact approved master SVGs')
 for a in release['assets']:
@@ -70,6 +89,6 @@ for path,expected in checksums.items():
     check(p.is_file(),'Missing checksum target '+path)
     if p.is_file():check(sha(p)==expected,'Package checksum mismatch '+path)
 for p in R.rglob('*'):check(not p.is_symlink(),'Symlink in portable package: '+str(p))
-report={'passed':not errors,'master_count':10,'products':42,'images':count,'approved_images':approved,'companion_images':companions,'repository_source_assets':len(provenance['unchanged_source_assets']),'preserved_source_records':len(preserved),'checksummed_files':len(checksums),'image_policy':'original bytes unchanged','pdf_status':'deferred by owner; original exceeds 100 MB upload limit','checks':['master hashes','product hashes','unchanged repository source assets','preserved source hashes','complete package checksum inventory','SVG parsing and outlined masters','active HTML links','CSS imports and font paths','active Markdown links','package-contained link targets','no symlinks'],'not_checked':['actual browser responsive behavior','physical print and embroidery','supplier availability and measurement charts','website integration and deployment'],'errors':errors}
+report={'passed':not errors,'master_count':10,'products':42,'images':count,'approved_images':approved,'companion_images':companions,'repository_source_assets':len(provenance['unchanged_source_assets']),'preserved_source_records':len(preserved),'checksummed_files':len(checksums),'image_policy':'original bytes unchanged','pdf_status':release['pdf_status'],'checks':['PDF volume hashes, sizes, headers and page coverage','recorded original PDF render and image verification','master hashes','product hashes','unchanged repository source assets','preserved source hashes','complete package checksum inventory','SVG parsing and outlined masters','active HTML links','CSS imports and font paths','active Markdown links','package-contained link targets','no symlinks'],'not_checked':['actual browser responsive behavior','physical print and embroidery','supplier availability and measurement charts','website integration and deployment'],'errors':errors}
 if not args.check:(R/'VALIDATION-REPORT.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2));sys.exit(bool(errors))

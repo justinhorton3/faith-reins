@@ -7,7 +7,7 @@ The Astro website is in src/ with its own committed asset copies in public/. Wix
 - Design system: approved originals, fonts, icons, imagery, tokens, examples, templates and catalog records live together under brand/v7-design-system/.
 - Website: public/ assets and src/ styles are independent snapshots. Do not import, symlink or copy from brand/ during a normal build. Updating V7 or introducing V8 must not change the website implicitly.
 - V6: brand/FaithReins_DesignSystem_v6/ is a historical archive; V7 does not depend on it.
-- PDF: upload deferred; available HTML and Markdown guidance remains usable.
+- PDF: all 18 original pages are included as six lossless volumes under `brand/v7-design-system/guidelines/`.
 
 ## Website development
 

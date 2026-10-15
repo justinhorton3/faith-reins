@@ -1,0 +1,191 @@
+{
+  "source": "Original October 13 V7 package, not the later JPEG-compressed Git copy",
+  "source_bytes": 107394953,
+  "source_sha256": "cb791eaae93fccc154a12f7dbc6eab53576122c61f2dc4f4c434017d41add2dd",
+  "complete_pdf_bytes": 84343199,
+  "complete_pdf_sha256": "6a670d9e0cfea69d6aa20454575716d39212dea97e4e2a0d078c8242df41bd74",
+  "complete_pdf_under_100_MB": true,
+  "method": "Decode ASCII85 wrapper and losslessly repack PDF streams; no downsampling or JPEG conversion",
+  "pages": [
+    {
+      "original_page": 1,
+      "render_144dpi_sha256": "eea7d829b5610d6b609df0b199466608397df18d8d21ecd1b90e7b3c8725e605",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 2,
+      "render_144dpi_sha256": "f09d67fdab61ada636f33b762165f5a4e4d1b831f5b264536e1d242aa8ac97dd",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 3,
+      "render_144dpi_sha256": "a17e4dbd53272b3e2dbfa4fa4c414c8c93c2250d47c0871694a58a741d5002ce",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 4,
+      "render_144dpi_sha256": "a1ab50848859b6c28a64d30ac56ef22f96f882ed8bcb8f5e13f48a968cccdf26",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 5,
+      "render_144dpi_sha256": "e74dc61eef25cb4b95ea9db36a32778fa0cc4508d6caa1e337ea48f698ce893d",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 6,
+      "render_144dpi_sha256": "391134ba03e09b618f3da4266a30dd56c38c051c09103b7c0428471db1273e15",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 7,
+      "render_144dpi_sha256": "a1e3bcf07fda0acded9e3efb923e4abfdb217a501eed1a69d1c34c51b86fad74",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 8,
+      "render_144dpi_sha256": "6fa4d6b88602bde4a69738c82274f13e8b44fab6045b6a80748cf921d3b8df6b",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 9,
+      "render_144dpi_sha256": "4aed03f0fdf59989d83cf8d187ee0b53a8bb2fccae5a6a7ac48f6f09eaf38596",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 10,
+      "render_144dpi_sha256": "36abd193b2e9e4ed2b0197c35a879d9bd911d824172567b268ce95e11570bfa1",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 11,
+      "render_144dpi_sha256": "ac962b6b8df4ec4f5ee8d3282e71463f372bf02923c18e397f06422c59eae9bb",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 12,
+      "render_144dpi_sha256": "c741124ba68078ebf65e3e4d0cc69119d2894c5f87873e6691f6cfecc1d83b41",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 13,
+      "render_144dpi_sha256": "7418ebecc2e108e1e7a011396c729ff4c577172e3ca0df3680b69fd334fc7157",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 14,
+      "render_144dpi_sha256": "0bbeced6896bbcb889512d6f61d03b3e1d4dee13f8b8f03465acb81a8ce2a06a",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 15,
+      "render_144dpi_sha256": "36ec36b751bc87abe9b4afae7b111a96d2bc786f58414b9b1f0f090730ec7efa",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 16,
+      "render_144dpi_sha256": "701635abb326f37b2e11a3d69dd0a477c6a9d508391e7a253655c18343b5a833",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 17,
+      "render_144dpi_sha256": "51ba6786a1ce91cf927ff8de6bf30dda9d8d6687f47c14021d10c068f62de911",
+      "pixel_identical": true,
+      "text_identical": true
+    },
+    {
+      "original_page": 18,
+      "render_144dpi_sha256": "e933eabfce990290bf88d86b973b56a2c56a0f98220767513770af508381435a",
+      "pixel_identical": true,
+      "text_identical": true
+    }
+  ],
+  "unique_embedded_images": 43,
+  "all_image_dimensions_and_decoded_pixels_unchanged": true,
+  "repository_parts": [
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-01.pdf",
+      "original_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bytes": 2559139,
+      "sha256": "0a5d1efceea524b5b0f495ff19bda9349124486ca05f0f77295daeba005dfd98",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-02.pdf",
+      "original_pages": [
+        13
+      ],
+      "bytes": 17336269,
+      "sha256": "14883ef5dd0b6adc7ac90f496f197c34b5edccbbc208e3ba3f2673d4e70f252d",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-03.pdf",
+      "original_pages": [
+        14
+      ],
+      "bytes": 17788145,
+      "sha256": "ff1b4c2d492e2ff88b139bb81c18cdb2ca7f4aab8551705ff9fa140c9efa79f0",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-04.pdf",
+      "original_pages": [
+        15
+      ],
+      "bytes": 17819037,
+      "sha256": "32339d0ba66d55d1d5df3374c2fa77d68a58873369fdf126a27a496129e0ebc1",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-05.pdf",
+      "original_pages": [
+        16
+      ],
+      "bytes": 16511285,
+      "sha256": "27f638a6f668219e5c84f4a39377263c4ccc8dbd4d1a175ea7b6fdfef2ea27c2",
+      "render_preserved": true
+    },
+    {
+      "path": "guidelines/Faith-Reins-Design-System-V7-Part-06.pdf",
+      "original_pages": [
+        17,
+        18
+      ],
+      "bytes": 12570590,
+      "sha256": "d65f33e1251a595f30011accc556ffce0526f23ee5b25db57f6b44bdcce24b6e",
+      "render_preserved": true
+    }
+  ],
+  "repository_upload_limit": "Each volume below 25 MB for GitHub browser upload",
+  "original_approved_assets_modified": false
+}
