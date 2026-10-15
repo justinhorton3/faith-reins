@@ -2,7 +2,7 @@
 
 ## Local checks
 
-The generated `VALIDATION-REPORT.json` contains final results. Validation checks all delivered master/product hashes, counts, SVG parsing and self-contained logo geometry, catalog targets, CSS imports and active HTML links. The original PDF rendering claims below are historical package records; the PDF itself is deferred and not included.
+The generated `VALIDATION-REPORT.json` contains final results. Validation checks all delivered master/product hashes, counts, SVG parsing and self-contained logo geometry, catalog targets, CSS imports and active HTML links. The restored PDF is verified against the original source; detailed evidence is in guidelines/PDF-VALIDATION.json.
 
 - [x] 10 approved SVG masters copied without modification.
 - [x] 72 original product files match recorded SHA-256 checksums.
@@ -12,7 +12,7 @@ The generated `VALIDATION-REPORT.json` contains final results. Validation checks
 - [x] Rejected monogram, leather/linen notebook and large-print throw work excluded from current catalog.
 - [x] Full website lockup and subtitle retained in the reference.
 - [x] Size ranges and supplier details remain qualified.
-- [ ] PDF upload deferred by owner because the original exceeds 100 MB. Historical 18-page rendering claim is not revalidated in cleanup.
+- [x] Original 18-page PDF restored in six lossless volumes. All 18 full-guide page renders and text match the source; all 43 embedded images retain dimensions and decoded pixels. Split-page renders also match.
 - [x] Handoff staging refuses existing output directories and output inside repositories; never writes website assets.
 - [ ] Interactive HTML behavior and every responsive width tested in an actual browser.
 - [ ] Existing website build, Playwright flows and screenshot regression completed after integration.

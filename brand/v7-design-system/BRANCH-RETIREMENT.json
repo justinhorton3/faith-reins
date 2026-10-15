@@ -2,112 +2,118 @@
   "baseline_main": "6e848fa72c775a98fd098b533e7090ecd47d5824",
   "entries": [
     {
-      "branch": "origin",
-      "audited_sha": "6e848fa72c775a98fd098b533e7090ecd47d5824",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/origin"
-    },
-    {
       "branch": "add-brand-folder",
       "audited_sha": "6e848fa72c775a98fd098b533e7090ecd47d5824",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/add-brand-folder"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "chore/remove-legacy-root-v7",
       "audited_sha": "d3bf22fa04b261b06c2fa858b34e686239b4fb50",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/chore/remove-legacy-root-v7"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "claude/session-2026-10-12",
       "audited_sha": "b3cbe7af342bb2d6d871706d315019e277708808",
-      "action": "retain for separate website/workflow review",
-      "archive_tag": null
+      "action": "retain for separate review: unmerged deployment/workflow work",
+      "status": "retained"
     },
     {
       "branch": "cms-content-blocks",
       "audited_sha": "98576afe48c3bcc76ecca58dbc26c7428eec548b",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/cms-content-blocks"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-asset-register",
       "audited_sha": "700863bb93e399816b37d42a5a63607003d370b1",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-asset-register"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-brand-standards",
       "audited_sha": "2834a94bb824c5b5634d2ad587ece8d149253193",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-brand-standards"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-core-assets",
       "audited_sha": "803138ccec43e50b4f633ba7cca5029cc45bb74c",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-core-assets"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-core-clean",
       "audited_sha": "fd52e06ed9ab16dec8c7a1f1bca2c612044896de",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-core-clean"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-merch-catalog-guidance",
       "audited_sha": "60d32a92b68210b65aa5e0d2142f37f559b3ec2b",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-merch-catalog-guidance"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-merch-product-details-01",
       "audited_sha": "df7a952ae9f555f85a36e67a778d8ce7b06ef255",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-merch-product-details-01"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-merchandise-system",
       "audited_sha": "92eea891560b7b41f7339e14b5af6937efa935d2",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-merchandise-system"
+      "action": "retain for separate review: unmerged source history",
+      "status": "retained"
     },
     {
       "branch": "feat/v7-product-images-batch-01",
       "audited_sha": "ad17220fe0b41d9615d3ff281821257fcc9828b8",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-product-images-batch-01"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-product-images-upload",
       "audited_sha": "d0c668da63ddd7ac14d8823fb9fcc0a67036b82a",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-product-images-upload"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-register-reconciliation",
       "audited_sha": "89862b30b55038c24706f076a6c08f08134bf16b",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-register-reconciliation"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "feat/v7-website-asset-guidance",
       "audited_sha": "415d299335213bb3c5b50463e1e362d87bb9ea5f",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/feat/v7-website-asset-guidance"
+      "action": "deleted through GitHub UI after merge or source preservation",
+      "status": "deleted"
     },
     {
       "branch": "fix/wix-headless-deploy-config",
       "audited_sha": "b28004e117e4f77bb01a36a4e1e8c2d94c1d717f",
-      "action": "retain for separate website/workflow review",
-      "archive_tag": null
+      "action": "retain for separate review: unmerged website/donation/framework work",
+      "status": "retained"
     },
     {
       "branch": "wip/shop-photo-logo-swap",
       "audited_sha": "10949206fb3c24fcc25596cb7f85cc7b75bca96e",
-      "action": "retire after cleanup merge and archive tag push",
-      "archive_tag": "archive/2026-10-15/wip/shop-photo-logo-swap"
+      "action": "retain for separate review: unmerged WIP source history",
+      "status": "retained"
+    },
+    {
+      "branch": "chore/consolidate-brand-v7",
+      "audited_sha": "dea0da6620744cba1a3e2e096a15dca9985d24a2",
+      "status": "deleted",
+      "action": "deleted through GitHub UI after merge or source preservation"
     }
-  ]
+  ],
+  "verified_date": "2026-10-15",
+  "verification": "GitHub branches UI and API list",
+  "deleted_count": 14,
+  "retained_unmerged_count": 4,
+  "archive_tags_created": false,
+  "note": "origin was the local symbolic remote alias, not a GitHub branch. Audited SHAs remain recorded here; no archival tag creation is claimed."
 }

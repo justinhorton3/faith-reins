@@ -24,7 +24,7 @@ Version: `7.0.0-local-review.1`, consolidated October 15, 2026. Existing approva
 
 All original approved artwork and product images retain their exact bytes. Master/export roles and product/styled pairs are intentional. The [consolidation ledger](REPOSITORY-CONSOLIDATION.json) records preserved files and hashes; archived documents retain old wording and paths as historical evidence. [Source provenance](SOURCE-PROVENANCE.json) records earlier package origins.
 
-**PDF pending:** upload deferred by the owner because the original exceeded the 100 MB upload limit. It is not required for cleanup or standalone validation. Available HTML and Markdown guidance is included.
+**Printable guide:** all 18 original pages are included in [six lossless PDF volumes](guidelines/README.md), each below 25 MB. The complete single-file edition is 84.3 MB; image dimensions and pixels are preserved. Current handoff instructions in MIGRATION.md supersede historical handoff descriptions inside the original PDF.
 
 ## Use and validation
 
