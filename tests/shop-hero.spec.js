@@ -12,7 +12,10 @@ for (const width of [1440,1024,768,767,390,320]) {
       const rect=await image.boundingBox();
       expect(Math.abs(rect.height/rect.width-4/3)).toBeLessThan(.01);
     }
-    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    await page.evaluate(()=>document.fonts.ready);
+    await page.screenshot({path:testInfo.outputPath(`hero-${width}.png`)});
+    const overflow = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(element => element.offsetParent && element.getBoundingClientRect().right > innerWidth + 1).map(element => ({ tag:element.tagName, class:element.className, width:element.getBoundingClientRect().width, right:element.getBoundingClientRect().right })));
+    expect(overflow, JSON.stringify(overflow)).toEqual([]);
     await expect(page.locator('img[src*="hero-shop-"]')).toHaveCount(0);
     await page.evaluate(()=>document.fonts.ready);
     await page.screenshot({path:testInfo.outputPath(`hero-${width}.png`)});
