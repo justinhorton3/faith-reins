@@ -1048,9 +1048,9 @@
     },
     {
       "source": "brand/v7-product-images/merchandise/product-catalog/README.md",
-      "package_path": "merchandise/product-catalog/README.md",
+      "package_path": "legacy/source-documents/product-catalog-before-supplier-audit.md",
       "sha256": "4c4fe02f1fe3e4201da261378f9642bc7e82ca697d1a39bb80e08b426a24c3f2",
-      "role": "duplicate catalog package or historical wrapper",
+      "role": "immutable catalog wrapper before the 2026-10-15 supplier audit; active catalog README now links current evidence",
       "bytes_unchanged": true
     },
     {

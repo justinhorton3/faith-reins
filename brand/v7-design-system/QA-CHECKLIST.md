@@ -18,7 +18,8 @@ The generated `VALIDATION-REPORT.json` contains final results. Validation checks
 - [ ] Existing website build, Playwright flows and screenshot regression completed after integration.
 - [ ] WCAG contrast/focus/target checks on the actual integrated UI.
 - [ ] Print proofs and real embroidery sew-outs.
-- [ ] Supplier availability, measurements, care, pricing and fulfillment verified.
+- [x] Public supplier audit completed for all 42 concepts; candidate measurements and source links documented where available.
+- [ ] Exact supplier variant inventory, unresolved measurement methods, final care, retail pricing, fulfillment and decorated samples approved.
 - [ ] Owner review of newly authored system materials and templates.
 - [ ] Live release.
 

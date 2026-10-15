@@ -35,3 +35,9 @@ Read [MIGRATION.md](MIGRATION.md) before handoff. The exporter takes `--output /
 Print/embroidery proofs, supplier measurements, pricing, fulfillment and website publication remain separate work. [QA-CHECKLIST.md](QA-CHECKLIST.md) distinguishes completed and pending checks.
 
 Hero photography: [page-by-page reference and crop rules](foundations/photography/README.md), [offline gallery](foundations/photography/index.html) and [exact asset register](foundations/photography/HERO-REGISTER.json).
+
+## Supplier audit and product page reference
+
+[All 42 supplier findings](merchandise/product-catalog/SUPPLIER-AUDIT.md) distinguish six research candidates from 36 blocked exact matches, with source links and qualified measurements in every product record. [PDP audit](merchandise/product-catalog/PDP-AUDIT.md) compares the root website with the requested shopping detail. Open the [interactive polo page reference](examples/product-detail/index.html) for review. Final sourcing, physical samples and website handoff remain separate.
+
+Run `python3 scripts/validate-supplier-audit.py` alongside the portable package validator.

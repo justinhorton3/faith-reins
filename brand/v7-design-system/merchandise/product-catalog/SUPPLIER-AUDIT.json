@@ -1,0 +1,1133 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-15",
+  "scope": "42 V7 concepts; official public Printful catalog; US target region; no account/API variant inventory checked",
+  "status_meanings": {
+    "candidate": "No primary mismatch found in reviewed facts; sample and configuration still required",
+    "blocked": "Specific missing match or unresolved design change; comparison facts are not production specs"
+  },
+  "supplier_sources": {
+    "cap": {
+      "name": "Classic Dad Hat | Yupoong 6245CM",
+      "url": "https://www.printful.com/custom/hats/dad-hats/classic-dad-cap-yupoong-6245cm",
+      "material": "100% chino cotton twill for the reviewed solid colors",
+      "fit": "Unstructured, low-profile, 6-panel; curved visor; adjustable buckle",
+      "sizes": [
+        "One size"
+      ],
+      "technique": "Front embroidery",
+      "observed_colors": [
+        "Black",
+        "Navy",
+        "Cranberry",
+        "Spruce",
+        "Dark Grey",
+        "Green Camo",
+        "Khaki",
+        "Stone",
+        "Pink",
+        "Light Blue",
+        "White"
+      ],
+      "dimensions": "Head circumference A: 20.5–24.375 in (52.07–61.91 cm, converted). Raw supplier diagram B / C / D: 4.75 / 3.125 / 7.5 in; do not rename these dimensions without the diagram.",
+      "care": "Hand wash with mild detergent in lukewarm water; no bleach or brushes; do not machine wash.",
+      "chart": null,
+      "notes": "Public size guide inspected in browser, US destination, 2026-10-15. A is the head-fit range; one size is not a guarantee of universal fit."
+    },
+    "mens-polo": {
+      "name": "Men’s Premium Polo Shirt | Port Authority K500",
+      "url": "https://www.printful.com/custom/brands/port-authority/premium-polo-shirt-port-authority-k500",
+      "material": "65% polyester / 35% cotton pique; 5.0 oz/yd² (169.5 g/m²)",
+      "fit": "Relaxed cut; supplier says runs large; flat-knit collar/cuffs, side vents, metal buttons with matching plastic rims",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "technique": "Left-chest embroidery",
+      "observed_colors": [
+        "Black",
+        "Red",
+        "Navy",
+        "Steel Grey",
+        "Cool Heather",
+        "Stone",
+        "White"
+      ],
+      "dimensions": "",
+      "care": "Cold gentle wash inside out with mild detergent; cool-air tumble drying; iron on reverse between cloths without steaming the embroidery. Final garment label and decorated sample must be checked.",
+      "chart": {
+        "columns": [
+          "Length",
+          "Flat chest width",
+          "Sleeve from center-back collar"
+        ],
+        "unit": "in",
+        "rows": [
+          [
+            "S",
+            29,
+            20.5,
+            20
+          ],
+          [
+            "M",
+            30,
+            21.5,
+            20.75
+          ],
+          [
+            "L",
+            31,
+            23.5,
+            21
+          ],
+          [
+            "XL",
+            32,
+            25.5,
+            22
+          ],
+          [
+            "2XL",
+            33,
+            27,
+            22.5
+          ],
+          [
+            "3XL",
+            33.5,
+            28.5,
+            23
+          ],
+          [
+            "4XL",
+            34,
+            30,
+            23.5
+          ],
+          [
+            "5XL",
+            34.5,
+            31.5,
+            24
+          ]
+        ],
+        "body_chest_in": [
+          40.5,
+          42.5,
+          46.5,
+          49.5,
+          54,
+          57,
+          60,
+          63
+        ],
+        "tolerance": "Supplier garment tolerance: up to 2 in (5 cm).",
+        "method": "Length: high point shoulder to hem. Width: flat across chest, not circumference. Sleeve: center-back collar, over shoulder to sleeve hem. Body chest values are a separate supplier Measure yourself chart, not twice garment width."
+      },
+      "notes": ""
+    },
+    "womens-polo": {
+      "name": "Women’s Pique Polo Shirt | Gildan 64800L",
+      "url": "https://www.printful.com/custom/womens/polo-shirts/womens-pique-polo-shirt-gildan-64800l?productId=664&productSlug=gildan-64800l",
+      "material": "100% ring-spun cotton for White; Sport Grey is 90% cotton / 10% polyester; 5.2 oz/yd² (176 g/m²)",
+      "fit": "Women’s semi-fitted, side-seamed; matching buttons; White may appear off-white",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "technique": "Left-chest embroidery",
+      "observed_colors": [
+        "Black",
+        "Navy",
+        "Sport Grey",
+        "White"
+      ],
+      "dimensions": "",
+      "care": "Cold gentle wash inside out with mild detergent; cool-air tumble drying; iron on reverse between cloths without steaming the embroidery. Final garment label and decorated sample must be checked.",
+      "chart": {
+        "columns": [
+          "A (supplier diagram)",
+          "B (supplier diagram)",
+          "C (supplier diagram)"
+        ],
+        "unit": "in",
+        "rows": [
+          [
+            "S",
+            25.375,
+            16.75,
+            15
+          ],
+          [
+            "M",
+            26.375,
+            17.875,
+            15.5
+          ],
+          [
+            "L",
+            27.5,
+            19.875,
+            16.125
+          ],
+          [
+            "XL",
+            28.5,
+            21.5,
+            16.875
+          ],
+          [
+            "2XL",
+            29.5,
+            23.25,
+            18.125
+          ]
+        ],
+        "tolerance": "Supplier garment tolerance: up to 2 in (5 cm).",
+        "method": "Product measurements transcribed from public Size guide. The rendered guide omitted the A/B/C diagram definitions during this audit; keep original labels and confirm diagram before shopper publication. Not a body measurement chart."
+      },
+      "notes": ""
+    },
+    "quarter-zip": {
+      "name": "Unisex Quarter Zip Pullover | Sport-Tek ST357",
+      "url": "https://www.printful.com/custom/mens/hoodies-sweatshirts/unisex-quarter-zip-pullover-sport-tek-st357",
+      "material": "100% polyester interlock; 3.8 oz/yd² (110 g/m²)",
+      "fit": "Regular fit, cadet collar, open cuffs/hem, matching zipper",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "technique": "DTFlex front / back; embroidery not listed",
+      "observed_colors": [],
+      "dimensions": "",
+      "care": "No final care assigned: this printed blank does not match the approved embroidery technique.",
+      "chart": null,
+      "notes": "Rejected as an embroidery match. Comfort Colors 1580 was also reviewed and lists DTFlex, not embroidery. Do not attach either chart to the approved design."
+    },
+    "vest": {
+      "name": "No matching quilted vest located in reviewed Printful catalog",
+      "url": "https://www.printful.com/custom/mens/jackets",
+      "material": "Unverified for approved quilted concept",
+      "fit": "Quilted sleeveless cut is required",
+      "sizes": [],
+      "technique": "Embroidery required; exact blank unresolved",
+      "observed_colors": [],
+      "dimensions": "",
+      "care": "Pending exact blank and label.",
+      "chart": null,
+      "notes": "Reviewed jackets/vests category, Columbia 212488 fleece vest and knitted V-neck vest. Neither preserves the approved quilted construction. This is a search finding, not a claim that Printful can never supply one."
+    },
+    "adult-hoodie": {
+      "name": "Unisex Heavy Blend Hoodie | Gildan 18500",
+      "url": "https://www.printful.com/custom/mens/hoodies/unisex-heavy-blend-hoodie-gildan-18500",
+      "material": "50% pre-shrunk cotton / 50% polyester; 8.0 oz/yd² (271.25 g/m²)",
+      "fit": "Adult unisex regular fit; lined hood with drawcord, pouch pocket, ribbed cuffs/waist",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "technique": "Left / center chest embroidery; printing also offered",
+      "observed_colors": [
+        "Forest Green",
+        "Sand",
+        "White"
+      ],
+      "dimensions": "",
+      "care": "Cold gentle wash inside out with mild detergent; cool-air tumble drying; iron on reverse between cloths without steaming the embroidery. Final garment label and decorated sample must be checked.",
+      "chart": {
+        "columns": [
+          "Length",
+          "Flat chest width",
+          "Sleeve from center-back collar"
+        ],
+        "unit": "in",
+        "rows": [
+          [
+            "S",
+            27,
+            20,
+            33.5
+          ],
+          [
+            "M",
+            28,
+            22,
+            34.5
+          ],
+          [
+            "L",
+            29,
+            24,
+            35.5
+          ],
+          [
+            "XL",
+            30,
+            26,
+            36.5
+          ],
+          [
+            "2XL",
+            31,
+            28,
+            37.5
+          ],
+          [
+            "3XL",
+            32,
+            30,
+            38.5
+          ],
+          [
+            "4XL",
+            33,
+            32,
+            39.5
+          ],
+          [
+            "5XL",
+            34,
+            34,
+            40.5
+          ]
+        ],
+        "tolerance": "Supplier garment tolerance: up to 2 in (5 cm).",
+        "method": "Length from high point shoulder to hem; width flat across chest; sleeve from center-back collar over shoulder to hem. Not body circumference."
+      },
+      "notes": "Color list here records relevant reviewed candidates only, not every available color. Forest Green #222E1F; Sand #e7d3b3. Color/size inventory not checked. Women’s design requires approval of the unisex cut."
+    },
+    "youth-hoodie": {
+      "name": "Youth Heavy Blend Hoodie | Gildan 18500B",
+      "url": "https://www.printful.com/custom/kids-teen/hoodies/youth-heavy-blend-hoodie-gildan-18500-b",
+      "material": "50% cotton / 50% polyester; 8 oz/yd² (271.25 g/m²)",
+      "fit": "Youth regular fit; lined hood, no drawcords, pouch pocket",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "technique": "Left / center chest embroidery",
+      "observed_colors": [
+        "Black",
+        "Navy",
+        "Dark Heather",
+        "Royal",
+        "Carolina Blue",
+        "Light Pink",
+        "Sport Grey",
+        "White"
+      ],
+      "dimensions": "",
+      "care": "Cold gentle wash inside out with mild detergent; cool-air tumble drying; iron on reverse between cloths without steaming the embroidery. Final garment label and decorated sample must be checked.",
+      "chart": {
+        "columns": [
+          "Length",
+          "Flat chest width",
+          "Supplier sleeve length (method unresolved)"
+        ],
+        "unit": "in",
+        "rows": [
+          [
+            "XS",
+            19.75,
+            16,
+            23.5
+          ],
+          [
+            "S",
+            21.25,
+            17,
+            26.5
+          ],
+          [
+            "M",
+            22.5,
+            18,
+            27.75
+          ],
+          [
+            "L",
+            24,
+            19,
+            30.25
+          ],
+          [
+            "XL",
+            25.5,
+            20,
+            33
+          ]
+        ],
+        "tolerance": "Supplier garment tolerance: up to 2 in (5 cm).",
+        "method": "Length from high point shoulder; width underarm seam to seam. Supplier text describes sleeve from top of set-in sleeve, but published values appear inconsistent with that method. Confirm sleeve method with Printful before shopper use. Do not replace with an adult chart."
+      },
+      "notes": "Forest green was not offered in the reviewed public US selector. SOL’S 03576 was also found as an alternative youth model but no green match was verified."
+    },
+    "mug": {
+      "name": "White Glossy Mug — comparison only",
+      "url": "https://www.printful.com/custom/mugs/personalized/white-glossy-mug",
+      "material": "Glossy ceramic",
+      "fit": "White body, interior and handle",
+      "sizes": [
+        "11 oz",
+        "15 oz",
+        "20 oz"
+      ],
+      "technique": "Sublimation",
+      "observed_colors": [
+        "White"
+      ],
+      "dimensions": "11 oz: height 3.8 in / 9.6 cm, diameter 3.2 in / 8.2 cm. 15 oz: 4.7 in / 11.9 cm × diameter 3.3 in / 8.5 cm. 20 oz: 4.3 in / 10.9 cm × diameter 3.7 in / 9.3 cm. Supplier’s published conversions retained.",
+      "care": "This comparison blank is dishwasher and microwave safe; do not apply that promise to an unresolved colored blank.",
+      "chart": null,
+      "notes": "A printed background does not create a solid colored handle/interior. Final capacity must be selected; do not infer capacity from the approved photos."
+    },
+    "bottle": {
+      "name": "Stainless Steel Water Bottle — comparison only",
+      "url": "https://www.printful.com/custom/drinkware/personalized/stainless-steel-water-bottle",
+      "material": "High-grade stainless steel; double-wall vacuum flask",
+      "fit": "Bowling-pin silhouette; glossy finish, leak-proof cap",
+      "sizes": [
+        "17 oz / 500 ml"
+      ],
+      "technique": "UV printing",
+      "observed_colors": [
+        "Black",
+        "White"
+      ],
+      "dimensions": "Supplier size: 17 oz (500 ml), 10.5 × 2.85 in (27 × 7 cm); supplier-rounded metric values retained.",
+      "care": "Hand wash only; not dishwasher safe.",
+      "chart": null,
+      "notes": "Approved designs require matte cream / forest green. Glossy black/white comparison is not a match; a wrap print cannot be assumed to change finish, cap or full-body color."
+    },
+    "journal": {
+      "name": "Hardcover Journal Matte",
+      "url": "https://www.printful.com/custom/stationery/notebooks/hardcover-journal-matte",
+      "material": "Matte laminated covers; white uncoated lined paper, 150 pages / 75 sheets; page weight 104 g/m²",
+      "fit": "Casewrap binding with flexible sewn spine; perforated pages",
+      "sizes": [
+        "5.75 × 8 in"
+      ],
+      "technique": "Digital cover printing",
+      "observed_colors": [],
+      "dimensions": "5.75 × 8 in (14.61 × 20.32 cm in details; description rounds to 14.6 × 20.3 cm). Weight 330 g. Back barcode 0.5 × 0.5 in (1.27 × 1.27 cm).",
+      "care": "No journal-specific care instructions verified; obtain final care guidance before listing.",
+      "chart": null,
+      "notes": "Recorded dimensions and page count match. Forest green is proposed printed cover artwork, not a verified green stock blank. Check full-cover template, spine, bleed, barcode clearance and cream artwork contrast. JournalBook 5.5 × 8.5 in / 80 pages is a different product and must not replace this match."
+    },
+    "throw": {
+      "name": "Embroidered Premium Sherpa Blanket | Port Authority BP40",
+      "url": "https://www.printful.com/custom/home-living/all/embroidered-premium-sherpa-blanket-port-authority-bp40",
+      "material": "100% polyester fleece face / 100% polyester sherpa reverse",
+      "fit": "Hidden decorator access pocket",
+      "sizes": [
+        "50 × 60 in"
+      ],
+      "technique": "Right-corner / large right-corner embroidery",
+      "observed_colors": [
+        "Black",
+        "Fireside Brown",
+        "Heather Grey"
+      ],
+      "dimensions": "50 × 60 in (127 × 152.4 cm).",
+      "care": "Blanket-specific embroidered care not verified; obtain manufacturer label. Do not reuse sublimated blanket care.",
+      "chart": null,
+      "notes": "Format and corner embroidery are plausible, but reviewed color names do not establish a cream or forest-green face. Inspect both sides and placement before approving any substitution."
+    },
+    "youth-polo": {
+      "name": "No youth polo match located",
+      "url": "https://www.printful.com/custom/kids-teen/all",
+      "material": "Unverified",
+      "fit": "Child-specific polo cut required",
+      "sizes": [],
+      "technique": "Small left-chest embroidery required",
+      "observed_colors": [],
+      "dimensions": "",
+      "care": "Pending exact youth blank and manufacturer label.",
+      "chart": null,
+      "notes": "Reviewed youth catalog and adult polo category. Gildan 64800/64800L and K500 are adult products; no measurements transferred to children."
+    }
+  },
+  "shared_sources": {
+    "care": "https://help.printful.com/hc/en-us/articles/50263252811537-How-do-I-take-care-of-my-products",
+    "shipping": "https://www.printful.com/shipping",
+    "returns": "https://help.printful.com/hc/en-us/articles/50263870468753-What-is-Printful-s-return-and-refund-policy",
+    "embroidery": "https://help.printful.com/hc/en-us/articles/50263985175953-How-should-I-prepare-my-design-for-embroidery",
+    "alternative-quarter-zip": "https://www.printful.com/custom/mens/sweatshirts/unisex-garment-dyed-quarter-zip-sweatshirt-comfort-colors-1580",
+    "alternative-polo": "https://www.printful.com/custom/mens/polo-shirts/unisex-pique-polo-shirt-gildan-64800",
+    "alternative-sport-polo": "https://www.printful.com/custom/mens/polo-shirts/adidas-sport-polo-shirt?productId=767&productSlug=adidas-a430",
+    "youth-catalog": "https://www.printful.com/custom/kids-teen/all",
+    "alternative-vest": "https://www.printful.com/custom/mens/jackets/mens-columbia-fleece-vest",
+    "alternative-premium-polo": "https://www.printful.com/custom/mens/polo-shirts/unisex-premium-pique-polo-shirt-sols-11362"
+  },
+  "products": [
+    {
+      "id": "forest-green-horse-cap",
+      "title": "Forest Green Horse Cap",
+      "source_key": "cap",
+      "match_status": "blocked",
+      "finding": "Spruce is a candidate, not an approved forest-green color match.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "ac16bd4295f4ff8e1e0f278ebb37d84bea01cc07ef60c9eb612660a6382a2190",
+        "styled": "228bd0a393dce4e0083aec36a00dbe3ebdf768c2c6624647e91d55d203e4b366"
+      }
+    },
+    {
+      "id": "cream-horse-cap",
+      "title": "Cream Horse Cap",
+      "source_key": "cap",
+      "match_status": "blocked",
+      "finding": "Stone is a candidate, not an approved cream color match.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "e394e6f538c5b0b898797c6e61898096a0a20d4a47785d75fa0944cbd0fff642",
+        "styled": "8d4455cc6dce128e156ee9898a186812332cd4648764856a8288e2ccea0bd7a3"
+      }
+    },
+    {
+      "id": "white-horse-cap",
+      "title": "White Horse Cap",
+      "source_key": "cap",
+      "match_status": "candidate",
+      "finding": "White blank and front embroidery are plausible; sample and exact thread/scale proof still required.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "79064d46251da9123d298d0ee3220b49c663e75b967bdfb2e0b93bbd76555094",
+        "styled": "d6e4a501f3c660b740d9b6e8dbfd67ce509849f4bd9b090845f260bbaf12f90a"
+      }
+    },
+    {
+      "id": "forest-green-quarter-zip",
+      "title": "Forest Green Quarter Zip",
+      "source_key": "quarter-zip",
+      "match_status": "blocked",
+      "finding": "Decoration mismatch: approved embroidery versus listed DTFlex. No supplier color or size mapping approved.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "92d8efa72ea1dab4187e7985c3fc09375d40cbefe864d0094625c835e48c5f89",
+        "styled": "78dc1bab535cda6744bfc963a692efada5a7f00b6cd126a5210cd272aad951a0"
+      }
+    },
+    {
+      "id": "cream-quarter-zip",
+      "title": "Cream Quarter Zip",
+      "source_key": "quarter-zip",
+      "match_status": "blocked",
+      "finding": "Decoration mismatch: approved embroidery versus listed DTFlex. No supplier color or size mapping approved.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "34dddb98051a44fef19a289cf4b962ce7dd0305dd4cafb71b3ac2e2a962ed901",
+        "styled": "a90203f34523a559c7e09963b62900136c016b5082aea26549c45083373a45b4"
+      }
+    },
+    {
+      "id": "white-quarter-zip",
+      "title": "White Quarter Zip",
+      "source_key": "quarter-zip",
+      "match_status": "blocked",
+      "finding": "Decoration mismatch: approved embroidery versus listed DTFlex. No supplier color or size mapping approved.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "647e532b8bdddd4ad5aa5ef93b47c622fd18210a9f749a8b85c7243a185e8b2f",
+        "styled": "bf9c7b7269c7d8378fce97a81e606afd57370f58b910667906b1d72f02ef0214"
+      }
+    },
+    {
+      "id": "forest-green-quilted-vest",
+      "title": "Forest Green Quilted Vest",
+      "source_key": "vest",
+      "match_status": "blocked",
+      "finding": "Exact quilted construction not located. Fleece and knitted vests are excluded as substitutions.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "15f41cba2c17494c261f96a2fb6c5c24570aa5b2213d97f00e04cf0e173799cd",
+        "styled": "9741a9d48cd920dc7ee0b6dfb2dafb449f9701a7d9e84b1a9ca11a4c75e5451d"
+      }
+    },
+    {
+      "id": "cream-quilted-vest",
+      "title": "Cream Quilted Vest",
+      "source_key": "vest",
+      "match_status": "blocked",
+      "finding": "Exact quilted construction not located. Fleece and knitted vests are excluded as substitutions.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "bbd6bc365a705a12069a170d4da3c86fc96b2ac15164b0b5ed34530884e9081a",
+        "styled": "ff6bda3dab63d0fc9beb22b687a86d4a0ff0143da94b7932a8d16de339042c8f"
+      }
+    },
+    {
+      "id": "white-quilted-vest",
+      "title": "White Quilted Vest",
+      "source_key": "vest",
+      "match_status": "blocked",
+      "finding": "Exact quilted construction not located. Fleece and knitted vests are excluded as substitutions.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "42f2735d1ef536917650d01efd382ee861594b21c7fce4adb23cc83c5fb86ebd",
+        "styled": "3b1ca352950623b8b3ca7a54a8a4cc9441040341f0fcda08d7ca2f259a375ed4"
+      }
+    },
+    {
+      "id": "mens-white-polo",
+      "title": "Men's White Polo",
+      "source_key": "mens-polo",
+      "match_status": "candidate",
+      "finding": "White and left-chest embroidery are plausible; fit, opacity and scaled horse proof required.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56",
+        "styled": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63"
+      }
+    },
+    {
+      "id": "mens-cream-polo",
+      "title": "Men's Cream Polo",
+      "source_key": "mens-polo",
+      "match_status": "blocked",
+      "finding": "Cream is not offered; Stone is a different color and requires approval.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b",
+        "styled": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306"
+      }
+    },
+    {
+      "id": "mens-forest-green-polo",
+      "title": "Men's Forest Green Polo",
+      "source_key": "mens-polo",
+      "match_status": "blocked",
+      "finding": "Reviewed blank does not offer the approved forest-green color.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52",
+        "styled": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4"
+      }
+    },
+    {
+      "id": "mens-tonal-forest-green-polo",
+      "title": "Men's Tonal Forest Green Polo",
+      "source_key": "mens-polo",
+      "match_status": "blocked",
+      "finding": "Reviewed blank does not offer the approved forest-green color; tonal stitching also needs contrast/sample approval.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "74d5f9ac42edb9bef7d47c04bd33f89e911f675fca3572adcfa8b76a78c6eeab",
+        "styled": "dc5228370e93dde081d44118c8b5b9cd30e21d0b0a83c2138a5488b76555f93a"
+      }
+    },
+    {
+      "id": "womens-white-polo",
+      "title": "Women's White Polo",
+      "source_key": "womens-polo",
+      "match_status": "candidate",
+      "finding": "White and left-chest embroidery are plausible; fit, opacity and scaled horse proof required.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369",
+        "styled": "18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4"
+      }
+    },
+    {
+      "id": "womens-cream-polo",
+      "title": "Women's Cream Polo",
+      "source_key": "womens-polo",
+      "match_status": "blocked",
+      "finding": "Cream is not offered; White/off-white is not an approved cream substitute.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb",
+        "styled": "b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d"
+      }
+    },
+    {
+      "id": "womens-forest-green-polo",
+      "title": "Women's Forest Green Polo",
+      "source_key": "womens-polo",
+      "match_status": "blocked",
+      "finding": "Reviewed blank does not offer the approved forest-green color.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121",
+        "styled": "7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5"
+      }
+    },
+    {
+      "id": "womens-tonal-forest-green-polo",
+      "title": "Women's Tonal Forest Green Polo",
+      "source_key": "womens-polo",
+      "match_status": "blocked",
+      "finding": "Reviewed blank does not offer the approved forest-green color; tonal stitching also needs contrast/sample approval.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f",
+        "styled": "26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67"
+      }
+    },
+    {
+      "id": "girls-white-polo",
+      "title": "Girls' White Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304",
+        "styled": "3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159"
+      }
+    },
+    {
+      "id": "girls-cream-polo",
+      "title": "Girls' Cream Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018",
+        "styled": "fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a"
+      }
+    },
+    {
+      "id": "girls-forest-green-polo",
+      "title": "Girls' Forest Green Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7",
+        "styled": "4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e"
+      }
+    },
+    {
+      "id": "girls-tonal-forest-green-polo",
+      "title": "Girls' Tonal Forest Green Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59",
+        "styled": "9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064"
+      }
+    },
+    {
+      "id": "boys-white-polo",
+      "title": "Boys' White Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185",
+        "styled": "ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b"
+      }
+    },
+    {
+      "id": "boys-cream-polo",
+      "title": "Boys' Cream Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834",
+        "styled": "1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c"
+      }
+    },
+    {
+      "id": "boys-forest-green-polo",
+      "title": "Boys' Forest Green Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7",
+        "styled": "33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264"
+      }
+    },
+    {
+      "id": "boys-tonal-forest-green-polo",
+      "title": "Boys' Tonal Forest Green Polo",
+      "source_key": "youth-polo",
+      "match_status": "blocked",
+      "finding": "Youth-specific polo blank and chart not located; adult polos are not child sizing.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4",
+        "styled": "ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4"
+      }
+    },
+    {
+      "id": "mens-forest-green-hoodie",
+      "title": "Men's Forest Green Hoodie",
+      "source_key": "adult-hoodie",
+      "match_status": "candidate",
+      "finding": "Forest Green is listed; shade, artwork technique and placement need sample approval.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "e06ba7171f36e98a4f59cafae677483bcf4a3400fb08be05346b92b1bf3eab66",
+        "styled": "efc18d4786567037dd254a848d50765caf5cb228f6c2f9b6385128d839f487c3"
+      }
+    },
+    {
+      "id": "mens-cream-hoodie",
+      "title": "Men's Cream Hoodie",
+      "source_key": "adult-hoodie",
+      "match_status": "blocked",
+      "finding": "Sand differs from cream and requires color approval.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "b23d180cf98f82a668203fcd2630f5adc9ece7f33f5658efeb9e352d45ef2ccc",
+        "styled": "e1173f9f57a89a03f6c6804630d86ce83124e985cad6b39c2eeb68f6753b4161"
+      }
+    },
+    {
+      "id": "womens-forest-green-hoodie",
+      "title": "Women's Forest Green Hoodie",
+      "source_key": "adult-hoodie",
+      "match_status": "blocked",
+      "finding": "Unisex blank must be approved against the women’s silhouette; forest-green shade and artwork proof pending.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "0c1c873acdc142636cb88d514bd395d0f11ca218c8889fed6d4b7f3e2ba0a8bd",
+        "styled": "4e517af80635a5149425243f4d800ca52f8fc96786b0e23ab48d4da2917cdc4c"
+      }
+    },
+    {
+      "id": "boys-forest-green-hoodie",
+      "title": "Boys' Forest Green Hoodie",
+      "source_key": "youth-hoodie",
+      "match_status": "blocked",
+      "finding": "Reviewed youth blank does not offer forest green; no adult substitution.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff",
+        "styled": "e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c"
+      }
+    },
+    {
+      "id": "girls-forest-green-hoodie",
+      "title": "Girls' Forest Green Hoodie",
+      "source_key": "youth-hoodie",
+      "match_status": "blocked",
+      "finding": "Reviewed youth blank does not offer forest green; no adult substitution.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da",
+        "styled": "ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65"
+      }
+    },
+    {
+      "id": "cream-horse-mug",
+      "title": "Cream Horse Mug",
+      "source_key": "mug",
+      "match_status": "blocked",
+      "finding": "Solid cream body/handle/interior not matched. White sublimation blank is comparison only; choose capacity after exact blank selection.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "652a3ad302c01f48bb6065fd235bcf3a2743b4c40d243e52fd26bde8be6063ca",
+        "styled": "e3134dbc2d73dd6d3c438ea33181ad61fefc62dfa3df69d33ec4e34a411c51fe"
+      }
+    },
+    {
+      "id": "forest-green-horse-mug",
+      "title": "Forest Green Horse Mug",
+      "source_key": "mug",
+      "match_status": "blocked",
+      "finding": "Solid forest green body/handle/interior not matched. White sublimation blank is comparison only; choose capacity after exact blank selection.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "2c50ab7afb0d40496af5af804fd61d05e92396811854eb8ad2404cb32fa783aa",
+        "styled": "c3c9e28207c225a0e2a31bc319e8e2d4977becc6de27dd035249545d9368bde8"
+      }
+    },
+    {
+      "id": "cream-document-logo-mug",
+      "title": "Cream Document Logo Mug",
+      "source_key": "mug",
+      "match_status": "blocked",
+      "finding": "Solid cream body/handle/interior not matched. White sublimation blank is comparison only; choose capacity after exact blank selection.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "b0b68c346463b40a98e2759df4438f02c35b48bffcf161a046cab9e7c01defe6",
+        "styled": "8afab07033164790206ca8ec289d322a1c24cd8d158f7921b0c65d2d8a0cdebc"
+      }
+    },
+    {
+      "id": "forest-green-document-logo-mug",
+      "title": "Forest Green Document Logo Mug",
+      "source_key": "mug",
+      "match_status": "blocked",
+      "finding": "Solid forest green body/handle/interior not matched. White sublimation blank is comparison only; choose capacity after exact blank selection.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "3cd1f124fe2b5ff80f3143222532dc5fd600689cc206ac8b8d841d1c5e20b0c1",
+        "styled": "39758adf371a65e85c3a16fece518786d177bd9c56d0fcc3e0b9b093fd6073c0"
+      }
+    },
+    {
+      "id": "cream-horse-water-bottle",
+      "title": "Cream Horse Water Bottle",
+      "source_key": "bottle",
+      "match_status": "blocked",
+      "finding": "Matte cream finish not matched by the reviewed glossy black/white bottle.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "b0adbcdb77ef967ea4d217ac4891b5a8c77c93330e9235634160deee82a40b6b",
+        "styled": "c5de89354560b8bf2f39b4d960b3e23fad1262c814a502768a3db16c2f32cec2"
+      }
+    },
+    {
+      "id": "forest-green-horse-water-bottle",
+      "title": "Forest Green Horse Water Bottle",
+      "source_key": "bottle",
+      "match_status": "blocked",
+      "finding": "Matte forest green finish not matched by the reviewed glossy black/white bottle.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "9d27c7d2710ed8d39799c1a2b150fc1bc7dcabd213a2ac9d891183e70cbd603f",
+        "styled": "19b9ed0035df6e8569131b414c2c77c609b33ad4e8a4f6f2f0cf0996a930d02c"
+      }
+    },
+    {
+      "id": "cream-document-logo-water-bottle",
+      "title": "Cream Document Logo Water Bottle",
+      "source_key": "bottle",
+      "match_status": "blocked",
+      "finding": "Matte cream finish not matched by the reviewed glossy black/white bottle.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "08790e2f24977ca78857011137581ddf958883f9ce7c72aea43d718604cc2e0b",
+        "styled": "e6e6044dfb6ed0f2b6ea5f442a47988745eb498ec9517f001eb2555e52ae5f9c"
+      }
+    },
+    {
+      "id": "forest-green-document-logo-water-bottle",
+      "title": "Forest Green Document Logo Water Bottle",
+      "source_key": "bottle",
+      "match_status": "blocked",
+      "finding": "Matte forest green finish not matched by the reviewed glossy black/white bottle.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "30a45b1d3a6586d8a332e081d83fdc47da87bc89822b7a178735e0bc7b6f7189",
+        "styled": "9b1782878f1f5cdb2fac5af2c45a627c62225c37767ca9f58a34f227c1075905"
+      }
+    },
+    {
+      "id": "forest-green-horse-journal",
+      "title": "Forest Green Horse Journal",
+      "source_key": "journal",
+      "match_status": "candidate",
+      "finding": "Format matches; printed forest-green cover, bleed/spine, barcode and cream artwork require proof.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46",
+        "styled": "8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09"
+      }
+    },
+    {
+      "id": "forest-green-document-logo-journal",
+      "title": "Forest Green Document Logo Journal",
+      "source_key": "journal",
+      "match_status": "candidate",
+      "finding": "Format matches; printed forest-green cover, bleed/spine, barcode and cream artwork require proof.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb",
+        "styled": "659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573"
+      }
+    },
+    {
+      "id": "cream-embroidered-throw",
+      "title": "Cream Embroidered Throw",
+      "source_key": "throw",
+      "match_status": "blocked",
+      "finding": "Cream face color not matched; preserve small corner embroidery. Confirm fleece/sherpa texture against approved concept.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "a4d423e27abba190f6658165b4511f5c7a2311daad738d0fefcd90109a393ce3",
+        "styled": "a6c55a31ea91e16daa32162af73302e1a966d193c8e9f6ba6758e494500c29d9"
+      }
+    },
+    {
+      "id": "forest-green-embroidered-throw",
+      "title": "Forest Green Embroidered Throw",
+      "source_key": "throw",
+      "match_status": "blocked",
+      "finding": "Forest green face color not matched; preserve small corner embroidery. Confirm fleece/sherpa texture against approved concept.",
+      "supplier_variant_id": null,
+      "retail_price": null,
+      "stock_confirmed": false,
+      "manufacturing_approved": false,
+      "image_hashes": {
+        "product": "858ae46e5775cf5c4c030c79971cfd143f9b67363148f3696894c5a65ae4b4a7",
+        "styled": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48"
+      }
+    }
+  ],
+  "reviewed_alternatives": [
+    {
+      "name": "SOL’S 11362",
+      "finding": "Adult unisex, S–5XL, left-chest embroidery; reviewed range Black, Grey Melange, Mouse Grey, Navy, Red, Sand, White does not establish cream/forest green; different fit chart from K500."
+    },
+    {
+      "name": "Gildan 64800",
+      "finding": "Adult unisex S–4XL; reviewed colors Black, Navy, Sport Grey, White; not a youth chart."
+    },
+    {
+      "name": "adidas A430",
+      "finding": "Adult unisex S–4XL; reviewed colors Black, Collegiate Navy, Collegiate Royal, Grey Three, White; no forest-green match established."
+    }
+  ]
+}

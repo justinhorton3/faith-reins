@@ -7,7 +7,18 @@
   "companion_images": 2,
   "repository_source_assets": 87,
   "preserved_source_records": 432,
-  "checksummed_files": 596,
+  "supplier_audit": {
+    "passed": true,
+    "products": 42,
+    "original_images_unchanged": 84,
+    "match_counts": {
+      "candidate": 6,
+      "blocked": 36
+    },
+    "ready_to_order": 0,
+    "mockup_chart_matches_source": true
+  },
+  "checksummed_files": 605,
   "image_policy": "original bytes unchanged",
   "pdf_status": "available: original 18 pages in six lossless local volumes",
   "checks": [
@@ -23,13 +34,14 @@
     "active HTML links",
     "CSS imports and font paths",
     "active Markdown links",
+    "supplier audit coverage, image hashes and mockup chart parity",
     "package-contained link targets",
     "no symlinks"
   ],
   "not_checked": [
     "actual browser responsive behavior",
     "physical print and embroidery",
-    "supplier availability and measurement charts",
+    "final supplier variant inventory, unresolved chart methods and physical sample fit",
     "website integration and deployment"
   ],
   "errors": []
