@@ -1,5 +1,5 @@
-// Faith Reins v6 components for the static build. Markup only; styles live in src/styles/global.css.
-// Follows brand/FaithReins_DesignSystem_v6 (tokens, components, ui_kits/website).
+// Website-owned markup helpers with V7 identity snapshots.
+// Styles and assets stay local to the website; no reference-package runtime dependency.
 import media from "./media.json" with { type: "json" };
 
 export { media };
@@ -38,10 +38,10 @@ export const eyebrow = (text, { inv = false, rule = false } = {}) =>
   `<span class="${cx("eyebrow", inv && "eyebrow--inv", rule && "eyebrow--rule")}">${esc(text)}</span>`;
 
 /* ---------- Brand ---------- */
-// Lockup L1: horse mark, FAITH REINS, tagline between gold rules. Sizes xs | sm | md.
-export function lockup({ size = "sm", tone = "light", tag = true } = {}) {
-  const mark = img(tone === "light" ? "mark-green" : "mark-cream");
-  return `<span class="${cx("lockup", "lockup--" + size, tone === "dark" && "lockup--dark")}"><img class="lockup__mark" src="${mark}" alt="" width="60" height="44"><span class="lockup__text"><span class="lockup__title">FAITH REINS</span>${tag ? '<span class="lockup__tag"><i></i><span>Pediatric &amp; Equine Therapy</span><i></i></span>' : ""}</span></span>`;
+// Exact V7 horizontal artwork, including the full subtitle, from website-owned copies.
+export function lockup({ size = "sm", tone = "light" } = {}) {
+  const artwork = `/assets/v7/faith-reins-v7-website-horizontal-${tone === "dark" ? "cream" : "green"}.svg`;
+  return `<span class="${cx("lockup", "lockup--" + size)}"><img class="lockup__artwork" src="${artwork}" alt="Faith Reins — Pediatric &amp; Equine Therapy" width="2252" height="384"></span>`;
 }
 
 /* ---------- Layout ---------- */

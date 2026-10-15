@@ -1,0 +1,58 @@
+{
+  "reference_version": "7.0.0-local-review.1",
+  "reference_commit": "c6a791d5b367d13a910628497df3c80902865c3e",
+  "ownership": "Committed website snapshots; informational provenance only; no build/runtime imports from brand",
+  "assets": [
+    {
+      "source": "brand/v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "website_path": "public/assets/v7/faith-reins-v7-website-horizontal-green.svg",
+      "sha256": "489f66ac3ee9c53dec982dc57b963e44f94b2dcf8606091ea0445bf58d86e1b6"
+    },
+    {
+      "source": "brand/v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "website_path": "public/assets/v7/faith-reins-v7-website-horizontal-cream.svg",
+      "sha256": "13b3a6c8d03047ed9b49868d4d9021338313082ad4c93d1794450c854a965a51"
+    },
+    {
+      "source": "brand/v7-design-system/approved/horse/horse-master-green.svg",
+      "website_path": "public/assets/v7/horse-master-green.svg",
+      "sha256": "cb7edf2ea7f2dd7ef2808910d01585f8703c745c357912d1714014d738223c5a"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/OFL-HankenGrotesk.txt",
+      "website_path": "public/fonts/OFL-HankenGrotesk.txt",
+      "sha256": "e02ccb89a86839b22feff7872ff5cc355cc0f58318d29eee20e2cf83a612f16d",
+      "status": "existing independent copy verified unchanged"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/OFL-LibreCaslon.txt",
+      "website_path": "public/fonts/OFL-LibreCaslon.txt",
+      "sha256": "a294245c822c5aa9fd9a9f3189418e99415428be5fecadf797793d5d8f6a3ad3",
+      "status": "existing independent copy verified unchanged"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/hanken-grotesk.woff",
+      "website_path": "public/fonts/hanken-grotesk.woff",
+      "sha256": "f4154c8d9556936813d91437f4d08fb9d68d2f698318d8cc21c413f3a8e807ba",
+      "status": "existing independent copy verified unchanged"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/libre-caslon-display.woff",
+      "website_path": "public/fonts/libre-caslon-display.woff",
+      "sha256": "5b2e472da4e58952cf4fe4c63a81171c1711e28a4c2bae5078384a59b06409dd",
+      "status": "existing independent copy verified unchanged"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/libre-caslon-text-italic.woff",
+      "website_path": "public/fonts/libre-caslon-text-italic.woff",
+      "sha256": "f602fc286a2bc59ad63aae98be91fce9c5243a1386a1aeb2160d69ce0f89aa7b",
+      "status": "existing independent copy verified unchanged"
+    },
+    {
+      "source": "brand/v7-design-system/foundations/fonts/libre-caslon-text.woff",
+      "website_path": "public/fonts/libre-caslon-text.woff",
+      "sha256": "b2bed83db3a09d6c6f499e6ed0502c890996f047e517f762dd65ba641d7e83e1",
+      "status": "existing independent copy verified unchanged"
+    }
+  ]
+}
