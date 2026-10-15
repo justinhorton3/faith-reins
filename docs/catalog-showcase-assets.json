@@ -1,0 +1,680 @@
+{
+  "sourceRevision": "492b51e1c77805078fb5fc927e2a77941321e43f",
+  "supplierReferenceRevision": "084f5bb0bed10e82a9088fb4202bf5bc2e54a831",
+  "productFamilies": 18,
+  "approvedVariants": 42,
+  "assets": [
+    {
+      "catalogId": "mens-white-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-white-polo-product.png",
+      "website": "public/assets/shop/v7/polos/mens-white-polo-product.png",
+      "sha256": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-white-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-white-polo-styled.png",
+      "website": "public/assets/shop/v7/polos/mens-white-polo-styled.png",
+      "sha256": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-cream-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-polo-product.png",
+      "website": "public/assets/shop/v7/polos/mens-cream-polo-product.png",
+      "sha256": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-cream-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-polo-styled.png",
+      "website": "public/assets/shop/v7/polos/mens-cream-polo-styled.png",
+      "sha256": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/polos/mens-forest-green-polo-product.png",
+      "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/polos/mens-forest-green-polo-styled.png",
+      "sha256": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-tonal-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-tonal-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/mens-tonal-forest-green-polo-product.png",
+      "sha256": "74d5f9ac42edb9bef7d47c04bd33f89e911f675fca3572adcfa8b76a78c6eeab",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-tonal-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-tonal-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/mens-tonal-forest-green-polo-styled.png",
+      "sha256": "dc5228370e93dde081d44118c8b5b9cd30e21d0b0a83c2138a5488b76555f93a",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-white-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/womens-white-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/womens-white-polo-product.png",
+      "sha256": "f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369",
+      "reviewStatus": "derived_companion_view"
+    },
+    {
+      "catalogId": "womens-white-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/womens-white-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/womens-white-polo-styled.png",
+      "sha256": "18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-cream-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/womens-cream-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/womens-cream-polo-product.png",
+      "sha256": "ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-cream-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/womens-cream-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/womens-cream-polo-styled.png",
+      "sha256": "b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/womens-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/womens-forest-green-polo-product.png",
+      "sha256": "ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/womens-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/womens-forest-green-polo-styled.png",
+      "sha256": "7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-tonal-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/womens-tonal-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/womens-tonal-forest-green-polo-product.png",
+      "sha256": "d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-tonal-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/womens-tonal-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/womens-tonal-forest-green-polo-styled.png",
+      "sha256": "26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-white-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/boys-white-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/boys-white-polo-product.png",
+      "sha256": "1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-white-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/boys-white-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/boys-white-polo-styled.png",
+      "sha256": "ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-cream-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/boys-cream-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/boys-cream-polo-product.png",
+      "sha256": "6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-cream-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/boys-cream-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/boys-cream-polo-styled.png",
+      "sha256": "1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/boys-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/boys-forest-green-polo-product.png",
+      "sha256": "f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/boys-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/boys-forest-green-polo-styled.png",
+      "sha256": "33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-tonal-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/boys-tonal-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/boys-tonal-forest-green-polo-product.png",
+      "sha256": "299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-tonal-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/boys-tonal-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/boys-tonal-forest-green-polo-styled.png",
+      "sha256": "ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-white-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/girls-white-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/girls-white-polo-product.png",
+      "sha256": "10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-white-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/girls-white-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/girls-white-polo-styled.png",
+      "sha256": "3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-cream-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/girls-cream-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/girls-cream-polo-product.png",
+      "sha256": "a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-cream-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/girls-cream-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/girls-cream-polo-styled.png",
+      "sha256": "fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/girls-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/girls-forest-green-polo-product.png",
+      "sha256": "093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/girls-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/girls-forest-green-polo-styled.png",
+      "sha256": "4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-tonal-forest-green-polo",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/girls-tonal-forest-green-polo-product.png",
+      "website": "public/assets/shop/v7/catalog/girls-tonal-forest-green-polo-product.png",
+      "sha256": "f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-tonal-forest-green-polo",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/girls-tonal-forest-green-polo-styled.png",
+      "website": "public/assets/shop/v7/catalog/girls-tonal-forest-green-polo-styled.png",
+      "sha256": "9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-quarter-zip",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-quarter-zip-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-quarter-zip-product.png",
+      "sha256": "92d8efa72ea1dab4187e7985c3fc09375d40cbefe864d0094625c835e48c5f89",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-quarter-zip",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-quarter-zip-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-quarter-zip-styled.png",
+      "sha256": "78dc1bab535cda6744bfc963a692efada5a7f00b6cd126a5210cd272aad951a0",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-quarter-zip",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-quarter-zip-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-quarter-zip-product.png",
+      "sha256": "34dddb98051a44fef19a289cf4b962ce7dd0305dd4cafb71b3ac2e2a962ed901",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-quarter-zip",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-quarter-zip-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-quarter-zip-styled.png",
+      "sha256": "a90203f34523a559c7e09963b62900136c016b5082aea26549c45083373a45b4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-quarter-zip",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/white-quarter-zip-product.png",
+      "website": "public/assets/shop/v7/catalog/white-quarter-zip-product.png",
+      "sha256": "647e532b8bdddd4ad5aa5ef93b47c622fd18210a9f749a8b85c7243a185e8b2f",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-quarter-zip",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/white-quarter-zip-styled.png",
+      "website": "public/assets/shop/v7/catalog/white-quarter-zip-styled.png",
+      "sha256": "bf9c7b7269c7d8378fce97a81e606afd57370f58b910667906b1d72f02ef0214",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-quilted-vest",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-quilted-vest-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-quilted-vest-product.png",
+      "sha256": "15f41cba2c17494c261f96a2fb6c5c24570aa5b2213d97f00e04cf0e173799cd",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-quilted-vest",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-quilted-vest-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-quilted-vest-styled.png",
+      "sha256": "9741a9d48cd920dc7ee0b6dfb2dafb449f9701a7d9e84b1a9ca11a4c75e5451d",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-quilted-vest",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-quilted-vest-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-quilted-vest-product.png",
+      "sha256": "bbd6bc365a705a12069a170d4da3c86fc96b2ac15164b0b5ed34530884e9081a",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-quilted-vest",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-quilted-vest-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-quilted-vest-styled.png",
+      "sha256": "ff6bda3dab63d0fc9beb22b687a86d4a0ff0143da94b7932a8d16de339042c8f",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-quilted-vest",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/white-quilted-vest-product.png",
+      "website": "public/assets/shop/v7/catalog/white-quilted-vest-product.png",
+      "sha256": "42f2735d1ef536917650d01efd382ee861594b21c7fce4adb23cc83c5fb86ebd",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-quilted-vest",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/white-quilted-vest-styled.png",
+      "website": "public/assets/shop/v7/catalog/white-quilted-vest-styled.png",
+      "sha256": "3b1ca352950623b8b3ca7a54a8a4cc9441040341f0fcda08d7ca2f259a375ed4",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-forest-green-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-hoodie-product.png",
+      "website": "public/assets/shop/v7/catalog/mens-forest-green-hoodie-product.png",
+      "sha256": "e06ba7171f36e98a4f59cafae677483bcf4a3400fb08be05346b92b1bf3eab66",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-forest-green-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-hoodie-styled.png",
+      "website": "public/assets/shop/v7/catalog/mens-forest-green-hoodie-styled.png",
+      "sha256": "efc18d4786567037dd254a848d50765caf5cb228f6c2f9b6385128d839f487c3",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-cream-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-hoodie-product.png",
+      "website": "public/assets/shop/v7/catalog/mens-cream-hoodie-product.png",
+      "sha256": "b23d180cf98f82a668203fcd2630f5adc9ece7f33f5658efeb9e352d45ef2ccc",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "mens-cream-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-hoodie-styled.png",
+      "website": "public/assets/shop/v7/catalog/mens-cream-hoodie-styled.png",
+      "sha256": "e1173f9f57a89a03f6c6804630d86ce83124e985cad6b39c2eeb68f6753b4161",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-forest-green-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/womens-forest-green-hoodie-product.png",
+      "website": "public/assets/shop/v7/catalog/womens-forest-green-hoodie-product.png",
+      "sha256": "0c1c873acdc142636cb88d514bd395d0f11ca218c8889fed6d4b7f3e2ba0a8bd",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "womens-forest-green-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/womens-forest-green-hoodie-styled.png",
+      "website": "public/assets/shop/v7/catalog/womens-forest-green-hoodie-styled.png",
+      "sha256": "4e517af80635a5149425243f4d800ca52f8fc96786b0e23ab48d4da2917cdc4c",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-forest-green-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/boys-forest-green-hoodie-product.png",
+      "website": "public/assets/shop/v7/catalog/boys-forest-green-hoodie-product.png",
+      "sha256": "45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "boys-forest-green-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/boys-forest-green-hoodie-styled.png",
+      "website": "public/assets/shop/v7/catalog/boys-forest-green-hoodie-styled.png",
+      "sha256": "e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-forest-green-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/girls-forest-green-hoodie-product.png",
+      "website": "public/assets/shop/v7/catalog/girls-forest-green-hoodie-product.png",
+      "sha256": "8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "girls-forest-green-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/girls-forest-green-hoodie-styled.png",
+      "website": "public/assets/shop/v7/catalog/girls-forest-green-hoodie-styled.png",
+      "sha256": "ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-cap",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-cap-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-cap-product.png",
+      "sha256": "ac16bd4295f4ff8e1e0f278ebb37d84bea01cc07ef60c9eb612660a6382a2190",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-cap",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-cap-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-cap-styled.png",
+      "sha256": "228bd0a393dce4e0083aec36a00dbe3ebdf768c2c6624647e91d55d203e4b366",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-cap",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-cap-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-cap-product.png",
+      "sha256": "e394e6f538c5b0b898797c6e61898096a0a20d4a47785d75fa0944cbd0fff642",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-cap",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-cap-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-cap-styled.png",
+      "sha256": "8d4455cc6dce128e156ee9898a186812332cd4648764856a8288e2ccea0bd7a3",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-horse-cap",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/white-horse-cap-product.png",
+      "website": "public/assets/shop/v7/catalog/white-horse-cap-product.png",
+      "sha256": "79064d46251da9123d298d0ee3220b49c663e75b967bdfb2e0b93bbd76555094",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "white-horse-cap",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/white-horse-cap-styled.png",
+      "website": "public/assets/shop/v7/catalog/white-horse-cap-styled.png",
+      "sha256": "d6e4a501f3c660b740d9b6e8dbfd67ce509849f4bd9b090845f260bbaf12f90a",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-mug",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-mug-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-mug-product.png",
+      "sha256": "652a3ad302c01f48bb6065fd235bcf3a2743b4c40d243e52fd26bde8be6063ca",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-mug",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-mug-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-mug-styled.png",
+      "sha256": "e3134dbc2d73dd6d3c438ea33181ad61fefc62dfa3df69d33ec4e34a411c51fe",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-mug",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-mug-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-mug-product.png",
+      "sha256": "2c50ab7afb0d40496af5af804fd61d05e92396811854eb8ad2404cb32fa783aa",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-mug",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-mug-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-mug-styled.png",
+      "sha256": "c3c9e28207c225a0e2a31bc319e8e2d4977becc6de27dd035249545d9368bde8",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-document-logo-mug",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-document-logo-mug-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-document-logo-mug-product.png",
+      "sha256": "b0b68c346463b40a98e2759df4438f02c35b48bffcf161a046cab9e7c01defe6",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-document-logo-mug",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-document-logo-mug-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-document-logo-mug-styled.png",
+      "sha256": "8afab07033164790206ca8ec289d322a1c24cd8d158f7921b0c65d2d8a0cdebc",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-mug",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-mug-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-mug-product.png",
+      "sha256": "3cd1f124fe2b5ff80f3143222532dc5fd600689cc206ac8b8d841d1c5e20b0c1",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-mug",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-mug-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-mug-styled.png",
+      "sha256": "39758adf371a65e85c3a16fece518786d177bd9c56d0fcc3e0b9b093fd6073c0",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-water-bottle",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-water-bottle-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-water-bottle-product.png",
+      "sha256": "b0adbcdb77ef967ea4d217ac4891b5a8c77c93330e9235634160deee82a40b6b",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-horse-water-bottle",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-horse-water-bottle-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-horse-water-bottle-styled.png",
+      "sha256": "c5de89354560b8bf2f39b4d960b3e23fad1262c814a502768a3db16c2f32cec2",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-water-bottle",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-water-bottle-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-water-bottle-product.png",
+      "sha256": "9d27c7d2710ed8d39799c1a2b150fc1bc7dcabd213a2ac9d891183e70cbd603f",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-water-bottle",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-water-bottle-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-water-bottle-styled.png",
+      "sha256": "19b9ed0035df6e8569131b414c2c77c609b33ad4e8a4f6f2f0cf0996a930d02c",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-document-logo-water-bottle",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-document-logo-water-bottle-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-document-logo-water-bottle-product.png",
+      "sha256": "08790e2f24977ca78857011137581ddf958883f9ce7c72aea43d718604cc2e0b",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-document-logo-water-bottle",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-document-logo-water-bottle-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-document-logo-water-bottle-styled.png",
+      "sha256": "e6e6044dfb6ed0f2b6ea5f442a47988745eb498ec9517f001eb2555e52ae5f9c",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-water-bottle",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-water-bottle-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-product.png",
+      "sha256": "30a45b1d3a6586d8a332e081d83fdc47da87bc89822b7a178735e0bc7b6f7189",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-water-bottle",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-water-bottle-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-styled.png",
+      "sha256": "9b1782878f1f5cdb2fac5af2c45a627c62225c37767ca9f58a34f227c1075905",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-journal",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-journal-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-journal-product.png",
+      "sha256": "a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-horse-journal",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-horse-journal-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-horse-journal-styled.png",
+      "sha256": "8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-journal",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-journal-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-journal-product.png",
+      "sha256": "6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-document-logo-journal",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-document-logo-journal-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-document-logo-journal-styled.png",
+      "sha256": "659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-embroidered-throw",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/cream-embroidered-throw-product.png",
+      "website": "public/assets/shop/v7/catalog/cream-embroidered-throw-product.png",
+      "sha256": "a4d423e27abba190f6658165b4511f5c7a2311daad738d0fefcd90109a393ce3",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "cream-embroidered-throw",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/cream-embroidered-throw-styled.png",
+      "website": "public/assets/shop/v7/catalog/cream-embroidered-throw-styled.png",
+      "sha256": "a6c55a31ea91e16daa32162af73302e1a966d193c8e9f6ba6758e494500c29d9",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-embroidered-throw",
+      "view": "product",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-embroidered-throw-product.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-embroidered-throw-product.png",
+      "sha256": "858ae46e5775cf5c4c030c79971cfd143f9b67363148f3696894c5a65ae4b4a7",
+      "reviewStatus": "approved_visual_reference"
+    },
+    {
+      "catalogId": "forest-green-embroidered-throw",
+      "view": "styled",
+      "source": "brand/v7-design-system/approved/product-images/forest-green-embroidered-throw-styled.png",
+      "website": "public/assets/shop/v7/catalog/forest-green-embroidered-throw-styled.png",
+      "sha256": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48",
+      "reviewStatus": "derived_companion_view"
+    }
+  ]
+}

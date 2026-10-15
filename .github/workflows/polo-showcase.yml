@@ -1,11 +1,13 @@
-name: Validate polo showcase
+name: Validate catalog showcase
 on:
   pull_request:
     branches: [main]
     paths:
       - 'src/**'
-      - 'public/assets/shop/v7/polos/**'
-      - 'tests/polo-showcase.spec.js'
+      - 'public/assets/shop/v7/**'
+      - 'tests/catalog-showcase.spec.js'
+      - 'scripts/verify-catalog-showcase.mjs'
+      - 'docs/catalog-showcase-assets.json'
       - '.github/workflows/polo-showcase.yml'
       - 'package*.json'
       - 'playwright.config.ts'
@@ -24,11 +26,12 @@ jobs:
       - run: npm run build
         env:
           ASTRO_TELEMETRY_DISABLED: '1'
+      - run: node scripts/verify-catalog-showcase.mjs
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test tests/polo-showcase.spec.js --reporter=line --workers=2
+      - run: npx playwright test tests/catalog-showcase.spec.js --reporter=line --workers=4
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: polo-showcase-browser-results
+          name: catalog-showcase-browser-results
           path: test-results/
           retention-days: 7

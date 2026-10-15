@@ -1,575 +1,1425 @@
 [
- {
-  "slug": "mens-tee",
-  "name": "Men's Tee",
-  "fit": "Men's",
-  "group": "mens",
-  "cat": "apparel",
-  "price": 24,
-  "sizes": [
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL",
-   "3XL"
-  ],
-  "chart": "mens",
-  "desc": "A classic tee in soft cotton, Faith Reins forest green. The horizontal lockup printed in cream on the left chest.",
-  "render": {
-   "kind": "top",
-   "style": "tee",
-   "cut": "mens",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-horizontal-cream",
-    "place": "left-chest",
-    "width": 170
-   }
-  }
- },
- {
-  "slug": "womens-tee",
-  "name": "Women's Tee",
-  "fit": "Women's",
-  "group": "womens",
-  "cat": "apparel",
-  "price": 22,
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL"
-  ],
-  "chart": "womens",
-  "desc": "A relaxed women's cut in natural cotton with the stacked Faith Reins lockup in green across the front. Soft, lightweight, and made to move.",
-  "render": {
-   "kind": "top",
-   "style": "tee",
-   "cut": "womens",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-stacked-green",
-    "place": "full-front",
-    "width": 270
-   }
-  }
- },
- {
-  "slug": "childrens-tee",
-  "name": "Youth Tee",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 18,
-  "sizes": [
-   "YXS",
-   "YS",
-   "YM",
-   "YL",
-   "YXL"
-  ],
-  "chart": "youth",
-  "desc": "A soft youth tee in natural cotton with the Faith Reins horse and name in green. Built for play.",
-  "render": {
-   "kind": "top",
-   "style": "tee",
-   "cut": "youth",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-stacked-green",
-    "place": "center-chest",
-    "width": 240
-   }
-  }
- },
- {
-  "slug": "toddler-tee",
-  "name": "Toddler Tee",
-  "fit": "Toddler",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 16,
-  "sizes": [
-   "2T",
-   "3T",
-   "4T",
-   "5T"
-  ],
-  "chart": "toddler",
-  "desc": "A little tee for the littlest supporters, in forest green with the Faith Reins horse in cream.",
-  "render": {
-   "kind": "top",
-   "style": "tee",
-   "cut": "toddler",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-mark-cream",
-    "place": "center-chest",
-    "width": 170
-   }
-  }
- },
- {
-  "slug": "long-sleeve-tee",
-  "name": "Men's Long Sleeve Tee",
-  "fit": "Men's",
-  "group": "mens",
-  "cat": "apparel",
-  "price": 30,
-  "sizes": [
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL",
-   "3XL"
-  ],
-  "chart": "mens",
-  "desc": "A soft cotton-blend long sleeve in forest green with the horizontal lockup in cream on the left chest. Layerable and comfortable across all seasons.",
-  "render": {
-   "kind": "top",
-   "style": "longsleeve",
-   "cut": "mens",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-horizontal-cream",
-    "place": "left-chest",
-    "width": 170
-   }
-  }
- },
- {
-  "slug": "womens-long-sleeve-tee",
-  "name": "Women's Long Sleeve Tee",
-  "fit": "Women's",
-  "group": "womens",
-  "cat": "apparel",
-  "price": 30,
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL"
-  ],
-  "chart": "womens",
-  "desc": "A women's cut long sleeve in natural cotton blend with the horizontal lockup in green on the left chest.",
-  "render": {
-   "kind": "top",
-   "style": "longsleeve",
-   "cut": "womens",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-horizontal-green",
-    "place": "left-chest",
-    "width": 158
-   }
-  }
- },
- {
-  "slug": "youth-long-sleeve-tee",
-  "name": "Youth Long Sleeve Tee",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 22,
-  "sizes": [
-   "YXS",
-   "YS",
-   "YM",
-   "YL",
-   "YXL"
-  ],
-  "chart": "youth",
-  "desc": "A youth long sleeve in forest green with the Faith Reins horse and name in cream. Good for cool mornings at the barn.",
-  "render": {
-   "kind": "top",
-   "style": "longsleeve",
-   "cut": "youth",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-stacked-cream",
-    "place": "center-chest",
-    "width": 230
-   }
-  }
- },
- {
-  "slug": "crewneck",
-  "name": "Men's Crewneck",
-  "fit": "Men's",
-  "group": "mens",
-  "cat": "apparel",
-  "price": 38,
-  "sizes": [
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL",
-   "3XL"
-  ],
-  "chart": "mens",
-  "desc": "A classic midweight crewneck sweatshirt in forest green with the stacked Faith Reins lockup in cream. Perfect for fall afternoons.",
-  "render": {
-   "kind": "top",
-   "style": "crewneck",
-   "cut": "mens",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-stacked-cream",
-    "place": "center-chest",
-    "width": 260
-   }
-  }
- },
- {
-  "slug": "womens-crewneck",
-  "name": "Women's Crewneck",
-  "fit": "Women's",
-  "group": "womens",
-  "cat": "apparel",
-  "price": 38,
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL"
-  ],
-  "chart": "womens",
-  "desc": "A women's cut midweight crewneck in natural with the stacked Faith Reins lockup in green.",
-  "render": {
-   "kind": "top",
-   "style": "crewneck",
-   "cut": "womens",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-stacked-green",
-    "place": "center-chest",
-    "width": 240
-   }
-  }
- },
- {
-  "slug": "youth-crewneck",
-  "name": "Youth Crewneck",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 28,
-  "sizes": [
-   "YXS",
-   "YS",
-   "YM",
-   "YL",
-   "YXL"
-  ],
-  "chart": "youth",
-  "desc": "A cozy youth crewneck in forest green with the stacked Faith Reins lockup in cream.",
-  "render": {
-   "kind": "top",
-   "style": "crewneck",
-   "cut": "youth",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-stacked-cream",
-    "place": "center-chest",
-    "width": 230
-   }
-  }
- },
- {
-  "slug": "heritage-hoodie",
-  "name": "Men's Heritage Hoodie",
-  "fit": "Men's",
-  "group": "mens",
-  "cat": "apparel",
-  "price": 45,
-  "sizes": [
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL",
-   "3XL"
-  ],
-  "chart": "mens",
-  "desc": "A heavyweight pullover hoodie in Faith Reins forest green. Soft brushed interior, kangaroo pocket, and the stacked lockup in cream across the chest.",
-  "render": {
-   "kind": "top",
-   "style": "hoodie",
-   "cut": "mens",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-stacked-cream",
-    "place": "full-front",
-    "width": 270
-   }
-  }
- },
- {
-  "slug": "womens-hoodie",
-  "name": "Women's Hoodie",
-  "fit": "Women's",
-  "group": "womens",
-  "cat": "apparel",
-  "price": 42,
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL"
-  ],
-  "chart": "womens",
-  "desc": "A fitted pullover hoodie in natural with a relaxed silhouette, soft fleece interior, and the horizontal lockup in green on the left chest.",
-  "render": {
-   "kind": "top",
-   "style": "hoodie",
-   "cut": "womens",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-horizontal-green",
-    "place": "left-chest",
-    "width": 158
-   }
-  }
- },
- {
-  "slug": "childrens-hoodie",
-  "name": "Youth Hoodie",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 32,
-  "sizes": [
-   "YXS",
-   "YS",
-   "YM",
-   "YL",
-   "YXL"
-  ],
-  "chart": "youth",
-  "desc": "A cozy hoodie built for the barn, in forest green with the Faith Reins horse and name in cream. Soft, durable, and easy to layer.",
-  "render": {
-   "kind": "top",
-   "style": "hoodie",
-   "cut": "youth",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-stacked-cream",
-    "place": "full-front",
-    "width": 230
-   }
-  }
- },
- {
-  "slug": "mens-polo",
-  "name": "Men's Polo",
-  "fit": "Men's",
-  "group": "mens",
-  "cat": "apparel",
-  "price": 32,
-  "sizes": [
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL",
-   "3XL"
-  ],
-  "chart": "mens",
-  "desc": "A piqu\u00e9 polo in forest green with the horizontal lockup embroidered in cream on the left chest. Classic fit, great for events.",
-  "render": {
-   "kind": "top",
-   "style": "polo",
-   "cut": "mens",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-horizontal-cream",
-    "place": "left-chest",
-    "width": 170
-   }
+  {
+    "slug": "mens-polo",
+    "name": "Men’s Horse Polo",
+    "group": "mens",
+    "collection": "Polos",
+    "availability": "out-of-stock",
+    "desc": "A quiet signature for the everyday. A clean polo silhouette with the Faith Reins horse at the left chest, in considered colors.",
+    "details": [
+      "Horse emblem at the left chest",
+      "Short sleeves and a classic polo collar",
+      "Contrast and tonal horse options where shown"
+    ],
+    "fitNote": "Sizes shown are collection references. Final garment fit and measurements will be confirmed before ordering is available.",
+    "careNote": "The design pairs a polo texture with an embroidered horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "mens-white-polo",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A white men's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/polos/mens-white-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/polos/mens-white-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        },
+        "guide": {
+          "name": "Men’s Premium Polo Shirt | Port Authority K500",
+          "url": "https://www.printful.com/custom/brands/port-authority/premium-polo-shirt-port-authority-k500",
+          "reviewedAt": "2026-10-15",
+          "note": "Garment measurement reference for the proposed white style. The proposed cut runs large. Final sizing will be confirmed before ordering.",
+          "columns": [
+            "Length",
+            "Flat chest width",
+            "Sleeve from center-back collar"
+          ],
+          "rows": [
+            [
+              "S",
+              29,
+              20.5,
+              20
+            ],
+            [
+              "M",
+              30,
+              21.5,
+              20.75
+            ],
+            [
+              "L",
+              31,
+              23.5,
+              21
+            ],
+            [
+              "XL",
+              32,
+              25.5,
+              22
+            ],
+            [
+              "2XL",
+              33,
+              27,
+              22.5
+            ],
+            [
+              "3XL",
+              33.5,
+              28.5,
+              23
+            ]
+          ],
+          "method": "Length: high point shoulder to hem. Width: flat across chest, not circumference. Sleeve: center-back collar, over shoulder to sleeve hem. Body chest values are a separate supplier Measure yourself chart, not twice garment width.",
+          "tolerance": "Supplier garment tolerance: up to 2 in (5 cm)."
+        }
+      },
+      {
+        "id": "mens-cream-polo",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A cream men's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/polos/mens-cream-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/polos/mens-cream-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "mens-forest-green-polo",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green men's polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/polos/mens-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/polos/mens-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "mens-tonal-forest-green-polo",
+        "name": "Forest Green · Tonal horse",
+        "hex": "#173a2e",
+        "tonal": true,
+        "description": "A forest green men's polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
   },
-  "availability": "out-of-stock"
- },
- {
-  "slug": "womens-polo",
-  "name": "Women's Polo",
-  "fit": "Women's",
-  "group": "womens",
-  "cat": "apparel",
-  "price": 30,
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL",
-   "2XL"
-  ],
-  "chart": "womens",
-  "desc": "A women's piqu\u00e9 polo in natural with the horizontal lockup embroidered in green. Fitted cut, professional and polished.",
-  "render": {
-   "kind": "top",
-   "style": "polo",
-   "cut": "womens",
-   "fabric": "natural",
-   "print": {
-    "art": "fr-horizontal-green",
-    "place": "left-chest",
-    "width": 158
-   }
+  {
+    "slug": "womens-polo",
+    "name": "Women’s Horse Polo",
+    "group": "womens",
+    "collection": "Polos",
+    "availability": "out-of-stock",
+    "desc": "A neat collar, clean lines and the horse close to your heart. An understated polo to make your own.",
+    "details": [
+      "Horse emblem at the left chest",
+      "Short sleeves and a classic polo collar",
+      "Contrast and tonal horse options where shown"
+    ],
+    "fitNote": "Sizes shown are collection references. Final garment fit and measurements will be confirmed before ordering is available.",
+    "careNote": "The design pairs a polo texture with an embroidered horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "womens-white-polo",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A white women's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/womens-white-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/womens-white-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "womens-cream-polo",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A cream women's polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/womens-cream-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/womens-cream-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "womens-forest-green-polo",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green women's polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "womens-tonal-forest-green-polo",
+        "name": "Forest Green · Tonal horse",
+        "hex": "#173a2e",
+        "tonal": true,
+        "description": "A forest green women's polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "boys-polo",
+    "name": "Boys’ Horse Polo",
+    "group": "youth",
+    "collection": "Polos",
+    "availability": "out-of-stock",
+    "desc": "A little polish for days full of possibility. The familiar horse, scaled for the next generation.",
+    "details": [
+      "Horse emblem at the left chest",
+      "Short sleeves and a classic polo collar",
+      "Contrast and tonal horse options where shown"
+    ],
+    "fitNote": "Sizes shown are collection references. Final garment fit and measurements will be confirmed before ordering is available.",
+    "careNote": "The design pairs a polo texture with an embroidered horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "boys-white-polo",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A white boys' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/boys-white-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/boys-white-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "boys-cream-polo",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A cream boys' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/boys-cream-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/boys-cream-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "boys-forest-green-polo",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green boys' polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "boys-tonal-forest-green-polo",
+        "name": "Forest Green · Tonal horse",
+        "hex": "#173a2e",
+        "tonal": true,
+        "description": "A forest green boys' polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "girls-polo",
+    "name": "Girls’ Horse Polo",
+    "group": "youth",
+    "collection": "Polos",
+    "availability": "out-of-stock",
+    "desc": "A clean polo silhouette with a small horse at the chest. Easy to picture at the barn and everywhere beyond it.",
+    "details": [
+      "Horse emblem at the left chest",
+      "Short sleeves and a classic polo collar",
+      "Contrast and tonal horse options where shown"
+    ],
+    "fitNote": "Sizes shown are collection references. Final garment fit and measurements will be confirmed before ordering is available.",
+    "careNote": "The design pairs a polo texture with an embroidered horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "girls-white-polo",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A white girls' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/girls-white-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/girls-white-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "girls-cream-polo",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A cream girls' polo with a discreet dark green Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/girls-cream-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/girls-cream-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "girls-forest-green-polo",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green girls' polo with a discreet cream Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "girls-tonal-forest-green-polo",
+        "name": "Forest Green · Tonal horse",
+        "hex": "#173a2e",
+        "tonal": true,
+        "description": "A forest green girls' polo with a discreet dark green tonal Faith Reins horse head at the left chest. A neat collar and clean lines make it ready for the everyday.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "quarter-zip",
+    "name": "Horse Quarter Zip",
+    "group": "layers",
+    "collection": "Layers",
+    "availability": "out-of-stock",
+    "desc": "A polished layer for cool mornings and unhurried weekends. A simple zip neckline and a quiet horse signature.",
+    "details": [
+      "Horse emblem at the left chest",
+      "A clean silhouette for everyday layering",
+      "Quarter-zip neckline and stand collar"
+    ],
+    "fitNote": "Designed as an everyday layer. Size labels are planning references; final fit and garment measurements will follow the selected style.",
+    "careNote": "The imagery illustrates the intended texture and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "forest-green-quarter-zip",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A polished forest green layer with a small cream horse head at the left chest. Wear it over a tee for cooler mornings and easy everyday layering.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "cream-quarter-zip",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A warm cream quarter zip with a small forest green horse head. The clean neckline and quiet emblem make it an easy layer from work to weekend.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-quarter-zip-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-quarter-zip-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "white-quarter-zip",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A bright white quarter zip with the forest green horse head at the chest. A fresh companion to the deeper colors in the collection.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/white-quarter-zip-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/white-quarter-zip-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "quilted-vest",
+    "name": "Horse Quilted Vest",
+    "group": "layers",
+    "collection": "Layers",
+    "availability": "out-of-stock",
+    "desc": "Diamond quilting, clean lines and a familiar horse. An equestrian-inspired layer with an easy, tailored look.",
+    "details": [
+      "Horse emblem at the left chest",
+      "A clean silhouette for everyday layering",
+      "Diamond-quilted sleeveless silhouette"
+    ],
+    "fitNote": "Designed as an everyday layer. Size labels are planning references; final fit and garment measurements will follow the selected style.",
+    "careNote": "The imagery illustrates the intended texture and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "forest-green-quilted-vest",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green diamond quilted vest with a small cream horse head at the left chest. An equestrian inspired layer with a tailored look.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "cream-quilted-vest",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A warm cream diamond quilted vest with a forest green horse head. The light palette keeps the tailored silhouette soft and versatile.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-quilted-vest-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-quilted-vest-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "white-quilted-vest",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A bright white quilted vest marked with the forest green horse head. A clean, easy layer for the collection.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/white-quilted-vest-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/white-quilted-vest-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "heritage-hoodie",
+    "name": "Men’s Horse Hoodie",
+    "group": "mens",
+    "collection": "Hoodies",
+    "availability": "out-of-stock",
+    "desc": "An everyday layer with a little purpose. A pullover silhouette, a familiar horse and room for the rest of your day.",
+    "details": [
+      "Pullover silhouette with a horse emblem at the chest",
+      "Forest green and cream palette where shown"
+    ],
+    "fitNote": "Sizes shown are planning references. Adult and youth cuts differ; final fit will be confirmed for each finished style.",
+    "careNote": "The design features a pullover silhouette and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "mens-forest-green-hoodie",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        },
+        "guide": {
+          "name": "Unisex Heavy Blend Hoodie | Gildan 18500",
+          "url": "https://www.printful.com/custom/mens/hoodies/unisex-heavy-blend-hoodie-gildan-18500",
+          "reviewedAt": "2026-10-15",
+          "note": "Garment measurement reference for the proposed forest green style. Final sizing will be confirmed before ordering.",
+          "columns": [
+            "Length",
+            "Flat chest width",
+            "Sleeve from center-back collar"
+          ],
+          "rows": [
+            [
+              "S",
+              27,
+              20,
+              33.5
+            ],
+            [
+              "M",
+              28,
+              22,
+              34.5
+            ],
+            [
+              "L",
+              29,
+              24,
+              35.5
+            ],
+            [
+              "XL",
+              30,
+              26,
+              36.5
+            ],
+            [
+              "2XL",
+              31,
+              28,
+              37.5
+            ],
+            [
+              "3XL",
+              32,
+              30,
+              38.5
+            ]
+          ],
+          "method": "Length from high point shoulder to hem; width flat across chest; sleeve from center-back collar over shoulder to hem. Not body circumference.",
+          "tolerance": "Supplier garment tolerance: up to 2 in (5 cm)."
+        }
+      },
+      {
+        "id": "mens-cream-hoodie",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A comfortable cream pullover hoodie with the Faith Reins horse head in dark green at the chest. Made for easy layering on cooler days.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "womens-hoodie",
+    "name": "Women’s Horse Hoodie",
+    "group": "womens",
+    "collection": "Hoodies",
+    "availability": "out-of-stock",
+    "desc": "A favorite kind of layer. Forest green, a quiet cream horse and an easy silhouette for cooler days.",
+    "details": [
+      "Pullover silhouette with a horse emblem at the chest",
+      "Forest green and cream palette where shown"
+    ],
+    "fitNote": "Sizes shown are planning references. Adult and youth cuts differ; final fit will be confirmed for each finished style.",
+    "careNote": "The design features a pullover silhouette and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "womens-forest-green-hoodie",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days.",
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "boys-hoodie",
+    "name": "Boys’ Horse Hoodie",
+    "group": "youth",
+    "collection": "Hoodies",
+    "availability": "out-of-stock",
+    "desc": "For cool mornings and the adventures that follow. A forest-green pullover with the Faith Reins horse at the chest.",
+    "details": [
+      "Pullover silhouette with a horse emblem at the chest",
+      "Forest green and cream palette where shown"
+    ],
+    "fitNote": "Sizes shown are planning references. Adult and youth cuts differ; final fit will be confirmed for each finished style.",
+    "careNote": "The design features a pullover silhouette and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "boys-forest-green-hoodie",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "girls-hoodie",
+    "name": "Girls’ Horse Hoodie",
+    "group": "youth",
+    "collection": "Hoodies",
+    "availability": "out-of-stock",
+    "desc": "A little warmth, a familiar horse. An everyday forest-green layer for the next generation of Faith Reins.",
+    "details": [
+      "Pullover silhouette with a horse emblem at the chest",
+      "Forest green and cream palette where shown"
+    ],
+    "fitNote": "Sizes shown are planning references. Adult and youth cuts differ; final fit will be confirmed for each finished style.",
+    "careNote": "The design features a pullover silhouette and horse detail. Final fabric composition and care instructions will accompany the finished garment.",
+    "variants": [
+      {
+        "id": "girls-forest-green-hoodie",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A comfortable forest green pullover hoodie with the Faith Reins horse head in cream at the chest. Made for easy layering on cooler days.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "caps",
+    "name": "Horse Cap",
+    "group": "accessories",
+    "collection": "Headwear",
+    "availability": "out-of-stock",
+    "desc": "The finishing touch for an ordinary day. A clean cap with the Faith Reins horse placed quietly at the front.",
+    "details": [
+      "Horse emblem at the front",
+      "White, cream and forest-green color options",
+      "Adjustable fit is the intended design"
+    ],
+    "fitNote": "An adjustable fit is planned. The final adjustment range will be confirmed with the finished cap.",
+    "careNote": "Final fabric composition, adjustment hardware and care instructions will accompany the finished cap.",
+    "variants": [
+      {
+        "id": "forest-green-horse-cap",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green everyday cap with the Faith Reins horse head placed quietly at the front. A simple finishing piece for the barn, errands, and days outdoors.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "cream-horse-cap",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A warm cream cap with a forest green horse head on the crown. The light color gives the familiar Faith Reins mark an easy, everyday look.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-horse-cap-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-horse-cap-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "white-horse-cap",
+        "name": "White",
+        "hex": "#ffffff",
+        "tonal": false,
+        "description": "A crisp white cap finished with the forest green horse head. Clean and understated with an easy, casual shape.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/white-horse-cap-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/white-horse-cap-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "coffee-mug",
+    "name": "Horse Mug",
+    "group": "home",
+    "collection": "Drinkware",
+    "availability": "out-of-stock",
+    "desc": "For the first cup and the quieter moments. A familiar horse in two colors that feel like Faith Reins.",
+    "details": [
+      "Contrasting one-color Faith Reins artwork",
+      "Cream and forest-green color options",
+      "Capacity and final dimensions will be confirmed"
+    ],
+    "fitNote": "The imagery shows the intended shape and artwork. Final capacity and dimensions will be confirmed for the finished item.",
+    "careNote": "Final materials, cleaning instructions and suitability for hot drinks, dishwashers or microwaves will accompany the finished item.",
+    "variants": [
+      {
+        "id": "cream-horse-mug",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A ceramic mug in cream with the Faith Reins horse head in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-horse-mug-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-horse-mug-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "forest-green-horse-mug",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A ceramic mug in forest green with the Faith Reins horse head in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "logo-mug",
+    "name": "Signature Logo Mug",
+    "group": "home",
+    "collection": "Drinkware",
+    "availability": "out-of-stock",
+    "desc": "The complete Faith Reins signature, made part of your daily ritual. A simple mug in cream or forest green.",
+    "details": [
+      "Contrasting one-color Faith Reins artwork",
+      "Cream and forest-green color options",
+      "Capacity and final dimensions will be confirmed"
+    ],
+    "fitNote": "The imagery shows the intended shape and artwork. Final capacity and dimensions will be confirmed for the finished item.",
+    "careNote": "Final materials, cleaning instructions and suitability for hot drinks, dishwashers or microwaves will accompany the finished item.",
+    "variants": [
+      {
+        "id": "cream-document-logo-mug",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A ceramic mug in cream with the full Faith Reins document logo in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "forest-green-document-logo-mug",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A ceramic mug in forest green with the full Faith Reins document logo in a contrasting one-color design. A familiar daily piece for coffee, tea, and quiet moments.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "horse-water-bottle",
+    "name": "Horse Water Bottle",
+    "group": "home",
+    "collection": "Drinkware",
+    "availability": "out-of-stock",
+    "desc": "Take a little purpose with you. A slim bottle silhouette with the Faith Reins horse, from the barn to the everyday.",
+    "details": [
+      "Contrasting one-color Faith Reins artwork",
+      "Cream and forest-green color options",
+      "Capacity and final dimensions will be confirmed"
+    ],
+    "fitNote": "The imagery shows the intended shape and artwork. Final capacity and dimensions will be confirmed for the finished item.",
+    "careNote": "Final materials, cleaning instructions and suitability for hot drinks, dishwashers or microwaves will accompany the finished item.",
+    "variants": [
+      {
+        "id": "cream-horse-water-bottle",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A slim reusable water bottle in cream with the horse head in contrasting one-color artwork. Carry the mark from the barn to everyday errands.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "forest-green-horse-water-bottle",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A slim reusable water bottle in forest green with the horse head in contrasting one-color artwork. Carry the mark from the barn to everyday errands.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "logo-water-bottle",
+    "name": "Signature Logo Water Bottle",
+    "group": "home",
+    "collection": "Drinkware",
+    "availability": "out-of-stock",
+    "desc": "A familiar signature for days on the move. The full Faith Reins logo on a clean reusable-bottle silhouette.",
+    "details": [
+      "Contrasting one-color Faith Reins artwork",
+      "Cream and forest-green color options",
+      "Capacity and final dimensions will be confirmed"
+    ],
+    "fitNote": "The imagery shows the intended shape and artwork. Final capacity and dimensions will be confirmed for the finished item.",
+    "careNote": "Final materials, cleaning instructions and suitability for hot drinks, dishwashers or microwaves will accompany the finished item.",
+    "variants": [
+      {
+        "id": "cream-document-logo-water-bottle",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A slim reusable water bottle in cream with the Faith Reins document logo in contrasting one-color artwork. Carry the mark from the barn to everyday errands.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "forest-green-document-logo-water-bottle",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A slim reusable water bottle in forest green with the Faith Reins document logo in contrasting one-color artwork. Carry the mark from the barn to everyday errands.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "horse-journal",
+    "name": "Horse Journal",
+    "group": "home",
+    "collection": "Journals",
+    "availability": "out-of-stock",
+    "desc": "A place for notes, plans and the moments worth keeping. Forest green with a quiet cream horse on the cover.",
+    "details": [
+      "Forest-green cover with cream artwork",
+      "Matte hardcover is the intended design",
+      "Reference format: 5.75 × 8 inches; 150 lined pages"
+    ],
+    "fitNote": "The recorded reference format is 5.75 × 8 inches with 150 lined pages. Final production details will accompany the finished journal.",
+    "careNote": "The concept shows flat printed artwork on a matte hardcover. Final cover materials and care instructions will accompany the finished journal.",
+    "variants": [
+      {
+        "id": "forest-green-horse-journal",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green matte hardcover journal with the Faith Reins horse head printed in cream. A place for notes, plans, and small moments worth keeping.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "logo-journal",
+    "name": "Signature Logo Journal",
+    "group": "home",
+    "collection": "Journals",
+    "availability": "out-of-stock",
+    "desc": "Put your thoughts somewhere meaningful. A forest-green journal carrying the complete Faith Reins signature.",
+    "details": [
+      "Forest-green cover with cream artwork",
+      "Matte hardcover is the intended design",
+      "Reference format: 5.75 × 8 inches; 150 lined pages"
+    ],
+    "fitNote": "The recorded reference format is 5.75 × 8 inches with 150 lined pages. Final production details will accompany the finished journal.",
+    "careNote": "The concept shows flat printed artwork on a matte hardcover. Final cover materials and care instructions will accompany the finished journal.",
+    "variants": [
+      {
+        "id": "forest-green-document-logo-journal",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A forest green matte hardcover journal carrying the complete Faith Reins document logo in cream. Its flat printed mark sits naturally on the cover.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "embroidered-throw",
+    "name": "Horse Embroidered Throw",
+    "group": "home",
+    "collection": "Home",
+    "availability": "out-of-stock",
+    "desc": "A quiet companion to your favorite chair. A small embroidered horse, considered colors and a cozy look for home.",
+    "details": [
+      "Small embroidered horse at one corner",
+      "Cream and forest-green color options",
+      "Reference format: 50 × 60 inches"
+    ],
+    "fitNote": "The recorded reference format is 50 × 60 inches. Final measurements will accompany the finished throw.",
+    "careNote": "The concept shows a small embroidered horse on a textured throw. Final fiber content and laundering instructions will accompany the finished item.",
+    "variants": [
+      {
+        "id": "cream-embroidered-throw",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "A soft cream throw with a small forest green horse head embroidered at one corner. Quiet branding and a cozy look for the sofa or reading nook.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      },
+      {
+        "id": "forest-green-embroidered-throw",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "A deep forest green throw with a small cream horse head embroidered at one corner. The restrained emblem keeps the focus on color and texture.",
+        "sizes": [],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-product.png",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-styled.png",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
   }
- },
- {
-  "slug": "youth-polo",
-  "name": "Youth Polo",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "apparel",
-  "price": 24,
-  "sizes": [
-   "YXS",
-   "YS",
-   "YM",
-   "YL",
-   "YXL"
-  ],
-  "chart": "youth",
-  "desc": "A youth polo in forest green with the Faith Reins horse embroidered in cream on the left chest.",
-  "render": {
-   "kind": "top",
-   "style": "polo",
-   "cut": "youth",
-   "fabric": "forest",
-   "print": {
-    "art": "fr-mark-cream",
-    "place": "left-chest",
-    "width": 80
-   }
-  }
- },
- {
-  "slug": "caps",
-  "name": "Cap",
-  "fit": "Adult",
-  "group": "accessories",
-  "cat": "headwear",
-  "price": 22,
-  "sizes": [
-   "Adjustable"
-  ],
-  "chart": null,
-  "desc": "A structured six-panel cap in forest green with the Faith Reins horse embroidered in cream on the front. Adjustable strap fits most adults.",
-  "render": {
-   "kind": "cap",
-   "fabric": "forest",
-   "art": "fr-mark-cream"
-  }
- },
- {
-  "slug": "youth-cap",
-  "name": "Youth Cap",
-  "fit": "Youth",
-  "group": "youth",
-  "cat": "headwear",
-  "price": 20,
-  "sizes": [
-   "Youth adjustable"
-  ],
-  "chart": null,
-  "desc": "A youth-sized six-panel cap in natural with the Faith Reins horse embroidered in green. Adjustable strap.",
-  "render": {
-   "kind": "cap",
-   "fabric": "natural",
-   "art": "fr-mark-green",
-   "youth": true
-  }
- },
- {
-  "slug": "beanie",
-  "name": "Beanie",
-  "fit": "Adult",
-  "group": "accessories",
-  "cat": "headwear",
-  "price": 18,
-  "sizes": [
-   "One size"
-  ],
-  "chart": null,
-  "desc": "A ribbed knit cuffed beanie in forest green with the Faith Reins horse embroidered in cream on the cuff. Warm enough for Arkansas winters.",
-  "render": {
-   "kind": "beanie",
-   "fabric": "forest",
-   "art": "fr-mark-cream"
-  }
- },
- {
-  "slug": "coffee-mug",
-  "name": "Coffee Mug",
-  "fit": null,
-  "group": "home",
-  "cat": "drinkware",
-  "price": 16,
-  "sizes": null,
-  "chart": null,
-  "desc": "An 11 oz ceramic mug with the horizontal Faith Reins lockup in green. Microwave and dishwasher safe.",
-  "render": {
-   "kind": "mug",
-   "art": "fr-horizontal-green"
-  }
- },
- {
-  "slug": "travel-mug",
-  "name": "Travel Mug",
-  "fit": null,
-  "group": "home",
-  "cat": "drinkware",
-  "price": 22,
-  "sizes": null,
-  "chart": null,
-  "desc": "A 20 oz stainless steel travel mug with a secure lid and the stacked Faith Reins lockup in green. Keeps drinks hot for 6 hours, cold for 12.",
-  "render": {
-   "kind": "mug",
-   "travel": true,
-   "art": "fr-stacked-green"
-  }
- },
- {
-  "slug": "keychains",
-  "name": "Leather Keychain",
-  "fit": null,
-  "group": "home",
-  "cat": "accessories",
-  "price": 8,
-  "sizes": null,
-  "chart": null,
-  "desc": "A saddle-tan leather keychain with the Faith Reins horse in gold. A small gift that carries the mission.",
-  "render": {
-   "kind": "keychain",
-   "art": "fr-mark-gold"
-  }
- },
- {
-  "slug": "stickers",
-  "name": "Sticker Set",
-  "fit": null,
-  "group": "home",
-  "cat": "accessories",
-  "price": 4,
-  "sizes": null,
-  "chart": null,
-  "desc": "A set of vinyl stickers featuring the Faith Reins horse and lockup. Weatherproof and UV-resistant.",
-  "render": {
-   "kind": "stickers"
-  }
- }
 ]
