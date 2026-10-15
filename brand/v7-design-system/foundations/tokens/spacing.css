@@ -1,0 +1,3 @@
+:root{--space-1:4px;--space-2:8px;--space-3:12px;--space-4:18px;--space-5:24px;--space-6:28px;--space-7:32px;--space-8:48px;--space-9:64px;--space-10:72px;--space-11:96px;--space-12:104px;--fr-max:1312px;--fr-gutter:64px;--fr-section-y:96px;--radius:0;--rule:1px;--fr-duration:150ms;}
+@media(max-width:1023px){:root{--fr-gutter:40px;--fr-section-y:80px}}
+@media(max-width:767px){:root{--fr-gutter:20px;--fr-section-y:64px}}

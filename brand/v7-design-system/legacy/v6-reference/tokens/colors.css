@@ -1,0 +1,45 @@
+:root {
+  /* Base palette */
+  --fr-green: #173A2E;
+  --fr-green-deep: #0E2019;
+  --fr-gold: #B08D57;
+  --fr-gold-light: #D5BC8A;
+  --fr-gold-ink: #7A5E2E;
+  --fr-cream: #F3EEE4;
+  --fr-sand: #E7E0D2;
+  --fr-paper: #FBF8F1;
+  --fr-line: #D8CDB8;
+  --fr-field-border: #CFC6B3;
+  --fr-ink: #1A2620;
+  --fr-muted: #4B5249;
+  --fr-on-gold: #14231C;
+  --fr-error: #A3261B;
+  --fr-white: #FFFFFF;
+
+  /* Surfaces */
+  --surface-page: var(--fr-cream);
+  --surface-alt: var(--fr-sand);
+  --surface-field: var(--fr-paper);
+  --surface-inverse: var(--fr-green);
+  --surface-accent: var(--fr-gold);
+
+  /* Text */
+  --text-heading: var(--fr-green);
+  --text-body: var(--fr-ink);
+  --text-muted: var(--fr-muted);
+  --text-eyebrow: var(--fr-gold-ink);
+  --text-on-inverse: var(--fr-cream);
+  --text-on-inverse-muted: rgba(243, 238, 228, .75);
+  --text-eyebrow-inverse: var(--fr-gold-light);
+  --text-on-accent: var(--fr-on-gold);
+
+  /* Lines */
+  --border-hairline: var(--fr-line);
+  --border-strong: var(--fr-green);
+  --border-accent: var(--fr-gold);
+  --border-inverse: rgba(243, 238, 228, .18);
+  --border-inverse-accent: rgba(213, 188, 138, .45);
+
+  /* Photo protection */
+  --overlay-hero: linear-gradient(90deg, rgba(14,32,25,.85) 0%, rgba(14,32,25,.5) 48%, rgba(14,32,25,0) 78%);
+}
