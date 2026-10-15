@@ -33,21 +33,16 @@ All sizes roll up to this product record. Apparel options are proposed labels, n
 
 ## Image references
 
-Original image files are included in this ZIP. No GitHub commit is claimed. The links below open existing approval records; intended image destinations are listed separately. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
+Original image files are committed in this canonical package. The links below open existing approval records; website copies are selected in a separate website change. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
 
 | View | Existing link | Exact source filename | Review status |
 |---|---|---|---|
 | Product | [Approval record](../POLO-001-IMAGE-REGISTER.md) | `exec-a5712cc8-3cb1-42c7-a832-6afc30944c53.png` | Approved visual reference |
 | Model / styled | [Approval record](../POLO-001-IMAGE-REGISTER.md) | `exec-e30f0d94-a8d8-4482-b471-725d045ec626.png` | Approved visual reference |
 
-## Image destinations
+## Asset ownership
 
-The original repository destinations below are migration targets. Working package links appear above; use scripts/export-repo-assets.py to create both repository destinations.
-
-| View | Catalog original | Website copy | Import status |
-|---|---|---|
-| product | `product-catalog/images/girls-cream-polo-product.png` | `images/products/girls-cream-polo-product.png` | Included in ZIP; repo transfer pending |
-| styled | `product-catalog/images/girls-cream-polo-styled.png` | `images/products/girls-cream-polo-styled.png` | Included in ZIP; repo transfer pending |
+The working original links above are the canonical package sources. The website owns independent committed copies and never links to this package. Follow [the migration guide](../../MIGRATION.md) to stage a deliberate handoff outside repositories. Earlier root image/catalog destinations are superseded.
 
 | View | Expected original SHA-256 |
 |---|---|

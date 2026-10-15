@@ -29,21 +29,16 @@ All sizes roll up to this product record. Apparel options are proposed labels, n
 
 ## Image references
 
-Original image files are included in this ZIP. No GitHub commit is claimed. The links below open existing approval records; intended image destinations are listed separately. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
+Original image files are committed in this canonical package. The links below open existing approval records; website copies are selected in a separate website change. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
 
 | View | Existing link | Exact source filename | Review status |
 |---|---|---|---|
 | Product | [Approval record](../NOTEBOOK-001-IMAGE-REGISTER.md) | `exec-9a234d7a-5aad-41fe-9a26-e63205b5c6c9.png` | Approved visual reference |
 | Model / styled | [Approval record](../NOTEBOOK-001-IMAGE-REGISTER.md) | `exec-07081d9f-9c91-490c-bde3-3e4846f7fe5f.png` | Approved visual reference |
 
-## Image destinations
+## Asset ownership
 
-The original repository destinations below are migration targets. Working package links appear above; use scripts/export-repo-assets.py to create both repository destinations.
-
-| View | Catalog original | Website copy | Import status |
-|---|---|---|
-| product | `product-catalog/images/forest-green-document-logo-journal-product.png` | `images/products/forest-green-document-logo-journal-product.png` | Included in ZIP; repo transfer pending |
-| styled | `product-catalog/images/forest-green-document-logo-journal-styled.png` | `images/products/forest-green-document-logo-journal-styled.png` | Included in ZIP; repo transfer pending |
+The working original links above are the canonical package sources. The website owns independent committed copies and never links to this package. Follow [the migration guide](../../MIGRATION.md) to stage a deliberate handoff outside repositories. Earlier root image/catalog destinations are superseded.
 
 | View | Expected original SHA-256 |
 |---|---|

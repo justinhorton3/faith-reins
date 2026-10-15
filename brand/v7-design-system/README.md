@@ -1,41 +1,35 @@
 # Faith Reins Design System V7
 
-Version: **7.0.0-local-review.1** | Built October 13, 2026 | Website: https://www.faithreins.com/
+**This self-contained directory is the authoritative V7 source and reference.** Copy it alone to another project; it does not depend on the website or the sibling V6 archive. Open [index.html](index.html) for the offline guide and [catalog](merchandise/product-catalog/README.md) for all 42 designs and 84 original views.
 
-## Start here
+The website owns separate committed asset copies. No website import, symlink, runtime URL or build step may read from this package. V7 changes and future V8 work reach the website only through a deliberate, reviewed copy into website-owned paths.
 
-Open **[index.html](index.html)** after extracting the ZIP. It is an offline visual guide with a searchable 42-design catalog, exact SVG artwork, component examples and application templates. Read the printable **[V7 guide](guidelines/Faith-Reins-Design-System-V7.pdf)** for staff and suppliers.
-
-This package builds the full system around the approved V7 identity and V6 website language. Previously approved masters and images retain their approval status. Newly authored documentation, tokens, component implementations and templates are **ready for review**, not a claim of new owner sign-off or live deployment.
-
-## Folder contract
+## Contents
 
 | Folder | Purpose |
 |---|---|
-| `approved/horse`, `approved/website-logo`, `approved/document-logo`, `approved/seal` | Exact approved SVG masters, unchanged |
-| `approved/product-images` | 84 unchanged original PNGs; 82 approved references and 2 companion views |
-| `foundations` | Palette, fonts, tokens, photography and layout rules |
-| `components` | Framework-independent CSS, examples, and a small local interaction script |
-| `patterns` | Website composition contracts |
-| `templates` | Editable letterhead, presentation, social and signage SVGs; print letterhead HTML |
-| `merchandise` | Existing approval records, sourcing notes and self-contained 42-design product catalog |
-| `proofboards` | Existing V7 SVG comparison/usage boards |
-| `candidates` | Prior drafts; excluded from current asset selection |
-| `legacy` | Historical artwork and source instructions; excluded from production selection |
-| `scripts` | Asset validation, checksum verification and repository export helpers |
+| `approved/` | Exact approved identity masters and original product PNGs; 82 approved references and two separately labeled companion views |
+| `foundations/` | Fonts and bundled licenses, colors, tokens, layout, hero originals, paired crops, supporting imagery and icon references |
+| `exports/` | Existing web, print and icon derivatives; website snapshots retain historical status |
+| `components/`, `patterns/`, `templates/` | Portable CSS, examples, local interactions, page contracts and editable applications |
+| `merchandise/` | One product catalog, original-image manifest, approval evidence and sourcing notes |
+| `guidelines/` | [Available guidance and PDF status](guidelines/README.md) |
+| `proofboards/` | Existing vector usage and comparison boards |
+| `legacy/`, `candidates/` | Historical or unapproved references; never select as current artwork |
+| `scripts/` | Package validation and explicit external staging; no automatic website updates |
 
-## Delivery contents
+## Status and preservation
 
-- 10 exact approved identity SVGs, unchanged. Original supplied website-logo PNGs are retained.
-- 84 original product PNGs; all recovered. 72 checked against previously recorded SHA-256 values. 12 cream/white sources identified by the approved persistent IDs and visually assigned; new checksums recorded now.
-- 42 product design documents. Size labels are proposed; no supplier-verified measurements, fabric, care or price is implied.
-- V6 website photography and fonts carried forward as reference assets. Old shop hero images are quarantined under `legacy/v6-reference/photography`.
-- Source branch tree: `92eea891560b7b41f7339e14b5af6937efa935d2`.
+Version: `7.0.0-local-review.1`, consolidated October 15, 2026. Existing approvals are preserved. Newly authored materials remain reviewable reference implementations; cleanup does not approve artwork, supplier specifications or live deployment.
 
-## Copying into the repository
+All original approved artwork and product images retain their exact bytes. Master/export roles and product/styled pairs are intentional. The [consolidation ledger](REPOSITORY-CONSOLIDATION.json) records preserved files and hashes; archived documents retain old wording and paths as historical evidence. [Source provenance](SOURCE-PROVENANCE.json) records earlier package origins.
 
-Follow [MIGRATION.md](MIGRATION.md). Copy this top-level `v7-design-system` directory into the repository. Existing candidates/legacy files remain preserved. Do not commit recovered Library staging files or the ZIP itself into the website public directory. Deployment remains a separate step.
+**PDF pending:** upload deferred by the owner because the original exceeded the 100 MB upload limit. It is not required for cleanup or standalone validation. Available HTML and Markdown guidance is included.
 
-Run `python3 v7-design-system/scripts/validate.py` to check hashes, links, catalogs and SVG structure. Run `python3 v7-design-system/scripts/export-repo-assets.py --repo /path/to/faith-reins` to explicitly create `/product-catalog/images`, `/images/products`, product detail files and `/public/assets/v7`. Existing different files are not overwritten.
+## Use and validation
 
-See [QA-CHECKLIST.md](QA-CHECKLIST.md) for completed checks and remaining responsive, accessibility, vendor and deployment verification.
+Run `python3 scripts/validate.py --check` from this directory; only Python's standard library is required. Without `--check`, validation refreshes the report. Regenerate `FILE-CHECKSUMS.json` after intentional content updates. Historical source documents are not active instructions.
+
+Read [MIGRATION.md](MIGRATION.md) before handoff. The exporter takes `--output /new/external/staging-directory`, refuses to write inside a repository and never updates the website. No generator is needed to browse or use the package.
+
+Print/embroidery proofs, supplier measurements, pricing, fulfillment and website publication remain separate work. [QA-CHECKLIST.md](QA-CHECKLIST.md) distinguishes completed and pending checks.

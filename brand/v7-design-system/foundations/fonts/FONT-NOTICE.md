@@ -1,3 +1,9 @@
-# Bundled font notice
+# Bundled fonts
 
-These exact WOFF files were copied from `public/fonts/` in the Faith Reins repository for the owner's project handoff. V6 identifies Libre Caslon Display/Text and Hanken Grotesk as Google Fonts with SIL Open Font License distribution. No license text was present at those font paths in the fetched tree. Preserve file provenance and retrieve the matching upstream OFL notices before redistributing this package outside the owner's project. No new licensing determination is made here.
+The exact original WOFF files and matching license notices are bundled locally:
+
+- Hanken Grotesk: [license](OFL-HankenGrotesk.txt), variable weight 100–900.
+- Libre Caslon Display: [license](OFL-LibreCaslon.txt), display face.
+- Libre Caslon Text: regular and italic files; same [license](OFL-LibreCaslon.txt).
+
+Family/weight declarations are in [fonts.css](../tokens/fonts.css). Historical reference files retain their original provenance; this cleanup does not introduce or modify a font. The package has no dependency on public/fonts or the V6 folder. Website copies remain independent.

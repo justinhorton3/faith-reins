@@ -16,3 +16,8 @@ All imagery and exact approved SVG masters are preserved unchanged.
 | faith-reins-v7-website-horizontal-green | [SVG](approved/website-logo/faith-reins-v7-website-horizontal-green.svg) | `489f66ac3ee9c53dec982dc57b963e44f94b2dcf8606091ea0445bf58d86e1b6` |
 
 [Product image manifest](merchandise/product-catalog/IMAGE-IMPORT-MANIFEST.json): 84 recovered originals; 82 approved references and 2 derived companion views from prior sessions. No new derivatives created for this handoff. New documentation and templates await owner review.
+
+
+## Repository consolidation — October 15, 2026
+
+This directory is the canonical, standalone V7 package. Root V7 drafts and the separate product-image package are retired; unique historical records are retained under legacy/source-documents. All 10 approved master hashes and 84 product originals remain unchanged. The current 42-record catalog supersedes the two older family-level draft records, whose useful constraints remain preserved. Website copies remain independent; a package edit never deploys or changes the website. Original website/WIP images carried into legacy are not newly approved V7 imagery. The PDF is deferred because its upload exceeded the 100 MB limit.

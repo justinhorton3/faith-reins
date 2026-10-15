@@ -33,21 +33,16 @@ All sizes roll up to this product record. Apparel options are proposed labels, n
 
 ## Image references
 
-Original image files are included in this ZIP. No GitHub commit is claimed. The links below open existing approval records; intended image destinations are listed separately. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
+Original image files are committed in this canonical package. The links below open existing approval records; website copies are selected in a separate website change. Images describe the visual concept; fabric, care, measurements, price and availability remain pending Printful setup.
 
 | View | Existing link | Exact source filename | Review status |
 |---|---|---|---|
 | Product | [Approval record](../HOODIE-001-IMAGE-REGISTER.md) | `exec-ad441da0-427f-44b4-b38a-291ab5382852.png` | Approved visual reference |
 | Model / styled | [Approval record](../HOODIE-001-IMAGE-REGISTER.md) | `exec-749922e8-799e-40c2-8a1e-3eb15e771116.png` | Approved visual reference |
 
-## Image destinations
+## Asset ownership
 
-The original repository destinations below are migration targets. Working package links appear above; use scripts/export-repo-assets.py to create both repository destinations.
-
-| View | Catalog original | Website copy | Import status |
-|---|---|---|
-| product | `product-catalog/images/boys-forest-green-hoodie-product.png` | `images/products/boys-forest-green-hoodie-product.png` | Included in ZIP; repo transfer pending |
-| styled | `product-catalog/images/boys-forest-green-hoodie-styled.png` | `images/products/boys-forest-green-hoodie-styled.png` | Included in ZIP; repo transfer pending |
+The working original links above are the canonical package sources. The website owns independent committed copies and never links to this package. Follow [the migration guide](../../MIGRATION.md) to stage a deliberate handoff outside repositories. Earlier root image/catalog destinations are superseded.
 
 | View | Expected original SHA-256 |
 |---|---|

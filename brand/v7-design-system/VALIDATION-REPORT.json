@@ -6,15 +6,22 @@
   "approved_images": 82,
   "companion_images": 2,
   "repository_source_assets": 87,
+  "preserved_source_records": 432,
+  "checksummed_files": 585,
   "image_policy": "original bytes unchanged",
+  "pdf_status": "deferred by owner; original exceeds 100 MB upload limit",
   "checks": [
     "master hashes",
     "product hashes",
     "unchanged repository source assets",
+    "preserved source hashes",
+    "complete package checksum inventory",
     "SVG parsing and outlined masters",
     "active HTML links",
     "CSS imports and font paths",
-    "active package and catalog Markdown links"
+    "active Markdown links",
+    "package-contained link targets",
+    "no symlinks"
   ],
   "not_checked": [
     "actual browser responsive behavior",

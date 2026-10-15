@@ -1,0 +1,583 @@
+{
+  "source_package": "brand/v7-design-system",
+  "baseline_commit": "6e848fa72c775a98fd098b533e7090ecd47d5824",
+  "purpose": "Informational provenance only; never imported by website or build",
+  "website_assets": [
+    {
+      "website_path": "public/apple-touch-icon.png",
+      "package_path": "exports/icons/website-snapshot/apple-touch-icon.png",
+      "sha256": "21a0bf231532cf51d4753a859588d7a286797e1be65ddd23fa7e8b63204ffb39",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/avatar-a.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-a.svg",
+      "sha256": "c3f3b8846cde46b6c19f601f372da6e83087cc622b057e7d3189473e2e92084b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/avatar-b.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-b.svg",
+      "sha256": "3cc09a1a66ecf66ad3f4600d2a2acc5edc13906bea7544b9259c35c90ce84543",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/avatar-c.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-c.svg",
+      "sha256": "d598179a3f3d59e33c0bdf03fda6efebea1236c74cbd0ef35764cb95ca2d0b49",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-book-online-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-book-online-desktop.webp",
+      "sha256": "b18e4cc0c173eea5d0bd73a07580d3f2f2a286c237a70b0027d1afc0ba5318c4",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-book-online-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-book-online-mobile.webp",
+      "sha256": "6d00745dd1adbaf15ad3e1befadb3efa9adbab51743087a17770e439c8e88624",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-contact-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-contact-desktop.webp",
+      "sha256": "dc387746904cf11fee3f7aaee7b76be9502aee86f25713e66e32195f00a98e75",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-contact-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-contact-mobile.webp",
+      "sha256": "58e36e00cb4bb9e5b71896d1e5669286239821d428b86b33e40a2f01773d9035",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-counseling-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-counseling-desktop.webp",
+      "sha256": "4994478de47575b0bf891e8f62b96ec517783a565fd6e1985590a28168b0fd9f",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-counseling-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-counseling-mobile.webp",
+      "sha256": "5f070952a9413d2eb87acd55f7fcef6dbd612c0e30f312de9ce0797c12f971ae",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-equine-assisted-learning-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+      "sha256": "6f840a6ad130f4f95a6af949c67cf9a270f54a27adfefcc897600f425afaeb11",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-equine-assisted-learning-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-equine-assisted-learning-mobile.webp",
+      "sha256": "0c04dfcc075f741b3da6bc489a90a43e5f5d29ab5c6124daf231dab5a8aae74a",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-faq-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-faq-desktop.webp",
+      "sha256": "3fa3093a47e3593f90e9dc1a2b54f21e0a99b0e257a0729f618e7836b140922e",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-faq-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-faq-mobile.webp",
+      "sha256": "04a9e6fad1d899951d983af591c3ec2bd41741610155225dc4cbe393727da67d",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-for-families-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-families-desktop.webp",
+      "sha256": "703a8b3b9fece52b49ca6fc137977266f2ed90cb9331017a3f07264fad4d85ed",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-for-families-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-families-mobile.webp",
+      "sha256": "8522715fb846f70def933fe4fd3dbae120ecb428fd69ea8afa6cdc4f8d165ec0",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-for-referring-providers-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-referring-providers-desktop.webp",
+      "sha256": "ca972baf51ba7ed34e7507369f7c61e52ddb43865a835ea9bb8df6dbe6eb59d6",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-for-referring-providers-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-referring-providers-mobile.webp",
+      "sha256": "6a6976d60e5cd52eb5e7b12ede3959f20b0ca839fdb13e0aabfd027b1f2e3e86",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-give-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-give-desktop.webp",
+      "sha256": "326fb5b695e6f51789ed7c35e503152b2bfb3b085c7309e506a2820a27d58e86",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-give-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-give-mobile.webp",
+      "sha256": "56a2f02f80624630cc48c4c01c852ad9620b8294368c17ecb833b44b9b9b071f",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-home-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-home-desktop.webp",
+      "sha256": "576e613d7b09d7c0ecc9307ddb0e0b88ae3d9c1407365ee5ba73ab4df513da5a",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-home-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-home-mobile.webp",
+      "sha256": "70c88f0e59b13648010a812c106c8c82c4101b61557a51ed7f02a391081cdd35",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-impact-and-stewardship-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-impact-and-stewardship-desktop.webp",
+      "sha256": "ab71bbd8fff83c2378fdbd290aca8f5bde9fe9368598ddcf424efaad1441cb84",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-impact-and-stewardship-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-impact-and-stewardship-mobile.webp",
+      "sha256": "789bad3ab0c2d7caa896cc7094953b9479b8c8ac1a67160f68d79fb3da03a362",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-join-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-join-our-team-desktop.webp",
+      "sha256": "0238569ea05cddbaf4462a4983aff8853344161eb0de3ac79a62247716addb82",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-join-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-join-our-team-mobile.webp",
+      "sha256": "b79a3edf5953bc27563328300d1222d7f02ae480a0b866a0f3fac5a85025f347",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-occupational-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-occupational-therapy-desktop.webp",
+      "sha256": "8156ef15d47a0af4e2ce6d27f8d709e4744a97d5fc81e059daea43f4421fed91",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-occupational-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-occupational-therapy-mobile.webp",
+      "sha256": "60e8b1fedcdf92eb0b1db1b7c11a2a202aa2bab816143a8b7e4d511b0a377618",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-horses-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-horses-desktop.webp",
+      "sha256": "770cae34e1fb37b3884464f3640d406aa15246b37bbe612aa35787c0429624c6",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-horses-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-horses-mobile.webp",
+      "sha256": "56c090d87add4a06f1ea0409143f8fa07df10b7d5c8f92189d6a892aebe9e75d",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-mission-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
+      "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-mission-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-mission-mobile.webp",
+      "sha256": "fb2c8865d3a79880e59fbf2023183317cbef77cb647c64bfb2af073e5835d530",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-partners-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-partners-desktop.webp",
+      "sha256": "3cbe0c08576d7ece8875f2e27683f3ce7379715aa290acd31a94beb0cf6c37c6",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-partners-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-partners-mobile.webp",
+      "sha256": "0bad3250359835e159af4131bc16cd779e2518d1522a6b52e13cb0101458e54c",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-team-desktop.webp",
+      "sha256": "6c4ee4ac37f9e36dca9a6f62c6c6bf3ed91332b8ae7efef507febd3fbfef0d06",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-team-mobile.webp",
+      "sha256": "341eddc24e897811300c6dcf73f45bc99f800b657fb8d3295177ef4f540c7d98",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-payment-and-insurance-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-payment-and-insurance-desktop.webp",
+      "sha256": "3b303088c8c18c50f1a1dda9366abed84ba27556aab029b02cc7a9f1b9c824df",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-payment-and-insurance-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-payment-and-insurance-mobile.webp",
+      "sha256": "4ee1a743e0636f565ca60afe30d51b110d4bde60b738c5d46b600e950ca5db53",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-physical-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-physical-therapy-desktop.webp",
+      "sha256": "a0f6f8efe3d1073e09fb495cc13caa0136a312551785c7fee217da161dec04a9",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-physical-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-physical-therapy-mobile.webp",
+      "sha256": "162b5744395a4e16fd6719711253e52034ff532d6ce849510f2edb95c0883353",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-services-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-services-desktop.webp",
+      "sha256": "c986558c84922828463d6068cc63089d4205f07a2b6801eb57e5a9a476b54113",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-services-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-services-mobile.webp",
+      "sha256": "b85799a53a710d63c8b038b110b9be868d8ca76a643f2419393f0550502238a5",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-shop-desktop.webp",
+      "package_path": "legacy/website-snapshot/public/assets/hero-shop-desktop.webp",
+      "sha256": "f7253e57eb43bffea0072683eee8683074568245e0d8c6bb29e01ef8fbf84e2f",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-shop-mobile.webp",
+      "package_path": "legacy/website-snapshot/public/assets/hero-shop-mobile.webp",
+      "sha256": "7de3429a94bbf98c0a23d456aa769271a16f47ed70df13492149ec0c963fb795",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-speech-language-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-speech-language-therapy-desktop.webp",
+      "sha256": "d986f2529affb2b365985e9ef5760b27cdd0a1207c40d25a43f5eb89181354f0",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-speech-language-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-speech-language-therapy-mobile.webp",
+      "sha256": "e95e8a6cd8b56c97194a3baf734c9cf19a681b8174ab02680a0fcf38730c3b00",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-sponsorships-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-sponsorships-desktop.webp",
+      "sha256": "bc8d6177394f5b53c258a6aee9506626bdb0f08fded2dd97ab42a4db99c537eb",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/hero-sponsorships-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-sponsorships-mobile.webp",
+      "sha256": "f3c7f549607ce2fa47c6099d52c87672bdbff9eb771f0c249f78797f2cfed4ac",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/home-clinical.webp",
+      "package_path": "foundations/photography/imagery/home-clinical.webp",
+      "sha256": "6aabe3c82c3448663b96cc81966bbd1c06b521e4d1d4d2fac531c2567f2cd9ca",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/horse-biscuit.webp",
+      "package_path": "foundations/photography/supporting/horse-biscuit.webp",
+      "sha256": "af4599e069a99df15e85841df9ce4262c76facdc935e86d957149695db68b129",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/horse-captain-carrot.webp",
+      "package_path": "foundations/photography/supporting/horse-captain-carrot.webp",
+      "sha256": "a3bf78386f243352ff6dbe93e74095c7519eb1fd2e44d30010deae8aa919c6bb",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/horse-cowboy.webp",
+      "package_path": "foundations/photography/supporting/horse-cowboy.webp",
+      "sha256": "f5a31c9d300bb5458bb8638b6dbc7445caf6a76406d31d55a3eb4cfb4c742bce",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/horse-maple.webp",
+      "package_path": "foundations/photography/supporting/horse-maple.webp",
+      "sha256": "87770a93745cbb1d6b9cd7d89dea5b5dbd6035df8e53bc6d6430ea88522ba983",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/logo-white.png",
+      "package_path": "legacy/website-snapshot/public/assets/logo-white.png",
+      "sha256": "2e02a057e85c62506755961141f01c480a644ff530a50537edc644a3a173d638",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/logo.png",
+      "package_path": "legacy/website-snapshot/public/assets/logo.png",
+      "sha256": "189e95787f4b38b2c0d8e983bb2649ae0b81dca31a78f565314437974ce46c65",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/pasture-hero-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/pasture-hero-desktop.webp",
+      "sha256": "95373774e2d5b6c38c0165049c19808a5222942171e5180d9a82343913e9cfea",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/pasture-hero-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/pasture-hero-mobile.webp",
+      "sha256": "e0649c9df6fb9d97649e1594a778edaf7b504403c820135ebbab26c818a447fb",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/beanie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/beanie.webp",
+      "sha256": "029be91e645b28c735c5bca9f7fcba2fadd108d75db64c2b467093c81e9c7c59",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/caps.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/caps.webp",
+      "sha256": "715e7a848c2e14bbef0f2aeb182761853a13eff337ffd758a668e50e6b7bc95b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/childrens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/childrens-hoodie.webp",
+      "sha256": "cd7495cd2a8b45a27502e83a4a20ff4f79aa49d159e51bbfa0fecd4dea9e322c",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/childrens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/childrens-tee.webp",
+      "sha256": "9655449aac57701049c72894b16927f1b9140826bd341ce9a9080a274503f133",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/coffee-mug.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/coffee-mug.webp",
+      "sha256": "e54b2ccc1ce65805e039667124d4dc343702dbf27e0df0b79215171ca0dbfcd4",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/crewneck.webp",
+      "sha256": "1901efb15a612bed78e61f82f70642701112406dff7cf62ebc6143dd1b224374",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/heritage-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/heritage-hoodie.webp",
+      "sha256": "8ddf43ac522f607bfa128c04f7e895d1d7bffa69e5afe9302adef43197481916",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/keychains.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/keychains.webp",
+      "sha256": "2532184cabcc38745a346d2cbc565dd49a3b0b1fa8288f53baab26057327513d",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/long-sleeve-tee.webp",
+      "sha256": "c78a42421152cf322687f13e6be58d259a23de5df0ce9522b9da3b15f7ef0aa2",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/mens-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/mens-polo.webp",
+      "sha256": "40325ee5e1afff68c308022aa5a1f8ca76de7b22c7ed88a13b30f7cd8f091a6f",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/mens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/mens-tee.webp",
+      "sha256": "9cdca54469cbe06d72dea9494ef181404987ed40b3896a2dcbb1efd88c8bdca7",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/stickers.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/stickers.webp",
+      "sha256": "3e51fc778c511ed890224cd0e20da98bfeccb58c7c0d64902db4ba66f69fb88b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/toddler-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/toddler-tee.webp",
+      "sha256": "c0ffd4077ddbf63ecd035dafa40bd3e53ed621cf9584f52aaf1452a2f15cb7de",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/travel-mug.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/travel-mug.webp",
+      "sha256": "c1ac5cc99bcbdf96e66c87b6ef7225dcf891e2c5917a9f518049b9bfec14de67",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/womens-crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-crewneck.webp",
+      "sha256": "958d1260225d861835457dc5d0a16354392f12b71d9d45e732661f99b7ab98cb",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/womens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-hoodie.webp",
+      "sha256": "60038153f772d9cdacb9098ba666a1c87f989a6df03dbb600cc9410c8a4837f4",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/womens-long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-long-sleeve-tee.webp",
+      "sha256": "3dd03a55094f4a56a2b106079b817eb652198e2fb3acc56127d5b66b4329a024",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/womens-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-polo.webp",
+      "sha256": "986c876135f7956ebeeabfbb36419346942009f3fab914be87961a5efd0a91be",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/womens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-tee.webp",
+      "sha256": "c9eff33340b25186866efacd0d44424169c6bdce938c7ab9ec15ea4cbefcb934",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/youth-cap.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-cap.webp",
+      "sha256": "e1ab44b65a018116e3f1b090130dc7b4b24f7c2d234929fe6200d00b340f67db",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/youth-crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-crewneck.webp",
+      "sha256": "148458b0af3cd473521a124e4b91ab298455543a113b8ef377b2c11a3502291b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/youth-long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-long-sleeve-tee.webp",
+      "sha256": "7f9a1c9d47022e1b11e713dbbccf764659d69dc03c5db3aba9fac71f0454faf4",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/shop/youth-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-polo.webp",
+      "sha256": "80c0ca22daecf6eb8757eb1ab7f71c0b1f11e1a5bc885684c11fa259443d1e94",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/sponsor-bronze.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-bronze.svg",
+      "sha256": "6d7aedb9250a060c4a39c91517d768072aabfe73ff6283c553f95889b65cb3ce",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/sponsor-gold.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-gold.svg",
+      "sha256": "902ff5c81261667caa63e1a1555eaa0d82f5c1c2f90d51c5cc21e6b03ed71ce2",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/sponsor-platinum.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-platinum.svg",
+      "sha256": "6cee24c7d5a8d62ce9d4fcd4fa1d976c3a000d1ab884209c69a7fe96f1923b17",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/sponsor-silver.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-silver.svg",
+      "sha256": "79f3f545b5e6770ae0177c1f5bbb629f873c5db1fb89452f1297e8c579fc88b6",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/v6/horse-mark-cream.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-cream.png",
+      "sha256": "958bc538a1980cd1e1d9b7f440016391fcee37685e17ac8d7b6e48b79353b013",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/v6/horse-mark-gold.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-gold.png",
+      "sha256": "15f38e8d6d8d7e01bb6270be8e80399814ee020cdac84f207a8502e637eab4f5",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/assets/v6/horse-mark-green.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-green.png",
+      "sha256": "92fbfc17b123578167984e3340c577537f43718d777c26e99962ab6ee8e6115b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/favicon.png",
+      "package_path": "exports/icons/website-snapshot/favicon.png",
+      "sha256": "9f2e816bfe5fc7e9e9ffafb4e0e6d5d95c9a6590e8fb613401e2f4724dd92e2e",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/favicon.svg",
+      "package_path": "exports/icons/website-snapshot/favicon.svg",
+      "sha256": "48830dee942c187770c5604e625650ae24b6f0fdd1c27ee0bcb0433e4d9e2d03",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/OFL-HankenGrotesk.txt",
+      "package_path": "foundations/fonts/OFL-HankenGrotesk.txt",
+      "sha256": "e02ccb89a86839b22feff7872ff5cc355cc0f58318d29eee20e2cf83a612f16d",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/OFL-LibreCaslon.txt",
+      "package_path": "foundations/fonts/OFL-LibreCaslon.txt",
+      "sha256": "a294245c822c5aa9fd9a9f3189418e99415428be5fecadf797793d5d8f6a3ad3",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/hanken-grotesk.woff",
+      "package_path": "foundations/fonts/hanken-grotesk.woff",
+      "sha256": "f4154c8d9556936813d91437f4d08fb9d68d2f698318d8cc21c413f3a8e807ba",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/libre-caslon-display.woff",
+      "package_path": "foundations/fonts/libre-caslon-display.woff",
+      "sha256": "5b2e472da4e58952cf4fe4c63a81171c1711e28a4c2bae5078384a59b06409dd",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/libre-caslon-text-italic.woff",
+      "package_path": "foundations/fonts/libre-caslon-text-italic.woff",
+      "sha256": "f602fc286a2bc59ad63aae98be91fce9c5243a1386a1aeb2160d69ce0f89aa7b",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/fonts/libre-caslon-text.woff",
+      "package_path": "foundations/fonts/libre-caslon-text.woff",
+      "sha256": "b2bed83db3a09d6c6f499e6ed0502c890996f047e517f762dd65ba641d7e83e1",
+      "website_owns_independent_copy": true
+    },
+    {
+      "website_path": "public/robots.txt",
+      "package_path": "legacy/website-snapshot/public/robots.txt",
+      "sha256": "352cbe86af703311f4e28505c8ce1639f3f2d120e816dc6e9150fec600cabc44",
+      "website_owns_independent_copy": true
+    }
+  ]
+}

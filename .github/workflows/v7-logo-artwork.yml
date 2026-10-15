@@ -1,35 +1,24 @@
-name: V7 exact-font logo outlines
-
+name: Validate standalone V7 package
 on:
+  pull_request:
+    paths: ['brand/v7-design-system/**', '.github/workflows/v7-logo-artwork.yml']
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/v7-logo-artwork.yml'
-      - 'scripts/generate-v7-website-logo.py'
-      - 'v7-design-system/candidates/website-logo/*.svg'
-      - 'public/fonts/hanken-grotesk.woff'
+    paths: ['brand/v7-design-system/**', '.github/workflows/v7-logo-artwork.yml']
   workflow_dispatch:
-
 permissions:
-  contents: write
-
+  contents: read
 jobs:
-  make-v7-logo:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install open-source vector tooling
-        run: pip install fonttools brotli cairosvg pillow
-      - name: Generate exact v6 Hanken outlines and responsive proof renders
-        run: python scripts/generate-v7-website-logo.py
-      - name: Commit approved production artwork
+      - run: python3 brand/v7-design-system/scripts/validate.py --check
+      - name: Check package without website or V6 siblings
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add v7-design-system/approved/website-logo
-          git diff --cached --quiet && exit 0
-          git commit -m "brand(v7): export exact Hanken website SVG masters"
-          git push
+          isolated=$(mktemp -d)
+          cp -R brand/v7-design-system "$isolated/v7-design-system"
+          python3 "$isolated/v7-design-system/scripts/validate.py" --check

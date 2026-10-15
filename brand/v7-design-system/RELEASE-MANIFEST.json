@@ -72,5 +72,8 @@
     }
   ],
   "new_system_material_status": "authored_from_V6_and_existing_V7_rules; owner_review_pending",
-  "image_preservation": "All image originals copied byte-for-byte. No crop, resize, retouch or recompression delivered."
+  "image_preservation": "All image originals copied byte-for-byte. No crop, resize, retouch or recompression delivered.",
+  "repository_layout": "canonical self-contained package; independent website snapshot",
+  "pdf_status": "deferred: original PDF exceeded 100 MB upload limit",
+  "cleanup_date": "2026-10-15"
 }
