@@ -1,0 +1,105 @@
+name: Preview web
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wix-preview-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+       !github.event.pull_request.draft)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      WIX_CLI: '@wix/cli@1.1.258'
+      ASTRO_TELEMETRY_DISABLED: '1'
+      NO_COLOR: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install and build current website
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          python scripts/wix-postbuild.py
+      - name: Authenticate Wix CLI
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          if [ -z "$WIX_API_KEY" ]; then
+            echo '::error::WIX_API_KEY is missing; no preview was uploaded.'
+            exit 1
+          fi
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Upload a preview without releasing production
+        run: |
+          set -o pipefail
+          npx --yes -p "$WIX_CLI" wix preview 2>&1 | tee preview.log
+      - name: Verify preview and post review link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const log = fs.readFileSync('preview.log', 'utf8').replace(/\x1b\[[0-9;]*m/g, '');
+            const candidates = [...new Set((log.match(/https:\/\/[^\s"<>\\]+/g) || [])
+              .map(value => value.replace(/[),;.}\]]+$/, '')))];
+            let verified;
+            for (const value of candidates) {
+              let base;
+              try { base = new URL(value); } catch { continue; }
+              if (['faithreins.com', 'www.faithreins.com', 'dev.wix.com', 'manage.wix.com'].includes(base.hostname)) continue;
+              const product = new URL('/shop/mens-polo.html', base);
+              try {
+                const response = await fetch(product, { signal: AbortSignal.timeout(30000) });
+                const html = await response.text();
+                if (!response.ok || !html.includes('data-polo-showcase') || !html.includes('Out of stock')) continue;
+                const assetPaths = [...new Set(html.match(/\/assets\/shop\/v7\/polos\/[a-z-]+\.png/g) || [])];
+                if (!assetPaths.length) throw new Error('Polo images are absent from the hosted page.');
+                for (const path of assetPaths) {
+                  const asset = await fetch(new URL(path, base), { method: 'HEAD', signal: AbortSignal.timeout(30000) });
+                  if (!asset.ok || !asset.headers.get('content-type')?.startsWith('image/')) {
+                    throw new Error(`Preview asset failed: ${path} (${asset.status}).`);
+                  }
+                }
+                verified = { home: new URL('/', base).href, product: product.href };
+                break;
+              } catch (error) { core.warning(`${product.href}: ${error.message}`); }
+            }
+            if (!verified) throw new Error('No working preview with the current polo page was found. Review the Wix preview log; production was not released.');
+            const marker = '<!-- wix-preview-link -->';
+            const sha = context.payload.pull_request?.head.sha || context.sha;
+            const body = [marker, '### Preview this change', '',
+              `**[Review the men’s polo](${verified.product})**`, '',
+              `[Browse the preview site](${verified.home})`, '',
+              `Source: \`${sha.slice(0, 7)}\`. This is a separate Wix preview; faithreins.com was not released.`,
+              'The polo remains out of stock with purchasing disabled.',
+            ].join('\n');
+            await core.summary.addRaw(body).write();
+            if (context.payload.pull_request) {
+              const { owner, repo } = context.repo;
+              const issue_number = context.payload.pull_request.number;
+              const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number, per_page: 100 });
+              const existing = comments.find(comment => comment.user?.login === 'github-actions[bot]' && comment.body?.includes(marker));
+              if (existing) await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+              else await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
