@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/polo-showcase.css";
 import { header, footer } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld } = Astro.props;
 const SITE = "https://www.faithreins.com";
@@ -85,6 +86,7 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
     <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
     <script>import "../scripts/cart.js";</script>
+    <script>import "../scripts/polo-showcase.js";</script>
     <script>import "../scripts/cms.js";</script>
   </body>
 </html>
