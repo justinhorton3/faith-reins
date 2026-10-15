@@ -13,6 +13,8 @@ The Astro website is in src/ with its own committed asset copies in public/. Wix
 
 Run `npm ci`, `npm run dev`, `npm run build` and `npm test` as appropriate. The lockfile includes the previously missing TypeScript peer entry. Run `python3 scripts/check-website-independence.py` to verify that builds with and without `brand/` produce identical output. See [build verification](docs/independent-website-build.md) for details and [cleanup verification](docs/brand-cleanup-verification.md) for the earlier audit.
 
+Follow-up work is organized in the [Wix migration backlog](docs/wix-migration-backlog.md) and the [shop hero brief](brand/v7-design-system/merchandise/SHOP-HERO-BRIEF.md). The shop image choice waits for visual review.
+
 ## Brand validation and handoff
 
 Run python3 brand/v7-design-system/scripts/validate.py --check. Open brand/v7-design-system/index.html for the offline guide. Read [MIGRATION.md](brand/v7-design-system/MIGRATION.md) before staging assets for another project or a separate website update. [docs/brand-asset-map.json](docs/brand-asset-map.json) records asset provenance; the website does not read it.
