@@ -49,3 +49,5 @@ The gallery links each desktop/mobile file and source master. The register recor
 Copy selected, approved derivatives into the destination website’s own asset paths during an explicit change. Never link to this package or read the register from a website build. Moving or replacing V7 must not affect the website.
 
 For merchandise hero product-image selections, see [approved hero product images](../../merchandise/APPROVED-HERO-PRODUCT-IMAGES.md). See [foundations](../README.md) and [page patterns](../../patterns/README.md) for broader use guidance.
+
+Shop follow-up: [candidate shortlist and composition brief](../../merchandise/SHOP-HERO-BRIEF.md), prepared for later visual review.
