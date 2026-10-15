@@ -1,6 +1,6 @@
 # Hero image reference
 
-The V7 package is self-contained: 23 source masters and 22 desktop/mobile pairs live here. Twenty-one pairs are the carried-forward page photographs; the additional pasture pair is supporting imagery. The shop uses its separate historical snapshot, with both older V6 shop exports preserved under legacy. No images were regenerated, recompressed or promoted to a new approval status.
+The V7 package is self-contained: 23 source masters and 22 desktop/mobile pairs live here. Twenty-one pairs are the carried-forward page photographs; the additional pasture pair is supporting imagery. The register preserves the shop’s historical snapshot, with both older V6 shop exports under legacy. The new shop editorial composition is documented separately below. No images were regenerated, recompressed or promoted to a new approval status.
 
 [Open the offline hero gallery](index.html) · [Machine-readable asset register](HERO-REGISTER.json)
 
@@ -31,7 +31,7 @@ These are the website selections at the recorded audit commit. Each website file
 | `/our-horses` | `our-horses` | 50% 50% | 50% 50% | Carried-forward photograph |
 | `/join-our-team` | `join-our-team` | 50% 50% | 50% 50% | Carried-forward photograph |
 | `/contact` | `contact` | 50% 50% | 22% 50% | Carried-forward photograph |
-| `/shop` | `shop` | 50% 50% | 50% 50% | Historical shop snapshot; replacement needs review |
+| `/shop` | `shop` | 50% 50% | 50% 50% | Historical snapshot preserved; see editorial composition below |
 
 The gallery links each desktop/mobile file and source master. The register records exact byte sizes, SHA-256 values, dimensions and whether each page export matches the website copy. Original dimensions vary: filenames and CSS display attributes are not evidence of a fixed export size. Pasture is retained for supporting use and is not assigned to another page hero.
 
@@ -50,4 +50,8 @@ Copy selected, approved derivatives into the destination website’s own asset p
 
 For merchandise hero product-image selections, see [approved hero product images](../../merchandise/APPROVED-HERO-PRODUCT-IMAGES.md). See [foundations](../README.md) and [page patterns](../../patterns/README.md) for broader use guidance.
 
-Shop follow-up: [candidate shortlist and composition brief](../../merchandise/SHOP-HERO-BRIEF.md), prepared for later visual review.
+## Shop editorial composition
+
+The current proposed replacement for “Wear the mission” uses the approved forest-green quarter-zip and quilted-vest styled originals as two full portraits. Copy is live HTML in a forest-green panel; mobile stacks copy above the same images. There is no flattened replacement master, new crop, overlay across the products, or image regeneration. The historical register and exports remain intact as an audit snapshot.
+
+Open the [portable HTML/CSS template](../../templates/shop-hero.html) or the [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All source photographs and fonts resolve locally within this package. The website uses its own committed copies and its own component/CSS, so it remains independent of this reference.
