@@ -1,21 +1,21 @@
-# V7 Package Completion Plan
+# V7 package and website ownership
 
-## Delivered locally
+The complete V7 reference is committed under brand/v7-design-system. There is one canonical 42-design catalog and 84 original views. Website copies remain independent; never read this package from website code or builds.
 
-- Exact approved SVG identity masters recovered and hashed.
-- All 84 product originals recovered and catalogued without retouching.
-- Consolidated usage rules, token foundations, typography/layout/photography guidance.
-- Offline visual guide, component reference, printable guide and editable application templates.
-- 42 product documents, searchable catalog, image provenance and unchanged originals.
-- Validation and safe repository export scripts.
+## Completed by repository cleanup
 
-## Follow-on work
+- Consolidate redundant root V7 and product-image source packages, preserving differing records and original hashes.
+- Include original photography, fonts and license notices, icons, existing exports, examples and templates in one portable directory.
+- Replace automatic artwork commits with read-only package validation. Generation recipes require explicit external staging and were not run.
+- Preserve old artwork and WIP records as historical references; do not promote them as approved imagery.
+- Mark the PDF pending per owner direction; available guidance stays local.
 
-- Owner reviews newly authored guide/templates and the 12 new source-to-view mappings.
-- Responsive/keyboard/contrast checks in an actual browser and visual baselines for the existing website.
-- Physical print and embroidery sample proofing; supplier SKU, base color, size chart and price confirmation.
-- Owner copies/reconciles repository changes, then separate site integration and release.
+## Separate follow-on work
 
-## Definition of done
+- Review newly authored templates/materials and actual browser accessibility behavior.
+- Confirm supplier SKUs, dimensions, fabric, care, pricing and fulfillment; retain qualification in product records.
+- Obtain physical print/embroidery proofs.
+- Upload the PDF later.
+- Copy selected assets into website-owned paths, validate the separate website change, and publish only as separately requested.
 
-Local handoff: the archive opens offline, masters and image originals have traceable identities, catalogs have working local links, reference components and application templates are present, and validators pass. Production release: integration, browser and supplier checks are completed and publication is separately authorized.
+See QA-CHECKLIST.md and the repository's cleanup verification record for the exact checks performed.

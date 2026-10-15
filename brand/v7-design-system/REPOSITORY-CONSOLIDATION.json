@@ -1,0 +1,3031 @@
+{
+  "date": "2026-10-15",
+  "baseline_commit": "6e848fa72c775a98fd098b533e7090ecd47d5824",
+  "image_policy": "Original bytes unchanged; no image generation performed",
+  "records": [
+    {
+      "source": "v7-design-system/ASSET-REGISTER.md",
+      "package_path": "legacy/source-documents/root-v7/ASSET-REGISTER.md",
+      "sha256": "f9baa3235ed744fe4500a0029f7fa10e136634eb98f3d6c0751d953c41e07d47",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/BRAND-USAGE-STANDARDS.md",
+      "package_path": "BRAND-USAGE-STANDARDS.md",
+      "sha256": "65ec1226f16cf4c0cecbfe61dab75d3a43b5527c917bb57370e1aa8801082865",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/EXECUTION-PLAN.md",
+      "package_path": "legacy/source-documents/EXECUTION-PLAN.md",
+      "sha256": "19757c2aa6522972277f7297396af6b4da79312ad84768279adbb5360daeb443",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/IMPLEMENTATION-MAP.md",
+      "package_path": "legacy/source-documents/IMPLEMENTATION-MAP.md",
+      "sha256": "452dd9262b27a1227c37bda82305e3ff8f7936553554a7a882cc3c6bd944cf8e",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/QA-CHECKLIST.md",
+      "package_path": "legacy/source-documents/QA-CHECKLIST.md",
+      "sha256": "a0237ad402af66d77f2e8e512ce109d984bf4274d25cf34c9ccf0e8762f3d887",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/README.md",
+      "package_path": "legacy/source-documents/README.md",
+      "sha256": "165019075fcdf161e5edd78bb61e98ad0a04f7ae46eb0075a61ab975cde8efad",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/V7-MAIN-MIGRATION-PLAN.md",
+      "package_path": "legacy/source-documents/root-v7/V7-MAIN-MIGRATION-PLAN.md",
+      "sha256": "67ec27d9059023dee0bfd9f86b9f90b9b94fb98a0c5676b87f91db0912bf35ec",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/README.md",
+      "package_path": "legacy/source-documents/approved/README.md",
+      "sha256": "b55b5b0fc4eb05e65abc1b8473fd9d24c5fea995a59319574085fb4893109afc",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/document-logo/README.md",
+      "package_path": "approved/document-logo/README.md",
+      "sha256": "07d3f4a514e93feb97f5fee7c21e0e55c96707825b058190f09199bcf7bd17f8",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "sha256": "0cffc4d938402df52882608183318689ad95f1e79f5363648d53450b50c4817f",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "sha256": "6bad71017d73a4554ca7aa9d98dfed77d8717121a423c68751cfa6a4aeea1249",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "sha256": "ed30d157630127962552f480f7634bb86ef65510c20d403a5c1f25d2374c54e5",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/horse/README.md",
+      "package_path": "approved/horse/README.md",
+      "sha256": "6b8d831cdc4a378a279cfedd85b6d26095155c6b560e6e2a8e3d71a96bc31085",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/horse/horse-master-green.svg",
+      "package_path": "approved/horse/horse-master-green.svg",
+      "sha256": "cb7edf2ea7f2dd7ef2808910d01585f8703c745c357912d1714014d738223c5a",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/README.md",
+      "package_path": "legacy/source-documents/approved/seal/README.md",
+      "sha256": "850c7ea160423bc77346ced4f239aae7db38c7ee06ea45d1f0c7f21612e650ba",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-black.svg",
+      "package_path": "legacy/seal/faith-reins-v7-seal-pre-rope-black.svg",
+      "sha256": "87e9a29f9d8e4c6d483b00299a0d59c12b08f8060f4750b7ec841f99b565eec4",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-cream.svg",
+      "package_path": "legacy/seal/faith-reins-v7-seal-pre-rope-cream.svg",
+      "sha256": "6b1296b91f2b115571eab16093230bf1b7e176fcb0512f7c15f074ca9abbd2a8",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-green.svg",
+      "package_path": "approved/seal/faith-reins-v7-seal-green.svg",
+      "sha256": "61e44013eb9085b09a10c457a5de2626e88a94c7bc9c12b5c817d20f6c42d79a",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-ivory.svg",
+      "package_path": "approved/seal/faith-reins-v7-seal-ivory.svg",
+      "sha256": "cd97befe7af891a8e95a24128bbed7634c77b413a4a91d442586c1463e89141f",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-solid-green.svg",
+      "package_path": "approved/seal/faith-reins-v7-seal-solid-green.svg",
+      "sha256": "8539d98569d6b1991d8ffbf105758712ddb32c98ba3ef434f3a551e8ceac3753",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/seal/faith-reins-v7-seal-solid-white.svg",
+      "package_path": "approved/seal/faith-reins-v7-seal-solid-white.svg",
+      "sha256": "efcea341505b0c0d08edfdc0c46c67a618710506d303193fb8dd26ab44a819e5",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/README.md",
+      "package_path": "approved/website-logo/README.md",
+      "sha256": "6ab656f8148ab51992877df9a8fe26b5c69db653c9d4bb0b4cdf97b35452c2b1",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-cream-responsive-proof.png",
+      "package_path": "approved/website-logo/faith-reins-v7-cream-responsive-proof.png",
+      "sha256": "d0c1aa78ad4516bb2e6661dce72536ebe95c8fbd0efd615397dbd8a049233145",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-green-responsive-proof.png",
+      "package_path": "approved/website-logo/faith-reins-v7-green-responsive-proof.png",
+      "sha256": "22c2af341007d0e84d73758cec5203796deda5557e3fc07e3f859664f6d208f5",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-cream.png",
+      "package_path": "approved/website-logo/faith-reins-v7-website-horizontal-cream.png",
+      "sha256": "332989e28a94ca7e5a2647d4ad4f3311fd2f912893bde1ded7ba03f7578f771d",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "package_path": "approved/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "sha256": "13b3a6c8d03047ed9b49868d4d9021338313082ad4c93d1794450c854a965a51",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-green.png",
+      "package_path": "approved/website-logo/faith-reins-v7-website-horizontal-green.png",
+      "sha256": "1b27c4cf09d151b86c21fd7fe1826257b93c66744f0876740cc753f5cd7511be",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/approved/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "package_path": "approved/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "sha256": "489f66ac3ee9c53dec982dc57b963e44f94b2dcf8606091ea0445bf58d86e1b6",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "sha256": "0cffc4d938402df52882608183318689ad95f1e79f5363648d53450b50c4817f",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "sha256": "6bad71017d73a4554ca7aa9d98dfed77d8717121a423c68751cfa6a4aeea1249",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "sha256": "ed30d157630127962552f480f7634bb86ef65510c20d403a5c1f25d2374c54e5",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/seal/README.md",
+      "package_path": "candidates/seal/README.md",
+      "sha256": "ae96b1da9a2fb0e3c1956860771f3fa3c53b083317e4fcffbaac8979256f5290",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/seal/faith-reins-v7-seal-candidate-black.svg",
+      "package_path": "candidates/seal/faith-reins-v7-seal-candidate-black.svg",
+      "sha256": "1504aba760d813917cff73004f596c63efe42f3c0f0d53c7011da1be78e394cb",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/seal/faith-reins-v7-seal-candidate-cream.svg",
+      "package_path": "candidates/seal/faith-reins-v7-seal-candidate-cream.svg",
+      "sha256": "1017f7bfd5793d7072aeca04046a2a4f143a166e52633dc2f2868d0d7d65baf5",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/seal/faith-reins-v7-seal-candidate-green.svg",
+      "package_path": "candidates/seal/faith-reins-v7-seal-candidate-green.svg",
+      "sha256": "ef385c14e9b909bd896c2af64100fab6dd6e79d29917d4836f90e40644ce998f",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/website-logo/README.md",
+      "package_path": "candidates/website-logo/README.md",
+      "sha256": "7a31e66d450ddf6f748757eaf7c3b8187f0da68bcfc0ee32850be0bbf9bd55ac",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "package_path": "candidates/website-logo/faith-reins-v7-website-horizontal-cream.svg",
+      "sha256": "696b008345f317fba84c065882ffed49c91fe6ae0024ea2a672dab96b0d4e666",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/candidates/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "package_path": "candidates/website-logo/faith-reins-v7-website-horizontal-green.svg",
+      "sha256": "ef38b01efe71d8f250692ac306c35341e8eb97afdc1c06dae98eb2ee722c4066",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/foundations/README.md",
+      "package_path": "legacy/source-documents/root-v7/foundations/README.md",
+      "sha256": "666c708c4803bb754ec68ef077aaf461fdf45ecb2d1c3297320c0ba124e6609e",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/foundations/tokens.json",
+      "package_path": "legacy/source-documents/root-v7/foundations/tokens.json",
+      "sha256": "8d7df644c30bfd075f8cbc0a68febfd3d0aa4d5e2626bf56afe827e8e3c54339",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/product-catalog/README.md",
+      "package_path": "legacy/source-documents/root-v7/product-catalog/README.md",
+      "sha256": "511fcfbc5ed74a0d58d292824db3af85df05c81d40dbc24435499d91f7558a70",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/product-catalog/products/polo.md",
+      "package_path": "legacy/source-documents/root-v7/product-catalog/products/polo.md",
+      "sha256": "ed8d4c5960e846cdda5e2a8705f8aa3c9dccd0bb5299e91fc61aafe7565ef005",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/product-catalog/products/throw-blanket.md",
+      "package_path": "legacy/source-documents/root-v7/product-catalog/products/throw-blanket.md",
+      "sha256": "1d02d42f2361b84bf49fe2c6f3022f991b9f539aae043cedc3ba337a034a83a7",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "v7-design-system/website/ASSET-INTEGRATION.md",
+      "package_path": "legacy/source-documents/root-v7/website/ASSET-INTEGRATION.md",
+      "sha256": "3f7ff04de28a67280662f09b3b3a30db2e753df26d0deff0eed59eb8a8252bb6",
+      "role": "historical root V7 record; current rules supersede",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/PRODUCT-CATALOG-CHECKSUMS.json",
+      "package_path": "legacy/source-documents/product-images-package/PRODUCT-CATALOG-CHECKSUMS.json",
+      "sha256": "b28ede706a9eae8e0aea850f213cdaca324ecea67261b810741c6e78f7c60eec",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/README.md",
+      "package_path": "legacy/source-documents/product-images-package/README.md",
+      "sha256": "f734a8305c759ad271f39ab196e52aadb843b0e0835a14421a4b5cbdbb722d6d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/document-logo/README.md",
+      "package_path": "approved/document-logo/README.md",
+      "sha256": "07d3f4a514e93feb97f5fee7c21e0e55c96707825b058190f09199bcf7bd17f8",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-black.svg",
+      "sha256": "0cffc4d938402df52882608183318689ad95f1e79f5363648d53450b50c4817f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-cream.svg",
+      "sha256": "6bad71017d73a4554ca7aa9d98dfed77d8717121a423c68751cfa6a4aeea1249",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "package_path": "approved/document-logo/faith-reins-v7-document-stacked-green.svg",
+      "sha256": "ed30d157630127962552f480f7634bb86ef65510c20d403a5c1f25d2374c54e5",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/horse/README.md",
+      "package_path": "approved/horse/README.md",
+      "sha256": "6b8d831cdc4a378a279cfedd85b6d26095155c6b560e6e2a8e3d71a96bc31085",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/horse/horse-master-green.svg",
+      "package_path": "approved/horse/horse-master-green.svg",
+      "sha256": "cb7edf2ea7f2dd7ef2808910d01585f8703c745c357912d1714014d738223c5a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/README.md",
+      "package_path": "approved/product-images/README.md",
+      "sha256": "473a8785d7b0460e8e3afa878b169c7e59514ec67a6e33bf935a9a82f9ffe2ed",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-cream-polo-product.png",
+      "package_path": "approved/product-images/boys-cream-polo-product.png",
+      "sha256": "6ad4e446e889589aebb46799ff5c700b27b33e485b742dd0d11e8f01e976c834",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-cream-polo-styled.png",
+      "package_path": "approved/product-images/boys-cream-polo-styled.png",
+      "sha256": "1d6bb0bac6659b85ec4ed6e1b48327eb1d7483228a794473e7a22f73fa74c72c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-forest-green-hoodie-product.png",
+      "package_path": "approved/product-images/boys-forest-green-hoodie-product.png",
+      "sha256": "45fb5eece9397524ee07603ca1cca10cacaa013726e5038e660eee1b0836deff",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-forest-green-hoodie-styled.png",
+      "package_path": "approved/product-images/boys-forest-green-hoodie-styled.png",
+      "sha256": "e745b9e1b50705dda8209d19f15c2f1d3d2afcea5eb1f69c49f712a6038aa54c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-forest-green-polo-product.png",
+      "package_path": "approved/product-images/boys-forest-green-polo-product.png",
+      "sha256": "f498bf0aecc29a40f3780c5c2fbccdb4b5c56fe526b6fe1aae72093c1af74be7",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/boys-forest-green-polo-styled.png",
+      "sha256": "33aa9ffd1f31c7fa4948f1586807eed2fc779cda478f0c2872650744ece7f264",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-tonal-forest-green-polo-product.png",
+      "package_path": "approved/product-images/boys-tonal-forest-green-polo-product.png",
+      "sha256": "299e719a7c5bf1b2cd4d348ef533758d7bfe270a1425d6b1225ea5f65e2fb2b4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-tonal-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/boys-tonal-forest-green-polo-styled.png",
+      "sha256": "ad1db533ff327ae3501060b25e594bc7efc11fc9a272ff950e3be78800e4d3f4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-white-polo-product.png",
+      "package_path": "approved/product-images/boys-white-polo-product.png",
+      "sha256": "1e01e007a650bf56d04e4e5577669862a027795b8825e10afa0569d53fe40185",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/boys-white-polo-styled.png",
+      "package_path": "approved/product-images/boys-white-polo-styled.png",
+      "sha256": "ae4db4d21fc767bdaf6fd20cee3335db50838072a7691059bb4fe4021e812f8b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-document-logo-mug-product.png",
+      "package_path": "approved/product-images/cream-document-logo-mug-product.png",
+      "sha256": "b0b68c346463b40a98e2759df4438f02c35b48bffcf161a046cab9e7c01defe6",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-document-logo-mug-styled.png",
+      "package_path": "approved/product-images/cream-document-logo-mug-styled.png",
+      "sha256": "8afab07033164790206ca8ec289d322a1c24cd8d158f7921b0c65d2d8a0cdebc",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-document-logo-water-bottle-product.png",
+      "package_path": "approved/product-images/cream-document-logo-water-bottle-product.png",
+      "sha256": "08790e2f24977ca78857011137581ddf958883f9ce7c72aea43d718604cc2e0b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-document-logo-water-bottle-styled.png",
+      "package_path": "approved/product-images/cream-document-logo-water-bottle-styled.png",
+      "sha256": "e6e6044dfb6ed0f2b6ea5f442a47988745eb498ec9517f001eb2555e52ae5f9c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-embroidered-throw-product.png",
+      "package_path": "approved/product-images/cream-embroidered-throw-product.png",
+      "sha256": "a4d423e27abba190f6658165b4511f5c7a2311daad738d0fefcd90109a393ce3",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-embroidered-throw-styled.png",
+      "package_path": "approved/product-images/cream-embroidered-throw-styled.png",
+      "sha256": "a6c55a31ea91e16daa32162af73302e1a966d193c8e9f6ba6758e494500c29d9",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-cap-product.png",
+      "package_path": "approved/product-images/cream-horse-cap-product.png",
+      "sha256": "e394e6f538c5b0b898797c6e61898096a0a20d4a47785d75fa0944cbd0fff642",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-cap-styled.png",
+      "package_path": "approved/product-images/cream-horse-cap-styled.png",
+      "sha256": "8d4455cc6dce128e156ee9898a186812332cd4648764856a8288e2ccea0bd7a3",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-mug-product.png",
+      "package_path": "approved/product-images/cream-horse-mug-product.png",
+      "sha256": "652a3ad302c01f48bb6065fd235bcf3a2743b4c40d243e52fd26bde8be6063ca",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-mug-styled.png",
+      "package_path": "approved/product-images/cream-horse-mug-styled.png",
+      "sha256": "e3134dbc2d73dd6d3c438ea33181ad61fefc62dfa3df69d33ec4e34a411c51fe",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-water-bottle-product.png",
+      "package_path": "approved/product-images/cream-horse-water-bottle-product.png",
+      "sha256": "b0adbcdb77ef967ea4d217ac4891b5a8c77c93330e9235634160deee82a40b6b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-horse-water-bottle-styled.png",
+      "package_path": "approved/product-images/cream-horse-water-bottle-styled.png",
+      "sha256": "c5de89354560b8bf2f39b4d960b3e23fad1262c814a502768a3db16c2f32cec2",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-quarter-zip-product.png",
+      "package_path": "approved/product-images/cream-quarter-zip-product.png",
+      "sha256": "34dddb98051a44fef19a289cf4b962ce7dd0305dd4cafb71b3ac2e2a962ed901",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-quarter-zip-styled.png",
+      "package_path": "approved/product-images/cream-quarter-zip-styled.png",
+      "sha256": "a90203f34523a559c7e09963b62900136c016b5082aea26549c45083373a45b4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-quilted-vest-product.png",
+      "package_path": "approved/product-images/cream-quilted-vest-product.png",
+      "sha256": "bbd6bc365a705a12069a170d4da3c86fc96b2ac15164b0b5ed34530884e9081a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/cream-quilted-vest-styled.png",
+      "package_path": "approved/product-images/cream-quilted-vest-styled.png",
+      "sha256": "ff6bda3dab63d0fc9beb22b687a86d4a0ff0143da94b7932a8d16de339042c8f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-journal-product.png",
+      "package_path": "approved/product-images/forest-green-document-logo-journal-product.png",
+      "sha256": "6b5ab9308388374d32dda7756c38284f1433bf7a1cd5be5b55449a64b662cedb",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-journal-styled.png",
+      "package_path": "approved/product-images/forest-green-document-logo-journal-styled.png",
+      "sha256": "659c1ca1bba11efcc2a6fd82b1a5d4ddb07b81e3a2b1ec012ba4b42b3fa4b573",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-mug-product.png",
+      "package_path": "approved/product-images/forest-green-document-logo-mug-product.png",
+      "sha256": "3cd1f124fe2b5ff80f3143222532dc5fd600689cc206ac8b8d841d1c5e20b0c1",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-mug-styled.png",
+      "package_path": "approved/product-images/forest-green-document-logo-mug-styled.png",
+      "sha256": "39758adf371a65e85c3a16fece518786d177bd9c56d0fcc3e0b9b093fd6073c0",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-water-bottle-product.png",
+      "package_path": "approved/product-images/forest-green-document-logo-water-bottle-product.png",
+      "sha256": "30a45b1d3a6586d8a332e081d83fdc47da87bc89822b7a178735e0bc7b6f7189",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-document-logo-water-bottle-styled.png",
+      "package_path": "approved/product-images/forest-green-document-logo-water-bottle-styled.png",
+      "sha256": "9b1782878f1f5cdb2fac5af2c45a627c62225c37767ca9f58a34f227c1075905",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-embroidered-throw-product.png",
+      "package_path": "approved/product-images/forest-green-embroidered-throw-product.png",
+      "sha256": "858ae46e5775cf5c4c030c79971cfd143f9b67363148f3696894c5a65ae4b4a7",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-embroidered-throw-styled.png",
+      "package_path": "approved/product-images/forest-green-embroidered-throw-styled.png",
+      "sha256": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-cap-product.png",
+      "package_path": "approved/product-images/forest-green-horse-cap-product.png",
+      "sha256": "ac16bd4295f4ff8e1e0f278ebb37d84bea01cc07ef60c9eb612660a6382a2190",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-cap-styled.png",
+      "package_path": "approved/product-images/forest-green-horse-cap-styled.png",
+      "sha256": "228bd0a393dce4e0083aec36a00dbe3ebdf768c2c6624647e91d55d203e4b366",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-journal-product.png",
+      "package_path": "approved/product-images/forest-green-horse-journal-product.png",
+      "sha256": "a078caef6708ae192f62eab77e9d69a3a91c4bb4911e11c975622aecedb9da46",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-journal-styled.png",
+      "package_path": "approved/product-images/forest-green-horse-journal-styled.png",
+      "sha256": "8efcbdfbe699cced2edd6d644fb3b2c31d18275f51ebf38bff870ab1d2543b09",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-mug-product.png",
+      "package_path": "approved/product-images/forest-green-horse-mug-product.png",
+      "sha256": "2c50ab7afb0d40496af5af804fd61d05e92396811854eb8ad2404cb32fa783aa",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-mug-styled.png",
+      "package_path": "approved/product-images/forest-green-horse-mug-styled.png",
+      "sha256": "c3c9e28207c225a0e2a31bc319e8e2d4977becc6de27dd035249545d9368bde8",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-water-bottle-product.png",
+      "package_path": "approved/product-images/forest-green-horse-water-bottle-product.png",
+      "sha256": "9d27c7d2710ed8d39799c1a2b150fc1bc7dcabd213a2ac9d891183e70cbd603f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-horse-water-bottle-styled.png",
+      "package_path": "approved/product-images/forest-green-horse-water-bottle-styled.png",
+      "sha256": "19b9ed0035df6e8569131b414c2c77c609b33ad4e8a4f6f2f0cf0996a930d02c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-quarter-zip-product.png",
+      "package_path": "approved/product-images/forest-green-quarter-zip-product.png",
+      "sha256": "92d8efa72ea1dab4187e7985c3fc09375d40cbefe864d0094625c835e48c5f89",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-quarter-zip-styled.png",
+      "package_path": "approved/product-images/forest-green-quarter-zip-styled.png",
+      "sha256": "78dc1bab535cda6744bfc963a692efada5a7f00b6cd126a5210cd272aad951a0",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-quilted-vest-product.png",
+      "package_path": "approved/product-images/forest-green-quilted-vest-product.png",
+      "sha256": "15f41cba2c17494c261f96a2fb6c5c24570aa5b2213d97f00e04cf0e173799cd",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/forest-green-quilted-vest-styled.png",
+      "package_path": "approved/product-images/forest-green-quilted-vest-styled.png",
+      "sha256": "9741a9d48cd920dc7ee0b6dfb2dafb449f9701a7d9e84b1a9ca11a4c75e5451d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-cream-polo-product.png",
+      "package_path": "approved/product-images/girls-cream-polo-product.png",
+      "sha256": "a515aa836398a0de0f9ce4ab7a52eeac8b66ed9310fede210d93011eb2894018",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-cream-polo-styled.png",
+      "package_path": "approved/product-images/girls-cream-polo-styled.png",
+      "sha256": "fcaaa6802d5b49a734d6cf380b46f78ca55976c1e2c961f5e85726e3fc8bb06a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-forest-green-hoodie-product.png",
+      "package_path": "approved/product-images/girls-forest-green-hoodie-product.png",
+      "sha256": "8eadb5784ffcf7ae5fe77482f8ddd8e960f8f22a9489312f8eeb5a2817b936da",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-forest-green-hoodie-styled.png",
+      "package_path": "approved/product-images/girls-forest-green-hoodie-styled.png",
+      "sha256": "ba735cb1b7429600f4f5604a670c0a439bf13f4210281517d22519bd3a5e4e65",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-forest-green-polo-product.png",
+      "package_path": "approved/product-images/girls-forest-green-polo-product.png",
+      "sha256": "093a0b3fbae08b1adb207710486a94a249bdb9c9666d6424c698d5bd919c71d7",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/girls-forest-green-polo-styled.png",
+      "sha256": "4679ab63c30894e2cdb98fb7e6b4d8924bcca467ae6175e5eb4e543a28f0ad8e",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-tonal-forest-green-polo-product.png",
+      "package_path": "approved/product-images/girls-tonal-forest-green-polo-product.png",
+      "sha256": "f0c944c1d653399708d8487f645443c204727e06d81500bb4b239e65e02d6e59",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-tonal-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/girls-tonal-forest-green-polo-styled.png",
+      "sha256": "9812040bf8f75f8de77099624bb4470ee05b4ef4159d8ec1c4c887f0787aa064",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-white-polo-product.png",
+      "package_path": "approved/product-images/girls-white-polo-product.png",
+      "sha256": "10497ea3772e9aa27bd3cb5397cf1cd45ca90680bd4985ee9c81672e79394304",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/girls-white-polo-styled.png",
+      "package_path": "approved/product-images/girls-white-polo-styled.png",
+      "sha256": "3bcd8fafaa345297993aaaf7bb0a686c6854cd6ef8e15b4c4a6787b3d4ed1159",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-cream-hoodie-product.png",
+      "package_path": "approved/product-images/mens-cream-hoodie-product.png",
+      "sha256": "b23d180cf98f82a668203fcd2630f5adc9ece7f33f5658efeb9e352d45ef2ccc",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-cream-hoodie-styled.png",
+      "package_path": "approved/product-images/mens-cream-hoodie-styled.png",
+      "sha256": "e1173f9f57a89a03f6c6804630d86ce83124e985cad6b39c2eeb68f6753b4161",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-cream-polo-product.png",
+      "package_path": "approved/product-images/mens-cream-polo-product.png",
+      "sha256": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-cream-polo-styled.png",
+      "package_path": "approved/product-images/mens-cream-polo-styled.png",
+      "sha256": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-forest-green-hoodie-product.png",
+      "package_path": "approved/product-images/mens-forest-green-hoodie-product.png",
+      "sha256": "e06ba7171f36e98a4f59cafae677483bcf4a3400fb08be05346b92b1bf3eab66",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-forest-green-hoodie-styled.png",
+      "package_path": "approved/product-images/mens-forest-green-hoodie-styled.png",
+      "sha256": "efc18d4786567037dd254a848d50765caf5cb228f6c2f9b6385128d839f487c3",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-forest-green-polo-product.png",
+      "package_path": "approved/product-images/mens-forest-green-polo-product.png",
+      "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/mens-forest-green-polo-styled.png",
+      "sha256": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-tonal-forest-green-polo-product.png",
+      "package_path": "approved/product-images/mens-tonal-forest-green-polo-product.png",
+      "sha256": "74d5f9ac42edb9bef7d47c04bd33f89e911f675fca3572adcfa8b76a78c6eeab",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-tonal-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/mens-tonal-forest-green-polo-styled.png",
+      "sha256": "dc5228370e93dde081d44118c8b5b9cd30e21d0b0a83c2138a5488b76555f93a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-white-polo-product.png",
+      "package_path": "approved/product-images/mens-white-polo-product.png",
+      "sha256": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/mens-white-polo-styled.png",
+      "package_path": "approved/product-images/mens-white-polo-styled.png",
+      "sha256": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-horse-cap-product.png",
+      "package_path": "approved/product-images/white-horse-cap-product.png",
+      "sha256": "79064d46251da9123d298d0ee3220b49c663e75b967bdfb2e0b93bbd76555094",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-horse-cap-styled.png",
+      "package_path": "approved/product-images/white-horse-cap-styled.png",
+      "sha256": "d6e4a501f3c660b740d9b6e8dbfd67ce509849f4bd9b090845f260bbaf12f90a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-quarter-zip-product.png",
+      "package_path": "approved/product-images/white-quarter-zip-product.png",
+      "sha256": "647e532b8bdddd4ad5aa5ef93b47c622fd18210a9f749a8b85c7243a185e8b2f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-quarter-zip-styled.png",
+      "package_path": "approved/product-images/white-quarter-zip-styled.png",
+      "sha256": "bf9c7b7269c7d8378fce97a81e606afd57370f58b910667906b1d72f02ef0214",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-quilted-vest-product.png",
+      "package_path": "approved/product-images/white-quilted-vest-product.png",
+      "sha256": "42f2735d1ef536917650d01efd382ee861594b21c7fce4adb23cc83c5fb86ebd",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/white-quilted-vest-styled.png",
+      "package_path": "approved/product-images/white-quilted-vest-styled.png",
+      "sha256": "3b1ca352950623b8b3ca7a54a8a4cc9441040341f0fcda08d7ca2f259a375ed4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-cream-polo-product.png",
+      "package_path": "approved/product-images/womens-cream-polo-product.png",
+      "sha256": "ddfbf557cc466588aad272253f5c2050c995752c91da73ba156113257bd398eb",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-cream-polo-styled.png",
+      "package_path": "approved/product-images/womens-cream-polo-styled.png",
+      "sha256": "b90ccb3fa916303558a2a18127c7b02267fb2666428550c0b5dc55f9aca39d4d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-forest-green-hoodie-product.png",
+      "package_path": "approved/product-images/womens-forest-green-hoodie-product.png",
+      "sha256": "0c1c873acdc142636cb88d514bd395d0f11ca218c8889fed6d4b7f3e2ba0a8bd",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-forest-green-hoodie-styled.png",
+      "package_path": "approved/product-images/womens-forest-green-hoodie-styled.png",
+      "sha256": "4e517af80635a5149425243f4d800ca52f8fc96786b0e23ab48d4da2917cdc4c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-forest-green-polo-product.png",
+      "package_path": "approved/product-images/womens-forest-green-polo-product.png",
+      "sha256": "ab50f56a1b1495398021998ece84d2da88b0c194ddceb157706a32c1bbc6e121",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/womens-forest-green-polo-styled.png",
+      "sha256": "7534af8a1f1e37a5a652a3e3d5fa2f6afc095f81f3c5ae3237dd046f1d67b0a5",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-tonal-forest-green-polo-product.png",
+      "package_path": "approved/product-images/womens-tonal-forest-green-polo-product.png",
+      "sha256": "d796224f66b852edd1708c1040bae7fb7561500115b1d6015b8cf0b33b45216f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-tonal-forest-green-polo-styled.png",
+      "package_path": "approved/product-images/womens-tonal-forest-green-polo-styled.png",
+      "sha256": "26ab32d8451bf1fb549c8e83c2cefe19f3d8ac56197532b1c4ca688e726a2a67",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-white-polo-product.png",
+      "package_path": "approved/product-images/womens-white-polo-product.png",
+      "sha256": "f15b938dd612fbb31a42642fd541c2af3f3a4338a94b6c7ae417fb60279de369",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/approved/product-images/womens-white-polo-styled.png",
+      "package_path": "approved/product-images/womens-white-polo-styled.png",
+      "sha256": "18158f07ce73e9060db4cf1bcd7d8c7373aa3546324ab0a3dc25b10bcff5f5a4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+      "package_path": "merchandise/APPROVED-HERO-PRODUCT-IMAGES.md",
+      "sha256": "2b8637ee7bddbb72d1f1f88bdedafc316a47b59522c94aa5c9ec869033444d2d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/BRAND-DIRECTION.md",
+      "package_path": "legacy/source-documents/merchandise/BRAND-DIRECTION.md",
+      "sha256": "cf86d718da4ce0351729cb0a5670f7e819685cb9e932b103e626914b7c50b5e9",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/ECOMMERCE-IMAGE-SYSTEM.md",
+      "package_path": "merchandise/ECOMMERCE-IMAGE-SYSTEM.md",
+      "sha256": "aa18da58c3fb781e92298d00597affcb8903e9daa0e5e655fb305de3d92846bc",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/HOODIE-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/HOODIE-001-IMAGE-REGISTER.md",
+      "sha256": "f15580656aa4c5e7cdd29f80393891576d16b8002d46aa3512badbb613058660",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/MERCHANDISE-CONCEPT-BOARDS.md",
+      "package_path": "legacy/source-documents/merchandise/MERCHANDISE-CONCEPT-BOARDS.md",
+      "sha256": "7096cc57b3931ecdbd69231f84afc2c60cf01a39c65da7fad8b1dd60f902066d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/MUG-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/MUG-001-IMAGE-REGISTER.md",
+      "sha256": "c40bd484e86a5a51039c6f6ace00e9bff9427668dad61a2acbaf6e93a9c6d745",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/NOTEBOOK-001-IMAGE-REGISTER.md",
+      "sha256": "16fb00a3a9139048f7e6c69b03b723118aa42f32bd59f36e18fd4f0d889f2f73",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/POLO-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/POLO-001-IMAGE-REGISTER.md",
+      "sha256": "ebb95d743c6b4e49fd01ac80c5449f08f40f2d5441b132078e7fa17268ee69d6",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/PRINTFUL-SOURCING-PLAN.md",
+      "package_path": "merchandise/PRINTFUL-SOURCING-PLAN.md",
+      "sha256": "f91d9dae4d90caf4085e0b462ca86fe4cd2ca687c65dd478e55e9b2c885f13e1",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/THERMOS-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/THERMOS-001-IMAGE-REGISTER.md",
+      "sha256": "c09c464bd95342d6b2c43f2ebfb620889eeaf26dc65dd70cc32cf783a1920da1",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/THROW-001-IMAGE-REGISTER.md",
+      "package_path": "merchandise/THROW-001-IMAGE-REGISTER.md",
+      "sha256": "8b632b4cba95b4247c25aa7dad22a0c0b44decdcf5875d4a6b7fa74454228118",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/IMAGE-IMPORT-MANIFEST.json",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/IMAGE-IMPORT-MANIFEST.json",
+      "sha256": "37767c4b74198bc2b2a2ee595a623cf3b7045b8ce5758e1c2223a9e00471761e",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/README.md",
+      "package_path": "merchandise/product-catalog/README.md",
+      "sha256": "4c4fe02f1fe3e4201da261378f9642bc7e82ca697d1a39bb80e08b426a24c3f2",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/boys-cream-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/boys-cream-polo.md",
+      "sha256": "dc263b002f455067689b684d33d2668efc25a6bd80e1d564696ee4430fd82616",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/boys-forest-green-hoodie.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/boys-forest-green-hoodie.md",
+      "sha256": "aa288cd4c80a970b668442ab7b6c20c131b551705591c2a47865a8bd6e3be42f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/boys-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/boys-forest-green-polo.md",
+      "sha256": "2ad3b5d389146cc697a7d50bddf1ca90b94548e6a9ae9a459b3b9dcdd4f4b7df",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/boys-tonal-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/boys-tonal-forest-green-polo.md",
+      "sha256": "1873545241088df6db217dfa0444ea53573d854e78f5e402e0d9ed5085cff332",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/boys-white-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/boys-white-polo.md",
+      "sha256": "675b2160d931bd50cf65e1f197e0362236d431f15f171367d565f7d15e2e06eb",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/catalog.json",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/catalog.json",
+      "sha256": "dc8fd8183ffaba68843c0f7ba4c5182f2bbb2cb404bbc4b70314c1898d12f374",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-document-logo-mug.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-document-logo-mug.md",
+      "sha256": "d18ebd4b8ec29297335516ff577d5368e0515e01c088c74e5b6dd0305c857d5a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-document-logo-water-bottle.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-document-logo-water-bottle.md",
+      "sha256": "acc975d4787ddb01f10061c43738d661c9ffe3ce8ceb83c9323b93d72731447b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-embroidered-throw.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-embroidered-throw.md",
+      "sha256": "0a0f856ce27a8508ffb93d6889265c1735eb1ccaac89bec1db0c1598d2b28fd7",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-horse-cap.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-horse-cap.md",
+      "sha256": "61629b580d15b10c7988873c504eda2b89420653432364dbf7c502bb0f629205",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-horse-mug.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-horse-mug.md",
+      "sha256": "d54fdf35bc9251b6294d9438e0c4475add6918d39624f3c758a734eda748a53f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-horse-water-bottle.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-horse-water-bottle.md",
+      "sha256": "f32e1e2f82101cbeedec6e79c042f3c2ea722df02dcb510928d795427285e465",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-quarter-zip.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-quarter-zip.md",
+      "sha256": "a98c55084cec7c1bd9e51874cdba50a1e66e529d24bf99ae98b2984af4f73b72",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/cream-quilted-vest.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/cream-quilted-vest.md",
+      "sha256": "9dfb2cb1a28140d1b40c5cd37601518f28d48b72f45750fef955959ff1d7f58b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-journal.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-journal.md",
+      "sha256": "5c2ee32d91f9dde41ee6a634e25a429cbb9f743406f3e89405eca1cff52d8053",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-mug.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-mug.md",
+      "sha256": "a1fd39fc39af6c1e4e51a9fe1450f23c3b51a2f769fc7e6f711fe37bfab765e0",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-water-bottle.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-document-logo-water-bottle.md",
+      "sha256": "03cc630d87c207bb2ec6249a11e6675d401996cc1d557e63b2e5a0efd5bc3cb4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-embroidered-throw.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-embroidered-throw.md",
+      "sha256": "5d5afeeca925fd24111a1a97874430712b29742d5ef0995f7fda1a28e5dedaed",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-horse-cap.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-horse-cap.md",
+      "sha256": "a01d882ec8b0b8e745abc1cca5bcd6cbf30a96b81109e35ef5d47d2db9754044",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-horse-journal.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-horse-journal.md",
+      "sha256": "9cabce4e87d83664c5687a106aa2065535275326feaedbf09e6706675b4a2b03",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-horse-mug.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-horse-mug.md",
+      "sha256": "b39d4d41df6e4fc103e11c68c42299c8ee3c083f79ab53fabdfa05e37785cc4a",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-horse-water-bottle.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-horse-water-bottle.md",
+      "sha256": "2c83acaf67010a93347dfb7bc5e07d9c5e5e054e57ff6e5e9713e311bc90ab68",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-quarter-zip.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-quarter-zip.md",
+      "sha256": "83f6cbbcc17d0c226100ae70bfafeb0d03c659abe486ba998b6e9c25fc070e67",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/forest-green-quilted-vest.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/forest-green-quilted-vest.md",
+      "sha256": "2517e9a1b5055a2ec32a01ee7a26a0fb49d9d0e6f7738a1f0ce6f2fe49a2b4ef",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/girls-cream-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/girls-cream-polo.md",
+      "sha256": "939ff36dabdd1335fa93515d208c41aec84f791597756b1d72326f2e463d154f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/girls-forest-green-hoodie.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/girls-forest-green-hoodie.md",
+      "sha256": "13d78f2bff53e484f16c8c7bb22a194e8f9d04c1ebc109ff07a879df6a75e9a4",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/girls-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/girls-forest-green-polo.md",
+      "sha256": "c86c15f61aed0f337098039aa31d6ea7fb6a27d9c8d4fee860f8f53424b4057e",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/girls-tonal-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/girls-tonal-forest-green-polo.md",
+      "sha256": "f657f7ef52ceb70b87a33df1880f30d824ee5adc49de645b97314c5eeef8cf27",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/girls-white-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/girls-white-polo.md",
+      "sha256": "2056d627df3a7c75946077f6c316bbf4d0015c8c33c75201e83300f456c9788b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-cream-hoodie.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-cream-hoodie.md",
+      "sha256": "652d14faba9b64a4d26cd4bf9811218d83929e08d8e4c074d7174f55cb07d70f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-cream-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-cream-polo.md",
+      "sha256": "7e4e3b5f5f0d4dc2e8781824820db71be92646db128883d2b4234d0e1c77cfdc",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-forest-green-hoodie.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-forest-green-hoodie.md",
+      "sha256": "51c8f27a7fcb53b46bee0a75c3589c22bd1319adf19c9787da8ebd2f462d7f3d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-forest-green-polo.md",
+      "sha256": "410c2e41b2d0e6ecea5c0585e387d475efa443c28be9bb2f70ec880b863f99f5",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-tonal-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-tonal-forest-green-polo.md",
+      "sha256": "7a5da973dac7bd14b76195874555578947c233f35a1e6c02883f8c945f3aff7d",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/mens-white-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/mens-white-polo.md",
+      "sha256": "1e87947ac40256c45198c7ad14f49c062af8a4f569aa2cc77088c8e5f67c0ceb",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/white-horse-cap.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/white-horse-cap.md",
+      "sha256": "ea04adef5379f02050b9a7a59013a14233ed7b53a44d716780837ba0517f985b",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/white-quarter-zip.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/white-quarter-zip.md",
+      "sha256": "802aaaa6d692ff941dc6bb685e392b85731add60e5e5a8474e81f58c3a42989c",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/white-quilted-vest.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/white-quilted-vest.md",
+      "sha256": "3e00c3c12d49c1d45158b058bfe642d6afe00b9fd102a899ead958615ec56099",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/womens-cream-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/womens-cream-polo.md",
+      "sha256": "efd36d2429deb0865c66c9db519ba13e6c9a53f312d596aa250f86e4727315af",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/womens-forest-green-hoodie.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/womens-forest-green-hoodie.md",
+      "sha256": "1091221f896a40a80b1294373b72aef1b76bb8463b5f55a3751a66f63f8de70f",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/womens-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/womens-forest-green-polo.md",
+      "sha256": "6209107568e152aafea6766ce1469445b3cdecb39623abb747f20420acb719ec",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/womens-tonal-forest-green-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/womens-tonal-forest-green-polo.md",
+      "sha256": "e1dad86ab29bb2e6491eabb010bf5a52b167b1e1fe83a44ca6fcc1a441de9329",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/v7-product-images/merchandise/product-catalog/womens-white-polo.md",
+      "package_path": "legacy/source-documents/pre-consolidation/brand/v7-product-images/merchandise/product-catalog/womens-white-polo.md",
+      "sha256": "548c494891fdc24f62544b3b0fb3de06302816eb8875adfac39906f3a2795926",
+      "role": "duplicate catalog package or historical wrapper",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/ASSET-MANIFEST.csv",
+      "package_path": "legacy/website-snapshot/images/ASSET-MANIFEST.csv",
+      "sha256": "ac2733bcce72e68c85957c21ca97883b69c5e755508c926cb7d1881cc62f02de",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/README.txt",
+      "package_path": "legacy/website-snapshot/images/README.txt",
+      "sha256": "e41e817e0955e88a12dda845ffff19ad53bdfec67acb93952dddbf4ce9f32d52",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-book-online-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-book-online-desktop.webp",
+      "sha256": "b18e4cc0c173eea5d0bd73a07580d3f2f2a286c237a70b0027d1afc0ba5318c4",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-contact-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-contact-desktop.webp",
+      "sha256": "dc387746904cf11fee3f7aaee7b76be9502aee86f25713e66e32195f00a98e75",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-counseling-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-counseling-desktop.webp",
+      "sha256": "4994478de47575b0bf891e8f62b96ec517783a565fd6e1985590a28168b0fd9f",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+      "sha256": "6f840a6ad130f4f95a6af949c67cf9a270f54a27adfefcc897600f425afaeb11",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-faq-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-faq-desktop.webp",
+      "sha256": "3fa3093a47e3593f90e9dc1a2b54f21e0a99b0e257a0729f618e7836b140922e",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-for-families-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-families-desktop.webp",
+      "sha256": "703a8b3b9fece52b49ca6fc137977266f2ed90cb9331017a3f07264fad4d85ed",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-for-referring-providers-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-referring-providers-desktop.webp",
+      "sha256": "ca972baf51ba7ed34e7507369f7c61e52ddb43865a835ea9bb8df6dbe6eb59d6",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-give-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-give-desktop.webp",
+      "sha256": "326fb5b695e6f51789ed7c35e503152b2bfb3b085c7309e506a2820a27d58e86",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-home-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-home-desktop.webp",
+      "sha256": "576e613d7b09d7c0ecc9307ddb0e0b88ae3d9c1407365ee5ba73ab4df513da5a",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-impact-and-stewardship-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-impact-and-stewardship-desktop.webp",
+      "sha256": "ab71bbd8fff83c2378fdbd290aca8f5bde9fe9368598ddcf424efaad1441cb84",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-join-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-join-our-team-desktop.webp",
+      "sha256": "0238569ea05cddbaf4462a4983aff8853344161eb0de3ac79a62247716addb82",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-occupational-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-occupational-therapy-desktop.webp",
+      "sha256": "8156ef15d47a0af4e2ce6d27f8d709e4744a97d5fc81e059daea43f4421fed91",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-our-horses-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-horses-desktop.webp",
+      "sha256": "770cae34e1fb37b3884464f3640d406aa15246b37bbe612aa35787c0429624c6",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-our-mission-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
+      "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-our-partners-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-partners-desktop.webp",
+      "sha256": "3cbe0c08576d7ece8875f2e27683f3ce7379715aa290acd31a94beb0cf6c37c6",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-team-desktop.webp",
+      "sha256": "6c4ee4ac37f9e36dca9a6f62c6c6bf3ed91332b8ae7efef507febd3fbfef0d06",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-payment-and-insurance-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-payment-and-insurance-desktop.webp",
+      "sha256": "3b303088c8c18c50f1a1dda9366abed84ba27556aab029b02cc7a9f1b9c824df",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-physical-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-physical-therapy-desktop.webp",
+      "sha256": "a0f6f8efe3d1073e09fb495cc13caa0136a312551785c7fee217da161dec04a9",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-services-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-services-desktop.webp",
+      "sha256": "c986558c84922828463d6068cc63089d4205f07a2b6801eb57e5a9a476b54113",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-shop-desktop.webp",
+      "package_path": "legacy/v6-reference/photography/hero-shop-desktop.webp",
+      "sha256": "f3b6d0d82ac25cc8138737bae7e1efbfa239336b71f6d8ff3aa576f1b23c78c2",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-speech-language-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-speech-language-therapy-desktop.webp",
+      "sha256": "d986f2529affb2b365985e9ef5760b27cdd0a1207c40d25a43f5eb89181354f0",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/hero-sponsorships-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-sponsorships-desktop.webp",
+      "sha256": "bc8d6177394f5b53c258a6aee9506626bdb0f08fded2dd97ab42a4db99c537eb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/desktop/pasture-hero-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/pasture-hero-desktop.webp",
+      "sha256": "95373774e2d5b6c38c0165049c19808a5222942171e5180d9a82343913e9cfea",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-book-online-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-book-online-mobile.webp",
+      "sha256": "6d00745dd1adbaf15ad3e1befadb3efa9adbab51743087a17770e439c8e88624",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-contact-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-contact-mobile.webp",
+      "sha256": "58e36e00cb4bb9e5b71896d1e5669286239821d428b86b33e40a2f01773d9035",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-counseling-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-counseling-mobile.webp",
+      "sha256": "5f070952a9413d2eb87acd55f7fcef6dbd612c0e30f312de9ce0797c12f971ae",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-equine-assisted-learning-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-equine-assisted-learning-mobile.webp",
+      "sha256": "0c04dfcc075f741b3da6bc489a90a43e5f5d29ab5c6124daf231dab5a8aae74a",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-faq-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-faq-mobile.webp",
+      "sha256": "04a9e6fad1d899951d983af591c3ec2bd41741610155225dc4cbe393727da67d",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-for-families-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-families-mobile.webp",
+      "sha256": "8522715fb846f70def933fe4fd3dbae120ecb428fd69ea8afa6cdc4f8d165ec0",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-for-referring-providers-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-referring-providers-mobile.webp",
+      "sha256": "6a6976d60e5cd52eb5e7b12ede3959f20b0ca839fdb13e0aabfd027b1f2e3e86",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-give-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-give-mobile.webp",
+      "sha256": "56a2f02f80624630cc48c4c01c852ad9620b8294368c17ecb833b44b9b9b071f",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-home-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-home-mobile.webp",
+      "sha256": "70c88f0e59b13648010a812c106c8c82c4101b61557a51ed7f02a391081cdd35",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-impact-and-stewardship-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-impact-and-stewardship-mobile.webp",
+      "sha256": "789bad3ab0c2d7caa896cc7094953b9479b8c8ac1a67160f68d79fb3da03a362",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-join-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-join-our-team-mobile.webp",
+      "sha256": "b79a3edf5953bc27563328300d1222d7f02ae480a0b866a0f3fac5a85025f347",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-occupational-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-occupational-therapy-mobile.webp",
+      "sha256": "60e8b1fedcdf92eb0b1db1b7c11a2a202aa2bab816143a8b7e4d511b0a377618",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-our-horses-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-horses-mobile.webp",
+      "sha256": "56c090d87add4a06f1ea0409143f8fa07df10b7d5c8f92189d6a892aebe9e75d",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-our-mission-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-mission-mobile.webp",
+      "sha256": "fb2c8865d3a79880e59fbf2023183317cbef77cb647c64bfb2af073e5835d530",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-our-partners-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-partners-mobile.webp",
+      "sha256": "0bad3250359835e159af4131bc16cd779e2518d1522a6b52e13cb0101458e54c",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-team-mobile.webp",
+      "sha256": "341eddc24e897811300c6dcf73f45bc99f800b657fb8d3295177ef4f540c7d98",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-payment-and-insurance-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-payment-and-insurance-mobile.webp",
+      "sha256": "4ee1a743e0636f565ca60afe30d51b110d4bde60b738c5d46b600e950ca5db53",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-physical-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-physical-therapy-mobile.webp",
+      "sha256": "162b5744395a4e16fd6719711253e52034ff532d6ce849510f2edb95c0883353",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-services-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-services-mobile.webp",
+      "sha256": "b85799a53a710d63c8b038b110b9be868d8ca76a643f2419393f0550502238a5",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-shop-mobile.webp",
+      "package_path": "legacy/v6-reference/photography/hero-shop-desktop.webp",
+      "sha256": "f3b6d0d82ac25cc8138737bae7e1efbfa239336b71f6d8ff3aa576f1b23c78c2",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-speech-language-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-speech-language-therapy-mobile.webp",
+      "sha256": "e95e8a6cd8b56c97194a3baf734c9cf19a681b8174ab02680a0fcf38730c3b00",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/hero-sponsorships-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-sponsorships-mobile.webp",
+      "sha256": "f3c7f549607ce2fa47c6099d52c87672bdbff9eb771f0c249f78797f2cfed4ac",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/heroes/mobile/pasture-hero-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/pasture-hero-mobile.webp",
+      "sha256": "e0649c9df6fb9d97649e1594a778edaf7b504403c820135ebbab26c818a447fb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-book-online.jpg",
+      "package_path": "foundations/photography/masters/hero-book-online.jpg",
+      "sha256": "f30fe250fff6cfff37cdb95b3f65033c943f7616e67454f2dd4aad353037412a",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-contact.jpg",
+      "package_path": "foundations/photography/masters/hero-contact.jpg",
+      "sha256": "a686912f2b5a5ec978bbbd23c753c34c32aeb5130f8d3f441882d90f6b3e08df",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-counseling.jpg",
+      "package_path": "foundations/photography/masters/hero-counseling.jpg",
+      "sha256": "4922043704d481563e7bfd76003246d89be009b20bafbe57471e12893e0210d4",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-equine-assisted-learning.jpg",
+      "package_path": "foundations/photography/masters/hero-equine-assisted-learning.jpg",
+      "sha256": "5177231e995a9c68766875fb828314037b4aa90a6e9ad123da87674d40743f4f",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-faq.jpg",
+      "package_path": "foundations/photography/masters/hero-faq.jpg",
+      "sha256": "6ee1563e0ebaeb273375dd9258b0850254eb75f15b8ab0feb613136ecbdc0249",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-for-families.jpg",
+      "package_path": "foundations/photography/masters/hero-for-families.jpg",
+      "sha256": "d7d5069b7fd0e41a95f0321bfdb808bd6931a9df24c3a2da8c6e4708a8ec01e7",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-for-referring-providers.jpg",
+      "package_path": "foundations/photography/masters/hero-for-referring-providers.jpg",
+      "sha256": "443f3b6b63accd9b85c465afc6b55a853df87757371a19384b8f8bbdbb02c4e1",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-give.jpg",
+      "package_path": "foundations/photography/masters/hero-give.jpg",
+      "sha256": "f8cb1b2cde583f36e5ff72bf72b81841d779dc772623f27e4d08e1459452e7ef",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-home.jpg",
+      "package_path": "foundations/photography/masters/hero-home.jpg",
+      "sha256": "496ef4135eb8d740e698b12d9ca369b9d8b16703920fb650be860ac6f9133481",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-impact-and-stewardship.jpg",
+      "package_path": "foundations/photography/masters/hero-impact-and-stewardship.jpg",
+      "sha256": "26c201e2dd9b4932ba15a06c53e5933cb455b3f67052574437fdb51a39771ab1",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-join-our-team.jpg",
+      "package_path": "foundations/photography/masters/hero-join-our-team.jpg",
+      "sha256": "156f57821a867b7cfe4410d4fbc173af749a323625ac641ba428310b383e56eb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-occupational-therapy.jpg",
+      "package_path": "foundations/photography/masters/hero-occupational-therapy.jpg",
+      "sha256": "446cba514479c9d363b5f51c7cd33ed0021f426306f0a70de48211966af27cc7",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-our-horses.jpg",
+      "package_path": "foundations/photography/masters/hero-our-horses.jpg",
+      "sha256": "0d6c5df5a56970280d7b9adad20ed4617ba6029ccec18f50feab388f4ceb36eb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-our-mission.jpg",
+      "package_path": "foundations/photography/masters/hero-our-mission.jpg",
+      "sha256": "2ef006e2cec9ff99a9b7191afa255c693acfd72a3f5c8e82db10fcbb1a2593a6",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-our-partners.jpg",
+      "package_path": "foundations/photography/masters/hero-our-partners.jpg",
+      "sha256": "32f2e81ac216d4ea667f8865620a8e26e7596e97e64a697fad8acef3fd5c9b99",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-our-team.jpg",
+      "package_path": "foundations/photography/masters/hero-our-team.jpg",
+      "sha256": "649c0ae5d420a7727c444c9de541bcbd8291bf1dbad5266a0a2fe3c7395a52af",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-payment-and-insurance.jpg",
+      "package_path": "foundations/photography/masters/hero-payment-and-insurance.jpg",
+      "sha256": "f16807e8ef5a3837fd3305881a1eac438b525b544ba3bae2ef414018a9ca431c",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-physical-therapy.jpg",
+      "package_path": "foundations/photography/masters/hero-physical-therapy.jpg",
+      "sha256": "af40e2929cfedc9c1c64e238e9f7f928d11a04111a798175028851bb2482a7fc",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-services.jpg",
+      "package_path": "foundations/photography/masters/hero-services.jpg",
+      "sha256": "87ad77bcfc5a9884d337cb6448c861e581fea1798a269b9b0db55d54af5b9bba",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-shop.jpg",
+      "package_path": "foundations/photography/masters/hero-shop.jpg",
+      "sha256": "7f9cdedcee382221cf098e8d9e3aedf78131b71b0962dfc3fa19282a1e0c15f0",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-speech-language-therapy.jpg",
+      "package_path": "foundations/photography/masters/hero-speech-language-therapy.jpg",
+      "sha256": "bcdc3aa8698e99a9dd0c7e7c16d5dd901ded25f5d55c07f2efa112b0c52d9915",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/hero-sponsorships.jpg",
+      "package_path": "foundations/photography/masters/hero-sponsorships.jpg",
+      "sha256": "22ded7dca952b81ecf2d8cb3526d2cc6ba94e73ee8358a335a6f0db22f93b512",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/masters/pasture-hero.png",
+      "package_path": "foundations/photography/masters/pasture-hero.png",
+      "sha256": "849dda9250fae2a33e032d0ce2f439706faf09838f97b29006f6caf23664d551",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/home-clinical.webp",
+      "package_path": "foundations/photography/imagery/home-clinical.webp",
+      "sha256": "6aabe3c82c3448663b96cc81966bbd1c06b521e4d1d4d2fac531c2567f2cd9ca",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/horse-biscuit.webp",
+      "package_path": "foundations/photography/supporting/horse-biscuit.webp",
+      "sha256": "af4599e069a99df15e85841df9ce4262c76facdc935e86d957149695db68b129",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/horse-captain-carrot.webp",
+      "package_path": "foundations/photography/supporting/horse-captain-carrot.webp",
+      "sha256": "a3bf78386f243352ff6dbe93e74095c7519eb1fd2e44d30010deae8aa919c6bb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/horse-cowboy.webp",
+      "package_path": "foundations/photography/supporting/horse-cowboy.webp",
+      "sha256": "f5a31c9d300bb5458bb8638b6dbc7445caf6a76406d31d55a3eb4cfb4c742bce",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/horse-maple.webp",
+      "package_path": "foundations/photography/supporting/horse-maple.webp",
+      "sha256": "87770a93745cbb1d6b9cd7d89dea5b5dbd6035df8e53bc6d6430ea88522ba983",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/logo-white.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/logo-white.webp",
+      "sha256": "24da8322086643799b47d8ca4d7999498e5d4250663f7b91fe6e500ddef6cdf4",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/logo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/logo.webp",
+      "sha256": "ca2e3fc0219fe8f6d159c6c2a8de6d8a5057caf5ab5b6581b7d6a1b5667f99bf",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-beanie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-beanie.webp",
+      "sha256": "11a0dbf695a19d7a3a378747bae9de68ef1d305b01b4da60b5718fd1602606b4",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-caps.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-caps.webp",
+      "sha256": "e54227acd731722fd26aa39da32082ffe95043113e2e5b75f474640ffde116f2",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-children-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-children-hoodie.webp",
+      "sha256": "180c859a1b302d950bffe13c1e73fa189246a0788530129c0bfa2c9b6ed2c04c",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-children-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-children-tee.webp",
+      "sha256": "f81dacb2af97162be66250ed6d93edf3986ac6eb63395be45980cc66b74d864e",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-crewneck.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-crewneck.webp",
+      "sha256": "baf6059fe733b72a03675017788b5e8c48ba0bad462f4669e1864a0380573eb4",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-keychains.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-keychains.webp",
+      "sha256": "22c452875baa46e7c899b55e4f531731370965b14b1048a533f0d924060c16c2",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-long-sleeve.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-long-sleeve.webp",
+      "sha256": "4e14c2d100876cb1f81bacb55d558a1f96a2c609ca5ed169fd666fa209705686",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-men-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-hoodie.webp",
+      "sha256": "b2c29541d2d30e286da0ebb869c45bf626b69c3fad9b42fd99533454c96ce839",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-men-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-polo.webp",
+      "sha256": "489c279613cefba8ddc47c4271935a0c28934a300e656a4d809a3efdae5ec250",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-men-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-tee.webp",
+      "sha256": "946f9d1ae7e80bef2e75aae054cd761394edd882044d769ac4eef92d146bf74f",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-mug.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-mug.webp",
+      "sha256": "37ae92450f940d1dfcac47ca57fa5c68489ce7012c216b21009ba6698930538b",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-stickers.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-stickers.webp",
+      "sha256": "2f694bf1849c88be7b5b2a89b91a1dad9f64a1d6881abab6af86d3fbef45e6fb",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-travel-mug.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-travel-mug.webp",
+      "sha256": "5ad8ba65a05d6996f648acb39f807e0ed9cb6fd7544711fe7776903e8f3775ad",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-women-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-hoodie.webp",
+      "sha256": "bd83d6f4c92119d5aeca474708fa0c7eb9c431be8a6c087a1c8673f9c90474d1",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-women-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-polo.webp",
+      "sha256": "8f0296287f8fbbb29501f84a2542d6499812f572e00799c82df724f47dcd0629",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-women-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-tee.webp",
+      "sha256": "e090bd8ab1a30010a353688b3f3ff75c229b862f544432ea4044e54d4bee29d8",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "images/supporting/merch-youth-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-youth-polo.webp",
+      "sha256": "1a8b5078bcc3ff49ea7421631ffa07a467827188e5337e7f4d562e88dcbdfeb3",
+      "role": "carried-forward reference; no new V7 approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/apple-touch-icon.png",
+      "package_path": "exports/icons/website-snapshot/apple-touch-icon.png",
+      "sha256": "21a0bf231532cf51d4753a859588d7a286797e1be65ddd23fa7e8b63204ffb39",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/avatar-a.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-a.svg",
+      "sha256": "c3f3b8846cde46b6c19f601f372da6e83087cc622b057e7d3189473e2e92084b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/avatar-b.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-b.svg",
+      "sha256": "3cc09a1a66ecf66ad3f4600d2a2acc5edc13906bea7544b9259c35c90ce84543",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/avatar-c.svg",
+      "package_path": "foundations/icons/website-snapshot/avatar-c.svg",
+      "sha256": "d598179a3f3d59e33c0bdf03fda6efebea1236c74cbd0ef35764cb95ca2d0b49",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-book-online-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-book-online-desktop.webp",
+      "sha256": "b18e4cc0c173eea5d0bd73a07580d3f2f2a286c237a70b0027d1afc0ba5318c4",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-book-online-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-book-online-mobile.webp",
+      "sha256": "6d00745dd1adbaf15ad3e1befadb3efa9adbab51743087a17770e439c8e88624",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-contact-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-contact-desktop.webp",
+      "sha256": "dc387746904cf11fee3f7aaee7b76be9502aee86f25713e66e32195f00a98e75",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-contact-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-contact-mobile.webp",
+      "sha256": "58e36e00cb4bb9e5b71896d1e5669286239821d428b86b33e40a2f01773d9035",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-counseling-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-counseling-desktop.webp",
+      "sha256": "4994478de47575b0bf891e8f62b96ec517783a565fd6e1985590a28168b0fd9f",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-counseling-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-counseling-mobile.webp",
+      "sha256": "5f070952a9413d2eb87acd55f7fcef6dbd612c0e30f312de9ce0797c12f971ae",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-equine-assisted-learning-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+      "sha256": "6f840a6ad130f4f95a6af949c67cf9a270f54a27adfefcc897600f425afaeb11",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-equine-assisted-learning-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-equine-assisted-learning-mobile.webp",
+      "sha256": "0c04dfcc075f741b3da6bc489a90a43e5f5d29ab5c6124daf231dab5a8aae74a",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-faq-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-faq-desktop.webp",
+      "sha256": "3fa3093a47e3593f90e9dc1a2b54f21e0a99b0e257a0729f618e7836b140922e",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-faq-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-faq-mobile.webp",
+      "sha256": "04a9e6fad1d899951d983af591c3ec2bd41741610155225dc4cbe393727da67d",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-for-families-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-families-desktop.webp",
+      "sha256": "703a8b3b9fece52b49ca6fc137977266f2ed90cb9331017a3f07264fad4d85ed",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-for-families-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-families-mobile.webp",
+      "sha256": "8522715fb846f70def933fe4fd3dbae120ecb428fd69ea8afa6cdc4f8d165ec0",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-for-referring-providers-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-for-referring-providers-desktop.webp",
+      "sha256": "ca972baf51ba7ed34e7507369f7c61e52ddb43865a835ea9bb8df6dbe6eb59d6",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-for-referring-providers-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-for-referring-providers-mobile.webp",
+      "sha256": "6a6976d60e5cd52eb5e7b12ede3959f20b0ca839fdb13e0aabfd027b1f2e3e86",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-give-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-give-desktop.webp",
+      "sha256": "326fb5b695e6f51789ed7c35e503152b2bfb3b085c7309e506a2820a27d58e86",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-give-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-give-mobile.webp",
+      "sha256": "56a2f02f80624630cc48c4c01c852ad9620b8294368c17ecb833b44b9b9b071f",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-home-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-home-desktop.webp",
+      "sha256": "576e613d7b09d7c0ecc9307ddb0e0b88ae3d9c1407365ee5ba73ab4df513da5a",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-home-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-home-mobile.webp",
+      "sha256": "70c88f0e59b13648010a812c106c8c82c4101b61557a51ed7f02a391081cdd35",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-impact-and-stewardship-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-impact-and-stewardship-desktop.webp",
+      "sha256": "ab71bbd8fff83c2378fdbd290aca8f5bde9fe9368598ddcf424efaad1441cb84",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-impact-and-stewardship-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-impact-and-stewardship-mobile.webp",
+      "sha256": "789bad3ab0c2d7caa896cc7094953b9479b8c8ac1a67160f68d79fb3da03a362",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-join-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-join-our-team-desktop.webp",
+      "sha256": "0238569ea05cddbaf4462a4983aff8853344161eb0de3ac79a62247716addb82",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-join-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-join-our-team-mobile.webp",
+      "sha256": "b79a3edf5953bc27563328300d1222d7f02ae480a0b866a0f3fac5a85025f347",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-occupational-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-occupational-therapy-desktop.webp",
+      "sha256": "8156ef15d47a0af4e2ce6d27f8d709e4744a97d5fc81e059daea43f4421fed91",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-occupational-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-occupational-therapy-mobile.webp",
+      "sha256": "60e8b1fedcdf92eb0b1db1b7c11a2a202aa2bab816143a8b7e4d511b0a377618",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-horses-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-horses-desktop.webp",
+      "sha256": "770cae34e1fb37b3884464f3640d406aa15246b37bbe612aa35787c0429624c6",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-horses-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-horses-mobile.webp",
+      "sha256": "56c090d87add4a06f1ea0409143f8fa07df10b7d5c8f92189d6a892aebe9e75d",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-mission-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
+      "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-mission-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-mission-mobile.webp",
+      "sha256": "fb2c8865d3a79880e59fbf2023183317cbef77cb647c64bfb2af073e5835d530",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-partners-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-partners-desktop.webp",
+      "sha256": "3cbe0c08576d7ece8875f2e27683f3ce7379715aa290acd31a94beb0cf6c37c6",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-partners-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-partners-mobile.webp",
+      "sha256": "0bad3250359835e159af4131bc16cd779e2518d1522a6b52e13cb0101458e54c",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-team-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-our-team-desktop.webp",
+      "sha256": "6c4ee4ac37f9e36dca9a6f62c6c6bf3ed91332b8ae7efef507febd3fbfef0d06",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-our-team-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-our-team-mobile.webp",
+      "sha256": "341eddc24e897811300c6dcf73f45bc99f800b657fb8d3295177ef4f540c7d98",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-payment-and-insurance-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-payment-and-insurance-desktop.webp",
+      "sha256": "3b303088c8c18c50f1a1dda9366abed84ba27556aab029b02cc7a9f1b9c824df",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-payment-and-insurance-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-payment-and-insurance-mobile.webp",
+      "sha256": "4ee1a743e0636f565ca60afe30d51b110d4bde60b738c5d46b600e950ca5db53",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-physical-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-physical-therapy-desktop.webp",
+      "sha256": "a0f6f8efe3d1073e09fb495cc13caa0136a312551785c7fee217da161dec04a9",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-physical-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-physical-therapy-mobile.webp",
+      "sha256": "162b5744395a4e16fd6719711253e52034ff532d6ce849510f2edb95c0883353",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-services-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-services-desktop.webp",
+      "sha256": "c986558c84922828463d6068cc63089d4205f07a2b6801eb57e5a9a476b54113",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-services-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-services-mobile.webp",
+      "sha256": "b85799a53a710d63c8b038b110b9be868d8ca76a643f2419393f0550502238a5",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-shop-desktop.webp",
+      "package_path": "legacy/website-snapshot/public/assets/hero-shop-desktop.webp",
+      "sha256": "f7253e57eb43bffea0072683eee8683074568245e0d8c6bb29e01ef8fbf84e2f",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-shop-mobile.webp",
+      "package_path": "legacy/website-snapshot/public/assets/hero-shop-mobile.webp",
+      "sha256": "7de3429a94bbf98c0a23d456aa769271a16f47ed70df13492149ec0c963fb795",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-speech-language-therapy-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-speech-language-therapy-desktop.webp",
+      "sha256": "d986f2529affb2b365985e9ef5760b27cdd0a1207c40d25a43f5eb89181354f0",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-speech-language-therapy-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-speech-language-therapy-mobile.webp",
+      "sha256": "e95e8a6cd8b56c97194a3baf734c9cf19a681b8174ab02680a0fcf38730c3b00",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-sponsorships-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/hero-sponsorships-desktop.webp",
+      "sha256": "bc8d6177394f5b53c258a6aee9506626bdb0f08fded2dd97ab42a4db99c537eb",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/hero-sponsorships-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/hero-sponsorships-mobile.webp",
+      "sha256": "f3c7f549607ce2fa47c6099d52c87672bdbff9eb771f0c249f78797f2cfed4ac",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/home-clinical.webp",
+      "package_path": "foundations/photography/imagery/home-clinical.webp",
+      "sha256": "6aabe3c82c3448663b96cc81966bbd1c06b521e4d1d4d2fac531c2567f2cd9ca",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/horse-biscuit.webp",
+      "package_path": "foundations/photography/supporting/horse-biscuit.webp",
+      "sha256": "af4599e069a99df15e85841df9ce4262c76facdc935e86d957149695db68b129",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/horse-captain-carrot.webp",
+      "package_path": "foundations/photography/supporting/horse-captain-carrot.webp",
+      "sha256": "a3bf78386f243352ff6dbe93e74095c7519eb1fd2e44d30010deae8aa919c6bb",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/horse-cowboy.webp",
+      "package_path": "foundations/photography/supporting/horse-cowboy.webp",
+      "sha256": "f5a31c9d300bb5458bb8638b6dbc7445caf6a76406d31d55a3eb4cfb4c742bce",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/horse-maple.webp",
+      "package_path": "foundations/photography/supporting/horse-maple.webp",
+      "sha256": "87770a93745cbb1d6b9cd7d89dea5b5dbd6035df8e53bc6d6430ea88522ba983",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/logo-white.png",
+      "package_path": "legacy/website-snapshot/public/assets/logo-white.png",
+      "sha256": "2e02a057e85c62506755961141f01c480a644ff530a50537edc644a3a173d638",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/logo.png",
+      "package_path": "legacy/website-snapshot/public/assets/logo.png",
+      "sha256": "189e95787f4b38b2c0d8e983bb2649ae0b81dca31a78f565314437974ce46c65",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/pasture-hero-desktop.webp",
+      "package_path": "foundations/photography/heroes/desktop/pasture-hero-desktop.webp",
+      "sha256": "95373774e2d5b6c38c0165049c19808a5222942171e5180d9a82343913e9cfea",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/pasture-hero-mobile.webp",
+      "package_path": "foundations/photography/heroes/mobile/pasture-hero-mobile.webp",
+      "sha256": "e0649c9df6fb9d97649e1594a778edaf7b504403c820135ebbab26c818a447fb",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/beanie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/beanie.webp",
+      "sha256": "029be91e645b28c735c5bca9f7fcba2fadd108d75db64c2b467093c81e9c7c59",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/caps.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/caps.webp",
+      "sha256": "715e7a848c2e14bbef0f2aeb182761853a13eff337ffd758a668e50e6b7bc95b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/childrens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/childrens-hoodie.webp",
+      "sha256": "cd7495cd2a8b45a27502e83a4a20ff4f79aa49d159e51bbfa0fecd4dea9e322c",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/childrens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/childrens-tee.webp",
+      "sha256": "9655449aac57701049c72894b16927f1b9140826bd341ce9a9080a274503f133",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/coffee-mug.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/coffee-mug.webp",
+      "sha256": "e54b2ccc1ce65805e039667124d4dc343702dbf27e0df0b79215171ca0dbfcd4",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/crewneck.webp",
+      "sha256": "1901efb15a612bed78e61f82f70642701112406dff7cf62ebc6143dd1b224374",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/heritage-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/heritage-hoodie.webp",
+      "sha256": "8ddf43ac522f607bfa128c04f7e895d1d7bffa69e5afe9302adef43197481916",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/keychains.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/keychains.webp",
+      "sha256": "2532184cabcc38745a346d2cbc565dd49a3b0b1fa8288f53baab26057327513d",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/long-sleeve-tee.webp",
+      "sha256": "c78a42421152cf322687f13e6be58d259a23de5df0ce9522b9da3b15f7ef0aa2",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/mens-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/mens-polo.webp",
+      "sha256": "40325ee5e1afff68c308022aa5a1f8ca76de7b22c7ed88a13b30f7cd8f091a6f",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/mens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/mens-tee.webp",
+      "sha256": "9cdca54469cbe06d72dea9494ef181404987ed40b3896a2dcbb1efd88c8bdca7",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/stickers.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/stickers.webp",
+      "sha256": "3e51fc778c511ed890224cd0e20da98bfeccb58c7c0d64902db4ba66f69fb88b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/toddler-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/toddler-tee.webp",
+      "sha256": "c0ffd4077ddbf63ecd035dafa40bd3e53ed621cf9584f52aaf1452a2f15cb7de",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/travel-mug.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/travel-mug.webp",
+      "sha256": "c1ac5cc99bcbdf96e66c87b6ef7225dcf891e2c5917a9f518049b9bfec14de67",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/womens-crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-crewneck.webp",
+      "sha256": "958d1260225d861835457dc5d0a16354392f12b71d9d45e732661f99b7ab98cb",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/womens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-hoodie.webp",
+      "sha256": "60038153f772d9cdacb9098ba666a1c87f989a6df03dbb600cc9410c8a4837f4",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/womens-long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-long-sleeve-tee.webp",
+      "sha256": "3dd03a55094f4a56a2b106079b817eb652198e2fb3acc56127d5b66b4329a024",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/womens-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-polo.webp",
+      "sha256": "986c876135f7956ebeeabfbb36419346942009f3fab914be87961a5efd0a91be",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/womens-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/womens-tee.webp",
+      "sha256": "c9eff33340b25186866efacd0d44424169c6bdce938c7ab9ec15ea4cbefcb934",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/youth-cap.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-cap.webp",
+      "sha256": "e1ab44b65a018116e3f1b090130dc7b4b24f7c2d234929fe6200d00b340f67db",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/youth-crewneck.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-crewneck.webp",
+      "sha256": "148458b0af3cd473521a124e4b91ab298455543a113b8ef377b2c11a3502291b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/youth-long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-long-sleeve-tee.webp",
+      "sha256": "7f9a1c9d47022e1b11e713dbbccf764659d69dc03c5db3aba9fac71f0454faf4",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/shop/youth-polo.webp",
+      "package_path": "legacy/website-snapshot/public/assets/shop/youth-polo.webp",
+      "sha256": "80c0ca22daecf6eb8757eb1ab7f71c0b1f11e1a5bc885684c11fa259443d1e94",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/sponsor-bronze.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-bronze.svg",
+      "sha256": "6d7aedb9250a060c4a39c91517d768072aabfe73ff6283c553f95889b65cb3ce",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/sponsor-gold.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-gold.svg",
+      "sha256": "902ff5c81261667caa63e1a1555eaa0d82f5c1c2f90d51c5cc21e6b03ed71ce2",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/sponsor-platinum.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-platinum.svg",
+      "sha256": "6cee24c7d5a8d62ce9d4fcd4fa1d976c3a000d1ab884209c69a7fe96f1923b17",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/sponsor-silver.svg",
+      "package_path": "foundations/icons/website-snapshot/sponsor-silver.svg",
+      "sha256": "79f3f545b5e6770ae0177c1f5bbb629f873c5db1fb89452f1297e8c579fc88b6",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/v6/horse-mark-cream.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-cream.png",
+      "sha256": "958bc538a1980cd1e1d9b7f440016391fcee37685e17ac8d7b6e48b79353b013",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/v6/horse-mark-gold.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-gold.png",
+      "sha256": "15f38e8d6d8d7e01bb6270be8e80399814ee020cdac84f207a8502e637eab4f5",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/assets/v6/horse-mark-green.png",
+      "package_path": "legacy/website-snapshot/public/assets/v6/horse-mark-green.png",
+      "sha256": "92fbfc17b123578167984e3340c577537f43718d777c26e99962ab6ee8e6115b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/favicon.png",
+      "package_path": "exports/icons/website-snapshot/favicon.png",
+      "sha256": "9f2e816bfe5fc7e9e9ffafb4e0e6d5d95c9a6590e8fb613401e2f4724dd92e2e",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/favicon.svg",
+      "package_path": "exports/icons/website-snapshot/favicon.svg",
+      "sha256": "48830dee942c187770c5604e625650ae24b6f0fdd1c27ee0bcb0433e4d9e2d03",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/OFL-HankenGrotesk.txt",
+      "package_path": "foundations/fonts/OFL-HankenGrotesk.txt",
+      "sha256": "e02ccb89a86839b22feff7872ff5cc355cc0f58318d29eee20e2cf83a612f16d",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/OFL-LibreCaslon.txt",
+      "package_path": "foundations/fonts/OFL-LibreCaslon.txt",
+      "sha256": "a294245c822c5aa9fd9a9f3189418e99415428be5fecadf797793d5d8f6a3ad3",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/hanken-grotesk.woff",
+      "package_path": "foundations/fonts/hanken-grotesk.woff",
+      "sha256": "f4154c8d9556936813d91437f4d08fb9d68d2f698318d8cc21c413f3a8e807ba",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/libre-caslon-display.woff",
+      "package_path": "foundations/fonts/libre-caslon-display.woff",
+      "sha256": "5b2e472da4e58952cf4fe4c63a81171c1711e28a4c2bae5078384a59b06409dd",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/libre-caslon-text-italic.woff",
+      "package_path": "foundations/fonts/libre-caslon-text-italic.woff",
+      "sha256": "f602fc286a2bc59ad63aae98be91fce9c5243a1386a1aeb2160d69ce0f89aa7b",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/fonts/libre-caslon-text.woff",
+      "package_path": "foundations/fonts/libre-caslon-text.woff",
+      "sha256": "b2bed83db3a09d6c6f499e6ed0502c890996f047e517f762dd65ba641d7e83e1",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "public/robots.txt",
+      "package_path": "legacy/website-snapshot/public/robots.txt",
+      "sha256": "352cbe86af703311f4e28505c8ce1639f3f2d120e816dc6e9150fec600cabc44",
+      "role": "website snapshot reference; no new approval",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-horizontal-cream.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-horizontal-cream.png",
+      "sha256": "dc1df9291cc6c33ad667460cb2e1aed56da4aa0349cc71b74a7b1a3b37405455",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-horizontal-green.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-horizontal-green.png",
+      "sha256": "3aa76737a512e85c6dda5006a40c8b248bff0e694991f7c4c130c7667b331079",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-mark-cream.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-mark-cream.png",
+      "sha256": "8c2ceed8861016ccca08b274168acf3672bb16e7ba1ce71cac7756412c79b398",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-mark-gold.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-mark-gold.png",
+      "sha256": "954eec514863c71d0cf98e0335d3f4c910e915a54d2fbfa3c2d3bd129b40f1fc",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-mark-green.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-mark-green.png",
+      "sha256": "24e82051927c6ccc0349ccd9a8dd390d0164bb1df52d9b9d6591e32afccfe617",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-stacked-cream.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-stacked-cream.png",
+      "sha256": "de626b5578c1ff66df0dcfebc228031fd37204294ae51aa8d0ade81a2dcf2e56",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-stacked-green.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-stacked-green.png",
+      "sha256": "fa16a8f7dbc07f8da970c095c7dc99ade4674f54f311345aa7a3e52d83dfc54c",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-sticker-bar.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-sticker-bar.png",
+      "sha256": "e45db6877f8435f6b601c7846370a5ae76139e1984cc66d5b31584b385da65bf",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-sticker-round.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-sticker-round.png",
+      "sha256": "52afd5a6fd5c35798e7ff6e80f447392c924794de99a6cf2705d008811e8de2d",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-wordmark-cream.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-wordmark-cream.png",
+      "sha256": "4454c0e2296e2436c536dfc9580d711bb493795940a82e0fc086fb3fedb29446",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "brand/FaithReins_DesignSystem_v6/assets/merch-artwork/fr-wordmark-green.png",
+      "package_path": "legacy/v6-reference/merch-artwork/fr-wordmark-green.png",
+      "sha256": "dccd507c7ccda65c46bca2799d01e246dce68ddb68abc3e1ec381ce30410bb23",
+      "role": "historical V6 illustration input; not approved V7 imagery",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "src/lib/products.json",
+      "package_path": "legacy/v6-reference/production/products.json",
+      "sha256": "818547943b43c32072fad54bfffeb9e29a3d51298e6dd943ef3351492a0265b9",
+      "role": "historical illustration recipe input",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/beanie.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/beanie.webp",
+      "sha256": "356eb67cd4d3261e5fb2ddadec5176309906cb18aeaa11128daf8a261975fd2f",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/caps.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/caps.webp",
+      "sha256": "7d0fb8dc5c3ef089e25779306068f2b6db3c864849de659d289e820eef8ef9be",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/childrens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/childrens-hoodie.webp",
+      "sha256": "781ea20a219abff06c7b2f82642584b4ac5ce65467f5cf1ca1606cb1f24b04fc",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/childrens-tee.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/childrens-tee.webp",
+      "sha256": "3c279d346e03c90e8ad3f69776651267daf5ac3995b41eb3275107fb1d411be9",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/coffee-mug.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/coffee-mug.webp",
+      "sha256": "c03e2026ec984e69d060ef14ce17b4f923b597c2f479dbde46caa2ba731e1149",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/crewneck.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/crewneck.webp",
+      "sha256": "fe2e928b2707a56aeb4ecbe0c37324e878857545801c0c276792924ef7490ac0",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/heritage-hoodie.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/heritage-hoodie.webp",
+      "sha256": "ef03a043f670de500e6122d530a4896a0c59b548ed5a03268cdb5422c9dde08c",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/keychains.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/keychains.webp",
+      "sha256": "2d3233ffee2567c6efd7a7f4431967b29e2b75a4dd3db27a5be4ca6d34fbc1b0",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/long-sleeve-tee.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/long-sleeve-tee.webp",
+      "sha256": "157cd9f6ca5e49a92fc53e3c7c3613b9f3458b9faa5227f201e749c998bd29f5",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/mens-polo.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/mens-polo.webp",
+      "sha256": "0fca62047fddd6c113048beb66469473695a851cc7d739babde5b3640841bdc2",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/mens-tee.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/mens-tee.webp",
+      "sha256": "6b30badcd8d61f3a50fb0ba340d4997a1263912850e2954f406fb20fff09f848",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/stickers.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/stickers.webp",
+      "sha256": "c75d8e245f4002e0d8c3d7992ab72e141e13e78755f763a1cc123f28cbe87ccd",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/travel-mug.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/travel-mug.webp",
+      "sha256": "91569e34abe07e6045ff24762394e8caa05711e5546ad605537cb16410130128",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/womens-hoodie.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/womens-hoodie.webp",
+      "sha256": "6c053d100efbf48bb5892ffd2683e4b5059827d7bc01ae2bfbaffe0ceede858b",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/womens-polo.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/womens-polo.webp",
+      "sha256": "e3cffb30b5355bc4267ad42d82d498b88c4db291e2974cf32635400d0c3ab954",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/womens-tee.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/womens-tee.webp",
+      "sha256": "61f6a2e94062d09554e0ea6f5d4c7075a6afb277ec35e8a970246b978790d840",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/youth-cap.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/youth-cap.webp",
+      "sha256": "f04e85e6eb5497e93263778fef6b84e1a001c39f2e021b6c1eff7c5dac917817",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:public/assets/shop/youth-polo.webp",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/public/assets/shop/youth-polo.webp",
+      "sha256": "47d6a2f636b100002c494f40e1d517dc40d66903396691e995cb2afb431b7fff",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-beanie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-beanie.webp",
+      "sha256": "11a0dbf695a19d7a3a378747bae9de68ef1d305b01b4da60b5718fd1602606b4",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-caps.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-caps.webp",
+      "sha256": "e54227acd731722fd26aa39da32082ffe95043113e2e5b75f474640ffde116f2",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-children-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-children-hoodie.webp",
+      "sha256": "180c859a1b302d950bffe13c1e73fa189246a0788530129c0bfa2c9b6ed2c04c",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-children-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-children-tee.webp",
+      "sha256": "f81dacb2af97162be66250ed6d93edf3986ac6eb63395be45980cc66b74d864e",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-crewneck.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-crewneck.webp",
+      "sha256": "baf6059fe733b72a03675017788b5e8c48ba0bad462f4669e1864a0380573eb4",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-keychains.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-keychains.webp",
+      "sha256": "22c452875baa46e7c899b55e4f531731370965b14b1048a533f0d924060c16c2",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-long-sleeve.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-long-sleeve.webp",
+      "sha256": "4e14c2d100876cb1f81bacb55d558a1f96a2c609ca5ed169fd666fa209705686",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-men-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-hoodie.webp",
+      "sha256": "b2c29541d2d30e286da0ebb869c45bf626b69c3fad9b42fd99533454c96ce839",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-men-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-polo.webp",
+      "sha256": "489c279613cefba8ddc47c4271935a0c28934a300e656a4d809a3efdae5ec250",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-men-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-men-tee.webp",
+      "sha256": "946f9d1ae7e80bef2e75aae054cd761394edd882044d769ac4eef92d146bf74f",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-mug.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-mug.webp",
+      "sha256": "37ae92450f940d1dfcac47ca57fa5c68489ce7012c216b21009ba6698930538b",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-stickers.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-stickers.webp",
+      "sha256": "2f694bf1849c88be7b5b2a89b91a1dad9f64a1d6881abab6af86d3fbef45e6fb",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-travel-mug.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-travel-mug.webp",
+      "sha256": "5ad8ba65a05d6996f648acb39f807e0ed9cb6fd7544711fe7776903e8f3775ad",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-women-hoodie.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-hoodie.webp",
+      "sha256": "bd83d6f4c92119d5aeca474708fa0c7eb9c431be8a6c087a1c8673f9c90474d1",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-women-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-polo.webp",
+      "sha256": "8f0296287f8fbbb29501f84a2542d6499812f572e00799c82df724f47dcd0629",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-women-tee.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-women-tee.webp",
+      "sha256": "e090bd8ab1a30010a353688b3f3ff75c229b862f544432ea4044e54d4bee29d8",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/source/merch-youth-polo.webp",
+      "package_path": "legacy/website-snapshot/images/supporting/merch-youth-polo.webp",
+      "sha256": "1a8b5078bcc3ff49ea7421631ffa07a467827188e5337e7f4d562e88dcbdfeb3",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    },
+    {
+      "source": "origin/wip/shop-photo-logo-swap:scripts/merch/swap_logo.py",
+      "package_path": "legacy/website-snapshot/wip-shop-photo-logo-swap/scripts/merch/swap_logo.py",
+      "sha256": "ead65dda80cb27bf464f293538058c4ee1f46a6954d88e1e7b611ce50bf42f9d",
+      "role": "unapproved historical WIP; never selected for production",
+      "bytes_unchanged": true
+    }
+  ]
+}

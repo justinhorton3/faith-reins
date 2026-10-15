@@ -20,4 +20,4 @@ Paired V6 desktop/mobile heroes are under `photography/heroes`. They are carried
 
 ## Fonts and licenses
 
-Four original WOFF files are bundled for offline use. Font names follow V6: Libre Caslon Display, Libre Caslon Text and Hanken Grotesk. No new font is introduced. `fonts/FONT-NOTICE.md` records source and deployment checks; obtain upstream license text before third-party redistribution.
+Four original WOFF files are bundled for offline use. Font names follow V6: Libre Caslon Display, Libre Caslon Text and Hanken Grotesk. No new font is introduced. `fonts/FONT-NOTICE.md` records source and deployment checks; matching license notices are bundled locally; preserve them with redistributed files.

@@ -1,4 +1,4 @@
-name: Validate Wix execution plans
+name: Validate repository ownership
 
 on:
   push:
@@ -21,8 +21,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate execution plans and assets
-        run: python scripts/validate_execution_plans.py
+      - name: Validate independent website and brand directories
+        run: python scripts/validate-brand-boundaries.py
 
       - name: Check Markdown whitespace
         run: git diff --check
