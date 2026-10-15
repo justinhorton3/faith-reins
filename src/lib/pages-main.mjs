@@ -1,4 +1,5 @@
 import PRODUCTS from "./products.json" with { type: "json" };
+import { poloShowcase } from "./polo-showcase.mjs";
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
 const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeature, steps, checks, infoGrid, testimonial, faqList, ctaBand, photoBand, profile, profileGrid, notice, reach, form, btn, tlink, eyebrow, img, esc, titleBand, SITE, CAMPAIGN } = L;
@@ -327,7 +328,7 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
 
 /* ---------- Shop ---------- */
 /* Shop catalog: src/lib/products.json (images rendered by scripts/merch/render_merch.py). */
-const shopImg = (slug) => `/assets/shop/${slug}.webp`;
+const shopImg = (slug) => slug === "mens-polo" ? "/assets/shop/v7/polos/mens-white-polo-product.png" : `/assets/shop/${slug}.webp`;
 const FILTERS = [["all", "All"], ["mens", "Men's"], ["womens", "Women's"], ["youth", "Youth & toddler"], ["accessories", "Hats"], ["home", "Drinkware & gifts"]];
 const CAT_LABEL = { apparel: "Apparel", headwear: "Headwear", drinkware: "Drinkware", accessories: "Accessories" };
 const SIZE_CHARTS = {
@@ -339,7 +340,7 @@ const SIZE_CHARTS = {
 const sizeChart = (k) => { const c = SIZE_CHARTS[k]; return `<div class="size-chart"><span class="size-chart__title">${esc(c.label)}</span><span class="size-chart__measure">${esc(c.measure)}</span><div class="size-chart__rows">${c.rows.map(([a, b]) => `<div class="size-chart__row"><b>${a}</b><span>${b}</span></div>`).join("")}</div></div>`; };
 const label = (p) => p.fit || CAT_LABEL[p.cat];
 const merchCard = (p) =>
-  `<a class="merch-card" href="/shop/${p.slug}" data-group="${p.group}"><span class="merch-card__img"><img src="${shopImg(p.slug)}" alt="${esc(p.name)}" loading="lazy" width="600" height="600"></span><span class="merch-card__cat">${esc(label(p))}</span><span class="merch-card__row"><span class="merch-card__name">${esc(p.name)}</span><span class="merch-card__price">$${p.price}</span></span></a>`;
+  `<a class="merch-card" href="/shop/${p.slug}" data-group="${p.group}"><span class="merch-card__img"><img src="${shopImg(p.slug)}" alt="${esc(p.name)}" loading="lazy" width="600" height="600"${p.slug === "mens-polo" ? ' style="object-fit:contain"' : ""}></span><span class="merch-card__cat">${esc(label(p))}</span><span class="merch-card__row"><span class="merch-card__name">${esc(p.name)}</span><span class="merch-card__price">${p.availability === "out-of-stock" ? "Out of stock" : "$" + p.price}</span></span></a>`;
 
 add("/shop", "Shop", "Faith Reins merchandise — tees, hoodies, crewnecks and polos in men's, women's and youth sizes, plus hats, mugs and gifts.",
   hero({ key: "shop", eyebrow: "Shop", title: "Wear the mission.", lead: "Every purchase supports pediatric therapy and equine-assisted learning in South Arkansas." }) +
@@ -350,6 +351,11 @@ add("/shop", "Shop", "Faith Reins merchandise — tees, hoodies, crewnecks and p
   ctaBand({ tone: "sand", title: "Proceeds support the mission.", body: "Every purchase helps fund pediatric therapy and equine-assisted learning.", primary: ["Give instead", "/give"] }));
 
 PRODUCTS.forEach((p) => {
+  if (p.slug === "mens-polo") {
+    const showcase = poloShowcase(p);
+    add(`/shop/${p.slug}`, `${p.name} | Shop`, showcase.description, showcase.body, showcase.jsonld);
+    return;
+  }
   const { slug, name, price, sizes, desc, chart } = p;
   const image = shopImg(slug);
   const sizeBlock = sizes

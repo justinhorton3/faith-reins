@@ -1,0 +1,36 @@
+{
+  "ownership": "Committed website snapshots; informational provenance only. No runtime or build imports from brand.",
+  "source_commit": "9a2fb925a01da9634e83c533d30e86c4bc84fc91",
+  "assets": [
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-polo-product.png",
+      "website_path": "public/assets/shop/v7/polos/mens-cream-polo-product.png",
+      "sha256": "5fe88d3a7e5c4b1aa48e9bf05a61cfb0107eea65ed01e955f3361a97b6af185b"
+    },
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-cream-polo-styled.png",
+      "website_path": "public/assets/shop/v7/polos/mens-cream-polo-styled.png",
+      "sha256": "e0e901d23d07c5b44a0235b930baac4d42378b7ed691e5ef0204d19c0ed63306"
+    },
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-polo-product.png",
+      "website_path": "public/assets/shop/v7/polos/mens-forest-green-polo-product.png",
+      "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52"
+    },
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-forest-green-polo-styled.png",
+      "website_path": "public/assets/shop/v7/polos/mens-forest-green-polo-styled.png",
+      "sha256": "f9f187e5df79b03aa268a6630a53a434b860e8e6565991eebe6ffd8aad7cfea4"
+    },
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-white-polo-product.png",
+      "website_path": "public/assets/shop/v7/polos/mens-white-polo-product.png",
+      "sha256": "b72a92a2a55617dc9d54e4570df172312208c396c8f05b376070c40c23dc0f56"
+    },
+    {
+      "source": "brand/v7-design-system/approved/product-images/mens-white-polo-styled.png",
+      "website_path": "public/assets/shop/v7/polos/mens-white-polo-styled.png",
+      "sha256": "9e9bfdd5c3f8b794c3751831e59cc3906a46bfa9fd6ecedb130dd911500f1b63"
+    }
+  ]
+}

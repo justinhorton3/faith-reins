@@ -3,6 +3,8 @@
 // api("/ecom/v2/carts", ...) + api("/headless/v1/redirect-session", ...)
 // using the same helpers from site.js.
 
+import PRODUCTS from "../lib/products.json";
+const unavailable = new Set(PRODUCTS.filter((p) => p.availability === "out-of-stock").map((p) => p.slug));
 const KEY = "fr-cart";
 const $ = (s, r = document) => r.querySelector(s);
 const h = (t, a = {}, ...k) => {
@@ -16,7 +18,15 @@ const h = (t, a = {}, ...k) => {
   return n;
 };
 
-function load() { try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; } }
+function load() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(KEY) || "[]");
+    if (!Array.isArray(stored)) return [];
+    const items = stored.filter((item) => item && !unavailable.has(item.id));
+    if (items.length !== stored.length) save(items);
+    return items;
+  } catch { return []; }
+}
 function save(items) { try { localStorage.setItem(KEY, JSON.stringify(items)); } catch {} }
 function count(items) { return items.reduce((s, i) => s + i.qty, 0); }
 function subtotal(items) { return items.reduce((s, i) => s + i.price * i.qty, 0); }

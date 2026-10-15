@@ -1,0 +1,105 @@
+/* Scoped product showcase. Uses the website's existing type and color tokens. */
+.polo-page { max-width:var(--max); margin:auto; padding:32px var(--g) 88px; }
+.polo-crumbs { display:flex; flex-wrap:wrap; gap:12px; font-size:12px; margin-bottom:28px; color:var(--fr-muted); }
+.polo-crumbs a { text-decoration:none; }
+.polo-layout { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:64px; align-items:start; }
+.polo-gallery { min-width:0; position:sticky; top:120px; }
+.polo-stage { position:relative; background:#edeae2; overflow:hidden; }
+.polo-image-open { display:block; border:0; padding:0; width:100%; cursor:zoom-in; background:none; }
+.polo-image-open img { width:100%; height:auto; aspect-ratio:3/4; object-fit:contain; }
+.polo-counter { position:absolute; bottom:18px; left:20px; font-size:11px; letter-spacing:.12em; background:var(--fr-paper); padding:4px 8px; pointer-events:none; }
+.polo-zoom-open { position:absolute; bottom:18px; right:20px; border:0; padding:7px 10px; background:var(--fr-paper); color:var(--fr-green); font:500 12px var(--font-sans); cursor:pointer; }
+.polo-gallery-bar { display:flex; align-items:center; gap:18px; padding-top:18px; }
+.polo-gallery-bar > p { flex:1; font:400 16px var(--font-serif); }
+.polo-thumbs { display:flex; gap:9px; }
+.polo-thumbs button { padding:3px; border:1px solid transparent; background:transparent; cursor:pointer; }
+.polo-thumbs button[aria-pressed=true] { border-color:var(--fr-green); }
+.polo-thumbs img { width:47px; height:63px; object-fit:contain; }
+.polo-arrows { display:flex; gap:4px; }
+.polo-arrows button, .polo-zoom-tools button { border:1px solid var(--fr-line); background:transparent; color:var(--fr-green); width:40px; height:40px; cursor:pointer; font:20px var(--font-sans); }
+.polo-info > .eyebrow { display:block; margin:6px 0 14px; font-size:10px; }
+.polo-info h1 { font:400 clamp(38px,4vw,58px)/1.05 var(--font-display); letter-spacing:-.02em; }
+.polo-intro { margin-top:22px; color:var(--fr-muted); font-size:16px; line-height:1.65; }
+.polo-stock { margin:24px 0; padding:13px 0; border-block:1px solid var(--fr-line); font-size:13px; color:var(--fr-muted); }
+.polo-colors { padding:0; border:0; margin:0 0 25px; min-width:0; }
+.polo-colors legend, .polo-size-heading { font-size:13px; width:100%; }
+.polo-colors strong, .polo-size-heading strong { font-weight:500; margin-left:12px; }
+.polo-swatches { display:flex; gap:14px; margin-top:12px; }
+.polo-swatches button { position:relative; width:38px; height:38px; border:1px solid #b8b3a9; background:var(--swatch); cursor:pointer; }
+.polo-swatches button[aria-pressed=true]::after { content:""; position:absolute; inset:-5px; border:1px solid var(--fr-green); }
+.polo-size-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+.polo-text-button { border:0; border-bottom:1px solid var(--fr-gold); background:none; color:var(--fr-green); font:500 12px/1.4 var(--font-sans); padding:0 0 2px; cursor:pointer; }
+.polo-sizes { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:7px; }
+.polo-sizes button { min-height:43px; padding:8px 2px; background:none; border:1px solid var(--fr-line); color:var(--fr-green); font:500 12px var(--font-sans); cursor:pointer; }
+.polo-sizes button[aria-pressed=true] { color:var(--fr-cream); background:var(--fr-green); border-color:var(--fr-green); }
+.polo-small { font-size:11px; color:var(--fr-muted); line-height:1.6; margin-top:10px; }
+.polo-order { display:grid; grid-template-columns:113px minmax(0,1fr); gap:12px; margin-top:25px; }
+.polo-quantity { display:flex; align-items:center; justify-content:space-between; border:1px solid var(--fr-line); }
+.polo-quantity button { border:0; background:none; padding:0; min-height:48px; width:36px; color:var(--fr-green); font-size:19px; cursor:pointer; }
+.polo-quantity output { font-size:14px; }
+.polo-order .btn:disabled { background:var(--fr-sand); color:var(--fr-muted); border-color:var(--fr-line); cursor:not-allowed; opacity:1; }
+.polo-quantity button:disabled, .polo-zoom-tools button:disabled { opacity:.4; cursor:default; }
+.polo-preview-note { font-size:11px; color:var(--fr-muted); margin:12px 0 24px; }
+.polo-details { border-top:1px solid var(--fr-line); }
+.polo-details details { border-bottom:1px solid var(--fr-line); }
+.polo-details summary { padding:17px 0; cursor:pointer; font:500 14px var(--font-sans); display:flex; justify-content:space-between; gap:12px; list-style:none; }
+.polo-details summary::-webkit-details-marker { display:none; }
+.polo-details summary::after { content:"+"; font-size:18px; }
+.polo-details details[open] summary::after { content:"−"; }
+.polo-details details > div { padding:0 0 20px; color:var(--fr-muted); font-size:13px; line-height:1.7; }
+.polo-details ul { padding-left:17px; margin-bottom:0; }
+.polo-details .polo-text-button { margin-top:12px; }
+.polo-story { margin:88px 0; display:grid; grid-template-columns:1fr 1fr; background:var(--fr-paper); align-items:center; }
+.polo-story > div { padding:48px; }
+.polo-story h2 { font:400 clamp(35px,4vw,54px)/1.05 var(--font-display); margin:16px 0 24px; }
+.polo-story p:not(.eyebrow) { font-size:15px; color:var(--fr-muted); margin-bottom:24px; }
+.polo-story a { font-size:13px; }
+.polo-story img { width:100%; height:auto; aspect-ratio:3/4; object-fit:contain; }
+.polo-collection h2 { font:400 40px/1.1 var(--font-display); margin:12px 0 28px; }
+.polo-color-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.polo-color-cards button { position:relative; text-align:left; background:none; border:0; padding:0; color:var(--fr-green); cursor:pointer; }
+.polo-color-cards img { width:100%; height:auto; aspect-ratio:3/4; object-fit:contain; }
+.polo-color-cards span { display:block; padding:15px 22px 0 0; font:400 20px var(--font-serif); }
+.polo-color-cards small { display:block; margin-top:8px; font:400 11px var(--font-sans); color:var(--fr-muted); }
+.polo-color-cards b { position:absolute; right:0; bottom:25px; font-weight:400; }
+.polo-dialog { background:var(--fr-paper); color:var(--fr-ink); border:1px solid var(--fr-line); padding:28px; width:calc(100% - 32px); max-width:700px; max-height:85dvh; overflow:auto; }
+.polo-dialog::backdrop { background:rgba(14,32,25,.65); }
+.polo-dialog-heading { display:flex; gap:20px; justify-content:space-between; align-items:center; margin-bottom:22px; }
+.polo-dialog-heading h2 { font:400 30px var(--font-display); }
+.polo-dialog-heading button { border:0; background:none; color:var(--fr-green); font-size:28px; width:44px; height:44px; cursor:pointer; flex-shrink:0; }
+.polo-dialog p { font-size:13px; }
+.polo-dialog .polo-small { font-size:11px; }
+.polo-units { display:flex; gap:8px; margin:18px 0; }
+.polo-units button { padding:9px 12px; background:none; border:1px solid var(--fr-line); color:var(--fr-green); cursor:pointer; font:500 12px var(--font-sans); }
+.polo-units button[aria-pressed=true] { background:var(--fr-green); color:var(--fr-cream); border-color:var(--fr-green); }
+.polo-table-scroll { overflow-x:auto; }
+.polo-dialog table { border-collapse:collapse; width:100%; font-size:12px; }
+.polo-dialog caption { text-align:left; font-weight:500; margin:0 0 12px; }
+.polo-dialog th, .polo-dialog td { text-align:left; padding:10px 9px; border-bottom:1px solid var(--fr-line); }
+.polo-zoom-dialog { max-width:1000px; }
+.polo-zoom-dialog .polo-dialog-heading { margin-bottom:10px; }
+.polo-zoom-tools { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.polo-zoom-tools output { min-width:45px; font-size:13px; text-align:center; }
+.polo-zoom-scroll { overflow:auto; max-height:58dvh; }
+.polo-zoom-scroll img { max-width:none; width:100%; height:auto; }
+@media (max-width:1100px) { .polo-layout { gap:36px; } .polo-story > div { padding:30px; } }
+@media (max-width:767px) {
+  .polo-page { padding-top:22px; padding-bottom:56px; }
+  .polo-layout { grid-template-columns:minmax(0,1fr); gap:32px; }
+  .polo-gallery { position:static; }
+  .polo-crumbs { font-size:11px; margin-bottom:20px; }
+  .polo-info h1 { font-size:42px; }
+  .polo-intro { font-size:15px; margin-top:16px; }
+  .polo-story { margin:56px 0; grid-template-columns:minmax(0,1fr); }
+  .polo-story > div { padding:32px 24px; }
+  .polo-color-cards { gap:12px; }
+  .polo-color-cards span { font-size:15px; padding-right:0; }
+  .polo-color-cards small { font-size:10px; line-height:1.5; }
+  .polo-color-cards b { display:none; }
+  .polo-gallery-bar { gap:12px; }
+  .polo-gallery-bar > p { font-size:14px; }
+  .polo-thumbs img { width:39px; height:52px; }
+  .polo-arrows button { width:34px; height:38px; }
+  .polo-dialog { padding:18px; }
+  .polo-dialog-heading h2 { font-size:25px; }
+}

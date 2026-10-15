@@ -397,7 +397,8 @@
     "place": "left-chest",
     "width": 170
    }
-  }
+  },
+  "availability": "out-of-stock"
  },
  {
   "slug": "womens-polo",
