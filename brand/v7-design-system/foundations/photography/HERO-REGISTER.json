@@ -1,0 +1,891 @@
+{
+  "source_commit": "c6a791d5b367d13a910628497df3c80902865c3e",
+  "website_mapping_source": [
+    "src/lib/pages-main.mjs",
+    "src/lib/lib.mjs",
+    "src/lib/media.json"
+  ],
+  "note": "Audit snapshot only. Website never reads this register. Archive and website copies remain independent.",
+  "page_count": 22,
+  "pages": [
+    {
+      "route": "/",
+      "title": "Pediatric Therapy & Equine-Assisted Learning in South Arkansas | Faith Reins",
+      "layout": "home",
+      "desktop_focus": "62% 40%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-home-mobile.webp",
+      "website_desktop": "/assets/hero-home-desktop.webp",
+      "key": "home",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-home-desktop.webp",
+          "bytes": 100364,
+          "sha256": "576e613d7b09d7c0ecc9307ddb0e0b88ae3d9c1407365ee5ba73ab4df513da5a",
+          "width": 2014,
+          "height": 781,
+          "website_sha256": "576e613d7b09d7c0ecc9307ddb0e0b88ae3d9c1407365ee5ba73ab4df513da5a",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-home-mobile.webp",
+          "bytes": 40470,
+          "sha256": "70c88f0e59b13648010a812c106c8c82c4101b61557a51ed7f02a391081cdd35",
+          "width": 1000,
+          "height": 388,
+          "website_sha256": "70c88f0e59b13648010a812c106c8c82c4101b61557a51ed7f02a391081cdd35",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-home.jpg",
+          "bytes": 345364,
+          "sha256": "496ef4135eb8d740e698b12d9ca369b9d8b16703920fb650be860ac6f9133481",
+          "width": 2014,
+          "height": 781
+        }
+      }
+    },
+    {
+      "route": "/our-mission",
+      "title": "Our Mission | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-our-mission-mobile.webp",
+      "website_desktop": "/assets/hero-our-mission-desktop.webp",
+      "key": "our-mission",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
+          "bytes": 233568,
+          "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-our-mission-mobile.webp",
+          "bytes": 122194,
+          "sha256": "fb2c8865d3a79880e59fbf2023183317cbef77cb647c64bfb2af073e5835d530",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "fb2c8865d3a79880e59fbf2023183317cbef77cb647c64bfb2af073e5835d530",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-our-mission.jpg",
+          "bytes": 475350,
+          "sha256": "2ef006e2cec9ff99a9b7191afa255c693acfd72a3f5c8e82db10fcbb1a2593a6",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/services-programs",
+      "title": "Services & Programs | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-services-mobile.webp",
+      "website_desktop": "/assets/hero-services-desktop.webp",
+      "key": "services",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-services-desktop.webp",
+          "bytes": 134474,
+          "sha256": "c986558c84922828463d6068cc63089d4205f07a2b6801eb57e5a9a476b54113",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "c986558c84922828463d6068cc63089d4205f07a2b6801eb57e5a9a476b54113",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-services-mobile.webp",
+          "bytes": 79836,
+          "sha256": "b85799a53a710d63c8b038b110b9be868d8ca76a643f2419393f0550502238a5",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "b85799a53a710d63c8b038b110b9be868d8ca76a643f2419393f0550502238a5",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-services.jpg",
+          "bytes": 340636,
+          "sha256": "87ad77bcfc5a9884d337cb6448c861e581fea1798a269b9b0db55d54af5b9bba",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/speech-language-therapy",
+      "title": "Speech-Language Therapy | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "35% 50%",
+      "website_mobile": "/assets/hero-speech-language-therapy-mobile.webp",
+      "website_desktop": "/assets/hero-speech-language-therapy-desktop.webp",
+      "key": "speech-language-therapy",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-speech-language-therapy-desktop.webp",
+          "bytes": 105586,
+          "sha256": "d986f2529affb2b365985e9ef5760b27cdd0a1207c40d25a43f5eb89181354f0",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "d986f2529affb2b365985e9ef5760b27cdd0a1207c40d25a43f5eb89181354f0",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-speech-language-therapy-mobile.webp",
+          "bytes": 61136,
+          "sha256": "e95e8a6cd8b56c97194a3baf734c9cf19a681b8174ab02680a0fcf38730c3b00",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "e95e8a6cd8b56c97194a3baf734c9cf19a681b8174ab02680a0fcf38730c3b00",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-speech-language-therapy.jpg",
+          "bytes": 295401,
+          "sha256": "bcdc3aa8698e99a9dd0c7e7c16d5dd901ded25f5d55c07f2efa112b0c52d9915",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/occupational-therapy",
+      "title": "Occupational Therapy | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-occupational-therapy-mobile.webp",
+      "website_desktop": "/assets/hero-occupational-therapy-desktop.webp",
+      "key": "occupational-therapy",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-occupational-therapy-desktop.webp",
+          "bytes": 102742,
+          "sha256": "8156ef15d47a0af4e2ce6d27f8d709e4744a97d5fc81e059daea43f4421fed91",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "8156ef15d47a0af4e2ce6d27f8d709e4744a97d5fc81e059daea43f4421fed91",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-occupational-therapy-mobile.webp",
+          "bytes": 58338,
+          "sha256": "60e8b1fedcdf92eb0b1db1b7c11a2a202aa2bab816143a8b7e4d511b0a377618",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "60e8b1fedcdf92eb0b1db1b7c11a2a202aa2bab816143a8b7e4d511b0a377618",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-occupational-therapy.jpg",
+          "bytes": 288449,
+          "sha256": "446cba514479c9d363b5f51c7cd33ed0021f426306f0a70de48211966af27cc7",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/physical-therapy",
+      "title": "Physical Therapy | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-physical-therapy-mobile.webp",
+      "website_desktop": "/assets/hero-physical-therapy-desktop.webp",
+      "key": "physical-therapy",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-physical-therapy-desktop.webp",
+          "bytes": 111412,
+          "sha256": "a0f6f8efe3d1073e09fb495cc13caa0136a312551785c7fee217da161dec04a9",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "a0f6f8efe3d1073e09fb495cc13caa0136a312551785c7fee217da161dec04a9",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-physical-therapy-mobile.webp",
+          "bytes": 61836,
+          "sha256": "162b5744395a4e16fd6719711253e52034ff532d6ce849510f2edb95c0883353",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "162b5744395a4e16fd6719711253e52034ff532d6ce849510f2edb95c0883353",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-physical-therapy.jpg",
+          "bytes": 301769,
+          "sha256": "af40e2929cfedc9c1c64e238e9f7f928d11a04111a798175028851bb2482a7fc",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/counseling",
+      "title": "Counseling | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "88% 50%",
+      "website_mobile": "/assets/hero-counseling-mobile.webp",
+      "website_desktop": "/assets/hero-counseling-desktop.webp",
+      "key": "counseling",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-counseling-desktop.webp",
+          "bytes": 142424,
+          "sha256": "4994478de47575b0bf891e8f62b96ec517783a565fd6e1985590a28168b0fd9f",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "4994478de47575b0bf891e8f62b96ec517783a565fd6e1985590a28168b0fd9f",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-counseling-mobile.webp",
+          "bytes": 76826,
+          "sha256": "5f070952a9413d2eb87acd55f7fcef6dbd612c0e30f312de9ce0797c12f971ae",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "5f070952a9413d2eb87acd55f7fcef6dbd612c0e30f312de9ce0797c12f971ae",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-counseling.jpg",
+          "bytes": 342245,
+          "sha256": "4922043704d481563e7bfd76003246d89be009b20bafbe57471e12893e0210d4",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/equine-assisted-learning",
+      "title": "Equine-Assisted Learning | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-equine-assisted-learning-mobile.webp",
+      "website_desktop": "/assets/hero-equine-assisted-learning-desktop.webp",
+      "key": "equine-assisted-learning",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-equine-assisted-learning-desktop.webp",
+          "bytes": 146960,
+          "sha256": "6f840a6ad130f4f95a6af949c67cf9a270f54a27adfefcc897600f425afaeb11",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "6f840a6ad130f4f95a6af949c67cf9a270f54a27adfefcc897600f425afaeb11",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-equine-assisted-learning-mobile.webp",
+          "bytes": 80126,
+          "sha256": "0c04dfcc075f741b3da6bc489a90a43e5f5d29ab5c6124daf231dab5a8aae74a",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "0c04dfcc075f741b3da6bc489a90a43e5f5d29ab5c6124daf231dab5a8aae74a",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-equine-assisted-learning.jpg",
+          "bytes": 372105,
+          "sha256": "5177231e995a9c68766875fb828314037b4aa90a6e9ad123da87674d40743f4f",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/for-families",
+      "title": "For Families | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "72% 50%",
+      "website_mobile": "/assets/hero-for-families-mobile.webp",
+      "website_desktop": "/assets/hero-for-families-desktop.webp",
+      "key": "for-families",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-for-families-desktop.webp",
+          "bytes": 107782,
+          "sha256": "703a8b3b9fece52b49ca6fc137977266f2ed90cb9331017a3f07264fad4d85ed",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "703a8b3b9fece52b49ca6fc137977266f2ed90cb9331017a3f07264fad4d85ed",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-for-families-mobile.webp",
+          "bytes": 60574,
+          "sha256": "8522715fb846f70def933fe4fd3dbae120ecb428fd69ea8afa6cdc4f8d165ec0",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "8522715fb846f70def933fe4fd3dbae120ecb428fd69ea8afa6cdc4f8d165ec0",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-for-families.jpg",
+          "bytes": 290959,
+          "sha256": "d7d5069b7fd0e41a95f0321bfdb808bd6931a9df24c3a2da8c6e4708a8ec01e7",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/book-online",
+      "title": "Request an Appointment | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "12% 50%",
+      "website_mobile": "/assets/hero-book-online-mobile.webp",
+      "website_desktop": "/assets/hero-book-online-desktop.webp",
+      "key": "book-online",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-book-online-desktop.webp",
+          "bytes": 101194,
+          "sha256": "b18e4cc0c173eea5d0bd73a07580d3f2f2a286c237a70b0027d1afc0ba5318c4",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "b18e4cc0c173eea5d0bd73a07580d3f2f2a286c237a70b0027d1afc0ba5318c4",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-book-online-mobile.webp",
+          "bytes": 56864,
+          "sha256": "6d00745dd1adbaf15ad3e1befadb3efa9adbab51743087a17770e439c8e88624",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "6d00745dd1adbaf15ad3e1befadb3efa9adbab51743087a17770e439c8e88624",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-book-online.jpg",
+          "bytes": 287023,
+          "sha256": "f30fe250fff6cfff37cdb95b3f65033c943f7616e67454f2dd4aad353037412a",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/for-referring-providers",
+      "title": "For Referring Providers | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "58% 50%",
+      "website_mobile": "/assets/hero-for-referring-providers-mobile.webp",
+      "website_desktop": "/assets/hero-for-referring-providers-desktop.webp",
+      "key": "for-referring-providers",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-for-referring-providers-desktop.webp",
+          "bytes": 80780,
+          "sha256": "ca972baf51ba7ed34e7507369f7c61e52ddb43865a835ea9bb8df6dbe6eb59d6",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "ca972baf51ba7ed34e7507369f7c61e52ddb43865a835ea9bb8df6dbe6eb59d6",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-for-referring-providers-mobile.webp",
+          "bytes": 46270,
+          "sha256": "6a6976d60e5cd52eb5e7b12ede3959f20b0ca839fdb13e0aabfd027b1f2e3e86",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "6a6976d60e5cd52eb5e7b12ede3959f20b0ca839fdb13e0aabfd027b1f2e3e86",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-for-referring-providers.jpg",
+          "bytes": 237990,
+          "sha256": "443f3b6b63accd9b85c465afc6b55a853df87757371a19384b8f8bbdbb02c4e1",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/payment-and-insurance",
+      "title": "Payment & Insurance | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-payment-and-insurance-mobile.webp",
+      "website_desktop": "/assets/hero-payment-and-insurance-desktop.webp",
+      "key": "payment-and-insurance",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-payment-and-insurance-desktop.webp",
+          "bytes": 101206,
+          "sha256": "3b303088c8c18c50f1a1dda9366abed84ba27556aab029b02cc7a9f1b9c824df",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "3b303088c8c18c50f1a1dda9366abed84ba27556aab029b02cc7a9f1b9c824df",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-payment-and-insurance-mobile.webp",
+          "bytes": 57926,
+          "sha256": "4ee1a743e0636f565ca60afe30d51b110d4bde60b738c5d46b600e950ca5db53",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "4ee1a743e0636f565ca60afe30d51b110d4bde60b738c5d46b600e950ca5db53",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-payment-and-insurance.jpg",
+          "bytes": 279739,
+          "sha256": "f16807e8ef5a3837fd3305881a1eac438b525b544ba3bae2ef414018a9ca431c",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/faq",
+      "title": "FAQ | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-faq-mobile.webp",
+      "website_desktop": "/assets/hero-faq-desktop.webp",
+      "key": "faq",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-faq-desktop.webp",
+          "bytes": 124606,
+          "sha256": "3fa3093a47e3593f90e9dc1a2b54f21e0a99b0e257a0729f618e7836b140922e",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "3fa3093a47e3593f90e9dc1a2b54f21e0a99b0e257a0729f618e7836b140922e",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-faq-mobile.webp",
+          "bytes": 70232,
+          "sha256": "04a9e6fad1d899951d983af591c3ec2bd41741610155225dc4cbe393727da67d",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "04a9e6fad1d899951d983af591c3ec2bd41741610155225dc4cbe393727da67d",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-faq.jpg",
+          "bytes": 322892,
+          "sha256": "6ee1563e0ebaeb273375dd9258b0850254eb75f15b8ab0feb613136ecbdc0249",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/give",
+      "title": "Give | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "82% 50%",
+      "website_mobile": "/assets/hero-give-mobile.webp",
+      "website_desktop": "/assets/hero-give-desktop.webp",
+      "key": "give",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-give-desktop.webp",
+          "bytes": 141390,
+          "sha256": "326fb5b695e6f51789ed7c35e503152b2bfb3b085c7309e506a2820a27d58e86",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "326fb5b695e6f51789ed7c35e503152b2bfb3b085c7309e506a2820a27d58e86",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-give-mobile.webp",
+          "bytes": 83316,
+          "sha256": "56a2f02f80624630cc48c4c01c852ad9620b8294368c17ecb833b44b9b9b071f",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "56a2f02f80624630cc48c4c01c852ad9620b8294368c17ecb833b44b9b9b071f",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-give.jpg",
+          "bytes": 351838,
+          "sha256": "f8cb1b2cde583f36e5ff72bf72b81841d779dc772623f27e4d08e1459452e7ef",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/sponsorships",
+      "title": "Sponsorships | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-sponsorships-mobile.webp",
+      "website_desktop": "/assets/hero-sponsorships-desktop.webp",
+      "key": "sponsorships",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-sponsorships-desktop.webp",
+          "bytes": 138480,
+          "sha256": "bc8d6177394f5b53c258a6aee9506626bdb0f08fded2dd97ab42a4db99c537eb",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "bc8d6177394f5b53c258a6aee9506626bdb0f08fded2dd97ab42a4db99c537eb",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-sponsorships-mobile.webp",
+          "bytes": 78108,
+          "sha256": "f3c7f549607ce2fa47c6099d52c87672bdbff9eb771f0c249f78797f2cfed4ac",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "f3c7f549607ce2fa47c6099d52c87672bdbff9eb771f0c249f78797f2cfed4ac",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-sponsorships.jpg",
+          "bytes": 369208,
+          "sha256": "22ded7dca952b81ecf2d8cb3526d2cc6ba94e73ee8358a335a6f0db22f93b512",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/impact-and-stewardship",
+      "title": "Impact & Stewardship | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-impact-and-stewardship-mobile.webp",
+      "website_desktop": "/assets/hero-impact-and-stewardship-desktop.webp",
+      "key": "impact-and-stewardship",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-impact-and-stewardship-desktop.webp",
+          "bytes": 120772,
+          "sha256": "ab71bbd8fff83c2378fdbd290aca8f5bde9fe9368598ddcf424efaad1441cb84",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "ab71bbd8fff83c2378fdbd290aca8f5bde9fe9368598ddcf424efaad1441cb84",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-impact-and-stewardship-mobile.webp",
+          "bytes": 68082,
+          "sha256": "789bad3ab0c2d7caa896cc7094953b9479b8c8ac1a67160f68d79fb3da03a362",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "789bad3ab0c2d7caa896cc7094953b9479b8c8ac1a67160f68d79fb3da03a362",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-impact-and-stewardship.jpg",
+          "bytes": 309087,
+          "sha256": "26c201e2dd9b4932ba15a06c53e5933cb455b3f67052574437fdb51a39771ab1",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/our-partners",
+      "title": "Our Partners | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-our-partners-mobile.webp",
+      "website_desktop": "/assets/hero-our-partners-desktop.webp",
+      "key": "our-partners",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-our-partners-desktop.webp",
+          "bytes": 110664,
+          "sha256": "3cbe0c08576d7ece8875f2e27683f3ce7379715aa290acd31a94beb0cf6c37c6",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "3cbe0c08576d7ece8875f2e27683f3ce7379715aa290acd31a94beb0cf6c37c6",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-our-partners-mobile.webp",
+          "bytes": 63948,
+          "sha256": "0bad3250359835e159af4131bc16cd779e2518d1522a6b52e13cb0101458e54c",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "0bad3250359835e159af4131bc16cd779e2518d1522a6b52e13cb0101458e54c",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-our-partners.jpg",
+          "bytes": 300224,
+          "sha256": "32f2e81ac216d4ea667f8865620a8e26e7596e97e64a697fad8acef3fd5c9b99",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/our-team",
+      "title": "Our Team | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-our-team-mobile.webp",
+      "website_desktop": "/assets/hero-our-team-desktop.webp",
+      "key": "our-team",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-our-team-desktop.webp",
+          "bytes": 105294,
+          "sha256": "6c4ee4ac37f9e36dca9a6f62c6c6bf3ed91332b8ae7efef507febd3fbfef0d06",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "6c4ee4ac37f9e36dca9a6f62c6c6bf3ed91332b8ae7efef507febd3fbfef0d06",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-our-team-mobile.webp",
+          "bytes": 58714,
+          "sha256": "341eddc24e897811300c6dcf73f45bc99f800b657fb8d3295177ef4f540c7d98",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "341eddc24e897811300c6dcf73f45bc99f800b657fb8d3295177ef4f540c7d98",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-our-team.jpg",
+          "bytes": 302324,
+          "sha256": "649c0ae5d420a7727c444c9de541bcbd8291bf1dbad5266a0a2fe3c7395a52af",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/our-horses",
+      "title": "Our Horses | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-our-horses-mobile.webp",
+      "website_desktop": "/assets/hero-our-horses-desktop.webp",
+      "key": "our-horses",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-our-horses-desktop.webp",
+          "bytes": 252248,
+          "sha256": "770cae34e1fb37b3884464f3640d406aa15246b37bbe612aa35787c0429624c6",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "770cae34e1fb37b3884464f3640d406aa15246b37bbe612aa35787c0429624c6",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-our-horses-mobile.webp",
+          "bytes": 139824,
+          "sha256": "56c090d87add4a06f1ea0409143f8fa07df10b7d5c8f92189d6a892aebe9e75d",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "56c090d87add4a06f1ea0409143f8fa07df10b7d5c8f92189d6a892aebe9e75d",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-our-horses.jpg",
+          "bytes": 498504,
+          "sha256": "0d6c5df5a56970280d7b9adad20ed4617ba6029ccec18f50feab388f4ceb36eb",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/join-our-team",
+      "title": "Join Our Team | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-join-our-team-mobile.webp",
+      "website_desktop": "/assets/hero-join-our-team-desktop.webp",
+      "key": "join-our-team",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-join-our-team-desktop.webp",
+          "bytes": 103514,
+          "sha256": "0238569ea05cddbaf4462a4983aff8853344161eb0de3ac79a62247716addb82",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "0238569ea05cddbaf4462a4983aff8853344161eb0de3ac79a62247716addb82",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-join-our-team-mobile.webp",
+          "bytes": 58022,
+          "sha256": "b79a3edf5953bc27563328300d1222d7f02ae480a0b866a0f3fac5a85025f347",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "b79a3edf5953bc27563328300d1222d7f02ae480a0b866a0f3fac5a85025f347",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-join-our-team.jpg",
+          "bytes": 291196,
+          "sha256": "156f57821a867b7cfe4410d4fbc173af749a323625ac641ba428310b383e56eb",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/contact",
+      "title": "Contact | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "22% 50%",
+      "website_mobile": "/assets/hero-contact-mobile.webp",
+      "website_desktop": "/assets/hero-contact-desktop.webp",
+      "key": "contact",
+      "status": "carried-forward photographic reference; no new rights or clinical approval",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/hero-contact-desktop.webp",
+          "bytes": 99584,
+          "sha256": "dc387746904cf11fee3f7aaee7b76be9502aee86f25713e66e32195f00a98e75",
+          "width": 1536,
+          "height": 1024,
+          "website_sha256": "dc387746904cf11fee3f7aaee7b76be9502aee86f25713e66e32195f00a98e75",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/hero-contact-mobile.webp",
+          "bytes": 54642,
+          "sha256": "58e36e00cb4bb9e5b71896d1e5669286239821d428b86b33e40a2f01773d9035",
+          "width": 1000,
+          "height": 667,
+          "website_sha256": "58e36e00cb4bb9e5b71896d1e5669286239821d428b86b33e40a2f01773d9035",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-contact.jpg",
+          "bytes": 275175,
+          "sha256": "a686912f2b5a5ec978bbbd23c753c34c32aeb5130f8d3f441882d90f6b3e08df",
+          "width": 1536,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "route": "/shop",
+      "title": "Shop | Faith Reins",
+      "layout": "page",
+      "desktop_focus": "50% 50%",
+      "mobile_focus": "50% 50%",
+      "website_mobile": "/assets/hero-shop-mobile.webp",
+      "website_desktop": "/assets/hero-shop-desktop.webp",
+      "key": "shop",
+      "status": "historical shop reference; replacement requires review",
+      "assets": {
+        "desktop": {
+          "path": "legacy/website-snapshot/public/assets/hero-shop-desktop.webp",
+          "bytes": 13974,
+          "sha256": "f7253e57eb43bffea0072683eee8683074568245e0d8c6bb29e01ef8fbf84e2f",
+          "width": 1600,
+          "height": 800,
+          "website_sha256": "f7253e57eb43bffea0072683eee8683074568245e0d8c6bb29e01ef8fbf84e2f",
+          "matches_website_copy": true
+        },
+        "mobile": {
+          "path": "legacy/website-snapshot/public/assets/hero-shop-mobile.webp",
+          "bytes": 10164,
+          "sha256": "7de3429a94bbf98c0a23d456aa769271a16f47ed70df13492149ec0c963fb795",
+          "width": 800,
+          "height": 1000,
+          "website_sha256": "7de3429a94bbf98c0a23d456aa769271a16f47ed70df13492149ec0c963fb795",
+          "matches_website_copy": true
+        },
+        "master": {
+          "path": "foundations/photography/masters/hero-shop.jpg",
+          "bytes": 95164,
+          "sha256": "7f9cdedcee382221cf098e8d9e3aedf78131b71b0962dfc3fa19282a1e0c15f0",
+          "width": 984,
+          "height": 223
+        },
+        "v6_desktop": {
+          "path": "legacy/v6-reference/photography/hero-shop-desktop.webp",
+          "bytes": 37732,
+          "sha256": "f3b6d0d82ac25cc8138737bae7e1efbfa239336b71f6d8ff3aa576f1b23c78c2",
+          "width": 984,
+          "height": 223
+        },
+        "v6_mobile": {
+          "path": "legacy/v6-reference/photography/hero-shop-mobile.webp",
+          "bytes": 37732,
+          "sha256": "f3b6d0d82ac25cc8138737bae7e1efbfa239336b71f6d8ff3aa576f1b23c78c2",
+          "width": 984,
+          "height": 223
+        }
+      }
+    }
+  ],
+  "supporting": [
+    {
+      "key": "pasture",
+      "role": "supporting pasture background; not a page hero assignment",
+      "assets": {
+        "desktop": {
+          "path": "foundations/photography/heroes/desktop/pasture-hero-desktop.webp",
+          "bytes": 148622,
+          "sha256": "95373774e2d5b6c38c0165049c19808a5222942171e5180d9a82343913e9cfea",
+          "width": 1844,
+          "height": 853
+        },
+        "mobile": {
+          "path": "foundations/photography/heroes/mobile/pasture-hero-mobile.webp",
+          "bytes": 70668,
+          "sha256": "e0649c9df6fb9d97649e1594a778edaf7b504403c820135ebbab26c818a447fb",
+          "width": 1000,
+          "height": 463
+        },
+        "master": {
+          "path": "foundations/photography/masters/pasture-hero.png",
+          "bytes": 2230135,
+          "sha256": "849dda9250fae2a33e032d0ce2f439706faf09838f97b29006f6caf23664d551",
+          "width": 1844,
+          "height": 853
+        }
+      }
+    }
+  ]
+}

@@ -16,8 +16,9 @@
     {
       "branch": "claude/session-2026-10-12",
       "audited_sha": "b3cbe7af342bb2d6d871706d315019e277708808",
-      "action": "retain for separate review: unmerged deployment/workflow work",
-      "status": "retained"
+      "action": "full history preserved in archive branch before UI deletion",
+      "status": "deleted",
+      "archive_commit": "3f4180094c48d021eda8ce24b106438caf5c68e2"
     },
     {
       "branch": "cms-content-blocks",
@@ -64,8 +65,9 @@
     {
       "branch": "feat/v7-merchandise-system",
       "audited_sha": "92eea891560b7b41f7339e14b5af6937efa935d2",
-      "action": "retain for separate review: unmerged source history",
-      "status": "retained"
+      "action": "full history preserved in archive branch before UI deletion",
+      "status": "deleted",
+      "archive_commit": "3f4180094c48d021eda8ce24b106438caf5c68e2"
     },
     {
       "branch": "feat/v7-product-images-batch-01",
@@ -94,26 +96,38 @@
     {
       "branch": "fix/wix-headless-deploy-config",
       "audited_sha": "b28004e117e4f77bb01a36a4e1e8c2d94c1d717f",
-      "action": "retain for separate review: unmerged website/donation/framework work",
-      "status": "retained"
+      "action": "full history preserved in archive branch before UI deletion",
+      "status": "deleted",
+      "archive_commit": "3f4180094c48d021eda8ce24b106438caf5c68e2"
     },
     {
       "branch": "wip/shop-photo-logo-swap",
       "audited_sha": "10949206fb3c24fcc25596cb7f85cc7b75bca96e",
-      "action": "retain for separate review: unmerged WIP source history",
-      "status": "retained"
+      "action": "full history preserved in archive branch before UI deletion",
+      "status": "deleted",
+      "archive_commit": "3f4180094c48d021eda8ce24b106438caf5c68e2"
     },
     {
       "branch": "chore/consolidate-brand-v7",
       "audited_sha": "dea0da6620744cba1a3e2e096a15dca9985d24a2",
       "status": "deleted",
       "action": "deleted through GitHub UI after merge or source preservation"
+    },
+    {
+      "branch": "docs/v7-brand-guide-pdf",
+      "audited_sha": "3d85cda98953c1bed1347a5154abb145f199e159",
+      "status": "deleted",
+      "action": "merged in PR #15, then deleted through GitHub UI"
     }
   ],
   "verified_date": "2026-10-15",
   "verification": "GitHub branches UI and API list",
-  "deleted_count": 14,
-  "retained_unmerged_count": 4,
+  "deleted_count": 19,
+  "retained_unmerged_count": 0,
   "archive_tags_created": false,
-  "note": "origin was the local symbolic remote alias, not a GitHub branch. Audited SHAs remain recorded here; no archival tag creation is claimed."
+  "note": "origin was the local symbolic remote alias, not a GitHub branch. Audited SHAs remain recorded here; no archival tag creation is claimed.",
+  "archived_unmerged_count": 4,
+  "archive_branch": "archive/pre-cleanup-2026-10-15",
+  "archive_commit": "3f4180094c48d021eda8ce24b106438caf5c68e2",
+  "archive_verification": "All four audited tips verified with git merge-base --is-ancestor against the archive commit. Full trees and histories remain reachable; runtime changes not applied to main."
 }

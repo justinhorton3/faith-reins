@@ -11,7 +11,9 @@ The Astro website is in src/ with its own committed asset copies in public/. Wix
 
 ## Website development
 
-Run npm install, npm run dev, npm run build and npm test as appropriate. The existing lockfile lacks a TypeScript peer entry for npm ci on the audit environment; this cleanup leaves dependencies unchanged. See [cleanup verification](docs/brand-cleanup-verification.md) for the exact validation results.
+Run `npm ci`, `npm run dev`, `npm run build` and `npm test` as appropriate. The lockfile includes the previously missing TypeScript peer entry. Run `python3 scripts/check-website-independence.py` to verify that builds with and without `brand/` produce identical output. See [build verification](docs/independent-website-build.md) for details and [cleanup verification](docs/brand-cleanup-verification.md) for the earlier audit.
+
+Follow-up work is organized in the [Wix migration backlog](docs/wix-migration-backlog.md) and the [shop hero brief](brand/v7-design-system/merchandise/SHOP-HERO-BRIEF.md). The shop image choice waits for visual review.
 
 ## Brand validation and handoff
 
