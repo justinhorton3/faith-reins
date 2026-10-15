@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
-import "../styles/polo-showcase.css";
+import "../styles/product-showcase.css";
 import { header, footer } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld } = Astro.props;
 const SITE = "https://www.faithreins.com";
 const canonical = SITE + (route === "/" ? "" : route);
-const ogImage = SITE + "/assets/hero-home-desktop.webp";
+const isProduct = jsonld?.["@type"] === "Product";
+const ogImage = isProduct ? jsonld.image[0] : SITE + "/assets/hero-home-desktop.webp";
 const ogTitle = title.replace(/ \| Faith Reins$/, "");
 
 const orgSchema = {
@@ -55,8 +56,8 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:alt" content="Faith Reins Equestrian Center in Camden, Arkansas" />
+    <meta property="og:image:width" content={isProduct ? "1086" : "1200"} />
+    <meta property="og:image:alt" content={isProduct ? jsonld.name : "Faith Reins Equestrian Center in Camden, Arkansas"} />
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={ogTitle} />
@@ -86,7 +87,7 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
     <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
     <script>import "../scripts/cart.js";</script>
-    <script>import "../scripts/polo-showcase.js";</script>
+    <script>import "../scripts/product-showcase.js";</script>
     <script>import "../scripts/cms.js";</script>
   </body>
 </html>

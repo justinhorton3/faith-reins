@@ -1,5 +1,6 @@
 import PRODUCTS from "./products.json" with { type: "json" };
-import { poloShowcase } from "./polo-showcase.mjs";
+import { productShowcase, showcaseCard } from "./product-showcase.mjs";
+import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
 const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeature, steps, checks, infoGrid, testimonial, faqList, ctaBand, photoBand, profile, profileGrid, notice, reach, form, btn, tlink, eyebrow, img, esc, titleBand, SITE, CAMPAIGN } = L;
@@ -327,92 +328,32 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
   ], { cols: 4 }), { pad: "tight" }));
 
 /* ---------- Shop ---------- */
-/* Shop catalog: src/lib/products.json (images rendered by scripts/merch/render_merch.py). */
-const shopImg = (slug) => slug === "mens-polo" ? "/assets/shop/v7/polos/mens-white-polo-product.png" : `/assets/shop/${slug}.webp`;
-const FILTERS = [["all", "All"], ["mens", "Men's"], ["womens", "Women's"], ["youth", "Youth & toddler"], ["accessories", "Hats"], ["home", "Drinkware & gifts"]];
-const CAT_LABEL = { apparel: "Apparel", headwear: "Headwear", drinkware: "Drinkware", accessories: "Accessories" };
-const SIZE_CHARTS = {
-  mens: { label: "Men's / unisex", measure: "Chest (body), inches", rows: [["XS", "31–34"], ["S", "34–37"], ["M", "38–41"], ["L", "42–45"], ["XL", "46–49"], ["2XL", "50–53"], ["3XL", "54–57"]] },
-  womens: { label: "Women's", measure: "Bust (body), inches · US size", rows: [["XS", "31–32 · 0–2"], ["S", "33–34 · 4–6"], ["M", "35–36 · 8–10"], ["L", "37–39 · 12–14"], ["XL", "40–42 · 16"], ["2XL", "43–45 · 18"]] },
-  youth: { label: "Youth", measure: "Chest, inches · age", rows: [["YXS", "23–24 · 4–5"], ["YS", "25–26 · 6–8"], ["YM", "27–28 · 10–12"], ["YL", "29–30 · 14–16"], ["YXL", "31–32 · 18–20"]] },
-  toddler: { label: "Toddler", measure: "Height in · weight lb", rows: [["2T", "33–35 · 26–29"], ["3T", "36–38 · 30–33"], ["4T", "39–41 · 34–38"], ["5T", "42–44 · 39–42"]] },
-};
-const sizeChart = (k) => { const c = SIZE_CHARTS[k]; return `<div class="size-chart"><span class="size-chart__title">${esc(c.label)}</span><span class="size-chart__measure">${esc(c.measure)}</span><div class="size-chart__rows">${c.rows.map(([a, b]) => `<div class="size-chart__row"><b>${a}</b><span>${b}</span></div>`).join("")}</div></div>`; };
-const label = (p) => p.fit || CAT_LABEL[p.cat];
-const merchCard = (p) =>
-  `<a class="merch-card" href="/shop/${p.slug}" data-group="${p.group}"><span class="merch-card__img"><img src="${shopImg(p.slug)}" alt="${esc(p.name)}" loading="lazy" width="600" height="600"${p.slug === "mens-polo" ? ' style="object-fit:contain"' : ""}></span><span class="merch-card__cat">${esc(label(p))}</span><span class="merch-card__row"><span class="merch-card__name">${esc(p.name)}</span><span class="merch-card__price">${p.availability === "out-of-stock" ? "Out of stock" : "$" + p.price}</span></span></a>`;
+/* Product data and images are independent, committed website copies. */
+const FILTERS = [["all", "All"], ["mens", "Men's"], ["womens", "Women's"], ["youth", "Youth"], ["layers", "Layers"], ["accessories", "Hats"], ["home", "Home & gifts"]];
+add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies, caps, drinkware, journals and throws.",
+  hero({ key: "shop", eyebrow: "The Faith Reins Collection", title: "Wear the mission.", lead: "Understated essentials. Familiar colors. A little purpose in the everyday." }) +
+  section(`<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " styles · 42 color & artwork options", title: "The collection", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([value, text]) => `<button class="shop-filter" type="button" data-filter="${value}" aria-pressed="${value === "all"}">${esc(text)}</button>`).join("")}</div></div>
+<div class="merch-grid" id="merch-grid">${PRODUCTS.map(showcaseCard).join("")}</div>
+<script>(function(){var buttons=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',String(other===button))});cards.forEach(function(card){card.hidden=button.dataset.filter!=='all'&&card.dataset.group!==button.dataset.filter})})})})();</script>`, { id: "shop-products" }) +
+  section(sh({ eyebrow: "Size & fit", title: "A fit for your everyday.", size: "sm", body: "Explore size and format information on each product page. Final measurements and product details will be confirmed before ordering is available." }), { tone: "paper", id: "size-guide" }) +
+  ctaBand({ tone: "sand", title: "A shared purpose.", body: "Help children and families grow through pediatric therapy and equine-assisted learning.", primary: ["Support Faith Reins", "/give"] }));
 
-add("/shop", "Shop", "Faith Reins merchandise — tees, hoodies, crewnecks and polos in men's, women's and youth sizes, plus hats, mugs and gifts.",
-  hero({ key: "shop", eyebrow: "Shop", title: "Wear the mission.", lead: "Every purchase supports pediatric therapy and equine-assisted learning in South Arkansas." }) +
-  section(`<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " items", title: "Faith Reins merch", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([v, l]) => `<button class="shop-filter" type="button" data-filter="${v}" aria-pressed="${v === "all"}">${esc(l)}</button>`).join("")}</div></div>
-<div class="merch-grid" id="merch-grid">${PRODUCTS.map(merchCard).join("")}</div>
-<script>(function(){var btns=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var f=b.dataset.filter;cards.forEach(function(c){c.style.display=(f==='all'||c.dataset.group===f)?'':'none'})})})})();</script>`, { id: "shop-products" }) +
-  section(sh({ eyebrow: "Size guide", title: "Find the right fit", size: "sm", body: "Men's, women's, youth and toddler items are cut differently, so each has its own sizes. Measure the body, not the garment. Between sizes? Size up." }) + `<div class="size-charts">${Object.keys(SIZE_CHARTS).map(sizeChart).join("")}</div>`, { tone: "paper", id: "size-guide" }) +
-  ctaBand({ tone: "sand", title: "Proceeds support the mission.", body: "Every purchase helps fund pediatric therapy and equine-assisted learning.", primary: ["Give instead", "/give"] }));
+PRODUCTS.forEach((product) => {
+  const related = PRODUCTS.filter(other => other.slug !== product.slug && other.group === product.group)
+    .concat(PRODUCTS.filter(other => other.slug !== product.slug && other.group !== product.group)).slice(0, 4);
+  const showcase = productShowcase(product, related);
+  add(`/shop/${product.slug}`, `${product.name} | Shop`, showcase.description, showcase.body, showcase.jsonld);
+});
 
-PRODUCTS.forEach((p) => {
-  if (p.slug === "mens-polo") {
-    const showcase = poloShowcase(p);
-    add(`/shop/${p.slug}`, `${p.name} | Shop`, showcase.description, showcase.body, showcase.jsonld);
-    return;
-  }
-  const { slug, name, price, sizes, desc, chart } = p;
-  const image = shopImg(slug);
-  const sizeBlock = sizes
-    ? `<div class="stack" style="gap:10px"><p class="size-label">Size <span id="size-display"></span></p><div class="size-btns" id="size-btns" role="group" aria-label="Select a size">${sizes.map((s) => `<button class="size-btn" type="button" data-size="${esc(s)}" aria-pressed="false">${esc(s)}</button>`).join("")}</div>${chart ? `<a class="ship-note" href="/shop#size-guide">${esc(SIZE_CHARTS[chart].label)} size guide</a>` : ""}</div>`
-    : "";
-  const addScript = `<script>
-(function(){
-  var size=${sizes && sizes.length === 1 ? JSON.stringify(sizes[0]) : "null"}, qty=1;
-  var sizeBtns=[].slice.call(document.querySelectorAll('.size-btn'));
-  var qtyVal=document.getElementById('qty-val');
-  var atb=document.getElementById('atb');
-  var conf=document.getElementById('atb-conf');
-  var sizeDisplay=document.getElementById('size-display');
-  sizeBtns.forEach(function(b){if(size&&b.dataset.size===size)b.setAttribute('aria-pressed','true');b.addEventListener('click',function(){
-    sizeBtns.forEach(function(x){x.setAttribute('aria-pressed','false')});
-    b.setAttribute('aria-pressed','true');
-    size=b.dataset.size;
-    if(sizeDisplay)sizeDisplay.textContent='— '+size;
-    check();
-  })});
-  document.getElementById('qty-dec').addEventListener('click',function(){if(qty>1){qty--;qtyVal.textContent=qty;}});
-  document.getElementById('qty-inc').addEventListener('click',function(){if(qty<9){qty++;qtyVal.textContent=qty;}});
-  function check(){var need=${sizes ? "!size" : "false"};atb.disabled=need;atb.textContent=need?'Choose a size':'Add to bag';}
-  check();
-  atb.addEventListener('click',function(){
-    ${sizes ? "if(!size)return;" : ""}
-    var cart=[];
-    try{cart=JSON.parse(localStorage.getItem('fr-cart')||'[]');}catch(e){}
-    var existing=cart.find(function(i){return i.id===${JSON.stringify(slug)}&&i.size===size;});
-    if(existing){existing.qty+=qty;}else{cart.push({id:${JSON.stringify(slug)},name:${JSON.stringify(name)},price:${price},size:size,qty:qty,img:${JSON.stringify(image)}});}
-    try{localStorage.setItem('fr-cart',JSON.stringify(cart));}catch(e){}
-    var count=cart.reduce(function(s,i){return s+i.qty;},0);
-    var badge=document.getElementById('cart-badge');
-    if(badge){badge.textContent=count;badge.hidden=count===0;}
-    if(typeof gtag==='function')gtag('event','add_to_cart',{currency:'USD',value:${price}*qty,items:[{item_id:${JSON.stringify(slug)},item_name:${JSON.stringify(name)},price:${price},quantity:qty}]});
-    conf.textContent='Added to your bag.';
-    setTimeout(function(){conf.textContent='';},2500);
-  });
-})();
-</script>`;
-  const productJsonLd = {
-    "@context": "https://schema.org", "@type": "Product", "name": name, "description": desc,
-    "image": `https://www.faithreins.com${image}`, "brand": { "@type": "Brand", "name": "Faith Reins" },
-    "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Faith Reins Equestrian Center" } },
-  };
-  const related = PRODUCTS.filter((m) => m.slug !== slug && m.group === p.group).concat(PRODUCTS.filter((m) => m.slug !== slug && m.group !== p.group)).slice(0, 4);
-  add(`/shop/${slug}`, `${name} | Shop`, desc,
-    section(`<p class="crumbs"><a href="/shop">Shop</a><span aria-hidden="true">/</span><span>${esc(label(p))}</span></p>
-<div class="product"><div class="product__img"><img src="${image}" alt="${esc(name)}" width="1200" height="1200"></div>
-<div class="product__info">${eyebrow(label(p))}<h1 class="product__name">${esc(name)}</h1><p class="product__price">$${price}</p><p class="product__desc">${esc(desc)}</p>${sizeBlock}
-<div class="qty-row"><span>Qty</span><button class="qty-btn" id="qty-dec" type="button" aria-label="Decrease quantity">−</button><span class="qty-val" id="qty-val">1</span><button class="qty-btn" id="qty-inc" type="button" aria-label="Increase quantity">+</button></div>
-<button class="btn btn--block" id="atb" type="button"${sizes && sizes.length > 1 ? " disabled" : ""}>Add to bag</button>
-<p class="atb-confirm" id="atb-conf" aria-live="polite"></p>
-<p class="ship-note">Ships within 5–7 business days. See the <a href="/returns-policy">Returns &amp; Shipping Policy</a>.</p></div></div>`) +
-    section(sh({ eyebrow: "More from the shop", title: "You might also like", size: "sm" }) + `<div class="merch-grid">${related.map(merchCard).join("")}</div>`, { tone: "paper" }) +
-    addScript,
-    productJsonLd);
+// Keep previously published product URLs useful without presenting unapproved
+// legacy placeholder renders as members of the approved V7 collection.
+LEGACY_PRODUCTS.filter(legacy => !PRODUCTS.some(product => product.slug === legacy.slug)).forEach(legacy => {
+  const suggested = legacy.slug === 'youth-polo' ? PRODUCTS.filter(p => ['boys-polo','girls-polo'].includes(p.slug))
+    : legacy.slug === 'childrens-hoodie' ? PRODUCTS.filter(p => ['boys-hoodie','girls-hoodie'].includes(p.slug))
+    : PRODUCTS.slice(0, 4);
+  add(`/shop/${legacy.slug}`, `${legacy.name} | Shop`, 'Explore the current Faith Reins collection.',
+    titleBand({ eyebrow: 'Out of stock', title: esc(legacy.name), body: 'This style is not currently available. Explore the current collection below.' }) +
+    section(`<div class="merch-grid">${suggested.map(showcaseCard).join('')}</div><p style="margin-top:32px"><a class="btn btn--secondary" href="/shop">Browse the collection</a></p>`));
 });
 
 /* ---------- Legal hub ---------- */

@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "mens-tee",
+    "name": "Men's Tee"
+  },
+  {
+    "slug": "womens-tee",
+    "name": "Women's Tee"
+  },
+  {
+    "slug": "childrens-tee",
+    "name": "Youth Tee"
+  },
+  {
+    "slug": "toddler-tee",
+    "name": "Toddler Tee"
+  },
+  {
+    "slug": "long-sleeve-tee",
+    "name": "Men's Long Sleeve Tee"
+  },
+  {
+    "slug": "womens-long-sleeve-tee",
+    "name": "Women's Long Sleeve Tee"
+  },
+  {
+    "slug": "youth-long-sleeve-tee",
+    "name": "Youth Long Sleeve Tee"
+  },
+  {
+    "slug": "crewneck",
+    "name": "Men's Crewneck"
+  },
+  {
+    "slug": "womens-crewneck",
+    "name": "Women's Crewneck"
+  },
+  {
+    "slug": "youth-crewneck",
+    "name": "Youth Crewneck"
+  },
+  {
+    "slug": "heritage-hoodie",
+    "name": "Men's Heritage Hoodie"
+  },
+  {
+    "slug": "womens-hoodie",
+    "name": "Women's Hoodie"
+  },
+  {
+    "slug": "childrens-hoodie",
+    "name": "Youth Hoodie"
+  },
+  {
+    "slug": "mens-polo",
+    "name": "Men's Polo"
+  },
+  {
+    "slug": "womens-polo",
+    "name": "Women's Polo"
+  },
+  {
+    "slug": "youth-polo",
+    "name": "Youth Polo"
+  },
+  {
+    "slug": "caps",
+    "name": "Cap"
+  },
+  {
+    "slug": "youth-cap",
+    "name": "Youth Cap"
+  },
+  {
+    "slug": "beanie",
+    "name": "Beanie"
+  },
+  {
+    "slug": "coffee-mug",
+    "name": "Coffee Mug"
+  },
+  {
+    "slug": "travel-mug",
+    "name": "Travel Mug"
+  },
+  {
+    "slug": "keychains",
+    "name": "Leather Keychain"
+  },
+  {
+    "slug": "stickers",
+    "name": "Sticker Set"
+  }
+]
