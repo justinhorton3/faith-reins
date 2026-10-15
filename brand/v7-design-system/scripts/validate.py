@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate this portable package without third-party dependencies."""
 from pathlib import Path
-import argparse, json, hashlib, re, sys, xml.etree.ElementTree as ET
+import argparse, json, hashlib, re, sys, subprocess, xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from urllib.parse import unquote
 R=Path(__file__).resolve().parents[1]
@@ -93,6 +93,9 @@ for record in preserved:
     p=R/record['package_path']
     check(p.is_file(),'Missing preserved source '+record['source'])
     if p.is_file():check(sha(p)==record['sha256'],'Preserved source hash changed '+record['source'])
+supplier_run=subprocess.run([sys.executable,str(R/'scripts/validate-supplier-audit.py')],capture_output=True,text=True)
+check(supplier_run.returncode==0,'Supplier audit validation failed: '+supplier_run.stderr.strip())
+supplier_result=json.loads(supplier_run.stdout) if supplier_run.returncode==0 else {'passed':False}
 checksums=json.loads((R/'FILE-CHECKSUMS.json').read_text())
 excluded={'FILE-CHECKSUMS.json','VALIDATION-REPORT.json','STAGING-MANIFEST.json'}
 actual={p.relative_to(R).as_posix() for p in R.rglob('*') if p.is_file() and p.name not in excluded}
@@ -102,6 +105,6 @@ for path,expected in checksums.items():
     check(p.is_file(),'Missing checksum target '+path)
     if p.is_file():check(sha(p)==expected,'Package checksum mismatch '+path)
 for p in R.rglob('*'):check(not p.is_symlink(),'Symlink in portable package: '+str(p))
-report={'passed':not errors,'master_count':10,'products':42,'images':count,'approved_images':approved,'companion_images':companions,'repository_source_assets':len(provenance['unchanged_source_assets']),'preserved_source_records':len(preserved),'checksummed_files':len(checksums),'image_policy':'original bytes unchanged','pdf_status':release['pdf_status'],'checks':['hero source hashes, sizes and page inventory','PDF volume hashes, sizes, headers and page coverage','recorded original PDF render and image verification','master hashes','product hashes','unchanged repository source assets','preserved source hashes','complete package checksum inventory','SVG parsing and outlined masters','active HTML links','CSS imports and font paths','active Markdown links','package-contained link targets','no symlinks'],'not_checked':['actual browser responsive behavior','physical print and embroidery','supplier availability and measurement charts','website integration and deployment'],'errors':errors}
+report={'passed':not errors,'master_count':10,'products':42,'images':count,'approved_images':approved,'companion_images':companions,'repository_source_assets':len(provenance['unchanged_source_assets']),'preserved_source_records':len(preserved),'supplier_audit':supplier_result,'checksummed_files':len(checksums),'image_policy':'original bytes unchanged','pdf_status':release['pdf_status'],'checks':['hero source hashes, sizes and page inventory','PDF volume hashes, sizes, headers and page coverage','recorded original PDF render and image verification','master hashes','product hashes','unchanged repository source assets','preserved source hashes','complete package checksum inventory','SVG parsing and outlined masters','active HTML links','CSS imports and font paths','active Markdown links','supplier audit coverage, image hashes and mockup chart parity','package-contained link targets','no symlinks'],'not_checked':['actual browser responsive behavior','physical print and embroidery','final supplier variant inventory, unresolved chart methods and physical sample fit','website integration and deployment'],'errors':errors}
 if not args.check:(R/'VALIDATION-REPORT.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2));sys.exit(bool(errors))

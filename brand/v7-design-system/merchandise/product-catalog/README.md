@@ -1,5 +1,7 @@
 # V7 Product Catalog
 
+[Supplier audit: all 42 designs](SUPPLIER-AUDIT.md) · [PDP audit and interactive mockup](PDP-AUDIT.md). Candidate specifications are documented; final sourcing and ordering remain gated.
+
 All 42 design records and all 84 originals are included. Printful integration is deferred. Proposed size labels are not verified measurement charts. Two companion views remain distinct from the approved images.
 
 | Product | Original views | Specification |
