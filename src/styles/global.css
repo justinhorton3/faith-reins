@@ -675,3 +675,6 @@ body.cart-open { overflow: hidden; }
   details > div { display: block !important; }
   body::before { content: "Faith Reins Equestrian Center — faithreins.com"; display: block; font-size: 9pt; color: #555; border-bottom: 1px solid #ccc; padding-bottom: .5rem; margin-bottom: 1rem; }
 }
+
+/* Preserve the existing utility links on the narrowest phones. */
+@media (max-width:359px) { .utility__links { gap:8px; } }

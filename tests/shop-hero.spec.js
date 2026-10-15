@@ -5,6 +5,7 @@ for (const width of [1440,1024,768,767,390,320]) {
     await page.goto('/shop');
     const hero=page.locator('.shop-editorial');
     await expect(hero.getByRole('heading', { level:1 })).toHaveText('Wear the mission.');
+    await expect(hero.getByRole('heading', { level:1 })).toHaveCSS('color', 'rgb(243, 238, 228)');
     await expect(hero.locator('img')).toHaveCount(2);
     for(const image of await hero.locator('img').all()) {
       await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===1086)).toBe(true);
@@ -17,8 +18,6 @@ for (const width of [1440,1024,768,767,390,320]) {
     const overflow = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(element => element.offsetParent && element.getBoundingClientRect().right > innerWidth + 1).map(element => ({ tag:element.tagName, class:element.className, width:element.getBoundingClientRect().width, right:element.getBoundingClientRect().right })));
     expect(overflow, JSON.stringify(overflow)).toEqual([]);
     await expect(page.locator('img[src*="hero-shop-"]')).toHaveCount(0);
-    await page.evaluate(()=>document.fonts.ready);
-    await page.screenshot({path:testInfo.outputPath(`hero-${width}.png`)});
     await hero.getByRole('link',{name:'Explore the collection'}).click();
     await expect(page).toHaveURL(/#shop-products$/);
     await expect(page.locator('#merch-grid .merch-card')).toHaveCount(18);
