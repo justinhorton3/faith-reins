@@ -26,3 +26,26 @@ jobs:
 
       - name: Check Markdown whitespace
         run: git diff --check
+
+  independent-build:
+    name: Build without brand assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check comparison and failure recovery
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -m unittest discover -s tests -p test_website_independence.py
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Require identical output with and without brand
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+        run: python3 scripts/check-website-independence.py
