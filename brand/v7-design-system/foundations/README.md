@@ -16,7 +16,7 @@ Hero 86px desktop / 64px tablet / 44px mobile. Section headings 46 / 40 / 32px. 
 
 ## Photography
 
-Paired V6 desktop/mobile heroes are under `photography/heroes`. They are carried-forward reference files, not a new rights or clinical-content approval. One unique hero per page; reserve home horse-and-girl imagery for home. Keep subjects visible using page-specific focal points. Old shop hero imagery is in legacy; compose a replacement from the current approved collection only after review. No stock-like corporate imagery, heavy filters, rounded photo frames or repeated heroes.
+The [hero image reference](photography/README.md) documents page assignments, original dimensions, desktop/mobile focal points, hashes and the shop exception. [Browse the offline gallery](photography/index.html). Paired V6 desktop/mobile heroes are under `photography/heroes`. They are carried-forward reference files, not a new rights or clinical-content approval. One unique hero per page; reserve home horse-and-girl imagery for home. Keep subjects visible using page-specific focal points. Old shop hero imagery is in legacy; compose a replacement from the current approved collection only after review. No stock-like corporate imagery, heavy filters, rounded photo frames or repeated heroes.
 
 ## Fonts and licenses
 

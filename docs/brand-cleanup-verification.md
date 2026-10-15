@@ -26,6 +26,10 @@ Baseline: `6e848fa72c775a98fd098b533e7090ecd47d5824`.
 
 ## Branch retirement
 
-The package's `BRANCH-RETIREMENT.json` records 14 deleted branches, verified through GitHub UI and API after cleanup PR #14 merged. Four branches remain because they contain unmerged work: `claude/session-2026-10-12`, `fix/wix-headless-deploy-config`, `feat/v7-merchandise-system` and `wip/shop-photo-logo-swap`. Their audited heads are recorded for separate review. No archival tags were created. The local symbolic `origin` alias was not a real branch.
+The package's `BRANCH-RETIREMENT.json` records 19 retired working branches, verified through GitHub UI and API. Four unmerged histories remain reachable from archive/pre-cleanup-2026-10-15; all four audited tips passed ancestry checks against its archive commit before their working branches were deleted. Their source changes were not applied to main. No archival tags were created. The local symbolic origin alias was not a real branch.
 
-The six PR #12 transfer-manifest entries exactly match original sizes and SHA-256 values in the canonical package; PR #12 was closed as superseded. The PDF is being delivered on its own `docs/v7-brand-guide-pdf` branch after cleanup.
+The six PR #12 transfer-manifest entries exactly match original sizes and SHA-256 values in the canonical package; PR #12 was closed as superseded. PDF PR #15 is merged and its branch retired.
+
+## Completed follow-up
+
+PDF PR #15 is merged. The remaining four working branches were reviewed, their complete histories preserved in archive/pre-cleanup-2026-10-15, and then deleted. All four tips are verified ancestors of the archive commit. See branch-review-2026-10-15.md and the updated package retirement ledger for recovery details. The archive is not a runtime merge.

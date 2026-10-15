@@ -7,10 +7,11 @@
   "companion_images": 2,
   "repository_source_assets": 87,
   "preserved_source_records": 432,
-  "checksummed_files": 592,
+  "checksummed_files": 595,
   "image_policy": "original bytes unchanged",
   "pdf_status": "available: original 18 pages in six lossless local volumes",
   "checks": [
+    "hero source hashes, sizes and page inventory",
     "PDF volume hashes, sizes, headers and page coverage",
     "recorded original PDF render and image verification",
     "master hashes",
