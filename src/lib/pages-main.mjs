@@ -1,6 +1,6 @@
 import PRODUCTS from "./products.json" with { type: "json" };
 import { productShowcase, showcaseCard } from "./product-showcase.mjs";
-import { shopCategories, categoryPage } from "./shop-categories.mjs";
+import { shopCategories, categoryPage, categoryNavigation } from "./shop-categories.mjs";
 import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
@@ -334,7 +334,7 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
 const FILTERS = [["all", "All"], ["mens", "Men's"], ["womens", "Women's"], ["youth", "Youth"], ["layers", "Layers"], ["accessories", "Hats"], ["home", "Home & gifts"]];
 add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies, caps, drinkware, journals and throws.",
   shopHero() +
-  section(`<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " styles · 42 color & artwork options", title: "The collection", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([value, text]) => `<button class="shop-filter" type="button" data-filter="${value}" aria-pressed="${value === "all"}">${esc(text)}</button>`).join("")}</div></div>
+  section(`${categoryNavigation()}<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " styles · 42 color & artwork options", title: "The collection", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([value, text]) => `<button class="shop-filter" type="button" data-filter="${value}" aria-pressed="${value === "all"}">${esc(text)}</button>`).join("")}</div></div>
 <div class="merch-grid" id="merch-grid">${PRODUCTS.map(showcaseCard).join("")}</div>
 <script>(function(){var buttons=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',String(other===button))});cards.forEach(function(card){card.hidden=button.dataset.filter!=='all'&&card.dataset.group!==button.dataset.filter})})})})();</script>`, { id: "shop-products" }) +
   merchCorner() +

@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "label": "Men's",
+    "heading": "Men’s",
+    "title": "Men’s Polos, Hoodies & Outerwear",
+    "lead": "Familiar favorites. A purpose worth wearing.",
+    "description": "Explore Faith Reins men’s horse polos, hoodies, quarter-zips and quilted vests in forest green, cream and white.",
+    "productHeading": "Made for your everyday.",
+    "intro": "Signature horse polos, relaxed hoodies and versatile outerwear. Familiar colors and thoughtful details, inspired by Faith Reins.",
+    "products": [
+      "mens-polo",
+      "heritage-hoodie",
+      "quarter-zip",
+      "quilted-vest"
+    ],
+    "key": "mens",
+    "route": "/shop/mens",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/mens-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/mens-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1122,
+      "mobileHeight": 1402,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "Man wearing the forest-green Faith Reins horse polo beside a timber fence at the farm."
+    }
+  }
+]

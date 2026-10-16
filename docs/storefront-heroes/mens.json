@@ -1,0 +1,53 @@
+{
+  "category": "mens",
+  "date": "2026-10-16",
+  "status": "generated-concept-implementation-reviewed",
+  "tool": "built-in image_gen",
+  "ownerApproval": "pending visual review",
+  "references": [
+    {
+      "path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
+      "role": "farm setting",
+      "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2"
+    },
+    {
+      "path": "approved/product-images/mens-forest-green-polo-product.png",
+      "role": "approved product appearance",
+      "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52"
+    }
+  ],
+  "prompt": "Use case: photorealistic-natural. Create a premium Faith Reins ecommerce category hero photograph, LANDSCAPE 3:2, at least 1536 by 1024. Reference image 1 establishes the SAME Arkansas farm: timber-and-wire pasture fence, gravel path, low timber barn with metal roof, wooded green pasture, natural warm late-afternoon light. Recreate that place consistently, but photograph a distinct new moment and camera angle. Remaining references are the exact approved merchandise, including the distinctive right-facing horse-head silhouette with flowing mane; preserve garment construction, forest-green/cream colors, small left-chest embroidery or mug print precisely. Authentic candid adults/children, realistic hands and skin, high-end department-store editorial quality. Frame subjects in the RIGHT 55 percent of the image, from head to at least hips; leave the LEFT 40 percent quiet darker foliage/fence space for live HTML headings. Product and embroidery visible, faces unobstructed. Natural color, light background blur but farm recognizable. NO baked-in words, UI, watermarks, invented lettering or logos. Do not copy the family identities or exact photograph from the farm reference. Subject: one friendly adult man about 40 in the EXACT forest-green three-button horse polo from reference 2, cream horse embroidery on his left chest, and blue jeans. He casually rests a hand on the timber fence and looks toward the pasture, torso turned three-quarters toward camera so the polo logo is visible. No cap. Medium head-to-upper-thigh framing; polo is the focal merchandise.",
+  "mobilePrompt": "Use case: compositing. Recompose THIS EXACT Faith Reins farm merchandise photograph into a PORTRAIT 4:5 mobile ecommerce hero, 1024x1280 or higher. Preserve the same people, faces, exact apparel or cap, garment colors, embroidery logos, farm architecture, timber fence, woodland and natural light. This is art direction for a narrow phone, not a new campaign. Position the person's or both people's full heads and product chest/cap marks in the UPPER 55 percent, centered horizontally; keep both faces and merchandise visible. Pull the camera back as necessary to fit two people. The LOWER 35 percent should be quiet darker fence/path/porch or lower-body background to accommodate live HTML heading and button, with no key merchandise or faces there. No lettering, UI, borders, fake overlay or watermark. Keep horse-head embroidery faithfully matching the source. For outerwear, remove the man's extra cap and keep his head naturally uncovered; preserve the quarter-zip and woman's diamond-quilted vest exactly. For all other categories preserve the original scene and product identity. Photorealistic department-store editorial quality.",
+  "assets": [
+    {
+      "view": "desktop",
+      "master": "foundations/photography/storefront/mens/mens-desktop-master.png",
+      "masterSha256": "e7c61935843c7cbdf361b0eddd57142f6846893fbce4dbbc1d9005e3b0b63254",
+      "masterBytes": 2398857,
+      "package": "foundations/photography/storefront/mens/mens-desktop.webp",
+      "website": "public/assets/shop/v7/heroes/mens-desktop.webp",
+      "sha256": "92281a04aed6ffd468956e21564e967f95fec303c0d2a680f6029945cfc59b42",
+      "bytes": 222228,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "view": "mobile",
+      "master": "foundations/photography/storefront/mens/mens-mobile-master.png",
+      "masterSha256": "35a289a47ebf0697df32e1e1264d123a9dcadb7ec292e2ed3d03b8d04d3b432e",
+      "masterBytes": 2791607,
+      "package": "foundations/photography/storefront/mens/mens-mobile.webp",
+      "website": "public/assets/shop/v7/heroes/mens-mobile.webp",
+      "sha256": "f9935504d9bbe8635e5c5c1b831de0621b1bf48fe0e9d9bf936a563a6acc38d1",
+      "bytes": 318868,
+      "width": 1122,
+      "height": 1402
+    }
+  ],
+  "notes": [
+    "New generated lifestyle concept; not an unchanged approved product original.",
+    "PNG masters preserved byte for byte; WebP exports are format-encoded copies without cropping.",
+    "Desktop and portrait mobile scenes separately art-directed with image_gen.",
+    "Supplier specifications, inventory and manufacturing approval are not established by imagery."
+  ]
+}
