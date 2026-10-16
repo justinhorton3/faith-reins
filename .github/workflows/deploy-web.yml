@@ -34,22 +34,32 @@ jobs:
         run: python scripts/wix-postbuild.py
       - name: Verify shop category pages, approved hero assets and host-compatible routes
         run: node scripts/verify-shop-category-routes.mjs
-      - name: Exclude unused superseded Shop photography from Wix deployment
+      - name: Keep active hero art and omit only unused duplicate photographs
         run: |
-          # Wix Drop uploads the entire static set. Do not remove source files
-          # or any asset referenced by a generated page or stylesheet.
-          for asset in barn-collection.webp coffee-porch.webp; do
+          # Assets copied for archival/traceability should not be uploaded
+          # twice. Never delete an image currently referenced by HTML/CSS/JS.
+          for asset in \
+            coffee-porch.webp \
+            heroes/shop-desktop.webp \
+            heroes/shop-mobile.webp \
+            heroes/hats-desktop.webp \
+            heroes/hats-mobile.webp; do
             target="dist/assets/shop/v7/$asset"
-            if [ -f "$target" ]; then
-              if grep -RFl --include='*.html' --include='*.css' --include='*.js' \
-                "/assets/shop/v7/$asset" dist --exclude-dir=assets; then
-                echo "::error title=asset still in use::Cannot exclude $target"
-                exit 1
-              fi
-              rm "$target"
-              echo "::notice title=obsolete asset::$target excluded from upload, unchanged in source"
+            if [ ! -f "$target" ]; then continue; fi
+            if grep -RFl --include='*.html' --include='*.css' --include='*.js' \
+              "/assets/shop/v7/$asset" dist --exclude-dir=assets > /dev/null; then
+              echo "::notice title=active hero::$target retained because pages reference it"
+              continue
             fi
+            rm "$target"
+            echo "::notice title=unused asset::$target omitted from Wix upload only; source untouched"
           done
+          # Confirm the restored Shop hero is included and referenced.
+          test -s dist/assets/shop/v7/barn-collection.webp
+          test -s dist/assets/shop/v7/heroes/hats-ranch-desktop.webp
+          test -s dist/assets/shop/v7/heroes/hats-ranch-mobile.webp
+          grep -q 'assets/shop/v7/barn-collection.webp' dist/shop.html
+          grep -q 'assets/shop/v7/heroes/hats-ranch-desktop.webp' dist/shop/hats.html
       - name: Find Wix account ID
         env:
           C1: ${{ secrets.WIX_ACCOUNT_ID }}
