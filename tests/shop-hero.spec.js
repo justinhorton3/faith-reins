@@ -7,6 +7,8 @@ for (const width of [1440,1024,768,767,390,320]) {
     await expect(hero.getByRole('heading', { level:1 })).toHaveText('Wear the mission.');
     await expect(hero.getByRole('heading', { level:1 })).toHaveCSS('color', 'rgb(243, 238, 228)');
     await expect(hero.locator('img')).toHaveCount(1);
+    await expect(hero.locator('img')).toHaveAttribute('src', /coffee-porch-couple.webp$/);
+    await expect(hero.locator('img')).toHaveAttribute('alt', /Man and woman/);
     for(const image of await hero.locator('img').all()) {
       await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===1536 && element.naturalHeight===1024)).toBe(true);
       expect(await image.evaluate(element=>getComputedStyle(element).objectFit)).toBe('contain');

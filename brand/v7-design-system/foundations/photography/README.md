@@ -52,7 +52,7 @@ For merchandise hero product-image selections, see [approved hero product images
 
 ## Shop editorial composition
 
-The current “Wear the mission” hero uses a new natural lifestyle concept: a woman relaxing with coffee in a wooden chair on a warm barn porch, wearing a forest-green hoodie. The user requested this direction after reviewing the paired studio portraits and shared earlier warm equestrian references. The exact earlier chair-and-coffee asset was not located; this is a new generated image, not a recovered or newly approved historical source.
+The current “Wear the mission” hero uses a new natural lifestyle concept: a man and woman relaxing with coffee in a wooden chair on a warm barn porch, wearing forest-green layers. The user requested this direction after reviewing the paired studio portraits and shared earlier warm equestrian references. The exact earlier chair-and-coffee asset was not located; this is a new generated image, not a recovered or newly approved historical source.
 
 The [source master, web derivative and provenance](shop-lifestyle/PROVENANCE.json) are stored separately from approved product originals. Copy stays live HTML in a forest-green panel. The entire 3:2 scene remains visible on desktop and mobile. The historical hero register and approved merchandise images are unchanged.
 

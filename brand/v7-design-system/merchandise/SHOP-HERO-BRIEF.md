@@ -1,6 +1,6 @@
 # Shop hero: brief for later visual review
 
-Status: natural lifestyle composition prepared for review. The user requested warm everyday imagery after reviewing the paired studio portraits. The [portable template](../templates/shop-hero.html) now uses a new chair-and-coffee scene; [provenance](../foundations/photography/shop-lifestyle/PROVENANCE.json) distinguishes this generated concept from unchanged approved product originals.
+Status: natural lifestyle composition prepared for review. The user requested warm everyday imagery after reviewing the paired studio portraits. The [portable template](../templates/shop-hero.html) now uses a new chair-and-coffee scene featuring a man and woman; [provenance](../foundations/photography/shop-lifestyle/PROVENANCE.json) distinguishes this generated concept from unchanged approved product originals.
 
 ## Goal
 

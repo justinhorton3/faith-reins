@@ -2,21 +2,27 @@
   "status": "New generated lifestyle concept for collection hero review; not a recovered earlier image or an approved manufacturing reference.",
   "created": "2026-10-16",
   "generator": "Built-in image generation",
-  "master": "brand/v7-design-system/foundations/photography/shop-lifestyle/coffee-porch-master.png",
-  "master_sha256": "6e69bb671126fe898ecad682b43c31be5e74f1382bebfe0d048d04581ef609d3",
-  "website_asset": "public/assets/shop/v7/coffee-porch.webp",
-  "website_sha256": "2a177eaeefab1618350d185df8361b9b4c6f54d9af566a7d1dad23b281505f5b",
+  "master": "brand/v7-design-system/foundations/photography/shop-lifestyle/coffee-porch-couple-master.png",
+  "master_sha256": "b3c1b263412ca703e324f66c8ac7f00849c137ce2d359461cbe5f1420b3d3af2",
+  "website_asset": "public/assets/shop/v7/coffee-porch-couple.webp",
+  "website_sha256": "965744e621fc8a318a996ff676c2cf8b3c4b4651e9d90e8a04aaad6222e948d6",
   "dimensions": [
     1536,
     1024
   ],
   "derivative": "WebP quality 92, original dimensions, no crop or retouch",
   "references": [
-    "womens-forest-green-hoodie-styled.png",
-    "cream-horse-mug-styled.png",
-    "User-provided warm equestrian apparel reference image(20261016-001109).png"
+    "Previous coffee-porch-master.png scene",
+    "Approved forest-green-quarter-zip-styled.png for man and garment"
   ],
-  "brief": "Natural editorial photo of a woman relaxing in a wooden chair with coffee on a timber barn porch, forest-green horse-embroidered hoodie and cream horse mug, warm sunlight and pasture; no baked-in copy, collage or UI.",
+  "brief": "Natural editorial photo of a man and woman enjoying coffee together in wooden chairs on a warm barn porch, wearing forest-green horse-embroidered layers with cream horse mugs; no baked-in copy.",
   "layout": "Live copy in green panel; full 3:2 scene beside copy on desktop and below copy on mobile.",
-  "originals": "All previously approved product originals remain unchanged."
+  "originals": "All previously approved product originals remain unchanged.",
+  "revision": "Man and woman together, requested by user",
+  "prompt": "Use case: identity-preserve / photorealistic-natural. Edit target: image 1, the Faith Reins woman enjoying coffee on a barn porch. Primary request: include BOTH a man and the woman in this same natural photo. Keep the same woman, her curly hair and appearance, forest-green hoodie with small cream horse embroidery, cream coffee mug with green horse artwork, timber porch, warm sunset light and calm pastoral mood. Add a man seated comfortably in a second matching wooden chair beside her on the LEFT, wearing the forest-green quarter zip with the small cream embroidered horse shown in reference image 2, denim or neutral trousers. Image 2 is the man's appearance and garment reference only. Compose the pair as equals, similar scale, both visible from head to seated lap, enjoying a quiet coffee together, relaxed subtle smiles and natural interaction, not posing directly for camera. The man may hold a matching cream coffee mug. Adjust the table and camera framing to make physical room for the second chair; retain the pasture, fence and softly blurred horse in background, enough natural context around them. Keep the woman's hoodie and mug details and the man's quarter-zip and understated horse embroidery faithful to references. Single cohesive realistic editorial lifestyle photograph, natural skin textures, believable hands and body proportions. Landscape 3:2 image at 1536x1024. No collage, no headlines or text, no borders, no UI, no watermark. Preserve the warm wood, cream and forest-green palette.",
+  "previous_version": {
+    "master": "coffee-porch-master.png",
+    "web": "coffee-porch.webp",
+    "status": "Preserved unchanged as the earlier single-person concept"
+  }
 }
