@@ -59,3 +59,7 @@ The user-provided merch-corner image is a separate concept feature below the cat
 [Source masters, derivatives, logo-reference hashes and generation prompt](shop-lifestyle/PROVENANCE.json) are stored separately from approved product originals. Copy stays live HTML; responsive crops remove empty background while keeping the product cluster. The historical hero register and approved merchandise images remain unchanged.
 
 Open the [portable template](../../templates/shop-hero.html) or [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All assets resolve locally; the website uses independent copies.
+
+## Current shop category hero masters — October 16, 2026
+
+The historical sitewide hero register above remains preserved and is **not** an accurate inventory of the separately approved new store collection images. Current category additions use independent V7 masters in `storefront/{mens,women,kids,outerwear}/`, with independent website copies in `public/assets/shop/v7/heroes/`. The approved **Outerwear** master pair is indexed by `merchandise/storefront/outerwear.md` and `docs/storefront-heroes/outerwear-assets.json`; its desktop and mobile hashes were re-verified against the owner-reviewed files. Do not mistake shop drafts in older hero records for current selected category photography. Preserve old page heroes unchanged and keep all text as HTML.

@@ -72,10 +72,13 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 - Planning: committed; owner review gate now required.
 - Shared foundation: committed.
 - Men's: original one-model page committed; revised two-distinct-model desktop explicitly owner-approved October 16. Approved desktop master is recorded in V7; a matching mobile adaptation has been inspected and the revised pair integrated in website source. Separate owner mobile approval is not claimed.
-- Women's / Kids / Outerwear / Hats / Home & Gifts / Shop: generated drafts only; not approved, integrated or committed.
-- Current review: Women's revised desktop, requested by Justin after approving the Men's two-model desktop. Use two distinct women and a different farm porch background; a branded mug may be included. Men's matching mobile review remains pending.
-- SEO cleanup: pending.
-- Clean URLs and permanent redirects: pending hosting work.
+- Women's: approved two-model farm-porch hero, desktop/mobile exports and `/shop/women` page committed to main; no live release from this work.
+- Kids: approved seal-branded two-child farm hero and category page committed to main; new Kids seal T-shirt and hoodie sourcing concepts documented.
+- Outerwear: revised desktop/mobile approved hero masters and `/shop/outerwear` page committed to main; **cream quarter-zip icon 80% of previous width/height**, men's vest icon centered on wearer’s left breast away from zipper. V7 assets and website copies verified against the exact reviewed PNGs (see `outerwear.md`).
+- Hats / Home & Gifts / Shop: next categories; present each new hero for individual owner approval before adding a page or committing its imagery.
+- SEO slugs: `/shop/men`, `/shop/women`, `/shop/kids`, `/shop/outerwear` committed; remaining clean-category naming frozen in `SEO-ROUTES.md`.
+- SEO cleanup: remaining sitewide metadata, sitemap and redirects pending.
+- Clean URLs and permanent redirects: pending hosting work, actual Wix static filenames still use `.html`.
 - Live release: not requested in this instruction.
 
 ## Locked execution loop — October 16 owner correction
@@ -86,7 +89,7 @@ Execute **one category at a time**, without interleaving categories:
 3. On approval, complete the category page, responsive assets, product links, SEO, and V7 documentation; verify build; commit/push **that category only** to main.
 4. Immediately present the **next category hero** for approval. Repeat: Kids → Outerwear → Hats → Home & Gifts → Shop.
 
-Kids photographic composition is approved; the generated garment marks are **not** approved. Replace them with exact approved V7 art, complete the Kids page and commit to main before starting Outerwear. No claim that this has already been committed. Supplier sourcing must not block visual design mockups.
+Historical note superseded: Kids category and Outerwear category have now been committed. The source of truth for current status is the Progress section above. Supplier sourcing must not block visual concept photography but must gate actual sales.
 
 ## SEO slug freeze — 2026-10-16
 
