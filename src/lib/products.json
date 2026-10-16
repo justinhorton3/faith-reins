@@ -1421,5 +1421,91 @@
         }
       }
     ]
+  },
+  {
+    "slug": "kids-seal-tee",
+    "name": "Kids’ Seal T-Shirt",
+    "group": "youth",
+    "collection": "T-Shirts",
+    "availability": "out-of-stock",
+    "desc": "A soft cream tee featuring the approved Faith Reins V7 seal. An everyday design inspired by the children and families at the heart of our mission.",
+    "details": [
+      "Cream short-sleeve tee concept",
+      "Small approved V7 green circular seal on left chest",
+      "Unisex youth sizing concept; supplier to be confirmed"
+    ],
+    "fitNote": "Youth XS–XL are planned listing options, not a final manufacturer size chart. Confirm garment dimensions with the selected supplier before ordering.",
+    "careNote": "Material, fabric weight, decoration method and care instructions remain pending supplier selection.",
+    "variants": [
+      {
+        "id": "kids-cream-seal-tee",
+        "name": "Cream",
+        "hex": "#eee5d4",
+        "tonal": false,
+        "description": "Cream youth crewneck T-shirt with the exact Faith Reins green V7 circular seal at the left chest. Styled in the approved Kids’ farm photo.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/kids-cream-seal-tee-product.svg",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kids-seal-hoodie",
+    "name": "Kids’ Seal Hoodie",
+    "group": "youth",
+    "collection": "Hoodies",
+    "availability": "out-of-stock",
+    "desc": "Our forest-green Kids’ hoodie concept, finished with the approved Faith Reins V7 circular seal. Comfortable-looking everyday layers with purpose.",
+    "details": [
+      "Forest-green pullover hoodie concept",
+      "Small approved V7 white circular seal on left chest",
+      "Unisex youth sizing concept; drawcord-free youth fit to be confirmed"
+    ],
+    "fitNote": "Youth XS–XL are planned listing options, not a final manufacturer size chart. Confirm garment dimensions and youth safety features with the selected supplier.",
+    "careNote": "Final fiber content, fabric weight, decoration process and care instructions are pending manufacturer selection.",
+    "variants": [
+      {
+        "id": "kids-forest-green-seal-hoodie",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "Forest-green youth hoodie with the approved white V7 circular seal on the left chest, matching the approved Kids’ farm hero.",
+        "sizes": [
+          "Youth XS",
+          "Youth S",
+          "Youth M",
+          "Youth L",
+          "Youth XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.svg",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      }
+    ]
   }
 ]

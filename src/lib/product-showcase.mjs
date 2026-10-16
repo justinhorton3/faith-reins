@@ -60,7 +60,7 @@ export function productShowcase(p, related = []) {
 <script type="application/json" id="pdp-data">${safeJson({ slug: p.slug, name: p.name, variants: p.variants })}</script>`;
   return { description: p.desc, body, jsonld: {
     '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.desc,
-    image: p.variants.flatMap(v => Object.values(v.images).map(image => `https://www.faithreins.com${image.src}`)),
+    image: p.variants.flatMap(v => Object.values(v.images).map(image => image.src.startsWith('https://') ? image.src : `https://www.faithreins.com${image.src}`)),
     brand: { '@type': 'Brand', name: 'Faith Reins' },
     // No Offer: this collection has no verified retail prices and purchasing is closed.
   } };
