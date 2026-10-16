@@ -6,12 +6,12 @@ for (const width of [1440,1024,768,767,390,320]) {
     const hero=page.locator('.shop-editorial');
     await expect(hero.getByRole('heading', { level:1 })).toHaveText('Wear the mission.');
     await expect(hero.getByRole('heading', { level:1 })).toHaveCSS('color', 'rgb(243, 238, 228)');
-    await expect(hero.locator('img')).toHaveCount(2);
+    await expect(hero.locator('img')).toHaveCount(1);
     for(const image of await hero.locator('img').all()) {
-      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===1086)).toBe(true);
+      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===1536 && element.naturalHeight===1024)).toBe(true);
       expect(await image.evaluate(element=>getComputedStyle(element).objectFit)).toBe('contain');
       const rect=await image.boundingBox();
-      expect(Math.abs(rect.height/rect.width-4/3)).toBeLessThan(.01);
+      expect(Math.abs(rect.height/rect.width-2/3)).toBeLessThan(.01);
     }
     await page.evaluate(()=>document.fonts.ready);
     await page.screenshot({path:testInfo.outputPath(`hero-${width}.png`)});

@@ -1,6 +1,6 @@
 # Hero image reference
 
-The V7 package is self-contained: 23 source masters and 22 desktop/mobile pairs live here. Twenty-one pairs are the carried-forward page photographs; the additional pasture pair is supporting imagery. The register preserves the shop’s historical snapshot, with both older V6 shop exports under legacy. The new shop editorial composition is documented separately below. No images were regenerated, recompressed or promoted to a new approval status.
+The V7 package is self-contained: 23 source masters and 22 desktop/mobile pairs live here. Twenty-one pairs are the carried-forward page photographs; the additional pasture pair is supporting imagery. The register preserves the shop’s historical snapshot, with both older V6 shop exports under legacy. The new shop editorial composition is documented separately below. The historical assets are unchanged. The new shop lifestyle concept is recorded separately below.
 
 [Open the offline hero gallery](index.html) · [Machine-readable asset register](HERO-REGISTER.json)
 
@@ -52,6 +52,8 @@ For merchandise hero product-image selections, see [approved hero product images
 
 ## Shop editorial composition
 
-The current proposed replacement for “Wear the mission” uses the approved forest-green quarter-zip and quilted-vest styled originals as two full portraits. Copy is live HTML in a forest-green panel; mobile stacks copy above the same images. There is no flattened replacement master, new crop, overlay across the products, or image regeneration. The historical register and exports remain intact as an audit snapshot.
+The current “Wear the mission” hero uses a new natural lifestyle concept: a woman relaxing with coffee in a wooden chair on a warm barn porch, wearing a forest-green hoodie. The user requested this direction after reviewing the paired studio portraits and shared earlier warm equestrian references. The exact earlier chair-and-coffee asset was not located; this is a new generated image, not a recovered or newly approved historical source.
 
-Open the [portable HTML/CSS template](../../templates/shop-hero.html) or the [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All source photographs and fonts resolve locally within this package. The website uses its own committed copies and its own component/CSS, so it remains independent of this reference.
+The [source master, web derivative and provenance](shop-lifestyle/PROVENANCE.json) are stored separately from approved product originals. Copy stays live HTML in a forest-green panel. The entire 3:2 scene remains visible on desktop and mobile. The historical hero register and approved merchandise images are unchanged.
+
+Open the [portable template](../../templates/shop-hero.html) or [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All assets resolve locally; the website uses its own committed copy and remains independent of this package.
