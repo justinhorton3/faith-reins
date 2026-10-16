@@ -647,5 +647,9 @@
   "skills/faith-reins-v7-hero/SKILL.md": "4e80c81205bd475e27d4f484617afe0004ec73dcb3e77173a940a6088c29d0fc",
   "skills/faith-reins-v7-hero/README.md": "1b5b2b72947fe5783c9649c49ea586f0c530fa3f08fb2b971bf2d9efcbc00cf2",
   "skills/faith-reins-v7-hero/EXAMPLE.json": "5ab4456e9e15943f7388b591fd59e857744eb9904c6ae48789eafe7751ae9aab",
-  "skills/faith-reins-v7-hero/tests/test_approved_composition.py": "830e772f5bf7fc691f961c9ca726a05c945ce8fe773751ea99e1a1dcb790a7da"
+  "skills/faith-reins-v7-hero/tests/test_approved_composition.py": "830e772f5bf7fc691f961c9ca726a05c945ce8fe773751ea99e1a1dcb790a7da",
+  "foundations/photography/storefront/shop/shop-approved-desktop-master.png": "b95879f7c19a16cfc08950aa6eaef370cdd142968a7ff51729627a2be1e24807",
+  "foundations/photography/storefront/shop/shop-desktop.webp": "d6129c98002b6102455ab9f4a2f6719d663e1755e88e6eef6d29e18e3c9c4210",
+  "foundations/photography/storefront/shop/shop-approved-mobile-master.png": "aca935db3c9b61d1de33e83d347a0f05c337e405b8f372441b955f54755052b0",
+  "foundations/photography/storefront/shop/shop-mobile.webp": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea"
 }

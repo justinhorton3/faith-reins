@@ -1,0 +1,52 @@
+{
+  "category": "shop",
+  "approved": "2026-10-16",
+  "review": "Owner approved the specific desktop and mobile farm scene",
+  "sourcePolicy": "Keep exact source images; no visual retouch or logo regeneration",
+  "usage": "Shop landing hero, not any individual product/category page",
+  "identityNote": "Any depicted marks are approved lifestyle concept imagery; final production logo files remain the exact V7 SVG masters.",
+  "noBakedInPageText": true,
+  "releasedToLiveSite": false,
+  "images": [
+    {
+      "view": "desktop",
+      "sourceUrl": "https://static.wixstatic.com/media/8fe1a1_db49ada37a0c42e3bf0e61d9541479bc~mv2.png",
+      "approvedMaster": "brand/v7-design-system/foundations/photography/storefront/shop/shop-approved-desktop-master.png",
+      "masterSha256": "b95879f7c19a16cfc08950aa6eaef370cdd142968a7ff51729627a2be1e24807",
+      "website": {
+        "path": "public/assets/shop/v7/heroes/shop-desktop.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 229844,
+        "sha256": "d6129c98002b6102455ab9f4a2f6719d663e1755e88e6eef6d29e18e3c9c4210"
+      },
+      "v7Archive": {
+        "path": "brand/v7-design-system/foundations/photography/storefront/shop/shop-desktop.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 229844,
+        "sha256": "d6129c98002b6102455ab9f4a2f6719d663e1755e88e6eef6d29e18e3c9c4210"
+      }
+    },
+    {
+      "view": "mobile",
+      "sourceUrl": "https://static.wixstatic.com/media/8fe1a1_192549095e6f4d80bb5e3f077dda13a8~mv2.png",
+      "approvedMaster": "brand/v7-design-system/foundations/photography/storefront/shop/shop-approved-mobile-master.png",
+      "masterSha256": "aca935db3c9b61d1de33e83d347a0f05c337e405b8f372441b955f54755052b0",
+      "website": {
+        "path": "public/assets/shop/v7/heroes/shop-mobile.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 237664,
+        "sha256": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea"
+      },
+      "v7Archive": {
+        "path": "brand/v7-design-system/foundations/photography/storefront/shop/shop-mobile.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 237664,
+        "sha256": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea"
+      }
+    }
+  ]
+}
