@@ -1,3 +1,14 @@
+# Shop/Hats hero placement correction - October 16, 2026
+
+The main Shop uses the previously approved barn-table merchandise collection
+scene at public/assets/shop/v7/barn-collection.webp.
+Hats uses the owner-corrected green/cream cap ranch duo with independent
+desktop/mobile asset paths. The original V7 logo masters, older Hats art,
+merch corner and existing product catalog remain unchanged.
+Historical sections below were superseded by this owner's correction.
+
+---
+
 # Shop hero — owner-approved V7 ranch photography
 
 **Approved by owner:** October 16, 2026 — both 1536 × 1024 desktop and 1024 × 1536 mobile photographic compositions.

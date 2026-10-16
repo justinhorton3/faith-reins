@@ -46,3 +46,10 @@ The permanent category slug is `/shop/home-gifts`, while the current Wix static 
 ## Main Shop hero
 
 The main Shop landing remains at \`/shop\` with current Wix static output \`/shop.html\`. Its approved desktop and mobile photographic hero assets have dedicated website copies, unique OG/Twitter preview image metadata, HTML heading and CTA, six category navigation tiles, complete approved product catalog, and unchanged merch-corner section. There is no claim of live publication, inventory or confirmed manufacturing artwork. Clean URL redirects require separate verification.
+
+## Approved hero placement correction - October 16, 2026
+
+Shop uses its former natural barn-table collection hero. Hats uses the
+two-adult green/cream cap duo. This changes only photo assignments and
+related alt/social images; static hosting paths, products and checkout
+are otherwise unchanged.

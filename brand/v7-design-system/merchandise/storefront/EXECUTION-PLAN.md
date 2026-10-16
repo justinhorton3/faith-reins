@@ -96,3 +96,9 @@ Historical note superseded: Kids category and Outerwear category have now been c
 ## SEO slug freeze — 2026-10-16
 
 Canonical category slugs are locked in [SEO-ROUTES.md](SEO-ROUTES.md): `men`, `women`, `kids`, `outerwear`, `hats`, `home-gifts` beneath `/shop/`. The serving Wix filenames currently require `.html`. The old `/shop/mens.html` remains a noindex compatibility redirect pending verified HTTP 301 routing. The accepted Women’s image is already approved and must not be regenerated.
+
+## Owner correction - Store versus Hats (October 16, 2026)
+
+Restore original Shop barn-table hero and move the already-approved
+two-cap ranch duo to the Hats page, with separate identical photo files.
+Preserve prior Wixel Hats artwork, V7 identity masters and existing merch.

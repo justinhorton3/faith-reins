@@ -8,20 +8,18 @@ for (const width of [1440,1024,768,767,390,320]) {
     await expect(hero.getByRole('heading', { level:1 })).toHaveText('Wear the mission.');
     await expect(hero.getByRole('heading', { level:1 })).toHaveCSS('color', 'rgb(243, 238, 228)');
     await expect(hero.locator('img')).toHaveCount(1);
-    await expect(hero.locator('img')).toHaveAttribute('src', /shop-desktop.webp$/);
-    await expect(hero.locator('source')).toHaveAttribute('srcset', /shop-mobile.webp$/);
-    await expect(hero.locator('img')).toHaveAttribute('alt', /man and a woman.*horse/);
+    await expect(hero.locator('img')).toHaveAttribute('src', /barn-collection.webp$/);
+    await expect(hero.locator('img')).toHaveAttribute('alt', /hoodie, cream tee, cap, mug/);
     for(const image of await hero.locator('img').all()) {
-      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===(innerWidth<=767?1024:1536) && element.naturalHeight===(innerWidth<=767?1536:1024))).toBe(true);
+      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===2172 && element.naturalHeight===724)).toBe(true);
       expect(await image.evaluate(element=>getComputedStyle(element).objectFit)).toBe('cover');
       const rect=await image.boundingBox();
-      if(width<1280) expect(Math.abs(rect.height/rect.width-(width<=767?1.5:2/3))).toBeLessThan(.02);
-      expect(rect.width).toBeGreaterThan(0);
+      if(width<1280) expect(Math.abs(rect.height/rect.width-1/2)).toBeLessThan(.01);
+      // Right-aligned cover must retain the entire product cluster in the right 60%.
+      const scale=Math.max(rect.width/2172,rect.height/724);
+      expect((2172-rect.width/scale)/2172).toBeLessThan(.4);
+      expect(rect.height/scale/724).toBeGreaterThan(.99);
     }
-    const copy=await hero.locator('.shop-editorial__copy').boundingBox();
-    const photo=await hero.locator('.shop-editorial__scene').boundingBox();
-    if(width>=1280) expect(copy.x+copy.width).toBeLessThanOrEqual(photo.x+1);
-    else expect(copy.y+copy.height).toBeLessThanOrEqual(photo.y+1);
     const corner=page.locator('.shop-corner');
     await expect(corner.getByRole('heading',{name:'A little more Faith Reins.'})).toBeVisible();
     await corner.scrollIntoViewIfNeeded();
@@ -44,4 +42,12 @@ test('other page heroes retain their existing photographs',async({page})=>{
   await page.goto('/our-mission');
   await expect(page.locator('.shop-editorial')).toHaveCount(0);
   await expect(page.locator('.hero__img')).toHaveAttribute('src',/hero-our-mission-desktop.webp$/);
+});
+
+test('Shop collection photo and Hats duo are correctly assigned', async ({page}) => {
+  await page.goto('/shop');
+  await expect(page.locator('.shop-editorial__scene img')).toHaveAttribute('src',/barn-collection.webp$/);
+  await page.goto('/shop/hats');
+  await expect(page.locator('.hero--collection img')).toHaveAttribute('src',/hats-ranch-desktop.webp$/);
+  await expect(page.locator('.hero--collection source')).toHaveAttribute('srcset',/hats-ranch-mobile.webp$/);
 });

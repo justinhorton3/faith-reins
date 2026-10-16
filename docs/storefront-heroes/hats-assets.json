@@ -44,5 +44,8 @@
   "mobileComposition": "Derived solely from approved image; uncropped source centered atop blurred extension of same pixels, no new source photo",
   "textInImage": false,
   "siteReleased": false,
-  "sourceIdentityNote": "This is the exact user-approved Wixel hero; original V7 horse SVG and original cap product images remain unchanged. Product supplier pending."
+  "sourceIdentityNote": "This is the exact user-approved Wixel hero; original V7 horse SVG and original cap product images remain unchanged. Product supplier pending.",
+  "activeHero": "Two-person ranch cap hero, corrected from Shop",
+  "originalWixelStatus": "Archived approved alternative",
+  "currentManifest": "docs/storefront-heroes/hats-ranch-assets.json"
 }

@@ -30,7 +30,12 @@ for(const category of CATEGORIES){
 const old=pages.find(p=>p.route==='/shop/mens');
 assert.ok(old && old.seo.noindex && old.seo.canonicalRoute==='/shop/men', 'Old mens route must be noindex and point to men');
 const shopPage=pages.find(p=>p.route==='/shop');
+const hatsPage=CATEGORIES.find(c=>c.key==='hats');
+assert.equal(hatsPage.hero.desktop,'/assets/shop/v7/heroes/hats-ranch-desktop.webp');
+assert.equal(hatsPage.hero.mobile,'/assets/shop/v7/heroes/hats-ranch-mobile.webp');
 assert.ok(shopPage?.body.includes('shop-category-tiles__grid'), 'Shop must show visual category navigation');
+assert.ok(shopPage.body.includes('/assets/shop/v7/barn-collection.webp'), 'Shop photo must be original collection image');
+assert.ok(!shopPage.body.includes('/assets/shop/v7/heroes/shop-desktop.webp'), 'Hats image must not be on Shop');
 assert.ok(shopPage.body.indexOf('shop-category-tiles__grid') < shopPage.body.indexOf('id="shop-products"'), 'Visual categories must precede products');
 assert.equal((shopPage.body.match(/class="shop-category-tile"/g)||[]).length, CATEGORIES.length, 'Six category tiles required');
 const { header } = await import('../src/lib/lib.mjs');

@@ -8,7 +8,7 @@ export function shopHero() {
     <a class="shop-editorial__link" href="#shop-products">Explore the collection <span aria-hidden="true">↓</span></a>
     <p class="shop-editorial__signature">Made to feel like Faith Reins.</p>
   </div>
-  <figure class="shop-editorial__scene"><picture><source media="(max-width: 767px)" srcset="/assets/shop/v7/heroes/shop-mobile.webp" width="1024" height="1536"><img src="/assets/shop/v7/heroes/shop-desktop.webp" width="1536" height="1024" alt="A man and a woman in forest-green and cream Faith Reins apparel beside a horse at the ranch." fetchpriority="high"></picture></figure>
+  <figure class="shop-editorial__scene"><img src="/assets/shop/v7/barn-collection.webp" alt="Forest-green hoodie, cream tee, cap, mug and leather key fob arranged on a warm barn table with Faith Reins horse, seal and document logos." width="2172" height="724" fetchpriority="high"></figure>
 </section>`;
 }
 

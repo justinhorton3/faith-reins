@@ -131,15 +131,15 @@
     "key": "hats",
     "route": "/shop/hats",
     "hero": {
-      "desktop": "/assets/shop/v7/heroes/hats-desktop.webp",
-      "mobile": "/assets/shop/v7/heroes/hats-mobile.webp",
+      "desktop": "/assets/shop/v7/heroes/hats-ranch-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/hats-ranch-mobile.webp",
       "width": 1536,
       "height": 1024,
       "mobileWidth": 1024,
       "mobileHeight": 1536,
       "desktopFocus": "center",
       "mobileFocus": "center",
-      "alt": "People wearing embroidered Faith Reins horse caps outdoors in a natural farm setting."
+      "alt": "Two adults wearing forest-green and cream Faith Reins caps near a horse at the ranch."
     }
   },
   {

@@ -3,7 +3,7 @@
   "approved": "2026-10-16",
   "review": "Owner approved the specific desktop and mobile farm scene",
   "sourcePolicy": "Keep exact source images; no visual retouch or logo regeneration",
-  "usage": "Shop landing hero, not any individual product/category page",
+  "usage": "Hats, not main Shop",
   "identityNote": "Any depicted marks are approved lifestyle concept imagery; final production logo files remain the exact V7 SVG masters.",
   "noBakedInPageText": true,
   "releasedToLiveSite": false,
@@ -48,5 +48,7 @@
         "sha256": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea"
       }
     }
-  ]
+  ],
+  "status": "Owner corrected placement: this pair is Hats only",
+  "movedTo": "docs/storefront-heroes/hats-ranch-assets.json"
 }
