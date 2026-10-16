@@ -52,8 +52,10 @@ For merchandise hero product-image selections, see [approved hero product images
 
 ## Shop editorial composition
 
-The current “Wear the mission” hero uses a new natural lifestyle concept: a man and woman relaxing with coffee in a wooden chair on a warm barn porch, wearing forest-green layers. The user requested this direction after reviewing the paired studio portraits and shared earlier warm equestrian references. The exact earlier chair-and-coffee asset was not located; this is a new generated image, not a recovered or newly approved historical source.
+The current “Wear the mission” proposal follows the user’s barn-table reference: a green seal hoodie, cream tee, cap, mug and leather key fob in warm natural light. Exact V7 horse, seal and document-logo masters were supplied as generation references. This is a new generated concept, not a recovered original or manufacturing proof. The earlier coffee-porch scene remains preserved unchanged.
 
-The [source master, web derivative and provenance](shop-lifestyle/PROVENANCE.json) are stored separately from approved product originals. Copy stays live HTML in a forest-green panel. The entire 3:2 scene remains visible on desktop and mobile. The historical hero register and approved merchandise images are unchanged.
+The user-provided merch-corner image is a separate concept feature below the catalog, preserved as supplied. It does not assert a completed physical display or available stock.
 
-Open the [portable template](../../templates/shop-hero.html) or [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All assets resolve locally; the website uses its own committed copy and remains independent of this package.
+[Source masters, derivatives, logo-reference hashes and generation prompt](shop-lifestyle/PROVENANCE.json) are stored separately from approved product originals. Copy stays live HTML; responsive crops remove empty background while keeping the product cluster. The historical hero register and approved merchandise images remain unchanged.
+
+Open the [portable template](../../templates/shop-hero.html) or [composition brief](../../merchandise/SHOP-HERO-BRIEF.md). All assets resolve locally; the website uses independent copies.

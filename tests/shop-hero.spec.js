@@ -7,14 +7,26 @@ for (const width of [1440,1024,768,767,390,320]) {
     await expect(hero.getByRole('heading', { level:1 })).toHaveText('Wear the mission.');
     await expect(hero.getByRole('heading', { level:1 })).toHaveCSS('color', 'rgb(243, 238, 228)');
     await expect(hero.locator('img')).toHaveCount(1);
-    await expect(hero.locator('img')).toHaveAttribute('src', /coffee-porch-couple.webp$/);
-    await expect(hero.locator('img')).toHaveAttribute('alt', /Man and woman/);
+    await expect(hero.locator('img')).toHaveAttribute('src', /barn-collection.webp$/);
+    await expect(hero.locator('img')).toHaveAttribute('alt', /hoodie, cream tee, cap, mug/);
     for(const image of await hero.locator('img').all()) {
-      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===1536 && element.naturalHeight===1024)).toBe(true);
-      expect(await image.evaluate(element=>getComputedStyle(element).objectFit)).toBe('contain');
+      await expect.poll(()=>image.evaluate(element=>element.complete && element.naturalWidth===2172 && element.naturalHeight===724)).toBe(true);
+      expect(await image.evaluate(element=>getComputedStyle(element).objectFit)).toBe('cover');
       const rect=await image.boundingBox();
-      expect(Math.abs(rect.height/rect.width-2/3)).toBeLessThan(.01);
+      if(width<1280) expect(Math.abs(rect.height/rect.width-1/2)).toBeLessThan(.01);
+      // Right-aligned cover must retain the entire product cluster in the right 60%.
+      const scale=Math.max(rect.width/2172,rect.height/724);
+      expect((2172-rect.width/scale)/2172).toBeLessThan(.4);
+      expect(rect.height/scale/724).toBeGreaterThan(.99);
     }
+    const corner=page.locator('.shop-corner');
+    await expect(corner.getByRole('heading',{name:'A little more Faith Reins.'})).toBeVisible();
+    await corner.scrollIntoViewIfNeeded();
+    await expect.poll(()=>corner.locator('img').evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
+    const cornerImage=await corner.locator('img').boundingBox();
+    expect(Math.abs(cornerImage.height/cornerImage.width-1594/1458)).toBeLessThan(.01);
+    await corner.screenshot({path:testInfo.outputPath(`merch-corner-${width}.png`)});
+    await page.evaluate(()=>scrollTo(0,0));
     await page.evaluate(()=>document.fonts.ready);
     await page.screenshot({path:testInfo.outputPath(`hero-${width}.png`)});
     const overflow = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(element => element.offsetParent && element.getBoundingClientRect().right > innerWidth + 1).map(element => ({ tag:element.tagName, class:element.className, width:element.getBoundingClientRect().width, right:element.getBoundingClientRect().right })));

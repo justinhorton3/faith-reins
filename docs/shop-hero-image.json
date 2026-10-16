@@ -1,28 +1,35 @@
 {
-  "status": "New generated lifestyle concept for collection hero review; not a recovered earlier image or an approved manufacturing reference.",
+  "status": "New generated barn-table collection concept based on user reference and exact V7 artwork references; not a manufacturing proof.",
   "created": "2026-10-16",
   "generator": "Built-in image generation",
-  "master": "brand/v7-design-system/foundations/photography/shop-lifestyle/coffee-porch-couple-master.png",
-  "master_sha256": "b3c1b263412ca703e324f66c8ac7f00849c137ce2d359461cbe5f1420b3d3af2",
-  "website_asset": "public/assets/shop/v7/coffee-porch-couple.webp",
-  "website_sha256": "965744e621fc8a318a996ff676c2cf8b3c4b4651e9d90e8a04aaad6222e948d6",
+  "master": "brand/v7-design-system/foundations/photography/shop-lifestyle/barn-collection-master.png",
+  "master_sha256": "6b17b7886df26d6951613a95f6a6a4ae5cf7186919b12c2767307c06b9fa902d",
+  "website_asset": "public/assets/shop/v7/barn-collection.webp",
+  "website_sha256": "2833f2f3736926e304a910f1a37f077367ed9cc4a86cc477e5f64d07d06ec3b1",
   "dimensions": [
-    1536,
-    1024
+    2172,
+    724
   ],
-  "derivative": "WebP quality 92, original dimensions, no crop or retouch",
-  "references": [
-    "Previous coffee-porch-master.png scene",
-    "Approved forest-green-quarter-zip-styled.png for man and garment"
-  ],
-  "brief": "Natural editorial photo of a man and woman enjoying coffee together in wooden chairs on a warm barn porch, wearing forest-green horse-embroidered layers with cream horse mugs; no baked-in copy.",
-  "layout": "Live copy in green panel; full 3:2 scene beside copy on desktop and below copy on mobile.",
-  "originals": "All previously approved product originals remain unchanged.",
-  "revision": "Man and woman together, requested by user",
-  "prompt": "Use case: identity-preserve / photorealistic-natural. Edit target: image 1, the Faith Reins woman enjoying coffee on a barn porch. Primary request: include BOTH a man and the woman in this same natural photo. Keep the same woman, her curly hair and appearance, forest-green hoodie with small cream horse embroidery, cream coffee mug with green horse artwork, timber porch, warm sunset light and calm pastoral mood. Add a man seated comfortably in a second matching wooden chair beside her on the LEFT, wearing the forest-green quarter zip with the small cream embroidered horse shown in reference image 2, denim or neutral trousers. Image 2 is the man's appearance and garment reference only. Compose the pair as equals, similar scale, both visible from head to seated lap, enjoying a quiet coffee together, relaxed subtle smiles and natural interaction, not posing directly for camera. The man may hold a matching cream coffee mug. Adjust the table and camera framing to make physical room for the second chair; retain the pasture, fence and softly blurred horse in background, enough natural context around them. Keep the woman's hoodie and mug details and the man's quarter-zip and understated horse embroidery faithful to references. Single cohesive realistic editorial lifestyle photograph, natural skin textures, believable hands and body proportions. Landscape 3:2 image at 1536x1024. No collage, no headlines or text, no borders, no UI, no watermark. Preserve the warm wood, cream and forest-green palette.",
-  "previous_version": {
-    "master": "coffee-porch-master.png",
-    "web": "coffee-porch.webp",
-    "status": "Preserved unchanged as the earlier single-person concept"
-  }
+  "derivative": "WebP quality 94, original dimensions, no pixel crop or retouch. Responsive CSS omits empty left background on smaller screens.",
+  "prompt": "Use case: product-mockup / photorealistic-natural. Asset: natural product collection hero photograph. Recreate the timber-barn merchandise arrangement of input 1, with CORRECT exact V7 branding from inputs 2\u20134. Input 1 is scene/composition reference only, ignore its incorrect logos and all overlaid text/UI. Input 2 is the exact approved horse icon; input 3 exact approved circular seal; input 4 exact approved stacked document logo. Keep logo shapes, relative proportions, word spelling and seal ring geometry faithful to these supplied masters; do not invent or substitute a horse, font, crest or wording. Scene: rich wooden barn table with folded forest-green hoodie standing upright at rear center-right, carrying the complete cream circular seal from input 3 as a centered chest graphic. To its right folded soft cream tee with a SMALL forest-green horse icon from input 2 at left chest. At front a cream cap with forest-green curved brim and small green horse icon from input 2; beside it a cream ceramic mug displaying the COMPLETE stacked document logo from input 4: horse above FAITH REINS, subtitle PEDIATRIC & EQUINE THERAPY. Small brown leather key fob with a debossed horse from input 2 rests near the mug. Preserve realistic scale and texture: cotton fleece and jersey, cotton cap, glazed ceramic, weathered oak and leather. Natural golden afternoon light from the barn opening, softly blurred horse and barn beams in background, small understated greenery at far right. Single coherent photograph, calm and premium, true green/cream/wood colors, no studio cutouts, no people. VERY WIDE 3:1 composition, ideally 3072x1024: reserve the left 40 percent as darker softly blurred barn and clear wooden tabletop with NO products, for live website copy; arrange ALL the actual products within the right 60 percent with their entire silhouettes visible and the full logos unobstructed. Camera eye level slightly above tabletop, like input 1. No headlines, no buttons, no UI, no extra text outside of the actual product artwork, no borders or watermark. Faithfully reproduce the exact supplied brand artwork, including the seal's EST. 2025 spacing and rope ring. Do not copy any incorrect artwork from input 1.",
+  "logo_references": {
+    "horse/horse-master-green.svg": "cb7edf2ea7f2dd7ef2808910d01585f8703c745c357912d1714014d738223c5a",
+    "seal/faith-reins-v7-seal-ivory.svg": "cd97befe7af891a8e95a24128bbed7634c77b413a4a91d442586c1463e89141f",
+    "document-logo/faith-reins-v7-document-stacked-green.svg": "ed30d157630127962552f480f7634bb86ef65510c20d403a5c1f25d2374c54e5"
+  },
+  "layout": "Live copy over dark left background on desktop; copy above a right-focused crop on tablet and mobile. Products occupy right 60 percent of source.",
+  "merch_corner": {
+    "source": "User attachment image(20261016-002759).png",
+    "library_file_id": "libfile_e7033ddbc268819199a66dfe3d992cb1",
+    "master": "merch-corner-master.png",
+    "master_sha256": "d23167020563b2cee22776f5af9c83342fe5c351cffc41ff8d975fd793b1cf94",
+    "web_asset": "public/assets/shop/v7/merch-corner.webp",
+    "web_sha256": "eee8de8010e2854f84ea51b7943b56749ed15dcf05644a6bd3f1b8a5adcaed51",
+    "dimensions": [
+      1458,
+      1594
+    ],
+    "treatment": "Image preserved as provided; WebP quality 92; concept feature below catalog. No assertion of a built display or available stock."
+  },
+  "originals": "All approved product originals and earlier coffee-porch assets remain unchanged."
 }

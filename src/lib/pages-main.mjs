@@ -1,6 +1,6 @@
 import PRODUCTS from "./products.json" with { type: "json" };
 import { productShowcase, showcaseCard } from "./product-showcase.mjs";
-import { shopHero } from "./shop-hero.mjs";
+import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
@@ -336,6 +336,7 @@ add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies
   section(`<div class="shop-bar">${sh({ eyebrow: PRODUCTS.length + " styles · 42 color & artwork options", title: "The collection", size: "sm" })}<div class="shop-filters" role="group" aria-label="Filter products">${FILTERS.map(([value, text]) => `<button class="shop-filter" type="button" data-filter="${value}" aria-pressed="${value === "all"}">${esc(text)}</button>`).join("")}</div></div>
 <div class="merch-grid" id="merch-grid">${PRODUCTS.map(showcaseCard).join("")}</div>
 <script>(function(){var buttons=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',String(other===button))});cards.forEach(function(card){card.hidden=button.dataset.filter!=='all'&&card.dataset.group!==button.dataset.filter})})})})();</script>`, { id: "shop-products" }) +
+  merchCorner() +
   section(sh({ eyebrow: "Size & fit", title: "A fit for your everyday.", size: "sm", body: "Explore size and format information on each product page. Final measurements and product details will be confirmed before ordering is available." }), { tone: "paper", id: "size-guide" }) +
   ctaBand({ tone: "sand", title: "A shared purpose.", body: "Help children and families grow through pediatric therapy and equine-assisted learning.", primary: ["Support Faith Reins", "/give"] }));
 
