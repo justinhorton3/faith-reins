@@ -1,7 +1,7 @@
 {
   "sourceRevision": "492b51e1c77805078fb5fc927e2a77941321e43f",
   "supplierReferenceRevision": "084f5bb0bed10e82a9088fb4202bf5bc2e54a831",
-  "productFamilies": 18,
+  "productFamilies": 20,
   "approvedVariants": 42,
   "assets": [
     {
@@ -759,7 +759,44 @@
       "reviewStatus": "derived_companion_view",
       "sourceSha256": "f2f021c04e630d8715da4cf45c4e37bfc5739ed065e5b00878cf73ee7a9fdd48",
       "sha256": "4381e5fdc3881504c1311be81bf4b7edc5a0f332e68f8b7e551d8b47a2994f85"
+    },
+    {
+      "catalogId": "kids-cream-seal-tee",
+      "view": "product",
+      "source": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile-approved-master.png",
+      "website": "public/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp",
+      "reviewStatus": "owner_approved_concept_supplier_pending",
+      "sourceSha256": "045f8c14980e4a42c64a8f5c8e3024db3a1f5810c07af372a09c85b21d7c8b32",
+      "sha256": "c80539d8e8d0b8fa7119a51adf898f596890b46633be104306aeb155edbf26a7"
+    },
+    {
+      "catalogId": "kids-cream-seal-tee",
+      "view": "styled",
+      "source": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile-approved-master.png",
+      "website": "public/assets/shop/v7/catalog/kids-cream-seal-tee-styled.webp",
+      "reviewStatus": "owner_approved_concept_supplier_pending",
+      "sourceSha256": "045f8c14980e4a42c64a8f5c8e3024db3a1f5810c07af372a09c85b21d7c8b32",
+      "sha256": "2371a5b320e9063b7146e4b0d0d266c7ede71dac90a6a051dae0894c4481e799"
+    },
+    {
+      "catalogId": "kids-forest-green-seal-hoodie",
+      "view": "product",
+      "source": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile-approved-master.png",
+      "website": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.webp",
+      "reviewStatus": "owner_approved_concept_supplier_pending",
+      "sourceSha256": "045f8c14980e4a42c64a8f5c8e3024db3a1f5810c07af372a09c85b21d7c8b32",
+      "sha256": "e2096b0f0142f108bc62f591b49dad9e689c9410e4a2e3dc639cfeb373c9c0ea"
+    },
+    {
+      "catalogId": "kids-forest-green-seal-hoodie",
+      "view": "styled",
+      "source": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile-approved-master.png",
+      "website": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-styled.webp",
+      "reviewStatus": "owner_approved_concept_supplier_pending",
+      "sourceSha256": "045f8c14980e4a42c64a8f5c8e3024db3a1f5810c07af372a09c85b21d7c8b32",
+      "sha256": "30b30693b08be1629cf2974e40d1a9625fc9267fb46d33ac6a80f73af3f82976"
     }
   ],
-  "websiteEncoding": "Website copies are WebP (quality 88) re-encodings of the approved PNG originals at their original 1086 x 1448 size, so the release fits Wix's upload limit. sourceSha256 is the original PNG; sha256 is the committed WebP."
+  "websiteEncoding": "42 existing approved V7 source variants remain unchanged (84 website image copies). Two new Kids seal concepts add four approved-photo-derived website image crops; their production specifications and supplier are pending.",
+  "conceptVariants": 2
 }

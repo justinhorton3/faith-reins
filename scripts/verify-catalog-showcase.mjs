@@ -14,11 +14,11 @@ function webpSize(b) {
 const root = path.resolve(import.meta.dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/catalog-showcase-assets.json')));
 const variants = PRODUCTS.flatMap(product => product.variants);
-assert.equal(PRODUCTS.length, 18);
-assert.equal(variants.length, 42);
-assert.equal(new Set(PRODUCTS.map(product => product.slug)).size, 18);
-assert.equal(new Set(variants.map(variant => variant.id)).size, 42);
-assert.equal(manifest.assets.length, 84);
+assert.equal(PRODUCTS.length, manifest.productFamilies);
+assert.equal(variants.length, manifest.approvedVariants + (manifest.conceptVariants || 0));
+assert.equal(new Set(PRODUCTS.map(product => product.slug)).size, PRODUCTS.length);
+assert.equal(new Set(variants.map(variant => variant.id)).size, variants.length);
+assert.equal(manifest.assets.length, variants.length * 2);
 for (const product of PRODUCTS) {
   assert.equal(product.availability, 'out-of-stock');
   assert.equal(product.price, undefined, 'No unverified retail price');
@@ -49,4 +49,4 @@ for (const file of htmlFiles) {
   assert.ok(!html.includes('Ships within 5–7 business days'), file);
   assert.ok(!html.includes('id="atb"'), 'Old add-to-bag path: ' + file);
 }
-console.log('Catalog verified: 18 families, 42 variants, 84 web-encoded original images; ordering closed.');
+console.log('Catalog verified: ${PRODUCTS.length} families, ${variants.length} variants, ${manifest.assets.length} web images; ordering closed.');

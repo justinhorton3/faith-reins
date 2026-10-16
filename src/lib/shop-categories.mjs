@@ -7,8 +7,8 @@ export const shopCategories = CATEGORIES;
 const SITE = 'https://www.faithreins.com';
 
 export function productsForCategory(category) {
-  const selected = new Set(category.products);
-  return PRODUCTS.filter(product => selected.has(product.slug));
+  const order = new Map(category.products.map((slug, index) => [slug, index]));
+  return PRODUCTS.filter(product => order.has(product.slug)).sort((a, b) => order.get(a.slug) - order.get(b.slug));
 }
 
 export function categoryNavigation(current = 'shop') {

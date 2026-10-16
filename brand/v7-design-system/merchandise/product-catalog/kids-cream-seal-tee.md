@@ -1,36 +1,33 @@
-# Kids' Cream Seal T-Shirt
+# Kids' Cream Seal Tee
 
-**Status:** Owner approved seal-branded apparel concept in Kids' lifestyle hero, October 16, 2026. Supplier/production pending. New distinct product, not a rename of youth polos or horse-head hoodies.
+**Status:** New owner-approved merchandise concept — October 16, 2026. Supplier and manufacturing approval pending. Not purchasable.
 
-| Field | Detail |
+| Attribute | Specification |
 |---|---|
-| Catalog ID | `kids-cream-seal-tee` |
-| Website product route | `/shop/kids-seal-tee` |
-| Collection | Kids / T-Shirts |
-| Color | Cream / ivory |
-| Branding | **Exact approved V7 solid-green seal**, scaled only; no generated or interpreted horse |
-| Artwork master | [Approved V7 seal](../../approved/seal/faith-reins-v7-seal-solid-green.svg) |
-| Photo reference | [Approved portrait category hero](https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png) |
-| Product image | Website vector concept using embedded, unchanged approved seal paths |
-| Availability | Out of stock / sourcing mockup |
-| Supplier | Pending; Printful is a candidate, not confirmed |
-| Price, fabric, care | Unconfirmed; do not publish guesses |
+| Catalog / concept ID | `kids-cream-seal-tee` |
+| Product route | `/shop/kids-seal-tee` |
+| Category | Kids |
+| Garment | Short-sleeve crewneck youth T-shirt |
+| Color | Cream |
+| Decoration | Small dark-green V7 seal on left chest |
+| Brand source | `approved/seal/` — V7 locked seal master; NEVER reconstruct from pixels |
+| Marketing reference | `foundations/photography/storefront/kids/kids-mobile-approved-master.png` |
+| Website images | `public/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp` and `-styled.webp` |
+| Availability | Out of stock / sourcing pending |
+| Sourcing | Supplier to be determined; print/embroidery tests required |
 
-## Sizes (planning only)
+## Size options
 
-| Proposed size | Status |
+| Proposed label | Status |
 |---|---|
-| Youth XS | Awaiting supplier garment measurements |
-| Youth S | Awaiting supplier garment measurements |
-| Youth M | Awaiting supplier garment measurements |
-| Youth L | Awaiting supplier garment measurements |
-| Youth XL | Awaiting supplier garment measurements |
+| Youth XS | Awaiting supplier fit and size chart |
+| Youth S | Awaiting supplier fit and size chart |
+| Youth M | Awaiting supplier fit and size chart |
+| Youth L | Awaiting supplier fit and size chart |
+| Youth XL | Awaiting supplier fit and size chart |
 
-## Product assets and use
+## Production and quality notes
 
-- Website vector mock: `public/assets/shop/v7/catalog/kids-cream-seal-tee-product.svg`.
-- Styled photograph: same owner-approved Kids' category image in Wix Media; not a manufacturing photograph.
-- The studio photograph shows both Kids' items together; it is an approved concept visual, not verified inventory.
-- For manufacturing, pull the seal from the linked V7 approved SVG master rather than rasterizing this photograph.
+Only the lifestyle visual reference has been approved. Final textile, color matching, emblem dimensions and placement, supplier samples, unit economics, and care guidance are not yet approved. Use the exact original V7 seal asset for any later factory artwork. Do not use rasterized artwork from the photograph for production.
 
-[Back to catalog](README.md)
+Product page copy and selectable sizes are informative only. Checkout remains disabled until products, prices and fulfillment are approved.

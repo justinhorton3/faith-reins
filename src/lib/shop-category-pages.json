@@ -26,5 +26,35 @@
       "mobileFocus": "center",
       "alt": "Two men wearing the cream Faith Reins horse hoodie and forest-green horse polo beside the farm fence."
     }
+  },
+  {
+    "label": "Kids",
+    "heading": "Kids’ Clothing",
+    "title": "Kids’ T-Shirts, Polos & Hoodies",
+    "lead": "Little favorites. A mission worth growing into.",
+    "description": "Discover Faith Reins kids’ clothing concepts, including seal-branded youth tees and hoodies, horse polos and everyday layers in forest green and cream.",
+    "productHeading": "For the next generation.",
+    "intro": "From the cream seal tee to our forest-green seal hoodie, explore relaxed favorites inspired by Faith Reins. These are sourcing concepts; product details and availability are still being finalized.",
+    "products": [
+      "kids-seal-tee",
+      "kids-seal-hoodie",
+      "boys-polo",
+      "girls-polo",
+      "boys-hoodie",
+      "girls-hoodie"
+    ],
+    "key": "kids",
+    "route": "/shop/kids",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/kids-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/kids-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1024,
+      "mobileHeight": 1536,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "Two children wearing the cream Faith Reins seal tee and forest-green seal hoodie, walking together beside a horse and barn at the farm."
+    }
   }
 ]

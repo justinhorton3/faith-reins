@@ -19,7 +19,7 @@ for (const [layout, width, height] of [['desktop', 1440, 1000], ['mobile', 390, 
           for (const view of ['product', 'styled']) {
             await page.locator(`[data-pdp-view="${view}"]`).click();
             await expect(page.locator('#pdp-main-image')).toHaveAttribute('src', variant.images[view].src);
-            await expect.poll(() => page.locator('#pdp-main-image').evaluate(img => img.complete && img.naturalWidth === 1086)).toBe(true);
+            await expect.poll(() => page.locator('#pdp-main-image').evaluate((img, w) => img.complete && img.naturalWidth === w, variant.images[view].width)).toBe(true);
           }
           for (const size of variant.sizes) {
             await page.locator(`[data-pdp-size="${size}"]`).click();
@@ -100,7 +100,7 @@ test('saved current, retired and unknown bag entries cannot open ordering', asyn
 
 test('collection filters and all product cards use approved originals', async ({ page }) => {
   await page.goto('/shop');
-  await expect(page.locator('#merch-grid .merch-card')).toHaveCount(18);
+  await expect(page.locator('#merch-grid .merch-card')).toHaveCount(PRODUCTS.length);
   for (const filter of ['mens','womens','youth','layers','accessories','home','all']) {
     await page.locator(`[data-filter="${filter}"]`).click();
     const count = filter === 'all' ? PRODUCTS.length : PRODUCTS.filter(product => product.group === filter).length;
