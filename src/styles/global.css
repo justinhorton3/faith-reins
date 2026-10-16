@@ -93,20 +93,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .eyebrow--inv { color: var(--fr-gold-light); }
 .eyebrow--rule::before { content: ""; width: 36px; border-top: 1px solid currentColor; flex: none; }
 
-/* ---------- Lockup (L1) ---------- */
-.lockup { --mark: 44px; --title: 24px; --track: .24em; --stroke: .35px; --sub: 9.5px; --sub-track: .2em; --gap: 14px; --inner: 6px; --rule-gap: 8px; --rule-min: 14px;
-  display: inline-flex; align-items: center; gap: var(--gap); color: var(--fr-green); }
-.lockup--xs { --mark: 38px; --title: 18px; --track: .22em; --stroke: .3px; --sub: 7.5px; --sub-track: .14em; --gap: 10px; --inner: 6px; --rule-gap: 5px; --rule-min: 10px; }
-.lockup--md { --mark: 84px; --title: 44px; --track: .28em; --stroke: .5px; --sub: 11.5px; --sub-track: .3em; --gap: 22px; --inner: 9px; --rule-gap: 12px; --rule-min: 28px; }
-.lockup__mark { height: var(--mark); width: auto; flex: none; }
-.lockup__text { display: inline-flex; flex-direction: column; gap: var(--inner); }
-.lockup__title { font: 400 var(--title)/1 var(--font-serif); letter-spacing: var(--track); margin-right: calc(-1 * var(--track)); white-space: nowrap; -webkit-text-stroke: var(--stroke) currentColor; text-rendering: geometricPrecision; }
-.lockup__tag { display: flex; align-items: center; gap: var(--rule-gap); width: 100%; }
-.lockup__tag i { flex: 1; min-width: var(--rule-min); border-top: 1px solid var(--fr-gold); }
-.lockup__tag span { font: 600 var(--sub)/1 var(--font-sans); letter-spacing: var(--sub-track); margin-right: calc(-1 * var(--sub-track)); text-transform: uppercase; color: var(--fr-gold-ink); white-space: nowrap; }
-.lockup--dark { color: var(--fr-cream); }
-.lockup--dark .lockup__tag i { border-top-color: var(--fr-gold-light); }
-.lockup--dark .lockup__tag span { color: var(--fr-gold-light); }
+/* ---------- Lockup (L1, approved V7 SVG) ---------- */
+/* Scales uniformly from its width; never crop or drop the subtitle. */
+.lockup { display: block; width: 340px; max-width: 100%; height: auto; }
+.lockup--xs { width: min(260px, calc(100vw - 104px)); }
+.lockup--md { width: 480px; }
 
 /* ---------- Header ---------- */
 .utility { background: var(--fr-green); color: var(--fr-cream); }
@@ -146,7 +137,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .utility__links { gap: 20px; }
   .utility a, .cart-btn { min-height: 44px; }
   .site-header__in { padding-top: 12px; padding-bottom: 12px; }
-  .site-header .lockup { --mark: 38px; --title: 18px; --track: .22em; --stroke: .3px; --sub: 7.5px; --sub-track: .14em; --gap: 10px; --rule-gap: 5px; --rule-min: 10px; }
+  .site-header .lockup { width: min(290px, calc(100vw - 104px)); }
 }
 
 .drawer { position: fixed; inset: 0; z-index: 60; }

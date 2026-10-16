@@ -39,9 +39,10 @@ export const eyebrow = (text, { inv = false, rule = false } = {}) =>
 
 /* ---------- Brand ---------- */
 // Lockup L1: horse mark, FAITH REINS, tagline between gold rules. Sizes xs | sm | md.
-export function lockup({ size = "sm", tone = "light", tag = true } = {}) {
-  const mark = img(tone === "light" ? "mark-green" : "mark-cream");
-  return `<span class="${cx("lockup", "lockup--" + size, tone === "dark" && "lockup--dark")}"><img class="lockup__mark" src="${mark}" alt="" width="60" height="44"><span class="lockup__text"><span class="lockup__title">FAITH REINS</span>${tag ? '<span class="lockup__tag"><i></i><span>Pediatric &amp; Equine Therapy</span><i></i></span>' : ""}</span></span>`;
+export function lockup({ size = "sm", tone = "light" } = {}) {
+  // Approved V7 horizontal lockup (horse, wordmark and subtitle as one vector). The subtitle stays at every size.
+  const src = img(tone === "light" ? "lockup-green" : "lockup-cream");
+  return `<img class="${cx("lockup", "lockup--" + size)}" src="${src}" alt="Faith Reins, Pediatric &amp; Equine Therapy" width="2252" height="384">`;
 }
 
 /* ---------- Layout ---------- */
