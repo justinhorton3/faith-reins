@@ -5,6 +5,11 @@ on:
     paths:
       - 'src/lib/shop-category-pages.json'
       - 'src/lib/pages-main.mjs'
+      - 'src/lib/lib.mjs'
+      - 'src/lib/shop-categories.mjs'
+      - 'src/styles/global.css'
+      - 'src/styles/shop-categories.css'
+      - 'src/scripts/site.js'
       - 'src/layouts/Base.astro'
       - 'scripts/verify-shop-category-routes.mjs'
       - '.github/workflows/validate-shop-category-routes.yml'
@@ -13,6 +18,11 @@ on:
     paths:
       - 'src/lib/shop-category-pages.json'
       - 'src/lib/pages-main.mjs'
+      - 'src/lib/lib.mjs'
+      - 'src/lib/shop-categories.mjs'
+      - 'src/styles/global.css'
+      - 'src/styles/shop-categories.css'
+      - 'src/scripts/site.js'
       - 'src/layouts/Base.astro'
       - 'scripts/verify-shop-category-routes.mjs'
 permissions:
