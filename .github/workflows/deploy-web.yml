@@ -4,9 +4,6 @@ name: Deploy web
 # Requires repo secret WIX_API_KEY: a Wix API key from the account that owns the site.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/deploy-web.yml']
 concurrency:
   group: deploy-web
   cancel-in-progress: false
