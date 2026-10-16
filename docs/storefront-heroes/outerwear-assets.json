@@ -1,0 +1,71 @@
+{
+  "category": "outerwear",
+  "review": "Owner approved revised desktop and mobile image October 16, 2026",
+  "sourceUrls": {
+    "desktop": "https://static.wixstatic.com/media/8fe1a1_8e29a544ad104328821e70bdcd0a539b~mv2.png",
+    "mobile": "https://static.wixstatic.com/media/8fe1a1_a1a2aeb75468495db713ea1f84c731c3~mv2.png"
+  },
+  "originalMasters": [
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-desktop-approved-master.png",
+      "bytes": 2190278,
+      "sha256": "c9e0d01cf59e74a7c5fdcec2afaf610611a10787f2a7b9d7e7e19b8f2e8ec363"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-mobile-approved-master.png",
+      "bytes": 2165172,
+      "sha256": "cda9c9a3500ae45f859d504815dc0359a0d73c0d361cb6a39fe7f31b1e00dc4c"
+    }
+  ],
+  "exportedAssets": [
+    {
+      "path": "public/assets/shop/v7/heroes/outerwear-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 177552,
+      "sha256": "ad1d9610fa4a9feca724379178197b4080cf637edc086e615c899cec6534bf26"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 177552,
+      "sha256": "ad1d9610fa4a9feca724379178197b4080cf637edc086e615c899cec6534bf26"
+    },
+    {
+      "path": "public/assets/shop/v7/heroes/outerwear-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 161356,
+      "sha256": "a66742c3218e0ca18a61b5cc9f0c15852eecca6591f4f19e3b4ca857e6ae36f8"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 161356,
+      "sha256": "a66742c3218e0ca18a61b5cc9f0c15852eecca6591f4f19e3b4ca857e6ae36f8"
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-styled.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 102712,
+      "sha256": "03dbfc448d18d3731f6ab9a8002c268fc7eaf4b523b55b8eaf0e149c2784abab"
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-product.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 76738,
+      "sha256": "d14eb0f6f42144f5d62a90381ec60896e9e95e92ccd14ae20c4b98a73728757c"
+    }
+  ],
+  "notes": [
+    "No page text is embedded in hero images. Heading and CTA are HTML.",
+    "Men\u2019s Forest Green Quilted Vest listing uses two close-up crops of the approved hero, not unapproved supplier product photography.",
+    "The proposed men\u2019s vest is separate from the existing unisex quilted vest visual catalog family.",
+    "Supplier, stock, fit, embroidery placement and color matching await confirmation.",
+    "For actual manufacturing and decoration use only approved original V7 vector identity masters; never trace generated pixels."
+  ]
+}
