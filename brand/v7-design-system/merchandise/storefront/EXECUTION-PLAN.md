@@ -25,7 +25,7 @@ Updated October 16 after Justin clarified the review workflow: present exactly o
 | Kids | /shop/kids | /shop/kids.html | Boy and girl in approved youth polos along the farm path | Boys' and girls' polos and hoodies |
 | Outerwear | /shop/outerwear | /shop/outerwear.html | Adults wearing the quarter-zip and quilted vest near the barn | Quarter-zip, vest and adult/youth hoodies |
 | Hats | /shop/hats | /shop/hats.html | Adult wearing the forest-green embroidered cap by the fence | Horse cap |
-| Home & Gifts | /shop/home-gifts | /shop/home-gifts.html | Adults using horse mugs on the farm porch | Drinkware, journals and embroidered throw |
+| Home & Gifts | /shop/home-gifts | /shop/home-gifts.html | Woman wrapping a gift indoors at a sunlit farmhouse table | Mugs, drinkware, journals and embroidered throw |
 
 Category pages include a visible category H1, introductory copy, an anchor to products, crawlable category navigation, breadcrumbs, only relevant product cards and a mission link. Products may appear in multiple appropriate collections and retain one canonical product URL. Keep product detail galleries and closed purchasing behavior intact.
 
@@ -76,7 +76,8 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 - Kids: approved seal-branded two-child farm hero and category page committed to main; new Kids seal T-shirt and hoodie sourcing concepts documented.
 - Outerwear: revised desktop/mobile approved hero masters and `/shop/outerwear` page committed to main; **cream quarter-zip icon 80% of previous width/height**, men's vest icon centered on wearer’s left breast away from zipper. V7 assets and website copies verified against the exact reviewed PNGs (see `outerwear.md`).
 - Hats: owner-approved Wixel hero archived with desktop/mobile derivatives; `/shop/hats` category page and existing cap product family committed, subject to validation. Distinct imagery; never substitute the discarded earlier Hats drafts.
-- Home & Gifts / Shop: next; present each hero individually for approval before committing.
+- Home & Gifts: owner-approved desktop and mobile farmhouse gift-wrapping hero, seven existing gift product families and `/shop/home-gifts` page committed to main; live release not requested.
+- Shop: next category to review individually before committing a hero.
 - SEO slugs: `/shop/men`, `/shop/women`, `/shop/kids`, `/shop/outerwear` committed; remaining clean-category naming frozen in `SEO-ROUTES.md`.
 - SEO cleanup: remaining sitewide metadata, sitemap and redirects pending.
 - Clean URLs and permanent redirects: pending hosting work, actual Wix static filenames still use `.html`.

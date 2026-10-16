@@ -10,7 +10,7 @@
 | Kids | `/shop/kids` | `/shop/kids.html` | Existing |
 | Outerwear | `/shop/outerwear` | `/shop/outerwear.html` | Approved and implemented |
 | Hats | `/shop/hats` | `/shop/hats.html` | Owner-approved hero and category page implemented |
-| Home & Gifts | `/shop/home-gifts` | `/shop/home-gifts.html` | Awaiting hero approval |
+| Home & Gifts | `/shop/home-gifts` | `/shop/home-gifts.html` | Approved category imagery and page implemented |
 
 ## Permanent requirements
 
@@ -38,3 +38,7 @@
 ## Hats collection SEO
 
 `/shop/hats` uses the single `caps` product family with three variants: forest green, cream and white. It links to the **one** `/shop/caps` product page. The original owner-approved Hats hero is archived in the V7 package, and the HTML heading, intro and CTA are separate from the image. Publishing is deferred; the current Wix static output uses `/shop/hats.html` until extensionless paths are configured and verified.
+
+## Home & Gifts SEO
+
+The permanent category slug is `/shop/home-gifts`, while the current Wix static host uses `/shop/home-gifts.html`. Seven existing gift catalog families appear as unique product links. The category renders its own HTML H1, copy, navigation, canonical, hero OG image, CollectionPage, ItemList and BreadcrumbList; no fake offers or supplier claims. The desktop/mobile approved photo pair is archived in V7 and served from independent website image assets. Release and clean URL redirects remain separate.

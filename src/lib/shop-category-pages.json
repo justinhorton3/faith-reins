@@ -141,5 +141,36 @@
       "mobileFocus": "center",
       "alt": "People wearing embroidered Faith Reins horse caps outdoors in a natural farm setting."
     }
+  },
+  {
+    "label": "Home & Gifts",
+    "heading": "Home & Gifts",
+    "title": "Mugs, Journals, Throws & Gifts",
+    "lead": "Thoughtful little things. A purpose close to home.",
+    "description": "Explore Faith Reins Home & Gifts, with equestrian-inspired coffee mugs, water bottles, journals and embroidered throw blankets in forest green and cream.",
+    "productHeading": "Bring a little Faith Reins home.",
+    "intro": "A curated collection of giftable everyday favorites, from signature horse mugs and reusable drinkware to journals and cozy throws. Visual merchandise concepts are awaiting final supplier confirmation.",
+    "products": [
+      "coffee-mug",
+      "logo-mug",
+      "horse-water-bottle",
+      "logo-water-bottle",
+      "horse-journal",
+      "logo-journal",
+      "embroidered-throw"
+    ],
+    "key": "home-gifts",
+    "route": "/shop/home-gifts",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/home-gifts-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/home-gifts-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1024,
+      "mobileHeight": 1536,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "A woman preparing a gift at a warm farmhouse table with Faith Reins mug, water bottle, journal and embroidered throw."
+    }
   }
 ]

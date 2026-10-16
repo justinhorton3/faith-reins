@@ -7,7 +7,7 @@ import { pages } from '../src/lib/pages-main.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const permanent=['men','women','kids','outerwear','hats','home-gifts'];
-assert.deepEqual(CATEGORIES.map(c=>c.key), ['men','women','kids','outerwear','hats']);
+assert.deepEqual(CATEGORIES.map(c=>c.key), ['men','women','kids','outerwear','hats','home-gifts']);
 assert.equal(new Set(CATEGORIES.map(c=>c.route)).size,CATEGORIES.length);
 for(const category of CATEGORIES){
   assert.ok(permanent.includes(category.key));
@@ -29,4 +29,4 @@ for(const category of CATEGORIES){
 }
 const old=pages.find(p=>p.route==='/shop/mens');
 assert.ok(old && old.seo.noindex && old.seo.canonicalRoute==='/shop/men', 'Old mens route must be noindex and point to men');
-console.log('Shop SEO category route contract: Men, Women, Kids, Outerwear and Hats verified.');
+console.log('Shop SEO category route contract: Men, Women, Kids, Outerwear, Hats and Home & Gifts verified.');

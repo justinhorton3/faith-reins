@@ -598,7 +598,7 @@
   "merchandise/seal-refinement/seal-refinement-a-balanced.svg": "4d402e6d2b2f33b1711a03d262204810aeca583dc353fbfe458660c4bff67b6c",
   "merchandise/seal-refinement/seal-refinement-b-heritage.svg": "c3e495b28fa1fb0286b57e0c2717b12ba7a358fb6e36349c5d349835873cda75",
   "merchandise/SHOP-HERO-BRIEF.md": "cf3c83407ba2a29ce6be8c33f4837b746d8690ce7a996cce6be8c31aaf1f62d3",
-  "merchandise/storefront/EXECUTION-PLAN.md": "39a1408c981d060174d42f5315b743eee6258c6a369a191e949f35db8fdc07af",
+  "merchandise/storefront/EXECUTION-PLAN.md": "681db43ab5de83580e5a0c19c7ee7f6bacaaae607bf148f9c2715d3b67531041",
   "merchandise/storefront/KIDS-CATEGORY.md": "960bab983d6f5d573aa55de9dc9d1125541f91d0ce3d7dfa6cca47149903bfb4",
   "merchandise/storefront/mens.md": "4405d79f5f71e9788c757456a5bb9adbad470ad2d1fd12aaeb47992c30211cc2",
   "merchandise/storefront/PHOTOGRAPHY-BRIEF.md": "9f40a08a45ceb861bebad6f059e8b42dab28aaa947a845d2df6a03f7ac661dad",
@@ -624,7 +624,7 @@
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
   "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
-  "merchandise/storefront/SEO-ROUTES.md": "68aaaa33bdf9edf1410187e8b57199bbe10b36d598fde5ef51d512c1873cb136",
+  "merchandise/storefront/SEO-ROUTES.md": "61b74e17cb615a01e50fcac2e2c8409a3dcea8e10717c852dd832cc97eb8e5b5",
   "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
   "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
   "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf",
@@ -640,5 +640,6 @@
   "foundations/photography/storefront/home-gifts/home-gifts-desktop-approved-master.png": "ec3abc1a486a6619e4aa1cb78fe9c2bd675bf882ca01f599c035769081ad196f",
   "foundations/photography/storefront/home-gifts/home-gifts-desktop.webp": "9578240e46370d2106f96236a3ea477e008f702500c5841e61d231332c7a6453",
   "foundations/photography/storefront/home-gifts/home-gifts-mobile-approved-master.png": "8eeb493f6f597c317590f6d6e3e6aea7045b0c6c55bc73bf3b3cd8f8ff1a3c3d",
-  "foundations/photography/storefront/home-gifts/home-gifts-mobile.webp": "011b4b75fd1c85b565912c45959273bd0708b5d578f881ad4a23db979984a18a"
+  "foundations/photography/storefront/home-gifts/home-gifts-mobile.webp": "011b4b75fd1c85b565912c45959273bd0708b5d578f881ad4a23db979984a18a",
+  "merchandise/storefront/home-gifts.md": "99d06ab8a34c217b471b6b1e16a54059b47e97b1c82f29f30ff23c76c5bc3da3"
 }
