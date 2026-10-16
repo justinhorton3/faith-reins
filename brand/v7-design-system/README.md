@@ -35,3 +35,5 @@ Read [MIGRATION.md](MIGRATION.md) before handoff. The exporter takes `--output /
 Print/embroidery proofs, supplier measurements, pricing, fulfillment and website publication remain separate work. [QA-CHECKLIST.md](QA-CHECKLIST.md) distinguishes completed and pending checks.
 
 Hero photography: [page-by-page reference and crop rules](foundations/photography/README.md), [offline gallery](foundations/photography/index.html) and [exact asset register](foundations/photography/HERO-REGISTER.json).
+
+Storefront expansion: [category heroes, route contracts and SEO execution plan](merchandise/storefront/EXECUTION-PLAN.md).

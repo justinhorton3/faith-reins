@@ -18,3 +18,7 @@ The complete V7 reference is committed under brand/v7-design-system. There is on
 - Copy selected assets into website-owned paths, validate the separate website change, and publish only as separately requested.
 
 See QA-CHECKLIST.md and the repository's cleanup verification record for the exact checks performed.
+
+## Storefront categories and farm heroes
+
+The October 16 storefront work is tracked in the [storefront execution plan](merchandise/storefront/EXECUTION-PLAN.md) and [photography brief](merchandise/storefront/PHOTOGRAPHY-BRIEF.md). It uses small, separately verified commits to main.
