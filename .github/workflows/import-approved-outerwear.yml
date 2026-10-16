@@ -16,16 +16,22 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: python -m pip install --disable-pip-version-check Pillow==11.3.0
-      - run: python scripts/sync-outerwear-assets.py
-      - name: Commit exact approved Outerwear assets and vest concept crops
+      - name: Replace with only the owner-attached approved photo; mobile is a crop
+        run: python scripts/sync-outerwear-assets.py
+      - name: Verify V7 package content and checksum inventory
+        run: python brand/v7-design-system/scripts/validate.py --check
+      - name: Commit approved desktop/mobile photo derivatives and reject old masters
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add public/assets/shop/v7/heroes/outerwear-*.webp
           git add public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-*.webp
-          git add brand/v7-design-system/foundations/photography/storefront/outerwear/
+          git add -A brand/v7-design-system/foundations/photography/storefront/outerwear/
           git add brand/v7-design-system/FILE-CHECKSUMS.json
+          git add brand/v7-design-system/merchandise/storefront/outerwear.md
+          git add brand/v7-design-system/merchandise/product-catalog/mens-forest-green-quilted-vest.md
           git add docs/storefront-heroes/outerwear-assets.json
+          git add docs/catalog-showcase-assets.json
           git diff --cached --check
-          git commit -m "assets(shop): archive approved Outerwear heroes and men’s vest concepts"
+          git commit -m "fix(shop): use single owner-approved Outerwear photo for all derivatives"
           git push origin HEAD:main
