@@ -1,0 +1,22 @@
+{
+  "status": "New generated lifestyle concept for collection hero review; not a recovered earlier image or an approved manufacturing reference.",
+  "created": "2026-10-16",
+  "generator": "Built-in image generation",
+  "master": "brand/v7-design-system/foundations/photography/shop-lifestyle/coffee-porch-master.png",
+  "master_sha256": "6e69bb671126fe898ecad682b43c31be5e74f1382bebfe0d048d04581ef609d3",
+  "website_asset": "public/assets/shop/v7/coffee-porch.webp",
+  "website_sha256": "2a177eaeefab1618350d185df8361b9b4c6f54d9af566a7d1dad23b281505f5b",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "derivative": "WebP quality 92, original dimensions, no crop or retouch",
+  "references": [
+    "womens-forest-green-hoodie-styled.png",
+    "cream-horse-mug-styled.png",
+    "User-provided warm equestrian apparel reference image(20261016-001109).png"
+  ],
+  "brief": "Natural editorial photo of a woman relaxing in a wooden chair with coffee on a timber barn porch, forest-green horse-embroidered hoodie and cream horse mug, warm sunlight and pasture; no baked-in copy, collage or UI.",
+  "layout": "Live copy in green panel; full 3:2 scene beside copy on desktop and below copy on mobile.",
+  "originals": "All previously approved product originals remain unchanged."
+}

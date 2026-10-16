@@ -1,10 +1,10 @@
 # Shop hero: brief for later visual review
 
-Status: editorial composition prepared for website review. The new [portable template](../templates/shop-hero.html) pairs the exact approved quarter-zip and quilted-vest styled originals with live copy; source image approvals and original bytes are unchanged. This replaces the earlier shortlist with a concrete review candidate.
+Status: natural lifestyle composition prepared for review. The user requested warm everyday imagery after reviewing the paired studio portraits. The [portable template](../templates/shop-hero.html) now uses a new chair-and-coffee scene; [provenance](../foundations/photography/shop-lifestyle/PROVENANCE.json) distinguishes this generated concept from unchanged approved product originals.
 
 ## Goal
 
-Replace the historical shop hero with a composition using the exact approved V7 merchandise reference images. Keep the page focused on the Faith Reins collection and retain its existing Shop heading and route behavior. These are approved concept placeholders, not evidence of a supplier SKU, available inventory, final manufacturing artwork or fulfilled products.
+Use a natural scene for the collection hero, guided by V7 merchandise and the user’s earlier warm equestrian references. Keep the page focused on the Faith Reins collection and retain its existing Shop heading and route behavior. These are approved concept placeholders, not evidence of a supplier SKU, available inventory, final manufacturing artwork or fulfilled products.
 
 ## Verified source candidates
 
@@ -29,7 +29,7 @@ Cream and white variants also exist, but this brief deliberately limits the firs
 | Cap feature | Cap product-only image as the primary image | Same original with a separately reviewed crop or contain treatment | Keep the embroidered horse intact; establish whether one accessory adequately represents the shop. |
 | Apparel feature | Quarter-zip or vest styled original beside the headline | Same selected portrait with subject and chest mark visible | Confirm the model-led emphasis and keep the garment identity clear. No generic fleece substitution for the quilted vest. |
 
-The apparel feature direction is implemented as two full portraits beside a forest-green copy panel, stacking below the copy on mobile. Review the portable template and website preview; no replacement photography or repainted logo is introduced. Do not regenerate, retouch or overwrite the six approved files. If a future export or crop is needed, save a new derivative, record its parent hash and preserve image detail; never stretch or redraw the mark.
+The natural lifestyle direction supersedes the paired studio portraits: one full landscape scene beside live copy, stacked below copy on mobile. The source PNG is preserved, and a WebP copy at the same dimensions is used on the website. This new concept does not alter or replace any approved product original. It is not evidence of an existing product, supplier or manufacturing result.
 
 ## Layout and handoff constraints
 

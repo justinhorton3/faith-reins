@@ -6,6 +6,7 @@ on:
       - 'src/lib/shop-hero.mjs'
       - 'src/lib/pages-main.mjs'
       - 'src/styles/shop-hero.css'
+      - 'public/assets/shop/v7/coffee-porch.webp'
       - 'src/layouts/Base.astro'
       - 'tests/shop-hero.spec.js'
       - '.github/workflows/shop-hero.yml'
