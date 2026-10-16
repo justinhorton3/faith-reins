@@ -1687,24 +1687,22 @@
     "images": [
       {
         "view": "product",
-        "catalog_path": null,
-        "website_path": "public/assets/shop/v7/catalog/kids-cream-seal-tee-product.svg",
-        "review_status": "owner-approved-logo-and-style-concept",
-        "identity_method": "exact-approved-V7-seal-vector",
-        "binary_status": "website-svg-generated-from-approved-identity"
+        "website_path": "public/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp",
+        "review_status": "owner-approved-concept-photo",
+        "identity_method": "owner-approved-Kids-source-photo",
+        "binary_status": "website-approved-hero-derived-WebP-committed"
       },
       {
         "view": "styled",
-        "catalog_path": null,
-        "website_path": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
-        "review_status": "owner-approved-Kids-hero-2026-10-16",
-        "identity_method": "approved-lifestyle-image-hosted-in-Wix-Media",
-        "binary_status": "Wix-Media-upload"
+        "website_path": "public/assets/shop/v7/catalog/kids-cream-seal-tee-styled.webp",
+        "review_status": "owner-approved-concept-photo",
+        "identity_method": "owner-approved-Kids-source-photo",
+        "binary_status": "website-approved-hero-derived-WebP-committed"
       }
     ],
     "fulfillment_status": "not_configured",
     "size_chart_status": "supplier_confirmation_pending",
-    "provenance_note": "New concept, not included among original 42 approved product masters; do not misstate exact approved photograph as a committed original."
+    "provenance_note": "Owner-approved Kids lifestyle image crop. Approved V7 seal masters remain the manufacturing artwork; product imagery is a concept, not supplier validation."
   },
   {
     "id": "kids-forest-green-seal-hoodie",
@@ -1714,23 +1712,21 @@
     "images": [
       {
         "view": "product",
-        "catalog_path": null,
-        "website_path": "public/assets/shop/v7/catalog/kids-green-seal-hoodie-product.svg",
-        "review_status": "owner-approved-logo-and-style-concept",
-        "identity_method": "exact-approved-V7-seal-vector",
-        "binary_status": "website-svg-generated-from-approved-identity"
+        "website_path": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.webp",
+        "review_status": "owner-approved-concept-photo",
+        "identity_method": "owner-approved-Kids-source-photo",
+        "binary_status": "website-approved-hero-derived-WebP-committed"
       },
       {
         "view": "styled",
-        "catalog_path": null,
-        "website_path": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
-        "review_status": "owner-approved-Kids-hero-2026-10-16",
-        "identity_method": "approved-lifestyle-image-hosted-in-Wix-Media",
-        "binary_status": "Wix-Media-upload"
+        "website_path": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-styled.webp",
+        "review_status": "owner-approved-concept-photo",
+        "identity_method": "owner-approved-Kids-source-photo",
+        "binary_status": "website-approved-hero-derived-WebP-committed"
       }
     ],
     "fulfillment_status": "not_configured",
     "size_chart_status": "supplier_confirmation_pending",
-    "provenance_note": "New concept, not included among original 42 approved product masters; do not misstate exact approved photograph as a committed original."
+    "provenance_note": "Owner-approved Kids lifestyle image crop. Approved V7 seal masters remain the manufacturing artwork; product imagery is a concept, not supplier validation."
   }
 ]

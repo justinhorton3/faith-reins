@@ -1452,14 +1452,14 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/kids-cream-seal-tee-product.svg",
-            "width": 1086,
-            "height": 1448
+            "src": "/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp",
+            "width": 900,
+            "height": 1200
           },
           "styled": {
-            "src": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
-            "width": 1024,
-            "height": 1536
+            "src": "/assets/shop/v7/catalog/kids-cream-seal-tee-styled.webp",
+            "width": 900,
+            "height": 1200
           }
         }
       }
@@ -1495,14 +1495,14 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.svg",
-            "width": 1086,
-            "height": 1448
+            "src": "/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.webp",
+            "width": 900,
+            "height": 1200
           },
           "styled": {
-            "src": "https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png",
-            "width": 1024,
-            "height": 1536
+            "src": "/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-styled.webp",
+            "width": 900,
+            "height": 1200
           }
         }
       }
