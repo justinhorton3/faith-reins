@@ -624,5 +624,8 @@
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
   "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
-  "merchandise/storefront/SEO-ROUTES.md": "077499fd08f0840e59ad1cd32ae85b4d4df357bd1012860d42679e662e933260"
+  "merchandise/storefront/SEO-ROUTES.md": "077499fd08f0840e59ad1cd32ae85b4d4df357bd1012860d42679e662e933260",
+  "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
+  "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
+  "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf"
 }

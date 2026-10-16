@@ -1,0 +1,41 @@
+{
+  "category": "women",
+  "status": "owner-approved photographic scene; website conversion",
+  "approvalDate": "2026-10-16",
+  "sourceUrl": "https://static.wixstatic.com/media/8fe1a1_2a4ba41ddf3247a8aa25ac8866478446~mv2.png",
+  "sourceSha256": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
+  "master": "brand/v7-design-system/foundations/photography/storefront/women/women-approved-mobile-master.png",
+  "description": "Two distinct women in V7 forest-green horse hoodie and cream horse polo, branded coffee mug, farm porch, horse in pasture.",
+  "processing": "Lossy WebP website copies; desktop uses blurred expansion of this exact approved photo. No regenerated logos or text.",
+  "files": [
+    {
+      "path": "public/assets/shop/v7/heroes/women-mobile.webp",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 276910,
+      "sha256": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/women/women-mobile.webp",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 276910,
+      "sha256": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6"
+    },
+    {
+      "path": "public/assets/shop/v7/heroes/women-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 145366,
+      "sha256": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/women/women-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 145366,
+      "sha256": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf"
+    }
+  ],
+  "liveRelease": false
+}
