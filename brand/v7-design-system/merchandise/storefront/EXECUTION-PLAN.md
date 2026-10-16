@@ -2,6 +2,10 @@
 
 Owner direction: Justin Horton, October 16, 2026. Commit directly to main in small to medium independently reviewable batches. Publishing is a separate action; this work prepares repository changes.
 
+## Required owner review gate
+
+Updated October 16 after Justin clarified the review workflow: present exactly one category hero at a time and wait for his explicit visual approval before integrating or committing that category. Review its desktop and mobile versions together. Do not treat approval of the photographic direction or permission to start work as approval of an individual image. Any already generated images remain drafts. Men’s was committed before this clarification and must now receive owner review; no website release has been made.
+
 ## Accepted direction
 
 - Replace the customer-facing label “Layers” with **Outerwear**. Its explanatory copy is “Quarter-Zips, Hoodies & Vests.”
@@ -61,13 +65,15 @@ The current static Wix drop flow serves exact filenames and has no clean-route f
 
 ## Verification and release
 
-For each batch: build Astro, check generated HTML and asset targets, inspect imagery, run focused route/category/metadata checks and package validation, then commit and push. For the final integration: verify mobile/desktop rendering where browser tooling is available, navigation with JavaScript disabled, all sitemap targets and postbuild output. Never enable checkout or submit forms during QA.
+For each category: obtain explicit owner visual approval first. Then build Astro, check generated HTML and asset targets, inspect imagery, run focused route/category/metadata checks and package validation, then commit and push. For the final integration: verify mobile/desktop rendering where browser tooling is available, navigation with JavaScript disabled, all sitemap targets and postbuild output. Never enable checkout or submit forms during QA.
 
 ## Progress
 
-- Planning: in progress.
-- Shared foundation: pending.
-- Men's / Women's / Kids / Outerwear / Hats / Home & Gifts / Shop heroes: pending.
+- Planning: committed; owner review gate now required.
+- Shared foundation: committed.
+- Men's: committed before the owner review gate; awaiting owner visual review.
+- Women's / Kids / Outerwear / Hats / Home & Gifts / Shop: generated drafts only; not approved, integrated or committed.
+- Current review: Men's desktop and mobile hero. Wait for explicit approval before proceeding to Women's.
 - SEO cleanup: pending.
 - Clean URLs and permanent redirects: pending hosting work.
 - Live release: not requested in this instruction.
