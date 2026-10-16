@@ -6,6 +6,6 @@ export default defineConfig({
   output: "static",
   trailingSlash: "ignore",
   // /news/post is a template page filled by ?slug=, so it stays out of the sitemap.
-  integrations: [sitemap({ filter: (page) => !page.includes("/news/post") })],
+  integrations: [sitemap({ filter: (page) => !page.includes("/news/post") && !page.includes("/shop/mens") })],
   build: { format: "directory", inlineStylesheets: "never" },
 });

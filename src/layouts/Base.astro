@@ -6,7 +6,8 @@ import "../styles/shop-categories.css";
 import { header, footer } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld, seo = {} } = Astro.props;
 const SITE = "https://www.faithreins.com";
-const canonical = SITE + (route === "/" ? "" : route);
+const canonicalRoute = seo.canonicalRoute || route;
+const canonical = SITE + (canonicalRoute === "/" ? "" : canonicalRoute);
 const isProduct = jsonld?.["@type"] === "Product";
 const ogImage = seo.image || (isProduct ? jsonld.image[0] : SITE + "/assets/hero-home-desktop.webp");
 const ogImageAlt = seo.imageAlt || (isProduct ? jsonld.name : "Faith Reins Equestrian Center in Camden, Arkansas");
@@ -51,6 +52,7 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {seo.redirectTo && <meta http-equiv="refresh" content={`0;url=${seo.redirectTo}`} />}
     <link rel="canonical" href={canonical} />
     {seo.noindex && <meta name="robots" content="noindex, follow" />}
     <!-- Open Graph -->

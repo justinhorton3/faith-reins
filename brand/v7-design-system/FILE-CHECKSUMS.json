@@ -598,7 +598,7 @@
   "merchandise/seal-refinement/seal-refinement-a-balanced.svg": "4d402e6d2b2f33b1711a03d262204810aeca583dc353fbfe458660c4bff67b6c",
   "merchandise/seal-refinement/seal-refinement-b-heritage.svg": "c3e495b28fa1fb0286b57e0c2717b12ba7a358fb6e36349c5d349835873cda75",
   "merchandise/SHOP-HERO-BRIEF.md": "cf3c83407ba2a29ce6be8c33f4837b746d8690ce7a996cce6be8c31aaf1f62d3",
-  "merchandise/storefront/EXECUTION-PLAN.md": "567823700fbc3d8c9a64f5809acfd27f6297331eb5db528dc2b9afc98efc6f31",
+  "merchandise/storefront/EXECUTION-PLAN.md": "146450f1395cf183902a0228c003574780a3f1e5324359521602d176183825cd",
   "merchandise/storefront/KIDS-CATEGORY.md": "960bab983d6f5d573aa55de9dc9d1125541f91d0ce3d7dfa6cca47149903bfb4",
   "merchandise/storefront/mens.md": "4405d79f5f71e9788c757456a5bb9adbad470ad2d1fd12aaeb47992c30211cc2",
   "merchandise/storefront/PHOTOGRAPHY-BRIEF.md": "8d2b7cf9679ec38913bf06761fd2550287d120ec0394f9d7332d63ce423505c0",
@@ -623,5 +623,6 @@
   "templates/README.md": "ceff554af8ca4be06bc8828f19551d2da70f34d56164c9b68d8fb3d53ee17df6",
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
-  "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13"
+  "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
+  "merchandise/storefront/SEO-ROUTES.md": "077499fd08f0840e59ad1cd32ae85b4d4df357bd1012860d42679e662e933260"
 }

@@ -20,8 +20,8 @@ Updated October 16 after Justin clarified the review workflow: present exactly o
 | Label | Intended clean route | Current host-compatible route | Scene | Product selection |
 | --- | --- | --- | --- | --- |
 | Shop | /shop | /shop.html | Man and woman beside the pasture in approved polos | All 18 styles |
-| Men's | /shop/mens | /shop/mens.html | Man in forest-green horse polo at the timber fence | Men's polos and hoodies, shared quarter-zip and vest |
-| Women's | /shop/womens | /shop/womens.html | Woman in cream horse polo enjoying coffee on the farm porch | Women's polos and hoodies, shared quarter-zip and vest |
+| Men's | /shop/men | /shop/men.html | Man in forest-green horse polo at the timber fence | Men's polos and hoodies, shared quarter-zip and vest |
+| Women's | /shop/women | /shop/women.html | Woman in cream horse polo enjoying coffee on the farm porch | Women's polos and hoodies, shared quarter-zip and vest |
 | Kids | /shop/kids | /shop/kids.html | Boy and girl in approved youth polos along the farm path | Boys' and girls' polos and hoodies |
 | Outerwear | /shop/outerwear | /shop/outerwear.html | Adults wearing the quarter-zip and quilted vest near the barn | Quarter-zip, vest and adult/youth hoodies |
 | Hats | /shop/hats | /shop/hats.html | Adult wearing the forest-green embroidered cap by the fence | Horse cap |
@@ -87,3 +87,7 @@ Execute **one category at a time**, without interleaving categories:
 4. Immediately present the **next category hero** for approval. Repeat: Kids → Outerwear → Hats → Home & Gifts → Shop.
 
 Kids photographic composition is approved; the generated garment marks are **not** approved. Replace them with exact approved V7 art, complete the Kids page and commit to main before starting Outerwear. No claim that this has already been committed. Supplier sourcing must not block visual design mockups.
+
+## SEO slug freeze — 2026-10-16
+
+Canonical category slugs are locked in [SEO-ROUTES.md](SEO-ROUTES.md): `men`, `women`, `kids`, `outerwear`, `hats`, `home-gifts` beneath `/shop/`. The serving Wix filenames currently require `.html`. The old `/shop/mens.html` remains a noindex compatibility redirect pending verified HTTP 301 routing. The accepted Women’s image is already approved and must not be regenerated.
