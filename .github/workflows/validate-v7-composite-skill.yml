@@ -1,0 +1,27 @@
+name: Validate exact V7 hero branding skill
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'brand/v7-design-system/skills/faith-reins-v7-hero/**'
+      - 'brand/v7-design-system/scripts/compose-approved-brand.py'
+      - '.github/workflows/validate-v7-composite-skill.yml'
+  pull_request:
+    paths:
+      - 'brand/v7-design-system/skills/faith-reins-v7-hero/**'
+      - 'brand/v7-design-system/scripts/compose-approved-brand.py'
+      - '.github/workflows/validate-v7-composite-skill.yml'
+permissions:
+  contents: read
+jobs:
+  exact-svg-image-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deterministic image dependencies
+        run: python -m pip install --disable-pip-version-check Pillow==11.3.0 CairoSVG==2.8.2
+      - name: Test logo SHA lock, original-vector compositing and pixel-replay verification
+        run: python -m unittest discover -s brand/v7-design-system/skills/faith-reins-v7-hero/tests -p 'test_*.py' -v

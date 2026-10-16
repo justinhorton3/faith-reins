@@ -1,0 +1,16 @@
+{
+  "schema": "faith-reins-v7-brand-composition/1",
+  "source": "./unbranded-farm-photo.png",
+  "source_sha256": "REPLACE_WITH_REAL_64_CHARACTER_SHA256_BEFORE_RUNNING",
+  "unbranded_source_visual_reviewed": false,
+  "output": "./branded-farm-photo-v1.png",
+  "marks": [
+    {
+      "asset": "horse-green",
+      "center": [0.64, 0.46],
+      "width": 0.065,
+      "rotation_deg": 0,
+      "opacity": 1.0
+    }
+  ]
+}

@@ -641,5 +641,11 @@
   "foundations/photography/storefront/home-gifts/home-gifts-desktop.webp": "9578240e46370d2106f96236a3ea477e008f702500c5841e61d231332c7a6453",
   "foundations/photography/storefront/home-gifts/home-gifts-mobile-approved-master.png": "8eeb493f6f597c317590f6d6e3e6aea7045b0c6c55bc73bf3b3cd8f8ff1a3c3d",
   "foundations/photography/storefront/home-gifts/home-gifts-mobile.webp": "011b4b75fd1c85b565912c45959273bd0708b5d578f881ad4a23db979984a18a",
-  "merchandise/storefront/home-gifts.md": "99d06ab8a34c217b471b6b1e16a54059b47e97b1c82f29f30ff23c76c5bc3da3"
+  "merchandise/storefront/home-gifts.md": "99d06ab8a34c217b471b6b1e16a54059b47e97b1c82f29f30ff23c76c5bc3da3",
+  "scripts/compose-approved-brand.py": "f2b960eb02f43f349dd37409c214e49129ca7d041e8f524fc75ab766afd12d92",
+  "skills/README.md": "f9fcce6ccc50a215e9ff1b17deaf837a2bb7d20a7b76db1d175ed2da300bf612",
+  "skills/faith-reins-v7-hero/SKILL.md": "4e80c81205bd475e27d4f484617afe0004ec73dcb3e77173a940a6088c29d0fc",
+  "skills/faith-reins-v7-hero/README.md": "1b5b2b72947fe5783c9649c49ea586f0c530fa3f08fb2b971bf2d9efcbc00cf2",
+  "skills/faith-reins-v7-hero/EXAMPLE.json": "5ab4456e9e15943f7388b591fd59e857744eb9904c6ae48789eafe7751ae9aab",
+  "skills/faith-reins-v7-hero/tests/test_approved_composition.py": "830e772f5bf7fc691f961c9ca726a05c945ce8fe773751ea99e1a1dcb790a7da"
 }
