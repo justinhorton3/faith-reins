@@ -63,7 +63,7 @@ test('gallery zoom, keyboard, focus return and swipe work', async ({ page }) => 
   await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
   await expect(page.locator('#pdp-zoom-level')).toHaveText('125%');
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('#pdp-zoom-image')).toHaveAttribute('src', /cream-horse-mug-product.png$/);
+  await expect(page.locator('#pdp-zoom-image')).toHaveAttribute('src', /cream-horse-mug-product.webp$/);
   await page.keyboard.press('Escape');
   await expect(page.locator('#pdp-image-open')).toBeFocused();
   await page.locator('#pdp-stage').evaluate(element => {
@@ -71,7 +71,7 @@ test('gallery zoom, keyboard, focus return and swipe work', async ({ page }) => 
     element.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, changedTouches: [touch(280, 100)] }));
     element.dispatchEvent(new TouchEvent('touchend', { bubbles: true, changedTouches: [touch(100, 105)] }));
   });
-  await expect(page.locator('#pdp-main-image')).toHaveAttribute('src', /cream-horse-mug-styled.png$/);
+  await expect(page.locator('#pdp-main-image')).toHaveAttribute('src', /cream-horse-mug-styled.webp$/);
 });
 
 test('sizing resets on variant change and converts only its own chart', async ({ page }) => {

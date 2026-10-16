@@ -3,6 +3,14 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import PRODUCTS from '../src/lib/products.json' with { type: 'json' };
+// Width and height from a WebP header (lossy VP8, lossless VP8L or extended VP8X).
+function webpSize(b) {
+  const chunk = b.subarray(12, 16).toString();
+  if (chunk === 'VP8 ') return [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+  if (chunk === 'VP8L') { const v = b.readUInt32LE(21); return [(v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1]; }
+  if (chunk === 'VP8X') return [b.readUIntLE(24, 3) + 1, b.readUIntLE(27, 3) + 1];
+  throw new Error('Unknown WebP chunk ' + chunk);
+}
 const root = path.resolve(import.meta.dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/catalog-showcase-assets.json')));
 const variants = PRODUCTS.flatMap(product => product.variants);
@@ -24,9 +32,8 @@ for (const product of PRODUCTS) {
       assert.ok(record, `Missing provenance: ${relative}`);
       const bytes = fs.readFileSync(path.join(root, relative));
       assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), record.sha256, relative);
-      assert.equal(bytes.subarray(1,4).toString(), 'PNG');
-      assert.equal(bytes.readUInt32BE(16), image.width);
-      assert.equal(bytes.readUInt32BE(20), image.height);
+      assert.equal(bytes.subarray(0,4).toString() + bytes.subarray(8,12).toString(), 'RIFFWEBP', relative);
+      assert.deepEqual(webpSize(bytes), [image.width, image.height], relative);
     }
     if (variant.guide) {
       assert.ok(['mens-white-polo','mens-forest-green-hoodie'].includes(variant.id));
@@ -42,4 +49,4 @@ for (const file of htmlFiles) {
   assert.ok(!html.includes('Ships within 5–7 business days'), file);
   assert.ok(!html.includes('id="atb"'), 'Old add-to-bag path: ' + file);
 }
-console.log('Catalog verified: 18 families, 42 variants, 84 unchanged original images; ordering closed.');
+console.log('Catalog verified: 18 families, 42 variants, 84 web-encoded original images; ordering closed.');
