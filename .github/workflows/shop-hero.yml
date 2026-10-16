@@ -1,5 +1,13 @@
 name: Validate shop hero
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/lib/shop-hero.mjs'
+      - 'src/lib/pages-main.mjs'
+      - 'src/styles/shop-hero.css'
+      - 'tests/shop-hero.spec.js'
+      - '.github/workflows/shop-hero.yml'
   pull_request:
     branches: [main]
     paths:
