@@ -116,5 +116,30 @@
       "mobileFocus": "center",
       "alt": "Two adults wearing a Faith Reins cream quarter-zip and a forest-green quilted men’s vest beside the horse barn at sunset."
     }
+  },
+  {
+    "label": "Hats",
+    "heading": "Hats & Caps",
+    "title": "Faith Reins Embroidered Horse Caps",
+    "lead": "Everyday essentials. The mission comes along.",
+    "description": "Explore Faith Reins embroidered horse caps in forest green, cream, and white. Timeless equestrian-inspired headwear with the V7 horse signature.",
+    "productHeading": "Find your everyday favorite.",
+    "intro": "The classic Faith Reins horse cap is designed in three understated colors: forest green, cream, and white. Explore the approved visual concepts while we confirm supplier details and fit.",
+    "products": [
+      "caps"
+    ],
+    "key": "hats",
+    "route": "/shop/hats",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/hats-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/hats-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1024,
+      "mobileHeight": 1536,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "People wearing embroidered Faith Reins horse caps outdoors in a natural farm setting."
+    }
   }
 ]

@@ -75,7 +75,8 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 - Women's: approved two-model farm-porch hero, desktop/mobile exports and `/shop/women` page committed to main; no live release from this work.
 - Kids: approved seal-branded two-child farm hero and category page committed to main; new Kids seal T-shirt and hoodie sourcing concepts documented.
 - Outerwear: revised desktop/mobile approved hero masters and `/shop/outerwear` page committed to main; **cream quarter-zip icon 80% of previous width/height**, men's vest icon centered on wearer’s left breast away from zipper. V7 assets and website copies verified against the exact reviewed PNGs (see `outerwear.md`).
-- Hats / Home & Gifts / Shop: next categories; present each new hero for individual owner approval before adding a page or committing its imagery.
+- Hats: owner-approved Wixel hero archived with desktop/mobile derivatives; `/shop/hats` category page and existing cap product family committed, subject to validation. Distinct imagery; never substitute the discarded earlier Hats drafts.
+- Home & Gifts / Shop: next; present each hero individually for approval before committing.
 - SEO slugs: `/shop/men`, `/shop/women`, `/shop/kids`, `/shop/outerwear` committed; remaining clean-category naming frozen in `SEO-ROUTES.md`.
 - SEO cleanup: remaining sitewide metadata, sitemap and redirects pending.
 - Clean URLs and permanent redirects: pending hosting work, actual Wix static filenames still use `.html`.

@@ -598,7 +598,7 @@
   "merchandise/seal-refinement/seal-refinement-a-balanced.svg": "4d402e6d2b2f33b1711a03d262204810aeca583dc353fbfe458660c4bff67b6c",
   "merchandise/seal-refinement/seal-refinement-b-heritage.svg": "c3e495b28fa1fb0286b57e0c2717b12ba7a358fb6e36349c5d349835873cda75",
   "merchandise/SHOP-HERO-BRIEF.md": "cf3c83407ba2a29ce6be8c33f4837b746d8690ce7a996cce6be8c31aaf1f62d3",
-  "merchandise/storefront/EXECUTION-PLAN.md": "cb02238ef8129e0e96345434bee5d823d3f3831719b671318f3b6ee32121f701",
+  "merchandise/storefront/EXECUTION-PLAN.md": "39a1408c981d060174d42f5315b743eee6258c6a369a191e949f35db8fdc07af",
   "merchandise/storefront/KIDS-CATEGORY.md": "960bab983d6f5d573aa55de9dc9d1125541f91d0ce3d7dfa6cca47149903bfb4",
   "merchandise/storefront/mens.md": "4405d79f5f71e9788c757456a5bb9adbad470ad2d1fd12aaeb47992c30211cc2",
   "merchandise/storefront/PHOTOGRAPHY-BRIEF.md": "9f40a08a45ceb861bebad6f059e8b42dab28aaa947a845d2df6a03f7ac661dad",
@@ -624,7 +624,7 @@
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
   "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
-  "merchandise/storefront/SEO-ROUTES.md": "567520bf7f6a516f2d066a231066268c297aee4ecb13c5aaa012410d56ea84a9",
+  "merchandise/storefront/SEO-ROUTES.md": "68aaaa33bdf9edf1410187e8b57199bbe10b36d598fde5ef51d512c1873cb136",
   "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
   "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
   "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf",
@@ -635,5 +635,6 @@
   "foundations/photography/storefront/outerwear/outerwear-approved-master.jpg": "a8672ffbb2420f4088a6a9bc878d9ab32c550e69d1bdc68666d57cf9696dead1",
   "foundations/photography/storefront/hats/hats-approved-master.png": "da3bb723437eb7ec27adeb4ff7a667035f2eeb8eb77cac11dcdffc7e6269442d",
   "foundations/photography/storefront/hats/hats-desktop.webp": "45f7589dc2bf3092b450f3557aee98731b5ff7c80d0f9c7c9d0c72d9a9c4c4c7",
-  "foundations/photography/storefront/hats/hats-mobile.webp": "4ba69c03a1304ede2c28f10f6db11989b380f1b5d9dd0782ed2f34a948494f5f"
+  "foundations/photography/storefront/hats/hats-mobile.webp": "4ba69c03a1304ede2c28f10f6db11989b380f1b5d9dd0782ed2f34a948494f5f",
+  "merchandise/storefront/hats.md": "5f231b06bb6f7465d3e4388f714e5efd3eced29bd8d193ea20c32abdc317d795"
 }

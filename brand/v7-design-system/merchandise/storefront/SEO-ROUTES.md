@@ -9,7 +9,7 @@
 | Women | `/shop/women` | `/shop/women.html` | Implemented with approved hero |
 | Kids | `/shop/kids` | `/shop/kids.html` | Existing |
 | Outerwear | `/shop/outerwear` | `/shop/outerwear.html` | Approved and implemented |
-| Hats | `/shop/hats` | `/shop/hats.html` | Awaiting hero approval |
+| Hats | `/shop/hats` | `/shop/hats.html` | Owner-approved hero and category page implemented |
 | Home & Gifts | `/shop/home-gifts` | `/shop/home-gifts.html` | Awaiting hero approval |
 
 ## Permanent requirements
@@ -34,3 +34,7 @@
 ## Outerwear SEO details
 
 `/shop/outerwear` is the sole category canonical. The new men’s vest uses `/shop/men-quilted-vest` as its single product URL; it is also listed under Men. No duplicate product URLs or invented offers. Current Wix preview/static hosting uses `.html` targets until clean URL routing is verified. Live page headings and CTAs are always HTML.
+
+## Hats collection SEO
+
+`/shop/hats` uses the single `caps` product family with three variants: forest green, cream and white. It links to the **one** `/shop/caps` product page. The original owner-approved Hats hero is archived in the V7 package, and the HTML heading, intro and CTA are separate from the image. Publishing is deferred; the current Wix static output uses `/shop/hats.html` until extensionless paths are configured and verified.
