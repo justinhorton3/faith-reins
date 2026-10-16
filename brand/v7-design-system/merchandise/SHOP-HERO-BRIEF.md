@@ -1,3 +1,20 @@
+# Shop hero — owner-approved V7 ranch photography
+
+**Approved by owner:** October 16, 2026 — both 1536 × 1024 desktop and 1024 × 1536 mobile photographic compositions.
+
+| View | Portable source master | Portable WebP copy |
+| --- | --- | --- |
+| Desktop | \`foundations/photography/storefront/shop/shop-approved-desktop-master.png\` | \`foundations/photography/storefront/shop/shop-desktop.webp\` |
+| Mobile | \`foundations/photography/storefront/shop/shop-approved-mobile-master.png\` | \`foundations/photography/storefront/shop/shop-mobile.webp\` |
+
+Two adults in forest-green and cream merchandise stand beside a horse at the ranch. The **Shop landing page only** uses these approved photographs. The earlier barn-table product collection scene is retained as historical concept art, not the current landing hero. Responsive website files are independent copies at \`public/assets/shop/v7/heroes/shop-{desktop,mobile}.webp\`. Live text stays in HTML, with a dark green text panel on desktop and text above the portrait on mobile.
+
+**Brand integrity:** User-approved lifestyle mock photography is not production logo artwork. The V7 identity masters in \`approved/\` remain immutable and authoritative for embroidery, printing and manufacturing. Source photographs are byte-preserved; no AI-generated replacement marks or scenes are accepted.
+
+**Implementation:** Responsive hero, six linked collection tiles, all approved catalog product cards and separate merch corner retained. Unique social sharing photo; checkout remains disabled. No live-site release was requested.
+
+---
+
 # Shop hero: brief for later visual review
 
 Status: natural barn-table collection composition prepared for review using the user’s preferred reference. The [portable template](../templates/shop-hero.html) includes live hero copy and a separate merch-corner concept below collection content. [Provenance and prompt](../foundations/photography/shop-lifestyle/PROVENANCE.json) record the supplied exact V7 logo references and new generated scene.

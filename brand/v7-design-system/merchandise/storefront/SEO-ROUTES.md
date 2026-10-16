@@ -42,3 +42,7 @@
 ## Home & Gifts SEO
 
 The permanent category slug is `/shop/home-gifts`, while the current Wix static host uses `/shop/home-gifts.html`. Seven existing gift catalog families appear as unique product links. The category renders its own HTML H1, copy, navigation, canonical, hero OG image, CollectionPage, ItemList and BreadcrumbList; no fake offers or supplier claims. The desktop/mobile approved photo pair is archived in V7 and served from independent website image assets. Release and clean URL redirects remain separate.
+
+## Main Shop hero
+
+The main Shop landing remains at \`/shop\` with current Wix static output \`/shop.html\`. Its approved desktop and mobile photographic hero assets have dedicated website copies, unique OG/Twitter preview image metadata, HTML heading and CTA, six category navigation tiles, complete approved product catalog, and unchanged merch-corner section. There is no claim of live publication, inventory or confirmed manufacturing artwork. Clean URL redirects require separate verification.

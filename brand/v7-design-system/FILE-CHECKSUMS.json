@@ -597,8 +597,8 @@
   "merchandise/seal-refinement/distinct-layout-comparison.svg": "75755530e4cf33bded481d72ffbfd79ec8630e19671a0a43aa10a0ab0c3f6f05",
   "merchandise/seal-refinement/seal-refinement-a-balanced.svg": "4d402e6d2b2f33b1711a03d262204810aeca583dc353fbfe458660c4bff67b6c",
   "merchandise/seal-refinement/seal-refinement-b-heritage.svg": "c3e495b28fa1fb0286b57e0c2717b12ba7a358fb6e36349c5d349835873cda75",
-  "merchandise/SHOP-HERO-BRIEF.md": "cf3c83407ba2a29ce6be8c33f4837b746d8690ce7a996cce6be8c31aaf1f62d3",
-  "merchandise/storefront/EXECUTION-PLAN.md": "681db43ab5de83580e5a0c19c7ee7f6bacaaae607bf148f9c2715d3b67531041",
+  "merchandise/SHOP-HERO-BRIEF.md": "027d83afb974d961d6d10a7ae5932ca6d928d2cc7c8211b43825a7f17db5b0d3",
+  "merchandise/storefront/EXECUTION-PLAN.md": "23f1f434d89f45804ffce1bb1689b5717a01484e8d11c6006aa638f22288a104",
   "merchandise/storefront/KIDS-CATEGORY.md": "960bab983d6f5d573aa55de9dc9d1125541f91d0ce3d7dfa6cca47149903bfb4",
   "merchandise/storefront/mens.md": "4405d79f5f71e9788c757456a5bb9adbad470ad2d1fd12aaeb47992c30211cc2",
   "merchandise/storefront/PHOTOGRAPHY-BRIEF.md": "9f40a08a45ceb861bebad6f059e8b42dab28aaa947a845d2df6a03f7ac661dad",
@@ -624,7 +624,7 @@
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
   "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
-  "merchandise/storefront/SEO-ROUTES.md": "61b74e17cb615a01e50fcac2e2c8409a3dcea8e10717c852dd832cc97eb8e5b5",
+  "merchandise/storefront/SEO-ROUTES.md": "c23b05e978bb9af67c3954b454020ec84db25ace43c0f3dbb455a90e4a373f03",
   "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
   "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
   "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf",
@@ -651,5 +651,6 @@
   "foundations/photography/storefront/shop/shop-approved-desktop-master.png": "b95879f7c19a16cfc08950aa6eaef370cdd142968a7ff51729627a2be1e24807",
   "foundations/photography/storefront/shop/shop-desktop.webp": "d6129c98002b6102455ab9f4a2f6719d663e1755e88e6eef6d29e18e3c9c4210",
   "foundations/photography/storefront/shop/shop-approved-mobile-master.png": "aca935db3c9b61d1de33e83d347a0f05c337e405b8f372441b955f54755052b0",
-  "foundations/photography/storefront/shop/shop-mobile.webp": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea"
+  "foundations/photography/storefront/shop/shop-mobile.webp": "77c57d8a983cab87e994bf43faed903224e5988aed1e0841d890a455a351f3ea",
+  "merchandise/storefront/shop.md": "af8841ae7d51f7cd827dbff615fd903d97a2ef07e01e0ad8f12ff9243963beb6"
 }

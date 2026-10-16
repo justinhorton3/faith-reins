@@ -77,7 +77,7 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 - Outerwear: revised desktop/mobile approved hero masters and `/shop/outerwear` page committed to main; **cream quarter-zip icon 80% of previous width/height**, men's vest icon centered on wearer’s left breast away from zipper. V7 assets and website copies verified against the exact reviewed PNGs (see `outerwear.md`).
 - Hats: owner-approved Wixel hero archived with desktop/mobile derivatives; `/shop/hats` category page and existing cap product family committed, subject to validation. Distinct imagery; never substitute the discarded earlier Hats drafts.
 - Home & Gifts: owner-approved desktop and mobile farmhouse gift-wrapping hero, seven existing gift product families and `/shop/home-gifts` page committed to main; live release not requested.
-- Shop: next category to review individually before committing a hero.
+- Shop: owner-approved desktop/mobile ranch photograph pair archived in V7 and wired to the main Shop hero, with HTML copy, six category links, existing catalog and merch corner preserved. Not released to live site.
 - SEO slugs: `/shop/men`, `/shop/women`, `/shop/kids`, `/shop/outerwear` committed; remaining clean-category naming frozen in `SEO-ROUTES.md`.
 - SEO cleanup: remaining sitewide metadata, sitemap and redirects pending.
 - Clean URLs and permanent redirects: pending hosting work, actual Wix static filenames still use `.html`.
