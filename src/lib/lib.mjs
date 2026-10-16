@@ -1,6 +1,7 @@
 // Faith Reins v6 components for the static build. Markup only; styles live in src/styles/global.css.
 // Follows brand/FaithReins_DesignSystem_v6 (tokens, components, ui_kits/website).
 import media from "./media.json" with { type: "json" };
+import CATEGORIES from "./shop-category-pages.json" with { type: "json" };
 
 export { media };
 export const FORMS = {
@@ -129,17 +130,25 @@ const NAV = [
 const isCur = (route, m) => m.includes(route) || m.some((p) => p !== "/" && route.startsWith(p + "/"));
 const bars = `<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>`;
 
+// One shared category registry drives desktop, mobile and Shop page navigation.
+function shopDesktopNav(route) {
+  const active = route === '/shop' || route.startsWith('/shop/');
+  return `<details class="nav-shop"><summary class="nav-link"${active ? ' aria-current="page"' : ''}>Shop <span class="nav-shop__chevron" aria-hidden="true"></span></summary><div class="nav-shop__panel" role="group" aria-label="Shop categories"><a href="/shop" class="nav-shop__all"${route === '/shop' ? ' aria-current="page"' : ''}>Shop all <span aria-hidden="true">→</span></a>${CATEGORIES.map(category => `<a href="${category.route}" class="nav-shop__item"${route === category.route ? ' aria-current="page"' : ''}>${esc(category.label)}</a>`).join('')}</div></details>`;
+}
+function shopMobileNav(route) {
+  return `<div class="drawer-shop-subnav" role="group" aria-label="Shop categories"><span class="drawer-shop-subnav__title">Shop categories</span>${CATEGORIES.map(category => `<a class="drawer-shop-subnav__link" href="${category.route}"${route === category.route ? ' aria-current="page"' : ''}>${esc(category.label)}<span aria-hidden="true">→</span></a>`).join('')}</div>`;
+}
 export function header(route = "") {
   const cur = (m) => (isCur(route, m) ? ' aria-current="page"' : "");
   return `<a class="skip-link" href="#main">Skip to content</a>
 <div class="utility"><div class="utility__in"><span class="utility__tag">A non-profit serving South Arkansas families</span><span class="utility__links"><a href="tel:${SITE.tel}">${SITE.phone}</a><a class="utility__desk" href="/for-referring-providers">For Providers</a><a href="/contact">Contact</a><button class="cart-btn" id="cart-btn" type="button" aria-haspopup="dialog" aria-label="Shopping bag">Bag<span class="cart-badge" id="cart-badge" hidden>0</span></button></span></div></div>
 <header class="site-header"><div class="site-header__in">
 <a class="site-header__logo" href="/" aria-label="Faith Reins home">${lockup({ size: "sm" })}</a>
-<nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAV.map(([l, h, m]) => `<a class="nav-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("")}</div>${btn("Support", "/give", "", { size: "sm" })}</nav>
+<nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAV.map(([l, h, m]) => l === 'Shop' ? shopDesktopNav(route) : `<a class="nav-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("")}</div>${btn("Support", "/give", "", { size: "sm" })}</nav>
 <div class="site-header__compact"><span class="site-header__support">${btn("Support", "/give", "", { size: "sm" })}</span><button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${bars}</button></div>
 </div></header>
 <div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: "xs" })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div>
-<nav aria-label="Menu">${[["Home", "/", ["/"]], ...NAV, ["Contact", "/contact", ["/contact"]]].map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}<span aria-hidden="true">→</span></a>`).join("")}</nav>
+<nav aria-label="Menu">${[["Home", "/", ["/"]], ...NAV, ["Contact", "/contact", ["/contact"]]].map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}<span aria-hidden="true">→</span></a>` + (l === "Shop" ? shopMobileNav(route) : "")).join("")}</nav>
 <div class="drawer__foot">${btn("Support Faith Reins", "/give", "", { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
 }
 

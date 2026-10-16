@@ -29,4 +29,23 @@ for(const category of CATEGORIES){
 }
 const old=pages.find(p=>p.route==='/shop/mens');
 assert.ok(old && old.seo.noindex && old.seo.canonicalRoute==='/shop/men', 'Old mens route must be noindex and point to men');
+const shopPage=pages.find(p=>p.route==='/shop');
+assert.ok(shopPage?.body.includes('shop-category-tiles__grid'), 'Shop must show visual category navigation');
+assert.ok(shopPage.body.indexOf('shop-category-tiles__grid') < shopPage.body.indexOf('id="shop-products"'), 'Visual categories must precede products');
+assert.equal((shopPage.body.match(/class="shop-category-tile"/g)||[]).length, CATEGORIES.length, 'Six category tiles required');
+const { header } = await import('../src/lib/lib.mjs');
+const topNav=header('/shop/women');
+assert.ok(topNav.includes('<details class="nav-shop">'), 'Desktop Shop dropdown missing');
+assert.ok(topNav.includes('class="drawer-shop-subnav"'), 'Mobile Shop group missing');
+for (const c of CATEGORIES) {
+  assert.ok(shopPage.body.includes('class="shop-category-tile" href="'+c.route+'"'), 'Missing tile '+c.key);
+  assert.ok(topNav.includes('href="'+c.route+'" class="nav-shop__item"'), 'Missing desktop menu '+c.key);
+  assert.ok(topNav.includes('class="drawer-shop-subnav__link" href="'+c.route+'"'), 'Missing mobile menu '+c.key);
+}
+const shopBuilt=path.join(root,'dist/shop.html');
+if (fs.existsSync(shopBuilt)) {
+  const html=fs.readFileSync(shopBuilt,'utf8');
+  assert.ok(html.indexOf('shop-category-tiles__grid') < html.indexOf('id="shop-products"'));
+  for (const c of CATEGORIES) assert.ok(html.includes('class="shop-category-tile" href="'+c.route+'.html"'), 'Missing hosted category tile '+c.key);
+}
 console.log('Shop SEO category route contract: Men, Women, Kids, Outerwear, Hats and Home & Gifts verified.');

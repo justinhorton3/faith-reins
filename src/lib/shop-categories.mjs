@@ -16,6 +16,10 @@ export function categoryNavigation(current = 'shop') {
   return `<nav class="shop-collections" aria-label="Shop collections">${links.map(category => `<a href="${category.route}"${current === category.key ? ' aria-current="page"' : ''}>${esc(category.label)}</a>`).join('')}</nav>`;
 }
 
+export function shopCategoryTiles() {
+  return `<section class="shop-category-tiles" aria-labelledby="shop-category-tiles-title"><div class="shop-category-tiles__in"><div class="shop-category-tiles__heading"><p class="shop-category-tiles__eyebrow">The Faith Reins Collection</p><h2 id="shop-category-tiles-title">Shop by category</h2></div>
+  <nav class="shop-category-tiles__grid" aria-label="Shop by category">${CATEGORIES.map(category => `<a class="shop-category-tile" href="${category.route}"><span class="shop-category-tile__photo"><img src="${category.hero.mobile}" alt="" loading="lazy" decoding="async" width="${category.hero.mobileWidth}" height="${category.hero.mobileHeight}"></span><span class="shop-category-tile__label">${esc(category.label)} <span aria-hidden="true">→</span></span></a>`).join('')}</nav></div></section>`;
+}
 export function collectionHero(page) {
   const h = page.hero;
   return `<section class="hero hero--collection" aria-labelledby="collection-title" style="--pos:${h.desktopFocus || 'center'};--mpos:${h.mobileFocus || 'center'}">
