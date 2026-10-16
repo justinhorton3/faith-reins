@@ -1,0 +1,44 @@
+name: Correct Store and Hats hero assignment
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/correct-store-hats.yml']
+permissions:
+  contents: write
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: python scripts/correct-store-hats.py
+      - run: npm ci --no-audit --no-fund
+      - name: Build and validate Shop/Hats pages
+        run: |
+          npm run build
+          python scripts/wix-postbuild.py
+          node scripts/verify-shop-category-routes.mjs
+      - name: Commit validated hero correction to main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/lib/shop-hero.mjs src/styles/shop-hero.css tests/shop-hero.spec.js
+          git add src/lib/shop-category-pages.json src/lib/pages-main.mjs scripts/verify-shop-category-routes.mjs
+          git add docs/shop-hero-image.json docs/storefront-heroes/hats-assets.json docs/storefront-heroes/shop-assets.json docs/storefront-heroes/hats-ranch-assets.json
+          git add public/assets/shop/v7/heroes/hats-ranch-*.webp
+          git add brand/v7-design-system/foundations/photography/storefront/hats/hats-ranch-*
+          git add brand/v7-design-system/merchandise/storefront/shop.md brand/v7-design-system/merchandise/storefront/hats.md
+          git add brand/v7-design-system/merchandise/storefront/SEO-ROUTES.md brand/v7-design-system/merchandise/storefront/EXECUTION-PLAN.md
+          git add brand/v7-design-system/merchandise/SHOP-HERO-BRIEF.md brand/v7-design-system/FILE-CHECKSUMS.json
+          git diff --cached --check
+          git commit -m "fix(shop): restore barn collection hero and assign hat duo to Hats"
+          git push origin HEAD:main
