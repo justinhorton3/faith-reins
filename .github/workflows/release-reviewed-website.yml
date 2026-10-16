@@ -1,0 +1,76 @@
+name: Release reviewed website
+on:
+  push:
+    branches: ['release/website-7c49d65']
+    paths: ['.github/workflows/release-reviewed-website.yml']
+permissions:
+  contents: read
+concurrency:
+  group: deploy-web
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      WIX_CLI: '@wix/cli@1.1.258'
+      ASTRO_TELEMETRY_DISABLED: '1'
+      NO_COLOR: '1'
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 7c49d654cdf3d77eaaed5586ce402c332f48db9e
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build the reviewed main commit
+        run: |
+          test "$(git rev-parse HEAD)" = "7c49d654cdf3d77eaaed5586ce402c332f48db9e"
+          npm ci --no-audit --no-fund
+          npm run build
+          node scripts/verify-catalog-showcase.mjs
+          python scripts/wix-postbuild.py
+      - name: Authenticate Wix CLI
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          test -n "$WIX_API_KEY"
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Release the website to production
+        run: |
+          set -o pipefail
+          npx --yes -p "$WIX_CLI" wix release 2>&1 | tee release.log
+      - name: Verify the live collection and assets
+        run: |
+          python - <<'PY'
+          import urllib.request, time
+          base = 'https://www.faithreins.com'
+          paths = ['/assets/shop/v7/barn-collection.webp', '/assets/shop/v7/merch-corner.webp', '/assets/shop/v7/catalog/forest-green-quarter-zip-styled.png']
+          last = None
+          for attempt in range(6):
+              try:
+                  with urllib.request.urlopen(base + '/shop.html', timeout=30) as response:
+                      html = response.read().decode()
+                      assert response.status == 200
+                      assert 'barn-collection.webp' in html and 'merch-corner.webp' in html
+                      assert 'shop-editorial-title' in html and 'shop-corner-title' in html
+                  with urllib.request.urlopen(base + '/shop/mens-polo.html', timeout=30) as response:
+                      product = response.read().decode()
+                      assert 'data-polo-showcase' in product and 'Out of stock' in product
+                  for path in paths:
+                      with urllib.request.urlopen(urllib.request.Request(base + path, method='HEAD'), timeout=30) as response:
+                          assert response.status == 200 and response.headers.get('Content-Type', '').startswith('image/')
+                  print('Verified live site:', base)
+                  print('Reviewed source: 7c49d654cdf3d77eaaed5586ce402c332f48db9e')
+                  break
+              except Exception as error:
+                  last = error
+                  if attempt == 5:
+                      raise
+                  time.sleep(10)
+          PY
