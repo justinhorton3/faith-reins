@@ -1,0 +1,90 @@
+name: Publish corrected Hats hero with Wix CLI
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-corrected-hats.yml']
+permissions:
+  contents: read
+concurrency:
+  group: wix-release-hats-cache
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Confirm target and corrected source
+        run: |
+          node - <<'NODE'
+          const fs=require('node:fs');
+          const cfg=JSON.parse(fs.readFileSync('wix.config.json'));
+          if(cfg.siteId!=='2d8c6050-5730-4bed-9c7a-266ca7bd00b4')throw Error('Wrong Wix site');
+          const cats=JSON.parse(fs.readFileSync('src/lib/shop-category-pages.json'));
+          const hats=cats.find(x=>x.key==='hats');
+          if(hats.hero.desktop!=='/assets/shop/v7/heroes/hats-ranch-desktop.webp'
+            ||hats.hero.mobile!=='/assets/shop/v7/heroes/hats-ranch-mobile.webp')
+            throw Error('Wrong Hats hero source; aborting release');
+          const shop=fs.readFileSync('src/lib/shop-hero.mjs','utf8');
+          if(!shop.includes('src="/assets/shop/v7/barn-collection.webp"'))
+            throw Error('Shop barn collection photo must stay restored');
+          console.log('Source verification: Shop barn hero and Hats golden-hour duo ready');
+          NODE
+      - name: Build Wix site
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          python scripts/wix-postbuild.py
+          node scripts/verify-shop-category-routes.mjs
+      - name: Install Wix CLI
+        run: npm install --no-save --no-package-lock @wix/cli
+      - name: Wix CLI login using existing secret
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          test -n "$WIX_API_KEY" || { echo "::error::WIX_API_KEY missing"; exit 1; }
+          npx wix login --api-key "$WIX_API_KEY"
+      - name: Publish Wix Headless site and invalidate cached pages
+        run: |
+          echo "Running Wix CLI release for the linked Wix site."
+          timeout 540s npx wix release
+      - name: Verify live site serves the corrected Hats hero
+        run: |
+          python - <<'PY'
+          import time
+          import urllib.request
+          import sys
+          site="https://www.faithreins.com"
+          endpoints=[("/shop/hats.html","hats-ranch-desktop.webp","hats-desktop.webp"),
+                     ("/shop.html","barn-collection.webp","heroes/shop-desktop.webp")]
+          for attempt in range(6):
+              remaining=[]
+              for path, expected, stale in endpoints:
+                  u=site+path+"?fr-hats-20261016="+str(attempt)
+                  req=urllib.request.Request(u,headers={"User-Agent":"FaithReins-Release-Verification/1.0","Cache-Control":"no-cache"})
+                  try:
+                      with urllib.request.urlopen(req,timeout=20) as resp:
+                          html=resp.read().decode("utf-8","replace")
+                          status=resp.status
+                  except Exception as ex:
+                      print(f"Verification error on {path}: {type(ex).__name__} {ex}",flush=True)
+                      remaining.append(path);continue
+                  print(f"{path}: HTTP {status}, expected={expected in html}, old={stale in html}",flush=True)
+                  if status!=200 or expected not in html:
+                      remaining.append(path)
+              if not remaining:
+                  print("Production route HTML verified for both heroes")
+                  sys.exit(0)
+              time.sleep(10)
+          print("::error::Wix site still serving stale HTML after CLI release; DO NOT report success",flush=True)
+          sys.exit(1)
+          PY
