@@ -11,7 +11,8 @@
       "mens-polo",
       "heritage-hoodie",
       "quarter-zip",
-      "quilted-vest"
+      "quilted-vest",
+      "men-quilted-vest"
     ],
     "key": "men",
     "route": "/shop/men",
@@ -83,6 +84,37 @@
       "desktopFocus": "center",
       "mobileFocus": "center",
       "alt": "Two children wearing the cream Faith Reins seal tee and forest-green seal hoodie, walking together beside a horse and barn at the farm."
+    }
+  },
+  {
+    "label": "Outerwear",
+    "heading": "Outerwear",
+    "title": "Quarter-Zips, Quilted Vests & Hoodies",
+    "lead": "A little warmth. A lot of purpose.",
+    "description": "Shop the Faith Reins outerwear collection: cream quarter-zips, forest-green quilted vests, and horse hoodies for men, women and kids.",
+    "productHeading": "Everyday layers for the journey.",
+    "intro": "From our newly approved men’s quilted vest to signature quarter-zips and hoodies, explore forest-green and cream staples inspired by Faith Reins. These are sourcing concepts, with supplier details and availability to be confirmed.",
+    "products": [
+      "men-quilted-vest",
+      "quarter-zip",
+      "quilted-vest",
+      "heritage-hoodie",
+      "womens-hoodie",
+      "boys-hoodie",
+      "girls-hoodie"
+    ],
+    "key": "outerwear",
+    "route": "/shop/outerwear",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/outerwear-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/outerwear-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1024,
+      "mobileHeight": 1536,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "Two adults wearing a Faith Reins cream quarter-zip and a forest-green quilted men’s vest beside the horse barn at sunset."
     }
   }
 ]

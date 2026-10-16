@@ -1507,5 +1507,50 @@
         }
       }
     ]
+  },
+  {
+    "slug": "men-quilted-vest",
+    "name": "Men’s Forest-Green Quilted Vest",
+    "group": "mens",
+    "collection": "Layers",
+    "availability": "out-of-stock",
+    "desc": "A forest-green diamond-quilted vest with a discreet cream Faith Reins horse emblem at the left chest. An easy layer inspired by days at the farm.",
+    "details": [
+      "Forest-green diamond quilting and sleeveless zip front",
+      "Approved V7 horse emblem centered on the wearer's left breast, away from the zipper",
+      "Worn over a collared shirt in the approved Outerwear lifestyle photography",
+      "Supplier, decoration method and fit remain to be verified"
+    ],
+    "fitNote": "Proposed sizes S–3XL are reference labels, not verified supplier measurements. Confirm final size charts before ordering.",
+    "careNote": "Fabric, insulation, manufacturer care instructions, and decoration process remain supplier dependent.",
+    "variants": [
+      {
+        "id": "mens-forest-green-quilted-vest",
+        "name": "Forest Green",
+        "hex": "#173a2e",
+        "tonal": false,
+        "description": "Forest-green quilted men's vest with a cream Faith Reins horse emblem placed on the wearer’s left breast, with clear separation from the zipper.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "images": {
+          "product": {
+            "src": "/assets/shop/v7/catalog/mens-forest-green-quilted-vest-product.webp",
+            "width": 1086,
+            "height": 1448
+          },
+          "styled": {
+            "src": "/assets/shop/v7/catalog/mens-forest-green-quilted-vest-styled.webp",
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      }
+    ]
   }
 ]
