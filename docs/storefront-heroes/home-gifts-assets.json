@@ -1,0 +1,50 @@
+{
+  "category": "home-gifts",
+  "approvedInChat": "2026-10-16",
+  "status": "owner-approved desktop/mobile lifestyle concept; supplier availability not confirmed",
+  "noBakedInPageText": true,
+  "logoPolicy": "Visible photographed marks are conceptual imagery; production must use exact approved V7 SVG master assets. No new identity artwork has been created.",
+  "images": [
+    {
+      "role": "desktop",
+      "sourceUrl": "https://static.wixstatic.com/media/8fe1a1_c8f72fe747514c2b834b73315bb1ed52~mv2.png",
+      "master": "brand/v7-design-system/foundations/photography/storefront/home-gifts/home-gifts-desktop-approved-master.png",
+      "sourceSha256": "ec3abc1a486a6619e4aa1cb78fe9c2bd675bf882ca01f599c035769081ad196f",
+      "website": {
+        "path": "public/assets/shop/v7/heroes/home-gifts-desktop.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "9578240e46370d2106f96236a3ea477e008f702500c5841e61d231332c7a6453",
+        "bytes": 263560
+      },
+      "archive": {
+        "path": "brand/v7-design-system/foundations/photography/storefront/home-gifts/home-gifts-desktop.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "9578240e46370d2106f96236a3ea477e008f702500c5841e61d231332c7a6453",
+        "bytes": 263560
+      }
+    },
+    {
+      "role": "mobile",
+      "sourceUrl": "https://static.wixstatic.com/media/8fe1a1_e13b0525eb7d44c4b500faab4a8e1ee5~mv2.png",
+      "master": "brand/v7-design-system/foundations/photography/storefront/home-gifts/home-gifts-mobile-approved-master.png",
+      "sourceSha256": "8eeb493f6f597c317590f6d6e3e6aea7045b0c6c55bc73bf3b3cd8f8ff1a3c3d",
+      "website": {
+        "path": "public/assets/shop/v7/heroes/home-gifts-mobile.webp",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "011b4b75fd1c85b565912c45959273bd0708b5d578f881ad4a23db979984a18a",
+        "bytes": 274096
+      },
+      "archive": {
+        "path": "brand/v7-design-system/foundations/photography/storefront/home-gifts/home-gifts-mobile.webp",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "011b4b75fd1c85b565912c45959273bd0708b5d578f881ad4a23db979984a18a",
+        "bytes": 274096
+      }
+    }
+  ],
+  "releasedToLiveSite": false
+}
