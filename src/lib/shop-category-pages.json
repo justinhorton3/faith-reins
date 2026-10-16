@@ -28,6 +28,34 @@
     }
   },
   {
+    "label": "Women",
+    "heading": "Women’s Clothing",
+    "title": "Women’s Polos, Hoodies & Outerwear",
+    "lead": "Everyday favorites. A purpose worth wearing.",
+    "description": "Explore Faith Reins women’s horse polos, relaxed hoodies, quarter-zips and quilted vests in forest green, cream and white.",
+    "productHeading": "For every way you wear the mission.",
+    "intro": "Thoughtful everyday layers, familiar colors and understated V7 horse details. Explore the women’s horse polo, forest-green hoodie and matching outerwear while supplier details are finalized.",
+    "products": [
+      "womens-polo",
+      "womens-hoodie",
+      "quarter-zip",
+      "quilted-vest"
+    ],
+    "key": "women",
+    "route": "/shop/women",
+    "hero": {
+      "desktop": "/assets/shop/v7/heroes/women-desktop.webp",
+      "mobile": "/assets/shop/v7/heroes/women-mobile.webp",
+      "width": 1536,
+      "height": 1024,
+      "mobileWidth": 1122,
+      "mobileHeight": 1402,
+      "desktopFocus": "center",
+      "mobileFocus": "center",
+      "alt": "Two women in the Faith Reins forest-green horse hoodie and cream horse polo, sharing a branded coffee mug on a sunlit farm porch with a horse in the pasture."
+    }
+  },
+  {
     "label": "Kids",
     "heading": "Kids’ Clothing",
     "title": "Kids’ T-Shirts, Polos & Hoodies",
