@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import PRODUCTS from '../src/lib/products.json' with { type: 'json' };
 for (const width of [1440,1024,768,767,390,320]) {
   test(`shop editorial hero at ${width}px`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width, height:1000 });
@@ -34,7 +35,7 @@ for (const width of [1440,1024,768,767,390,320]) {
     await expect(page.locator('img[src*="hero-shop-"]')).toHaveCount(0);
     await hero.getByRole('link',{name:'Explore the collection'}).click();
     await expect(page).toHaveURL(/#shop-products$/);
-    await expect(page.locator('#merch-grid .merch-card')).toHaveCount(18);
+    await expect(page.locator('#merch-grid .merch-card')).toHaveCount(PRODUCTS.length);
   });
 }
 test('other page heroes retain their existing photographs',async({page})=>{
