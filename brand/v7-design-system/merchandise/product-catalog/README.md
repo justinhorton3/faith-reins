@@ -1,6 +1,6 @@
 # V7 Product Catalog
 
-The 42 original design records and 84 preserved originals remain included. Two additional seal-branded Kids' sourcing concepts have been added, using the owner-approved category photograph and exact approved V7 seal masters. These are not supplier-confirmed merchandise. Printful integration is deferred. Proposed size labels are not verified measurement charts. Two companion views remain distinct from the approved images.
+All 42 design records and all 84 originals are included. Printful integration is deferred. Proposed size labels are not verified measurement charts. Two companion views remain distinct from the approved images.
 
 | Product | Original views | Specification |
 |---|---|---|
@@ -49,14 +49,4 @@ The 42 original design records and 84 preserved originals remain included. Two a
 
 ## Existing constraints
 
-Keep the reduced polo emblem standard, drawcord-free youth hoodies, matte forest-green journals and corner-embroidered throws. Do not replace original photos or infer garment measurements. Vest sourcing and cream/green blanket availability remain unresolved. Except for the newly approved Kids' seal tee concept, other T-shirts, beanies, keychains and stickers lack approved individual imagery in the original recovered catalog. Historical sourcing notes are not current supplier availability verification.
-
-
-## New Kids seal concepts · approved October 16, 2026
-
-| Item | Product master | Lifestyle reference | Production status |
-| --- | --- | --- | --- |
-| [Kids' Cream Seal T-Shirt](kids-cream-seal-tee.md) | [Approved website product view](../../../../public/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp) | [Approved Kids hero](https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png) | Supplier pending |
-| [Kids' Forest Green Seal Hoodie](kids-forest-green-seal-hoodie.md) | [Approved website product view](../../../../public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.webp) | [Approved Kids hero](https://static.wixstatic.com/media/8fe1a1_ebe76ce9d2224049a776ad04c95218ec~mv2.png) | Supplier pending |
-
-The existing boys' and girls' horse-head hoodie products remain separate. These two new styles use the approved circular V7 seal.
+Keep the reduced polo emblem standard, drawcord-free youth hoodies, matte forest-green journals and corner-embroidered throws. Do not replace original photos or infer garment measurements. Vest sourcing and cream/green blanket availability remain unresolved. T-shirts, beanies, keychains and stickers lack approved individual imagery in this recovered catalog. Historical sourcing notes are not current supplier availability verification.
