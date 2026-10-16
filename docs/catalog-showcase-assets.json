@@ -799,22 +799,22 @@
     {
       "catalogId": "mens-forest-green-quilted-vest",
       "view": "product",
-      "source": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-mobile-approved-master.png",
+      "source": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-approved-master.jpg",
       "website": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-product.webp",
-      "reviewStatus": "approved_lifestyle_concept_supplier_pending",
-      "sourceSha256": "cda9c9a3500ae45f859d504815dc0359a0d73c0d361cb6a39fe7f31b1e00dc4c",
-      "sha256": "d14eb0f6f42144f5d62a90381ec60896e9e95e92ccd14ae20c4b98a73728757c"
+      "reviewStatus": "owner_approved_single_source_lifestyle_crop_supplier_pending",
+      "sourceSha256": "a8672ffbb2420f4088a6a9bc878d9ab32c550e69d1bdc68666d57cf9696dead1",
+      "sha256": "f0e842250f9b79984a0ae4f368d9de4cefee86eadd94a1be7bd82156a0bb92cd"
     },
     {
       "catalogId": "mens-forest-green-quilted-vest",
       "view": "styled",
-      "source": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-desktop-approved-master.png",
+      "source": "brand/v7-design-system/foundations/photography/storefront/outerwear/outerwear-approved-master.jpg",
       "website": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-styled.webp",
-      "reviewStatus": "approved_lifestyle_concept_supplier_pending",
-      "sourceSha256": "c9e0d01cf59e74a7c5fdcec2afaf610611a10787f2a7b9d7e7e19b8f2e8ec363",
-      "sha256": "03dbfc448d18d3731f6ab9a8002c268fc7eaf4b523b55b8eaf0e149c2784abab"
+      "reviewStatus": "owner_approved_single_source_lifestyle_crop_supplier_pending",
+      "sourceSha256": "a8672ffbb2420f4088a6a9bc878d9ab32c550e69d1bdc68666d57cf9696dead1",
+      "sha256": "6b08764462c722f850279587a4efe17e4b539aba9eea2909823c9f8875c5ce79"
     }
   ],
-  "websiteEncoding": "Original 42 approved variants and 84 image copies remain unchanged. New concept variants: Kids seal tee, Kids seal hoodie, and Men’s Forest-Green Quilted Vest (6 photo-derived web images). Supplier validation pending.",
+  "websiteEncoding": "Original 42 approved variants and 84 image copies remain unchanged. New concept variants: Kids seal tee, Kids seal hoodie, and Men\u2019s Forest-Green Quilted Vest (6 photo-derived web images). Supplier validation pending.",
   "conceptVariants": 3
 }

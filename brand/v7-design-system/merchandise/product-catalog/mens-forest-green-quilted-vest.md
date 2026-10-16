@@ -11,9 +11,9 @@
 | Logo | Approved cream V7 horse icon centered on the **wearer's left breast**, shifted outward from the front zipper |
 | Color direction | Forest green `#173A2E`, with cream emblem |
 | Master art | [Approved V7 horse vector](../../approved/horse/horse-master-green.svg) — no generated substitutions |
-| Owner approval | Final Outerwear desktop and mobile images, October 16, 2026 |
+| Owner approval | One owner-attached approved source photograph, October 16, 2026; mobile is a crop |
 | Website product views | `public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-product.webp` and `mens-forest-green-quilted-vest-styled.webp` |
-| Photo originals | `foundations/photography/storefront/outerwear/outerwear-mobile-approved-master.png` and `outerwear-desktop-approved-master.png` |
+| Photo originals | `foundations/photography/storefront/outerwear/outerwear-approved-master.jpg` and `outerwear-desktop-approved-master.png` |
 | Fulfillment | Not configured; purchasing disabled |
 | Retail price | Not established |
 | Supplier | Sourcing pending |

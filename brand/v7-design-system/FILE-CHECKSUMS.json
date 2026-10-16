@@ -628,10 +628,9 @@
   "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
   "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
   "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf",
-  "foundations/photography/storefront/outerwear/outerwear-desktop-approved-master.png": "c9e0d01cf59e74a7c5fdcec2afaf610611a10787f2a7b9d7e7e19b8f2e8ec363",
-  "foundations/photography/storefront/outerwear/outerwear-mobile-approved-master.png": "cda9c9a3500ae45f859d504815dc0359a0d73c0d361cb6a39fe7f31b1e00dc4c",
-  "foundations/photography/storefront/outerwear/outerwear-desktop.webp": "ad1d9610fa4a9feca724379178197b4080cf637edc086e615c899cec6534bf26",
-  "foundations/photography/storefront/outerwear/outerwear-mobile.webp": "a66742c3218e0ca18a61b5cc9f0c15852eecca6591f4f19e3b4ca857e6ae36f8",
-  "merchandise/product-catalog/mens-forest-green-quilted-vest.md": "79e7416a53259469fb13bd12e9605a4afc95ec2fc2e9fe14fce8f3ea12ef0198",
-  "merchandise/storefront/outerwear.md": "d9ad325cad2a18df1bcd79411771fceb1ba68d03ac57a14fbed9e95c33f32876"
+  "foundations/photography/storefront/outerwear/outerwear-desktop.webp": "40c27b9d10d0aee51e01b89d3a4c0107223c231b05a774ba5d287748a6d367f9",
+  "foundations/photography/storefront/outerwear/outerwear-mobile.webp": "d93371433a61733db5e6607366252b64ca37245b3c4ae5b264ba7576e148185e",
+  "merchandise/product-catalog/mens-forest-green-quilted-vest.md": "7a668a8fa12adefc2328287af15703dbe9bf100320cb9370dd7064e7d23b4d0d",
+  "merchandise/storefront/outerwear.md": "1dc34d0c0f24d78c014ab87294b9098fde1b98e2f8c1e8afce4bb990286d4976",
+  "foundations/photography/storefront/outerwear/outerwear-approved-master.jpg": "a8672ffbb2420f4088a6a9bc878d9ab32c550e69d1bdc68666d57cf9696dead1"
 }
