@@ -27,6 +27,10 @@ jobs:
           git add public/assets/shop/v7/heroes/shop-*.webp
           git add brand/v7-design-system/foundations/photography/storefront/shop/
           git add brand/v7-design-system/FILE-CHECKSUMS.json
+          git add brand/v7-design-system/merchandise/SHOP-HERO-BRIEF.md
+          git add brand/v7-design-system/merchandise/storefront/EXECUTION-PLAN.md
+          git add brand/v7-design-system/merchandise/storefront/SEO-ROUTES.md
+          git add brand/v7-design-system/merchandise/storefront/shop.md
           git add docs/storefront-heroes/shop-assets.json
           git diff --cached --check
           git commit -m "assets(v7): archive approved Shop desktop and mobile hero photographs"

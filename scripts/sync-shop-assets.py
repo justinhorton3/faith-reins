@@ -83,6 +83,64 @@ def main():
         "noBakedInPageText": True, "releasedToLiveSite": False,
         "images": files,
     }, indent=2) + "\n")
+    # Keep the standalone V7 design-system documentation aligned with the
+    # owner-approved Shop pair; never reinterpret or regenerate approved art.
+    brief_path = V7 / "merchandise/SHOP-HERO-BRIEF.md"
+    brief = brief_path.read_text()
+    headline = """# Shop hero — owner-approved V7 ranch photography
+
+**Approved by owner:** October 16, 2026 — both 1536 × 1024 desktop and 1024 × 1536 mobile photographic compositions.
+
+| View | Portable source master | Portable WebP copy |
+| --- | --- | --- |
+| Desktop | \`foundations/photography/storefront/shop/shop-approved-desktop-master.png\` | \`foundations/photography/storefront/shop/shop-desktop.webp\` |
+| Mobile | \`foundations/photography/storefront/shop/shop-approved-mobile-master.png\` | \`foundations/photography/storefront/shop/shop-mobile.webp\` |
+
+Two adults in forest-green and cream merchandise stand beside a horse at the ranch. The **Shop landing page only** uses these approved photographs. The earlier barn-table product collection scene is retained as historical concept art, not the current landing hero. Responsive website files are independent copies at \`public/assets/shop/v7/heroes/shop-{desktop,mobile}.webp\`. Live text stays in HTML, with a dark green text panel on desktop and text above the portrait on mobile.
+
+**Brand integrity:** User-approved lifestyle mock photography is not production logo artwork. The V7 identity masters in \`approved/\` remain immutable and authoritative for embroidery, printing and manufacturing. Source photographs are byte-preserved; no AI-generated replacement marks or scenes are accepted.
+
+**Implementation:** Responsive hero, six linked collection tiles, all approved catalog product cards and separate merch corner retained. Unique social sharing photo; checkout remains disabled. No live-site release was requested.
+
+---
+
+"""
+    if not brief.startswith("# Shop hero — owner-approved"):
+        brief_path.write_text(headline + brief)
+    checks[brief_path.relative_to(V7).as_posix()] = sha(brief_path.read_bytes())
+
+    plan_path = V7 / "merchandise/storefront/EXECUTION-PLAN.md"
+    plan = plan_path.read_text().replace(
+        "- Shop: next category to review individually before committing a hero.",
+        "- Shop: owner-approved desktop/mobile ranch photograph pair archived in V7 and wired to the main Shop hero, with HTML copy, six category links, existing catalog and merch corner preserved. Not released to live site."
+    )
+    plan_path.write_text(plan)
+    checks[plan_path.relative_to(V7).as_posix()] = sha(plan_path.read_bytes())
+
+    seo_path = V7 / "merchandise/storefront/SEO-ROUTES.md"
+    seo = seo_path.read_text().replace(
+        "| Shop | \`/shop\` | \`/shop.html\` | Existing |",
+        "| Shop | \`/shop\` | \`/shop.html\` | Approved responsive V7 hero and six linked categories |"
+    )
+    if "## Main Shop hero" not in seo:
+        seo += """
+## Main Shop hero
+
+The main Shop landing remains at \`/shop\` with current Wix static output \`/shop.html\`. Its approved desktop and mobile photographic hero assets have dedicated website copies, unique OG/Twitter preview image metadata, HTML heading and CTA, six category navigation tiles, complete approved product catalog, and unchanged merch-corner section. There is no claim of live publication, inventory or confirmed manufacturing artwork. Clean URL redirects require separate verification.
+"""
+    seo_path.write_text(seo)
+    checks[seo_path.relative_to(V7).as_posix()] = sha(seo_path.read_bytes())
+
+    shop_doc = V7 / "merchandise/storefront/shop.md"
+    shop_doc.write_text("""# Main Shop — approved V7 hero
+
+Approved October 16, 2026: distinct golden-hour ranch scene with a man and woman and nearby horse. The exact 1536 × 1024 desktop and 1024 × 1536 mobile originals are archived at \`foundations/photography/storefront/shop/shop-approved-{desktop,mobile}-master.png\`, with same-scene WebP conversions next to each original.
+
+Use **only** on the main Shop landing. Do not replace any category heroes. All page headings, CTAs and navigation are accessible HTML, not text embedded in the photo. Website serves its independent responsive exports under \`public/assets/shop/v7/heroes/shop-{desktop,mobile}.webp\`.
+
+The owner approved the lifestyle concept imagery, not supplier production artwork. Exact V7 SVG logo masters remain the sole source for printed/embroidered graphics. The old barn collection and merch corner originals remain intact. Supplier inventory and checkout are not enabled; no live release was made.
+""")
+    checks[shop_doc.relative_to(V7).as_posix()] = sha(shop_doc.read_bytes())
     CHECKSUMS.write_text(json.dumps(checks, indent=2) + "\n")
     print(json.dumps({"imported": files}, indent=2))
 
