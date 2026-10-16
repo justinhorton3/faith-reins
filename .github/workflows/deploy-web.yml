@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/releases/2026-10-16-approved-shop.md'
+      - '.github/releases/2026-10-16-shop-*.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
@@ -34,6 +34,22 @@ jobs:
         run: python scripts/wix-postbuild.py
       - name: Verify shop category pages, approved hero assets and host-compatible routes
         run: node scripts/verify-shop-category-routes.mjs
+      - name: Exclude unused superseded Shop photography from Wix deployment
+        run: |
+          # Wix Drop uploads the entire static set. Do not remove source files
+          # or any asset referenced by a generated page or stylesheet.
+          for asset in barn-collection.webp coffee-porch.webp; do
+            target="dist/assets/shop/v7/$asset"
+            if [ -f "$target" ]; then
+              if grep -RFl --include='*.html' --include='*.css' --include='*.js' \
+                "/assets/shop/v7/$asset" dist --exclude-dir=assets; then
+                echo "::error title=asset still in use::Cannot exclude $target"
+                exit 1
+              fi
+              rm "$target"
+              echo "::notice title=obsolete asset::$target excluded from upload, unchanged in source"
+            fi
+          done
       - name: Find Wix account ID
         env:
           C1: ${{ secrets.WIX_ACCOUNT_ID }}
@@ -82,7 +98,11 @@ jobs:
           [ -n "$big" ] && echo "::error title=upload::files over 3 MB: $big" && exit 1
           args=()
           while IFS= read -r f; do args+=(-F "files=@$f;filename=$f"); done <<< "$files"
-          code=$(curl -sS -o ../drop.json -w '%{http_code}' -X POST \
+          # HTTP/2 transport on this multipart endpoint returns stream
+          # PROTOCOL_ERROR for oversized form headers. Use HTTP/1.1 and retry
+          # transient network errors; retrying does not enable checkout.
+          code=$(curl --http1.1 --retry 3 --retry-delay 3 --retry-all-errors \
+            --connect-timeout 30 --max-time 300 -sS -o ../drop.json -w '%{http_code}' -X POST \
             "https://www.wixapis.com/headless-business-setup/v1/headless-business/$SITE/drop?campaign=mcp&agent=claude-code" \
             -H "Authorization: $WIX_API_KEY" -H "wix-account-id: $WIX_ACCOUNT_ID" "${args[@]}")
           body=$(tr -d '\n' < ../drop.json | head -c 600)
