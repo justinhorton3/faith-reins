@@ -1,6 +1,6 @@
 # Shop hero: brief for later visual review
 
-Status: prepared for review; no image selection, new composition or website replacement is approved by this brief. The existing shop hero stays unchanged until a separate reviewed website change.
+Status: editorial composition prepared for website review. The new [portable template](../templates/shop-hero.html) pairs the exact approved quarter-zip and quilted-vest styled originals with live copy; source image approvals and original bytes are unchanged. This replaces the earlier shortlist with a concrete review candidate.
 
 ## Goal
 
@@ -29,7 +29,7 @@ Cream and white variants also exist, but this brief deliberately limits the firs
 | Cap feature | Cap product-only image as the primary image | Same original with a separately reviewed crop or contain treatment | Keep the embroidered horse intact; establish whether one accessory adequately represents the shop. |
 | Apparel feature | Quarter-zip or vest styled original beside the headline | Same selected portrait with subject and chest mark visible | Confirm the model-led emphasis and keep the garment identity clear. No generic fleece substitution for the quilted vest. |
 
-No option is selected yet. Start review with a layout using the existing originals, rather than generating replacement photography or repainting logos. Do not regenerate, retouch or overwrite the six approved files. If a future export or crop is needed, save a new derivative, record its parent hash and preserve image detail; never stretch or redraw the mark.
+The apparel feature direction is implemented as two full portraits beside a forest-green copy panel, stacking below the copy on mobile. Review the portable template and website preview; no replacement photography or repainted logo is introduced. Do not regenerate, retouch or overwrite the six approved files. If a future export or crop is needed, save a new derivative, record its parent hash and preserve image detail; never stretch or redraw the mark.
 
 ## Layout and handoff constraints
 
@@ -44,4 +44,4 @@ No option is selected yet. Start review with a layout using the existing origina
 
 The selected desktop/mobile composition is visually approved; source hashes remain unchanged; full product marks and silhouettes survive responsive crops; heading/CTA contrast and keyboard access pass; the website builds without brand and produces identical output with it present. Merchandise production, inventory, pricing and supplier decisions remain separate from choosing a hero image.
 
-See the [photographic hero guide](../foundations/photography/README.md) for all existing page assignments and the historical shop exception. No image generation, Wix upload, storefront publication or asset replacement is performed by this brief.
+See the [photographic hero guide](../foundations/photography/README.md) for all existing page assignments and the historical shop exception. The website implementation is a separate preview change; this reference does not publish production or alter any original images.
