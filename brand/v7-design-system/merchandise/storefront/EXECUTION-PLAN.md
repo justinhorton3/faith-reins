@@ -77,3 +77,13 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 - SEO cleanup: pending.
 - Clean URLs and permanent redirects: pending hosting work.
 - Live release: not requested in this instruction.
+
+## Locked execution loop — October 16 owner correction
+
+Execute **one category at a time**, without interleaving categories:
+1. Produce desktop and mobile hero compositions using authentic, unchanged approved V7 brand art. Lifestyle merchandise is an aspirational sourcing mockup; distinguish it from supplier-confirmed catalog merchandise. Never generate or reinterpret the logo or seal. Keep all page text and calls to action out of photographs.
+2. Present the category hero for owner approval. Do not revisit approved compositions except for explicitly requested corrections.
+3. On approval, complete the category page, responsive assets, product links, SEO, and V7 documentation; verify build; commit/push **that category only** to main.
+4. Immediately present the **next category hero** for approval. Repeat: Kids → Outerwear → Hats → Home & Gifts → Shop.
+
+Kids photographic composition is approved; the generated garment marks are **not** approved. Replace them with exact approved V7 art, complete the Kids page and commit to main before starting Outerwear. No claim that this has already been committed. Supplier sourcing must not block visual design mockups.
