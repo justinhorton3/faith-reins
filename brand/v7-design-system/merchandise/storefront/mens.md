@@ -24,4 +24,6 @@ Justin approved the revised desktop composition on October 16, 2026: two distinc
 
 [Approved desktop master](../../foundations/photography/storefront/mens/mens-desktop-v2-master.png) · [Desktop WebP](../../foundations/photography/storefront/mens/mens-desktop-v2.webp) · [Approval and prompt record](../../foundations/photography/storefront/mens/TWO-MODEL-APPROVAL.json).
 
-The matching mobile portrait is in progress. Website integration of this revised pair follows mobile review. The earlier one-model source remains preserved as historical work.
+The matching mobile portrait has been inspected for continuity with the approved composition and integrated alongside the desktop in the website source. This records implementation review, not a separate owner mobile approval. The earlier one-model source remains preserved as historical work.
+
+[Matching mobile master](../../foundations/photography/storefront/mens/mens-mobile-v2-master.png) · [Mobile WebP](../../foundations/photography/storefront/mens/mens-mobile-v2.webp).

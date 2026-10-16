@@ -16,15 +16,15 @@
     "key": "mens",
     "route": "/shop/mens",
     "hero": {
-      "desktop": "/assets/shop/v7/heroes/mens-desktop.webp",
-      "mobile": "/assets/shop/v7/heroes/mens-mobile.webp",
+      "desktop": "/assets/shop/v7/heroes/mens-desktop-v2.webp",
+      "mobile": "/assets/shop/v7/heroes/mens-mobile-v2.webp",
       "width": 1536,
       "height": 1024,
       "mobileWidth": 1122,
       "mobileHeight": 1402,
-      "desktopFocus": "center",
+      "desktopFocus": "center 15%",
       "mobileFocus": "center",
-      "alt": "Man wearing the forest-green Faith Reins horse polo beside a timber fence at the farm."
+      "alt": "Two men wearing the cream Faith Reins horse hoodie and forest-green horse polo beside the farm fence."
     }
   }
 ]

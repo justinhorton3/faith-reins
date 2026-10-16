@@ -1,53 +1,44 @@
 {
   "category": "mens",
-  "date": "2026-10-16",
-  "status": "generated-concept-implementation-reviewed",
+  "version": "two-models-v2",
+  "status": "owner-approved-desktop-with-matching-mobile-adaptation",
+  "ownerApproval": {
+    "by": "Justin Horton",
+    "date": "2026-10-16",
+    "timezone": "America/Chicago",
+    "evidence": "Approved; Yes, following the two distinct-model desktop preview."
+  },
   "tool": "built-in image_gen",
-  "ownerApproval": "pending visual review",
-  "references": [
-    {
-      "path": "foundations/photography/heroes/desktop/hero-our-mission-desktop.webp",
-      "role": "farm setting",
-      "sha256": "19c4e1790412a86fe9f3a8044136569c99c4a69255979370e18e7b162b4050c2"
-    },
-    {
-      "path": "approved/product-images/mens-forest-green-polo-product.png",
-      "role": "approved product appearance",
-      "sha256": "4d192b4a1aa4b935fddf1dceecfedaff5512a1ff7078e48607656dd3a637db52"
-    }
-  ],
-  "prompt": "Use case: photorealistic-natural. Create a premium Faith Reins ecommerce category hero photograph, LANDSCAPE 3:2, at least 1536 by 1024. Reference image 1 establishes the SAME Arkansas farm: timber-and-wire pasture fence, gravel path, low timber barn with metal roof, wooded green pasture, natural warm late-afternoon light. Recreate that place consistently, but photograph a distinct new moment and camera angle. Remaining references are the exact approved merchandise, including the distinctive right-facing horse-head silhouette with flowing mane; preserve garment construction, forest-green/cream colors, small left-chest embroidery or mug print precisely. Authentic candid adults/children, realistic hands and skin, high-end department-store editorial quality. Frame subjects in the RIGHT 55 percent of the image, from head to at least hips; leave the LEFT 40 percent quiet darker foliage/fence space for live HTML headings. Product and embroidery visible, faces unobstructed. Natural color, light background blur but farm recognizable. NO baked-in words, UI, watermarks, invented lettering or logos. Do not copy the family identities or exact photograph from the farm reference. Subject: one friendly adult man about 40 in the EXACT forest-green three-button horse polo from reference 2, cream horse embroidery on his left chest, and blue jeans. He casually rests a hand on the timber fence and looks toward the pasture, torso turned three-quarters toward camera so the polo logo is visible. No cap. Medium head-to-upper-thigh framing; polo is the focal merchandise.",
-  "mobilePrompt": "Use case: compositing. Recompose THIS EXACT Faith Reins farm merchandise photograph into a PORTRAIT 4:5 mobile ecommerce hero, 1024x1280 or higher. Preserve the same people, faces, exact apparel or cap, garment colors, embroidery logos, farm architecture, timber fence, woodland and natural light. This is art direction for a narrow phone, not a new campaign. Position the person's or both people's full heads and product chest/cap marks in the UPPER 55 percent, centered horizontally; keep both faces and merchandise visible. Pull the camera back as necessary to fit two people. The LOWER 35 percent should be quiet darker fence/path/porch or lower-body background to accommodate live HTML heading and button, with no key merchandise or faces there. No lettering, UI, borders, fake overlay or watermark. Keep horse-head embroidery faithfully matching the source. For outerwear, remove the man's extra cap and keep his head naturally uncovered; preserve the quarter-zip and woman's diamond-quilted vest exactly. For all other categories preserve the original scene and product identity. Photorealistic department-store editorial quality.",
-  "assets": [
-    {
-      "view": "desktop",
-      "master": "foundations/photography/storefront/mens/mens-desktop-master.png",
-      "masterSha256": "e7c61935843c7cbdf361b0eddd57142f6846893fbce4dbbc1d9005e3b0b63254",
-      "masterBytes": 2398857,
-      "package": "foundations/photography/storefront/mens/mens-desktop.webp",
-      "website": "public/assets/shop/v7/heroes/mens-desktop.webp",
-      "sha256": "92281a04aed6ffd468956e21564e967f95fec303c0d2a680f6029945cfc59b42",
-      "bytes": 222228,
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "view": "mobile",
-      "master": "foundations/photography/storefront/mens/mens-mobile-master.png",
-      "masterSha256": "35a289a47ebf0697df32e1e1264d123a9dcadb7ec292e2ed3d03b8d04d3b432e",
-      "masterBytes": 2791607,
-      "package": "foundations/photography/storefront/mens/mens-mobile.webp",
-      "website": "public/assets/shop/v7/heroes/mens-mobile.webp",
-      "sha256": "f9935504d9bbe8635e5c5c1b831de0621b1bf48fe0e9d9bf936a563a6acc38d1",
-      "bytes": 318868,
-      "width": 1122,
-      "height": 1402
-    }
+  "desktopPrompt": "Use case: precise-object-edit / compositing.\nAsset type: Faith Reins Men's category website hero, landscape 3:2.\nPrimary request: Edit reference image 1 to add a SECOND distinct adult man wearing the approved CREAM HOODIE in reference image 2. Show a small collection of men's merchandise in the same farm photograph.\nInput images: Image 1 is the edit target and establishes the existing man in the forest-green horse polo, timber-and-wire fence, barn, pasture, horse and golden afternoon light. Image 2 is the exact approved cream hoodie product reference.\nKeep: Preserve the original polo man's face, hairstyle, forest-green three-button polo and cream horse embroidery; preserve the farm setting, photographic realism and warm natural light. Do not change his shirt or replace him.\nAdd: One friendly second adult man about 35-45 with a clearly different face, slightly shorter dark hair and darker skin tone, wearing the exact warm-cream pullover hoodie from image 2, with hood down, matching cream drawstrings, kangaroo pocket, ribbed cuffs and small DARK-GREEN right-facing horse-head embroidery on HIS LEFT CHEST. Copy the horse silhouette from the supplied product, including flowing mane and shaped jaw. Plain blue jeans. No cap or extra logos.\nComposition: The two men stand comfortably together near the fence, one in green polo and one in cream hoodie, enjoying a relaxed natural conversation. Both torsos turn enough toward camera for BOTH product embroideries to remain visible, with hands away from chest marks. Put both men within the RIGHT 60 percent of a slightly wider frame; original polo man toward right edge, second man beside him closer to center. Keep LEFT 35-40 percent as quiet wooded pasture and fence for live HTML title. Frame both complete heads down to at least upper thighs. No overlapping heads, cropped faces, duplicated anatomy or identical faces.\nStyle: High-end department-store lifestyle campaign, candid, realistic fabric and skin, no exaggerated fashion pose. Preserve original photo quality and farm architecture. No baked-in text, UI, border or watermark.",
+  "identityCorrectionPrompt": "Use case: precise-object-edit. Edit the supplied landscape Faith Reins photograph. CHANGE ONLY THE MAN WEARING THE CREAM HOODIE (the man nearer the center/left). Replace him with a clearly different adult male model: a Black man around age 30, dark-brown skin, very short closely cropped black hair, clean-shaven face, broad warm smile and a different facial structure and build. He must be unmistakably a different person from the white brown-haired bearded man in the green polo. Keep his relaxed pose at the timber fence and his exact cream pullover hoodie, dark-green horse embroidery on his left chest, cream drawstrings, kangaroo pocket and blue jeans. Preserve the hoodie branding and garment design precisely. KEEP THE MAN IN THE GREEN POLO COMPLETELY UNCHANGED: same face, hair, beard, expression, body, green polo and cream horse embroidery. Preserve the landscape composition, both models' positions, farm, timber-and-wire fence, barn, background horse, warm golden light, photographic texture and image quality. Exactly two adult men, natural conversation, both products and chest logos visible. No new text, logos, borders or watermarks. Do not make the two men resemble each other.",
+  "mobileStatus": "implementation-reviewed adaptation of approved two-model composition; no separate owner mobile approval claimed",
+  "websiteIntegration": "independent website copies integrated on /shop/mens; live release pending",
+  "productReferences": [
+    "approved/product-images/mens-forest-green-polo-product.png",
+    "approved/product-images/mens-cream-hoodie-product.png"
   ],
   "notes": [
-    "New generated lifestyle concept; not an unchanged approved product original.",
-    "PNG masters preserved byte for byte; WebP exports are format-encoded copies without cropping.",
-    "Desktop and portrait mobile scenes separately art-directed with image_gen.",
-    "Supplier specifications, inventory and manufacturing approval are not established by imagery."
-  ]
+    "Approved composition: two distinct male models, green horse polo and cream horse hoodie in the existing farm setting.",
+    "Preserve previous generated images as historical candidates; this approval applies to the revised desktop composition.",
+    "No live release."
+  ],
+  "desktop": {
+    "master": "foundations/photography/storefront/mens/mens-desktop-v2-master.png",
+    "masterSha256": "f0a3db48b8b4213d5cd864734cfc4302c3d462ea1730bda196421433e50e8dfe",
+    "masterBytes": 2402600,
+    "export": "foundations/photography/storefront/mens/mens-desktop-v2.webp",
+    "exportSha256": "201ad36ce76307d782370008ed60e76e00006609519b1c07c893731abc272163",
+    "width": 1536,
+    "height": 1024
+  },
+  "mobilePrompt": "Use case: compositing. Create the matching PORTRAIT 4:5 mobile hero for this APPROVED Faith Reins Men's desktop image. The reference is the approved image and must establish both exact models and garments. Keep EXACTLY TWO clearly different men: on the left, the Black clean-shaven man with very short black hair wearing the cream pullover hoodie with small dark-green horse embroidery on his left chest, cream drawstrings and kangaroo pocket; on the right, the white brown-haired bearded man wearing the forest-green three-button polo with cream horse embroidery on his left chest. Preserve their distinct faces, smiles, hair, body proportions, product silhouettes, colors and logo designs. Do not replace either person or make them look alike. Reframe both men standing naturally together beside the SAME timber-and-wire farm fence, with same barn, wooded pasture, background horse and warm golden afternoon light. Keep their relaxed conversation and both torsos angled so that BOTH chest logos remain visible. Mobile art direction: pull back enough to fit both men side by side without cropping heads or bodies at the sides; place both heads around the upper 20-25 percent of the portrait, both chest marks around 35-45 percent. The lower third should be mainly jeans, lower fence and gravel path, reserved for live HTML category heading and CTA. Portrait 4:5 image, high-resolution photorealistic department-store lifestyle photography. No lettering, UI, overlays, watermarks, borders or new branding. Preserve the approved product appearance faithfully.",
+  "mobile": {
+    "master": "foundations/photography/storefront/mens/mens-mobile-v2-master.png",
+    "masterSha256": "c02690dac9d9269445e090ecd922c8867a1680fa9d794a0fb15073d97e857e48",
+    "masterBytes": 3153949,
+    "export": "foundations/photography/storefront/mens/mens-mobile-v2.webp",
+    "exportSha256": "c4ae50eca1463f080fa916e134d720addbd7810f49ed806fe7a39f83e6db9ec4",
+    "width": 1122,
+    "height": 1402
+  }
 }
