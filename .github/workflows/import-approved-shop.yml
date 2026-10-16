@@ -1,0 +1,33 @@
+name: Import approved Shop V7 hero
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-approved-shop.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Verify original approved bytes, archive and export responsive assets
+        run: python scripts/sync-shop-assets.py
+      - name: Commit only the approved Shop photography and portable V7 checksum
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/assets/shop/v7/heroes/shop-*.webp
+          git add brand/v7-design-system/foundations/photography/storefront/shop/
+          git add brand/v7-design-system/FILE-CHECKSUMS.json
+          git add docs/storefront-heroes/shop-assets.json
+          git diff --cached --check
+          git commit -m "assets(v7): archive approved Shop desktop and mobile hero photographs"
+          git push origin HEAD:main
