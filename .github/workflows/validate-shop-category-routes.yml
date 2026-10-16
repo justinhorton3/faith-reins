@@ -1,0 +1,35 @@
+name: Validate shop category routes
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/lib/shop-category-pages.json'
+      - 'src/lib/pages-main.mjs'
+      - 'src/layouts/Base.astro'
+      - 'scripts/verify-shop-category-routes.mjs'
+      - '.github/workflows/validate-shop-category-routes.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/lib/shop-category-pages.json'
+      - 'src/lib/pages-main.mjs'
+      - 'src/layouts/Base.astro'
+      - 'scripts/verify-shop-category-routes.mjs'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: python scripts/wix-postbuild.py
+      - run: node scripts/verify-shop-category-routes.mjs
