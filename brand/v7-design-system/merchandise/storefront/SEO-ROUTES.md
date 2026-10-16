@@ -6,9 +6,9 @@
 | --- | --- | --- | --- |
 | Shop | `/shop` | `/shop.html` | Existing |
 | Men | `/shop/men` | `/shop/men.html` | Renamed from `/shop/mens` |
-| Women | `/shop/women` | `/shop/women.html` | Approved hero; implementation next |
+| Women | `/shop/women` | `/shop/women.html` | Implemented with approved hero |
 | Kids | `/shop/kids` | `/shop/kids.html` | Existing |
-| Outerwear | `/shop/outerwear` | `/shop/outerwear.html` | Awaiting hero approval |
+| Outerwear | `/shop/outerwear` | `/shop/outerwear.html` | Approved and implemented |
 | Hats | `/shop/hats` | `/shop/hats.html` | Awaiting hero approval |
 | Home & Gifts | `/shop/home-gifts` | `/shop/home-gifts.html` | Awaiting hero approval |
 
@@ -30,3 +30,7 @@
 3. Outerwear: present hero for visual approval, then build, verify and commit.
 4. Hats and Home & Gifts follow the same approval → category page → commit loop.
 5. Verify clean-routing and HTTP 301 support in the serving platform before switching canonicals to extensionless URLs or claiming those URLs resolve.
+
+## Outerwear SEO details
+
+`/shop/outerwear` is the sole category canonical. The new men’s vest uses `/shop/men-quilted-vest` as its single product URL; it is also listed under Men. No duplicate product URLs or invented offers. Current Wix preview/static hosting uses `.html` targets until clean URL routing is verified. Live page headings and CTAs are always HTML.

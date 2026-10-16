@@ -1728,5 +1728,30 @@
     "fulfillment_status": "not_configured",
     "size_chart_status": "supplier_confirmation_pending",
     "provenance_note": "Owner-approved Kids lifestyle image crop. Approved V7 seal masters remain the manufacturing artwork; product imagery is a concept, not supplier validation."
+  },
+  {
+    "id": "mens-forest-green-quilted-vest",
+    "title": "Men’s Forest-Green Quilted Vest",
+    "description": "Owner-approved forest-green men’s diamond-quilted vest with the cream V7 horse signature centered on the wearer’s left breast away from the zipper. New visual sourcing concept.",
+    "detail_path": "merchandise/product-catalog/mens-forest-green-quilted-vest.md",
+    "images": [
+      {
+        "view": "product",
+        "website_path": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-product.webp",
+        "review_status": "approved-lifestyle-photo-concept",
+        "identity_method": "owner-approved-Outerwear-photo-derived-crop",
+        "binary_status": "website-webp-committed"
+      },
+      {
+        "view": "styled",
+        "website_path": "public/assets/shop/v7/catalog/mens-forest-green-quilted-vest-styled.webp",
+        "review_status": "approved-lifestyle-photo-concept",
+        "identity_method": "owner-approved-Outerwear-photo-derived-crop",
+        "binary_status": "website-webp-committed"
+      }
+    ],
+    "fulfillment_status": "not_configured",
+    "size_chart_status": "supplier_confirmation_pending",
+    "provenance_note": "Distinct men's style; approved photo does not establish physical inventory, garment sample, pricing or size chart. Manufacturing uses unchanged approved V7 horse vector."
   }
 ]

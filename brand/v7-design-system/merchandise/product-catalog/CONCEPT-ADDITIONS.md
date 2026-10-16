@@ -1,4 +1,4 @@
-# Kids' seal-branded collection — approved concept additions
+# V7 approved merchandise concepts — supplier sourcing pending
 
 These are two NEW sourcing concepts inspired by the owner-approved Kids hero on 2026-10-16. They are separate from the previously approved boys' and girls' horse-logo polos and hoodies. The existing 42 V7 original source designs remain locked; this supplement records two additional proposed products and does not rewrite those originals.
 
@@ -8,3 +8,11 @@ These are two NEW sourcing concepts inspired by the owner-approved Kids hero on 
 | [Kids’ Seal Hoodie](kids-forest-green-seal-hoodie.md) | Forest-green hoodie, cream V7 seal | `/shop/kids-seal-hoodie` | Owner-approved image; supplier pending |
 
 All product sizes, manufacturing specs, final decoration method, print placement, costs, stock, and selling prices require future supplier confirmation. These are visual merchandise concepts; no buying is enabled.
+
+## Men’s vest — approved October 16, 2026
+
+| New product | Website product route | Reference | Status |
+| --- | --- | --- | --- |
+| [Men’s Forest-Green Quilted Vest](mens-forest-green-quilted-vest.md) | `/shop/men-quilted-vest` | Approved Outerwear desktop and mobile images | Visual concept approved; supplier and measurements pending |
+
+The new men’s vest is intentionally separate from the original `quilted-vest` family. Neither its photo crops nor its proposed sizes constitute manufacturing or stock verification. Preserve all 42 original locked source designs.

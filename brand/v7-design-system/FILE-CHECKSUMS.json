@@ -547,8 +547,8 @@
   "merchandise/product-catalog/boys-forest-green-polo.md": "a7186f9378b44c9cbecd5b03bd25138e34e438c333da93ec3bf0f520d8080b82",
   "merchandise/product-catalog/boys-tonal-forest-green-polo.md": "7d2375435ef33bb162e98f3e512b2486cc01ff59548f1a6299a167fe03dd4c0b",
   "merchandise/product-catalog/boys-white-polo.md": "683187486c099de22ac2db4e1c12c815cf90b824fb148fe2fa0359b902c0f980",
-  "merchandise/product-catalog/catalog.json": "d33e9b32c796582be356ebb9533b0de76e79706a952706deb6db45b027e29cd1",
-  "merchandise/product-catalog/CONCEPT-ADDITIONS.md": "b01eb2db24531003b365a718ed88bc1e2cc12c38b19fc9a31fa42bb565bdbf93",
+  "merchandise/product-catalog/catalog.json": "700de2457ed23d6cfaed6d3fda2a10d40ed95dac8be00e7dcad5739320923205",
+  "merchandise/product-catalog/CONCEPT-ADDITIONS.md": "2e79c7b3f79dd873c1da3392984a002bcb5dca600ffe3044186e3be9b98977f7",
   "merchandise/product-catalog/cream-document-logo-mug.md": "26363c5387fd59ef49672f7ad3135f1053613596a94b74866faf84484e69b937",
   "merchandise/product-catalog/cream-document-logo-water-bottle.md": "74375e5c35c2ea2677eb7df267a5dbb6c01ee548678c671e77026a0d8dd16fb3",
   "merchandise/product-catalog/cream-embroidered-throw.md": "eadb5781867780deca98983633e72aa3f0fc70bf4a04dc4b4fe67698576c334d",
@@ -624,12 +624,14 @@
   "templates/shop-hero.css": "b6aedfd0e2fca287bf80f2ba8c70c71a638c117a3ae3ea6bccb6b00637f60b9e",
   "templates/shop-hero.html": "bf52f363b7c9915fa3232020ecdd041a3a0b7e9f6f984431d389f8d81383bca2",
   "templates/social-announcement.svg": "f8bb48e1cbd3d2dc230d0db967db604ac6c04805a2ca21d859b88ebfaf2eaa13",
-  "merchandise/storefront/SEO-ROUTES.md": "077499fd08f0840e59ad1cd32ae85b4d4df357bd1012860d42679e662e933260",
+  "merchandise/storefront/SEO-ROUTES.md": "567520bf7f6a516f2d066a231066268c297aee4ecb13c5aaa012410d56ea84a9",
   "foundations/photography/storefront/women/women-approved-mobile-master.png": "00abda286db868b17f6da82abf5357b6db000c1ccc8572699e52990803d44805",
   "foundations/photography/storefront/women/women-mobile.webp": "8c0c27302e302cc06953d329002f0793d8b778d4bf5d90dc46d361e7a0a450c6",
   "foundations/photography/storefront/women/women-desktop.webp": "58bce42fea6a74f396b1b24d1790277d902597995aec696c238c1ca7558eaadf",
   "foundations/photography/storefront/outerwear/outerwear-desktop-approved-master.png": "c9e0d01cf59e74a7c5fdcec2afaf610611a10787f2a7b9d7e7e19b8f2e8ec363",
   "foundations/photography/storefront/outerwear/outerwear-mobile-approved-master.png": "cda9c9a3500ae45f859d504815dc0359a0d73c0d361cb6a39fe7f31b1e00dc4c",
   "foundations/photography/storefront/outerwear/outerwear-desktop.webp": "ad1d9610fa4a9feca724379178197b4080cf637edc086e615c899cec6534bf26",
-  "foundations/photography/storefront/outerwear/outerwear-mobile.webp": "a66742c3218e0ca18a61b5cc9f0c15852eecca6591f4f19e3b4ca857e6ae36f8"
+  "foundations/photography/storefront/outerwear/outerwear-mobile.webp": "a66742c3218e0ca18a61b5cc9f0c15852eecca6591f4f19e3b4ca857e6ae36f8",
+  "merchandise/product-catalog/mens-forest-green-quilted-vest.md": "79e7416a53259469fb13bd12e9605a4afc95ec2fc2e9fe14fce8f3ea12ef0198",
+  "merchandise/storefront/outerwear.md": "d9ad325cad2a18df1bcd79411771fceb1ba68d03ac57a14fbed9e95c33f32876"
 }
