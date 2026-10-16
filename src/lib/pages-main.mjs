@@ -1,5 +1,6 @@
 import PRODUCTS from "./products.json" with { type: "json" };
 import { productShowcase, showcaseCard } from "./product-showcase.mjs";
+import { shopCategories, categoryPage } from "./shop-categories.mjs";
 import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
@@ -9,7 +10,7 @@ const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeatur
 import { FAQ_GROUPS, fallback } from "./content.mjs";
 import { teamBlock, horsesBlock, testimonialsBlock, faqBlock, sponsorsBlock } from "./blocks.mjs";
 export const pages = [];
-export const add = (route, title, description, body, jsonld) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld });
+export const add = (route, title, description, body, jsonld, seo = {}) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld, seo });
 
 const APPT = ["Request an appointment", "/book-online"];
 const TEL = `<a href="tel:${SITE.tel}">${SITE.phone}</a>`;
@@ -339,6 +340,11 @@ add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies
   merchCorner() +
   section(sh({ eyebrow: "Size & fit", title: "A fit for your everyday.", size: "sm", body: "Explore size and format information on each product page. Final measurements and product details will be confirmed before ordering is available." }), { tone: "paper", id: "size-guide" }) +
   ctaBand({ tone: "sand", title: "A shared purpose.", body: "Help children and families grow through pediatric therapy and equine-assisted learning.", primary: ["Support Faith Reins", "/give"] }));
+
+shopCategories.forEach(category => {
+  const page = categoryPage(category);
+  add(category.route, category.title, page.description, page.body, page.jsonld, page.seo);
+});
 
 PRODUCTS.forEach((product) => {
   const related = PRODUCTS.filter(other => other.slug !== product.slug && other.group === product.group)

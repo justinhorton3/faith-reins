@@ -1,0 +1,28 @@
+/* Full-width farm photography; live text and merchandise remain separate. */
+.hero--collection { height:clamp(640px,calc(100svh - 124px),920px); }
+.hero--collection .hero__body { width:min(430px,calc(100% - 2 * var(--g))); gap:24px; }
+.hero--collection .hero__title { font-size:clamp(60px,6vw,90px); }
+.hero--collection .hero__lead { max-width:30ch; font-size:20px; }
+.hero--collection .hero__scrim { background:linear-gradient(90deg,rgba(12,30,21,.86),rgba(12,30,21,.65) 25%,rgba(12,30,21,.12) 58%,transparent 78%); }
+.shop-collections { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 40px; }
+.shop-collections a { display:inline-flex; align-items:center; min-height:44px; padding:10px 20px; border:1px solid var(--fr-green); color:var(--fr-green); text-decoration:none; font:500 13px/1.4 var(--font-sans); }
+.shop-collections a[aria-current="page"],.shop-collections a:hover { background:var(--fr-green); color:var(--fr-cream); }
+.shop-collections a:focus-visible { outline:3px solid #a77b32; outline-offset:3px; }
+.collection-crumbs { display:flex; gap:12px; margin:0 0 26px; font:400 13px/1.5 var(--font-sans); color:var(--muted); }
+.collection-crumbs a { color:var(--fr-green); text-underline-offset:4px; }
+#shop-products { scroll-margin-top:110px; }
+@media(max-width:1023px) and (min-width:768px) {
+  .hero--collection .hero__body { width:40%; gap:20px; }
+  .hero--collection .hero__title { font-size:58px; }
+  .hero--collection .hero__lead { font-size:17px; }
+}
+@media(max-width:767px) {
+  .hero--collection { height:calc(100svh - 104px); min-height:660px; max-height:920px; }
+  .hero--collection .hero__body { top:auto; bottom:30px; width:calc(100% - 2 * var(--g)); gap:16px; }
+  .hero--collection .hero__title { font-size:clamp(48px,13vw,68px); max-width:10ch; }
+  .hero--collection .hero__lead { font-size:17px; line-height:1.5; max-width:30ch; }
+  .hero--collection .hero__actions { padding-top:0; }
+  .hero--collection .hero__scrim { background:linear-gradient(0deg,rgba(12,30,21,.98),rgba(12,30,21,.88) 23%,rgba(12,30,21,.3) 50%,transparent 72%); }
+  .shop-collections { gap:8px; margin-bottom:32px; }
+  .shop-collections a { padding:10px 14px; }
+}
