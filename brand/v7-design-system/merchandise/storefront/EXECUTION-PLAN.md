@@ -71,9 +71,9 @@ For each category: obtain explicit owner visual approval first. Then build Astro
 
 - Planning: committed; owner review gate now required.
 - Shared foundation: committed.
-- Men's: committed before the owner review gate; awaiting owner visual review.
+- Men's: original one-model page committed; revised two-distinct-model desktop explicitly owner-approved October 16. Approved desktop master is recorded in V7; matching mobile review and website integration remain pending.
 - Women's / Kids / Outerwear / Hats / Home & Gifts / Shop: generated drafts only; not approved, integrated or committed.
-- Current review: Men's desktop and mobile hero. Wait for explicit approval before proceeding to Women's.
+- Current review: Women's revised desktop, requested by Justin after approving the Men's two-model desktop. Use two distinct women and a different farm porch background; a branded mug may be included. Men's matching mobile review remains pending.
 - SEO cleanup: pending.
 - Clean URLs and permanent redirects: pending hosting work.
 - Live release: not requested in this instruction.
