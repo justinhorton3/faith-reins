@@ -340,7 +340,9 @@ add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies
 <script>(function(){var buttons=[].slice.call(document.querySelectorAll('.shop-filter'));var cards=[].slice.call(document.querySelectorAll('#merch-grid .merch-card'));buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',String(other===button))});cards.forEach(function(card){card.hidden=button.dataset.filter!=='all'&&card.dataset.group!==button.dataset.filter})})})})();</script>`, { id: "shop-products" }) +
   merchCorner() +
   section(sh({ eyebrow: "Size & fit", title: "A fit for your everyday.", size: "sm", body: "Explore size and format information on each product page. Final measurements and product details will be confirmed before ordering is available." }), { tone: "paper", id: "size-guide" }) +
-  ctaBand({ tone: "sand", title: "A shared purpose.", body: "Help children and families grow through pediatric therapy and equine-assisted learning.", primary: ["Support Faith Reins", "/give"] }));
+  ctaBand({ tone: "sand", title: "A shared purpose.", body: "Help children and families grow through pediatric therapy and equine-assisted learning.", primary: ["Support Faith Reins", "/give"] }),
+  undefined,
+  { image: "https://www.faithreins.com/assets/shop/v7/heroes/shop-desktop.webp", imageAlt: "A man and a woman wearing Faith Reins merchandise at the ranch", imageWidth: 1536, imageHeight: 1024 });
 
 // Temporary host-compatible alias for the old Men’s URL.
 // noindex plus an HTML redirect, pending a true server-side HTTP 301 at the edge.
