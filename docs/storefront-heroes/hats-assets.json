@@ -1,0 +1,48 @@
+{
+  "category": "hats",
+  "review": "Owner explicitly approved the Wixel Hats hero October 16, 2026",
+  "approvedSourceAssetId": "7203064a-513e-4021-a141-0191b7c85eff",
+  "approvedSourceLink": "https://links.wixel.com/link/8zl4nwlpUK",
+  "original": {
+    "url": "https://static.wixstatic.com/media/8fe1a1_b6cea94e312742f6854bc348b46b6fef~mv2.png",
+    "path": "brand/v7-design-system/foundations/photography/storefront/hats/hats-approved-master.png",
+    "sha256": "da3bb723437eb7ec27adeb4ff7a667035f2eeb8eb77cac11dcdffc7e6269442d",
+    "bytes": 4487503,
+    "width": 2048,
+    "height": 1152
+  },
+  "derivatives": [
+    {
+      "path": "public/assets/shop/v7/heroes/hats-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 229356,
+      "sha256": "45f7589dc2bf3092b450f3557aee98731b5ff7c80d0f9c7c9d0c72d9a9c4c4c7"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/hats/hats-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 229356,
+      "sha256": "45f7589dc2bf3092b450f3557aee98731b5ff7c80d0f9c7c9d0c72d9a9c4c4c7"
+    },
+    {
+      "path": "public/assets/shop/v7/heroes/hats-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 118272,
+      "sha256": "4ba69c03a1304ede2c28f10f6db11989b380f1b5d9dd0782ed2f34a948494f5f"
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/hats/hats-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 118272,
+      "sha256": "4ba69c03a1304ede2c28f10f6db11989b380f1b5d9dd0782ed2f34a948494f5f"
+    }
+  ],
+  "mobileComposition": "Derived solely from approved image; uncropped source centered atop blurred extension of same pixels, no new source photo",
+  "textInImage": false,
+  "siteReleased": false,
+  "sourceIdentityNote": "This is the exact user-approved Wixel hero; original V7 horse SVG and original cap product images remain unchanged. Product supplier pending."
+}
