@@ -1,6 +1,6 @@
 # Shop hero: brief for later visual review
 
-Status: natural lifestyle composition prepared for review. The user requested warm everyday imagery after reviewing the paired studio portraits. The [portable template](../templates/shop-hero.html) now uses a new chair-and-coffee scene; [provenance](../foundations/photography/shop-lifestyle/PROVENANCE.json) distinguishes this generated concept from unchanged approved product originals.
+Status: natural barn-table collection composition prepared for review using the user’s preferred reference. The [portable template](../templates/shop-hero.html) includes live hero copy and a separate merch-corner concept below collection content. [Provenance and prompt](../foundations/photography/shop-lifestyle/PROVENANCE.json) record the supplied exact V7 logo references and new generated scene.
 
 ## Goal
 
@@ -29,7 +29,7 @@ Cream and white variants also exist, but this brief deliberately limits the firs
 | Cap feature | Cap product-only image as the primary image | Same original with a separately reviewed crop or contain treatment | Keep the embroidered horse intact; establish whether one accessory adequately represents the shop. |
 | Apparel feature | Quarter-zip or vest styled original beside the headline | Same selected portrait with subject and chest mark visible | Confirm the model-led emphasis and keep the garment identity clear. No generic fleece substitution for the quilted vest. |
 
-The natural lifestyle direction supersedes the paired studio portraits: one full landscape scene beside live copy, stacked below copy on mobile. The source PNG is preserved, and a WebP copy at the same dimensions is used on the website. This new concept does not alter or replace any approved product original. It is not evidence of an existing product, supplier or manufacturing result.
+The barn-table collection arrangement supersedes the portrait feature: hoodie, tee, cap, mug and key fob in natural light with V7 artwork references. A preserved source PNG and same-size WebP derivative are separate from approved product originals. Desktop uses live copy over the dark left background; smaller screens put copy above a right-focused crop. The user’s merch-corner concept appears separately below the catalog. Neither concept establishes inventory or manufacturing approval.
 
 ## Layout and handoff constraints
 
