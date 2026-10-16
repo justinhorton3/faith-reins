@@ -1,0 +1,67 @@
+{
+  "category": "kids",
+  "status": "owner-approved visual concept; supplier pending",
+  "approvalDate": "2026-10-16",
+  "source": "https://static.wixstatic.com/media/8fe1a1_8c5023f6b1844f4d80689ad4c52503b3~mv2.png",
+  "master": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile-approved-master.png",
+  "sourceSha256": "045f8c14980e4a42c64a8f5c8e3024db3a1f5810c07af372a09c85b21d7c8b32",
+  "files": [
+    {
+      "path": "public/assets/shop/v7/heroes/kids-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4dce21b79355e3d0c84942714ba575627d0d91da9e229fc7b8aa813177d2b8a9",
+      "bytes": 245098
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/kids/kids-mobile.webp",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4dce21b79355e3d0c84942714ba575627d0d91da9e229fc7b8aa813177d2b8a9",
+      "bytes": 245098
+    },
+    {
+      "path": "public/assets/shop/v7/heroes/kids-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7dd54b174056d8b2e8e1f4f768cc33b3d55c0736b72d0aabde534ef21ba6c9db",
+      "bytes": 143574
+    },
+    {
+      "path": "brand/v7-design-system/foundations/photography/storefront/kids/kids-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7dd54b174056d8b2e8e1f4f768cc33b3d55c0736b72d0aabde534ef21ba6c9db",
+      "bytes": 143574
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/kids-cream-seal-tee-product.webp",
+      "width": 900,
+      "height": 1200,
+      "sha256": "c80539d8e8d0b8fa7119a51adf898f596890b46633be104306aeb155edbf26a7",
+      "bytes": 61512
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/kids-cream-seal-tee-styled.webp",
+      "width": 900,
+      "height": 1200,
+      "sha256": "2371a5b320e9063b7146e4b0d0d266c7ede71dac90a6a051dae0894c4481e799",
+      "bytes": 67754
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-product.webp",
+      "width": 900,
+      "height": 1200,
+      "sha256": "e2096b0f0142f108bc62f591b49dad9e689c9410e4a2e3dc639cfeb373c9c0ea",
+      "bytes": 74422
+    },
+    {
+      "path": "public/assets/shop/v7/catalog/kids-forest-green-seal-hoodie-styled.webp",
+      "width": 900,
+      "height": 1200,
+      "sha256": "30b30693b08be1629cf2974e40d1a9625fc9267fb46d33ac6a80f73af3f82976",
+      "bytes": 88770
+    }
+  ],
+  "note": "Tee and hoodie are sourcing concepts, not for sale. The immutable V7 seal masters in brand/v7-design-system/approved/seal are the production artwork, not embedded photo pixels. No text is baked into the hero."
+}
