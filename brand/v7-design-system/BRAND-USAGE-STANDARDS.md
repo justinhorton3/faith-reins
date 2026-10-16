@@ -38,7 +38,3 @@ Small horse-only left-chest embroidery is the premium polo/quarter-zip/vest dire
 ## Never
 
 Do not stretch, trace, regenerate, recolor by filter, remove the subtitle, substitute `fr`, introduce a standing horse, alter seal rings/rope/date, add visual effects or select candidates/legacy art as production masters. PNG exports are convenience derivatives; SVG masters are production source files. Mockup photography is not supplier-ready print artwork.
-
-## Approved Outerwear photography example — October 16, 2026
-
-For the `/shop/outerwear` **lifestyle hero specifically** (not a global production rule), the small horse emblem on the cream quarter-zip is **80% of the previously pictured icon width/height**. The emblem on the forest-green men's quilted vest is centered on the **wearer's left chest panel**, with visible clearance from the zipper. See `merchandise/storefront/outerwear.md` for the preserved desktop/mobile photo hashes. These photographs are visual sourcing examples, not supplier-ready stitch or print files. Use the original locked V7 horse/vector and approved one-color variants when commissioning production; do not trace a horse silhouette from photographs.
