@@ -30,12 +30,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/polos/mens-white-polo-product.png",
+            "src": "/assets/shop/v7/polos/mens-white-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/polos/mens-white-polo-styled.png",
+            "src": "/assets/shop/v7/polos/mens-white-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -108,12 +108,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/polos/mens-cream-polo-product.png",
+            "src": "/assets/shop/v7/polos/mens-cream-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/polos/mens-cream-polo-styled.png",
+            "src": "/assets/shop/v7/polos/mens-cream-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -135,12 +135,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/polos/mens-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/polos/mens-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/polos/mens-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/polos/mens-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -162,12 +162,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/mens-tonal-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -206,12 +206,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/womens-white-polo-product.png",
+            "src": "/assets/shop/v7/catalog/womens-white-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/womens-white-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/womens-white-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -233,12 +233,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/womens-cream-polo-product.png",
+            "src": "/assets/shop/v7/catalog/womens-cream-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/womens-cream-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/womens-cream-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -260,12 +260,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/womens-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -287,12 +287,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/womens-tonal-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -330,12 +330,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/boys-white-polo-product.png",
+            "src": "/assets/shop/v7/catalog/boys-white-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/boys-white-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/boys-white-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -356,12 +356,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/boys-cream-polo-product.png",
+            "src": "/assets/shop/v7/catalog/boys-cream-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/boys-cream-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/boys-cream-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -382,12 +382,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/boys-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -408,12 +408,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/boys-tonal-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -451,12 +451,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/girls-white-polo-product.png",
+            "src": "/assets/shop/v7/catalog/girls-white-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/girls-white-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/girls-white-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -477,12 +477,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/girls-cream-polo-product.png",
+            "src": "/assets/shop/v7/catalog/girls-cream-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/girls-cream-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/girls-cream-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -503,12 +503,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/girls-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -529,12 +529,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-product.png",
+            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-styled.png",
+            "src": "/assets/shop/v7/catalog/girls-tonal-forest-green-polo-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -573,12 +573,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-quarter-zip-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -600,12 +600,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-quarter-zip-product.png",
+            "src": "/assets/shop/v7/catalog/cream-quarter-zip-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-quarter-zip-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-quarter-zip-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -627,12 +627,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/white-quarter-zip-product.png",
+            "src": "/assets/shop/v7/catalog/white-quarter-zip-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/white-quarter-zip-styled.png",
+            "src": "/assets/shop/v7/catalog/white-quarter-zip-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -671,12 +671,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-quilted-vest-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -698,12 +698,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-quilted-vest-product.png",
+            "src": "/assets/shop/v7/catalog/cream-quilted-vest-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-quilted-vest-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-quilted-vest-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -725,12 +725,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/white-quilted-vest-product.png",
+            "src": "/assets/shop/v7/catalog/white-quilted-vest-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/white-quilted-vest-styled.png",
+            "src": "/assets/shop/v7/catalog/white-quilted-vest-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -768,12 +768,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-product.png",
+            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-styled.png",
+            "src": "/assets/shop/v7/catalog/mens-forest-green-hoodie-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -846,12 +846,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-product.png",
+            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-styled.png",
+            "src": "/assets/shop/v7/catalog/mens-cream-hoodie-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -889,12 +889,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-product.png",
+            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-styled.png",
+            "src": "/assets/shop/v7/catalog/womens-forest-green-hoodie-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -931,12 +931,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-product.png",
+            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-styled.png",
+            "src": "/assets/shop/v7/catalog/boys-forest-green-hoodie-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -973,12 +973,12 @@
         ],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-product.png",
+            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-styled.png",
+            "src": "/assets/shop/v7/catalog/girls-forest-green-hoodie-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1010,12 +1010,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-cap-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1030,12 +1030,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-horse-cap-product.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-cap-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-horse-cap-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-cap-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1050,12 +1050,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/white-horse-cap-product.png",
+            "src": "/assets/shop/v7/catalog/white-horse-cap-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/white-horse-cap-styled.png",
+            "src": "/assets/shop/v7/catalog/white-horse-cap-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1087,12 +1087,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-horse-mug-product.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-mug-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-horse-mug-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-mug-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1107,12 +1107,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-mug-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1144,12 +1144,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-product.png",
+            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-document-logo-mug-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1164,12 +1164,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-mug-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1201,12 +1201,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-product.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-horse-water-bottle-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1221,12 +1221,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-water-bottle-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1258,12 +1258,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-product.png",
+            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-document-logo-water-bottle-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1278,12 +1278,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-water-bottle-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1315,12 +1315,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-horse-journal-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1352,12 +1352,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-document-logo-journal-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1389,12 +1389,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-product.png",
+            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-styled.png",
+            "src": "/assets/shop/v7/catalog/cream-embroidered-throw-styled.webp",
             "width": 1086,
             "height": 1448
           }
@@ -1409,12 +1409,12 @@
         "sizes": [],
         "images": {
           "product": {
-            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-product.png",
+            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-product.webp",
             "width": 1086,
             "height": 1448
           },
           "styled": {
-            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-styled.png",
+            "src": "/assets/shop/v7/catalog/forest-green-embroidered-throw-styled.webp",
             "width": 1086,
             "height": 1448
           }

@@ -73,7 +73,7 @@ jobs:
                 const response = await fetch(product, { signal: AbortSignal.timeout(30000) });
                 const html = await response.text();
                 if (!response.ok || !html.includes('data-polo-showcase') || !html.includes('Out of stock')) continue;
-                const assetPaths = [...new Set(html.match(/\/assets\/shop\/v7\/polos\/[a-z-]+\.png/g) || [])];
+                const assetPaths = [...new Set(html.match(/\/assets\/shop\/v7\/polos\/[a-z-]+\.webp/g) || [])];
                 if (!assetPaths.length) throw new Error('Polo images are absent from the hosted page.');
                 for (const path of assetPaths) {
                   const asset = await fetch(new URL(path, base), { method: 'HEAD', signal: AbortSignal.timeout(30000) });
