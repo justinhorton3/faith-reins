@@ -2,7 +2,7 @@
 
 Status: planned; implementation has not started.
 Approved direction: Justin Horton, October 17, 2026.
-Branch: `feat/compact-mega-menu`.
+Branch: `feat/drowp-down-cleanup`.
 Starting main commit: `3e5e7482ebdc3432efef7b1ef59d6ee2abde8430`.
 
 ## Outcome and approved design
@@ -109,4 +109,4 @@ Run `npm run build`, focused Playwright checks, applicable existing navigation/s
 
 October 17: Main's CSS sets `.mega-panel` to the entire available viewport height, and `.mega-panel__in` to a minimum height of 100%; its large intro and spacing compound the full-page effect. Current navigation JavaScript supports native disclosures, close/outside/Escape handling and a modal mobile drawer, but does not implement desktop hover intent. Existing desktop breakpoint is 1280 px. These are the implementation starting points, not completed changes.
 
-Plan committed on the isolated menu branch. No menu code, account code, main branch or production release has been changed by this plan.
+Plan carried forward from the plan-only commit `2bbdfab289f27fa44c60318396b104ea2c0291eb` to `feat/drowp-down-cleanup` at Justin's request. This is the active branch for this session. The prior `feat/compact-mega-menu` branch is left untouched. No menu code, account code, main branch or production release has been changed by this plan.
