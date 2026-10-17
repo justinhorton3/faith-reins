@@ -3,6 +3,7 @@ import { productShowcase, showcaseCard } from "./product-showcase.mjs";
 import { shopCategories, categoryPage, shopCategoryTiles } from "./shop-categories.mjs";
 import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
+import { registerPersonaPages } from "./persona-pages.mjs";
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
 const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeature, steps, checks, infoGrid, testimonial, faqList, ctaBand, photoBand, profile, profileGrid, notice, reach, form, btn, tlink, eyebrow, img, esc, titleBand, SITE, CAMPAIGN } = L;
@@ -12,7 +13,7 @@ import { teamBlock, horsesBlock, testimonialsBlock, faqBlock, sponsorsBlock } fr
 export const pages = [];
 export const add = (route, title, description, body, jsonld, seo = {}) => pages.push({ route, title: `${title} | Faith Reins`, description, body, jsonld, seo });
 
-const APPT = ["Request an appointment", "/book-online"];
+const APPT = ["Request a callback", "/book-online"];
 const TEL = `<a href="tel:${SITE.tel}">${SITE.phone}</a>`;
 const MAIL = `<a href="mailto:${SITE.email}">${SITE.email}</a>`;
 const heroImg = (key) => img(`hero-${key}-desktop`);
@@ -39,7 +40,7 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
   tiles([
     { eyebrow: "For parents", title: "What happens after you reach out", label: "Read the guide", href: "/for-families" },
     { eyebrow: "For providers", title: "A clear path from referral to care", label: "Send a referral", href: "/for-referring-providers" },
-    { eyebrow: "For donors", title: "Help bring care closer to families", label: "Ways to support", href: "/give" },
+    { eyebrow: "For donors", title: "Help bring care closer to families", label: "Ways to support", href: "/get-involved" },
   ]) +
   splitFeature({ image: heroImg("equine-assisted-learning"), pos: "30% 50%", alt: "A child with one of our horses", eyebrow: "Meet the herd", title: "Big personalities. Gentle connections.", body: "Horses give children a calm, honest partner. Our herd is selected and cared for with one question in mind: does this horse help a child feel safe enough to grow?", actions: tlink("Our horses", "/our-horses") }) +
   section(sh({ eyebrow: "Getting started", title: "Your path to care" }) +
@@ -140,46 +141,39 @@ service({ route: "/equine-assisted-learning", key: "equine-assisted-learning", n
   journeyTitle: "What to expect", journey: [["Arrival", "A warm welcome and time to settle."], ["Safety orientation", "Clear expectations around horses."], ["Guided activities", "Supervised, ground-based experiences."], ["Reflection", "Talking about what was learned."]] });
 
 /* ---------- For Families ---------- */
-add("/for-families", "For Families", "What happens after you request an appointment at Faith Reins: a clear first step and a caring team.",
-  hero({ key: "for-families", eyebrow: "For Families", title: "A clear first step. A caring team.", lead: "Explore services and learn what happens after you request an appointment.", primary: APPT, secondary: ["Contact us", "/contact"] }) +
-  section(sh({ eyebrow: "Path to care", title: "Your path to care" }) + steps([["Reach out", "Send a request or call our team."], ["Share needs or a referral", "Tell us about your child and goals."], ["Schedule a visit", "We find a time that works."], ["Begin a plan", "Your care plan starts with your family."]])) +
-  section(split(
-    sh({ eyebrow: "First visit", title: "What to expect", body: "You are part of every step, from the first conversation to your child's plan." }),
-    checks([["The first conversation", "We listen and answer your questions."], ["Preparing for your visit", "We share what to bring and who to expect."], ["Arrival", "A welcoming, calm space."], ["Family involvement", "You are part of every step."]])), { tone: "paper" }) +
-  photoBand({ image: img("home-clinical"), pos: "50% 45%", alt: "A therapy session at Faith Reins" }) +
-  section(sh({ eyebrow: "Helpful links", title: "Before you call", size: "sm" }) + infoGrid([
-    { eyebrow: "Appointments", title: "Book online", body: "Request an appointment.", link: ["Request", "/book-online"] },
-    { eyebrow: "Cost", title: "Payment & insurance", body: "Coverage and payment questions.", link: ["Learn more", "/payment-and-insurance"] },
-    { eyebrow: "Answers", title: "Frequently asked questions", body: "Answers to common questions.", link: ["Read the FAQ", "/faq"] },
-    { eyebrow: "Services", title: "Services & programs", body: "See all of our care.", link: ["Explore", "/services-programs"] },
-  ], { cols: 4 })) +
-  ctaBand({ title: "Questions? We are glad to help.", body: "Call, email or send a request. Our team will follow up.", primary: APPT, secondary: ["Contact us", "/contact"] }));
+add("/for-families", "For Families", "A guide to getting started, your first visit and family participation at Faith Reins.",
+  hero({ key: "for-families", eyebrow: "For Families", title: "A clear first step. A caring team.", lead: "Know what to expect and connect with a team ready to walk alongside your family.", primary: APPT }) +
+  section(sh({ eyebrow: "Getting started", title: "Your path to care", body: "You can contact us before you have every answer. Our team will discuss service fit, current availability and the requirements for beginning care." }) + steps([["Request a callback", "Leave your contact information and preferred way to reach you."], ["Talk with our team", "Discuss service interest, referrals, payment and next steps."], ["Prepare for your visit", "We explain scheduling and what to bring."], ["Begin together", "Your family takes part in the care-planning conversation."]]), { id: "getting-started" }) +
+  section(split(sh({ eyebrow: "Your first visit", title: "What to expect", body: "A first conversation is a chance to ask questions and decide on next steps with our team." }),
+    checks([["A welcoming conversation", "Discuss your questions and what your family hopes to find."], ["Clear preparation", "Confirm any referral, coverage or intake requirements with our team."], ["Family participation", "Ask how parents and caregivers take part in sessions and planning."], ["A suitable next step", "Discuss the services and availability that apply to your family."]])), { tone: "paper", id: "what-to-expect" }) +
+  section(sh({ eyebrow: "Before care begins", title: "Find the answers you need." }) + infoGrid([
+    { title: "Payment & insurance", body: "Questions about coverage, private pay or assistance.", link: ["Payment information", "/payment-and-insurance"] },
+    { title: "Frequently asked questions", body: "Answers about getting started, sessions and equine programs.", link: ["Family FAQs", "/faq#getting-started"] },
+    { title: "Meet our team", body: "Get to know the people behind the care.", link: ["Our team", "/our-team"] },
+  ])) + ctaBand({ title: "Let’s talk about your next step.", body: "Request a callback and our team will follow up. Please keep medical details out of public website forms.", primary: APPT, secondary: ["Explore therapies", "/services-programs"] }));
 
-/* ---------- Book Online ---------- */
-add("/book-online", "Request an Appointment", "Send an appointment request to Faith Reins. Our team will contact you about next steps and scheduling.",
-  hero({ key: "book-online", eyebrow: "Request an appointment", title: "Let's find your next step.", lead: "Send a request. Our team will contact you about next steps and scheduling." }) +
-  section(split(
-    panel(form("appointment", { submit: "Submit request", success: "Thank you. Our team will contact you about next steps and scheduling.", layout: "two", wide: "service_interest_wmc0m7,message_nq34a3,preferred_contact_method_hzj8eh" })),
-    stack(
-      sh({ eyebrow: "What happens next", title: "We read every request", size: "sm", face: "serif", body: "Please do not include urgent or emergency information in this form. If this is an emergency, call 911." }),
-      steps([["We review your request", "A team member reads every message."], ["We contact you", "By your preferred method."], ["We plan next steps", "Scheduling and what to bring."]]),
-      reach("Prefer to call?", TEL, { big: true })),
-    { cols: "1.4fr 1fr" })) +
-  section(infoGrid([
-    { title: "Contact", body: "Prefer to talk it through?", link: ["Contact us", "/contact"] },
-    { title: "FAQ", body: "Common questions answered.", link: ["Read the FAQ", "/faq"] },
-    { title: "Payment & Insurance", body: "Coverage and payment.", link: ["Learn more", "/payment-and-insurance"] },
-  ], { cols: 3 }), { tone: "paper", pad: "tight" }));
+/* ---------- Callback request: preserve the published route ---------- */
+add("/book-online", "Request a Callback", "Request a callback from Faith Reins about services, availability and next steps.",
+  hero({ key: "book-online", eyebrow: "Request a callback", title: "Let's find your next step.", lead: "Leave your contact information. Our team will follow up about availability and getting started." }) +
+  section(notice("Use this public form for callback details only. Do not include diagnoses, treatment information, medical records or urgent concerns. For urgent help, contact the appropriate emergency service."), { pad: "tight" }) +
+  section(split(panel(form("appointment", { submit: "Request a callback", success: "Thank you. Our team will contact you about your next steps.", layout: "two" })),
+    stack(sh({ eyebrow: "What happens next", title: "A conversation comes first", size: "sm", body: "This is a callback request. Our team will confirm availability and the requirements for care before scheduling." }),
+      steps([["We review your request", "A team member reads your callback details."], ["We contact you", "Using your preferred contact method."], ["We discuss next steps", "Including referrals, coverage and scheduling."]]), reach("Prefer to call?", TEL, { big: true })), { cols: "1.4fr 1fr" })));
 
-/* ---------- Providers ---------- */
-add("/for-referring-providers", "For Referring Providers", "A clear path from referral to care. Connect children and families with the right next step at Faith Reins.",
-  hero({ key: "for-referring-providers", eyebrow: "For Referring Providers", title: "A clear path from referral to care.", lead: "Connect children and families with the right next step.", primary: ["Contact intake", "/contact"] }) +
-  section(sh({ eyebrow: "Process", title: "Referral pathway" }) + steps([["Identify the need", "Recognize a child who may benefit."], ["Send a referral", "Contact our intake team."], ["Coordinate records", "We confirm what is needed."], ["Family scheduling", "We reach out to the family."]])) +
-  section(sh({ eyebrow: "Services", title: "Service fit" }) + infoGrid(SVC.map((s) => ({ title: s.title, body: s.desc, link: ["Learn more", s.href] })), { cols: 3 }), { tone: "paper" }) +
-  section(split(
-    sh({ eyebrow: "Referral", title: "Helpful information to share", body: "Where available, a brief referral note, relevant evaluations, the child's age and the family's contact details help us move quickly. We will tell you if anything else is needed." }),
-    checks(["Reason for referral", "Relevant evaluations or notes", "Family contact details", "Preferred service"]))) +
-  ctaBand({ title: "Provider contact", body: "Reach our intake team through the contact page.", primary: ["Contact intake", "/contact"], secondary: ["For families", "/for-families"] }));
+/* ---------- Providers: assess first, then refer ---------- */
+add("/for-referring-providers", "For Referring Providers", "Review service fit, care-team information, referral requirements and coordination at Faith Reins.",
+  hero({ key: "for-referring-providers", eyebrow: "For Referring Providers", title: "A clear path from referral to care.", lead: "Review our approach, discuss patient fit and coordinate next steps with our team.", primary: ["Contact intake", "/contact#contact-intake"] }) +
+  section(sh({ eyebrow: "Assess the practice", title: "Clinical approach & patient fit", body: "Faith Reins brings pediatric therapy disciplines and a separate equine-assisted learning program together in one setting. Review the service and team information, then contact intake to discuss the current clinicians, availability and fit for your patient." }) + infoGrid([
+    { title: "Clinical services", body: "Speech-language therapy, occupational therapy, physical therapy and counseling each have their own service information.", link: ["Explore clinical services", "/services-programs"] },
+    { title: "Care-team information", body: "Review published team information and ask intake about the clinician and qualifications relevant to a referral.", link: ["Meet our team", "/our-team#team-profiles"] },
+    { title: "Equine learning", body: "EAL is a nonclinical, experiential program. It is not a substitute for clinical therapy.", link: ["Understand EAL", "/equine-assisted-learning"] },
+  ]), { id: "clinical-approach" }) +
+  section(sh({ eyebrow: "Referral requirements", title: "Coordinate the referral before care begins.", body: "Clinical services require physician approval and a treatment plan. Contact intake to confirm the documentation, service availability and any coverage-specific requirements. EAL does not require a clinical referral." }) +
+    steps([["Discuss fit", "Connect with intake about the service and current availability."], ["Confirm requirements", "Agree which referral and clinical documents are needed."], ["Coordinate records", "Ask intake how to share records through the appropriate channel."], ["Connect the family", "Coordinate the first conversation and next steps."]]) +
+    notice("Do not submit patient records, diagnoses or clinical details through public website forms. Contact intake to arrange the appropriate way to share referral information."), { tone: "paper", id: "referral-requirements" }) +
+  section(split(sh({ eyebrow: "Care coordination", title: "Discuss how we can work together.", body: "With appropriate family consent, coordination can connect the referring provider, the care team and the family. Talk with intake about communication needs, the clinician responsible for care and the next step for your patient." }),
+    checks(["Clarify the service and patient fit", "Confirm required approvals and documentation", "Discuss consent and communication preferences", "Agree how to share relevant records"])), { id: "care-coordination" }) +
+  ctaBand({ title: "Connect with intake", body: "Ask about service fit, referral requirements and current availability.", primary: ["Contact intake", "/contact#contact-intake"], secondary: ["Provider FAQs", "/faq#for-providers"] }));
 
 /* ---------- Payment ---------- */
 add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins therapy services — insurance, private pay, ARKids First, Medicaid, and financial assistance.",
@@ -238,7 +232,7 @@ add("/sponsorships", "Sponsorships", "A partnership with purpose. Support people
     { title: "Sponsor a horse", body: "Monthly support of $500–$750 helps care for a horse.", strong: true },
     { title: "Programs and facilities", body: "Support the arena, facilities and operations.", strong: true },
     { title: "Family access", body: "Help more families reach care.", strong: true },
-  ], { cols: 3 })) +
+  ], { cols: 3 }), { id: "horse-care" }) +
   section(split(
     sh({ eyebrow: "Inquiry", title: "Discuss a sponsorship", body: "Tell us a little about your organization and where you would like to help. We will follow up." }),
     panel(form("sponsor", { submit: "Discuss a sponsorship", success: "Thank you. We will be in touch about sponsorship." }))), { tone: "paper", id: "inquiry" }) +
@@ -280,14 +274,14 @@ add("/our-team", "Our Team", "A dedicated team supporting children, families and
 
 /* ---------- Horses ---------- */
 add("/our-horses", "Our Horses", "Meet the equine partners at Faith Reins: big personalities and gentle connections.",
-  hero({ key: "our-horses", eyebrow: "Our Horses", title: "Meet our equine partners.", lead: "Big personalities. Gentle connections.", primary: ["Support the herd", "/give"] }) +
+  hero({ key: "our-horses", eyebrow: "Our Horses", title: "Meet our equine partners.", lead: "Big personalities. Gentle connections.", primary: ["Sponsor a horse", "/sponsorships#horse-care"] }) +
   section(sh({ eyebrow: "The herd", title: "Calm partners in learning", body: "Horses give children a calm, honest partner. Our herd is selected and cared for with one question in mind: does this horse help a child feel safe enough to grow? Each one has a distinct personality, and part of the work is helping children and horses find their rhythm together." }) +
     `<div data-cms="horses">${horsesBlock(fallback.horses)}</div>`) +
   ctaBand({ title: "Learn through connection", body: "Equine-assisted learning offers supervised, ground-based experiences with our herd.", primary: ["Equine-assisted learning", "/equine-assisted-learning"], secondary: ["Services & programs", "/services-programs"] }));
 
 /* ---------- Join ---------- */
 add("/join-our-team", "Join Our Team", "Career and volunteer opportunities at Faith Reins Equestrian Center in Camden, Arkansas.",
-  hero({ key: "join-our-team", eyebrow: "Join Our Team", title: "Bring your purpose to Faith Reins.", lead: "Build a career around meaningful work in a faith-rooted, team-driven setting in South Arkansas.", primary: ["See open positions", "#openings"], secondary: ["Volunteer with us", "#volunteer"] }) +
+  hero({ key: "join-our-team", eyebrow: "Join Our Team", title: "Bring your purpose to Faith Reins.", lead: "Build a career around meaningful work in a faith-rooted, team-driven setting in South Arkansas.", primary: ["See open positions", "#openings"], secondary: ["Volunteer with us", "/volunteer"] }) +
   section(sh({ eyebrow: "Why Faith Reins", title: "Why work here" }) + infoGrid([
     { title: "Mission-driven work", body: "Every session, every shift, every day — the work is real and the impact is visible." },
     { title: "A setting like no other", body: "A clinic, an arena, and a herd. There is no other place quite like this to practice pediatric care." },
@@ -301,16 +295,16 @@ add("/join-our-team", "Join Our Team", "Career and volunteer opportunities at Fa
 <h4>What we offer</h4><ul><li>Full-time position with competitive salary negotiated based on experience</li><li>A small, supportive clinical team with strong peer collaboration</li><li>Exposure to equine-assisted learning as a complement to traditional therapy</li><li>A calm, relationship-centered work environment in South Arkansas</li><li>The chance to build something — we are a growing practice with real community need</li></ul>
 <p class="muted">To apply, send a cover letter and résumé through our contact form or directly to ${MAIL}.</p></div>`, { cols: "320px 1fr", gap: 64 }) +
     `<p class="muted">More openings will be posted here as they become available. We also welcome general expressions of interest from OTs, PTs, and counselors.</p>`, { tone: "paper", id: "openings" }) +
-  section(sh({ eyebrow: "Volunteer", title: "Volunteer with us", body: "Volunteers are essential to what we do — from horse handling to event support." }) + infoGrid([
-    { title: "Equine support", body: "Help with horse care, handling, and session support. Training provided.", strong: true },
-    { title: "Program support", body: "Assist with activities, events, and family welcome.", strong: true },
-    { title: "Administrative & events", body: "Behind-the-scenes help that keeps things running.", strong: true },
-  ], { cols: 3 }) + `<div class="btn-row">${btn("Learn about volunteering", "/volunteer-policy")}${tlink("Express interest", "/contact")}</div>`, { id: "volunteer" }) +
+  section(sh({ eyebrow: "Volunteer", title: "Looking to volunteer?", body: "Explore roles, expectations and getting started in our dedicated volunteer guide." }) + btn("Volunteer with us", "/volunteer"), { id: "volunteer" }) +
   ctaBand({ tone: "sand", title: "Get to know us", body: "Meet the people behind the care and the mission that guides us.", primary: ["Meet the team", "/our-team"], secondary: ["Our mission", "/our-mission"] }));
 
 /* ---------- Contact ---------- */
 add("/contact", "Contact", "Connect with Faith Reins about services, giving or getting involved.",
   hero({ key: "contact", eyebrow: "Contact", title: "We're here to help.", lead: "Connect with our team about services, giving or getting involved." }) +
+  section(infoGrid([
+    { title: "Provider intake", body: "Ask about service fit and referral requirements. Please do not include patient records or medical details in this public form.", link: ["Call intake", "tel:" + SITE.tel], html: false },
+    { title: "Volunteer inquiry", body: "Tell us your interests and availability. Our team will discuss current opportunities and next steps.", link: ["Volunteer guide", "/volunteer"] },
+  ], { cols: 2 }) + '<span id="contact-intake"></span><span id="volunteer-inquiry"></span><span id="account-help"></span>', { pad: "tight" }) +
   section(split(
     stack(
       sh({ eyebrow: "Reach us", title: "Get in touch", size: "sm" }),
@@ -389,3 +383,6 @@ add("/legal", "Legal & Policies", "All policies, notices, and terms for Faith Re
     { title: "Equine Safety & Liability", body: "Arkansas Equine Liability Act notice and safety practices.", link: ["Read", "/equine-safety"] },
     { title: "Photo & Media Consent", body: "How we use photographs and videos of clients, families, and participants.", link: ["Read", "/photo-consent"] },
   ], { cols: 3 })));
+
+// Audience and shared sitemap destinations; existing URLs remain in place.
+registerPersonaPages(add);

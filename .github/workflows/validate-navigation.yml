@@ -1,0 +1,34 @@
+name: Validate persona navigation
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/verify-navigation.mjs'
+      - 'tests/navigation.spec.js'
+      - '.github/workflows/validate-navigation.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npx playwright test tests/navigation.spec.js tests/shop-hero.spec.js
+      - run: python scripts/wix-postbuild.py
+      - run: node scripts/verify-navigation.mjs
+      - run: node scripts/verify-shop-category-routes.mjs
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: navigation-test-results
+          path: test-results/

@@ -30,10 +30,11 @@ export function faqGroups(items) {
   }
   return [...groups];
 }
+export const faqGroupId = group => String(group).toLowerCase().replace(/&/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 export const faqBlock = (items) =>
   faqGroups(items).map(([group, qs], i) => section(split(
     sh({ eyebrow: String(i + 1).padStart(2, "0"), title: esc(group), size: "sm" }),
-    faqList(qs, { openFirst: i === 0 }), { cols: "320px 1fr", gap: 64 }), { tone: i % 2 ? "paper" : "page", pad: "tight" })).join("");
+    faqList(qs, { openFirst: i === 0 }), { cols: "320px 1fr", gap: 64 }), { tone: i % 2 ? "paper" : "page", pad: "tight", id: faqGroupId(group) })).join("");
 
 /* ---------- Sponsors ---------- */
 const TIERS = ["Platinum", "Gold", "Silver", "Bronze"];
