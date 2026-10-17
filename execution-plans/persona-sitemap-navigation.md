@@ -53,7 +53,7 @@ Source of truth: `brand/v7-design-system/architecture/sitemap.md`, based on the 
 - [x] Update footer and FAQ anchors; preserve all existing page/product routes.
 - [x] Build, route/anchor audit, focused behavior checks and existing regression checks pass.
 - [x] Branch preview succeeds and is checked.
-- [ ] Merge PR to main.
+- [x] Merge PR to main.
 - [ ] Release merged source and verify live site.
 
 ## Progress
@@ -69,3 +69,5 @@ Verification so far: 14 focused browser checks passed (six navigation/account te
 Preview verification (October 17): [PR #35](https://github.com/justinhorton3/faith-reins/pull/35) produced a working [Wix branch preview](https://uenvom-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/) from `c92fda1c0b0378382f42f5148523bb6eaf439969`. The hosted solid header, full-screen Get Involved panel and volunteer journey were inspected; all menu photographs loaded. Fourteen navigation/hero browser checks and four catalog variant regression checks passed locally. Six GitHub workflows passed, including navigation, catalog, shop routes, shop heroes, repository independence and preview. The standalone V7 validator identified the new sitemap document missing from its checksum inventory; its SHA-256 is now included without changing approved assets. Final branch checks must all pass before merge.
 
 Release procedure: merge this PR with its individual commits preserved. The dated sitemap marker triggers the existing main-only Wix static-site release workflow. Verify the merge SHA, successful deployment, live navigation, all shared menu targets and the new involvement/account/sitemap routes. Rollback, if needed, uses the prior main source `95f7b1161cf5c63400423c4267f0385850d137b4` through the same release pipeline.
+
+Release attempt: PR #35 merged as `b38edb467f3447877e95751577cbb28955c5b27f`, whose tree exactly matches the verified preview. All seven final branch workflows passed. The older multipart upload in Deploy web returned HTTP 400. Follow-up branch `fix/sitemap-release-cli`, based on that merge, replaces the upload with documented `wix release`, the same method as the last successful production release, and adds post-publication route/asset checks.
