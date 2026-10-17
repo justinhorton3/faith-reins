@@ -51,8 +51,8 @@ Source of truth: `brand/v7-design-system/architecture/sitemap.md`, based on the 
 - [x] Add Get Involved and Volunteer pages and consolidate audience journeys.
 - [x] Add account entry and document verified capabilities.
 - [x] Update footer and FAQ anchors; preserve all existing page/product routes.
-- [ ] Build, route/anchor audit, focused behavior checks and existing regression checks pass.
-- [ ] Branch preview succeeds and is checked.
+- [x] Build, route/anchor audit, focused behavior checks and existing regression checks pass.
+- [x] Branch preview succeeds and is checked.
 - [ ] Merge PR to main.
 - [ ] Release merged source and verify live site.
 
@@ -65,3 +65,7 @@ October 17 implementation: Six desktop mega menus and six mobile accordion group
 Account capability: Wix-managed OAuth login, PKCE callback verification, current-member lookup and logout are connected. The published domain and localhost account callback URIs are allowed; the original checkout redirect domains are preserved. A live visitor-token and login-redirect check returned HTTP 200. Order history and recurring-gift administration remain team-assisted, with working contact paths rather than simulated dashboards. Login is separate from clinical records.
 
 Verification so far: 14 focused browser checks passed (six navigation/account tests plus eight existing hero/responsive checks). All six desktop menu screens and the mobile drawer were visually reviewed; no runtime errors were observed. Hosted-route checks validated 43 navigation destinations/sections, and existing category route and brand-boundary checks passed. The preview workflow now verifies the new destinations; the existing production workflow can release this sitemap only from main when its dated release marker is merged.
+
+Preview verification (October 17): [PR #35](https://github.com/justinhorton3/faith-reins/pull/35) produced a working [Wix branch preview](https://uenvom-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/) from `c92fda1c0b0378382f42f5148523bb6eaf439969`. The hosted solid header, full-screen Get Involved panel and volunteer journey were inspected; all menu photographs loaded. Fourteen navigation/hero browser checks and four catalog variant regression checks passed locally. Six GitHub workflows passed, including navigation, catalog, shop routes, shop heroes, repository independence and preview. The standalone V7 validator identified the new sitemap document missing from its checksum inventory; its SHA-256 is now included without changing approved assets. Final branch checks must all pass before merge.
+
+Release procedure: merge this PR with its individual commits preserved. The dated sitemap marker triggers the existing main-only Wix static-site release workflow. Verify the merge SHA, successful deployment, live navigation, all shared menu targets and the new involvement/account/sitemap routes. Rollback, if needed, uses the prior main source `95f7b1161cf5c63400423c4267f0385850d137b4` through the same release pipeline.
