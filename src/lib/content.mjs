@@ -31,8 +31,8 @@ export const TESTIMONIALS = [
 /* FAQ: [group, [[question, answerHtml], ...]] */
 export const FAQ_GROUPS = [
   ["Getting started", [
-    ["How do I get started?", "Send an appointment request on <a href='/book-online'>Book Online</a> or <a href='/contact'>call or email us</a>. Our team will follow up to learn about your child and walk through next steps."],
-    ["Do I need a referral?", "A referral is not required to contact us, but if a physician, school, or specialist has recommended therapy, please bring any notes or documentation — it helps us move quickly."],
+    ["How do I get started?", "<a href='/book-online'>Request a callback</a> or <a href='/contact'>call or email us</a>. Our team will follow up to learn about your child and walk through next steps."],
+    ["Do I need a referral?", "You can contact us before arranging a referral. Clinical services require physician approval and a treatment plan; intake will confirm the requirements for your service and coverage. Equine-assisted learning does not require a clinical referral."],
     ["Who can Faith Reins serve?", "We serve children and teens from birth through age 18 in South Arkansas. If you are unsure whether we are the right fit, contact us and we will guide you honestly."],
     ["How long does it take to get an appointment?", "Wait times vary by service and availability. Contact our team for current scheduling. We do our best to move quickly for families with urgent needs."],
   ]],
@@ -55,14 +55,14 @@ export const FAQ_GROUPS = [
     ["Can a child do both EAL and clinical therapy?", "Yes, and we often recommend it. EAL and clinical services are designed to complement each other. Your care team will help determine whether the combination makes sense for your child."],
   ]],
   ["For providers", [
-    ["How do I refer a patient?", "Contact our intake team through the <a href='/contact'>contact page</a> or visit <a href='/for-referring-providers'>For Referring Providers</a>. A brief note with the reason for referral and family contact details is all we need to get started."],
+    ["How do I refer a patient?", "Contact our intake team through the <a href='/contact'>contact page</a> or visit <a href='/for-referring-providers'>For Referring Providers</a>. Our team will confirm requirements and the appropriate way to share referral information. Do not submit patient details through public website forms."],
     ["What information should I send?", "Reason for referral, relevant evaluations or progress notes if available, the child's age, and the family's preferred contact method. We will follow up with the family and confirm what else is needed."],
     ["Do you collaborate with referring providers?", "Yes. With family consent, we communicate with referring physicians, schools, and other providers to coordinate care. Coordination is part of how we work, not an exception."],
   ]],
   ["Giving & volunteering", [
-    ["How can I support Faith Reins?", "The most direct way is a gift through our <a href='/give'>Give page</a>. You can also sponsor a horse, explore <a href='/sponsorships'>sponsorship opportunities</a>, or <a href='/join-our-team'>volunteer</a>."],
+    ["How can I support Faith Reins?", "The most direct way is a gift through our <a href='/give'>Give page</a>. You can also sponsor a horse, explore <a href='/sponsorships'>sponsorship opportunities</a>, or <a href='/volunteer'>volunteer</a>."],
     ["Is my donation tax-deductible?", "Yes. Faith Reins is a 501(c)(3) nonprofit. All gifts are tax-deductible to the extent permitted by law. See our <a href='/donation-policy'>Donation Policy</a> for details."],
-    ["Can I volunteer if I have no horse experience?", "Absolutely. Many of our volunteer roles do not involve horses at all. Those that do include full training. Visit <a href='/join-our-team'>Join Our Team</a> to learn more."],
+    ["Can I volunteer if I have no horse experience?", "Absolutely. Many of our volunteer roles do not involve horses at all. Those that do include full training. Visit <a href='/volunteer'>Volunteer With Us</a> to learn more."],
   ]],
 ];
 
