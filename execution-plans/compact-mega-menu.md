@@ -1,6 +1,6 @@
 # Compact image-led mega-menu execution plan
 
-Status: planned; implementation has not started.
+Status: implementation and local validation complete; hosted preview and review pending.
 Approved direction: Justin Horton, October 17, 2026.
 Branch: `feat/drowp-down-cleanup`.
 Starting main commit: `3e5e7482ebdc3432efef7b1ef59d6ee2abde8430`.
@@ -95,10 +95,10 @@ Run `npm run build`, focused Playwright checks, applicable existing navigation/s
 - [x] Confirm current implementation and inspect concurrent account work.
 - [x] Create isolated menu branch from main.
 - [x] Record execution plan before menu implementation.
-- [ ] Compact all six desktop panels with approved small photos.
-- [ ] Replace plus/minus with accessible chevrons.
-- [ ] Implement and verify hover, click, touch and keyboard behaviors.
-- [ ] Verify tablet/mobile layouts, including thumbnail accordions.
+- [x] Compact all six desktop panels with approved small photos.
+- [x] Replace plus/minus with accessible chevrons.
+- [x] Implement and verify hover, click, touch and keyboard behaviors.
+- [x] Verify tablet/mobile layouts, including thumbnail accordions.
 - [ ] Pass focused checks, existing regressions and required CI.
 - [ ] Capture desktop/tablet/mobile preview evidence for visual review.
 - [ ] Reconcile latest main/account work and validate the integrated result.
@@ -110,3 +110,12 @@ Run `npm run build`, focused Playwright checks, applicable existing navigation/s
 October 17: Main's CSS sets `.mega-panel` to the entire available viewport height, and `.mega-panel__in` to a minimum height of 100%; its large intro and spacing compound the full-page effect. Current navigation JavaScript supports native disclosures, close/outside/Escape handling and a modal mobile drawer, but does not implement desktop hover intent. Existing desktop breakpoint is 1280 px. These are the implementation starting points, not completed changes.
 
 Plan carried forward from the plan-only commit `2bbdfab289f27fa44c60318396b104ea2c0291eb` to `feat/drowp-down-cleanup` at Justin's request. This is the active branch for this session. The prior `feat/compact-mega-menu` branch is left untouched. No menu code, account code, main branch or production release has been changed by this plan.
+
+
+Implementation and local verification (October 17): [PR #39](https://github.com/justinhorton3/faith-reins/pull/39) contains three focused implementation/test commits: `15f273c` (compact images and chevrons), `f2646f2` (pointer intent and coordinated dismissal), and `f5508a8` (responsive/regression checks). Actual thumbnail sources and destination registry remain unchanged. The large intro is removed from dropdown rendering; the footer is reduced to its prompt and contextual action. Tablet drawers use two image columns, mobile uses one. A drawer Bag control hands off to the existing cart; a noscript Site Map link supplies small-screen navigation without JavaScript.
+
+The production build passed. Thirty-two combined navigation, responsive and shop-hero checks passed, followed by a separate successful drawer-to-bag handoff check (33 distinct checks total). Tests cover six panels at 1280/1440/1920 px, 1280×400 scrolling, tablet portrait/landscape, 360/390/430 px phones, wide touch, keyboard/hover coexistence, diagonal travel, Escape suppression, breakpoint cleanup, reduced motion and native disclosures without JavaScript. The 720×450 test is a 200%-zoom-equivalent layout check, not an actual browser-zoom or assistive-technology test. Desktop/tablet/mobile screenshots were visually inspected. Physical iOS/Android and Safari/Firefox checks remain unperformed and are not claimed.
+
+After adapting the category validator to image-link markup, the hosted-route/fragment audit verified 43 destinations and all six Shop categories. Website independence passed with identical SHA-256 output for 308 files with/without brand/. Approved image bytes, account services, checkout and production publishing configuration were not modified. The account branch and main were still unchanged when PR #39 was opened. Two small expectations in tests/navigation.spec.js overlap the account PR and require reconciliation before merge.
+
+GitHub checks and the separate preview are running. No main merge, release marker or production deployment has been performed. Preview review and latest-main/account integration remain release gates.
