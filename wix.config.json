@@ -3,6 +3,9 @@
   "appId": "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12",
   "siteId": "2d8c6050-5730-4bed-9c7a-266ca7bd00b4",
   "site": {
-    "outputDirectory": "./dist"
+    "outputDirectory": {
+      "client": "./dist",
+      "server": "./.wix-server"
+    }
   }
 }

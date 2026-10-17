@@ -42,3 +42,5 @@ The first release prioritizes authenticated purchase/donation history, issued re
 ## Progress
 
 October 17: Branch created from current main. Existing static Astro build and browser OAuth inspected. Wix documentation confirms donations are ecommerce orders; broad order search requires a protected account data boundary. Subscription cancellation is documented for Wix Members Area, but custom headless control and payment-update contracts still require verification. No customer records or financial subscriptions have been modified.
+
+Foundation: introduced a Wix-hosted Workers build for account APIs while preserving the ordinary static build for public regression checks. Deployment must pull and validate the existing linked app's server environment before building the account runtime. Worker output is separated from the public asset upload. The session endpoint verifies the caller's member token with Wix; downstream order access is gated by server-derived member/contact IDs, not a submitted email. Six local security checks and the existing hosted navigation/category checks pass. Actual hosted runtime compatibility is the next verification gate.

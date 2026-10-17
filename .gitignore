@@ -154,4 +154,5 @@ web/dist/
 
 # Browser verification outputs
 test-results/
+.wix-server/
 playwright-report/

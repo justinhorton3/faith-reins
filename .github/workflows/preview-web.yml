@@ -37,13 +37,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install and build current website
-        run: |
-          npm ci --no-audit --no-fund
-          npm run build
-          python scripts/wix-postbuild.py
-          node scripts/verify-navigation.mjs
-          node scripts/verify-shop-category-routes.mjs
+      - name: Install current website dependencies
+        run: npm ci --no-audit --no-fund
       - name: Authenticate Wix CLI
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
@@ -53,6 +48,16 @@ jobs:
             exit 1
           fi
           npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Load the linked project's server environment
+        run: |
+          npx --yes -p "$WIX_CLI" wix env pull > wix-env-pull.log
+          node scripts/verify-account-environment.mjs
+      - name: Build public pages and protected account runtime
+        run: |
+          npm run build:account
+          python scripts/wix-postbuild.py
+          node scripts/verify-navigation.mjs
+          node scripts/verify-shop-category-routes.mjs
       - name: Upload a preview without releasing production
         run: |
           set -o pipefail
@@ -90,6 +95,13 @@ jobs:
                     throw new Error(`Navigation preview failed: ${path} (${page.status}).`);
                   }
                 }
+                const session = await fetch(new URL('/api/account/session', base));
+                const sessionBody = await session.json();
+                if (session.status !== 401 || sessionBody.error?.code !== 'SIGN_IN_REQUIRED' || !session.headers.get('cache-control')?.includes('no-store')) {
+                  throw new Error('Protected account runtime did not reject signed-out access.');
+                }
+                const leaked = await fetch(new URL('/_worker.js/index.js', base));
+                if (leaked.ok) throw new Error('Worker code must not be served as a public asset.');
                 verified = { home: new URL('/', base).href, product: product.href };
                 break;
               } catch (error) { core.warning(`${product.href}: ${error.message}`); }
