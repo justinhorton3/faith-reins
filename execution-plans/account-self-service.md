@@ -30,12 +30,12 @@ The first release prioritizes authenticated purchase/donation history, issued re
 
 - [x] Create branch from current main.
 - [x] Commit execution plan before implementation.
-- [ ] Confirm runtime, identity, order, receipt, profile and subscription contracts.
+- [x] Confirm runtime, identity, order, receipt and profile contracts; document unsupported recurring billing controls.
 - [x] Implement protected services with ownership enforced on every private read/write.
 - [x] Implement account pages with real data and honest states.
-- [ ] Complete supported profile/receipt/recurring-gift features and document any external capability limits.
-- [ ] Pass meaningful security/behavior tests and existing navigation/shop checks.
-- [ ] Verify hosted preview, including direct account URLs and signed-out API rejection.
+- [x] Complete supported profile/receipt/recurring-history features and document external capability limits.
+- [x] Pass meaningful security/behavior tests and existing navigation/shop checks.
+- [x] Verify hosted preview, including direct account URLs and signed-out API rejection.
 - [ ] Complete real-member validation when a suitable test session is available; record fixture-only checks separately.
 - [ ] Merge reviewed changes to main, release and verify live routes and access protection.
 
@@ -50,3 +50,8 @@ Account services: purchase/giving queries, order details, issued receipt lookup 
 Account interface: Overview, My Orders, My Giving, Recurring Giving, Profile & Settings and Order Details are implemented in the existing V7 design. Native managed login/logout replace browser token storage. Order details support ownership-checked receipt and shipment-tracking lookups. Account pages disable analytics and indexing, clear private content on session expiry/navigation, and render data as text. Ten desktop/mobile screens were visually reviewed using controlled test records. Eighteen service tests pass; 22 distinct browser checks cover account journeys plus existing navigation/shop heroes. The static build and 43 navigation destinations still pass.
 
 Recurring-gift capability: the first release shows recorded recurring payments. Current billing schedules, payment-method updates and cancellation remain on the existing team-assistance path because no supported headless subscription-management contract has been established. The UI labels this limit explicitly and does not invent active status or next-charge dates. Real-member validation and final deployment checks remain outstanding.
+
+
+Release preparation: all seven GitHub checks passed at `645de0083fc38f53dfb0bf499eda8cdf290e65ab`, including the hosted Workers preview and account browser/security checks. Preview: https://tihcdv-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/account.html . The production workflow now uses the same authenticated server build as preview. Both publication paths check that the Worker is separate, no environment files or linked server credential enter public output, all six account pages are noindex, and signed-out account reads reject access without caching. Production release remains gated on real-member verification; no release marker has been added.
+
+Real-member verification required: the cloud browser displayed the signed-out account page correctly, but its URL security policy blocked observation after opening native sign-in. No credentials were entered and no authenticated success is claimed. A suitable verified test member must complete login, return to the preview account page, check actual history or accurate empty states, save their own profile, open an issued receipt/tracking link if one exists, and sign out. Two-member isolation and expiry currently have controlled-fixture coverage, not live member coverage. Merge/release will follow successful authentication validation and the final CI checks.

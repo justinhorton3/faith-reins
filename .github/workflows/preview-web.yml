@@ -56,6 +56,7 @@ jobs:
         run: |
           npm run build:account
           python scripts/wix-postbuild.py
+          node scripts/verify-account-artifacts.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs
       - name: Upload a preview without releasing production
@@ -102,6 +103,8 @@ jobs:
                 }
                 const leaked = await fetch(new URL('/_worker.js/index.js', base));
                 if (leaked.ok) throw new Error('Worker code must not be served as a public asset.');
+                const { execFileSync } = require('node:child_process');
+                execFileSync(process.execPath, ['scripts/verify-live-accounts.mjs', base.origin], { stdio: 'inherit' });
                 verified = { home: new URL('/', base).href, product: product.href };
                 break;
               } catch (error) { core.warning(`${product.href}: ${error.message}`); }
@@ -110,7 +113,7 @@ jobs:
             const marker = '<!-- wix-preview-link -->';
             const sha = context.payload.pull_request?.head.sha || context.sha;
             const body = [marker, '### Preview this change', '',
-              `**[Review the site navigation](${verified.home})**`,
+              `**[Review account self-service](${verified.home})**`,
               `[Get Involved](${new URL("/get-involved.html", verified.home).href}) · [Volunteer](${new URL("/volunteer.html", verified.home).href}) · [My Account](${new URL("/account.html", verified.home).href})`, '',
               `[Browse the preview site](${verified.home})`, '',
               `Source: \`${sha.slice(0, 7)}\`. This is a separate Wix preview; faithreins.com was not released.`,
