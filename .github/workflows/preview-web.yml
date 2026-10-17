@@ -42,6 +42,8 @@ jobs:
           npm ci --no-audit --no-fund
           npm run build
           python scripts/wix-postbuild.py
+          node scripts/verify-navigation.mjs
+          node scripts/verify-shop-category-routes.mjs
       - name: Authenticate Wix CLI
         env:
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
@@ -81,6 +83,13 @@ jobs:
                     throw new Error(`Preview asset failed: ${path} (${asset.status}).`);
                   }
                 }
+                for (const path of ['/get-involved.html', '/volunteer.html', '/account.html', '/for-families.html', '/for-referring-providers.html', '/shop/hats.html']) {
+                  const page = await fetch(new URL(path, base), { signal: AbortSignal.timeout(30000) });
+                  const content = await page.text();
+                  if (!page.ok || !content.includes('data-mega-menu="involved"') || !content.includes('My Account')) {
+                    throw new Error(`Navigation preview failed: ${path} (${page.status}).`);
+                  }
+                }
                 verified = { home: new URL('/', base).href, product: product.href };
                 break;
               } catch (error) { core.warning(`${product.href}: ${error.message}`); }
@@ -89,10 +98,11 @@ jobs:
             const marker = '<!-- wix-preview-link -->';
             const sha = context.payload.pull_request?.head.sha || context.sha;
             const body = [marker, '### Preview this change', '',
-              `**[Review the men’s polo](${verified.product})**`, '',
+              `**[Review the site navigation](${verified.home})**`,
+              `[Get Involved](${new URL("/get-involved.html", verified.home).href}) · [Volunteer](${new URL("/volunteer.html", verified.home).href}) · [My Account](${new URL("/account.html", verified.home).href})`, '',
               `[Browse the preview site](${verified.home})`, '',
               `Source: \`${sha.slice(0, 7)}\`. This is a separate Wix preview; faithreins.com was not released.`,
-              'The polo remains out of stock with purchasing disabled.',
+              'Approved sitemap: About · Therapies · For Families · For Providers · Get Involved · Shop. Existing product availability is unchanged.',
             ].join('\n');
             await core.summary.addRaw(body).write();
             if (context.payload.pull_request) {

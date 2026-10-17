@@ -1,4 +1,4 @@
-import { titleBand, section, sh, infoGrid, split, checks, steps, btn, tlink, ctaBand, SITE, esc } from './lib.mjs';
+import { titleBand, section, sh, infoGrid, split, checks, steps, btn, tlink, ctaBand, SITE } from './lib.mjs';
 import { NAVIGATION, POLICY_LINKS } from './navigation.mjs';
 
 export function registerPersonaPages(add) {

@@ -5,6 +5,7 @@
 .site-nav { gap: 28px; }
 .site-nav__links { gap: 24px; }
 .mega-nav-item { position: static; }
+.mega-nav-item:not([open]) > .mega-panel { display: none; }
 .mega-nav-item > summary { list-style: none; cursor: pointer; gap: 7px; font-size: 13px; letter-spacing: .025em; text-transform: none; }
 .mega-nav-item > summary::-webkit-details-marker { display: none; }
 .mega-nav-item[open] > summary, .mega-nav-item.is-current > summary { border-bottom-color: var(--fr-gold); }
@@ -75,3 +76,6 @@
 
 .account-access { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 @media(max-width: 767px) { .account-access { grid-template-columns: 1fr; gap: 30px; } }
+
+.drawer-group[open] > summary .mega-toggle { font-size: 0; }
+.drawer-group[open] > summary .mega-toggle::after { content: "\2212"; font-size: 18px; }

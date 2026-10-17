@@ -40,12 +40,12 @@ assert.ok(shopPage.body.indexOf('shop-category-tiles__grid') < shopPage.body.ind
 assert.equal((shopPage.body.match(/class="shop-category-tile"/g)||[]).length, CATEGORIES.length, 'Six category tiles required');
 const { header } = await import('../src/lib/lib.mjs');
 const topNav=header('/shop/women');
-assert.ok(topNav.includes('<details class="nav-shop">'), 'Desktop Shop dropdown missing');
-assert.ok(topNav.includes('class="drawer-shop-subnav"'), 'Mobile Shop group missing');
+assert.ok(topNav.includes('data-mega-menu="shop"'), 'Desktop Shop mega menu missing');
+assert.ok(topNav.includes('data-mobile-group'), 'Mobile Shop group missing');
 for (const c of CATEGORIES) {
   assert.ok(shopPage.body.includes('class="shop-category-tile" href="'+c.route+'"'), 'Missing tile '+c.key);
-  assert.ok(topNav.includes('href="'+c.route+'" class="nav-shop__item"'), 'Missing desktop menu '+c.key);
-  assert.ok(topNav.includes('class="drawer-shop-subnav__link" href="'+c.route+'"'), 'Missing mobile menu '+c.key);
+  assert.ok(topNav.includes('class="mega-card" href="'+c.route+'"'), 'Missing desktop menu '+c.key);
+  assert.ok(topNav.includes('<a href="'+c.route+'"'), 'Missing mobile menu '+c.key);
 }
 const shopBuilt=path.join(root,'dist/shop.html');
 if (fs.existsSync(shopBuilt)) {

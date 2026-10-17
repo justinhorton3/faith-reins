@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - '.github/releases/2026-10-16-shop-*.md'
+      - '.github/releases/2026-10-17-sitemap-*.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
@@ -33,7 +34,9 @@ jobs:
       - name: Prepare output for Wix hosting
         run: python scripts/wix-postbuild.py
       - name: Verify shop category pages, approved hero assets and host-compatible routes
-        run: node scripts/verify-shop-category-routes.mjs
+        run: |
+          node scripts/verify-shop-category-routes.mjs
+          node scripts/verify-navigation.mjs
       - name: Keep active hero art and omit only unused duplicate photographs
         run: |
           # Assets copied for archival/traceability should not be uploaded

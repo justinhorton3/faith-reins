@@ -96,7 +96,7 @@ if (host) {
         history.replaceState(null, '', location.pathname + location.search);
         const saved = read(LOGIN_KEY); sessionStorage.removeItem(LOGIN_KEY);
         if (params.has('error')) throw new Error('Sign-in was not completed. You can try again.');
-        if (!saved || !saved.verifier || saved.state !== params.get('state') || Date.now() - saved.startedAt > 15 * 60 * 1000 || saved.redirectUri !== callbackUri()) {
+        if (!saved || !saved.verifier || !saved.state || !Number.isFinite(saved.startedAt) || saved.startedAt > Date.now() || saved.state !== params.get('state') || Date.now() - saved.startedAt > 15 * 60 * 1000 || saved.redirectUri !== callbackUri()) {
           throw new Error('We could not verify this sign-in request. Please start sign-in again.');
         }
         const tokens = await request('/oauth2/token', { clientId: CLIENT, grantType: 'authorization_code', redirectUri: saved.redirectUri, code, codeVerifier: saved.verifier });

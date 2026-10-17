@@ -47,10 +47,10 @@ Source of truth: `brand/v7-design-system/architecture/sitemap.md`, based on the 
 
 - [x] Create isolated branch from current main.
 - [x] Commit approved sitemap and this plan before implementation.
-- [ ] Implement six shared mega menus and mobile navigation.
-- [ ] Add Get Involved and Volunteer pages and consolidate audience journeys.
-- [ ] Add account entry and document verified capabilities.
-- [ ] Update footer and FAQ anchors; preserve all existing page/product routes.
+- [x] Implement six shared mega menus and mobile navigation.
+- [x] Add Get Involved and Volunteer pages and consolidate audience journeys.
+- [x] Add account entry and document verified capabilities.
+- [x] Update footer and FAQ anchors; preserve all existing page/product routes.
 - [ ] Build, route/anchor audit, focused behavior checks and existing regression checks pass.
 - [ ] Branch preview succeeds and is checked.
 - [ ] Merge PR to main.
@@ -59,3 +59,9 @@ Source of truth: `brand/v7-design-system/architecture/sitemap.md`, based on the 
 ## Progress
 
 October 17: Main inspected; no AGENTS.md files found. Existing Astro static build and Wix postbuild aliases are retained. Wix Members Area, Stores V3, Donations and Forms are installed; this alone does not establish that a member portal is implemented. The existing preview workflow is product-specific and will be adapted to verify the sitemap release without changing its production isolation.
+
+October 17 implementation: Six desktop mega menus and six mobile accordion groups now share the navigation registry. Get Involved, Volunteer, Account and Site Map destinations are present; old routes and volunteer links remain usable. Family and provider content have distinct purposes. The existing V7 artwork and Shop/Hats hero assignments are unchanged.
+
+Account capability: Wix-managed OAuth login, PKCE callback verification, current-member lookup and logout are connected. The published domain and localhost account callback URIs are allowed; the original checkout redirect domains are preserved. A live visitor-token and login-redirect check returned HTTP 200. Order history and recurring-gift administration remain team-assisted, with working contact paths rather than simulated dashboards. Login is separate from clinical records.
+
+Verification so far: 14 focused browser checks passed (six navigation/account tests plus eight existing hero/responsive checks). All six desktop menu screens and the mobile drawer were visually reviewed; no runtime errors were observed. Hosted-route checks validated 43 navigation destinations/sections, and existing category route and brand-boundary checks passed. The preview workflow now verifies the new destinations; the existing production workflow can release this sitemap only from main when its dated release marker is merged.

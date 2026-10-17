@@ -68,7 +68,7 @@ export const NAVIGATION = [
     eyebrow: 'Support the mission', title: 'Your part. A shared purpose.',
     description: 'Explore the mission, understand our stewardship and find a meaningful way to give or get involved.',
     overview: 'Ways to get involved', action: ['Donate', '/give'],
-    prompt: 'Already part of the Faith Reins community?', help: 'Find account access and help with an existing gift or order.',
+    prompt: 'Ready to support the mission?', help: 'Choose a way to give or connect with our team about getting involved.',
     links: [
       item('Give', '/give', 'Explore one-time and recurring giving options.', photo('give')),
       item('Sponsorships', '/sponsorships', 'Support families, equine care and the places we serve.', photo('sponsorships')),

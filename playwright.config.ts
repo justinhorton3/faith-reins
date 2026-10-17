@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./tests",
   use: {
     baseURL: "http://localhost:4321",
+    launchOptions: process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH, args: ["--no-sandbox", "--disable-dev-shm-usage", "--no-zygote", "--use-gl=angle", "--use-angle=swiftshader"] } : {},
   },
   webServer: {
     command: "npm run preview -- --port 4321",
