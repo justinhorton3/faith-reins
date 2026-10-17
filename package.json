@@ -17,6 +17,7 @@
     "@wix/ecom": "1.0.2454",
     "@wix/essentials": "1.0.15",
     "@wix/get-paid": "1.0.635",
+    "@wix/members": "1.0.511",
     "astro": "^5.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
