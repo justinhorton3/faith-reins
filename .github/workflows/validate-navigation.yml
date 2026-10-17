@@ -29,7 +29,7 @@ jobs:
       - run: node scripts/verify-navigation.mjs
       - run: node scripts/verify-shop-category-routes.mjs
       - uses: actions/upload-artifact@v4
-        if: failure()
+        if: always()
         with:
           name: navigation-test-results
           path: test-results/
