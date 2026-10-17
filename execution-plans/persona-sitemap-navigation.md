@@ -54,7 +54,7 @@ Source of truth: `brand/v7-design-system/architecture/sitemap.md`, based on the 
 - [x] Build, route/anchor audit, focused behavior checks and existing regression checks pass.
 - [x] Branch preview succeeds and is checked.
 - [x] Merge PR to main.
-- [ ] Release merged source and verify live site.
+- [x] Release merged source and verify live site.
 
 ## Progress
 
@@ -71,3 +71,7 @@ Preview verification (October 17): [PR #35](https://github.com/justinhorton3/fai
 Release procedure: merge this PR with its individual commits preserved. The dated sitemap marker triggers the existing main-only Wix static-site release workflow. Verify the merge SHA, successful deployment, live navigation, all shared menu targets and the new involvement/account/sitemap routes. Rollback, if needed, uses the prior main source `95f7b1161cf5c63400423c4267f0385850d137b4` through the same release pipeline.
 
 Release attempt: PR #35 merged as `b38edb467f3447877e95751577cbb28955c5b27f`, whose tree exactly matches the verified preview. All seven final branch workflows passed. The older multipart upload in Deploy web returned HTTP 400. Follow-up branch `fix/sitemap-release-cli`, based on that merge, replaces the upload with documented `wix release`, the same method as the last successful production release, and adds post-publication route/asset checks.
+
+Release complete: [PR #36](https://github.com/justinhorton3/faith-reins/pull/36) merged as `e13cd8973d36bc53d804cc08b035d2805aad0a27`. [Deploy web run 39052696863](https://github.com/justinhorton3/faith-reins/actions/runs/39052696863) succeeded on October 17, 2026. Its post-publication check verified all six menus, 43 navigation destinations/sections, the account entry/noindex policy, and byte-identical approved Shop/Hats images. The live solid sticky header, family mega menu and sitemap were also inspected in the browser. The completed release record is in [PR #35](https://github.com/justinhorton3/faith-reins/pull/35#issuecomment-6237358255).
+
+Remaining account follow-ups, outside this navigation release: verify login/callback/logout with a real test member (current member tests use controlled fixtures), and separately implement self-service order history, receipts and recurring-gift management. These remain team-assisted on the released site.
