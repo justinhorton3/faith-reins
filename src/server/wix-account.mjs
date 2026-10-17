@@ -1,5 +1,5 @@
 import { auth } from '@wix/essentials';
-import { orders } from '@wix/ecom';
+import { orders, orderFulfillments } from '@wix/ecom';
 import { receipts } from '@wix/get-paid';
 import { members } from '@wix/members';
 import { AccountError } from '../lib/account/core.mjs';
@@ -13,5 +13,6 @@ export const accountDriver = {
   updateMember: member => members.updateMember(member.id, { contact: member.contact, profile: member.profile }),
   searchOrders: search => auth.elevate(orders.searchOrders)(search),
   getOrder: id => auth.elevate(orders.getOrder)(id),
+  getFulfillments: id => auth.elevate(orderFulfillments.listFulfillmentsForSingleOrder)(id),
   queryReceipts: query => auth.elevate(receipts.queryReceipts)(query),
 };

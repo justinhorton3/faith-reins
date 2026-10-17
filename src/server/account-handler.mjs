@@ -1,4 +1,4 @@
-import { AccountError, memberIdentity, profileDTO, profilePatch, history, ownedOrder, orderReceipts, invalid } from '../lib/account/core.mjs';
+import { AccountError, memberIdentity, profileDTO, profilePatch, history, ownedOrder, orderReceipts, orderTracking, invalid } from '../lib/account/core.mjs';
 
 export function accountJSON(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'private, no-store, max-age=0', Pragma: 'no-cache', Vary: 'Cookie', 'X-Content-Type-Options': 'nosniff', 'X-Robots-Tag': 'noindex, nofollow', 'Referrer-Policy': 'no-referrer' } });
@@ -14,10 +14,12 @@ export async function handleAccountRequest(request, action, driver) {
       if ([...url.searchParams.keys()].some(key => !['kind', 'cursor'].includes(key))) throw invalid('Please use the account history controls.');
       return accountJSON(await history(driver, identity, url.searchParams.get('kind') || 'all', url.searchParams.get('cursor') || ''));
     }
-    const record = action.match(/^orders\/([^/]+)(\/receipts)?$/);
+    const record = action.match(/^orders\/([^/]+)(\/(?:receipts|tracking))?$/);
     if (request.method === 'GET' && record) {
       if (url.search) throw invalid('Please open the order from your account.');
-      return accountJSON(record[2] ? await orderReceipts(driver, identity, record[1]) : { order: await ownedOrder(driver, identity, record[1]) });
+      if (record[2] === '/receipts') return accountJSON(await orderReceipts(driver, identity, record[1]));
+      if (record[2] === '/tracking') return accountJSON(await orderTracking(driver, identity, record[1]));
+      return accountJSON({ order: await ownedOrder(driver, identity, record[1]) });
     }
     if (request.method === 'PATCH' && action === 'profile') {
       if (request.headers.get('Origin') !== url.origin) throw new AccountError(403, 'INVALID_ORIGIN', 'Please save your profile from your Faith Reins account.');
@@ -29,7 +31,7 @@ export async function handleAccountRequest(request, action, driver) {
       try { input = JSON.parse(text); } catch { throw invalid('Please check the profile form.'); }
       await driver.updateMember(profilePatch(input, member));
       const updated = await driver.currentMember();
-      memberIdentity(updated);
+      if (memberIdentity(updated).id !== identity.id) throw new AccountError(401, 'SIGN_IN_REQUIRED', 'Please sign in again.');
       return accountJSON({ profile: profileDTO(updated) });
     }
     throw new AccountError(404, 'NOT_FOUND', 'This account page is not available.');

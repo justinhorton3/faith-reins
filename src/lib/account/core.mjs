@@ -93,3 +93,17 @@ export async function orderReceipts(driver, identity, orderId) {
   const result = await driver.queryReceipts({ filter: { 'sourceReference.externalReferenceId': { $eq: orderId } }, cursorPaging: { limit: 100 } });
   return { receipts: (result.receipts || []).map(receipt => receiptDTO(receipt, identity, orderId)).filter(Boolean), moreAvailable: Boolean(result.pagingMetadata?.hasNext) };
 }
+export async function orderTracking(driver, identity, orderId) {
+  const order = await ownedOrder(driver, identity, orderId);
+  if (!order.items.some(item => item.kind === 'shop')) return { shipments: [] };
+  const result = await driver.getFulfillments(orderId);
+  if (result.orderWithFulfillments?.orderId !== orderId) throw missing();
+  const shipments = (result.orderWithFulfillments.fulfillments || []).map(fulfillment => {
+    const info = fulfillment.trackingInfo;
+    if (!info?.trackingNumber) return null;
+    let trackingUrl = '';
+    try { const url = new URL(info.trackingLink); if (url.protocol === 'https:' && !url.username && !url.password) trackingUrl = url.href; } catch {}
+    return { number: String(info.trackingNumber).slice(0, 100), carrier: String(info.shippingProvider || '').slice(0, 100), trackingUrl };
+  }).filter(Boolean);
+  return { shipments };
+}

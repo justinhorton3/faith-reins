@@ -1,5 +1,6 @@
 import { titleBand, section, sh, infoGrid, split, checks, steps, btn, tlink, ctaBand, SITE } from './lib.mjs';
 import { NAVIGATION, POLICY_LINKS } from './navigation.mjs';
+import { registerAccountPages } from './account/pages.mjs';
 
 export function registerPersonaPages(add) {
   add('/get-involved', 'Get Involved', 'Explore giving, sponsorships, volunteering and careers at Faith Reins in South Arkansas.',
@@ -30,14 +31,7 @@ export function registerPersonaPages(add) {
       `<div class="btn-row">${btn('Ask about volunteering', '/contact#volunteer-inquiry')}${tlink('Read the volunteer policy', '/volunteer-policy')}</div>`, { id: 'get-started' }) +
     ctaBand({ title: 'Questions about volunteering?', body: 'Call our team to talk about opportunities and next steps.', primary: ['Contact us', '/contact#volunteer-inquiry'], secondary: ['More ways to help', '/get-involved'] }));
 
-  add('/account', 'My Account', 'Sign in to your Faith Reins account and find assistance with orders, gifts and contact information.',
-    titleBand({ eyebrow: 'My Account', title: 'Welcome back.', body: 'Sign in to Faith Reins or connect with our team about an existing order or gift.' }) +
-    section(`<div class="account-access" data-account data-client-id="d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12"><div>${sh({ eyebrow: 'Secure account access', title: 'Sign in to Faith Reins', size: 'sm', body: 'Use our Wix-managed sign-in page to sign in, create an account or reset your password.' })}</div><div class="stack"><p role="status" data-account-status>Sign-in is loading. You can contact our team below at any time.</p><p data-account-identity hidden></p><div class="btn-row"><button class="btn" type="button" data-account-login disabled>Sign in / Create account</button><button class="btn btn--outline" type="button" data-account-logout hidden>Sign out</button></div><noscript>Please enable JavaScript for sign-in, or contact our team for assistance.</noscript></div></div>`, { tone: 'paper' }) +
-    section(sh({ eyebrow: 'Orders & giving', title: 'We can help you from here.', body: 'For order updates, receipts, changes to a recurring gift or updates to your contact information, please connect with our team.' }) + infoGrid([
-      { title: 'Order help', body: 'Ask about an existing purchase, shipment or return. Include your order number if you have it.', link: ['Contact our team', '/contact#account-help'] },
-      { title: 'Giving support', body: 'Request a receipt or help changing an existing recurring gift. Please do not send payment card details.', link: ['Get giving assistance', '/contact#account-help'] },
-      { title: 'Contact information', body: 'Ask for help updating the details associated with a gift or order.', link: ['Get account help', '/contact#account-help'] },
-    ])) + ctaBand({ title: 'Prefer to talk?', body: 'Our team is happy to help with your account questions.', primary: ['Call ' + SITE.phone, 'tel:' + SITE.tel], secondary: ['Contact us', '/contact#account-help'] }), null, { noindex: true });
+  registerAccountPages(add);
 
   add('/site-map', 'Site Map', 'Find Faith Reins services, family and provider resources, ways to get involved, account access and shop categories.',
     titleBand({ eyebrow: 'Find your way', title: 'Site map', body: 'Find the right place to learn, connect or return to Faith Reins.' }) +

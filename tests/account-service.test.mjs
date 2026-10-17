@@ -128,3 +128,12 @@ test('oversized and malformed profile requests cannot write', async () => {
   }
   assert.equal(wrote, false);
 });
+
+test('shipment tracking is authorized by order and excludes unsafe links and private fields', async () => {
+  const action = 'orders/' + orderId + '/tracking';
+  let queried = false;
+  const denied = await handleAccountRequest(request(action), action, driver({ getOrder: async () => order({ memberId: bob.id }), getFulfillments: async () => { queried = true; } }));
+  assert.equal(denied.status, 404); assert.equal(queried, false);
+  const response = await handleAccountRequest(request(action), action, driver({ getFulfillments: async () => ({ orderWithFulfillments: { orderId, fulfillments: [{ trackingInfo: { trackingNumber: 'TEST-001', shippingProvider: 'Carrier', trackingLink: 'https://carrier.example/TEST-001' }, address: 'never expose' }, { trackingInfo: { trackingNumber: 'TEST-002', trackingLink: 'javascript:alert(1)' } }] } }) }));
+  const data = await response.json(); assert.equal(data.shipments.length, 2); assert.equal(data.shipments[0].trackingUrl, 'https://carrier.example/TEST-001'); assert.equal(data.shipments[1].trackingUrl, ''); assert.ok(!JSON.stringify(data).includes('never expose'));
+});

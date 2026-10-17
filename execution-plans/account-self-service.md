@@ -31,8 +31,8 @@ The first release prioritizes authenticated purchase/donation history, issued re
 - [x] Create branch from current main.
 - [x] Commit execution plan before implementation.
 - [ ] Confirm runtime, identity, order, receipt, profile and subscription contracts.
-- [ ] Implement protected services with ownership enforced on every private read/write.
-- [ ] Implement account pages with real data and honest states.
+- [x] Implement protected services with ownership enforced on every private read/write.
+- [x] Implement account pages with real data and honest states.
 - [ ] Complete supported profile/receipt/recurring-gift features and document any external capability limits.
 - [ ] Pass meaningful security/behavior tests and existing navigation/shop checks.
 - [ ] Verify hosted preview, including direct account URLs and signed-out API rejection.
@@ -46,3 +46,7 @@ October 17: Branch created from current main. Existing static Astro build and br
 Foundation: introduced a Wix-hosted Workers build for account APIs while preserving the ordinary static build for public regression checks. Deployment must pull and validate the existing linked app's server environment before building the account runtime. Worker output is separated from the public asset upload. The session endpoint verifies the caller's member token with Wix; downstream order access is gated by server-derived member/contact IDs, not a submitted email. Six local security checks and the existing hosted navigation/category checks pass. Actual hosted runtime compatibility is the next verification gate.
 
 Account services: purchase/giving queries, order details, issued receipt lookup and profile updates are implemented behind server-derived ownership checks. The managed Wix SDK now reads the current member from its HttpOnly server session; profile updates run with member permissions, and only the narrow business reads elevate. Private responses vary by cookie and disable caching. Verified sign-in email is required before returning contact-linked history. Seventeen local security tests pass, covering cross-member/cursor attacks, receipt ownership, unsupported catalogs, unverified email, profile field/origin validation and safe error responses. The server-session change will be checked in the next hosted preview.
+
+Account interface: Overview, My Orders, My Giving, Recurring Giving, Profile & Settings and Order Details are implemented in the existing V7 design. Native managed login/logout replace browser token storage. Order details support ownership-checked receipt and shipment-tracking lookups. Account pages disable analytics and indexing, clear private content on session expiry/navigation, and render data as text. Ten desktop/mobile screens were visually reviewed using controlled test records. Eighteen service tests pass; 22 distinct browser checks cover account journeys plus existing navigation/shop heroes. The static build and 43 navigation destinations still pass.
+
+Recurring-gift capability: the first release shows recorded recurring payments. Current billing schedules, payment-method updates and cancellation remain on the existing team-assistance path because no supported headless subscription-management contract has been established. The UI labels this limit explicitly and does not invent active status or next-charge dates. Real-member validation and final deployment checks remain outstanding.
