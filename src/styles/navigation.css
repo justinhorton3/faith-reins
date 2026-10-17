@@ -72,3 +72,6 @@
   .site-footer__sitemap { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px 22px; }
 }
 @media print { .mega-panel, .drawer { display: none !important; } }
+
+.account-access { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+@media(max-width: 767px) { .account-access { grid-template-columns: 1fr; gap: 30px; } }

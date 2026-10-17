@@ -304,7 +304,7 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
   section(infoGrid([
     { title: "Provider intake", body: "Ask about service fit and referral requirements. Please do not include patient records or medical details in this public form.", link: ["Call intake", "tel:" + SITE.tel], html: false },
     { title: "Volunteer inquiry", body: "Tell us your interests and availability. Our team will discuss current opportunities and next steps.", link: ["Volunteer guide", "/volunteer"] },
-  ], { cols: 2 }) + '<span id="contact-intake"></span><span id="volunteer-inquiry"></span>', { pad: "tight" }) +
+  ], { cols: 2 }) + '<span id="contact-intake"></span><span id="volunteer-inquiry"></span><span id="account-help"></span>', { pad: "tight" }) +
   section(split(
     stack(
       sh({ eyebrow: "Reach us", title: "Get in touch", size: "sm" }),
