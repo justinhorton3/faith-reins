@@ -100,7 +100,7 @@ Run `npm run build`, focused Playwright checks, applicable existing navigation/s
 - [x] Implement and verify hover, click, touch and keyboard behaviors.
 - [x] Verify tablet/mobile layouts, including thumbnail accordions.
 - [ ] Pass focused checks, existing regressions and required CI.
-- [ ] Capture desktop/tablet/mobile preview evidence for visual review.
+- [x] Capture desktop/tablet/mobile preview evidence for visual review.
 - [ ] Reconcile latest main/account work and validate the integrated result.
 - [ ] Obtain review of the concrete preview before merge/release.
 - [ ] Coordinate deployment with the account session; verify live navigation and account entry after the approved release.
@@ -119,3 +119,8 @@ The production build passed. Thirty-two combined navigation, responsive and shop
 After adapting the category validator to image-link markup, the hosted-route/fragment audit verified 43 destinations and all six Shop categories. Website independence passed with identical SHA-256 output for 308 files with/without brand/. Approved image bytes, account services, checkout and production publishing configuration were not modified. The account branch and main were still unchanged when PR #39 was opened. Two small expectations in tests/navigation.spec.js overlap the account PR and require reconciliation before merge.
 
 GitHub checks and the separate preview are running. No main merge, release marker or production deployment has been performed. Preview review and latest-main/account integration remain release gates.
+
+
+Hosted preview: the Preview web workflow succeeded for `81457d3`. Its [separate site preview](https://j9nyhv-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/) was opened and the compact About menu was inspected in the cloud browser; all five approved photographs loaded with nonzero natural dimensions. Production remains untouched. Responsive screenshots are retained as CI artifacts for review.
+
+Final accessibility follow-up: the reduced-motion override now covers drawer chevrons as well as desktop chevrons, and the no-JavaScript Site Map fallback has its own position so it does not widen the narrow header. Both affected browser checks passed again. Fresh CI/preview verification follows this commit; physical-device testing and integration with the account PR remain outstanding.

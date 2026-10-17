@@ -182,6 +182,7 @@ test('native desktop disclosure and small-screen site map work without JavaScrip
   await expect(page.locator('#mega-about .mega-card').first()).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator('.site-header__compact noscript a')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
   await context.close();
 });
 
@@ -194,6 +195,7 @@ test('reduced motion and representative responsive screenshots', async ({ page }
   await page.setViewportSize({ width: 820, height: 1180 });
   await page.getByRole('button', { name: 'Open menu', exact: true }).click();
   await page.locator('[data-mobile-group] > summary').first().click();
+  expect(await page.locator('[data-mobile-group] .mega-toggle').first().evaluate(el => getComputedStyle(el).transitionDuration)).toBe('0s');
   await page.screenshot({ path: testInfo.outputPath('menu-tablet.png') });
   await page.keyboard.press('Escape');
   await page.setViewportSize({ width: 390, height: 844 });
