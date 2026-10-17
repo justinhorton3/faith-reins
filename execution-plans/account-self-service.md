@@ -37,7 +37,7 @@ The first release prioritizes authenticated purchase/donation history, issued re
 - [x] Pass meaningful security/behavior tests and existing navigation/shop checks.
 - [x] Verify hosted preview, including direct account URLs and signed-out API rejection.
 - [x] Validate real-member login with the owner; record fixture-only checks separately.
-- [ ] Merge reviewed changes to main, release and verify live routes and access protection.
+- [x] Merge reviewed changes to main, release and verify live routes and access protection.
 
 ## Progress
 
@@ -55,3 +55,11 @@ Recurring-gift capability: the first release shows recorded recurring payments. 
 Release preparation: all seven final GitHub checks passed at `4d58db9d3e786b1758a755de2a1df968c1bb81c4`, including the hosted Workers preview and account browser/security checks. Preview: https://flpwma-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/account.html . The production workflow now uses the same authenticated server build as preview. Both publication paths check that the Worker is separate, no environment files or linked server credential enter public output, all six account pages are noindex, and signed-out account reads reject access without caching. Twenty-two Node security/publication tests and 22 distinct browser checks passed.
 
 Owner verification: on October 17 at 4:19 p.m. America/Chicago, Justin confirmed, "I have verified login." This clears the authentication release gate. The cloud browser did not perform that login. History, profile writes, receipt/tracking links, two-member isolation and expiry have controlled-fixture coverage; the owner's confirmation is not represented as live validation of those additional flows. The release marker now schedules the authorized production build when this branch merges to main. Production route/access verification remains the final delivery step.
+
+## Release result
+
+PR #38 merged to main at `09e2bd976fc7d30308021561f0bd067751c69d08`. The [production release workflow](https://github.com/justinhorton3/faith-reins/actions/runs/39070511819) succeeded on October 17, 2026; Wix reported "Site published on faithreins.com" at 4:21 p.m. America/Chicago.
+
+Production verification passed: six noindex account pages with native sign-in, four signed-out reads rejected with HTTP 401 and private/no-store responses, private build files inaccessible, six menus and 43 navigation destinations/sections intact, and all three approved Shop/Hats hero assets unchanged. Live account: https://www.faithreins.com/account.html . No production customer records or financial subscriptions were modified during release verification.
+
+All planned delivery steps are complete. Recurring billing management remains team-assisted as scoped above; the owner verified preview login, while the additional authenticated behaviors retain controlled-fixture coverage.
