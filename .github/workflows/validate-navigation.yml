@@ -8,6 +8,7 @@ on:
       - 'src/**'
       - 'scripts/verify-navigation.mjs'
       - 'tests/navigation.spec.js'
+      - 'tests/compact-menu.spec.js'
       - '.github/workflows/validate-navigation.yml'
 permissions:
   contents: read
@@ -23,7 +24,7 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - run: npm run build
-      - run: npx playwright test tests/navigation.spec.js tests/shop-hero.spec.js
+      - run: npx playwright test tests/navigation.spec.js tests/compact-menu.spec.js tests/shop-hero.spec.js
       - run: python scripts/wix-postbuild.py
       - run: node scripts/verify-navigation.mjs
       - run: node scripts/verify-shop-category-routes.mjs

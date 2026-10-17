@@ -5,7 +5,7 @@ const menus = ['about', 'therapies', 'families', 'providers', 'involved', 'shop'
 
 test('six full-width menus coordinate, preserve the solid header and close accessibly', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.site-nav summary')).toHaveText(['About+', 'Therapies+', 'For Families+', 'For Providers+', 'Get Involved+', 'Shop+']);
+  await expect(page.locator('.site-nav summary')).toHaveText(['About', 'Therapies', 'For Families', 'For Providers', 'Get Involved', 'Shop']);
   const header = page.locator('.site-header');
   const before = await header.evaluate(node => ({ background: getComputedStyle(node).backgroundColor, height: node.getBoundingClientRect().height }));
   for (const id of menus) {
@@ -14,7 +14,8 @@ test('six full-width menus coordinate, preserve the solid header and close acces
     await expect(page.locator('[data-mega-menu][open]')).toHaveCount(1);
     const bounds = await page.locator(`#mega-${id}`).boundingBox();
     expect(bounds.x).toBe(0); expect(bounds.width).toBe(1440);
-    expect(bounds.height).toBeGreaterThan(700);
+    expect(bounds.height).toBeGreaterThan(200);
+    expect(bounds.height).toBeLessThan(460);
   }
   expect(await header.evaluate(node => getComputedStyle(node).backgroundColor)).toBe(before.background);
   expect(await header.evaluate(node => node.getBoundingClientRect().height)).toBe(before.height);
