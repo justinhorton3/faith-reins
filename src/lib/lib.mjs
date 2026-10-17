@@ -1,7 +1,7 @@
 // Faith Reins v6 components for the static build. Markup only; styles live in src/styles/global.css.
 // Follows brand/FaithReins_DesignSystem_v6 (tokens, components, ui_kits/website).
 import media from "./media.json" with { type: "json" };
-import CATEGORIES from "./shop-category-pages.json" with { type: "json" };
+import { NAVIGATION, POLICY_LINKS, matchesNavigation } from "./navigation.mjs";
 
 export { media };
 export const FORMS = {
@@ -117,53 +117,31 @@ export const reach = (label, valueHtml, { big = false } = {}) =>
 export const form = (kind, { submit, success, layout = "", wide = "", btnKind = "" }) =>
   `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="btn--${btnKind}"` : ""}><noscript>Please enable JavaScript to use this form, or call ${SITE.phone}.</noscript></div>`;
 
-/* ---------- Shell ---------- */
-const THERAPY_ROUTES = ["/services-programs", "/speech-language-therapy", "/occupational-therapy", "/physical-therapy", "/counseling", "/equine-assisted-learning"];
-const NAV = [
-  ["Therapies", "/services-programs", THERAPY_ROUTES],
-  ["For Families", "/for-families", ["/for-families", "/book-online", "/payment-and-insurance", "/faq"]],
-  ["For Providers", "/for-referring-providers", ["/for-referring-providers"]],
-  ["Our Horses", "/our-horses", ["/our-horses"]],
-  ["About", "/our-mission", ["/our-mission", "/our-team", "/our-partners", "/join-our-team", "/impact-and-stewardship", "/news"]],
-  ["Shop", "/shop", ["/shop"]],
-];
-const isCur = (route, m) => m.includes(route) || m.some((p) => p !== "/" && route.startsWith(p + "/"));
+/* ---------- Shell: approved persona sitemap ---------- */
 const bars = `<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>`;
-
-// One shared category registry drives desktop, mobile and Shop page navigation.
-function shopDesktopNav(route) {
-  const active = route === '/shop' || route.startsWith('/shop/');
-  return `<details class="nav-shop"><summary class="nav-link"${active ? ' aria-current="page"' : ''}>Shop <span class="nav-shop__chevron" aria-hidden="true"></span></summary><div class="nav-shop__panel" role="group" aria-label="Shop categories"><a href="/shop" class="nav-shop__all"${route === '/shop' ? ' aria-current="page"' : ''}>Shop all <span aria-hidden="true">→</span></a>${CATEGORIES.map(category => `<a href="${category.route}" class="nav-shop__item"${route === category.route ? ' aria-current="page"' : ''}>${esc(category.label)}</a>`).join('')}</div></details>`;
+const currentLink = (route, href) => route === href.split('#')[0] && !href.includes('#') ? ' aria-current="page"' : '';
+function megaMenu(group, route) {
+  return `<details class="mega-nav-item${matchesNavigation(route, group) ? ' is-current' : ''}" data-mega-menu="${group.id}" name="primary-mega-menu">
+<summary class="nav-link" id="nav-${group.id}" aria-controls="mega-${group.id}" aria-expanded="false">${esc(group.label)}<span class="mega-toggle" aria-hidden="true">+</span></summary>
+<section class="mega-panel" id="mega-${group.id}" aria-labelledby="nav-${group.id}"><div class="mega-panel__in">
+<div class="mega-panel__top">${eyebrow(group.eyebrow)}<div class="mega-panel__tools"><a class="mega-panel__overview" href="${group.href}">${esc(group.overview)} <span aria-hidden="true">↗</span></a><button class="mega-close" type="button" data-mega-close aria-label="Close ${esc(group.label)} menu">Close <span aria-hidden="true">×</span></button></div></div>
+<div class="mega-panel__intro"><h2 class="mega-panel__title">${esc(group.title)}</h2><p>${esc(group.description)}</p></div>
+<div class="mega-grid">${group.links.map(link => `<a class="mega-card" href="${link.href}"${currentLink(route, link.href)}><img class="mega-card__image" src="${link.image}" alt="" width="104" height="118" loading="lazy"><span class="mega-card__copy">${link.group ? `<span class="mega-card__group">${esc(link.group)}</span>` : ''}<span class="mega-card__title">${esc(link.label)}</span><span class="mega-card__description">${esc(link.description)}</span><span class="mega-card__arrow" aria-hidden="true">↗</span></span></a>`).join('')}</div>
+<div class="mega-panel__foot"><p><strong>${esc(group.prompt)}</strong>${esc(group.help)}</p>${tlink(group.action[0], group.action[1], { arrow: true })}</div>
+</div></section></details>`;
 }
-function shopMobileNav(route) {
-  return `<div class="drawer-shop-subnav" role="group" aria-label="Shop categories"><span class="drawer-shop-subnav__title">Shop categories</span>${CATEGORIES.map(category => `<a class="drawer-shop-subnav__link" href="${category.route}"${route === category.route ? ' aria-current="page"' : ''}>${esc(category.label)}<span aria-hidden="true">→</span></a>`).join('')}</div>`;
+function mobileGroup(group, route) {
+  return `<details class="drawer-group" name="mobile-navigation" data-mobile-group><summary class="drawer-link">${esc(group.label)}<span class="mega-toggle" aria-hidden="true">+</span></summary><div class="drawer-group__links"><a class="drawer-group__overview" href="${group.href}"${currentLink(route, group.href)}>${esc(group.overview)} →</a>${group.links.filter(link => link.href !== group.href).map(link => `<a href="${link.href}"${currentLink(route, link.href)}>${esc(link.label)}</a>`).join('')}<a href="${group.action[1]}">${esc(group.action[0])} →</a></div></details>`;
 }
-export function header(route = "") {
-  const cur = (m) => (isCur(route, m) ? ' aria-current="page"' : "");
+export function header(route = '') {
   return `<a class="skip-link" href="#main">Skip to content</a>
-<div class="utility"><div class="utility__in"><span class="utility__tag">A non-profit serving South Arkansas families</span><span class="utility__links"><a href="tel:${SITE.tel}">${SITE.phone}</a><a class="utility__desk" href="/for-referring-providers">For Providers</a><a href="/contact">Contact</a><button class="cart-btn" id="cart-btn" type="button" aria-haspopup="dialog" aria-label="Shopping bag">Bag<span class="cart-badge" id="cart-badge" hidden>0</span></button></span></div></div>
-<header class="site-header"><div class="site-header__in">
-<a class="site-header__logo" href="/" aria-label="Faith Reins home">${lockup({ size: "sm" })}</a>
-<nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAV.map(([l, h, m]) => l === 'Shop' ? shopDesktopNav(route) : `<a class="nav-link" href="${h}"${cur(m)}>${esc(l)}</a>`).join("")}</div>${btn("Support", "/give", "", { size: "sm" })}</nav>
-<div class="site-header__compact"><span class="site-header__support">${btn("Support", "/give", "", { size: "sm" })}</span><button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${bars}</button></div>
-</div></header>
-<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: "xs" })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div>
-<nav aria-label="Menu">${[["Home", "/", ["/"]], ...NAV, ["Contact", "/contact", ["/contact"]]].map(([l, h, m]) => `<a class="drawer-link" href="${h}"${cur(m)}>${esc(l)}<span aria-hidden="true">→</span></a>` + (l === "Shop" ? shopMobileNav(route) : "")).join("")}</nav>
-<div class="drawer__foot">${btn("Support Faith Reins", "/give", "", { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
+<div class="utility"><div class="utility__in"><span class="utility__tag">A non-profit serving South Arkansas families</span><span class="utility__links"><a href="tel:${SITE.tel}">${SITE.phone}</a><a href="/contact">Contact</a><a href="/account"${currentLink(route, '/account')}>My Account</a><button class="cart-btn" id="cart-btn" type="button" aria-haspopup="dialog" aria-label="Shopping bag">Bag<span class="cart-badge" id="cart-badge" hidden>0</span></button></span></div></div>
+<header class="site-header"><div class="site-header__in"><a class="site-header__logo" href="/" aria-label="Faith Reins home">${lockup({ size: 'sm' })}</a><nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAVIGATION.map(group => megaMenu(group, route)).join('')}</div>${btn('Donate', '/give', '', { size: 'sm' })}</nav><div class="site-header__compact"><span class="site-header__support">${btn('Donate', '/give', '', { size: 'sm' })}</span><button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${bars}</button></div></div></header>
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: 'xs' })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div><nav aria-label="Mobile navigation"><a class="drawer-link" href="/">Home</a>${NAVIGATION.map(group => mobileGroup(group, route)).join('')}<a class="drawer-link drawer-link--account" href="/account">My Account</a><a class="drawer-link drawer-link--account" href="/contact">Contact</a></nav><div class="drawer__foot">${btn('Donate', '/give', '', { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
 }
 
 export function footer() {
-  const cols = [
-    ["Therapies", [["Speech & Language", "/speech-language-therapy"], ["Occupational", "/occupational-therapy"], ["Physical", "/physical-therapy"], ["Counseling", "/counseling"], ["Equine-Assisted Learning", "/equine-assisted-learning"]]],
-    ["Families", [["Request an appointment", "/book-online"], ["Payment & insurance", "/payment-and-insurance"], ["FAQ", "/faq"], ["Referring providers", "/for-referring-providers"], ["Contact", "/contact"]]],
-    ["About", [["Our mission", "/our-mission"], ["Our team", "/our-team"], ["Our horses", "/our-horses"], ["Our partners", "/our-partners"], ["Join our team", "/join-our-team"], ["News", "/news"]]],
-  ];
-  const legal = [["Privacy policy", "/privacy-policy"], ["Terms", "/terms-of-service"], ["HIPAA notice", "/hipaa-notice"], ["Accessibility", "/accessibility"], ["All policies", "/legal"]];
-  return `<footer class="site-footer"><div class="site-footer__in"><div class="site-footer__grid">
-<div class="site-footer__brand">${lockup({ size: "sm", tone: "dark" })}<p>A non-profit pediatric and equine therapy practice serving the children and families of South Arkansas.</p><address><a href="tel:${SITE.tel}">${SITE.phone}</a><br><a href="mailto:${SITE.email}">${SITE.email}</a><br>${SITE.street}<br>${SITE.city}</address></div>
-${cols.map(([t, links]) => `<div class="site-footer__col"><span class="site-footer__head">${t}</span>${links.map(([l, h]) => `<a href="${h}">${esc(l)}</a>`).join("")}</div>`).join("")}
-<div class="gift"><span class="gift__title">Keep care close to home.</span><span class="gift__body">Your gift helps children and families in South Arkansas reach care, and helps us care for our horses.</span>${btn("Support", "/give", "accent", { size: "sm", block: true })}</div>
-</div>
-<div class="site-footer__bottom"><span>501(c)(3) non-profit · Camden, Arkansas</span><nav aria-label="Legal">${legal.map(([l, h]) => `<a href="${h}">${esc(l)}</a>`).join("")}</nav><span>© ${new Date().getFullYear()} Faith Reins</span></div>
-</div></footer>`;
+  return `<footer class="site-footer"><div class="site-footer__in"><div class="site-footer__overview"><div class="site-footer__brand">${lockup({ size: 'sm', tone: 'dark' })}<p>A non-profit pediatric and equine therapy practice serving the children and families of South Arkansas.</p><address><a href="tel:${SITE.tel}">${SITE.phone}</a><br><a href="mailto:${SITE.email}">${SITE.email}</a><br>${SITE.street}<br>${SITE.city}</address></div><div class="gift"><span class="gift__title">Keep care close to home.</span><span class="gift__body">Your gift helps children and families reach care and helps us care for our horses.</span>${btn('Donate', '/give', 'accent', { size: 'sm', block: true })}${tlink('My Account', '/account', { inv: true })}</div></div>
+<nav class="site-footer__sitemap" aria-label="Footer sitemap">${NAVIGATION.map(group => `<div class="site-footer__col"><span class="site-footer__head">${esc(group.label)}</span><a href="${group.href}">${esc(group.overview)}</a>${group.links.filter(link => link.href !== group.href).map(link => `<a href="${link.href}">${esc(link.label)}</a>`).join('')}</div>`).join('')}</nav>
+<div class="site-footer__bottom"><span>501(c)(3) non-profit · Camden, Arkansas</span><nav aria-label="Legal"><a href="/site-map">Site map</a>${POLICY_LINKS.map(([label, href]) => `<a href="${href}">${esc(label)}</a>`).join('')}</nav><span>© ${new Date().getFullYear()} Faith Reins</span></div></div></footer>`;
 }

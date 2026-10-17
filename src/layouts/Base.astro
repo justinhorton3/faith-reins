@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/navigation.css";
 import "../styles/product-showcase.css";
 import "../styles/shop-hero.css";
 import "../styles/shop-categories.css";
@@ -94,6 +95,7 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID || "";
     <main id="main"><slot /></main>
     <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
+    <script>import "../scripts/navigation.js";</script>
     <script>import "../scripts/cart.js";</script>
     <script>import "../scripts/product-showcase.js";</script>
     <script>import "../scripts/cms.js";</script>

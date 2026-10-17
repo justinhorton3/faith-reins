@@ -42,33 +42,6 @@ function track(event, params = {}) {
   // api("/analytics/v2/events", "POST", { event: { eventType: event, eventData: params } }).catch(() => {});
 }
 
-/* Shell: header and footer are rendered in the page HTML; this wires the menu drawer. */
-(() => {
-  const d = $("#drawer"), o = $("[data-drawer-open]");
-  if (!d || !o) return;
-  const set = (open) => { d.hidden = !open; document.body.classList.toggle("drawer-open", open); o.setAttribute("aria-expanded", open); (open ? $("[data-drawer-close]", d) : o).focus(); };
-  o.addEventListener("click", () => set(true));
-  $$("[data-drawer-close]", d).forEach((b) => b.addEventListener("click", () => set(false)));
-  d.addEventListener("keydown", (e) => e.key === "Escape" && set(false));
-})();
-
-
-/* Native Shop dropdown closes on Escape or outside interaction. */
-(() => {
-  const shop = $(".nav-shop");
-  if (!shop) return;
-  shop.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && shop.open) {
-      event.preventDefault();
-      shop.open = false;
-      $("summary", shop)?.focus();
-    }
-  });
-  document.addEventListener("pointerdown", (event) => {
-    if (shop.open && !shop.contains(event.target)) shop.open = false;
-  });
-})();
-
 /* Forms */
 const text = (n) => (typeof n === "string" ? n : n && n.nodes ? n.nodes.map((c) => (c.textData ? c.textData.text : "") + text(c)).join("") : "");
 const phone = (v) => { const d = v.replace(/[^\d+]/g, ""); return d[0] === "+" ? d : d.length === 10 ? "+1" + d : d.length === 11 && d[0] === "1" ? "+" + d : d; };
