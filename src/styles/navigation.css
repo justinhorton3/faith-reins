@@ -1,6 +1,6 @@
 /* Compact V7 image-led disclosures. Header surface remains opaque in every state. */
 .site-header { background: var(--fr-paper); }
-.site-header__in { padding-top: 22px; padding-bottom: 22px; }
+.site-header__in { padding-top: 15px; padding-bottom: 15px; }
 .site-header__logo, .site-header__compact { flex-shrink: 0; }
 /* Give the complete approved V7 lockup prominence without stretching its artwork. */
 .site-header .lockup { width: 360px; }
@@ -66,7 +66,7 @@
   .site-header__support { display: inline-flex; }
   .site-header__support .btn { min-height: 44px; padding: 13px 12px; letter-spacing: .06em; font-size: 10px; }
   .site-header .lockup { width: min(280px, calc(100vw - 148px)); }
-  .site-header__in { gap: 8px; padding: 14px 16px; }
+  .site-header__in { gap: 8px; padding: 15px 16px; }
   .drawer__panel { width: min(460px, 100%); }
   .drawer__top .lockup { width: min(260px, calc(100vw - 104px)); }
   .site-footer__sitemap { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px 22px; }
