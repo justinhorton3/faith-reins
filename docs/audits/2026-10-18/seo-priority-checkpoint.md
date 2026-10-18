@@ -2,6 +2,8 @@
 
 Date: 2026-10-18. Branch: Audit_10.18.26. Status: PARTIAL; duplicate tags remain live.
 
+Follow-up: see [seo-build-root-cause.md](seo-build-root-cause.md). A successful offline Astro reproduction establishes build-time injection, and exact `?=v3` testing still returns duplicates with age 0. Do not escalate the earlier resolver/live mismatch as a Wix defect: the static build and URL-conversion order explain it. No report or support case has been sent.
+
 ## Confirmed access and changes
 
 The Wix dashboard's SEO Settings > Main pages lists 94 headless routes, although List Item SEO Tags (STATIC_PAGE) returns only five older built-in pages. Do not use those older IDs to update custom routes.
