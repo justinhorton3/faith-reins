@@ -21,6 +21,10 @@ Date: 2026-10-18. Branch: Audit_10.18.26. Implemented, not released. This supers
 
 The local workspace lacks the complete linked server environment, so the full account/release build is verified in CI with the existing repository secret rather than fabricated credentials. Record its outcome below after the branch commit triggers it. No local public-build pass is presented as a credentialed release-build pass.
 
+## Credentialed release-build result
+
+Fix commit: `0e41da21285e5121063a3355678e0da763f5e1d5`. Both jobs in [CI run 39156874765](https://github.com/justinhorton3/faith-reins/actions/runs/39156874765) passed. The nonpublishing account-artifact job completed the real `build:account` path using the existing linked environment. Its production postbuild removed **752 competing Wix tags across 94 HTML files**, preserving other embeds. Account artifact protection, per-page source metadata, 67 indexable routes, navigation and all six shop categories passed. The independent audit job passed the regressions, offline middleware/fix reproduction and public build checks. No upload, publication or site mutation command was run by these CI jobs.
+
 ## Release boundary
 
 This branch also contains earlier audit changes and deferred release prerequisites. Do not deploy the entire branch merely to publish this correction without reviewing that scope. The permanent legacy redirects and giving configuration remain separately guarded. Main has newer logo/favicon changes that are not overwritten by this branch work.
