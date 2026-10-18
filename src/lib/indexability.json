@@ -1,0 +1,8 @@
+{
+  "excludeRoutes": ["/404", "/news/post", "/give/thank-you", "/shop/thank-you", "/shop/mens"],
+  "excludePrefixes": ["/account", "/api"],
+  "redirects": [
+    { "from": "/shop/mens", "to": "/shop/men.html" },
+    { "from": "/shop/mens.html", "to": "/shop/men.html" }
+  ]
+}

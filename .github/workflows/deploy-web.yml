@@ -64,6 +64,10 @@ jobs:
         run: |
           node scripts/verify-shop-category-routes.mjs
           node scripts/verify-navigation.mjs
+      - name: Verify audit SEO artifacts and installed legacy redirects
+        run: |
+          node scripts/verify-audit-seo.mjs
+          node scripts/verify-audit-redirects.mjs
       - name: Keep active hero art and omit only unused duplicate photographs
         run: |
           # Assets copied for archival/traceability should not be uploaded

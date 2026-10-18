@@ -103,7 +103,6 @@ const SPLIT_IMG = {
   "occupational-therapy": ["pasture-hero", "50% 60%"],
   "physical-therapy": ["hero-our-horses-desktop", "50% 50%"],
   counseling: ["hero-our-mission-desktop", "50% 50%"],
-  "equine-assisted-learning": ["pasture-hero", "60% 60%"],
 };
 function service({ route, key, name, h1, body, overview, areasTitle, areas, journeyTitle, journey }) {
   const [ik, ipos] = SPLIT_IMG[key];
@@ -135,10 +134,21 @@ service({ route: "/counseling", key: "counseling", name: "Counseling", h1: "A ca
   overview: ["Counseling offers children, teens and families a calm, supportive place to talk, learn and grow.", "We work in partnership with parents and caregivers."],
   areasTitle: "Areas of support", areas: [["Child counseling", "Age-appropriate, gentle support."], ["Teen support", "A steady place for growing minds."], ["Family support", "Strengthening communication at home."], ["Anxiety and stress", "Tools for big feelings."], ["Behavior", "Understanding and supporting change."], ["Trauma-informed care", "Safe, patient and respectful."]],
   journeyTitle: "What to expect", journey: [["Intake", "We learn about your child and family."], ["Goals", "Together we set clear goals."], ["Session rhythm", "A steady, predictable schedule."], ["Privacy and fit", "We talk openly about privacy and whether we are the right fit."]] });
-service({ route: "/equine-assisted-learning", key: "equine-assisted-learning", name: "Equine-Assisted Learning", h1: "Learning through connection.", body: "Ground-based experiences with horses supporting confidence, connection and life skills.",
-  overview: ["Equine-assisted learning (EAL) offers ground-based experiences with horses, guided by our team.", "These learning experiences are not a substitute for clinical therapy, and activities are always supervised."],
-  areasTitle: "What participants practice", areas: [["Confidence", "Trying new things with support."], ["Trust", "Building relationship with a calm partner."], ["Communication", "Clear, kind, non-verbal connection."], ["Responsibility", "Caring for another living being."], ["Regulation", "Staying calm and present."], ["Resilience", "Keeping going after challenges."]],
-  journeyTitle: "What to expect", journey: [["Arrival", "A warm welcome and time to settle."], ["Safety orientation", "Clear expectations around horses."], ["Guided activities", "Supervised, ground-based experiences."], ["Reflection", "Talking about what was learned."]] });
+// EAL has its own participation journey; clinical payment/referral copy stays separate.
+add("/equine-assisted-learning", "Equine-Assisted Learning", "Supervised, ground-based learning with horses to practice confidence, communication and life skills. A nonclinical program at Faith Reins.",
+  hero({ key: "equine-assisted-learning", eyebrow: "Equine-Assisted Learning", title: "Learning through connection.", lead: "Supervised, ground-based experiences with horses to practice confidence, connection and life skills.", primary: APPT, secondary: ["Meet the herd", "/our-horses"] }) +
+  section(split(
+    sh({ eyebrow: "A nonclinical program", title: "Practice skills through connection", body: "Equine-assisted learning (EAL) is a learning program, not clinical therapy or a substitute for it. Our team guides participants through supervised activities with horses on the ground." }),
+    checks([["Confidence", "Trying new things with support."], ["Trust", "Building a relationship with a calm partner."], ["Communication", "Clear, kind, non-verbal connection."], ["Responsibility", "Caring for another living being."], ["Regulation", "Practicing staying calm and present."], ["Resilience", "Keeping going after challenges."]], { cols: 2 }), { cols: "1fr 1.2fr" })) +
+  splitFeature({ image: img("pasture-hero"), pos: "60% 60%", eyebrow: "Program fit", title: "Start with a conversation", body: "Request a callback to ask about current availability and whether EAL fits your goals. Our team will discuss participation needs and safety expectations before arranging a visit. Keep medical information out of public website forms.", actions: btn(...APPT) }) +
+  section(sh({ eyebrow: "Participation & payment", title: "Before you arrange a visit" }) + infoGrid([
+    { title: "Referral", body: "EAL does not require a physician referral. Clinical therapy has separate referral and treatment requirements." },
+    { title: "Safety", body: "Activities are supervised and ground-based. Ask our team about participation requirements and the safety orientation." },
+    { title: "Program costs", body: "Ask about EAL fees, payment arrangements and any available funding options before arranging a visit." },
+  ], { cols: 3 }), { tone: "paper" }) +
+  section(sh({ eyebrow: "What to expect", title: "The learning experience" }) + steps([["Arrival", "A warm welcome and time to settle."], ["Safety orientation", "Clear expectations around horses."], ["Guided activities", "Supervised, ground-based experiences."], ["Reflection", "Talking about what was learned."]])) +
+  section(sh({ eyebrow: "Looking for clinical care?", title: "Explore our therapy services", body: "Speech-language therapy, occupational therapy, physical therapy and counseling have their own care pathways." }) + tlink("Services & programs", "/services-programs"), { tone: "sand", pad: "tight" }) +
+  ctaBand({ title: "Talk with us about EAL.", body: "Ask about program fit, participation, availability and costs. Scheduling follows the conversation.", primary: APPT, secondary: ["Contact our team", "/contact"] }));
 
 /* ---------- For Families ---------- */
 add("/for-families", "For Families", "A guide to getting started, your first visit and family participation at Faith Reins.",
@@ -219,7 +229,7 @@ const thanks = (title, lead, note, actions) => section(`<div class="thanks">${ey
 add("/give/thank-you", "Thank You for Your Gift", "Your gift supports pediatric therapy and equine-assisted learning for children and families in South Arkansas.",
   thanks("Your gift is making a difference.", "Thank you for supporting Faith Reins. Your generosity helps children and families in South Arkansas reach the care they need — and helps us care for the horses that make it possible.",
     `A receipt will arrive by email shortly. If you have questions about your gift, email ${MAIL}.`,
-    btn("See our impact", "/impact-and-stewardship") + tlink("Our mission", "/our-mission")));
+    btn("Stewardship & reporting", "/impact-and-stewardship") + tlink("Our mission", "/our-mission")));
 add("/shop/thank-you", "Order Received", "Thank you for your Faith Reins order.",
   thanks("Order received — thank you.", "Your Faith Reins order is confirmed. You'll receive an email confirmation shortly with your order details, and tracking information once your items ship.",
     `Questions? Email ${MAIL} and include your order number.`,
@@ -239,10 +249,10 @@ add("/sponsorships", "Sponsorships", "A partnership with purpose. Support people
   ctaBand({ title: "More ways to help", primary: ["Give", "/give"], secondary: ["Impact & stewardship", "/impact-and-stewardship"] }));
 
 /* ---------- Impact ---------- */
-add("/impact-and-stewardship", "Impact & Stewardship", "Your generosity, a stronger community. See how support and the mission connect.",
-  hero({ key: "impact-and-stewardship", eyebrow: "Impact & Stewardship", title: "Your generosity. A stronger community.", lead: "See how support and the mission connect.", primary: ["Explore giving", "/give"] }) +
+add("/impact-and-stewardship", "Impact & Stewardship", "Our stewardship commitments, intended uses of support and current reporting status. Contact Faith Reins with donor questions.",
+  hero({ key: "impact-and-stewardship", eyebrow: "Impact & Stewardship", title: "Your generosity. A stronger community.", lead: "Our stewardship commitments and the purpose behind your support.", primary: ["Ask about stewardship", "#reporting"] }) +
   section(split(
-    sh({ eyebrow: "How support helps", title: "Where gifts go", body: "Gifts help children and families reach care and help us care for the horses at the heart of our programs." }),
+    sh({ eyebrow: "Intended uses of support", title: "What your support can help build", body: "Our priorities are access to care, program development, horse care and the spaces where families and horses connect. Talk with us about how you would like your gift to support these priorities." }),
     checks([["Children and families", "Care that families can reach."], ["Programs", "Therapy, counseling and EAL."], ["Horses", "Daily care for our equine partners."], ["The place", "A calm, safe setting to grow."]]))) +
   section(sh({ eyebrow: "Stewardship principles", title: "What you can expect from us" }) + infoGrid([
     { title: "Transparency", body: "We explain how gifts are used.", strong: true },
@@ -250,7 +260,9 @@ add("/impact-and-stewardship", "Impact & Stewardship", "Your generosity, a stron
     { title: "Mission focus", body: "Children, families and horses first.", strong: true },
     { title: "Accountability", body: "We answer to those who give.", strong: true },
   ], { cols: 4 }), { tone: "paper" }) +
-  ctaBand({ title: "Join us", body: "Give with confidence.", primary: ["Give", "/give"], secondary: ["Sponsorships", "/sponsorships"] }));
+  section(sh({ eyebrow: "Reporting status · October 18, 2026", title: "Stewardship commitments and reporting", body: "This page describes our stewardship commitments. Verified program outcomes and a financial summary have not yet been published here." }) +
+    `<p>For questions about the use of a gift, available financial information or reporting, ${MAIL} or <a href="/contact">contact our team</a>.</p>`, { id: "reporting" }) +
+  ctaBand({ title: "Support the mission", body: "Talk with us about how you would like to help.", primary: ["Give", "/give"], secondary: ["Sponsorships", "/sponsorships"] }));
 
 /* ---------- Partners ---------- */
 add("/our-partners", "Our Partners", "Community and clinical connections supporting South Arkansas.",
@@ -262,7 +274,7 @@ add("/our-partners", "Our Partners", "Community and clinical connections support
     { title: "Community organizations", body: "Neighbors in service." },
     { title: "Sponsors", body: "Businesses and groups." },
   ], { cols: 3 })) +
-  section(sh({ eyebrow: "Our sponsors", title: "Thank you to our sponsors" }) + `<div data-cms="sponsors">${sponsorsBlock(fallback.sponsors)}</div>`, { tone: "paper" }) +
+  section(sh({ eyebrow: "Community sponsorship", title: "Partners in the mission" }) + `<div data-cms="sponsors">${sponsorsBlock(fallback.sponsors)}</div>`, { tone: "paper" }) +
   ctaBand({ title: "Become a partner", body: "Together we can support more children and families.", primary: ["Contact us", "/contact"], secondary: ["Sponsorships", "/sponsorships"] }));
 
 /* ---------- Team ---------- */
@@ -338,13 +350,7 @@ add("/shop", "Shop", "Explore the Faith Reins collection: polos, layers, hoodies
   undefined,
   { image: "https://www.faithreins.com/assets/shop/v7/barn-collection.webp", imageAlt: "Green hoodie, cream tee, cap and mug on a natural barn table", imageWidth: 2172, imageHeight: 724 });
 
-// Temporary host-compatible alias for the old Men’s URL.
-// noindex plus an HTML redirect, pending a true server-side HTTP 301 at the edge.
-add("/shop/mens", "Men’s Collection Moved", "Find the Faith Reins men’s collection at its new address.",
-  titleBand({ eyebrow: "Shop", title: "Men’s collection moved", body: "Find our men’s polos, hoodies and layers in the updated collection." }) +
-  section('<p><a class="btn" href="/shop/men">Visit the Men’s collection</a></p>'),
-  undefined, { noindex: true, canonicalRoute: "/shop/men", redirectTo: "/shop/men.html" });
-
+// Legacy /shop/mens URLs are handled by permanent hosting redirects at release.
 shopCategories.forEach(category => {
   const page = categoryPage(category);
   add(category.route, category.title, page.description, page.body, page.jsonld, page.seo);

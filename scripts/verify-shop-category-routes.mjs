@@ -27,8 +27,7 @@ for(const category of CATEGORIES){
     assert.ok(html.includes(category.hero.desktop) && html.includes(category.hero.mobile), 'Responsive hero absent '+built);
   }
 }
-const old=pages.find(p=>p.route==='/shop/mens');
-assert.ok(old && old.seo.noindex && old.seo.canonicalRoute==='/shop/men', 'Old mens route must be noindex and point to men');
+assert.ok(!pages.some(p=>p.route==='/shop/mens'), 'Old mens route must not be a competing HTML page');
 const shopPage=pages.find(p=>p.route==='/shop');
 const hatsPage=CATEGORIES.find(c=>c.key==='hats');
 assert.equal(hatsPage.hero.desktop,'/assets/shop/v7/heroes/hats-ranch-desktop.webp');

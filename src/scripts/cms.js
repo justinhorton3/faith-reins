@@ -31,7 +31,7 @@ const BLOCKS = {
   horses: { collection: "Horses", render: horsesBlock, map: (d) => ({ name: str(d.name), trait: str(d.trait), bio: str(d.bio), note: str(d.note), photo: media(d.photo) }) },
   testimonials: { collection: "Testimonials", render: testimonialsBlock, map: (d) => ({ quote: str(d.quote), name: str(d.name), context: str(d.context) }) },
   faq: { collection: "FAQ", render: faqBlock, map: (d) => ({ category: str(d.category), question: str(d.question), answer: cleanHtml(d.answer) }) },
-  sponsors: { collection: "Sponsors", render: sponsorsBlock, map: (d) => ({ name: str(d.name), tier: str(d.tier), logo: media(d.logo), website: url(d.website) }) },
+  sponsors: { collection: "Sponsors", render: sponsorsBlock, map: (d) => ({ name: str(d.name), tier: str(d.tier), logo: media(d.logo), website: url(d.website), approvedForPublication: d.approvedForPublication === true }) },
 };
 
 async function load(host) {

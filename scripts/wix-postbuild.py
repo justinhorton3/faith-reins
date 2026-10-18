@@ -8,10 +8,49 @@ Steps:
   3. Rewrite internal hrefs to use .html extensions
   4. Write _wix/pages.json
 """
-import os, re, shutil, json
+import argparse, os, re, shutil, json
+from html.parser import HTMLParser
+from urllib.parse import urlsplit
 
-DIST = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "dist"))
+REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--dist", default=os.path.join(REPO, "dist"))
+DIST = os.path.abspath(parser.parse_args().dist)
 KEEP_DIRS = {"_astro", "assets", "_wix"}
+with open(os.path.join(REPO, "src", "lib", "indexability.json"), encoding="utf-8") as f:
+    INDEXABILITY = json.load(f)
+
+def normalized_route(value):
+    path = urlsplit(value).path.rstrip("/")
+    path = re.sub(r"/index\.html$", "/", path)
+    return re.sub(r"\.html$", "", path).rstrip("/") or "/"
+
+class HeadSeo(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.noindex = False
+        self.redirect = False
+        self.canonicals = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "meta":
+            if attrs.get("name", "").lower() == "robots":
+                self.noindex |= bool(re.search(r"\bnoindex\b", attrs.get("content", ""), re.I))
+            self.redirect |= attrs.get("http-equiv", "").lower() == "refresh"
+        if tag == "link" and attrs.get("rel", "").lower() == "canonical":
+            self.canonicals.append(attrs.get("href", ""))
+
+def register_page(path, filename):
+    route = normalized_route(path)
+    if route in INDEXABILITY["excludeRoutes"] or any(route == prefix or route.startswith(prefix + "/") for prefix in INDEXABILITY["excludePrefixes"]):
+        return False
+    with open(filename, encoding="utf-8") as f:
+        head = HeadSeo()
+        head.feed(re.split(r"</head\s*>", f.read(), maxsplit=1, flags=re.I)[0])
+    if head.noindex or head.redirect:
+        return False
+    return all(urlsplit(canonical).netloc in ("", "www.faithreins.com") and normalized_route(canonical) == route for canonical in head.canonicals)
 
 def needs_html_ext(path):
     if not path.startswith("/"):
@@ -49,6 +88,14 @@ for root, dirs, files in os.walk(DIST, topdown=False):
         continue
     if not os.listdir(root):
         os.rmdir(root)
+
+# A repeated build can retain old postbuild .html copies. Retired aliases must
+# not survive beside their hosting redirects. Other served files stay intact.
+for redirect in INDEXABILITY["redirects"]:
+    source = redirect["from"].rstrip("/")
+    retired = os.path.join(DIST, source.lstrip("/") + ("" if source.endswith(".html") else ".html"))
+    if os.path.isfile(retired):
+        os.remove(retired)
 
 # Step 2: rewrite links to pages that now live at /<route>.html
 ROUTES = set()
@@ -91,7 +138,7 @@ print(f"Rewrote page links in {changed} files ({len(ROUTES)} page routes).")
 
 # Step 3: write _wix/pages.json
 os.makedirs(os.path.join(DIST, "_wix"), exist_ok=True)
-pages = [{"path": "/", "static": True}]
+pages = [{"path": "/", "static": True}] if register_page("/", os.path.join(DIST, "index.html")) else []
 for root, dirs, files in os.walk(DIST):
     dirs[:] = [d for d in dirs if d not in KEEP_DIRS]
     for fname in files:
@@ -99,7 +146,8 @@ for root, dirs, files in os.walk(DIST):
             continue
         rel_dir = os.path.relpath(root, DIST)
         path = ("/" if rel_dir == "." else "/" + rel_dir.replace(os.sep, "/") + "/") + fname
-        pages.append({"path": path, "static": True})
+        if register_page(path, os.path.join(root, fname)):
+            pages.append({"path": path, "static": True})
 pages.sort(key=lambda x: x["path"])
 with open(os.path.join(DIST, "_wix", "pages.json"), "w") as f:
     json.dump(pages, f)

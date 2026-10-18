@@ -6,7 +6,10 @@ on:
   pull_request:
     paths:
       - 'src/**'
-      - 'scripts/configure-audit-giving.mjs'
+      - 'scripts/configure-audit-*.mjs'
+      - 'scripts/wix-postbuild.py'
+      - 'scripts/verify-*.mjs'
+      - 'astro.config.mjs'
       - 'tests/audit-batch-*.test.mjs'
       - 'package*.json'
       - '.github/workflows/audit-regression.yml'
@@ -31,3 +34,9 @@ jobs:
         run: npm run test:audit
       - name: Build public pages
         run: npm run build
+      - name: Verify hosting registry, canonical routes and navigation
+        run: |
+          python scripts/wix-postbuild.py
+          node scripts/verify-audit-seo.mjs
+          node scripts/verify-navigation.mjs
+          node scripts/verify-shop-category-routes.mjs

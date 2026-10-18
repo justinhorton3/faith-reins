@@ -6,6 +6,7 @@ import "../styles/product-showcase.css";
 import "../styles/shop-hero.css";
 import "../styles/shop-categories.css";
 import { header, footer } from "../lib/lib.mjs";
+import { isIndexableRoute } from "../lib/indexability.mjs";
 const { title, description, route = "/", jsonld, seo = {} } = Astro.props;
 const SITE = "https://www.faithreins.com";
 const canonicalRoute = seo.canonicalRoute || route;
@@ -56,7 +57,7 @@ const GA_ID = route.startsWith('/account') ? '' : import.meta.env.PUBLIC_GA_ID |
     <meta name="description" content={description} />
     {seo.redirectTo && <meta http-equiv="refresh" content={`0;url=${seo.redirectTo}`} />}
     <link rel="canonical" href={canonical} />
-    {seo.noindex && <meta name="robots" content="noindex, follow" />}
+    {(seo.noindex || !isIndexableRoute(route)) && <meta name="robots" content="noindex, follow" />}
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Faith Reins" />
