@@ -2,6 +2,7 @@
 import { pages, add } from "./pages-main.mjs";
 import { section, sh, titleBand, ctaBand } from "./lib.mjs";
 import { RECURRING_GIFT_HELP } from "./giving-support.mjs";
+import { NEWS_POSTS, WITHHELD_NEWS_SLUGS, newsDate, newsTime } from "./news.mjs";
 
 /* ---------- Policies ---------- */
 const legalContact = `<div class="card"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
@@ -278,65 +279,29 @@ ${legalContact}</div></div></section>`);
 
 
 /* ---------- News ---------- */
-const POSTS = [
-  {
-    slug: "/news/summer-eal-program-2026",
-    title: "A Season of Growth: Summer EAL Recap",
-    date: "August 20, 2026",
-    tag: "Programs",
-    summary: "This summer's equine-assisted learning program wrapped up with some of our biggest participant milestones yet. Here's a look at what our herd — and our kids — accomplished together.",
-    body: `<p>Every summer, our barn becomes a classroom. This year, twelve children and teens participated in Faith Reins' equine-assisted learning sessions over eight weeks. Each session was different — and each one was exactly what someone needed.</p>
-<p>One participant, a nine-year-old who had struggled to make eye contact in almost every setting, began holding eye contact with Banita Joe during grooming by the fourth week. By week seven, he was narrating what he was doing out loud — unprompted — while his therapist watched from a few steps back.</p>
-<p>"The horse does something we can't," said Donna Horton, our EAL Coordinator. "She waits without judgment. She doesn't rush. Kids feel that."</p>
-<p>Jesse and Jack both logged their highest number of session hours this summer. Cowboy, our steadiest team member, was the go-to partner for first-time participants who needed a little more time before approaching the fence.</p>
-<p>We're grateful to every family who trusted us with your child this summer, and to our incredible clinical team who made each session thoughtful, safe, and meaningful. Registration for fall EAL opens in September. Contact us if you'd like to be notified when spots open.</p>`,
-  },
-  {
-    slug: "/news/welcome-second-slp",
-    title: "Growing Our Clinical Team",
-    date: "September 5, 2026",
-    tag: "Team",
-    summary: "Faith Reins is actively recruiting a second Speech-Language Pathologist to meet growing demand for speech and language services in South Arkansas.",
-    body: `<p>We have more children who need speech and language services than we currently have capacity to serve. That's not a complaint — it's a call to action, and we're answering it.</p>
-<p>Faith Reins is currently hiring a second licensed Speech-Language Pathologist to join our clinical team in Camden, Arkansas. This is a full-time position serving children from infancy through age 18 across a wide range of communication and feeding needs.</p>
-<p>What makes this role different from a traditional clinical setting? Our SLPs work in collaboration with OT, PT, and our EAL program. Some sessions happen in the barn. Goals that can be addressed through equine-assisted methods often are — and the results speak for themselves.</p>
-<p>If you are a licensed SLP looking for meaningful work in a faith-centered, family-focused environment, we'd love to hear from you. More information is available on our <a href="/join-our-team">Join Our Team</a> page, or you can email your résumé directly to <a href="mailto:info@faithreins.com">info@faithreins.com</a>.</p>
-<p>Please share this with any SLP you know who might be interested. Referrals from our own community mean a great deal.</p>`,
-  },
-  {
-    slug: "/news/faith-reins-mission",
-    title: "Why We Do This: Faith, Horses, and Healing",
-    date: "October 1, 2026",
-    tag: "Mission",
-    summary: "A letter from our founder and EAL Coordinator, Donna Horton, on what drives Faith Reins and why South Arkansas families deserve this kind of care close to home.",
-    body: `<p>When I started Faith Reins, the question I heard most often was: why here? Why Camden? Why horses?</p>
-<p>The answer has never changed. The children who need this kind of care are already here. They are in our schools, our churches, and our neighborhoods. They deserve access to excellent, compassionate therapy without driving two hours each way.</p>
-<p>Horses have a way of cutting through the noise. They are present in a way that is hard to describe until you've seen a child who barely speaks find their voice while brushing a horse's flank. The clinical literature supports it, but the real evidence is in the barn on a Tuesday afternoon.</p>
-<p>Faith is the other part of this. It shapes how we treat every family — with dignity, with hope, and with the belief that every child has something to grow into. We do not require any particular faith from the families we serve. We simply bring ours to the work.</p>
-<p>We are still a young organization, and there is much ahead of us. More staff to hire, more horses to care for, more children to serve. Your support — in prayer, in giving, in sending a family our way — makes every part of this possible.</p>
-<p>Thank you for being part of this.</p>
-<p><em>— Donna Horton, Founder &amp; EAL Coordinator</em></p>`,
-  },
-];
+const POSTS = [...NEWS_POSTS].sort((a, b) => newsTime(b.date) - newsTime(a.date));
 
-POSTS.forEach(({ slug, title, date, tag, summary, body }) => {
-  const postSlug = slug.replace("/news/", "");
+POSTS.forEach(({ slug, title, date, updated, tag, summary, body }) => {
   add(slug, `${title} | News`, summary,
-    section(`<p class="post-meta"><a href="/news">News &amp; updates</a><span>${tag}</span><span>${date}</span></p>` + sh({ title, body: summary, h: 1 }), { tone: "sand", pad: "tight", cls: "sec--title" }) +
-    section(`<div class="prose" data-wix-post data-slug="${postSlug}">${body}</div>`) +
-    ctaBand({ title: "Want to stay connected?", body: "Sign up for updates from Faith Reins.", primary: ["Contact us", "/contact"], secondary: ["Our programs", "/services-programs"] }));
+    section(`<p class="post-meta"><a href="/news">News &amp; Updates</a><span>${tag}</span><time datetime="${date}">${newsDate(date)}</time>${updated ? `<span>Updated ${newsDate(updated)}</span>` : ""}</p>` + sh({ title, body: summary, h: 1 }), { tone: "sand", pad: "tight", cls: "sec--title" }) +
+    section(`<div class="prose">${body}</div>`) +
+    ctaBand({ title: "Stay connected", body: "Contact our team to request email updates or ask about opening plans.", primary: ["Request updates", "/contact"], secondary: ["All news & updates", "/news"] }));
 });
+
+WITHHELD_NEWS_SLUGS.forEach(slug => add(`/news/${slug}`, "Update unavailable | News", "Find current news and opening information from Faith Reins.",
+  titleBand({ eyebrow: "News & Updates", title: "Find our latest updates", body: "This earlier update is no longer available. Visit News & Updates for current opening and program information." }) +
+  ctaBand({ title: "Stay connected", body: "Our team can answer questions about opening plans, programs and ways to get involved.", primary: ["News & Updates", "/news"], secondary: ["Contact us", "/contact"] })));
 
 // Wix Blog posts have no static page; this one page renders any of them by ?slug=.
 // site.js links Wix post cards here and fills the body from the Blog API.
 add("/news/post", "News", "News and updates from Faith Reins Equestrian Center in Camden, Arkansas.",
   section(`<div class="prose" data-wix-post data-slug-param="slug"><p class="post-meta"><a href="/news">← News &amp; updates</a></p><p>Loading post…</p></div>`) +
-  ctaBand({ title: "Want to stay connected?", body: "Sign up for updates from Faith Reins.", primary: ["Contact us", "/contact"], secondary: ["Our programs", "/services-programs"] }));
+  ctaBand({ title: "Stay connected", body: "Contact our team to request email updates.", primary: ["Request updates", "/contact"], secondary: ["All news & updates", "/news"] }));
 
 add("/news", "News & Updates", "Stories, program updates, and news from Faith Reins Equestrian Center in Camden, Arkansas.",
-  titleBand({ eyebrow: "News", title: "News &amp; updates", body: "Stories, program updates, and announcements from Faith Reins." }) +
+  titleBand({ eyebrow: "Stay connected", title: "News &amp; Updates", body: "Opening announcements, program updates, and stories from Faith Reins. We are preparing to open; details will be shared here as they are confirmed." }) +
   section(`<div class="posts" id="news-grid" data-wix-blog>${POSTS.map(({ slug, title, date, tag, summary }) =>
-    `<a class="post-card" href="${slug}"><span class="post-card__meta"><span class="post-tag">${tag}</span><span class="post-date">${date}</span></span><span class="post-card__title">${title}</span><span class="post-card__summary">${summary}</span><span class="post-card__read">Read more →</span></a>`).join("")}</div>`) +
-  ctaBand({ tone: "sand", title: "Subscribe for updates", body: "We share news a few times a year. No spam.", primary: ["Contact us", "/contact"] }));
+    `<a class="post-card" href="${slug}" data-post-date="${date}"><span class="post-card__meta"><span class="post-tag">${tag}</span><time class="post-date" datetime="${date}">${newsDate(date)}</time></span><span class="post-card__title">${title}</span><span class="post-card__summary">${summary}</span><span class="post-card__read">Read more →</span></a>`).join("")}</div>`) +
+  ctaBand({ tone: "sand", title: "Request email updates", body: "Contact our team if you would like to receive Faith Reins news and opening announcements.", primary: ["Request updates", "/contact"] }));
 
 export { pages };

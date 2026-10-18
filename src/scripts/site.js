@@ -1,6 +1,7 @@
 // Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
 import { GIFT_FREQUENCIES, givingOptions, giftTotals, giftCatalogOptions } from "../lib/giving.mjs";
 import { presentFormFields } from "../lib/form-presentation.mjs";
+import { NEWS_POSTS, isWithheldNews, newsSlug, newsDate, sortNewsCards } from "../lib/news.mjs";
 const CLIENT = "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
@@ -304,7 +305,7 @@ async function mountGive(host) {
 $$("[data-give]").forEach(mountGive);
 
 /* Blog — mounts on [data-wix-blog].
-   When Wix Blog is connected, posts from the dashboard replace static HTML.
+   Published Wix posts merge with source-owned updates in newest-first order.
    Wix Blog API v3: GET /blog/v3/posts?fieldsets=CONTENT_TEXT&sort=publishedDate:desc&limit=20
    Each post: { id, title, slug, excerpt, coverImage { url }, publishedDate, tags[{label}] }
 */
@@ -312,27 +313,27 @@ async function mountBlog(host) {
   let posts;
   try {
     const r = await api("/blog/v3/posts?fieldsets=CONTENT_TEXT&sort=publishedDate:desc&limit=20", "GET");
-    posts = (r.posts || []).filter((p) => p.status === "PUBLISHED" || !p.status);
+    posts = (r.posts || []).filter((p) => (p.status === "PUBLISHED" || !p.status) && !isWithheldNews(p.slug || p.id));
   } catch {
     return; // keep static HTML intact when blog not yet connected
   }
   if (!posts.length) return;
 
   const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-  const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const fmt = newsDate;
   const tag = (p) => (p.tags && p.tags[0] ? p.tags[0].label : "News");
 
   // Keep the static posts (they have their own pages) and add Wix posts in front of them.
   // Wix posts have no static page, so they open the shared /news/post page by slug.
-  const staticHrefs = new Set($$("a.post-card", host).map((a) => a.getAttribute("href").replace(/\.html$/, "")));
-  posts = posts.filter((p) => !staticHrefs.has("/news/" + (p.slug || p.id)));
+  const staticSlugs = new Set($$("a.post-card", host).map((a) => newsSlug(a.getAttribute("href"))));
+  posts = posts.filter((p) => !staticSlugs.has(newsSlug(p.slug || p.id)));
   if (!posts.length) return;
 
   host.insertAdjacentHTML("afterbegin", posts.map((p) => {
     const cover = (p.media && p.media.wixMedia && p.media.wixMedia.image && p.media.wixMedia.image.url) || (p.coverImage && p.coverImage.url);
     const img = cover ? `<div class="post-card__cover"><img src="${esc(cover)}" alt="${esc(p.title)}" loading="lazy" width="800" height="450"></div>` : "";
     const slug = "/news/post?slug=" + encodeURIComponent(p.slug || p.id);
-    return `<a class="post-card" href="${slug}">
+    return `<a class="post-card" href="${slug}" data-post-date="${esc(p.firstPublishedDate || p.publishedDate || "")}">
       ${img}
       <div class="post-card__inner">
         <div class="post-card__meta"><span class="post-tag">${esc(tag(p))}</span><span class="post-date">${fmt(p.firstPublishedDate || p.publishedDate)}</span></div>
@@ -342,11 +343,12 @@ async function mountBlog(host) {
       </div>
     </a>`;
   }).join(""));
+  sortNewsCards(host);
 }
 $$("[data-wix-blog]").forEach(mountBlog);
 
 /* Blog post — mounts on [data-wix-post].
-   Static post pages pass data-slug and keep their own HTML unless Wix has a post with that slug.
+   Source-owned post slugs resolve to their static pages, without Wix overrides.
    The shared /news/post page passes data-slug-param and reads the slug from the URL (?slug=).
 */
 async function mountPost(host) {
@@ -356,6 +358,12 @@ async function mountPost(host) {
     if (fromUrl) host.innerHTML = `<p class="post-meta"><a href="/news">← News &amp; Updates</a></p><h1>Post not found</h1><p>This post may have moved or been removed. <a href="/news">See all news &amp; updates</a>.</p>`;
   };
   if (!slug) return notFound();
+  if (isWithheldNews(slug)) return notFound();
+  const localPost = NEWS_POSTS.find(post => newsSlug(post.slug) === newsSlug(slug));
+  if (localPost) {
+    if (fromUrl) location.replace(localPost.slug);
+    return;
+  }
   let post;
   try {
     const r = await api(`/blog/v3/posts/slugs/${encodeURIComponent(slug)}?fieldsets=CONTENT_TEXT`, "GET");
@@ -363,7 +371,7 @@ async function mountPost(host) {
   } catch {
     return notFound(); // static pages keep their HTML intact
   }
-  if (!post) return notFound();
+  if (!post || (post.status && post.status !== "PUBLISHED") || isWithheldNews(post.slug)) return notFound();
 
   const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });

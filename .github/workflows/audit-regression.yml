@@ -45,6 +45,7 @@ jobs:
           python scripts/wix-postbuild.py
           node scripts/verify-audit-seo.mjs
           node scripts/verify-error-pages.mjs
+          node scripts/verify-news.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs
 
@@ -89,5 +90,6 @@ jobs:
           node scripts/verify-account-artifacts.mjs
           node scripts/verify-audit-seo.mjs
           node scripts/verify-error-pages.mjs
+          node scripts/verify-news.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs

@@ -54,7 +54,7 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
   ], { cols: 2 }), { pad: "tight" }) +
   splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Stewardship", title: "Help make care possible.", body: "Your support helps bring therapeutic programs to children and families, and brings them closer to brighter futures. A monthly gift of $100 helps provide therapy sessions, program support and essential care.", actions: btn("Give monthly", "/give?frequency=MONTH#gift") + tlink("Sponsorships", "/sponsorships") }) +
   section(split(
-    sh({ eyebrow: "Stay connected", title: "Updates from Faith Reins", body: 'Request email updates about Faith Reins programs, events and stories. By selecting “Request updates,” you ask to receive these emails. Read our <a href="/privacy-policy">privacy policy</a>.' }),
+    sh({ eyebrow: "Stay connected", title: "News & Updates", body: 'Read our opening announcements, program updates and stories, or use the form to request email updates. By selecting “Request updates,” you ask to receive these emails. Read our <a href="/privacy-policy">privacy policy</a>.' }) + tlink("Read News & Updates", "/news", { arrow: true }),
     form("contact", { submit: "Request updates", success: "Thank you. We received your request for Faith Reins email updates.", purpose: "newsletter" })), { tone: "paper" }));
 
 /* ---------- Mission ---------- */

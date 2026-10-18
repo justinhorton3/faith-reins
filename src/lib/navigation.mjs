@@ -17,7 +17,7 @@ export const NAVIGATION = [
       item('Our Team', '/our-team', 'Get to know our leadership and care team.', photo('our-team')),
       item('Our Horses', '/our-horses', 'Meet our equine partners and their personalities.', photo('our-horses')),
       item('Our Partners', '/our-partners', 'Community connections that help the mission grow.', photo('our-partners')),
-      item('News & Stories', '/news', 'Updates and stories from Faith Reins.', photo('home')),
+      item('News & Updates', '/news', 'Opening announcements, program updates and stories from Faith Reins.', photo('home')),
     ],
   },
   {
