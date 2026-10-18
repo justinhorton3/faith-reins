@@ -14,3 +14,10 @@ desktop/tablet/mobile sizes, and overlap/overflow checks at 15 widths from
 
 Publish with the existing Deploy web workflow, including the protected account
 runtime build and live navigation/account verification.
+
+## Header spacing refinement
+
+Set `.site-header__in` top and bottom padding to 15px on desktop, tablet and
+mobile, as requested by Justin Horton. Retain the approved logo sizes and
+horizontal gutters. Validate the production build and computed header padding
+across responsive widths before release.
