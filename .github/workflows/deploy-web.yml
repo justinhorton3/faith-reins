@@ -13,6 +13,7 @@ on:
       - '.github/releases/2026-10-18-header-logo.md'
       - '.github/releases/2026-10-18-mission-and-giving.md'
       - '.github/releases/2026-10-18-favicon.md'
+      - '.github/releases/2026-10-18-seo-ownership.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
@@ -63,6 +64,7 @@ jobs:
         run: |
           python scripts/wix-postbuild.py
           node scripts/verify-account-artifacts.mjs
+          node scripts/verify-seo-artifacts.mjs
       - name: Verify shop category pages, approved hero assets and host-compatible routes
         run: |
           node scripts/verify-shop-category-routes.mjs
@@ -99,3 +101,4 @@ jobs:
         run: |
           node scripts/verify-live-navigation.mjs
           node scripts/verify-live-accounts.mjs
+          node scripts/audit-live-metadata.mjs --fresh

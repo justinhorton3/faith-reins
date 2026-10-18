@@ -1,0 +1,64 @@
+name: Verify isolated SEO ownership
+
+on:
+  push:
+    branches: [fix/seo-prerender-ownership]
+  pull_request:
+    paths:
+      - 'scripts/seo_ownership.py'
+      - 'scripts/wix-postbuild.py'
+      - 'scripts/*seo*.mjs'
+      - 'scripts/audit-live-metadata.mjs'
+      - 'tests/seo-ownership.test.mjs'
+      - 'tests/fixtures/seo-prerender/**'
+      - '.github/workflows/seo-ownership.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: 'true'
+      ASTRO_TELEMETRY_DISABLED: '1'
+      WIX_CLI: '@wix/cli@1.1.258'
+      NO_COLOR: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --no-audit --no-fund
+      - name: Ownership and account regressions
+        run: node --test tests/seo-ownership.test.mjs tests/account-service.test.mjs tests/account-artifacts.test.mjs
+      - name: Actual Wix middleware reproduction and fix
+        run: node scripts/diagnose-seo-prerender.mjs --verify-fix
+      - name: Public build and prepared metadata
+        run: |
+          npm run build
+          python scripts/wix-postbuild.py
+          node scripts/verify-seo-artifacts.mjs
+      - name: Authenticate existing linked-site build identity
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          test -n "$WIX_API_KEY"
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Load linked server environment without printing values
+        run: |
+          npx --yes -p "$WIX_CLI" wix env pull > wix-env-pull.log
+          node scripts/verify-account-environment.mjs
+      - name: Verify actual release output without publishing
+        run: |
+          npm run build:account
+          python scripts/wix-postbuild.py
+          node scripts/verify-account-artifacts.mjs
+          node scripts/verify-seo-artifacts.mjs
+          node scripts/verify-navigation.mjs
+          node scripts/verify-shop-category-routes.mjs
