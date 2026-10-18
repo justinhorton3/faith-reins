@@ -9,6 +9,7 @@ on:
     paths:
       - '.github/releases/2026-10-16-shop-*.md'
       - '.github/releases/2026-10-17-sitemap-*.md'
+      - '.github/releases/2026-10-17-account-*.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
@@ -35,7 +36,7 @@ jobs:
           const config = JSON.parse(fs.readFileSync('wix.config.json'));
           assert.equal(config.projectType, 'Site');
           assert.equal(config.siteId, '2d8c6050-5730-4bed-9c7a-266ca7bd00b4');
-          assert.equal(config.site.outputDirectory, './dist');
+          assert.deepEqual(config.site.outputDirectory, { client: './dist', server: './.wix-server' });
           JS
       - name: Check Wix API key is set
         env:
@@ -46,9 +47,19 @@ jobs:
             exit 1
           fi
       - run: npm ci --no-audit --no-fund
-      - run: npm run build
+      - name: Authenticate Wix CLI with the existing release secret
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Load the linked project's server environment
+        run: |
+          npx --yes -p "$WIX_CLI" wix env pull > wix-env-pull.log
+          node scripts/verify-account-environment.mjs
+      - run: npm run build:account
       - name: Prepare output for Wix hosting
-        run: python scripts/wix-postbuild.py
+        run: |
+          python scripts/wix-postbuild.py
+          node scripts/verify-account-artifacts.mjs
       - name: Verify shop category pages, approved hero assets and host-compatible routes
         run: |
           node scripts/verify-shop-category-routes.mjs
@@ -79,11 +90,9 @@ jobs:
           test -s dist/assets/shop/v7/heroes/hats-ranch-mobile.webp
           grep -q 'assets/shop/v7/barn-collection.webp' dist/shop.html
           grep -q 'assets/shop/v7/heroes/hats-ranch-desktop.webp' dist/shop/hats.html
-      - name: Authenticate Wix CLI with the existing release secret
-        env:
-          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
-        run: npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
       - name: Publish the linked Wix site and clear its cache
         run: timeout 540s npx --yes -p "$WIX_CLI" wix release
       - name: Verify production sitemap, routes and approved shop photography
-        run: node scripts/verify-live-navigation.mjs
+        run: |
+          node scripts/verify-live-navigation.mjs
+          node scripts/verify-live-accounts.mjs

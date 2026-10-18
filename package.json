@@ -6,12 +6,21 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "playwright test"
+    "test": "playwright test",
+    "build:account": "FR_ACCOUNT_RUNTIME=1 astro build && node scripts/stage-account-worker.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^9.5.5",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^5.0.0"
+    "@wix/astro": "2.75.0",
+    "@wix/astro-wix-hosting-adapter": "2.0.5",
+    "@wix/ecom": "1.0.2454",
+    "@wix/essentials": "1.0.15",
+    "@wix/get-paid": "1.0.635",
+    "@wix/members": "1.0.511",
+    "astro": "^5.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.0"

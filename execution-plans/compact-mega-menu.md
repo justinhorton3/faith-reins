@@ -124,3 +124,10 @@ GitHub checks and the separate preview are running. No main merge, release marke
 Hosted preview: the Preview web workflow succeeded for `81457d3`. Its [separate site preview](https://j9nyhv-headless-euakgvyvzax-donnaehorton-140c.wix-site-host.com/) was opened and the compact About menu was inspected in the cloud browser; all five approved photographs loaded with nonzero natural dimensions. Production remains untouched. Responsive screenshots are retained as CI artifacts for review.
 
 Final accessibility follow-up: the reduced-motion override now covers drawer chevrons as well as desktop chevrons, and the no-JavaScript Site Map fallback has its own position so it does not widen the narrow header. Both affected browser checks passed again. Fresh CI/preview verification follows this commit; physical-device testing and integration with the account PR remain outstanding.
+
+
+## Approved production release — October 17, 2026
+
+Justin approved merging to main and releasing. Current main is `96ac6bc9441ccc2ba3da7274e039714f9f75758f`, including the merged account self-service PR #38 and its production closeout PR #40. Integrating this main into the menu branch merged the shared navigation tests cleanly: compact geometry/chevron expectations remain and the obsolete account OAuth tests stay removed. The account-aware build, Workers deployment, environment/artifact protections, account verification and all account source files are preserved from main.
+
+The dated sitemap release marker uses the existing main-only release trigger. It will release the combined menu/account source through the existing account-aware pipeline; it does not change publishing configuration. Before merge, verify combined menu/account/browser tests and the refreshed CI/preview. After merge, confirm successful Deploy web and live compact navigation, all existing route/hero checks and signed-out account protection. User approval is already recorded; no further merge/release approval is required for this scope.

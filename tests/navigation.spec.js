@@ -62,36 +62,3 @@ test('persona destinations and old volunteer links remain usable', async ({ page
     if (hash) await expect(page.locator(`[id="${hash}"]`)).toHaveCount(1);
   }
 });
-
-test('account rejects an unbound OAuth callback without exchanging its code', async ({ page }) => {
-  let exchanged = false;
-  await page.route('https://www.wixapis.com/oauth2/token', async route => { exchanged = true; await route.fulfill({ status: 400, json: {} }); });
-  await page.goto('/account#code=untrusted&state=wrong');
-  await expect(page.locator('[data-account-status]')).toContainText('could not verify');
-  expect(exchanged).toBe(false);
-  expect(new URL(page.url()).hash).toBe('');
-  await expect(page.locator('[data-account-login]')).toBeEnabled();
-});
-
-test('account exchanges only a matching PKCE request and shows the real member result', async ({ page }) => {
-  await page.addInitScript(() => sessionStorage.setItem('fr-member-login', JSON.stringify({ verifier: 'test-pkce-verifier', state: 'test-state', redirectUri: location.origin + '/account.html', startedAt: Date.now() })));
-  let exchange;
-  await page.route('https://www.wixapis.com/oauth2/token', async route => { exchange = route.request().postDataJSON(); await route.fulfill({ json: { access_token: 'member-test-token', refresh_token: 'member-test-refresh', expires_in: 14400 } }); });
-  await page.route('https://www.wixapis.com/members/v1/members/my', async route => { expect(route.request().headers().authorization).toBe('member-test-token'); await route.fulfill({ json: { member: { id: 'test-member', loginEmail: 'member@example.test' } } }); });
-  await page.goto('/account#code=verified-code&state=test-state');
-  await expect(page.locator('[data-account-identity]')).toHaveText('member@example.test');
-  expect(exchange.grantType).toBe('authorization_code');
-  expect(exchange.codeVerifier).toBe('test-pkce-verifier');
-  expect(exchange.redirectUri).toBe('http://localhost:4321/account.html');
-  await expect(page.locator('[data-account-logout]')).toBeVisible();
-  await expect(page.locator('[data-account-login]')).toBeHidden();
-  expect(await page.evaluate(() => sessionStorage.getItem('fr-member-login'))).toBeNull();
-  expect(new URL(page.url()).hash).toBe('');
-});
-
-test('expired OAuth request cannot sign a member in', async ({ page }) => {
-  await page.addInitScript(() => sessionStorage.setItem('fr-member-login', JSON.stringify({ verifier: 'expired', state: 'old-state', redirectUri: location.origin + '/account.html', startedAt: Date.now() - 3600000 })));
-  await page.goto('/account#code=old-code&state=old-state');
-  await expect(page.locator('[data-account-status]')).toContainText('could not verify');
-  await expect(page.locator('[data-account-logout]')).toBeHidden();
-});
