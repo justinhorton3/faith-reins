@@ -65,7 +65,7 @@ const MOBILE_FOCUS = { "book-online": "12% 50%", contact: "22% 50%", counseling:
 export function hero({ key, eyebrow: eb, title, lead, primary, secondary, size = "page", pos = "50% 50%", mpos }) {
   const d = img(`hero-${key}-desktop`), m = img(`hero-${key}-mobile`);
   const p = primary ? btn(primary[0], primary[1], primary[2] || "accent") : "";
-  const s = secondary ? tlink(secondary[0], secondary[1], { inv: true, cls: "hero__sec" }) : "";
+  const s = secondary ? btn(secondary[0], secondary[1], "outline-inv") : "";
   return `<section class="hero hero--${size}" style="--pos:${pos};--mpos:${mpos || MOBILE_FOCUS[key] || "50% 50%"}">
 <picture><source media="(max-width: 767px)" srcset="${m}" width="767" height="900"><img class="hero__img" src="${d}" alt="" fetchpriority="high" width="1440" height="800"></picture>
 <div class="hero__scrim"></div>
@@ -104,7 +104,7 @@ export const faqList = (items, { openFirst = false } = {}) =>
   `<div class="faq">${items.map(([q, a], i) => `<details${openFirst && i === 0 ? " open" : ""}><summary>${esc(q)}</summary><div class="faq__a">${a}</div></details>`).join("")}</div>`;
 export function ctaBand({ tone = "green", eyebrow: eb, title, body, primary, secondary }) {
   const g = tone === "green";
-  return `<section class="cta cta--${tone}"><div class="cta__in"><div class="cta__copy">${eb ? eyebrow(eb, { inv: g }) : ""}<h2 class="cta__title">${esc(title)}</h2>${body ? `<p class="cta__body">${esc(body)}</p>` : ""}</div><div class="cta__actions">${primary ? btn(primary[0], primary[1], g ? "accent" : "") : ""}${secondary ? tlink(secondary[0], secondary[1], { inv: g, cls: "cta__sec" }) : ""}</div></div></section>`;
+  return `<section class="cta cta--${tone}"><div class="cta__in"><div class="cta__copy">${eb ? eyebrow(eb, { inv: g }) : ""}<h2 class="cta__title">${esc(title)}</h2>${body ? `<p class="cta__body">${esc(body)}</p>` : ""}</div><div class="cta__actions">${primary ? btn(primary[0], primary[1], g ? "accent" : "") : ""}${secondary ? btn(secondary[0], secondary[1], g ? "outline-inv" : "outline") : ""}</div></div></section>`;
 }
 export const photoBand = ({ image, pos = "50% 50%", caption = "", alt = "" }) =>
   `<figure class="band"><img src="${image}" alt="${esc(alt)}" loading="lazy" style="object-position:${pos}">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`;

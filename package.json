@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "playwright test",
-    "test:audit": "node --test tests/audit-batch-01.test.mjs",
+    "test:audit": "node --test tests/audit-batch-*.test.mjs",
     "build:account": "FR_ACCOUNT_RUNTIME=1 astro build && node scripts/stage-account-worker.mjs"
   },
   "dependencies": {

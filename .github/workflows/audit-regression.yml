@@ -7,7 +7,7 @@ on:
     paths:
       - 'src/**'
       - 'scripts/configure-audit-giving.mjs'
-      - 'tests/audit-batch-01.test.mjs'
+      - 'tests/audit-batch-*.test.mjs'
       - 'package*.json'
       - '.github/workflows/audit-regression.yml'
 
@@ -27,7 +27,7 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-      - name: Verify donor, callback and team regressions
+      - name: Verify audit regressions
         run: npm run test:audit
       - name: Build public pages
         run: npm run build

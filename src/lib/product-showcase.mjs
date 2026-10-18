@@ -10,7 +10,7 @@ export function showcaseCard(p) {
 
 export function productShowcase(p, related = []) {
   const v = p.variants[0];
-  const wearable = ['Polos', 'T-Shirts', 'Layers', 'Hoodies', 'Headwear'].includes(p.collection);
+  const wearable = ['Polos', 'T-Shirts', 'Outerwear', 'Hoodies', 'Headwear'].includes(p.collection);
   const heading = wearable ? 'Wear what<br>matters to you.' : 'A little purpose<br>in the everyday.';
   const table = (variant) => {
     if (!variant.guide) return `<div data-pdp-guide="${variant.id}"${variant !== v ? ' hidden' : ''}><p>Measurements for this style will be added when the final item is confirmed.</p><p class="pdp-small">${esc(p.fitNote)}</p></div>`;

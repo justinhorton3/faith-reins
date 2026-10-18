@@ -69,6 +69,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease;
 }
 .btn:hover { background: var(--fr-green-deep); border-color: var(--fr-green-deep); color: var(--fr-cream); }
+.btn:focus-visible { outline-color: var(--fr-green); }
+.hero .btn:focus-visible, .cta--green .btn:focus-visible { outline-color: var(--fr-cream); }
 .btn--accent { background: var(--fr-gold); border-color: var(--fr-gold); color: var(--fr-on-gold); }
 .btn--accent:hover { background: var(--fr-gold-light); border-color: var(--fr-gold-light); color: var(--fr-on-gold); }
 .btn--outline, .btn--secondary { background: transparent; color: var(--fr-green); }
@@ -184,7 +186,7 @@ body.drawer-open { overflow: hidden; }
 .hero--home .hero__title { font-size: 86px; }
 .hero__title i { font-family: var(--font-serif); font-size: .9em; }
 .hero__lead { font: 400 20px/1.6 var(--font-serif); color: rgba(243, 238, 228, .9); max-width: 540px; }
-.hero__actions { display: flex; align-items: center; gap: 28px; padding-top: 8px; }
+.hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding-top: 8px; }
 @media (max-width: 1023px) {
   .hero--home { height: 640px; } .hero--page { height: 400px; }
   .hero__body { width: min(640px, calc(100% - 2 * var(--g))); }
@@ -200,8 +202,6 @@ body.drawer-open { overflow: hidden; }
   .hero__lead { font-size: 17px; }
   .hero__actions { flex-direction: column; align-items: stretch; gap: 16px; padding-top: 4px; }
   .hero__actions .btn { width: 100%; }
-  .hero__sec { justify-content: center; align-self: stretch; padding: 17px 28px; border: 1px solid var(--fr-cream); }
-  .hero__sec:hover { background: var(--fr-cream); color: var(--fr-green); }
 }
 
 /* ---------- Sections ---------- */
@@ -408,7 +408,7 @@ body.drawer-open { overflow: hidden; }
 .cta--green .cta__title { color: var(--fr-cream); }
 .cta__body { font-size: 17px; line-height: 1.65; color: var(--fr-muted); }
 .cta--green .cta__body { color: var(--on-green-muted); }
-.cta__actions { display: flex; align-items: center; gap: 28px; flex: none; }
+.cta__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; flex: 0 1 auto; }
 @media (max-width: 1023px) { .cta__in { flex-direction: column; align-items: flex-start; } }
 @media (max-width: 767px) {
   .cta { padding: 56px var(--g); }
@@ -417,8 +417,6 @@ body.drawer-open { overflow: hidden; }
   .cta__body { font-size: 16px; }
   .cta__actions { flex-direction: column; align-items: stretch; gap: 16px; width: 100%; }
   .cta__actions .btn { width: 100%; }
-  .cta__sec { justify-content: center; align-self: stretch; padding: 17px 28px; border: 1px solid var(--fr-green); }
-  .cta--green .cta__sec { border-color: var(--fr-cream); }
 }
 
 /* Photo band */

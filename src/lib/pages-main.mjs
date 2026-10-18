@@ -53,8 +53,8 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
   ], { cols: 2 }), { pad: "tight" }) +
   splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Stewardship", title: "Help make care possible.", body: "Your support helps bring therapeutic programs to children and families, and brings them closer to brighter futures. A monthly gift of $100 helps provide therapy sessions, program support and essential care.", actions: btn("Give monthly", "/give?frequency=MONTH#gift") + tlink("Sponsorships", "/sponsorships") }) +
   section(split(
-    sh({ eyebrow: "Stay connected", title: "Updates from Faith Reins", body: "Get updates on programs, events and stories from Faith Reins delivered to your inbox. We respect your privacy." }),
-    form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch." })), { tone: "paper" }));
+    sh({ eyebrow: "Stay connected", title: "Updates from Faith Reins", body: 'Request email updates about Faith Reins programs, events and stories. By selecting “Request updates,” you ask to receive these emails. Read our <a href="/privacy-policy">privacy policy</a>.' }),
+    form("contact", { submit: "Request updates", success: "Thank you. We received your request for Faith Reins email updates.", purpose: "newsletter" })), { tone: "paper" }));
 
 /* ---------- Mission ---------- */
 add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
@@ -94,7 +94,7 @@ add("/services-programs", "Services & Programs", "Occupational therapy, physical
       { title: "For families", body: "What to expect after you reach out.", link: ["For families", "/for-families"], strong: true },
       { title: "For referring providers", body: "A clear path from referral to care.", link: ["Referral pathway", "/for-referring-providers"], strong: true },
     ], { cols: 2 })), { tone: "paper" }) +
-  section(sh({ eyebrow: "How to start", title: "From first call to first visit" }) + steps([["Ask questions", "Call, email or send a message."], ["Request an appointment", "Or send a provider referral."], ["Meet the team", "We will talk through next steps and scheduling."]])) +
+  section(sh({ eyebrow: "How to start", title: "From first call to first visit" }) + steps([["Ask questions", "Call, email or send a message."], ["Request a callback", "Leave your contact information, or send a provider referral."], ["Meet the team", "We will talk through next steps and scheduling."]])) +
   startCta());
 
 /* ---------- Service detail pages ---------- */
@@ -177,7 +177,7 @@ add("/for-referring-providers", "For Referring Providers", "Review service fit, 
 
 /* ---------- Payment ---------- */
 add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins therapy services — insurance, private pay, ARKids First, Medicaid, and financial assistance.",
-  hero({ key: "payment-and-insurance", eyebrow: "Payment & Insurance", title: "Clear answers before care begins.", lead: "We want cost to be the last reason a family waits.", primary: ["Contact our team", "/contact"], secondary: ["Request an appointment", "/book-online"] }) +
+  hero({ key: "payment-and-insurance", eyebrow: "Payment & Insurance", title: "Clear answers before care begins.", lead: "We want cost to be the last reason a family waits.", primary: ["Contact our team", "/contact"], secondary: APPT }) +
   section(sh({ eyebrow: "How payment works", title: "Ways families pay", body: "We work with families to find a payment path that makes care accessible. Our team will confirm what applies to your family during the intake conversation — nothing on this page is a guarantee of coverage or cost." }) + infoGrid([
     { title: "Insurance", body: "We are working to accept major commercial insurance plans. Coverage depends on your specific plan, the services your child receives, and any referral or prior-authorization requirements your insurer has. We recommend calling the member services number on your insurance card and asking whether Faith Reins is an in-network provider before your first appointment. We are happy to provide the information you need to check your benefits or submit a claim.", strong: true },
     { title: "ARKids First & Medicaid", body: "We are committed to serving families enrolled in ARKids First and Arkansas Medicaid. If your child is enrolled, please let us know during intake. Our team will verify coverage and walk through any authorization steps with you.", strong: true },
@@ -188,7 +188,7 @@ add("/payment-and-insurance", "Payment & Insurance", "How to pay for Faith Reins
     sh({ eyebrow: "Before your first conversation", title: "What to have ready", body: "These help a first conversation go smoothly. None are required to reach out." }),
     checks([["Insurance card or plan information", "If you have coverage, the member ID and group number help us verify benefits quickly."], ["Referral or provider notes", "If a physician, school, or other provider referred your child, any notes or documentation they can share are helpful."], ["ARKids First or Medicaid ID", "If your child is enrolled."], ["Questions about cost", "Write them down — there are no wrong questions and we want you to feel informed before care begins."]])), { tone: "paper" }) +
   section(notice("Costs and coverage vary. Nothing on this page is a guarantee of benefits or a quote. Our team will provide specific information during your intake conversation."), { pad: "tight" }) +
-  ctaBand({ tone: "sand", title: "Questions about payment?", body: "Our team will walk through every option with you — no pressure, no obligation.", primary: ["Contact our team", "/contact"], secondary: ["Request an appointment", "/book-online"] }));
+  ctaBand({ tone: "sand", title: "Questions about payment?", body: "Our team will walk through every option with you — no pressure, no obligation.", primary: ["Contact our team", "/contact"], secondary: APPT }));
 
 /* ---------- FAQ ---------- */
 const strip = (s) => String(s).replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
@@ -196,7 +196,7 @@ const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", "mainE
 add("/faq", "FAQ", "Common questions from families, referring providers and supporters of Faith Reins.",
   hero({ key: "faq", eyebrow: "FAQ", title: "A clear next step.", lead: "Common questions from families, providers and supporters.", primary: ["Contact our team", "/contact"] }) +
   `<div data-cms="faq">${faqBlock(fallback.faq)}</div>` +
-  ctaBand({ title: "Still have questions?", body: "Our team is glad to help — no question is too small.", primary: ["Contact our team", "/contact"], secondary: ["Request an appointment", "/book-online"] }),
+  ctaBand({ title: "Still have questions?", body: "Our team is glad to help — no question is too small.", primary: ["Contact our team", "/contact"], secondary: APPT }),
   faqJsonLd);
 
 /* ---------- Give ---------- */
@@ -317,7 +317,7 @@ add("/contact", "Contact", "Connect with Faith Reins about services, giving or g
     `<iframe class="map" title="Faith Reins location map" src="https://maps.google.com/maps?q=226+Ouachita+County+Rd+45,+Camden,+AR+72711&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` +
     `<div>${`<a class="tlink" href="https://maps.google.com/maps/dir/?api=1&destination=226+Ouachita+County+Rd+45,+Camden,+AR+72711" target="_blank" rel="noopener">Get directions <span aria-hidden="true">→</span></a>`}</div>`, { tone: "paper" }) +
   section(infoGrid([
-    { eyebrow: "Appointments", title: "Book online", body: "Request an appointment.", link: ["Request", "/book-online"] },
+    { eyebrow: "Getting started", title: "Request a callback", body: "Our team will discuss availability and scheduling with you.", link: APPT },
     { eyebrow: "Referrals", title: "For providers", body: "A clear path from referral to care.", link: ["Learn more", "/for-referring-providers"] },
     { eyebrow: "Giving", title: "Support the mission", body: "One-time or monthly gifts.", link: ["Give", "/give"] },
     { eyebrow: "Sponsorships", title: "Partner with us", body: "Businesses and groups.", link: ["Learn more", "/sponsorships"] },

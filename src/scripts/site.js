@@ -80,17 +80,18 @@ async function mountForm(host) {
   const load = h("div", { class: "form-skeleton", role: "status" }, "Loading form…");
   host.append(load);
   let fields;
-  try { fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form); } catch (e) {
+  try {
+    fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form);
+    fields = presentFormFields(fields, host.dataset.purpose);
+  } catch (e) {
     load.className = "form-status form-status--error";
     load.textContent = "This form is unavailable right now. Please call or email us instead.";
     return;
   }
-  // This form is for callback logistics. Keep clinical intake out of its public prompt,
-  // including when an older label is returned by the managed Wix form schema.
-  fields = presentFormFields(fields, host.dataset.purpose);
   const vals = {}, nodes = {};
   const box = h("div", { class: "wix-form__fields" });
   for (const f of fields) {
+    if (f.hidden) { vals[f.target] = f.preset; continue; }
     const fid = "f" + Math.random().toString(36).slice(2, 8);
     const err = h("div", { class: "error", role: "alert" });
     const w = h("div", { class: "field" + (f.kind === "area" || wide.includes(f.target) ? " field--wide" : "") });
@@ -111,7 +112,7 @@ async function mountForm(host) {
       const inp = h("input", { type: "checkbox", id: fid, onchange: () => set(inp.checked) });
       w.append(h("label", { class: "choice", for: fid }, inp, f.label));
     } else {
-      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, "aria-describedby": help?.id, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, oninput: () => set(el.value) });
+      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, "aria-describedby": help?.id, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, autocomplete: f.autocomplete, oninput: () => set(el.value) });
       w.append(lab, el);
       if (help) w.append(help);
     }
@@ -131,6 +132,7 @@ async function mountForm(host) {
     bad.hidden = true;
     let first = null;
     for (const f of fields) {
+      if (f.hidden) continue;
       const v = vals[f.target], [w, err] = nodes[f.target];
       const empty = v == null || v === "" || (Array.isArray(v) && !v.length) || (f.kind === "check" && !v);
       let m = "";

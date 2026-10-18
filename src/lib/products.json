@@ -546,7 +546,7 @@
     "slug": "quarter-zip",
     "name": "Horse Quarter Zip",
     "group": "layers",
-    "collection": "Layers",
+    "collection": "Outerwear",
     "availability": "out-of-stock",
     "desc": "A polished layer for cool mornings and unhurried weekends. A simple zip neckline and a quiet horse signature.",
     "details": [
@@ -644,7 +644,7 @@
     "slug": "quilted-vest",
     "name": "Horse Quilted Vest",
     "group": "layers",
-    "collection": "Layers",
+    "collection": "Outerwear",
     "availability": "out-of-stock",
     "desc": "Diamond quilting, clean lines and a familiar horse. An equestrian-inspired layer with an easy, tailored look.",
     "details": [
@@ -1512,7 +1512,7 @@
     "slug": "men-quilted-vest",
     "name": "Men’s Forest-Green Quilted Vest",
     "group": "mens",
-    "collection": "Layers",
+    "collection": "Outerwear",
     "availability": "out-of-stock",
     "desc": "A forest-green diamond-quilted vest with a discreet cream Faith Reins horse emblem at the left chest. An easy layer inspired by days at the farm.",
     "details": [
