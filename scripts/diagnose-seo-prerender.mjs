@@ -8,6 +8,7 @@ const { default: assert } = await import('node:assert/strict');
 const { resolve, join } = await import('node:path');
 const { pathToFileURL } = await import('node:url');
 const { parseHTML } = await import('linkedom');
+const { execFileSync } = await import('node:child_process');
 
 const repo = resolve(import.meta.dirname, '..');
 const root = join(repo, 'tests/fixtures/seo-prerender');
@@ -45,10 +46,22 @@ const titles = [...document.querySelectorAll('title')].map(node => node.textCont
 const requestedUrl = document.querySelector('meta[name="diagnostic-requested-page-url"]')?.getAttribute('content');
 assert.deepEqual(titles, ['Fixture source title', 'Fixture injected title']);
 assert.equal(requestedUrl, 'https://www.faithreins.com/occupational-therapy/');
+let fixedTitleCount;
+if (process.argv.includes('--verify-fix')) {
+  const cleaned = execFileSync('python3', ['-c', 'import sys; from scripts.seo_ownership import source_owned_seo; sys.stdout.write(source_owned_seo(sys.stdin.read())[0])'], {
+    cwd: repo, input: html, encoding: 'utf8',
+  });
+  const fixed = parseHTML(cleaned).document;
+  fixedTitleCount = fixed.querySelectorAll('title').length;
+  assert.equal(fixedTitleCount, 1);
+  assert.equal(fixed.querySelector('title').textContent, 'Fixture source title');
+  assert.equal(fixed.querySelector('meta[name="diagnostic-requested-page-url"]').getAttribute('content'), requestedUrl);
+}
 console.log(JSON.stringify({
   reproduced: true,
   stage: 'on-disk prerendered HTML, before upload or release',
   titles,
   requestedUrl,
+  fixedTitleCount,
   conclusion: 'Wix middleware adds tags during prerender; postbuild .html flattening happens afterward.',
 }, null, 2));

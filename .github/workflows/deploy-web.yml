@@ -100,3 +100,4 @@ jobs:
         run: |
           node scripts/verify-live-navigation.mjs
           node scripts/verify-live-accounts.mjs
+          node scripts/audit-live-metadata.mjs

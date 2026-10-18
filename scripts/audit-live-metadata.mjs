@@ -1,5 +1,5 @@
-// Read-only FR-16 diagnosis. Keep source SEO until the Wix ownership migration
-// preserves each page's title, description, canonical and social preview.
+// Read-only FR-16 verification for source-owned static SEO, after the release
+// postbuild removes competing Wix tags baked in by prerender middleware.
 import { parseHTML } from 'linkedom';
 import { pathToFileURL } from 'node:url';
 import { pages } from '../src/lib/build.mjs';
@@ -29,6 +29,13 @@ export function inspectPublishedMetadata(html, page) {
     const matches = values[key].every(value => key === 'canonical' ? new URL(value, ORIGIN).href === canonical : value === expected[key]);
     if (!matches) issues.push(`${key}: published value differs from the page-specific source`);
   }
+  const metaCounts = new Map();
+  for (const node of document.querySelectorAll('head meta')) {
+    const key = (node.getAttribute('property') || node.getAttribute('name') || '').toLowerCase();
+    if (!['description', 'robots'].includes(key) && !key.startsWith('og:') && !key.startsWith('twitter:')) continue;
+    metaCounts.set(key, (metaCounts.get(key) || 0) + 1);
+  }
+  for (const [key, count] of metaCounts) if (count > 1) issues.push(`${key}: expected at most one tag, found ${count}`);
   return { route: page.route, passed: !issues.length, counts: Object.fromEntries(Object.entries(nodes).map(([key, nodes]) => [key, nodes.length])), issues, values };
 }
 

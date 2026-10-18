@@ -8,10 +8,13 @@ on:
       - 'src/**'
       - 'scripts/configure-audit-*.mjs'
       - 'scripts/wix-postbuild.py'
+      - 'scripts/seo_ownership.py'
+      - 'scripts/diagnose-seo-prerender.mjs'
       - 'scripts/verify-*.mjs'
       - 'scripts/audit-live-metadata.mjs'
       - 'astro.config.mjs'
       - 'tests/audit-batch-*.test.mjs'
+      - 'tests/fixtures/seo-prerender/**'
       - 'package*.json'
       - '.github/workflows/audit-regression.yml'
 
@@ -33,11 +36,56 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Verify audit regressions
         run: npm run test:audit
+      - name: Reproduce release middleware and verify source SEO ownership
+        run: node scripts/diagnose-seo-prerender.mjs --verify-fix
       - name: Build public pages
         run: npm run build
       - name: Verify hosting registry, canonical routes and navigation
         run: |
           python scripts/wix-postbuild.py
+          node scripts/verify-audit-seo.mjs
+          node scripts/verify-navigation.mjs
+          node scripts/verify-shop-category-routes.mjs
+
+  account-artifact:
+    # Exercise the real release build with the existing linked environment.
+    # This job never runs wix release, uploads assets or changes site settings.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: 'true'
+      ASTRO_TELEMETRY_DISABLED: '1'
+      WIX_CLI: '@wix/cli@1.1.258'
+      NO_COLOR: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --no-audit --no-fund
+      - name: Authenticate existing linked-site build identity
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+        run: |
+          if [ -z "$WIX_API_KEY" ]; then
+            echo '::error::Existing WIX_API_KEY is required to verify the real release artifact.'
+            exit 1
+          fi
+          npx --yes -p "$WIX_CLI" wix login --api-key "$WIX_API_KEY"
+      - name: Load existing server environment without logging its values
+        run: |
+          npx --yes -p "$WIX_CLI" wix env pull > wix-env-pull.log
+          node scripts/verify-account-environment.mjs
+      - name: Build account runtime and prerendered public pages
+        run: npm run build:account
+      - name: Verify prepared release output without publishing
+        run: |
+          python scripts/wix-postbuild.py
+          node scripts/verify-account-artifacts.mjs
           node scripts/verify-audit-seo.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs

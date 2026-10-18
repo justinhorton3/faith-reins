@@ -3,12 +3,14 @@
 Post-build for Wix drop hosting.
 Wix serves files at exact paths only — no dir/index.html auto-serving.
 Steps:
+  0. Preflight source SEO ownership and remove competing Wix-marked tags
   1. Copy dist/dir/index.html → dist/dir.html for every page dir
   2. Delete each index.html from page subdirs (keep dir structure for nested pages)
   3. Rewrite internal hrefs to use .html extensions
   4. Write _wix/pages.json
 """
 import argparse, os, re, shutil, json
+from seo_ownership import source_owned_seo, SeoOwnershipError
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 
@@ -19,6 +21,31 @@ DIST = os.path.abspath(parser.parse_args().dist)
 KEEP_DIRS = {"_astro", "assets", "_wix"}
 with open(os.path.join(REPO, "src", "lib", "indexability.json"), encoding="utf-8") as f:
     INDEXABILITY = json.load(f)
+
+# The account/release build prerenders Wix's HTML-embeds middleware too. Its
+# SEO tags are already baked into these files; keep the explicit source owner.
+# Preflight the entire HTML set before writing any ownership changes.
+seo_changes = []
+removed_seo = 0
+for root, dirs, files in os.walk(DIST):
+    dirs[:] = [d for d in dirs if d not in KEEP_DIRS and d != "_worker.js"]
+    for name in sorted(files):
+        if not name.endswith(".html"):
+            continue
+        filename = os.path.join(root, name)
+        with open(filename, encoding="utf-8", newline="") as f:
+            original = f.read()
+        try:
+            cleaned, count = source_owned_seo(original)
+        except SeoOwnershipError as error:
+            raise SystemExit(f"SEO ownership blocked publication: {filename}: {error}")
+        if count:
+            seo_changes.append((filename, cleaned))
+            removed_seo += count
+for filename, cleaned in seo_changes:
+    with open(filename, "w", encoding="utf-8", newline="") as f:
+        f.write(cleaned)
+print(f"Source SEO ownership: removed {removed_seo} competing Wix tags in {len(seo_changes)} files; other embeds retained.")
 
 def normalized_route(value):
     path = urlsplit(value).path.rstrip("/")
