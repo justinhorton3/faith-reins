@@ -10,6 +10,7 @@ on:
       - '.github/releases/2026-10-16-shop-*.md'
       - '.github/releases/2026-10-17-sitemap-*.md'
       - '.github/releases/2026-10-17-account-*.md'
+      - '.github/releases/2026-10-18-header-logo.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
