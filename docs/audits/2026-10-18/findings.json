@@ -1,0 +1,460 @@
+[
+  {
+    "id": "FR-01",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Unchecked fee option still increases the donation total",
+    "paths": [
+      "/give"
+    ],
+    "evidence": "At initial load, the fee checkbox is unchecked. Selecting $100 shows Donate $102.90. Checking and then unchecking the option changes the button to Donate $100. Source initializes st.fee from the campaign but never initializes the checkbox to that value.",
+    "recommendation": "Default optional fee coverage to off, synchronize displayed checkbox and application state, and calculate the displayed amount from the same choice sent to checkout.",
+    "acceptance": "Fresh load: unchecked + $100 shows $100. Checked shows the disclosed fee. Unchecked returns to $100. Verify checkout amount and receipt in an approved test flow.",
+    "owner": "Web engineering",
+    "effort": "Small",
+    "personas": "Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-02",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Monthly giving promise has no monthly selection",
+    "paths": [
+      "/give",
+      "/",
+      "/contact",
+      "/donation-policy"
+    ],
+    "evidence": "The settled live giving form exposes amount buttons and a donation button, with no frequency control. The homepage says Give monthly; page metadata and contact copy also promise monthly gifts.",
+    "recommendation": "Enable and verify recurring giving in the campaign and UI, or align the public messaging with the actual supported flow until it is ready.",
+    "acceptance": "A visitor following Give monthly can explicitly choose and review a monthly gift before checkout; frequency remains visible through the approved test flow.",
+    "owner": "Giving operations + web engineering",
+    "effort": "Medium",
+    "personas": "Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-03",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Donation presets differ from the agreed selection",
+    "paths": [
+      "/give"
+    ],
+    "evidence": "Live presets are $25, $50, $100, $250 and Custom. The project direction calls for $50, $100, $250, $500 and Other.",
+    "recommendation": "Align the campaign presets with the agreed donation options and use one label for the custom amount.",
+    "acceptance": "Fresh live form displays the agreed amounts and a working custom-amount control.",
+    "owner": "Giving operations",
+    "effort": "Small",
+    "personas": "Donors; Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-04",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Placeholder clinician identities are public",
+    "paths": [
+      "/our-team"
+    ],
+    "evidence": "Clinical Director, SLP, PT and counselor profiles show Sample Name alongside credentials and detailed biographies; illustrated/placeholder portraits are visible.",
+    "recommendation": "Replace each with verified, approved clinician information and authorized portraits. Suppress unfilled profiles rather than publishing sample identities.",
+    "acceptance": "No sample identities or unverified credentials remain. Every published profile has an accountable content owner.",
+    "owner": "Clinical director + Marketing",
+    "effort": "Medium",
+    "personas": "Families; Providers; Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-05",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Callback form prompt contradicts its privacy instruction",
+    "paths": [
+      "/book-online"
+    ],
+    "evidence": "The page says callback details only and asks visitors not to include diagnoses or treatment information. Its free-text label asks them to describe their child and what they are looking for.",
+    "recommendation": "Use a narrowly scoped contact or scheduling prompt, or remove the field. Put concise guidance beside the field; collect clinical information through the approved intake process.",
+    "acceptance": "Field labels, help text, privacy copy and confirmation consistently request callback logistics without inviting clinical details.",
+    "owner": "Clinical operations + web engineering",
+    "effort": "Small",
+    "personas": "Families; Providers",
+    "status": "Open"
+  },
+  {
+    "id": "FR-06",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Newsletter subscription reuses the contact form",
+    "paths": [
+      "/"
+    ],
+    "evidence": "The Updates from Faith Reins area renders Your name*, Email*, Phone and Message*, with a Subscribe button. Message is required for a newsletter signup.",
+    "recommendation": "Use a dedicated subscription form with email, optional name and appropriate subscription confirmation.",
+    "acceptance": "A visitor can subscribe without writing a message; the resulting confirmation describes subscription rather than a general inquiry.",
+    "owner": "Marketing + web engineering",
+    "effort": "Small",
+    "personas": "Families; Donors; Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-07",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Insurance statements disagree between pages",
+    "paths": [
+      "/payment-and-insurance",
+      "/faq"
+    ],
+    "evidence": "Payment & Insurance says the practice is working to accept major commercial insurance plans. The FAQ says it works with major commercial insurance plans.",
+    "recommendation": "Have operations confirm current payer participation and use the same qualified statement in every location.",
+    "acceptance": "FAQ, service pages, intake copy and payment page agree with the current verified coverage information.",
+    "owner": "Billing/operations + Clinical director",
+    "effort": "Small",
+    "personas": "Families; Providers",
+    "status": "Open"
+  },
+  {
+    "id": "FR-08",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Hero secondary action changes its visual role by device",
+    "paths": [
+      "/",
+      "/speech-language-therapy",
+      "/occupational-therapy",
+      "/physical-therapy",
+      "/counseling",
+      "/equine-assisted-learning",
+      "/give"
+    ],
+    "evidence": "Our therapies is a small uppercase underlined text link beside a filled callback button. The mobile CSS turns .hero__sec into a padded outlined control. Shop editorial links use a separate sentence-case style and down arrow.",
+    "recommendation": "Define primary action, secondary action and editorial text-link roles. Apply the chosen secondary CTA consistently; keep ordinary text links and disclosure controls distinct.",
+    "acceptance": "A documented role/state matrix covers light/dark surfaces, desktop/tablet/mobile, hover, focus and disabled states; all uses match it.",
+    "owner": "Design + web engineering",
+    "effort": "Medium",
+    "personas": "All personas",
+    "status": "Open"
+  },
+  {
+    "id": "FR-09",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Callback terminology drifts to appointment and booking language",
+    "paths": [
+      "/contact",
+      "/payment-and-insurance",
+      "/faq",
+      "/services-programs"
+    ],
+    "evidence": "Contact still includes Book online and Request an appointment. Payment and FAQ CTAs also say Request an appointment. These destinations lead to the callback page.",
+    "recommendation": "Use Request a callback for this funnel and explain that scheduling follows the conversation. Keep established URLs unless a separately planned redirect is needed.",
+    "acceptance": "Every visible CTA and related instruction accurately describes the destination and expected outcome.",
+    "owner": "Marketing + web engineering",
+    "effort": "Small",
+    "personas": "Families; Providers",
+    "status": "Open"
+  },
+  {
+    "id": "FR-10",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Layers remains in product taxonomy",
+    "paths": [
+      "/shop",
+      "/shop/mens-polo",
+      "/shop/quarter-zip",
+      "/shop/quilted-vest",
+      "/shop/heritage-hoodie"
+    ],
+    "evidence": "Product recommendation cards still label vest/quarter-zip products Layers, while category navigation uses Outerwear.",
+    "recommendation": "Use Outerwear consistently in catalog data, cards, filters and recommendations.",
+    "acceptance": "No customer-facing Layers taxonomy remains where Outerwear is intended.",
+    "owner": "Marketing + web engineering",
+    "effort": "Small",
+    "personas": "Marketing; Shop visitors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-11",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "EAL inherits clinical-payment framing",
+    "paths": [
+      "/equine-assisted-learning"
+    ],
+    "evidence": "EAL is described as a nonclinical ground-based program, but its hero and closing CTA both foreground Payment & insurance and the closing copy mentions coverage. It reuses clinical-template wording about individualized plans.",
+    "recommendation": "Give EAL its own program fit, participation, safety and payment explanation; describe any funding arrangements accurately and retain the explicit nonclinical distinction.",
+    "acceptance": "The page clearly explains EAL participation and the correct next step without implying clinical insurance coverage.",
+    "owner": "Program lead + Clinical director + Marketing",
+    "effort": "Small",
+    "personas": "Families; Providers",
+    "status": "Open"
+  },
+  {
+    "id": "FR-12",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Impact page provides principles without evidence of impact",
+    "paths": [
+      "/impact-and-stewardship"
+    ],
+    "evidence": "The page lists funding areas and stewardship principles, but offers no dated results, reporting period, financial summary, report download or measurable outcomes.",
+    "recommendation": "Publish verified dated results and reporting links when available. Until then, clearly describe stewardship commitments and provide a route for donor questions.",
+    "acceptance": "Impact claims have a period, source and owner; the page delivers evidence appropriate to its promise.",
+    "owner": "Foundation leadership + Marketing",
+    "effort": "Medium",
+    "personas": "Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-13",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Partner/sponsor area exposes placeholder graphics",
+    "paths": [
+      "/our-partners"
+    ],
+    "evidence": "The sponsor section contains tier placeholder graphics and empty-looking sponsor positions rather than a complete set of identified current partners.",
+    "recommendation": "Publish only confirmed sponsor identities with permission; hide empty tiers or present a clearly labeled sponsorship opportunity separately.",
+    "acceptance": "Every displayed sponsor is identifiable and approved; no placeholder logo or empty sponsor slot is presented as a current supporter.",
+    "owner": "Partnerships + Marketing",
+    "effort": "Small",
+    "personas": "Donors; Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-14",
+    "priority": "P1",
+    "state": "Confirmed",
+    "title": "Legacy men route sends conflicting canonical signals",
+    "paths": [
+      "/shop/mens"
+    ],
+    "evidence": "The HTTP response contains canonicals for both /shop/men.html and /shop/mens.html. It returns 200, is noindex, appears in the sitemap and moves to /shop/men.html through page-level redirect behavior.",
+    "recommendation": "Use one server-level permanent redirect to the selected canonical route and remove the legacy URL from the XML sitemap.",
+    "acceptance": "One canonical destination; a direct permanent HTTP redirect; no competing canonical or legacy sitemap entry.",
+    "owner": "Web engineering + SEO",
+    "effort": "Small",
+    "personas": "Marketing; Shop visitors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-15",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Published XML sitemap includes unsuitable and broken entries",
+    "paths": [
+      "/sitemap.xml",
+      "/pages-sitemap.xml",
+      "/pricing-plans-sitemap.xml"
+    ],
+    "evidence": "The page sitemap includes seven noindex URLs (six account routes and /shop/mens.html), /news/post.html, and giving/order thank-you pages. A separate pricing-plan sitemap advertises /pricing-plans/plans-pricing, which returns HTTP 404.",
+    "recommendation": "Reconcile the hosting-generated sitemap with canonical indexable pages. Exclude account, redirect, parameterized template and confirmation URLs; remove the broken pricing-plan entry.",
+    "acceptance": "Every listed URL resolves successfully to an intended canonical indexable page; source exclusions are verified in the published sitemap.",
+    "owner": "SEO + web engineering",
+    "effort": "Medium",
+    "personas": "Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-16",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Hosting output duplicates canonical and social-title metadata",
+    "paths": [
+      "*"
+    ],
+    "evidence": "All 94 registered-page responses contain two canonical elements and two og:title elements. The values generally agree, but the legacy men route conflicts (FR-14). The source layout and published hosting output need one SEO owner.",
+    "recommendation": "Resolve duplicate metadata at the source/hosting boundary rather than deleting valid SEO arbitrarily.",
+    "acceptance": "Exactly one canonical and one intended social title are emitted per canonical page, with page-appropriate social previews.",
+    "owner": "SEO + web engineering",
+    "effort": "Medium",
+    "personas": "Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-17",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Most product detail guides remain reference placeholders",
+    "paths": [
+      "/shop/*"
+    ],
+    "evidence": "There are 21 detailed showcase pages. Only two include any garment measurement table; those tables apply to specific proposed variants. The other pages explicitly defer measurements, capacity, composition or care details.",
+    "recommendation": "Retain honest unavailable/reference language now. Before selling, finish the Printful supplier mapping and variant-specific dimensions, materials and care details; avoid a measurement-guide label that promises a table when none exists.",
+    "acceptance": "Each sellable variant has verified supplier details, and guide labels accurately describe available information.",
+    "owner": "Merchandising + supplier operations",
+    "effort": "Large",
+    "personas": "Marketing; Shop visitors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-18",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Legacy product pages recommend unrelated products",
+    "paths": [
+      "/shop/beanie",
+      "/shop/keychains",
+      "/shop/stickers",
+      "/shop/youth-crewneck",
+      "/shop/youth-long-sleeve-tee"
+    ],
+    "evidence": "Unavailable legacy destinations retain their old title but often show the same four polo recommendations. Beanie, keychain and sticker visitors are sent to polo choices.",
+    "recommendation": "Use relevant category alternatives and a clear current-category link; decide which legacy pages should remain indexable versus redirect to a useful equivalent.",
+    "acceptance": "Every retained legacy route has a clear purpose and relevant next destination; unavailable items remain clearly labeled.",
+    "owner": "Merchandising + SEO",
+    "effort": "Medium",
+    "personas": "Marketing; Shop visitors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-19",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Required fields and errors lack programmatic associations",
+    "paths": [
+      "/book-online",
+      "/contact",
+      "/sponsorships",
+      "/"
+    ],
+    "evidence": "The five visually required callback fields have neither required nor aria-required. Controls have no aria-describedby. Empty submission creates error alerts and focuses the first field, but the renderer does not associate the error with that field or set aria-invalid. V7 component guidance explicitly calls for help/error IDs and programmatic error association.",
+    "recommendation": "Add required semantics, stable help/error IDs, aria-describedby and error-state attributes to the shared renderer. Preserve the working first-error focus behavior.",
+    "acceptance": "Assistive technology can identify required fields and read the relevant help/error text on focus; test empty and invalid input states.",
+    "owner": "Accessibility + web engineering",
+    "effort": "Medium",
+    "personas": "Families; Providers; Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-20",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Recurring-gift management copy promises different capabilities",
+    "paths": [
+      "/donation-policy",
+      "/account/recurring"
+    ],
+    "evidence": "The donation policy says a donor can modify or cancel a recurring gift by logging in. The recurring account page describes recorded payments and contacting the team about changes; account help likewise routes changes to staff.",
+    "recommendation": "Confirm the actual supported management flow and align policy, account copy and giving confirmations. Verify any self-service change/cancel function with an approved test account.",
+    "acceptance": "A donor receives one accurate set of instructions; authenticated management behavior is tested before a self-service promise is published.",
+    "owner": "Giving operations + web engineering",
+    "effort": "Medium",
+    "personas": "Donors",
+    "status": "Open"
+  },
+  {
+    "id": "FR-21",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "Unknown routes show a generic hosting error experience",
+    "paths": [
+      "404 handling"
+    ],
+    "evidence": "A deliberately nonexistent URL returns HTTP 404 with the hosting platform's generic Page Not Found document rather than the Faith Reins shell. /404.html itself returns 200. A custom source error page alone does not prove hosting is using it.",
+    "recommendation": "Wire the branded error experience into production routing, including useful home, services and contact paths while preserving the correct error status.",
+    "acceptance": "An unknown path returns 404 and gives visitors a recognizable, navigable Faith Reins recovery page.",
+    "owner": "Web engineering",
+    "effort": "Medium",
+    "personas": "All personas",
+    "status": "Open"
+  },
+  {
+    "id": "FR-22",
+    "priority": "P2",
+    "state": "Confirmed",
+    "title": "News index and seasonal next steps are stale or weakly ordered",
+    "paths": [
+      "/news",
+      "/news/summer-eal-program-2026",
+      "/news/welcome-second-slp"
+    ],
+    "evidence": "The index lists August, September and October stories in ascending date order. The summer recap still says fall registration opens in September, although the audit is in October. Hiring/age-range statements need alignment with current pages and the established pediatric wording.",
+    "recommendation": "Use an intentional news sort, update or date-limit seasonal calls to action, and revalidate recruitment and audience statements.",
+    "acceptance": "Newest/current updates are easy to identify; expired next-step copy is archived or updated.",
+    "owner": "Marketing + Clinical operations",
+    "effort": "Small",
+    "personas": "Families; Providers; Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-23",
+    "priority": "P1",
+    "state": "Owner verification",
+    "title": "Substantiate clinical, testimonial and program claims",
+    "paths": [
+      "/",
+      "/our-team",
+      "/news/summer-eal-program-2026",
+      "/news/welcome-second-slp",
+      "/news/faith-reins-mission"
+    ],
+    "evidence": "Published copy includes anonymous clinical-progress testimonials, detailed clinician biographies, a twelve-participant/eight-week summer program narrative, and clinical-evidence language. This audit cannot verify their truth or publication permissions.",
+    "recommendation": "Maintain an approval register identifying the factual source, owner, consent where applicable and review date. Remove or replace unsupported claims; do not invent replacement outcomes.",
+    "acceptance": "Each claim and testimonial has documented substantiation and approval; scope and qualifications match current operations.",
+    "owner": "Clinical director + Marketing + leadership",
+    "effort": "Medium",
+    "personas": "All personas",
+    "status": "Open"
+  },
+  {
+    "id": "FR-24",
+    "priority": "P1",
+    "state": "Owner verification",
+    "title": "Verify the shared address, ZIP and map coordinates",
+    "paths": [
+      "*",
+      "/contact"
+    ],
+    "evidence": "The footer and organization schema publish Camden, AR 72711; schema also contains latitude 33.5843 and longitude -92.8343. These need verification against the actual facility/mailing address and entrance. No replacement ZIP or coordinate is assumed here.",
+    "recommendation": "Confirm address and map destination with operations, then use one approved record in footer, contact, directions, schema and external listings.",
+    "acceptance": "All location representations agree with the verified facility record; directions lead to the correct entrance.",
+    "owner": "Operations + SEO",
+    "effort": "Small",
+    "personas": "Families; Providers; Marketing",
+    "status": "Open"
+  },
+  {
+    "id": "FR-25",
+    "priority": "P2",
+    "state": "Owner verification",
+    "title": "Align public policies with current operations",
+    "paths": [
+      "/privacy-policy",
+      "/hipaa-notice",
+      "/donation-policy",
+      "/returns-policy",
+      "/cancellation-policy",
+      "/equine-safety",
+      "/photo-consent",
+      "/accessibility"
+    ],
+    "evidence": "Policies make specific promises about pre-intake information, recurring-gift management, accepted payment methods, shipping/returns, response periods, consent and mounted-activity rules. Program pages describe ground-based EAL. This is a content/operations verification request, not a legal compliance conclusion.",
+    "recommendation": "Have accountable clinical, operational and policy reviewers confirm the actual practices; reconcile policy language with site functionality and program scope.",
+    "acceptance": "Each policy has an owner, approved current text and review date; public instructions match the available services and systems.",
+    "owner": "Leadership + policy/clinical reviewers",
+    "effort": "Medium",
+    "personas": "All personas",
+    "status": "Open"
+  },
+  {
+    "id": "FR-26",
+    "priority": "P2",
+    "state": "Needs reproduction",
+    "title": "Reproduce the supplied compact-screen and clipped-menu examples",
+    "paths": [
+      "/shop",
+      "shared navigation"
+    ],
+    "evidence": "The supplied compact shop screenshot shows a heading crowded beneath the header; another screenshot shows a clipped menu edge. At the available 1363px desktop viewport, all six menu panels fit within the viewport. The supplied captures do not establish exact width, scroll position or current build.",
+    "recommendation": "Reproduce at 320/390/430, 768/1024, 1280/1440 and either side of 767/1023/1279px breakpoints; test scroll/anchor states, image crops, wrapping, focus and touch behavior.",
+    "acceptance": "Record exact device/viewport/browser and before/after evidence. Do not close from desktop or CSS inspection alone.",
+    "owner": "Design QA + web engineering",
+    "effort": "Medium",
+    "personas": "All personas",
+    "status": "Open"
+  }
+]
