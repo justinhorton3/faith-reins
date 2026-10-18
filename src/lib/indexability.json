@@ -1,6 +1,6 @@
 {
   "excludeRoutes": [
-    "/404", "/news/post", "/give/thank-you", "/shop/thank-you", "/shop/mens",
+    "/400", "/404", "/500", "/news/post", "/give/thank-you", "/shop/thank-you", "/shop/mens",
     "/shop/mens-tee", "/shop/long-sleeve-tee", "/shop/crewneck",
     "/shop/womens-tee", "/shop/womens-long-sleeve-tee", "/shop/womens-crewneck",
     "/shop/childrens-tee", "/shop/toddler-tee", "/shop/youth-long-sleeve-tee",

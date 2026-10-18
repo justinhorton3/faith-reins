@@ -1,0 +1,7 @@
+---
+import ErrorPage from "../components/ErrorPage.astro";
+// Astro can serve this static fallback with the original failure's HTTP 500.
+// This also keeps the recovery page independent of runtime Wix services.
+export const prerender = true;
+---
+<ErrorPage status={500} />

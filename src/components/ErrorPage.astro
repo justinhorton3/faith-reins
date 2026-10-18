@@ -1,0 +1,135 @@
+---
+import Base from "../layouts/Base.astro";
+
+interface Props {
+  status: number;
+}
+
+const { status } = Astro.props;
+const messages: Record<number, { label: string; heading: string; description: string }> = {
+  400: {
+    label: "Bad request",
+    heading: "We couldn't open that request.",
+    description: "Please check the address and try again, or return home to find what you need.",
+  },
+  404: {
+    label: "Page not found",
+    heading: "Let's find your way back.",
+    description: "The page you're looking for may have moved, or the link may be incorrect.",
+  },
+  500: {
+    label: "Something went wrong",
+    heading: "Our site needs a moment.",
+    description: "Something went wrong on our end. Please try again in a moment, or return home.",
+  },
+};
+const message = messages[status] || {
+  label: "Page unavailable",
+  heading: "We couldn't open this page.",
+  description: "Please return home to find what you need, or contact us for help.",
+};
+---
+<Base
+  title={`${message.label} | Faith Reins`}
+  description={message.description}
+  route={`/${status}`}
+  seo={{ noindex: true, image: "https://www.faithreins.com/assets/error-pages/background-desktop.webp", imageWidth: 1672, imageHeight: 941, imageAlt: "A horse resting beneath an oak in a peaceful pasture" }}
+>
+  <section class="error-page" aria-labelledby="error-heading" data-error-status={status}>
+    <picture class="error-page__art" aria-hidden="true">
+      <source media="(max-width: 767px)" srcset="/assets/error-pages/background-mobile.webp" width="940" height="1672" />
+      <source media="(max-width: 1023px)" srcset="/assets/error-pages/background-tablet.webp" width="1122" height="1402" />
+      <img src="/assets/error-pages/background-desktop.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="error-page__scrim" aria-hidden="true"></div>
+    <div class="error-page__body">
+      <p class="eyebrow">{status} · {message.label}</p>
+      <h1 id="error-heading">{message.heading}</h1>
+      <p class="error-page__description">{message.description}</p>
+      <div class="error-page__actions">
+        <a class="btn btn--outline-inv" href="/">Return home</a>
+        <a class="tlink tlink--inv" href="/contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .error-page {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-items: center;
+    min-height: max(640px, min(56.25vw, 1000px));
+    padding: 80px max(var(--g), calc((100% - var(--max)) / 2));
+    background: var(--fr-green);
+    color: var(--fr-cream);
+  }
+  .error-page__art, .error-page__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  .error-page__art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .error-page__scrim {
+    background: linear-gradient(90deg, rgba(14, 32, 25, .85) 0%, rgba(14, 32, 25, .72) 48%, rgba(14, 32, 25, 0) 75%);
+  }
+  .error-page__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: min(540px, 52%);
+  }
+  .error-page h1 {
+    font: 400 clamp(48px, 4.5vw, 68px)/1.06 var(--font-display);
+    color: var(--fr-cream);
+    text-wrap: balance;
+  }
+  .error-page__description {
+    max-width: 440px;
+    font: 400 19px/1.65 var(--font-serif);
+  }
+  .error-page__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 28px;
+    padding-top: 8px;
+  }
+  .error-page :is(a, button):focus-visible {
+    outline: 3px solid var(--fr-cream);
+    outline-offset: 5px;
+  }
+  @media (max-width: 1023px) {
+    .error-page {
+      align-items: start;
+      min-height: max(900px, 125vw);
+      padding-top: 72px;
+      padding-bottom: max(460px, 62.5vw);
+    }
+    .error-page__body { max-width: 600px; }
+    .error-page__art img { object-position: right bottom; }
+    .error-page h1 { font-size: 56px; }
+    .error-page__scrim {
+      background: linear-gradient(180deg, rgba(14, 32, 25, .82) 0%, rgba(14, 32, 25, .72) 48%, rgba(14, 32, 25, 0) 72%);
+    }
+  }
+  @media (max-width: 767px) {
+    .error-page {
+      min-height: max(760px, 177.87vw);
+      padding-top: 48px;
+      padding-bottom: max(360px, 88.94vw);
+    }
+    .error-page__body { max-width: 440px; gap: 20px; }
+    .error-page h1 { font-size: clamp(38px, 10vw, 48px); }
+    .error-page__description { font-size: 17px; line-height: 1.6; }
+    .error-page__actions { gap: 20px 24px; }
+    .error-page__actions .btn { white-space: normal; min-height: 48px; }
+  }
+</style>
