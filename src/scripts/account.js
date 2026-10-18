@@ -1,3 +1,4 @@
+import { RECURRING_GIFT_HELP } from '../lib/giving-support.mjs';
 // Account data stays in this page's memory. Wix manages the HttpOnly member session.
 const host = document.querySelector('[data-account]');
 if (host) {
@@ -127,7 +128,7 @@ if (host) {
   }
   function historyView(token) {
     content.append(h('h2', {}, view === 'shop' ? 'Purchase history' : view === 'giving' ? 'Giving history' : 'Recurring-gift payments'));
-    if (view === 'recurring') content.append(h('p', { class: 'account-note' }, 'These are recorded payments, rather than a live billing schedule. Contact our team to confirm the next charge or to change or cancel an existing gift.'));
+    if (view === 'recurring') content.append(h('p', { class: 'account-note' }, RECURRING_GIFT_HELP, ' ', help()));
     const area = h('div', {}); content.append(area); loadHistory(view, area, token);
     content.append(h('p', { class: 'account-note' }, 'Looking for an older or guest transaction? Our team can help verify ownership and locate it.'));
   }

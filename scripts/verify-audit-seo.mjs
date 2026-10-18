@@ -6,6 +6,7 @@ import path from "node:path";
 import { parseHTML } from "linkedom";
 import { pages } from "../src/lib/build.mjs";
 import { isIndexableRoute } from "../src/lib/indexability.mjs";
+import { inspectPublishedMetadata } from "./audit-live-metadata.mjs";
 
 const dist = path.resolve(import.meta.dirname, "../dist");
 const origin = "https://www.faithreins.com";
@@ -15,7 +16,10 @@ const expected = pages.filter(page => isIndexableRoute(page.route) && !page.seo?
 const registry = JSON.parse(fs.readFileSync(path.join(dist, "_wix/pages.json"), "utf8"));
 assert.deepEqual(registry.map(page => page.path).sort(), expected, "Hosting page registry must contain exactly the indexable canonical pages");
 for (const page of pages) {
-  const { document } = parseHTML(fs.readFileSync(filename(page.route), "utf8"));
+  const html = fs.readFileSync(filename(page.route), "utf8");
+  const { document } = parseHTML(html);
+  const metadata = inspectPublishedMetadata(html, page);
+  assert.ok(metadata.passed, page.route + ": " + metadata.issues.join("; "));
   const noindex = [...document.querySelectorAll('meta[name="robots"]')].some(meta => /\bnoindex\b/i.test(meta.content));
   assert.equal(noindex, !isIndexableRoute(page.route) || !!page.seo?.noindex, page.route);
   if (!expected.includes(hosted(page.route))) continue;

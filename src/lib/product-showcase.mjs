@@ -1,4 +1,5 @@
 import { esc } from "./lib.mjs";
+import { productGuide } from "./product-guide.mjs";
 
 const imageTag = (image, alt, attrs = '') => `<img src="${image.src}" alt="${esc(alt)}" width="${image.width}" height="${image.height}" ${attrs}>`;
 const safeJson = (value) => JSON.stringify(value).replace(/</g, '\\u003c');
@@ -10,14 +11,15 @@ export function showcaseCard(p) {
 
 export function productShowcase(p, related = []) {
   const v = p.variants[0];
+  const guide = productGuide(p, v);
   const wearable = ['Polos', 'T-Shirts', 'Outerwear', 'Hoodies', 'Headwear'].includes(p.collection);
   const heading = wearable ? 'Wear what<br>matters to you.' : 'A little purpose<br>in the everyday.';
   const table = (variant) => {
-    if (!variant.guide) return `<div data-pdp-guide="${variant.id}"${variant !== v ? ' hidden' : ''}><p>Measurements for this style will be added when the final item is confirmed.</p><p class="pdp-small">${esc(p.fitNote)}</p></div>`;
+    if (!productGuide(p, variant).hasMeasurements) return `<div data-pdp-guide="${variant.id}"${variant !== v ? ' hidden' : ''}><p>${variant.sizes.length ? `Reference sizes: ${variant.sizes.map(esc).join(', ')}. Garment measurements for this variant have not yet been confirmed.` : 'Final fit, dimensions and product details will be confirmed before this item becomes available.'}</p><p class="pdp-small">${esc(p.fitNote)}</p></div>`;
     const g = variant.guide;
     return `<div data-pdp-guide="${variant.id}"${variant !== v ? ' hidden' : ''}><p>${esc(g.note)}</p><div class="pdp-units" role="group" aria-label="Measurement units"><button type="button" data-pdp-unit="in" aria-pressed="true">Inches</button><button type="button" data-pdp-unit="cm" aria-pressed="false">Centimeters</button></div><div class="pdp-table-scroll"><table><caption data-pdp-chart-caption="${esc(variant.name)} garment measurements">${esc(variant.name)} garment measurements in inches</caption><thead><tr><th scope="col">Size</th>${g.columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${g.rows.map(([size, ...values]) => `<tr><th scope="row">${esc(size)}</th>${values.map(value => `<td data-pdp-inches="${value}">${value}</td>`).join('')}</tr>`).join('')}</tbody></table></div><p class="pdp-small">${esc(g.method)} ${esc(g.tolerance)}</p><p class="pdp-small">Reference: <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${esc(g.name)}</a>, reviewed ${esc(g.reviewedAt)}. Applies to this proposed style only.</p></div>`;
   };
-  const sizes = v.sizes.length ? `<div class="pdp-size-heading"><p>Size <strong id="pdp-size-name">Select a size</strong></p><button type="button" class="pdp-text-button" id="pdp-size-guide">Size &amp; fit guide</button></div><div class="pdp-sizes" id="pdp-sizes" role="group" aria-label="Choose a size">${v.sizes.map(size => `<button type="button" data-pdp-size="${esc(size)}" aria-pressed="false">${esc(size)}</button>`).join('')}</div><p class="pdp-small">Sizes shown for reference.</p>` : `<div class="pdp-format"><p>${p.collection === 'Headwear' ? 'Adjustable fit' : 'One size'}</p><button type="button" class="pdp-text-button" id="pdp-size-guide">${p.collection === 'Headwear' ? 'Fit information' : 'Dimensions &amp; details'}</button></div>`;
+  const sizes = v.sizes.length ? `<div class="pdp-size-heading"><p>Size <strong id="pdp-size-name">Select a size</strong></p><button type="button" class="pdp-text-button" id="pdp-size-guide">${esc(guide.label)}</button></div><div class="pdp-sizes" id="pdp-sizes" role="group" aria-label="Choose a size">${v.sizes.map(size => `<button type="button" data-pdp-size="${esc(size)}" aria-pressed="false">${esc(size)}</button>`).join('')}</div><p class="pdp-small">Sizes shown for reference.</p>` : `<div class="pdp-format"><p>${p.collection === 'Headwear' ? 'Adjustable fit' : 'One size'}</p><button type="button" class="pdp-text-button" id="pdp-size-guide">${esc(guide.label)}</button></div>`;
   const options = p.variants.length > 1 ? `<section class="pdp-collection" aria-labelledby="pdp-colors-title"><p class="eyebrow">The same quiet signature</p><h2 id="pdp-colors-title">Find your ${p.variants.some(v => v.tonal) ? 'signature' : 'color'}.</h2><div class="pdp-color-cards" style="--variant-columns:${Math.min(3, p.variants.length)}">${p.variants.map(variant => `<button type="button" data-pdp-card="${variant.id}" aria-label="View ${esc(variant.name)}"><span class="pdp-card-photo">${imageTag(variant.images.product, `${variant.name} ${p.name}`, 'loading="lazy"')}</span><span>${esc(variant.name)}<small>${esc(p.name)} · Out of stock</small></span><b aria-hidden="true">↗</b></button>`).join('')}</div></section>` : '';
   const body = `
 <section class="pdp-page" data-product-showcase${p.slug === 'mens-polo' ? ' data-polo-showcase' : ''}>
@@ -45,7 +47,7 @@ export function productShowcase(p, related = []) {
       <p class="pdp-preview-note">Product imagery illustrates the collection; final details may vary.</p>
       <div class="pdp-details">
         <details open><summary>Description &amp; details</summary><div><p id="pdp-variant-description">${esc(v.description)}</p><ul>${p.details.map(detail => `<li>${esc(detail)}</li>`).join('')}</ul></div></details>
-        <details><summary>${v.sizes.length ? 'Fit &amp; sizing' : 'Size &amp; format'}</summary><div><p>${esc(p.fitNote)}</p><button type="button" class="pdp-text-button" id="pdp-fit-guide">${v.sizes.length ? 'Open size &amp; fit guide' : 'Open item details'}</button></div></details>
+        <details><summary>${v.sizes.length ? 'Fit &amp; sizing' : 'Size &amp; format'}</summary><div><p>${esc(p.fitNote)}</p><button type="button" class="pdp-text-button" id="pdp-fit-guide">${esc(guide.open)}</button></div></details>
         <details><summary>${wearable ? 'Fabric' : 'Materials'} &amp; care</summary><div><p>${esc(p.careNote)}</p></div></details>
         <details><summary>Availability</summary><div><p>This item is currently out of stock and cannot be purchased.</p></div></details>
       </div>
@@ -55,9 +57,9 @@ export function productShowcase(p, related = []) {
   ${options}
   ${related.length ? `<section class="pdp-related"><p class="eyebrow">More from the collection</p><h2>You might also like.</h2><div class="merch-grid">${related.map(showcaseCard).join('')}</div></section>` : ''}
 </section>
-<dialog class="pdp-dialog" id="pdp-guide-dialog" aria-labelledby="pdp-guide-title"><div class="pdp-dialog-heading"><h2 id="pdp-guide-title">${v.sizes.length ? 'Size &amp; fit guide' : 'Dimensions &amp; details'}</h2><button type="button" data-pdp-close aria-label="Close size guide">×</button></div>${p.variants.map(table).join('')}</dialog>
+<dialog class="pdp-dialog" id="pdp-guide-dialog" aria-labelledby="pdp-guide-title"><div class="pdp-dialog-heading"><h2 id="pdp-guide-title">${esc(guide.label)}</h2><button type="button" id="pdp-guide-close" data-pdp-close aria-label="${esc(guide.close)}">×</button></div>${p.variants.map(table).join('')}</dialog>
 <dialog class="pdp-dialog pdp-zoom-dialog" id="pdp-zoom-dialog" aria-labelledby="pdp-zoom-title"><div class="pdp-dialog-heading"><h2 id="pdp-zoom-title">${esc(v.name)} · Product view</h2><button type="button" data-pdp-close aria-label="Close image zoom">×</button></div><div class="pdp-zoom-tools"><button type="button" id="pdp-zoom-out" aria-label="Zoom out">−</button><output id="pdp-zoom-level">100%</output><button type="button" id="pdp-zoom-in" aria-label="Zoom in">+</button><button type="button" data-pdp-next aria-label="Previous zoom image">←</button><button type="button" data-pdp-next aria-label="Next zoom image">→</button></div><div class="pdp-zoom-scroll">${imageTag(v.images.product, `${v.name} ${p.name}, enlarged product view`, 'id="pdp-zoom-image"')}</div></dialog>
-<script type="application/json" id="pdp-data">${safeJson({ slug: p.slug, name: p.name, variants: p.variants })}</script>`;
+<script type="application/json" id="pdp-data">${safeJson({ slug: p.slug, name: p.name, collection: p.collection, variants: p.variants })}</script>`;
   return { description: p.desc, body, jsonld: {
     '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.desc,
     image: p.variants.flatMap(v => Object.values(v.images).map(image => image.src.startsWith('https://') ? image.src : `https://www.faithreins.com${image.src}`)),

@@ -88,7 +88,8 @@ test("callback presentation changes only the opted-in prompt and keeps the wire 
   const f = await fixture(t, '<div data-wix-form data-form-id="callback-form" data-purpose="callback"></div>', { formData });
   assert.match(f.document.querySelector("label").textContent, /Callback or scheduling preferences/);
   assert.doesNotMatch(f.document.body.textContent, /Tell us about your child/);
-  const input = f.document.querySelector("textarea");assert.ok(f.document.getElementById(input.getAttribute("aria-describedby")));
+  const input = f.document.querySelector("textarea");
+  for (const id of input.getAttribute("aria-describedby").split(/\s+/)) assert.ok(f.document.getElementById(id));
 });
 
 test("sample team records never render, including incoming CMS records", () => {

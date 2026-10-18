@@ -1,5 +1,12 @@
 {
-  "excludeRoutes": ["/404", "/news/post", "/give/thank-you", "/shop/thank-you", "/shop/mens"],
+  "excludeRoutes": [
+    "/404", "/news/post", "/give/thank-you", "/shop/thank-you", "/shop/mens",
+    "/shop/mens-tee", "/shop/long-sleeve-tee", "/shop/crewneck",
+    "/shop/womens-tee", "/shop/womens-long-sleeve-tee", "/shop/womens-crewneck",
+    "/shop/childrens-tee", "/shop/toddler-tee", "/shop/youth-long-sleeve-tee",
+    "/shop/youth-crewneck", "/shop/childrens-hoodie", "/shop/youth-polo",
+    "/shop/youth-cap", "/shop/beanie", "/shop/travel-mug", "/shop/keychains", "/shop/stickers"
+  ],
   "excludePrefixes": ["/account", "/api"],
   "redirects": [
     { "from": "/shop/mens", "to": "/shop/men.html" },

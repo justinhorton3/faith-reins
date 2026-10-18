@@ -1,3 +1,4 @@
+import { productGuide } from '../lib/product-guide.mjs';
 const root = document.querySelector('[data-product-showcase]');
 if (root) {
   const data = JSON.parse(document.getElementById('pdp-data').textContent);
@@ -43,6 +44,11 @@ if (root) {
     renderSizes();
     setImage($('story-image'), variant.images.styled, `${variant.name} ${data.name}, styled view`);
     document.querySelectorAll('[data-pdp-guide]').forEach(guide => { guide.hidden = guide.dataset.pdpGuide !== id; });
+    const guide = productGuide(data, variant);
+    $('size-guide').textContent = guide.label;
+    $('fit-guide').textContent = guide.open;
+    $('guide-title').textContent = guide.label;
+    $('guide-close').setAttribute('aria-label', guide.close);
     $('variant-description').textContent = variant.description;
     $('add-to-bag').disabled = true;
     renderImage(); announce();

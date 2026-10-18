@@ -1,4 +1,5 @@
 import { titleBand, section, sh, infoGrid } from '../lib.mjs';
+import { RECURRING_GIFT_HELP } from '../giving-support.mjs';
 
 export const ACCOUNT_PAGES = [
   { route: '/account', view: 'overview', label: 'Overview', heading: 'Your place in the mission.', lead: 'Your purchases, giving and account details, together in one place.' },
@@ -13,7 +14,7 @@ export function registerAccountPages(add) {
     const returnTo = page.route === '/account/order' ? '/account.html' : page.route + '.html';
     const login = '/api/auth/login?returnToUrl=' + encodeURIComponent(returnTo);
     const nav = ACCOUNT_PAGES.filter(p => p.view !== 'order').map(p => `<a href="${p.route}"${page.route === p.route ? ' aria-current="page"' : ''}>${p.label}<span aria-hidden="true">↗</span></a>`).join('');
-    const body = titleBand({ eyebrow: 'My Account', title: page.heading, body: page.lead }) + section(`
+    const body = titleBand({ eyebrow: 'My Account', title: page.heading, body: page.lead }) + (page.view === 'recurring' ? section(`<p>${RECURRING_GIFT_HELP} <a href="/contact#account-help">Get giving assistance</a>.</p>`, { pad: 'tight' }) : '') + section(`
       <div class="account-app" data-account data-account-view="${page.view}" data-account-order-route="/account/order">
         <div class="account-state" data-account-loading role="status"><span class="eyebrow">A moment, just for you</span><p>Loading your account…</p><div class="account-skeleton" aria-hidden="true"></div></div>
         <div class="account-sign-in" data-account-signed-out hidden><div><span class="eyebrow">Welcome back</span><h2>Stay connected to Faith Reins.</h2><p>Sign in or create an account to view your purchases, giving history and profile.</p><a class="btn" data-account-login href="${login}">Sign in / Create account</a></div><div class="account-sign-in__aside"><span class="eyebrow">One account. More connection.</span><p>Your orders.<br>Your generosity.<br>Your details.</p><span>Private, and always yours.</span></div></div>

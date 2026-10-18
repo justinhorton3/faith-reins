@@ -9,6 +9,7 @@ on:
       - 'scripts/configure-audit-*.mjs'
       - 'scripts/wix-postbuild.py'
       - 'scripts/verify-*.mjs'
+      - 'scripts/audit-live-metadata.mjs'
       - 'astro.config.mjs'
       - 'tests/audit-batch-*.test.mjs'
       - 'package*.json'

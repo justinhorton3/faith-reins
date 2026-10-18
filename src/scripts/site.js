@@ -47,6 +47,14 @@ function track(event, params = {}) {
 /* Forms */
 const text = (n) => (typeof n === "string" ? n : n && n.nodes ? n.nodes.map((c) => (c.textData ? c.textData.text : "") + text(c)).join("") : "");
 const phone = (v) => { const d = v.replace(/[^\d+]/g, ""); return d[0] === "+" ? d : d.length === 10 ? "+1" + d : d.length === 11 && d[0] === "1" ? "+" + d : d; };
+let formSequence = 0;
+function fieldError(field, value) {
+  const v = typeof value === "string" ? value.trim() : value;
+  const empty = v == null || v === "" || (Array.isArray(v) && !v.length) || (field.kind === "check" && !v);
+  if (field.required && empty) return "This field is required.";
+  if (field.kind === "email" && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return "Enter an email address like name@example.com.";
+  return "";
+}
 
 function parseForm(form) {
   const order = new Map();
@@ -89,20 +97,33 @@ async function mountForm(host) {
     return;
   }
   const vals = {}, nodes = {};
+  const formPrefix = "fr-form-" + ++formSequence;
+  const showError = (field, message) => {
+    const [wrap, error, controls, group] = nodes[field.target];
+    wrap.classList.toggle("is-invalid", !!message);
+    error.textContent = message;
+    error.hidden = !message;
+    for (const control of controls) control.setAttribute("aria-invalid", String(!!message));
+    group?.setAttribute("aria-invalid", String(!!message));
+  };
   const box = h("div", { class: "wix-form__fields" });
-  for (const f of fields) {
+  for (const [index, f] of fields.entries()) {
     if (f.hidden) { vals[f.target] = f.preset; continue; }
-    const fid = "f" + Math.random().toString(36).slice(2, 8);
-    const err = h("div", { class: "error", role: "alert" });
+    const fid = formPrefix + "-" + index;
+    const err = h("div", { class: "error", id: fid + "-error", role: "alert", hidden: true });
     const w = h("div", { class: "field" + (f.kind === "area" || wide.includes(f.target) ? " field--wide" : "") });
     const lab = h("label", { for: fid }, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null);
     const help = f.help ? h("p", { class: "form-note", id: fid + "-help" }, f.help) : null;
-    const set = (v) => { vals[f.target] = v; };
+    const groupHelp = f.kind === "checks" && f.required ? h("p", { class: "form-note", id: fid + "-required" }, "Required. Select at least one option.") : null;
+    const set = (v) => {
+      vals[f.target] = v;
+      if (nodes[f.target]?.[1].textContent) showError(f, fieldError(f, v));
+    };
     if (f.kind === "select") {
       const s = h("select", { id: fid, onchange: () => set(s.value) }, h("option", { value: "" }, f.ph || "Select one"), f.opts.map((o) => h("option", { value: o.v }, o.l)));
       w.append(lab, s);
     } else if (f.kind === "radio" || f.kind === "checks") {
-      const fs = h("fieldset", {}, h("legend", {}, f.label, f.required ? h("span", { class: "req" }, "*") : null));
+      const fs = h("fieldset", { role: f.kind === "radio" ? "radiogroup" : "group", "aria-labelledby": fid + "-legend" }, h("legend", { id: fid + "-legend" }, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null));
       f.opts.forEach((o, n) => {
         const inp = h("input", { type: f.kind === "radio" ? "radio" : "checkbox", name: fid, value: o.v, id: fid + n, onchange: () => set(f.kind === "radio" ? o.v : $$("input:checked", fs).map((x) => x.value)) });
         fs.append(h("label", { class: "choice", for: fid + n }, inp, o.l));
@@ -110,14 +131,32 @@ async function mountForm(host) {
       w.append(fs);
     } else if (f.kind === "check") {
       const inp = h("input", { type: "checkbox", id: fid, onchange: () => set(inp.checked) });
-      w.append(h("label", { class: "choice", for: fid }, inp, f.label));
+      w.append(h("label", { class: "choice", for: fid }, inp, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null));
     } else {
       const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, "aria-describedby": help?.id, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, autocomplete: f.autocomplete, oninput: () => set(el.value) });
       w.append(lab, el);
-      if (help) w.append(help);
+    }
+    if (help) w.append(help);
+    if (groupHelp) w.append(groupHelp);
+    const controls = $$("input,select,textarea", w);
+    const description = [help?.id, groupHelp?.id, err.id].filter(Boolean).join(" ");
+    for (const control of controls) {
+      control.setAttribute("aria-describedby", description);
+      control.setAttribute("aria-invalid", "false");
+      // A checkbox group requires at least one choice, not every checkbox.
+      if (f.required && f.kind !== "checks") {
+        control.setAttribute("required", "");
+        control.setAttribute("aria-required", "true");
+      }
+    }
+    const group = $("fieldset", w);
+    if (group) {
+      group.setAttribute("aria-describedby", description);
+      group.setAttribute("aria-invalid", "false");
+      if (f.required && f.kind === "radio") group.setAttribute("aria-required", "true");
     }
     w.append(err);
-    nodes[f.target] = [w, err];
+    nodes[f.target] = [w, err, controls, group];
     box.append(w);
   }
   const bad = h("div", { class: "form-status form-status--error", role: "alert", hidden: true });
@@ -133,13 +172,9 @@ async function mountForm(host) {
     let first = null;
     for (const f of fields) {
       if (f.hidden) continue;
-      const v = vals[f.target], [w, err] = nodes[f.target];
-      const empty = v == null || v === "" || (Array.isArray(v) && !v.length) || (f.kind === "check" && !v);
-      let m = "";
-      if (f.required && empty) m = "This field is required.";
-      else if (f.kind === "email" && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) m = "Enter an email address like name@example.com.";
-      w.classList.toggle("is-invalid", !!m);
-      err.textContent = m;
+      const [w] = nodes[f.target];
+      const m = fieldError(f, vals[f.target]);
+      showError(f, m);
       if (m && !first) first = w;
     }
     if (first) { $("input,select,textarea", first)?.focus(); return; }

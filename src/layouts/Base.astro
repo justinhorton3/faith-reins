@@ -7,12 +7,14 @@ import "../styles/shop-hero.css";
 import "../styles/shop-categories.css";
 import { header, footer } from "../lib/lib.mjs";
 import { isIndexableRoute } from "../lib/indexability.mjs";
-const { title, description, route = "/", jsonld, seo = {} } = Astro.props;
+import { heroSocialImage } from "../lib/social-image.mjs";
+const { title, description, body = "", route = "/", jsonld, seo = {} } = Astro.props;
 const SITE = "https://www.faithreins.com";
 const canonicalRoute = seo.canonicalRoute || route;
 const canonical = SITE + (canonicalRoute === "/" ? "" : canonicalRoute);
 const isProduct = jsonld?.["@type"] === "Product";
-const ogImage = seo.image || (isProduct ? jsonld.image[0] : SITE + "/assets/hero-home-desktop.webp");
+const heroImage = heroSocialImage(body);
+const ogImage = seo.image || (isProduct ? jsonld.image[0] : heroImage?.url || SITE + "/assets/hero-home-desktop.webp");
 const ogImageAlt = seo.imageAlt || (isProduct ? jsonld.name : "Faith Reins Equestrian Center in Camden, Arkansas");
 const ogTitle = title.replace(/ \| Faith Reins$/, "");
 
@@ -65,8 +67,8 @@ const GA_ID = route.startsWith('/account') ? '' : import.meta.env.PUBLIC_GA_ID |
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content={String(seo.imageWidth || (isProduct ? 1086 : 1200))} />
-    <meta property="og:image:height" content={String(seo.imageHeight || (isProduct ? 1448 : 800))} />
+    <meta property="og:image:width" content={String(seo.imageWidth || (isProduct ? 1086 : heroImage?.width || 1200))} />
+    <meta property="og:image:height" content={String(seo.imageHeight || (isProduct ? 1448 : heroImage?.height || 800))} />
     <meta property="og:image:alt" content={ogImageAlt} />
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />

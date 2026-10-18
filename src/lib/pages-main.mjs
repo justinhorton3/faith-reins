@@ -3,6 +3,7 @@ import { productShowcase, showcaseCard } from "./product-showcase.mjs";
 import { shopCategories, categoryPage, shopCategoryTiles } from "./shop-categories.mjs";
 import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
+import { legacyProductAlternatives } from "./legacy-product-alternatives.mjs";
 import { registerPersonaPages } from "./persona-pages.mjs";
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
@@ -228,7 +229,7 @@ add("/give", "Give", "Support families, horses and the Faith Reins mission with 
 const thanks = (title, lead, note, actions) => section(`<div class="thanks">${eyebrow("Thank you")}<h1>${title}</h1><p class="lead">${lead}</p><p>${note}</p><div class="btn-row">${actions}</div></div>`);
 add("/give/thank-you", "Thank You for Your Gift", "Your gift supports pediatric therapy and equine-assisted learning for children and families in South Arkansas.",
   thanks("Your gift is making a difference.", "Thank you for supporting Faith Reins. Your generosity helps children and families in South Arkansas reach the care they need — and helps us care for the horses that make it possible.",
-    `A receipt will arrive by email shortly. If you have questions about your gift, email ${MAIL}.`,
+    `A receipt will arrive by email shortly. If you have questions about your gift, email ${MAIL}. For an existing recurring gift, see <a href="/donation-policy#recurring-gifts">change or cancellation assistance</a>.`,
     btn("Stewardship & reporting", "/impact-and-stewardship") + tlink("Our mission", "/our-mission")));
 add("/shop/thank-you", "Order Received", "Thank you for your Faith Reins order.",
   thanks("Order received — thank you.", "Your Faith Reins order is confirmed. You'll receive an email confirmation shortly with your order details, and tracking information once your items ship.",
@@ -366,12 +367,10 @@ PRODUCTS.forEach((product) => {
 // Keep previously published product URLs useful without presenting unapproved
 // legacy placeholder renders as members of the approved V7 collection.
 LEGACY_PRODUCTS.filter(legacy => !PRODUCTS.some(product => product.slug === legacy.slug)).forEach(legacy => {
-  const suggested = legacy.slug === 'youth-polo' ? PRODUCTS.filter(p => ['boys-polo','girls-polo'].includes(p.slug))
-    : legacy.slug === 'childrens-hoodie' ? PRODUCTS.filter(p => ['boys-hoodie','girls-hoodie'].includes(p.slug))
-    : PRODUCTS.slice(0, 4);
+  const { category, suggestions } = legacyProductAlternatives(legacy.slug, PRODUCTS, shopCategories);
   add(`/shop/${legacy.slug}`, `${legacy.name} | Shop`, 'Explore the current Faith Reins collection.',
-    titleBand({ eyebrow: 'Out of stock', title: esc(legacy.name), body: 'This style is not currently available. Explore the current collection below.' }) +
-    section(`<div class="merch-grid">${suggested.map(showcaseCard).join('')}</div><p style="margin-top:32px"><a class="btn btn--secondary" href="/shop">Browse the collection</a></p>`));
+    titleBand({ eyebrow: 'Out of stock', title: esc(legacy.name), body: `This style is not currently available. Explore other styles in our ${esc(category.label)} collection.` }) +
+    section(`<div class="merch-grid">${suggestions.map(showcaseCard).join('')}</div><p style="margin-top:32px">${btn('Browse ' + category.label, category.route, 'outline')}</p>`), undefined, { noindex: true });
 });
 
 /* ---------- Legal hub ---------- */

@@ -1,6 +1,7 @@
 // Page registry consumed by src/pages/[...slug].astro. Design System v6.
 import { pages, add } from "./pages-main.mjs";
 import { section, sh, titleBand, ctaBand } from "./lib.mjs";
+import { RECURRING_GIFT_HELP } from "./giving-support.mjs";
 
 /* ---------- Policies ---------- */
 const legalContact = `<div class="card"><p><strong>Questions?</strong> Email <a href="mailto:info@faithreins.com">info@faithreins.com</a>, <a href="/contact">contact us online</a>, or visit us in Camden, Arkansas.</p></div>`;
@@ -64,8 +65,8 @@ add("/donation-policy", "Donation Policy", "Donation policy and stewardship comm
 <p>Faith Reins Equestrian Center is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code. Gifts to Faith Reins are tax-deductible to the extent permitted by law. Every gift is treated as a sacred responsibility and used faithfully to advance our mission.</p>
 <h2>How Gifts Are Used</h2>
 <p>Donations support direct care (therapy sessions, program materials, and family support), equine program costs (care, feed, veterinary services, and safety equipment), facility maintenance, scholarships for families who cannot afford the full cost of services, and organizational operations. Gifts designated for a specific purpose will be honored to the extent practicable; if a designated purpose becomes impractical or is fully funded, we will contact the donor to discuss an alternative.</p>
-<h2>Recurring Gifts</h2>
-<p>Monthly and recurring gifts may be established through our online giving portal. By authorizing a recurring gift, you consent to automatic charges at the selected interval. You may modify or cancel a recurring gift at any time by logging in to your donor account or by contacting us at least 5 business days before the next scheduled charge.</p>
+<h2 id="recurring-gifts">Recurring Gifts</h2>
+<p>Recurring gifts are available when the giving portal offers that option. By authorizing a recurring gift, you consent to automatic charges at the selected interval. ${RECURRING_GIFT_HELP} <a href="/contact#account-help">Get giving assistance</a> or email <a href="mailto:info@faithreins.com">info@faithreins.com</a>.</p>
 <h2>Refund Policy</h2>
 <p>Because donations directly fund ongoing program costs, we are generally unable to return completed gifts. We will issue a full refund within <strong>30 days</strong> for duplicate or erroneous transactions, unauthorized use of a payment method, or gifts made in an amount different from what was intended due to a technical error. To request a refund, contact us within 30 days of the transaction with your name, gift date, and amount. Refunds are processed to the original payment method within 5–10 business days.</p>
 <h2>In-Kind Donations</h2>

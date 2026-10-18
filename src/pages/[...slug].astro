@@ -7,4 +7,4 @@ export function getStaticPaths() {
 }
 const { title, description, body, route, jsonld, seo } = Astro.props;
 ---
-<Base title={title} description={description} route={route} jsonld={jsonld} seo={seo}><Fragment set:html={body} /></Base>
+<Base title={title} description={description} body={body} route={route} jsonld={jsonld} seo={seo}><Fragment set:html={body} /></Base>
