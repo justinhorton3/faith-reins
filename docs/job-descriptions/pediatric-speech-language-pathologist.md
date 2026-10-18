@@ -7,7 +7,7 @@ patient_population: Birth through age 18
 ---
 
 # Pediatric Speech-Language Pathologist
-**Clinical focus: Early intervention, pediatric communication, and infant feeding**
+**Clinical focus: Early intervention, pediatric communication, infant feeding, and oral motor skills**
 
 **Faith Reins · Camden, Arkansas**  
 **1099 Independent Contractor**  
@@ -17,7 +17,7 @@ patient_population: Birth through age 18
 
 Faith Reins brings therapy, counseling, family support, and purposeful equine experiences together to help children and families thrive. Rooted in faith, we are building a collaborative clinical program committed to exceptional care, meaningful progress, and respect for every family.
 
-We are seeking an experienced Pediatric Speech-Language Pathologist with a strong background in developmental communication, early intervention, and infant feeding.
+We are seeking an experienced Pediatric Speech-Language Pathologist with a strong background in developmental communication, early intervention, infant feeding, and pediatric oral motor assessment and intervention.
 
 ## The opportunity
 
@@ -36,10 +36,11 @@ The ideal clinician brings relevant pediatric experience, sound clinical judgmen
 - Demonstrated experience evaluating and treating articulation and phonological disorders, receptive and expressive language disorders, and developmental communication needs.
 - **Direct experience providing early intervention services to infants and toddlers**, including caregiver coaching and support for communication during everyday routines.
 - **Documented training and clinical experience in infant and pediatric feeding assessment and intervention.**
+- **Documented training and clinical experience in pediatric oral motor assessment and intervention relevant to feeding.**
 - Experience supporting communication in children with autism and other developmental disabilities.
 - Strong pediatric assessment, treatment planning, clinical documentation, and interdisciplinary collaboration skills.
 
-The five-year minimum applies to relevant pediatric clinical practice overall. Candidates must also demonstrate competence in the early intervention and infant feeding services they will provide.
+The five-year minimum applies to relevant pediatric clinical practice overall. Candidates must also demonstrate competence in the early intervention, infant feeding, and oral motor services they will provide.
 
 **Experience limited to adult rehabilitation, geriatric care, or adult feeding and swallowing treatment does not satisfy this role’s pediatric experience requirements.**
 
@@ -53,10 +54,12 @@ The five-year minimum applies to relevant pediatric clinical practice overall. C
 - Collaborate with other providers involved in the child’s developmental care.
 - Contribute to individualized family service plans when applicable to the service arrangement.
 
-### Infant and pediatric feeding
+### Infant feeding and pediatric oral motor assessment and intervention
 
 - Conduct developmentally appropriate feeding evaluations using relevant history, clinical observation, and caregiver input.
 - Assess infant oral feeding skills and pediatric feeding development within demonstrated competence.
+- Evaluate oral motor function relevant to feeding, including lip, tongue, and jaw function and coordination.
+- Provide individualized oral motor intervention using approaches such as **Beckman Oral Motor Assessment and Intervention** when supported by documented training, clinical findings, and functional feeding goals.
 - Provide individualized feeding intervention and caregiver education.
 - Support progression of feeding skills, including transitions to developmentally appropriate eating and drinking activities.
 - Identify concerns requiring additional medical evaluation or specialized swallowing assessment and coordinate appropriate referrals.
@@ -82,6 +85,7 @@ The five-year minimum applies to relevant pediatric clinical practice overall. C
 ## Preferred areas of expertise
 
 - Advanced continuing education in infant feeding and family-centered early intervention.
+- Completion of **Beckman Oral Motor Assessment and Intervention** training, or comparable documented pediatric oral motor assessment and intervention training.
 - Augmentative and alternative communication (**AAC**).
 - Childhood apraxia of speech and other pediatric motor speech disorders.
 - Pediatric fluency disorders, including stuttering.
@@ -106,5 +110,5 @@ Please provide:
 - A current resume highlighting relevant pediatric experience.
 - Arkansas license number and current CCC-SLP certification.
 - A brief summary of your recent pediatric caseload and primary treatment areas.
-- Details of your infant feeding and early intervention experience, including relevant training.
+- Details of your infant feeding, early intervention, and pediatric oral motor assessment and intervention experience, including Beckman or comparable training.
 - Your anticipated service availability.
