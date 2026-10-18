@@ -17,6 +17,8 @@ const APPT = ["Request a callback", "/book-online"];
 const TEL = `<a href="tel:${SITE.tel}">${SITE.phone}</a>`;
 const MAIL = `<a href="mailto:${SITE.email}">${SITE.email}</a>`;
 const heroImg = (key) => img(`hero-${key}-desktop`);
+const VISION = "A future where children and families thrive through exceptional care, meaningful connections with horses, and a foundation of faith.";
+const MISSION = "Guided by faith, Faith Reins expands access to exceptional therapy, counseling, and purposeful equine experiences that nurture physical, mental, and emotional well-being and strengthen children and families.";
 
 
 /* Services */
@@ -48,38 +50,38 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
   section(sh({ eyebrow: "What families say", title: "In their words", center: true }) + `<div class="quotes" data-cms="testimonials">${testimonialsBlock(fallback.testimonials)}</div>`, { tone: "sand" }) +
   splitFeature({ image: img("home-team"), alt: "The Faith Reins care team", eyebrow: "Our team", title: "Meet the people behind the care.", body: "A dedicated team of professionals, horse handlers and volunteers committed to brighter futures.", actions: tlink("Meet our team", "/our-team"), reverse: true }) +
   section(infoGrid([
-    { eyebrow: "Our mission", title: "Rooted in faith. Guided by care.", body: "Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.", link: ["Our mission", "/our-mission"], strong: true },
+    { eyebrow: "Our mission", title: "Rooted in faith. Guided by care.", body: MISSION, link: ["Our vision & mission", "/our-mission"], strong: true },
     { eyebrow: "Our partners", title: "Stronger together.", body: "Community partners help expand access and create opportunities for more families in South Arkansas.", link: ["Our partners", "/our-partners"], strong: true },
   ], { cols: 2 }), { pad: "tight" }) +
-  splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Stewardship", title: "Help make care possible.", body: "Your support helps bring therapeutic programs to children and families, and brings them closer to brighter futures. A monthly gift of $100 helps provide therapy sessions, program support and essential care.", actions: btn("Give monthly", "/give") + tlink("Sponsorships", "/sponsorships") }) +
+  splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Your part in this work", title: "Help make this care possible.", body: "Skilled therapy, family support and purposeful equine experiences belong within reach. The need for more care is here now. Your gift helps build services and support the horses and people behind them.", actions: btn("Make a gift", "/give") + tlink("Become a sponsor", "/sponsorships") }) +
   section(split(
     sh({ eyebrow: "Stay connected", title: "Updates from Faith Reins", body: "Get updates on programs, events and stories from Faith Reins delivered to your inbox. We respect your privacy." }),
     form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch." })), { tone: "paper" }));
 
 /* ---------- Mission ---------- */
-add("/our-mission", "Our Mission", "Faith Reins is rooted in faith and guided by care, helping children and families grow through care, connection and community.",
-  hero({ key: "our-mission", eyebrow: "Our Mission", title: "Rooted in faith. Guided by care.", lead: "Helping children and families grow through care, connection and community.", primary: ["Meet our team", "/our-team"], secondary: ["Explore services", "/services-programs"] }) +
-  section(sh({ eyebrow: "Why we exist", title: "Care, connection and community", body: "We serve children and families with clinical care, trusted relationships and the steady presence of horses.", center: true })) +
+add("/our-mission", "Our Mission", MISSION,
+  hero({ key: "our-mission", eyebrow: "Our Mission", title: "Rooted in faith. Guided by care.", lead: "Exceptional care, meaningful connections with horses, and faith in action for children and families.", primary: ["Support this work", "/give"], secondary: ["Explore services", "/services-programs"] }) +
+  section(split(
+    sh({ eyebrow: "Our vision", title: "The future we are working toward", body: VISION }),
+    sh({ eyebrow: "Our mission", title: "How we get there", body: MISSION }), { gap: 80 })) +
   photoBand({ image: img("pasture-hero"), pos: "50% 70%", alt: "The pasture at Faith Reins" }) +
-  section(infoGrid([
-    { eyebrow: "Our faith foundation", title: "A faith-rooted ministry of care", body: "Faith Reins is a faith-rooted ministry of care. Compassion guides how we welcome every child and family.", strong: true },
-    { eyebrow: "Our approach", title: "Every child is different", body: "Our team builds individualized plans with families and pairs clinical expertise with the calm, relational setting horses provide.", strong: true },
-  ], { cols: 2 })) +
-  section(sh({ eyebrow: "What guides us", title: "What guides our care" }) + infoGrid([
-    { title: "Faith-rooted compassion", body: "Every family is welcomed with dignity and care." },
-    { title: "Clinical excellence", body: "Individualized, evidence-based care from qualified professionals." },
-    { title: "Family partnership", body: "Families are part of the team and part of every plan." },
-    { title: "Safety", body: "Supervision and thoughtful routines in every setting." },
-    { title: "Stewardship", body: "Gifts are used with care for children, families and horses." },
+  section(sh({ eyebrow: "Our pillars", title: "What we commit to", body: "These commitments guide the care we provide, the experiences we create and the way we welcome every family." }) + infoGrid([
+    { title: "Exceptional care", body: "Provide skilled, coordinated services shaped by each person’s goals and delivered with compassion.", strong: true },
+    { title: "Purposeful equine experiences", body: "Carry forward the relationships with horses that founded Faith Reins through horsemanship, mentoring, and equine-assisted learning.", strong: true },
+    { title: "Faith in action", body: "Express our faith through service, dignity, and respect for everyone who comes through our doors.", strong: true },
   ], { cols: 3 }), { tone: "paper" }) +
-  splitFeature({ image: heroImg("our-horses"), alt: "Horses at Faith Reins", eyebrow: "Why horses", title: "Calm partners in learning.", body: "Horses offer a calm, relational environment where children can build confidence, trust and communication. Equine-assisted learning complements, and does not replace, clinical care.", actions: tlink("Our horses", "/our-horses") }) +
+  section(sh({ eyebrow: "Supporting commitments", title: "How we care for the whole work" }) + infoGrid([
+    { title: "Families as partners", body: "Listen to families and caregivers, work alongside them, and support progress that matters in daily life." },
+    { title: "Stewardship that lasts", body: "Care responsibly for our people, horses, facilities, and resources so this work can serve families for years to come." },
+  ], { cols: 2 })) +
+  splitFeature({ image: heroImg("our-horses"), alt: "Horses at Faith Reins", eyebrow: "Where it began", title: "A connection with horses opened the door.", body: "Faith Reins began with horsemanship and equine-assisted learning. Relationships with horses helped reveal needs that reach beyond the arena, including support for children and their families. Today, these supervised, nonclinical experiences stand alongside therapy and counseling provided by qualified professionals.", actions: tlink("Explore equine-assisted learning", "/equine-assisted-learning") }) +
   section(sh({ eyebrow: "Where to next", title: "Keep exploring", size: "sm" }) + infoGrid([
     { title: "Services & Programs", body: "Therapy, counseling and EAL.", link: ["Explore", "/services-programs"] },
     { title: "Our Team", body: "The people behind the care.", link: ["Meet the team", "/our-team"] },
     { title: "Our Horses", body: "Meet our equine partners.", link: ["Meet the horses", "/our-horses"] },
     { title: "Contact", body: "Questions? We are here.", link: ["Contact us", "/contact"] },
   ], { cols: 4 })) +
-  ctaBand({ title: "Be part of the mission", body: "Give, sponsor or volunteer.", primary: ["Support Faith Reins", "/give"], secondary: ["Join our team", "/join-our-team"] }));
+  ctaBand({ title: "Help make this care possible.", body: "Founding gifts and sponsorships help establish services, equip our team, support equine programming, and expand access. The need for more care is here now.", primary: ["Make a gift", "/give"], secondary: ["Become a sponsor", "/sponsorships"] }));
 
 /* ---------- Services hub ---------- */
 add("/services-programs", "Services & Programs", "Occupational therapy, physical therapy, speech-language therapy, counseling and equine-assisted learning in South Arkansas.",
@@ -200,11 +202,11 @@ add("/faq", "FAQ", "Common questions from families, referring providers and supp
   faqJsonLd);
 
 /* ---------- Give ---------- */
-add("/give", "Give", "Support families, horses and the Faith Reins mission with a one-time or monthly gift.",
-  hero({ key: "give", eyebrow: "Give", title: "Help make care possible.", lead: "Support families, horses and the Faith Reins mission.", primary: ["Give now", "#gift"], secondary: ["View impact", "/impact-and-stewardship"] }) +
+add("/give", "Give", "Help expand access to skilled therapy, family support and purposeful equine experiences at Faith Reins.",
+  hero({ key: "give", eyebrow: "Give", title: "Help make this care possible.", lead: "The need for more care is here now. Your gift helps bring skilled therapy, family support and purposeful equine experiences together.", primary: ["Make a gift", "#gift"], secondary: ["Become a sponsor", "/sponsorships"] }) +
   section(split(
     stack(
-      sh({ eyebrow: "Choose your gift", title: "Your gift brings care closer to home", body: "Your gift helps children and families reach care, and helps us care for our horses." }),
+      sh({ eyebrow: "Choose your gift", title: "Build care families can count on", body: "Founding gifts help establish services, equip our team, support equine programming and expand access. Your support also helps care for the horses and facilities that make this work possible." }),
       checks([["Children and families", "Care that families can reach."], ["Programs", "Therapy, counseling and EAL."], ["Horses", "Daily care for our equine partners."], ["The place", "A calm, safe setting to grow."]])),
     panel(`<div data-give data-campaign="${CAMPAIGN}"><noscript>Please enable JavaScript to give online, or call ${SITE.phone}.</noscript></div>`)), { id: "gift" }) +
   section(sh({ eyebrow: "More ways to give", title: "Other ways to give" }) + infoGrid([
@@ -226,9 +228,9 @@ add("/shop/thank-you", "Order Received", "Thank you for your Faith Reins order."
     btn("Back to shop", "/shop") + tlink("Back to home", "/")));
 
 /* ---------- Sponsorships ---------- */
-add("/sponsorships", "Sponsorships", "A partnership with purpose. Support people, horses and the places where connection grows.",
-  hero({ key: "sponsorships", eyebrow: "Sponsorships", title: "A partnership with purpose.", lead: "Support people, horses and the places where connection grows.", primary: ["Discuss sponsorship", "#inquiry"] }) +
-  section(sh({ eyebrow: "Why sponsor", title: "Where sponsors help", body: "Sponsors help us care for children, families and horses, and take part in the life of the community." }) + infoGrid([
+add("/sponsorships", "Sponsorships", "Become a Faith Reins sponsor and help expand access to care, support equine programs and sustain the place behind them.",
+  hero({ key: "sponsorships", eyebrow: "Sponsorships", title: "A partnership with purpose.", lead: "Help make exceptional care and purposeful equine experiences available to more children and families.", primary: ["Become a sponsor", "#inquiry"] }) +
+  section(sh({ eyebrow: "Why sponsor", title: "Where sponsors help", body: "Sponsorships help establish services, support family access, care for our horses and sustain the people and place behind this work. The need for more care is here now." }) + infoGrid([
     { title: "Sponsor a horse", body: "Monthly support of $500–$750 helps care for a horse.", strong: true },
     { title: "Programs and facilities", body: "Support the arena, facilities and operations.", strong: true },
     { title: "Family access", body: "Help more families reach care.", strong: true },
