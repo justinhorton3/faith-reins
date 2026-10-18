@@ -14,11 +14,7 @@ export const HORSES = [
 
 /* Team: [name, role, credentials, bio, avatar key] */
 export const TEAM = [
-  ["Donna Horton", "Founder, CEO & EAL Coordinator", "PATH Intl. Certified", "Donna founded Faith Reins out of a deep conviction that every child in South Arkansas deserves access to high-quality therapy and the unique healing that horses make possible. She leads our Equine-Assisted Learning program, designing experiences that help children build confidence, trust, and regulation alongside our horses. With a background in ministry and family services, she assembled the clinical team, secured the facility, and built the community partnerships that keep the mission moving forward.", "avatar-a"],
-  ["Sample Name", "Clinical Director", "O.T.D., OTR/L", "As a doctorally prepared occupational therapist, our Clinical Director brings deep expertise in pediatric sensory processing, fine motor development, and daily living skills alongside the administrative oversight that keeps our programs running well. They oversee therapy quality, clinical supervision, and individualized care planning across all services — and still carry a caseload, because they believe the best clinical leaders stay close to the work.", "avatar-b"],
-  ["Sample Name", "Speech-Language Pathologist", "M.S., CCC-SLP", "Our SLP works with children on articulation, language development, social communication, and feeding. They take time to understand each child's communication style before jumping to a plan — because how a child communicates is personal, and the goal is always real-world connection, not just test scores. They particularly enjoy watching nonverbal or minimally verbal children find new ways to make themselves understood.", "avatar-c"],
-  ["Sample Name", "Physical Therapist", "D.P.T.", "Our PT supports children with gross motor development, strength, balance, coordination, and mobility. They work closely with families to translate clinical progress into practical gains — whether that means climbing the playground structure, keeping up with a sibling, or simply feeling steady and confident in their own body. They bring a calm, encouraging energy to every session.", "avatar-a"],
-  ["Sample Name", "Licensed Professional Counselor", "M.S., LPC", "Our counselor provides a safe, steady space for children and teens to process big feelings, build coping skills, and work through challenges at home or school. Using age-appropriate, evidence-based approaches — including play therapy for younger children — they meet each child where they are. They also partner closely with parents, because lasting emotional growth happens at home too.", "avatar-b"],
+  ["Donna Horton", "Founder, CEO & EAL Coordinator", "PATH Intl. Certified", "Donna founded Faith Reins out of a deep conviction that every child in South Arkansas deserves access to high-quality therapy and the unique healing that horses make possible. She leads our Equine-Assisted Learning program, designing experiences that help children build confidence, trust, and regulation alongside our horses. With a background in ministry and family services, she assembled the clinical team, secured the facility, and built the community partnerships that keep the mission moving forward.", ""],
 ];
 
 /* Home page testimonials. */
@@ -68,7 +64,7 @@ export const FAQ_GROUPS = [
 
 /* Fallback copy in the item shape the block renderers take (src/lib/blocks.mjs). */
 export const fallback = {
-  team: TEAM.map(([name, role, credentials, bio, av]) => ({ name, role, credentials, bio, photo: img(av) })),
+  team: TEAM.map(([name, role, credentials, bio, av]) => ({ name, role, credentials, bio, photo: av ? img(av) : "" })),
   horses: HORSES.map((h) => ({ name: h.name, trait: h.eyebrow, bio: h.body, note: h.note || "", photo: img(h.key) })),
   testimonials: TESTIMONIALS.map((t) => ({ quote: t.quote, name: t.name, context: t.context || "" })),
   faq: FAQ_GROUPS.flatMap(([category, qs]) => qs.map(([question, answer]) => ({ category, question, answer }))),

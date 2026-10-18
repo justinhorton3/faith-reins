@@ -5,9 +5,17 @@ import { profile, profileGrid, testimonial, faqList, section, split, sh, eyebrow
 
 /* ---------- Team ---------- */
 const HIRING = `<div class="profile profile--hiring">${eyebrow("Now hiring")}<span class="profile__name">Speech-Language Pathologist</span><span class="profile__meta">M.S., CCC-SLP required</span><span class="profile__body">We are growing our SLP team to serve more children in South Arkansas. We are looking for a licensed, ASHA-certified clinician who wants to practice in a supportive, faith-rooted setting with a caseload focused on pediatrics. Competitive salary, collaborative team, and a barn out back.</span>${btn("Apply now", "/join-our-team", "accent", { size: "sm" })}</div>`;
-const AVATARS = ["avatar-a", "avatar-b", "avatar-c"];
+export const isPublishedTeamMember = p => {
+  const name = String(p.name || "").trim().replace(/\s+/g, " ");
+  return !!name && !/^(sample name|your name|first(?:name)? last(?:name)?|tbd|placeholder|coming soon)$/i.test(name);
+};
 export function teamBlock(items) {
-  const cards = items.map((p, i) => profile({ image: p.photo || img(AVATARS[i % 3]), alt: p.name, eyebrow: p.role, name: p.name, meta: p.credentials, body: p.bio }));
+  // The same filter runs at build time and after CMS hydration. Do not publish sample
+  // identities or turn an absent portrait into an illustrated clinician photograph.
+  const cards = items.filter(isPublishedTeamMember).map(p => {
+    const image = /(?:^|\/)avatar-[abc]\.(?:svg|png|webp)(?:[?#].*)?$/i.test(p.photo || "") ? "" : p.photo;
+    return profile({ image, alt: p.name, eyebrow: p.role, name: p.name, meta: p.credentials, body: p.bio });
+  });
   cards.splice(Math.min(3, cards.length), 0, HIRING);
   return profileGrid(cards, { cols: 3 });
 }

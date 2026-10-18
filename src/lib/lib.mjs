@@ -114,8 +114,8 @@ export const profileGrid = (cards, { cols = 4 } = {}) => `<div class="profiles p
 export const notice = (t) => `<div class="note">${eyebrow("Please note")}<p>${esc(t)}</p></div>`;
 export const reach = (label, valueHtml, { big = false } = {}) =>
   `<div class="reach">${eyebrow(label)}<span class="${big ? "reach__big" : "reach__val"}">${valueHtml}</span></div>`;
-export const form = (kind, { submit, success, layout = "", wide = "", btnKind = "" }) =>
-  `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="btn--${btnKind}"` : ""}><noscript>Please enable JavaScript to use this form, or call ${SITE.phone}.</noscript></div>`;
+export const form = (kind, { submit, success, layout = "", wide = "", btnKind = "", purpose = "" }) =>
+  `<div data-wix-form data-form-id="${FORMS[kind]}" data-submit="${esc(submit)}" data-success="${esc(success)}"${layout ? ` data-layout="${layout}"` : ""}${wide ? ` data-wide="${wide}"` : ""}${btnKind ? ` data-btn="btn--${btnKind}"` : ""}${purpose ? ` data-purpose="${esc(purpose)}"` : ""}><noscript>Please enable JavaScript to use this form, or call ${SITE.phone}.</noscript></div>`;
 
 /* ---------- Shell: approved persona sitemap ---------- */
 const bars = `<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>`;

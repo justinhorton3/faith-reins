@@ -1,4 +1,6 @@
 // Faith Reins browser script: shell, drawer, Wix forms, Wix donations. Plain ES module, no dependencies.
+import { GIFT_FREQUENCIES, givingOptions, giftTotals, giftCatalogOptions } from "../lib/giving.mjs";
+import { presentFormFields } from "../lib/form-presentation.mjs";
 const CLIENT = "d2d17c20-0426-4ff7-9bc8-4dd8b3a51e12";
 const API = "https://www.wixapis.com";
 const $ = (s, r = document) => r.querySelector(s);
@@ -83,6 +85,9 @@ async function mountForm(host) {
     load.textContent = "This form is unavailable right now. Please call or email us instead.";
     return;
   }
+  // This form is for callback logistics. Keep clinical intake out of its public prompt,
+  // including when an older label is returned by the managed Wix form schema.
+  fields = presentFormFields(fields, host.dataset.purpose);
   const vals = {}, nodes = {};
   const box = h("div", { class: "wix-form__fields" });
   for (const f of fields) {
@@ -90,6 +95,7 @@ async function mountForm(host) {
     const err = h("div", { class: "error", role: "alert" });
     const w = h("div", { class: "field" + (f.kind === "area" || wide.includes(f.target) ? " field--wide" : "") });
     const lab = h("label", { for: fid }, f.label, f.required ? h("span", { class: "req", "aria-hidden": "true" }, "*") : null);
+    const help = f.help ? h("p", { class: "form-note", id: fid + "-help" }, f.help) : null;
     const set = (v) => { vals[f.target] = v; };
     if (f.kind === "select") {
       const s = h("select", { id: fid, onchange: () => set(s.value) }, h("option", { value: "" }, f.ph || "Select one"), f.opts.map((o) => h("option", { value: o.v }, o.l)));
@@ -105,8 +111,9 @@ async function mountForm(host) {
       const inp = h("input", { type: "checkbox", id: fid, onchange: () => set(inp.checked) });
       w.append(h("label", { class: "choice", for: fid }, inp, f.label));
     } else {
-      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, oninput: () => set(el.value) });
+      const el = f.kind === "area" ? h("textarea", { id: fid, rows: 5, placeholder: f.ph, "aria-describedby": help?.id, oninput: () => set(el.value) }) : h("input", { id: fid, type: f.kind === "text" ? "text" : f.kind, placeholder: f.ph, oninput: () => set(el.value) });
       w.append(lab, el);
+      if (help) w.append(help);
     }
     w.append(err);
     nodes[f.target] = [w, err];
@@ -183,7 +190,7 @@ $$("[data-wix-form]").forEach(mountForm);
 }());
 
 /* Donations */
-const FREQ = { ONE_TIME: "One-time", WEEK: "Weekly", MONTH: "Monthly", YEAR: "Yearly" };
+const FREQ = GIFT_FREQUENCIES;
 const money = (n) => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
 async function mountGive(host) {
   const cid = host.dataset.campaign;
@@ -197,11 +204,11 @@ async function mountGive(host) {
     return;
   }
   const amt = (p) => Number((p && p.amount) || 0);
-  const presets = (c.predefinedDonationAmounts || []).map((p) => amt(p.price)).filter((n) => n > 0);
-  const freqs = (c.donationFrequencies || []).filter((f) => FREQ[f]);
-  if (!freqs.length) freqs.push("ONE_TIME");
+  const requested = new URLSearchParams(location.search).get("frequency");
+  const options = givingOptions(c, requested);
+  const presets = options.amounts, freqs = options.frequencies;
   const min = amt((c.customAmountOptions || {}).minimum) || 1;
-  const st = { freq: freqs[0], amount: presets[0] || null, custom: false, text: "", fee: !!c.askDonorCoverFee, note: "", busy: false };
+  const st = { freq: options.frequency, amount: presets[0] || null, custom: false, text: "", fee: false, note: "", busy: false };
   const value = () => (st.custom ? Number(st.text.replace(/[\s,$]/g, "")) || null : st.amount);
   const fb = h("div", { class: "seg", role: "group", "aria-label": "Gift frequency" });
   const ab = h("div", { class: "amounts", role: "group", "aria-label": "Gift amount" });
@@ -209,6 +216,7 @@ async function mountGive(host) {
   const ce = h("div", { class: "error", role: "alert" });
   const cf = h("div", { class: "field", hidden: true }, h("label", { for: "give-custom" }, "Other amount (USD)"), ci, ce);
   const fee = h("input", { type: "checkbox", id: "give-fee", onchange: () => { st.fee = fee.checked; draw(); } });
+  fee.checked = st.fee;
   const feeRow = c.askDonorCoverFee ? h("label", { class: "choice", for: "give-fee" }, fee, "Add the processing fee so more of my gift goes to care") : null;
   const note = h("textarea", { id: "give-note", rows: 2, maxlength: 100, placeholder: "Optional note", oninput: () => { st.note = note.value; } });
   const noteRow = c.commentsEnabled ? h("div", { class: "field" }, h("label", { for: "give-note" }, "Add a note (optional)"), note) : null;
@@ -218,8 +226,10 @@ async function mountGive(host) {
   const fbtns = freqs.map((f) => { const b = h("button", { type: "button", onclick: () => { st.freq = f; draw(); } }, FREQ[f]); fb.append(b); return [f, b]; });
   const pbtns = presets.map((n) => { const b = h("button", { type: "button", onclick: () => { st.amount = n; st.custom = false; draw(); } }, money(n)); ab.append(b); return [n, b]; });
   let cb = null;
-  if (c.customAmountEnabled) { cb = h("button", { type: "button", onclick: () => { st.custom = true; draw(); ci.focus(); } }, "Custom"); ab.append(cb); }
-  host.append(h("div", { class: "give-box" }, freqs.length > 1 ? fb : null, ab, cf, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
+  if (c.customAmountEnabled) { cb = h("button", { type: "button", onclick: () => { st.custom = true; draw(); ci.focus(); } }, "Other"); ab.append(cb); }
+  const unavailable = options.requestedUnavailable ? h("p", { class: "form-note", role: "status" },
+    "The requested gift frequency is not available online. ", h("a", { href: "/contact" }, "Contact us about recurring giving"), ". The options below show the available frequencies.") : null;
+  host.append(h("div", { class: "give-box" }, unavailable, freqs.length > 1 ? fb : h("p", { class: "form-note" }, FREQ[st.freq] + " gift"), ab, cf, feeRow, noteRow, tot, bad, go, h("p", { class: "form-note" }, "You will finish your gift on a secure Wix checkout page.")));
   function draw() {
     fbtns.forEach(([f, b]) => b.setAttribute("aria-pressed", st.freq === f));
     pbtns.forEach(([n, b]) => b.setAttribute("aria-pressed", !st.custom && st.amount === n));
@@ -227,10 +237,12 @@ async function mountGive(host) {
     cf.hidden = !st.custom;
     const v = value();
     ce.textContent = st.custom && st.text && (!v || v < min) ? "The minimum donation is " + money(min) + "." : "";
-    const f = v && st.fee ? Math.round(v * 2.9) / 100 : 0;
-    tot.textContent = f ? "Total with fee: " + money(Math.round((v + f) * 100) / 100) : "";
+    const quote = giftTotals(v, st.fee && c.askDonorCoverFee);
+    fee.checked = st.fee;
+    const period = { WEEK: " per week", MONTH: " per month", YEAR: " per year" }[st.freq] || "";
+    tot.textContent = quote.amount ? "Total" + period + ": " + money(quote.total) + (quote.fee ? " (includes " + money(quote.fee) + " optional processing fee)" : "") : "";
     go.disabled = st.busy;
-    go.textContent = st.busy ? "Opening checkout…" : v && v >= min ? "Donate " + money(v + f) + (st.freq === "ONE_TIME" ? "" : " " + FREQ[st.freq]) : "Continue to secure donation";
+    go.textContent = st.busy ? "Opening checkout…" : v && v >= min ? "Donate " + money(quote.total) + (st.freq === "ONE_TIME" ? "" : " " + FREQ[st.freq]) : "Continue to secure donation";
   }
   async function donate() {
     const v = value();
@@ -238,12 +250,11 @@ async function mountGive(host) {
     if (!v || v < min) { ce.textContent = "Enter an amount of " + money(min) + " or more."; return; }
     st.busy = true; draw();
     try {
-      const opt = { amount: v, frequency: st.freq };
-      if (st.fee && c.askDonorCoverFee) opt.donorCoveringFees = true;
+      const opt = giftCatalogOptions(v, st.freq, st.fee, c);
       const cart = await api("/ecom/v2/carts", "POST", { cart: { source: { channelType: "WEB" }, ...(st.note.trim() ? { note: st.note.trim() } : {}) }, catalogItems: [{ quantity: 1, catalogReference: { appId: "333b456e-dd48-4d6b-b32b-9fd48d74e163", catalogItemId: cid, options: opt } }] });
       const id = cart._id || cart.id || (cart.cart && (cart.cart._id || cart.cart.id));
       const s = await api("/headless/v1/redirect-session", "POST", { ecomCheckout: { checkoutId: id }, callbacks: { postFlowUrl: location.origin + "/give/", thankYouPageUrl: location.origin + "/give/thank-you/" } });
-      track("begin_checkout", { currency: "USD", value: value() + (st.fee ? Math.round(value() * 2.9) / 100 : 0), items: [{ item_id: cid, item_name: "Donation" }] });
+      track("begin_checkout", { currency: "USD", value: giftTotals(v, st.fee && c.askDonorCoverFee).total, items: [{ item_id: cid, item_name: "Donation" }] });
       location.href = s.redirectSession.fullUrl;
     } catch (e) {
       st.busy = false; draw();

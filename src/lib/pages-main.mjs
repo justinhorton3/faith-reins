@@ -51,7 +51,7 @@ add("/", "Pediatric Therapy & Equine-Assisted Learning in South Arkansas", "Fait
     { eyebrow: "Our mission", title: "Rooted in faith. Guided by care.", body: "Faith Reins Equestrian Center exists to provide pediatric therapy and equine-assisted learning services that inspire growth, healing and hope for children and families in South Arkansas.", link: ["Our mission", "/our-mission"], strong: true },
     { eyebrow: "Our partners", title: "Stronger together.", body: "Community partners help expand access and create opportunities for more families in South Arkansas.", link: ["Our partners", "/our-partners"], strong: true },
   ], { cols: 2 }), { pad: "tight" }) +
-  splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Stewardship", title: "Help make care possible.", body: "Your support helps bring therapeutic programs to children and families, and brings them closer to brighter futures. A monthly gift of $100 helps provide therapy sessions, program support and essential care.", actions: btn("Give monthly", "/give") + tlink("Sponsorships", "/sponsorships") }) +
+  splitFeature({ variant: "bleed", bg: "white", image: heroImg("give"), eyebrow: "Stewardship", title: "Help make care possible.", body: "Your support helps bring therapeutic programs to children and families, and brings them closer to brighter futures. A monthly gift of $100 helps provide therapy sessions, program support and essential care.", actions: btn("Give monthly", "/give?frequency=MONTH#gift") + tlink("Sponsorships", "/sponsorships") }) +
   section(split(
     sh({ eyebrow: "Stay connected", title: "Updates from Faith Reins", body: "Get updates on programs, events and stories from Faith Reins delivered to your inbox. We respect your privacy." }),
     form("contact", { submit: "Subscribe", success: "Thank you — we will be in touch." })), { tone: "paper" }));
@@ -156,7 +156,7 @@ add("/for-families", "For Families", "A guide to getting started, your first vis
 add("/book-online", "Request a Callback", "Request a callback from Faith Reins about services, availability and next steps.",
   hero({ key: "book-online", eyebrow: "Request a callback", title: "Let's find your next step.", lead: "Leave your contact information. Our team will follow up about availability and getting started." }) +
   section(notice("Use this public form for callback details only. Do not include diagnoses, treatment information, medical records or urgent concerns. For urgent help, contact the appropriate emergency service."), { pad: "tight" }) +
-  section(split(panel(form("appointment", { submit: "Request a callback", success: "Thank you. Our team will contact you about your next steps.", layout: "two" })),
+  section(split(panel(form("appointment", { submit: "Request a callback", success: "Thank you. Our team will contact you about your next steps.", layout: "two", purpose: "callback" })),
     stack(sh({ eyebrow: "What happens next", title: "A conversation comes first", size: "sm", body: "This is a callback request. Our team will confirm availability and the requirements for care before scheduling." }),
       steps([["We review your request", "A team member reads your callback details."], ["We contact you", "Using your preferred contact method."], ["We discuss next steps", "Including referrals, coverage and scheduling."]]), reach("Prefer to call?", TEL, { big: true })), { cols: "1.4fr 1fr" })));
 
