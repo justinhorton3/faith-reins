@@ -45,7 +45,7 @@ assert.ok(topNav.includes('data-mobile-group'), 'Mobile Shop group missing');
 for (const c of CATEGORIES) {
   assert.ok(shopPage.body.includes('class="shop-category-tile" href="'+c.route+'"'), 'Missing tile '+c.key);
   assert.ok(topNav.includes('class="mega-card" href="'+c.route+'"'), 'Missing desktop menu '+c.key);
-  assert.ok(topNav.includes('<a href="'+c.route+'"'), 'Missing mobile menu '+c.key);
+  assert.ok(topNav.includes('class="drawer-card" href="'+c.route+'"'), 'Missing mobile menu '+c.key);
 }
 const shopBuilt=path.join(root,'dist/shop.html');
 if (fs.existsSync(shopBuilt)) {
