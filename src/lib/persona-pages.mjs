@@ -3,8 +3,8 @@ import { NAVIGATION, POLICY_LINKS } from './navigation.mjs';
 import { registerAccountPages } from './account/pages.mjs';
 
 export function registerPersonaPages(add) {
-  add('/get-involved', 'Get Involved', 'Explore giving, sponsorships, volunteering and careers at Faith Reins in South Arkansas.',
-    titleBand({ eyebrow: 'Get involved', title: 'Your part. A shared purpose.', body: 'Give your time, share your gifts or support care and connection for children and families.' }) +
+  add('/get-involved', 'Get Involved', 'Help expand access to exceptional care and purposeful equine experiences through giving, sponsorship and service.',
+    titleBand({ eyebrow: 'Get involved', title: 'Your part. A shared purpose.', body: 'Faith Reins is bringing skilled therapy, family support and purposeful equine experiences together. The need for more care is here now.' }) +
     section(sh({ eyebrow: 'Start with the mission', title: 'Understand the purpose behind your support.', body: 'Get to know Faith Reins, meet the people behind the work and explore our approach to stewardship before choosing how to get involved.' }) + infoGrid([
       { title: 'Our mission', body: 'The purpose and values that guide Faith Reins.', link: ['Read our mission', '/our-mission'] },
       { title: 'Our team', body: 'Meet our leadership and care team.', link: ['Meet the team', '/our-team'] },
@@ -16,7 +16,7 @@ export function registerPersonaPages(add) {
       { title: 'Volunteer', body: 'Learn about roles, expectations, training and how to express interest.', link: ['Volunteer with us', '/volunteer'] },
       { title: 'Build a career here', body: 'Explore opportunities to bring your professional skills to Faith Reins.', link: ['Explore careers', '/join-our-team'] },
     ], { cols: 2 }), { tone: 'paper' }) +
-    ctaBand({ title: 'Already part of our community?', body: 'Find account access or get help with an existing gift or purchase.', primary: ['My account', '/account'], secondary: ['Contact us', '/contact'] }));
+    ctaBand({ title: 'Help make this care possible.', body: 'Make a gift or become a sponsor and help build a place families can count on.', primary: ['Make a gift', '/give'], secondary: ['Become a sponsor', '/sponsorships'] }));
 
   add('/volunteer', 'Volunteer With Us', 'Explore volunteer opportunities, expectations and getting started at Faith Reins in Camden, Arkansas.',
     titleBand({ eyebrow: 'Volunteer with us', title: 'Bring your time. Share your purpose.', body: 'There are many ways to support our children, families and equine partners. Start by finding out where your interests can help.' }) +
