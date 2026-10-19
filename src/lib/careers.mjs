@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { esc, SITE } from './lib.mjs';
 
 const definitions = [
@@ -41,7 +42,8 @@ function renderDescription(source) {
 }
 
 export const jobs = definitions.map(job => {
-  const source = readFileSync(new URL(`../../docs/job-descriptions/${job.slug}.md`, import.meta.url), 'utf8');
+  // Wix bundles this module into dist before prerendering; resolve from the build root.
+  const source = readFileSync(resolve(process.cwd(), 'docs/job-descriptions', `${job.slug}.md`), 'utf8');
   const intro = /## About Faith Reins\s+([^\n]+)/.exec(source)?.[1];
   if (!intro) throw new Error(`Missing company introduction: ${job.slug}`);
   return { ...job, route: `/join-our-team/${job.slug}`, intro, ...renderDescription(source) };
