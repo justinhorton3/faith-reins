@@ -688,3 +688,6 @@ body.cart-open { overflow: hidden; }
 
 /* Preserve the existing utility links on the narrowest phones. */
 @media (max-width:359px) { .utility__links { gap:8px; } }
+
+/* Use vector link arrows on every platform, including iOS. */
+.link-arrow { display: inline-block; flex: none; width: 1.15em; height: 1.15em; vertical-align: -.18em; }

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { parseHTML } from 'linkedom';
 import vm from 'node:vm';
 import { jobs } from '../src/lib/careers.mjs';
@@ -48,6 +48,12 @@ for (const job of jobs) test(`${job.title}: complete description, accurate terms
     assert.equal(url.pathname, 'info@faithreins.com');
     assert.equal(url.searchParams.get('subject'), `Application: ${job.title}`);
   }
+  for (const link of document.querySelectorAll('.job-page .btn')) {
+    const destination = new URL(link.getAttribute('href'), 'https://www.faithreins.com');
+    assert.equal(destination.pathname.replace(/\.html$/, ''), '/join-our-team/apply');
+    assert.equal(destination.searchParams.get('role'), job.slug);
+  }
+  assert.doesNotMatch(document.querySelector('main').textContent, /↗/);
   if (job.category === 'contract') {
     assert.match(document.querySelector('.job-heading').textContent, /1099 Independent Contractor/);
     assert.doesNotMatch(body, /competitive salary|full-time salaried/i);
@@ -75,5 +81,31 @@ test('accessible role filters update visible results and return to all roles', (
     assert.equal(button.getAttribute('aria-pressed'), 'true');
     assert.equal(document.querySelectorAll('[data-career-filter][aria-pressed="true"]').length, 1);
     assert.equal(document.querySelector('[data-career-count]').textContent, `${expected} ${expected === 1 ? 'opportunity' : 'opportunities'}`);
+  }
+});
+
+test('application page has an accessible short upload form and all four role choices', () => {
+  const { document } = page('/join-our-team/apply');
+  assert.equal(document.querySelectorAll('main h1').length, 1);
+  assert.ok(document.querySelector('meta[name="robots"]').getAttribute('content').includes('noindex'));
+  const form = document.querySelector('[data-career-application]');
+  assert.equal(form.getAttribute('enctype'), 'multipart/form-data');
+  const file = form.querySelector('input[type="file"]');
+  assert.equal(file.getAttribute('name'), 'resume');
+  assert.ok(file.hasAttribute('required'));
+  assert.match(file.getAttribute('accept'), /\.pdf/);
+  assert.match(file.getAttribute('accept'), /\.docx/);
+  const options = [...form.querySelectorAll('select[name="role"] option[data-slug]')];
+  assert.deepEqual(options.map(option => option.getAttribute('data-slug')), jobs.map(job => job.slug));
+  assert.ok(form.querySelector('[data-application-submit]').hasAttribute('disabled'));
+  assert.ok(document.querySelector('[data-application-success]').hidden);
+  assert.doesNotMatch(document.querySelector('main').textContent, /↗/);
+});
+
+test('all built pages use vector links without emoji arrow characters', () => {
+  const root = new URL('../dist/', import.meta.url);
+  for (const name of readdirSync(root, { recursive: true }).filter(name => name.endsWith('.html'))) {
+    const html = readFileSync(new URL(name, root), 'utf8');
+    assert.doesNotMatch(html, /↗|&#(?:x2197|8599);/i, name);
   }
 });

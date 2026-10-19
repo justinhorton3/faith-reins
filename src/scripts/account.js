@@ -1,3 +1,4 @@
+import { linkArrow } from "../lib/icons.mjs";
 // Account data stays in this page's memory. Wix manages the HttpOnly member session.
 const host = document.querySelector('[data-account]');
 if (host) {
@@ -121,7 +122,7 @@ if (host) {
     const shortcuts = h('div', { class: 'account-shortcuts' });
     const descriptions = ['Purchase history and order details.', 'Contribution history and available receipts.', 'Recorded payments and giving assistance.', 'Your name and contact phone.'];
     const links = [...host.querySelectorAll('nav a')].slice(1);
-    links.forEach((anchor, i) => shortcuts.append(h('a', { href: anchor.getAttribute('href'), class: 'account-shortcut' }, h('h3', {}, anchor.childNodes[0].textContent), h('p', {}, descriptions[i]), h('span', { 'aria-hidden': 'true' }, '↗'))));
+    links.forEach((anchor, i) => shortcuts.append(h('a', { href: anchor.getAttribute('href'), class: 'account-shortcut' }, h('h3', {}, anchor.childNodes[0].textContent), h('p', {}, descriptions[i]), (() => { const icon = document.createElement('span'); icon.innerHTML = linkArrow; return icon; })())));
     content.append(shortcuts, h('h2', {}, 'Recent activity'));
     const recent = h('div', {}); content.append(recent); loadHistory('all', recent, token, true);
   }

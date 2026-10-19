@@ -59,7 +59,7 @@ jobs:
           node scripts/verify-account-artifacts.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs
-          node --test tests/careers-validation.mjs
+          node --test tests/careers-validation.mjs tests/career-application-handler.test.mjs tests/career-resume-validation.test.mjs
       - name: Upload a preview without releasing production
         run: |
           set -o pipefail
@@ -90,7 +90,7 @@ jobs:
                     throw new Error(`Preview asset failed: ${path} (${asset.status}).`);
                   }
                 }
-                for (const path of ['/get-involved.html', '/volunteer.html', '/account.html', '/for-families.html', '/for-referring-providers.html', '/shop/hats.html', '/join-our-team.html', '/join-our-team/clinical-director.html']) {
+                for (const path of ['/get-involved.html', '/volunteer.html', '/account.html', '/for-families.html', '/for-referring-providers.html', '/shop/hats.html', '/join-our-team.html', '/join-our-team/clinical-director.html', '/join-our-team/apply.html']) {
                   const page = await fetch(new URL(path, base), { signal: AbortSignal.timeout(30000) });
                   const content = await page.text();
                   if (!page.ok || !content.includes('data-mega-menu="involved"') || !content.includes('My Account')) {
