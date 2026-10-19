@@ -29,7 +29,7 @@ const PAGES = [
   ["/hipaa-notice", "HIPAA Notice of Privacy Practices"],
   ["/terms-of-service", "Terms of Service"],
   ["/privacy-policy", "Privacy Policy"],
-  ["/join-our-team", "Join Our Team"],
+  ["/join-our-team", "Bring your expertise"],
   ["/our-partners", "Our Partners"],
 ];
 

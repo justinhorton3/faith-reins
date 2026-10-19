@@ -4,6 +4,7 @@ import { shopCategories, categoryPage, shopCategoryTiles } from "./shop-categori
 import { shopHero, merchCorner } from "./shop-hero.mjs";
 import LEGACY_PRODUCTS from "./legacy-product-routes.json" with { type: "json" };
 import { registerPersonaPages } from "./persona-pages.mjs";
+import { registerCareerPages } from "./careers.mjs";
 // Main site pages in Design System v6 layouts. Copy, contact details, forms and shop data are the site's own.
 import * as L from "./lib.mjs";
 const { hero, section, split, stack, panel, sh, therapyIndex, tiles, splitFeature, steps, checks, infoGrid, testimonial, faqList, ctaBand, photoBand, profile, profileGrid, notice, reach, form, btn, tlink, eyebrow, img, esc, titleBand, SITE, CAMPAIGN } = L;
@@ -281,24 +282,8 @@ add("/our-horses", "Our Horses", "Meet the equine partners at Faith Reins: big p
     `<div data-cms="horses">${horsesBlock(fallback.horses)}</div>`) +
   ctaBand({ title: "Learn through connection", body: "Equine-assisted learning offers supervised, ground-based experiences with our herd.", primary: ["Equine-assisted learning", "/equine-assisted-learning"], secondary: ["Services & programs", "/services-programs"] }));
 
-/* ---------- Join ---------- */
-add("/join-our-team", "Join Our Team", "Career and volunteer opportunities at Faith Reins Equestrian Center in Camden, Arkansas.",
-  hero({ key: "join-our-team", eyebrow: "Join Our Team", title: "Bring your purpose to Faith Reins.", lead: "Build a career around meaningful work in a faith-rooted, team-driven setting in South Arkansas.", primary: ["See open positions", "#openings"], secondary: ["Volunteer with us", "/volunteer"] }) +
-  section(sh({ eyebrow: "Why Faith Reins", title: "Why work here" }) + infoGrid([
-    { title: "Mission-driven work", body: "Every session, every shift, every day — the work is real and the impact is visible." },
-    { title: "A setting like no other", body: "A clinic, an arena, and a herd. There is no other place quite like this to practice pediatric care." },
-    { title: "A team that shows up", body: "Small enough to know each other, experienced enough to make each other better." },
-    { title: "Faith-rooted culture", body: "Compassion guides how we treat each other and the families we serve." },
-  ], { cols: 4 })) +
-  section(sh({ eyebrow: "Open positions", title: "Current openings" }) + split(
-    `<div class="stack" style="gap:18px">${eyebrow("Full-time · Camden, AR · Salary negotiable")}<h3 class="sh__title" style="font-family:var(--font-serif);font-size:34px;line-height:1.12">Speech-Language Pathologist</h3>${btn("Apply", "/contact", "accent")}</div>`,
-    `<div class="prose"><p>We are looking for a licensed, ASHA-certified SLP to join our clinical team. You will work primarily with pediatric clients on articulation, language development, social communication, and feeding, within a collaborative, faith-rooted environment that includes equine-assisted learning alongside traditional clinic-based care.</p>
-<h4>What we are looking for</h4><ul><li>M.S. in Speech-Language Pathology</li><li>Arkansas state licensure (or eligible)</li><li>ASHA Certificate of Clinical Competence (CCC-SLP)</li><li>Experience with pediatric populations preferred</li><li>Collaborative mindset and comfort working in a mission-driven, faith-rooted setting</li></ul>
-<h4>What we offer</h4><ul><li>Full-time position with competitive salary negotiated based on experience</li><li>A small, supportive clinical team with strong peer collaboration</li><li>Exposure to equine-assisted learning as a complement to traditional therapy</li><li>A calm, relationship-centered work environment in South Arkansas</li><li>The chance to build something — we are a growing practice with real community need</li></ul>
-<p class="muted">To apply, send a cover letter and résumé through our contact form or directly to ${MAIL}.</p></div>`, { cols: "320px 1fr", gap: 64 }) +
-    `<p class="muted">More openings will be posted here as they become available. We also welcome general expressions of interest from OTs, PTs, and counselors.</p>`, { tone: "paper", id: "openings" }) +
-  section(sh({ eyebrow: "Volunteer", title: "Looking to volunteer?", body: "Explore roles, expectations and getting started in our dedicated volunteer guide." }) + btn("Volunteer with us", "/volunteer"), { id: "volunteer" }) +
-  ctaBand({ tone: "sand", title: "Get to know us", body: "Meet the people behind the care and the mission that guides us.", primary: ["Meet the team", "/our-team"], secondary: ["Our mission", "/our-mission"] }));
+/* ---------- Careers ---------- */
+registerCareerPages(add);
 
 /* ---------- Contact ---------- */
 add("/contact", "Contact", "Connect with Faith Reins about services, giving or getting involved.",
