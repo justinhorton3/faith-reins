@@ -15,7 +15,7 @@ patient_population: Birth through age 18
 
 ## About Faith Reins
 
-Faith Reins brings therapy, counseling, family support, and purposeful equine experiences together to help children and families thrive. Rooted in faith, we are building a collaborative clinical program committed to exceptional care, meaningful progress, and respect for every family.
+Faith Reins brings pediatric therapy, counseling, family support, and purposeful equine experiences together to help children and families thrive. Guided by faith, our mission is to expand access to exceptional care that nurtures physical, mental, and emotional well-being. Our pediatric programs serve children from birth through age 18, with families involved as partners in care.
 
 We are seeking an experienced Pediatric Occupational Therapist with demonstrated expertise in handwriting development, sensory processing, pediatric feeding and oral motor skills, fine motor and visual motor skills, and functional independence.
 
