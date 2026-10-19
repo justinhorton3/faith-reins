@@ -16,6 +16,7 @@
     "@wix/astro-wix-hosting-adapter": "2.0.5",
     "@wix/ecom": "1.0.2454",
     "@wix/essentials": "1.0.15",
+    "@wix/forms": "1.0.533",
     "@wix/get-paid": "1.0.635",
     "@wix/members": "1.0.511",
     "astro": "^5.0.0",

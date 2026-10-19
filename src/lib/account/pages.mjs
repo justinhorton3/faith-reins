@@ -1,3 +1,4 @@
+import { linkArrow } from "../icons.mjs";
 import { titleBand, section, sh, infoGrid } from '../lib.mjs';
 
 export const ACCOUNT_PAGES = [
@@ -12,7 +13,7 @@ export function registerAccountPages(add) {
   for (const page of ACCOUNT_PAGES) {
     const returnTo = page.route === '/account/order' ? '/account.html' : page.route + '.html';
     const login = '/api/auth/login?returnToUrl=' + encodeURIComponent(returnTo);
-    const nav = ACCOUNT_PAGES.filter(p => p.view !== 'order').map(p => `<a href="${p.route}"${page.route === p.route ? ' aria-current="page"' : ''}>${p.label}<span aria-hidden="true">↗</span></a>`).join('');
+    const nav = ACCOUNT_PAGES.filter(p => p.view !== 'order').map(p => `<a href="${p.route}"${page.route === p.route ? ' aria-current="page"' : ''}>${p.label}${linkArrow}</a>`).join('');
     const body = titleBand({ eyebrow: 'My Account', title: page.heading, body: page.lead }) + section(`
       <div class="account-app" data-account data-account-view="${page.view}" data-account-order-route="/account/order">
         <div class="account-state" data-account-loading role="status"><span class="eyebrow">A moment, just for you</span><p>Loading your account…</p><div class="account-skeleton" aria-hidden="true"></div></div>

@@ -66,7 +66,7 @@ jobs:
           python scripts/wix-postbuild.py
           node scripts/verify-account-artifacts.mjs
           node scripts/verify-seo-artifacts.mjs
-          node --test tests/careers-validation.mjs
+          node --test tests/careers-validation.mjs tests/career-application-handler.test.mjs tests/career-resume-validation.test.mjs
       - name: Verify shop category pages, approved hero assets and host-compatible routes
         run: |
           node scripts/verify-shop-category-routes.mjs

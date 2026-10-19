@@ -158,3 +158,28 @@
   .job-description > h2, .job-description h3 { break-after: avoid; }
   .job-description li { break-inside: avoid; }
 }
+
+.application-layout { display:grid; grid-template-columns: .75fr 1.25fr; gap:90px; padding-block:65px 85px; align-items:start; }
+.application-intro h2, .application-success h2 { font:400 36px/1.15 var(--font-display); margin:20px 0; }
+.application-intro p { color:var(--fr-muted); margin-bottom:22px; line-height:1.65; }
+.application-intro a { font-size:14px; }
+.application-fields { border:0; padding:0; margin:0; min-width:0; }
+.application-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.application-grid .field--wide { grid-column:1/-1; }
+.application-required, .application-optional, .field-hint, .application-footer-note { color:var(--fr-muted); font-size:13px; line-height:1.6; }
+.application-required { margin-bottom:24px; }
+.application-grid input[type=file] { padding:20px; border:1px dashed var(--fr-field-border); min-height:95px; width:100%; }
+.application-grid input[type=file]::file-selector-button { font:600 12px var(--font-sans); padding:12px; margin-right:14px; border:1px solid var(--fr-green); background:var(--fr-green); color:var(--fr-cream); cursor:pointer; }
+.application-grid .field-hint { margin-top:8px; }
+.application-panel .btn { margin-top:28px; }
+.application-panel .btn .link-arrow { margin-left:16px; }
+.application-footer-note { margin-top:20px; }
+.application-panel [data-application-progress], .application-panel [data-application-error] { margin-top:24px; }
+.application-success { padding:35px; border:1px solid var(--fr-line); background:var(--fr-paper); }
+.application-success:focus { outline:2px solid var(--fr-green); outline-offset:5px; }
+@media(max-width:1023px) { .application-layout { gap:40px; grid-template-columns:.8fr 1.2fr; } }
+@media(max-width:767px) { .application-layout { grid-template-columns:1fr; gap:30px; padding-block:35px 50px; } .application-grid { grid-template-columns:1fr; gap:20px; } .application-intro h2 { font-size:32px; } .application-grid input[type=file] { padding:12px; font-size:12px; } }
+
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+
+.application-trap { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }

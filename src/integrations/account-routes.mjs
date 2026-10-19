@@ -4,6 +4,7 @@ export default function accountRoutes() {
     name: 'faith-reins-account-routes',
     hooks: {
       'astro:config:setup': ({ injectRoute }) => {
+        injectRoute({ pattern: '/api/careers/applications', entrypoint: './src/server/career-application-route.ts', prerender: false });
         injectRoute({ pattern: '/api/account/[...action]', entrypoint: './src/server/account-route.ts', prerender: false });
       },
     },

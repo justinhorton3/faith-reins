@@ -61,7 +61,7 @@
 .pdp-color-cards img { width:100%; height:auto; aspect-ratio:3/4; object-fit:contain; }
 .pdp-color-cards span { display:block; padding:15px 22px 0 0; font:400 20px var(--font-serif); }
 .pdp-color-cards small { display:block; margin-top:8px; font:400 11px var(--font-sans); color:var(--fr-muted); }
-.pdp-color-cards b { position:absolute; right:0; bottom:25px; font-weight:400; }
+.pdp-color-cards button > .link-arrow { position:absolute; right:0; bottom:25px; font-weight:400; }
 .pdp-dialog { background:var(--fr-paper); color:var(--fr-ink); border:1px solid var(--fr-line); padding:28px; width:calc(100% - 32px); max-width:700px; max-height:85dvh; overflow:auto; }
 .pdp-dialog::backdrop { background:rgba(14,32,25,.65); }
 .pdp-dialog-heading { display:flex; gap:20px; justify-content:space-between; align-items:center; margin-bottom:22px; }
@@ -95,7 +95,7 @@
   .pdp-color-cards { gap:12px; }
   .pdp-color-cards span { font-size:15px; padding-right:0; }
   .pdp-color-cards small { font-size:10px; line-height:1.5; }
-  .pdp-color-cards b { display:none; }
+  .pdp-color-cards button > .link-arrow { display:none; }
   .pdp-gallery-bar { gap:12px; }
   .pdp-gallery-bar > p { font-size:14px; }
   .pdp-thumbs img { width:39px; height:52px; }

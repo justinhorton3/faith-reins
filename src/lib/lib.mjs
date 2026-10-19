@@ -1,3 +1,4 @@
+import { linkArrow } from "./icons.mjs";
 // Faith Reins v6 components for the static build. Markup only; styles live in src/styles/global.css.
 // Follows brand/FaithReins_DesignSystem_v6 (tokens, components, ui_kits/website).
 import media from "./media.json" with { type: "json" };
@@ -34,7 +35,7 @@ const attr = (k, v) => (v == null || v === false ? "" : ` ${k}="${esc(v)}"`);
 export const btn = (label, href, kind = "", { size, block } = {}) =>
   `<a class="${cx("btn", kind && "btn--" + kind, size === "sm" && "btn--sm", block && "btn--block")}" href="${href}">${esc(label)}</a>`;
 export const tlink = (label, href, { inv = false, arrow = false, cls = "" } = {}) =>
-  `<a class="${cx("tlink", inv && "tlink--inv", cls)}" href="${href}">${esc(label)}${arrow ? '<span aria-hidden="true">→</span>' : ""}</a>`;
+  `<a class="${cx("tlink", inv && "tlink--inv", cls)}" href="${href}">${esc(label)}${arrow ? linkArrow : ""}</a>`;
 export const eyebrow = (text, { inv = false, rule = false } = {}) =>
   `<span class="${cx("eyebrow", inv && "eyebrow--inv", rule && "eyebrow--rule")}">${esc(text)}</span>`;
 
@@ -124,8 +125,8 @@ function megaMenu(group, route) {
   return `<details class="mega-nav-item${matchesNavigation(route, group) ? ' is-current' : ''}" data-mega-menu="${group.id}" name="primary-mega-menu">
 <summary class="nav-link" id="nav-${group.id}" aria-controls="mega-${group.id}">${esc(group.label)}<span class="mega-toggle" aria-hidden="true"></span></summary>
 <section class="mega-panel" id="mega-${group.id}" aria-labelledby="nav-${group.id}"><div class="mega-panel__in">
-<div class="mega-panel__top">${eyebrow(group.eyebrow)}<div class="mega-panel__tools"><a class="mega-panel__overview" href="${group.href}">${esc(group.overview)} <span aria-hidden="true">↗</span></a><button class="mega-close" type="button" data-mega-close aria-label="Close ${esc(group.label)} menu">Close <span aria-hidden="true">×</span></button></div></div>
-<div class="mega-grid">${group.links.map(link => `<a class="mega-card" href="${link.href}"${currentLink(route, link.href)}><img class="mega-card__image" src="${link.image}" alt="" width="90" height="76" loading="lazy"><span class="mega-card__copy">${link.group ? `<span class="mega-card__group">${esc(link.group)}</span>` : ''}<span class="mega-card__title">${esc(link.label)} <span class="mega-card__arrow" aria-hidden="true">↗</span></span><span class="mega-card__description">${esc(link.description)}</span></span></a>`).join('')}</div>
+<div class="mega-panel__top">${eyebrow(group.eyebrow)}<div class="mega-panel__tools"><a class="mega-panel__overview" href="${group.href}">${esc(group.overview)} ${linkArrow}</a><button class="mega-close" type="button" data-mega-close aria-label="Close ${esc(group.label)} menu">Close <span aria-hidden="true">×</span></button></div></div>
+<div class="mega-grid">${group.links.map(link => `<a class="mega-card" href="${link.href}"${currentLink(route, link.href)}><img class="mega-card__image" src="${link.image}" alt="" width="90" height="76" loading="lazy"><span class="mega-card__copy">${link.group ? `<span class="mega-card__group">${esc(link.group)}</span>` : ''}<span class="mega-card__title">${esc(link.label)} <span class="mega-card__arrow">${linkArrow}</span></span><span class="mega-card__description">${esc(link.description)}</span></span></a>`).join('')}</div>
 <div class="mega-panel__foot"><p>${esc(group.prompt)}</p>${tlink(group.action[0], group.action[1], { arrow: true })}</div>
 </div></section></details>`;
 }
@@ -136,7 +137,7 @@ export function header(route = '') {
   return `<a class="skip-link" href="#main">Skip to content</a>
 <div class="utility"><div class="utility__in"><span class="utility__tag">A non-profit serving South Arkansas families</span><span class="utility__links"><a href="tel:${SITE.tel}">${SITE.phone}</a><a href="/contact">Contact</a><a href="/account"${currentLink(route, '/account')}>My Account</a><button class="cart-btn" id="cart-btn" type="button" aria-haspopup="dialog" aria-label="Shopping bag">Bag<span class="cart-badge" id="cart-badge" hidden>0</span></button></span></div></div>
 <header class="site-header"><div class="site-header__in"><a class="site-header__logo" href="/" aria-label="Faith Reins home">${lockup({ size: 'sm' })}</a><nav class="site-nav" aria-label="Primary"><div class="site-nav__links">${NAVIGATION.map(group => megaMenu(group, route)).join('')}</div>${btn('Donate', '/give', '', { size: 'sm' })}</nav><div class="site-header__compact"><span class="site-header__support">${btn('Donate', '/give', '', { size: 'sm' })}</span><button class="menu-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="drawer" aria-expanded="false">${bars}</button><noscript><a href="/site-map">Site map</a></noscript></div></div></header>
-<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: 'xs' })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div><nav aria-label="Mobile navigation"><a class="drawer-link drawer-link--account" href="/account">My Account</a><button class="drawer-link drawer-bag" type="button" data-drawer-bag>Shopping bag <span aria-hidden="true">↗</span></button><a class="drawer-link" href="/">Home</a>${NAVIGATION.map(group => mobileGroup(group, route)).join('')}<a class="drawer-link drawer-link--account" href="/contact">Contact</a></nav><div class="drawer__foot">${btn('Donate', '/give', '', { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-label="Menu"><div class="drawer__panel"><div class="drawer__top">${lockup({ size: 'xs' })}<button class="menu-btn menu-btn--open" type="button" data-drawer-close aria-label="Close menu">${bars}</button></div><nav aria-label="Mobile navigation"><a class="drawer-link drawer-link--account" href="/account">My Account</a><button class="drawer-link drawer-bag" type="button" data-drawer-bag>Shopping bag ${linkArrow}</button><a class="drawer-link" href="/">Home</a>${NAVIGATION.map(group => mobileGroup(group, route)).join('')}<a class="drawer-link drawer-link--account" href="/contact">Contact</a></nav><div class="drawer__foot">${btn('Donate', '/give', '', { block: true })}<a class="drawer__phone" href="tel:${SITE.tel}">${SITE.phone}</a></div></div><div class="drawer__scrim" data-drawer-close></div></div>`;
 }
 
 export function footer() {
