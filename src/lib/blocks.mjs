@@ -4,7 +4,7 @@
 import { profile, profileGrid, testimonial, faqList, section, split, sh, eyebrow, btn, esc, img } from "./lib.mjs";
 
 /* ---------- Team ---------- */
-const HIRING = `<div class="profile profile--hiring">${eyebrow("Now hiring")}<span class="profile__name">Speech-Language Pathologist</span><span class="profile__meta">M.S., CCC-SLP required</span><span class="profile__body">We are growing our SLP team to serve more children in South Arkansas. We are looking for a licensed, ASHA-certified clinician who wants to practice in a supportive, faith-rooted setting with a caseload focused on pediatrics. Competitive salary, collaborative team, and a barn out back.</span>${btn("Apply now", "/join-our-team", "accent", { size: "sm" })}</div>`;
+const HIRING = `<div class="profile profile--hiring">${eyebrow("Now hiring")}<span class="profile__name">Speech-Language Pathologist</span><span class="profile__meta">M.S., CCC-SLP required</span><span class="profile__body">We are growing our SLP team to serve more children in South Arkansas. We are looking for a licensed, ASHA-certified clinician who wants to practice in a supportive, faith-rooted setting with a caseload focused on pediatrics. 1099 contractor opportunity requiring five years of relevant pediatric experience and active Arkansas licensure.</span>${btn("View SLP role", "/join-our-team/pediatric-speech-language-pathologist", "accent", { size: "sm" })}</div>`;
 const AVATARS = ["avatar-a", "avatar-b", "avatar-c"];
 export function teamBlock(items) {
   const cards = items.map((p, i) => profile({ image: p.photo || img(AVATARS[i % 3]), alt: p.name, eyebrow: p.role, name: p.name, meta: p.credentials, body: p.bio }));

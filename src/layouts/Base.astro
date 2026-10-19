@@ -5,6 +5,7 @@ import "../styles/account.css";
 import "../styles/product-showcase.css";
 import "../styles/shop-hero.css";
 import "../styles/shop-categories.css";
+import "../styles/careers.css";
 import { header, footer } from "../lib/lib.mjs";
 const { title, description, route = "/", jsonld, seo = {} } = Astro.props;
 const SITE = "https://www.faithreins.com";
@@ -97,6 +98,7 @@ const GA_ID = route.startsWith('/account') ? '' : import.meta.env.PUBLIC_GA_ID |
     <main id="main"><slot /></main>
     <Fragment set:html={footer()} />
     <script>import "../scripts/site.js";</script>
+    <script>import "../scripts/careers.js";</script>
     <script>import "../scripts/navigation.js";</script>
     <script>import "../scripts/account.js";</script>
     <script>import "../scripts/cart.js";</script>

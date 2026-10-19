@@ -59,6 +59,7 @@ jobs:
           node scripts/verify-account-artifacts.mjs
           node scripts/verify-navigation.mjs
           node scripts/verify-shop-category-routes.mjs
+          node --test tests/careers-validation.mjs
       - name: Upload a preview without releasing production
         run: |
           set -o pipefail
@@ -89,7 +90,7 @@ jobs:
                     throw new Error(`Preview asset failed: ${path} (${asset.status}).`);
                   }
                 }
-                for (const path of ['/get-involved.html', '/volunteer.html', '/account.html', '/for-families.html', '/for-referring-providers.html', '/shop/hats.html']) {
+                for (const path of ['/get-involved.html', '/volunteer.html', '/account.html', '/for-families.html', '/for-referring-providers.html', '/shop/hats.html', '/join-our-team.html', '/join-our-team/clinical-director.html']) {
                   const page = await fetch(new URL(path, base), { signal: AbortSignal.timeout(30000) });
                   const content = await page.text();
                   if (!page.ok || !content.includes('data-mega-menu="involved"') || !content.includes('My Account')) {
@@ -113,7 +114,8 @@ jobs:
             const marker = '<!-- wix-preview-link -->';
             const sha = context.payload.pull_request?.head.sha || context.sha;
             const body = [marker, '### Preview this change', '',
-              `**[Review account self-service](${verified.home})**`,
+              `**[Review website changes](${verified.home})**`,
+              `[Careers](${new URL("/join-our-team.html", verified.home).href}) · [Clinical Director](${new URL("/join-our-team/clinical-director.html", verified.home).href})`,
               `[Get Involved](${new URL("/get-involved.html", verified.home).href}) · [Volunteer](${new URL("/volunteer.html", verified.home).href}) · [My Account](${new URL("/account.html", verified.home).href})`, '',
               `[Browse the preview site](${verified.home})`, '',
               `Source: \`${sha.slice(0, 7)}\`. This is a separate Wix preview; faithreins.com was not released.`,
