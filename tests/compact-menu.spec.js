@@ -125,7 +125,8 @@ for (const [width, height] of [[768,1024],[820,1180],[1024,768],[360,800],[390,8
       await expect.poll(() => cards.last().locator('img').evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true);
     }
     await expect(page.locator('#drawer').getByRole('link', { name: 'My Account', exact: true })).toHaveAttribute('href', /\/account(?:\.html)?$/);
-    await expect(page.locator('[data-drawer-bag]')).toHaveText('Shopping bag ↗');
+    await expect(page.locator('[data-drawer-bag]')).toHaveText('Shopping bag');
+    await expect(page.locator('[data-drawer-bag] svg.link-arrow')).toBeVisible();
     await expect(page.locator('.drawer__foot a').first()).toHaveText('Donate');
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
     await page.keyboard.press('Escape');

@@ -1,3 +1,4 @@
+import { isTrustedRequestOrigin } from './request-origin.mjs';
 import { CAREER_FORM_ID, CAREER_ROLES, MAX_RESUME_BYTES } from '../lib/career-application-config.mjs';
 const attempts = new Map();
 const completed = new Map();
@@ -7,7 +8,7 @@ const reply = (status, value) => new Response(JSON.stringify(value), { status, h
 const types = { pdf: 'application/pdf', doc: 'application/msword', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' };
 export async function handleCareerApplication(request, driver) {
   if (request.method !== 'POST') return reply(405, { error: 'METHOD_NOT_ALLOWED' });
-  if (request.headers.get('origin') !== new URL(request.url).origin) return reply(403, { error: 'INVALID_ORIGIN' });
+  if (!isTrustedRequestOrigin(request)) return reply(403, { error: 'INVALID_ORIGIN' });
   if (!request.headers.get('content-type')?.startsWith('multipart/form-data')) return reply(415, { error: 'MULTIPART_REQUIRED' });
   if (Number(request.headers.get('content-length') || 0) > MAX_RESUME_BYTES + 64000) return reply(413, { error: 'RESUME_TOO_LARGE' });
   const key = request.headers.get('idempotency-key');
@@ -22,6 +23,7 @@ export async function handleCareerApplication(request, driver) {
     attempts.set(ip, count && count.expires > now ? { ...count, value: count.value + 1 } : { value: 1, expires: now + 600000 });
     for (const [id, entry] of attempts) if (entry.expires < now) attempts.delete(id);
   }
+  let stage = 'VALIDATION';
   try {
     const data = await request.formData();
     if (String(data.get('website') || '').trim()) return reply(400, { error: 'INVALID_REQUEST' });
@@ -59,15 +61,19 @@ export async function handleCareerApplication(request, driver) {
     const existing = pending.get(key);
     if (existing && existing.expires > Date.now()) submission = existing.submission;
     else {
+    stage = 'UPLOAD_URL';
     const { uploadUrl } = await driver.uploadUrl(CAREER_FORM_ID, filename, mimeType, { uploadTarget: 'resume' });
+    stage = 'PRIVATE_UPLOAD';
     const upload = await driver.upload(uploadUrl, mimeType, bytes);
     const saved = upload.file;
     if (!saved?.id || saved.private !== true || saved.operationStatus === 'FAILED') throw new Error('PRIVATE_UPLOAD_FAILED');
+    stage = 'CREATE_SUBMISSION';
     const created = await driver.create({ formId: CAREER_FORM_ID, submissions: { ...values, resume: [{ fileId: saved.id, displayName: filename, url: saved.url, fileType: mimeType }] } });
     submission = created.submission || created;
     pending.set(key, { submission, expires: Date.now() + 900000 });
     }
     if (submission.status === 'PENDING') {
+      stage = 'CONFIRM_SUBMISSION';
       const confirmed = await driver.confirm(submission._id || submission.id);
       submission = confirmed.submission || confirmed;
     }
@@ -82,6 +88,6 @@ export async function handleCareerApplication(request, driver) {
     }
     return reply(200, result);
   } catch {
-    return reply(502, { error: 'APPLICATION_NOT_CONFIRMED' });
+    return reply(502, { error: 'APPLICATION_NOT_CONFIRMED', stage });
   }
 }

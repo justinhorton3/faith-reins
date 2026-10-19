@@ -11,6 +11,8 @@ export default defineConfig({
   output: accountRuntime ? "server" : "static",
   adapter: accountRuntime ? wixHostingAdapter() : undefined,
   trailingSlash: "ignore",
+  // Wix proxies requests through an internal origin. Our middleware validates public origins.
+  security: { checkOrigin: false },
   // /news/post is a template page filled by ?slug=, so it stays out of the sitemap.
   integrations: [...(accountRuntime ? [wix(), accountRoutes()] : []), sitemap({ filter: (page) => !page.includes("/news/post") && !page.includes("/shop/mens") && !page.includes("/account") && !page.includes("/api/") })],
   build: { format: "directory", inlineStylesheets: "never" },
