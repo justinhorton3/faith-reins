@@ -18,6 +18,9 @@ const APPT = ["Request a callback", "/book-online"];
 const TEL = `<a href="tel:${SITE.tel}">${SITE.phone}</a>`;
 const MAIL = `<a href="mailto:${SITE.email}">${SITE.email}</a>`;
 const heroImg = (key) => img(`hero-${key}-desktop`);
+const pillarList = (items) => `<ol class="pillar-list">${items.map(([title, body], i) =>
+  `<li class="pillar-list__item"><span class="pillar-list__number" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span><div class="pillar-list__copy"><h3 class="pillar-list__title">${esc(title)}</h3><p class="pillar-list__body">${esc(body)}</p></div></li>`
+).join("")}</ol>`;
 const VISION = "A future where children and families thrive through exceptional care, meaningful connections with horses, and a foundation of faith.";
 const MISSION = "Guided by faith, Faith Reins expands access to exceptional therapy, counseling, and purposeful equine experiences that nurture physical, mental, and emotional well-being and strengthen children and families.";
 
@@ -66,11 +69,11 @@ add("/our-mission", "Our Mission", MISSION,
     sh({ eyebrow: "Our vision", title: "The future we are working toward", body: VISION }),
     sh({ eyebrow: "Our mission", title: "How we get there", body: MISSION }), { gap: 80 })) +
   photoBand({ image: img("pasture-hero"), pos: "50% 70%", alt: "The pasture at Faith Reins" }) +
-  section(sh({ eyebrow: "Our pillars", title: "What we commit to", body: "These commitments guide the care we provide, the experiences we create and the way we welcome every family." }) + infoGrid([
-    { title: "Exceptional care", body: "Provide skilled, coordinated services shaped by each person’s goals and delivered with compassion.", strong: true },
-    { title: "Purposeful equine experiences", body: "Carry forward the relationships with horses that founded Faith Reins through horsemanship, mentoring, and equine-assisted learning.", strong: true },
-    { title: "Faith in action", body: "Express our faith through service, dignity, and respect for everyone who comes through our doors.", strong: true },
-  ], { cols: 3 }), { tone: "paper" }) +
+  section(sh({ eyebrow: "Our pillars", title: "What we commit to", body: "These commitments guide the care we provide, the experiences we create and the way we welcome every family." }) + pillarList([
+    ["Exceptional care", "Provide skilled, coordinated services shaped by each person’s goals and delivered with compassion."],
+    ["Purposeful equine experiences", "Carry forward the relationships with horses that founded Faith Reins through horsemanship, mentoring, and equine-assisted learning."],
+    ["Faith in action", "Express our faith through service, dignity, and respect for everyone who comes through our doors."],
+  ]), { tone: "paper" }) +
   section(sh({ eyebrow: "Supporting commitments", title: "How we care for the whole work" }) + infoGrid([
     { title: "Families as partners", body: "Listen to families and caregivers, work alongside them, and support progress that matters in daily life." },
     { title: "Stewardship that lasts", body: "Care responsibly for our people, horses, facilities, and resources so this work can serve families for years to come." },
