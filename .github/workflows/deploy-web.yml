@@ -15,6 +15,7 @@ on:
       - '.github/releases/2026-10-18-favicon.md'
       - '.github/releases/2026-10-18-seo-ownership.md'
       - '.github/releases/2026-10-18-careers.md'
+      - '.github/releases/2026-10-21-pillars-visual.md'
 concurrency:
   group: deploy-web
   cancel-in-progress: false
