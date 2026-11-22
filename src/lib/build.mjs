@@ -42,7 +42,7 @@ add("/privacy-policy", "Privacy Policy", "Privacy Policy for the Faith Reins web
 <h2>3. How We Use Your Information</h2>
 <p>We use the information we collect to respond to inquiries and appointment requests; process donations and issue receipts; send program updates to those who have opted in; operate and improve the Site; and comply with legal obligations. We will not sell or rent your personal information.</p>
 <h2>4. HIPAA and Health Information</h2>
-<p>Faith Reins is a healthcare provider subject to HIPAA. Protected Health Information collected during intake and care is governed by our HIPAA Notice of Privacy Practices, provided to families at the start of a care relationship. Information submitted through website forms before intake is not yet PHI, but we treat it with the same discretion.</p>
+<p>Use our public callback form to tell us how to reach you and which service you’re interested in. Please don’t include diagnoses, treatment details, or medical records in any public website form. If you need to share clinical information, contact our intake team first so we can tell you how to send it.</p>
 <h2>5. Children's Privacy</h2>
 <p>Our website is directed to parents, legal guardians, and referring professionals—not to children themselves. We do not knowingly collect personal information directly from children under 13. Any information about a child submitted through this Site should be provided by a parent or legal guardian. If you believe we have inadvertently collected information from a child under 13 without parental consent, contact us immediately and we will delete it.</p>
 <h2>6. Information Sharing</h2>
