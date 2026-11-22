@@ -46,12 +46,17 @@ function track(event, params = {}) {
 const text = (n) => (typeof n === "string" ? n : n && n.nodes ? n.nodes.map((c) => (c.textData ? c.textData.text : "") + text(c)).join("") : "");
 const phone = (v) => { const d = v.replace(/[^\d+]/g, ""); return d[0] === "+" ? d : d.length === 10 ? "+1" + d : d.length === 11 && d[0] === "1" ? "+" + d : d; };
 
-function parseForm(form) {
+// The public callback form is for contact and service selection, not open-ended notes.
+const CALLBACK_FORM_ID = "c0fdca58-8027-46af-998d-a1feaaed2493";
+const CALLBACK_MESSAGE_TARGET = "message_nq34a3";
+
+function parseForm(form, formId) {
   const order = new Map();
   let i = 0;
   for (const s of form.steps || []) for (const it of ((s.layout || {}).large || {}).items || []) order.set(it.fieldId, i++);
   return (form.formFields || [])
     .filter((f) => f.fieldType === "INPUT" && f.inputOptions && f.inputOptions.target && !f.hidden)
+    .filter((f) => formId !== CALLBACK_FORM_ID || f.inputOptions.target !== CALLBACK_MESSAGE_TARGET)
     .sort((a, b) => (order.get(a.id || a._id) ?? 999) - (order.get(b.id || b._id) ?? 999))
     .map((f) => {
       const io = f.inputOptions;
@@ -78,7 +83,7 @@ async function mountForm(host) {
   const load = h("div", { class: "form-skeleton", role: "status" }, "Loading form…");
   host.append(load);
   let fields;
-  try { fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form); } catch (e) {
+  try { fields = parseForm((await api("/form-schema-service/v4/forms/" + id, "GET")).form, id); } catch (e) {
     load.className = "form-status form-status--error";
     load.textContent = "This form is unavailable right now. Please call or email us instead.";
     return;
